@@ -1,1 +1,1 @@
-# studio-ja
+# studio
