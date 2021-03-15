@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ja">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -73,11 +81,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       
         
-          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+          <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
         
       
         
-          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+          <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
         
       
         
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">従来の取り込みプロファイルの作成</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">標準取り込みプロファイル（レガシー）</a></li>
                   
                 
                   
@@ -885,7 +924,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>HTTP Live Streaming Encryption（HLSe）を使用する場合、コンテンツはAES 128標準で暗号化され、マニフェストにはHLSコンテンツの復号化を可能にするキーへのリンクが含まれます。キーを取得すると、コンテンツを簡単に復号化して再配布できるため、これだけでは完全なセキュリティは提供されません。HTTP経由での提供や、さまざまなトークン認証モデルなど、キーの保護を可能にするメカニズムはほとんどありません。HLSeは、コンテンツを取得しようとするほとんどの標準ユーザーからコンテンツを保護しますが、DRMレベルのコンテンツ保護とは見なされません。Video Cloudは、BrightcoveプレーヤーでHLS暗号化をサポートしています。Brightcoveプレーヤーサポートの詳細は<a href="https://player.support.brightcove.com/references/brightcove-player-system-requirements.html">「Brightcoveプレーヤーのシステム要件」</a>を参照してください。また、チェックしてください<a href="#limitations">制限</a>以下のセクション。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="how">Video CloudがHLS暗号化を使用してコンテンツを保護する仕組み</h2>
+    <h2 id="how">Video Cloud Enterpriseは、HLS暗号化を使用してコンテンツをどのように保護しますか？</h2>
     <p>Apple HTTPライブストリーミング（HLS）は暗号化とは無関係に、さまざまなビットレートを使用する動画提供プロトコルです。Video Cloudは、ネットワーク帯域幅の変化やサービスの変動に応じてレンディションをインテリジェントに切り替える複数のレンディションの作成をサポートしています。HLSは基本的に、ビデオを一連の小さなファイルダウンロードに分割し、それぞれがHTTPを介してビデオの1つの短いチャンクまたはセグメントを一度にロードします。</p>
     <aside class="bcls-aside bcls-aside--information">注：Appleは長編動画にHLSを必要とします。5 MBを超える、つまり10分以上の動画に必要となります。暗号化に関係なく、iOSデバイス上で約10分以上の動画を再生するには、HLSレンディションを作成する必要があります。</aside>
     <p>Video Cloudは、Apple HLS向け動画レンディションの暗号化をサポートしています。これにより、パブリッシャーはHLSを通してデバイスへ配信される長編動画コンテンツを保護できます。Video Cloud HLS暗号化は標準HLSソリューションにAESを追加することによって、コンテンツを保護します。Apple HLSに暗号化を実施するとき、Video Cloudは動画を分割してできた小さなファイルのそれぞれを暗号化し、レンディション選択を処理するファイルを安全に提供します。</p>
@@ -957,7 +996,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  ページの最終更新日：2020年12月20日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1019,7 +1065,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1030,8 +1076,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

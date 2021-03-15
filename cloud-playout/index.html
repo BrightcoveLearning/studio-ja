@@ -1,17 +1,27 @@
 ﻿<!doctype html>
-<html lang="ja">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、VOD ビデオとライブイベントのコレクションをライブリニアチャンネルとしてストリーミングする方法を学びます。">
+  <meta name="description" content="Brightcove Cloud Playoutは、VODカタログからのアイテムのスケジュールされたプレイアウトをライブフィードと組み合わせてプログラムし、BrightcoveLiveの信頼性とスケーラビリティを備えたリニアチャンネルとしてストリーミングできるようにするStudioモジュールです。">
   
-  <title>クラウドプレイアウトを使用してビデオをストリーミングする</title>
+  <title>クラウドプレイアウトチャネルの管理</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
@@ -21,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -63,11 +81,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       
         
-          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+          <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
         
       
         
-          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+          <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
         
       
         
@@ -119,9 +137,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/general/">一般情報</a></li>
-      
-      <li class="breadcrumb-item active" aria-current="page">クラウドプレイアウトを使用してビデオをストリーミングする</li>
+      <li class="breadcrumb-item active" aria-current="page">クラウドプレイアウトチャネルの管理</li>
     </ol>
   </nav>
 </header>
@@ -479,8 +495,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
@@ -688,6 +739,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
               </ul>
             
           
@@ -720,10 +775,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">従来の取り込みプロファイルの作成</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
                   
                 
@@ -753,10 +804,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">標準取り込みプロファイル（レガシー）</a></li>
                   
                 
                   
@@ -867,286 +914,44 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>クラウドプレイアウトを使用してビデオをストリーミングする</h1>
+<h1>クラウドプレイアウトチャネルの管理</h1>
 <article class="bcls-article">
-  <summary>このトピックでは、VOD ビデオとライブイベントのコレクションをライブリニアチャンネルとしてストリーミングする方法を学びます。</summary>
+  <summary>Brightcove Cloud Playoutは、VODカタログからのアイテムのスケジュールされたプレイアウトをライブフィードと組み合わせてプログラムし、BrightcoveLiveの信頼性とスケーラビリティを備えたリニアチャンネルとしてストリーミングできるようにするStudioモジュールです。</summary>
+
   <section class="bcls-section">
-    <p>Cloud Playoutモジュールを使用すると、放送局とメディアパブリッシャーは、VODビデオとライブストリームのコレクションを使用して、それらをリニアチャンネルとしてストリーミングできます。チャネルは、Brightcove Live、Amazon S3、または指定されたRTMPURLにストリーミングできます。</p>
-    <aside class="bcls-aside bcls-aside--information">注：この機能は現在、制限付きです。詳しい情報はブライトコーブのアカウントマネージャーにお問い合わせください。</aside>
-    <p>クラウドプレイアウトモジュールにアクセスするには、<strong>クラウドプレイアウト</strong>ナビゲーションメニューで。作成されたすべてのクラウドプレイアウトチャネルのリストが表示されます（存在する場合）。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/playout-channel-list.png"/></figure>
-    <p>このページには、次の情報が表示されます。</p>
-    <ul>
-      <li><strong>チャネル名</strong> -チャンネル名</li>
-      <li><strong>始まる時間</strong> -チャンネルの開始時間</li>
-      <li><strong>終了時間</strong> -チャネルの終了時間</li>
-      <li><strong>ループ</strong> -プログラムがループするかどうかを示します</li>
-      <li><strong>先</strong> -チャネルのターゲット宛先</li>
-      <li><strong>作成日</strong> -チャネルが作成された日付</li>
-      <li><strong>最終更新</strong> -チャンネルが最後に更新された日付</li>
-      <li><strong>状態</strong> -チャネルステータス
-        <ul>
-          <li><strong>ドラフト</strong> -チャネルは作成されましたが、アクティブ化されていません</li>
-          <li><strong>作成</strong> -チャンネルはアクティブ化中です</li>
-          <li><strong>スケジュール</strong> -チャンネルはアクティブで、ストリーミングの準備ができています</li>
-          <li><strong>起動</strong> -ストリーミングを開始するためのチャネル開始プロセス</li>
-          <li><strong>ランニング</strong> -チャンネルは活発にストリーミングしています</li>
-          <li><strong>停止</strong> -チャンネルストリーミングが停止しています</li>
-          <li><strong>アイドル</strong> -チャネルは正常に実行され、停止されました</li>
-          <li><strong>削除</strong> -チャンネルが削除されています</li>
-          <li><strong>エラー</strong> -チャネルの作成またはストリーミング中にエラーが発生しました</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="channel">チャネルの作成</h2>
-    <p>新しいクラウドプレイアウトチャネルを作成するには、次の手順に従います。 </p>
-    <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>クリック<strong>クラウドプレイアウト</strong>ナビゲーションヘッダー内。</li>
-      <li>
-        クリック<strong>新しく追加する</strong>：
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/general/cloudplayout-new-channel-dialog.png" alt="新しいチャンネル"/>
-          <figcaption class="bcls-caption--image">新しいチャンネル</figcaption>
-        </figure>
-      </li>
-      <li>チャネルに入る<strong>識別</strong>詳細：
-        <ul>
-          <li><strong>名前</strong> -チャネルの名前。名前には英語の文字が必要であり、次の特殊文字を使用できます。&nbsp;&nbsp; _。 ：/ = +- &nbsp;</li>
-          <li><strong>説明</strong> -チャンネルの説明</li>
-          <li><strong>画像のURL</strong> -チャネルの画像ファイルへのURL。チャネルのメタデータの一部として取得できるチャネル画像であることを意味します</li>
-        </ul>
-      </li>
-      <li>チャネルに入る<strong>スケジュール</strong>詳細。
-        <ul>
-          <li><strong>ループプレイアウトコンテンツ</strong> -もし<strong>オン</strong>、プログラムはループで再生され、<strong>終了日時</strong>有効になります。プログラムはいつでも変更でき、変更は現在のプログラムとそれに続くループに反映されます。を参照してください<a href="#looping">ループプログラムの作成</a>以下のセクション。</li>
-          <li><strong>広告の挿入</strong> -オンの場合、チャンネル再生中に広告を表示できます。このオプションを選択した場合、ライブ入力は許可されず、出力できるのは<strong>ブライトコーブライブイベントまたは</strong><strong>AmazonS3バケット</strong>。を参照してください<a href="#ads">サーバーサイド広告の有効化</a>以下のセクション。</li>
-          <li><strong>開始日時</strong> -チャンネルの再生が開始される時間。すべてのアセットの開始時間は、その期間をこの開始時間に追加することによって計算されます。この時間は、チャネルが実行状態にない場合にのみ更新できます。</li>
-          <li><strong>終了日時</strong> -値が入力されていない場合<strong>ループプレイアウトコンテンツ</strong>が選択されていない場合、プレイアウトが完了するとストリームは終了します。場合<strong>ループプレイアウトコンテンツ</strong>が選択されていない<strong>終了日時</strong>、チャンネルが停止するまでプレイアウトがストリーミングされます。この時間はいつでも更新できます。</li>
-        </ul>
-      </li>
-      <li>ライブ入力を使用する場合は、<strong>ライブ入力</strong>スレートにデフォルトのBrightcoveMP4を使用する場合を除いて、[オン]をクリックし、スレートURLを入力します。スレートMP4は、エンコーダーが停止しているか、技術的な問題によりライブストリームがブロックされているために、ライブ入力が停止するたびに再生されます。<strong>ご了承ください<strong>スレートURLは、常に利用可能な静的URLである必要があります</strong>（短命のCDN URLは許可されていません）。</strong></li>
-      <li>チャネルに入る<strong>先</strong>詳細。Cloud Playoutは、同時に2つの出力をサポートします。たとえば、HLSをS3バケットに出力し、RTMPフィードをBrightcoveライブチャネルまたはサードパーティの取り込みポイントに出力できます。ご了承ください<strong>ブライトコーブライブイベント</strong>そして<strong>RTMP</strong>サポートされていません。
-        <ul>
-          <li><strong>ディスプレイの最適化</strong> -出力のビットレートと寸法を制御します
-            <ul>
-              <li><strong>モバイル＆ウェブ</strong> -チェックした場合、HD出力（RTMPまたはHLSシングルビットレート）</li>
-              <li><strong>スマートテレビ</strong> -チェックした場合、フルHD出力（RTMPまたはHLSシングルビットレート）</li>
-            </ul>
-          </li>
-          <li><strong>出力領域</strong> -チャネルが作成される地域。Brightcoveは、大多数の視聴者が予想される場所に地理的に最も近い地域を選択することをお勧めします。</li>
-          <li><strong>に出力</strong> -チャネルの出力方法を選択します
-            <ul>
-              <li><strong>ブライトコーブライブイベント</strong> -以前に作成したBrightcoveライブチャネルを作成または使用します。新しいチャネルを作成するとき、チャネルの領域はに基づいて最適化されます<strong>出力領域</strong>それが選択されました。</li>
-              <li><strong>RTMP</strong> -ストリームをRTMPまたはRTP取り込みポイントに出力する場合に選択します。RTPは、サードパーティの取り込みポイントでは使用できません。<strong>広告の挿入</strong>そして<strong>ブライトコーブライブイベント</strong>有効になっています。選択すると、<strong> RTMPURL</strong>フィールドが表示されます-ライブストリーミングサービスのRTMP入力URLを入力します。</li>
-              <li><strong>AmazonS3バケット</strong> -HLS出力をAmazonS3バケットにプッシュする場合に選択します。バケット名、地域、アクセスキー、シークレットキーを入力する必要があります。バケットは公開され、書き込み可能である必要があります。</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>クリック<strong>チャネルを作成する</strong>。新しいチャンネルは、次のステータスで作成されます<strong>ドラフト</strong>。</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="add_videos">チャンネルへの動画やライブイベントの追加</h2>
-    <p>チャンネルを作成すると、画面にチャンネル設定が表示されます。</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/general/cloudplayout-channel-details.png" alt="チャンネル設定"/>
-      <figcaption class="bcls-caption--image">チャンネル設定</figcaption>
-    </figure>
-    <p>詳細は編集できますが、次の主なステップは、動画やライブイベント（ライブ入力を有効にしている場合）をチャンネルに追加することです。</p>
-    <h3>ビデオを追加（VOD）</h3>
-    <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>クリック<strong>+ビデオを追加</strong>。（チャンネルリストページを表示している場合は、チャンネル名をクリックしてチャンネル設定ページを開き、[ <strong> +ビデオを追加</strong>）。
-      </li>
-      <li>チャンネルに追加する動画の横にあるチェックボックスをクリックします。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/playout-select-videos.png"/></figure>
-      </li>
-      <li>[ <strong>ビデオを追加</strong> ] をクリックします。</li>
-      <li>[<strong>保存</strong>]をクリックします。</li>
-      <li>
-        チャネルのプログラムリストが表示されます。
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/general/cloudplayout-vod-program-list.png" alt="プログラム一覧"/>
-          <figcaption class="bcls-caption--image">プログラム一覧</figcaption>
-        </figure>
-        <p>開始時間と終了時間は、ビデオの長さから自動的に計算されることに注意してください。リスト内のビデオをドラッグアンドドロップして並べ替えることができ、開始/終了時間が自動的に調整されます。</p>
-      </li>
-    </ol>
-    <h3>ライブイベントを追加する</h3>
-    <ol class="bcls-tasklist">
-        <li>クリック<strong>+ライブイベントを追加</strong>ボタン。</li>
-        <li>
-          [ライブイベントの追加]ダイアログで、<strong>名前</strong>、<strong>デュレーション</strong>、および<strong>説明</strong>ライブイベントの場合：
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/general/cloudplayout-add-live-event.png" alt="ライブイベントを追加"/>
-            <figcaption class="bcls-caption--image">ライブイベントを追加</figcaption>
-          </figure>
-          <p>ライブイベントの最小期間は5分であり、期間は5分間隔でのみインクリメントまたはデクリメントできることに注意してください。必要に応じて、テキストボックスで期間をインラインで編集して、時間の粒度を調整できます。ライブイベントの期間は、現在再生中であってもいつでも変更できます。</p>
-        </li>
-        <li>
-          ライブイベントを追加すると、VODアイテムとともにプログラムリストに表示されます。
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/general/cloudplayout-live-event-program-list.png" alt="プログラム一覧"/>
-            <figcaption class="bcls-caption--image">プログラム一覧</figcaption>
-          </figure>
-        </li>
-        <li>ビデオと同じように、ライブイベントをドラッグしてリストを並べ替えることができます。また、使用することができます<strong>クイック編集</strong>ライブイベントの期間を変更するボタン。</li>
-    </ol>
-    <p>動画とライブイベントがチャンネルに追加されたら、をクリックします<strong>アクティベート</strong>チャネルをアクティブにします。ストリーミングを開始する前に、チャネルをアクティブ化する必要があります。を参照してください<a href="#actions">チャネルアクションの使用</a>詳細については、以下のセクションを参照してください。</p>
-    <aside class="bcls-aside bcls-aside--information">注：プログラム内のビデオの順序を変更するには、ビデオをクリックして新しい位置にドラッグします。</aside>
-    <p>動画がチャンネルに追加されると、システムで生成された再生リストが作成され、メディアモジュールに表示されます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/playout-playlist-created.png"/></figure>
-    <p>クラウドプレイアウトモジュールでチャンネルに変更を加えることを強くお勧めします。<strong>生成されたプレイリストは一切編集しないでください</strong>。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="getting_the_rtmp_ingest_point">RTMP取り込みポイントの取得</h2>
-    <p>ライブエンコーダーの場合、チャネルのRTMP取り込みポイントが必要になります。あなたはそれを見つけることができます<strong>：チャンネル設定</strong>：</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/general/cloudplayout-rtmp-ingest-point.png" alt="インジェストポイント"/>
-      <figcaption class="bcls-caption--image">インジェストポイント</figcaption>
-    </figure>
-    <p>使用しているエンコーダーによっては、RTMP取り込みポイントとストリーム名の両方を入力する必要がある場合があります。チャネルのストリーム名は<strong>チャネルID</strong>、これは取り込みポイントアドレスの最後の部分でもあります。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit_delete">チャンネルの編集と削除</h2>
-    <p>Cloud Playoutチャネルを編集するには、チャネル名をクリックしてから、<strong>編集</strong>。適切な編集を行ってから、<strong>チャネルの更新</strong>。チャネルが作成されると、Destinationプロパティは編集できないことに注意してください。</p>
-    <p>Cloud Playoutチャネルを削除するには、チャネル名の横にあるチェックボックスをクリックしてから、<strong>削除</strong>。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="looping">ループプログラムの作成</h2>
-    <p>ループするプログラムを作成するには、チャンネルを作成するときに、<strong>ループプレイアウトコンテンツ</strong>に設定<strong>オン</strong>。ビデオがプログラムに追加されると、プログラムリストが更新され、チャンネルのスケジュールされた時間全体を満たすために、開始/終了時間が関連付けられた一連のビデオが表示されます。ライブイベントの期間を変更すると、すでに経過したイベントの期間は変更されませんが、イベントの今後の再生では新しい期間が使用されます。</p>
-    <p>以下の例では、チャネルにVODとライブイベントがループで含まれています。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/cloudplayout-looping-channel.png"/></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="actions">チャネルアクションの使用</h2>
-    <p>チャネルのステータスに応じて、チャネル設定ページでさまざまなチャネルアクションボタンを使用できます。チャネル名をクリックしてチャネル設定を表示することにより、チャネルアクションボタンにアクセスします。次のチャネルアクションボタンを使用できます。</p>
-    <ul>
-      <li><strong>アクティベート</strong> -チャネルをアクティブ化すると、ストリーミングに使用できるようになります。チャンネルをアクティブにするには、動画が必要です。</li>
-      <li><strong>今すぐプレイ</strong> -クリック<strong>今すぐプレイ</strong>チャンネルのストリーミングを開始します。このオプションは、開始時刻が近づいているチャンネルでのみ使用できます。</li>
-      <li><strong>今すぐ停止</strong> -クリック<strong>今すぐ停止</strong>ストリーミングチャネルを停止します。これにより、チャンネルが停止し、ライブストリームが終了します。</li>
-    </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/playout-channel-actions.png"/></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="ads">サーバーサイド広告の有効化</h2>
-    <p>Brightcoveのサーバー側広告挿入テクノロジーを使用してサーバー側広告が表示されるようにチャネルを構成することができます。 </p>
-    <aside class="bcls-aside bcls-aside--information">注 
-      <ul>
-        <li>広告挿入を使用する場合、チャネルはBrightcoveライブイベントにのみ出力できます。</li>
-        <li>広告の挿入を有効にすると、チャンネルでライブ入力が使用されない場合があります。</li>
-      </ul>
-      </aside>
-    <h3>広告タグと塗りつぶしスレートの設定</h3>
-    <p>アカウント管理の一環として、広告タグと塗りつぶしスレートが構成されていることを確認してください。広告タグの設定については、を参照してください。<a href="/admin/configuring-server-side-ad-settings.html">サーバー側の広告設定の構成</a>。フィルスレートは、ライブストリームの広告ブレークにギャップがある場合に提供できるコンテンツです。フィルスレートの作成については、を参照してください。<a href="https://live.support.brightcove.com/admin/managing-live-settings.html">ライブ設定の管理</a>。</p>
-    <p>
-      <aside class="bcls-aside bcls-aside--information">注：Cloud Playoutは、の一部として構成されたデフォルトの広告スレートを使用します<a href="https://live.support.brightcove.com/admin/managing-live-settings.html">ライブ設定</a>。</aside>
-    </p>
-    <h3>プレースホルダー広告休憩動画の作成</h3>
-    <p>どの動画を「プレースホルダー」動画として使用するかを指定する必要があります。「プレースホルダー」動画がプログラムリストに挿入され、広告を配信する必要があることと、広告の長さが示されます。Brightcove Liveでサーバー側の広告挿入を使用すると、「プレースホルダー」ビデオが広告コンテンツに置き換えられるため、これを行う必要があります。広告の「プレースホルダー」動画を挿入しない場合、実際の動画の一部が広告コンテンツに置き換えられます。広告の継続時間が返された広告よりも短い場合、SSAIは広告のスレートを表示します。広告の継続時間が返された広告よりも長い場合、広告が表示され、その後に広告スレートが表示されます。 </p>
-    <p>必要な広告休憩時間（2分、4分など）に等しいビデオ長のビデオソースファイルを作成/アップロードする必要がある場合があります。これらのビデオの内容は、実際にはプログラムの一部として再生されないため、重要ではありません。 </p>
-    <p>ビデオを「プレースホルダー」ビデオとしてマークするには、Mediaモジュールを使用してこれらのビデオのビデオプロパティを編集し、タグを付けます<code translate="No">cp-ad-holder</code>。
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/playout-ad-tag-video.png"/></figure>
-    </p>
-    <h3>チャネルのサーバー側広告の有効化</h3>
-    <p>チャネルを作成するときは、<strong>広告の挿入</strong>オプション<strong>オン</strong>。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/playout-ad-insertion-option.png"/></figure>
-    <aside class="bcls-aside bcls-aside--information">注：既存のチャネルの場合、広告挿入設定は変更できません。</aside>
-    <h3>プログラムへの広告プレースホルダーの挿入</h3>
-    <p>広告を表示するプログラムリストに広告プレースホルダーを挿入する必要があります。次の手順に従って、広告プレースホルダーを挿入します。</p>
-    <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>チャンネル名をクリックして編集します。</li>
-      <li>プログラムリストで、ビデオの横にあるチェックボックスをクリックします<strong>後</strong>広告を再生したいもの。</li>
-      <li>クリック<strong>広告を挿入</strong>を選択します<strong>広告期間</strong>。広告期間のリストは、すべての広告休憩の「プレースホルダー」動画の長さに基づいて生成されます（タグ付き）<code translate="No">cp-ad-holder</code>）。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/playout-insert-ads-button.png"/></figure>
-      </li>
-      <li>クリック<strong>OK</strong>。選択した長さの「プレースホルダー」ビデオは、選択したビデオの後にプログラムに挿入されます。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/playout-ad-break-inserted.png"/></figure>
-        <aside class="bcls-aside bcls-aside--information">注：「プレースホルダー」として挿入されるビデオ<strong>しない</strong>プログラムの一部として再生されます。この動画は、広告リクエストが行われる場所と広告の長さを示すためにのみ使用されます。</aside>
-      </li>
-      <li>クリック<strong>保存する</strong>プログラムへの変更を保存します。</li>
-    </ol>
-    <h3>広告構成の選択</h3>
-    <p>プログラムの再生が開始されたら、をクリックします<strong>BrightcoveLiveで表示</strong>ライブモジュールでチャンネルを表示します。プレーヤーの下のドロップダウンを使用して、使用する広告構成を選択できます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/playout-live-select-ad-config.png"/></figure>
-    <figure class="bcls-figure"></figure>
-    <p>サーバー側の広告挿入の詳細については、<a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">ビデオクラウドSSAIの概要</a>トピック。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="publish">CloudPlayoutチャネルの埋め込みコードを生成する</h2>
-    <p>Cloud Playoutチャネルの埋め込みコードを生成するには、Liveモジュールを使用します。Liveモジュールの使用の詳細については、を参照してください。<a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html">ライブモジュールを使用したライブイベントの作成と管理</a>。</p>
-    <p>次の 2 種類の埋め込みコードを使用できます。</p>
-    <ul>
-      <li><strong>標準</strong> -iframe埋め込みコード。ほとんど場合に推奨されます。このタイプは、プレーヤーを &lt; iframe &gt; タグ内に配置します。</li>
-      <li><strong>詳細</strong> -ページ内埋め込みコード。プレーヤーは、iframeではなく、HTMLページに直接存在することを許可します。これによって、開発者はプレーヤーおよび関連するプロパティやイベントにアクセスしやすくなります。</li>
-    </ul>
-    <p>また、公開されたプレーヤーへの URL を取得する機能もあります。これは、ブラウザーでイベントを表示する場合に便利です。</p>
-    <p>ライブイベントの埋め込みコードを生成するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>ライブモジュールを開きます。</li>
-      <li>チャンネルがストリーミングされるライブイベントを見つけます。通常、イベントは次の場所にあります。<strong>待機する</strong>タブと名前を持っている<strong>チャネル</strong>チャネルの作成時にストリーミングする特定のイベントを選択した場合を除きます。</li>
-      <li>イベント名をクリックして、<strong>制御室</strong>ページ。</li>
-      <li>左側のナビゲーションで [ <strong> &gt; プレーヤー設定の公開と埋め込み</strong> ] をクリックします。
-        <aside class="bcls-aside bcls-aside--information">注：チャネルがサーバー側広告（SSAI）を有効にするように構成されている場合は、BrightcovePlayerバージョン6.18.3以降を使用する必要があります。ドロップダウンリストには、バージョン 6.18.3 以上のプレイヤーのみが表示されます。</aside>
-      </li>
-      <li><strong>プレーヤーの URL </strong>をクリックして、ブラウザーでイベントをプレビューするか、使用する適切な埋め込みコードをコピーします。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/playout-embed-code.png"/></figure>
-      </li>
-    </ol>
-    <p>プログラムがで作成された場合<strong>広告の挿入</strong>オプションをに設定<strong>オン</strong>、公開オプションには、<strong>広告設定を選択</strong>使用する広告構成を選択できるドロップダウン。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/general/playout-embed-code-ads.png"/></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="analytics">チャネル出力と分析の表示</h2>
-    <p>チャネルが<strong>ランニング</strong>状態、チャネル出力と分析を表示することが可能です。上のチャンネルをクリックします<strong>チャンネル</strong>チャンネルの詳細を開くページ。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/cloudplayout-program-analytics.png"/></figure>
-    <aside class="bcls-aside bcls-aside--information">注：プレビュー画像は3秒ごとに更新されます。</aside>
-    <p>クリック<strong>BrightcoveLiveで表示</strong>現在実行中のプログラムでライブモジュールコントロールルームページを開きます。プログラムで現在再生中のビデオは、<strong>今すぐプレイ</strong>バナー。また、<strong>状態</strong>右上の通知、および<img src="/assets/images/general/cloudplayout-video-icon.png" alt="ライブアイコン"/>ライブフィードが利用できる場合は緑色になります。それ以外の場合は、ライブイベントが現在再生されている場合は赤、VODコンテンツが再生されている場合は灰色になります。</p>
-    <p>次の分析値が表示されます。</p>
-    <ul>
-      <li><strong>ネットワークイン</strong> -直前の1秒あたりの平均バイト数</li>
-      <li><strong>ネットワーク出力</strong> -直前の1秒あたりの平均バイト数</li>
-      <li><strong>ドロップされたフレーム</strong> -直前にドロップされたフレームの割合</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="epg">電子番組ガイドの操作</h2>
-    <p>クラウドプレイアウトチャネルの電子番組ガイドを生成するためのAPIを利用できます。詳細については、<a href="https://apis.support.brightcove.com/epg/getting-started/overview-epg-api.html">概要：EPG API</a>トピック。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="limitations">制約事項</h2>
-    <p>以下の仮定と制限が適用されます。</p>
-    <ul>
-      <li> 動画は動的配信プロファイルを使用して取り込む必要があり、MP4レンディションが必要です</li>
-      <li>CloudPlayoutでサポートされる最大入力ビットレートと解像度は20MBPS / 1080pです。これは、VODコンテンツとライブ入力の両方に適用されます。</li>
-      <li>Brightcoveは、ビデオ間の正しい移行と電子番組ガイドの精度を確保するために、少なくとも2分間のビデオを使用することをお勧めします。</li>
-      <li>ライブイベントの最小時間は5分です。</li>
-      <li>Cloud Playoutのすべてのライブイベントは、Video Cloudリモートアセットと1：1の関係を共有します。このリモートアセットを他のチャネルで再利用することはできません。ライブイベントがチャンネルから削除されると、関連するリモートアセットは自動的に削除されます。チャネルが削除されると、関連するリモートアセットも自動的に削除されます。</li>
-      <li>ライブイベントが現在再生されているが、アクティブなフィードが利用できない場合、ライブフィードが再開されるか、イベントが終了するまで、スレートコンテンツがループで再生されます。スレートMP4の再生が開始されるまでに約30秒の遅延があります。</li>
-      <!--<li><strong>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order. </strong></li>-->
-      <li>Video Cloudアカウントが地理的制限用に構成されている場合、チャネル<strong>出力領域</strong> VideoCloudの地理的制限ポリシーと互換性のあるリージョンで作成する必要があります。</li>
-      <li>最高のエクスペリエンスを得るには、BrightcoveはGoogleChromeブラウザの使用をお勧めします。</li>
+    <h2 id="topics">トピック</h2>
+    <ul style="padding: 0;margin-left: 1rem;list-style: none;">
+      <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+      <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+      <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+      <li><a href="/cloud-playout/enabling-server-side-ads.html">サーバーサイド広告（SSAI）の有効化</a></li>
+      <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+      <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">概要:EPG API </a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG API リファレンス</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-channels.html">チャネル API リファレンス</a></li>
     </ul>
   </section>
 </article>
 
+
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
-      
-      <nav class="right-side-nav" id="right_side_nav">
-        <h6 class="toc">ページコンテンツ</h6>
-        <ul id="in_page_nav" class="list-none"></ul>
-      </nav>
       
     </div>
   </div>
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  ページの最終更新日：2021年2月1日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1208,7 +1013,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1219,8 +1024,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

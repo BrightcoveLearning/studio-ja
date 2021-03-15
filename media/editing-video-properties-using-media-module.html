@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ja">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -73,11 +81,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       
         
-          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+          <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
         
       
         
-          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+          <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
         
       
         
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">従来の取り込みプロファイルの作成</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">標準取り込みプロファイル（レガシー）</a></li>
                   
                 
                   
@@ -922,6 +961,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><strong>名前</strong> -255文字以下です。</li>
       <li><strong>ID</strong> -システムによって割り当てられたビデオID（すべてのVideo Cloudアカウントで一意）。</li>
       <li><strong>短い説明</strong> -250文字以下です。 </li>
+      <li><strong>タグ</strong> - 1つ以上のタグ。複数指定する場合はコンマで区切ります。タグを使用して、スマートプレイリストに動画を追加したり、CMSAPIを使用して動画を検索したりできます。
+        <ul>
+          <li>タグは最大 128 文字です。128文字を超えるタグがある場合は、変更を保存しようとするとエラーが表示されます。</li>
+          <li>タグにはカンマを含めることはできません。たとえば、「屋根、屋根裏部屋 + 前庭」のタグはサポートされていません。</li>
+          <li>また、1本の動画に割り当て可能なタグは最大1,200個です。</li>
+          <li>大文字と小文字のみが異なるタグ（小文字、大文字）は同じタグとして扱われ、大文字/小文字は自動的に元のタグのタグと一致します。</li>
+          <li>大文字と小文字の区別に関する問題は、JavaScriptメソッドを使用して文字列を変更するなど、VideoCloudの外部で処理する必要があります。</li>
+          <li>タグを入力したら、<strong>コンマキーまたは</strong><strong> Enter </strong>キーを押します。追加されたタグは、色付きのボックスに表示されます。
+            <figure class="bcls-figure"></figure>
+          </li>
+        </ul>
+      </li>
       <li><strong>リファレンスID</strong> - パブリッシャーが動画またはプレイリストに割り当てる一意なID。150文字以内に制限されます。このリファレンスIDは動画IDやプレイリストIDとは別のものです。動画IDやプレイリストIDはVideo Cloudによって生成される一意なIDです。リファレンスIDを利用すると、Video Cloudと他のサービス（例: パブリッシャーのコンテンツ管理システム）を連係させることができます。なお、複数の動画に同じリファレンスIDを割り当てることができないため、リファレンスIDを一括編集することはできません。リファレンスIDは決して重複してはいけません。動画を削除すると、前に割り当てられていたリファレンスIDを再使用できます。</li>
       <li><strong>動画プロジェクション</strong> - 動画がどのように記録されたかを示します。
         <ul>
@@ -949,20 +1000,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="categorization">分類</h2>
-    <p>[分類]セクションには、<strong>タグ</strong>、<strong>手動プレイリスト</strong>ビデオが割り当てられ、<strong>フォルダ</strong>ビデオはにあります。プロパティを編集するには、このセクションで直接変更を加えます。Enterキーを押して、変更を保存します。</p>
+    <p>[分類]セクションには、<strong>手動プレイリスト</strong>ビデオが割り当てられ、<strong>フォルダ</strong>ビデオはにあります。プロパティを編集するには、このセクションで直接変更を加えます。Enterキーを押して、変更を保存します。</p>
     <ul>
-      <li><strong>タグ</strong> - 1つ以上のタグ。複数指定する場合はコンマで区切ります。タグを使用して、スマートプレイリストに動画を追加したり、CMSAPIを使用して動画を検索したりできます。
-        <ul>
-          <li>タグは最大 128 文字です。128文字を超えるタグがある場合は、変更を保存しようとするとエラーが表示されます。</li>
-          <li>タグにはカンマを含めることはできません。たとえば、「屋根、屋根裏部屋 + 前庭」のタグはサポートされていません。</li>
-          <li>また、1本の動画に割り当て可能なタグは最大1,200個です。</li>
-          <li>大文字と小文字のみが異なるタグ（小文字、大文字）は同じタグとして扱われ、大文字/小文字は自動的に元のタグのタグと一致します。</li>
-          <li>大文字と小文字の区別に関する問題は、JavaScriptメソッドを使用して文字列を変更するなど、VideoCloudの外部で処理する必要があります。</li>
-          <li>タグを入力したら、<strong>コンマキーまたは</strong><strong> Enter </strong>キーを押します。追加されたタグは、色付きのボックスに表示されます。
-            <figure class="bcls-figure"></figure>
-          </li>
-        </ul>
-      </li>
       <li><strong>手動プレイリスト</strong> - この動画が属するプレイリスト。Xをクリックして、再生リストから動画を削除します。詳細は、<a href="/media/creating-and-managing-playlists.html">「プレイリストを作成、管理する」</a>を参照してください。</li>
       <li><strong>フォルダー</strong> - 動画を割り当てる先のフォルダー。詳細は、<a href="/media/organizing-videos-using-folders.html">「フォルダーを使用して動画を整理する」</a>を参照してください。</li>
     </ul>
@@ -976,8 +1015,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="/media/replacing-video-source-file.html">ビデオソースファイルを置き換える</a></li>
       <li><a href="/media/retranscoding-videos-using-media-module.html">ビデオを再トランスコードする</a></li>
     </ul>
-    <p>この例では、レガシートランスコーディングが使用されました（ビデオがアップロードされたときに、レガシー取り込みプロファイルが使用されました）。レンディションをダウンロードするには、レンディションの形式リンクを右クリックします。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files.png"/></figure>
     <p>この例では、<a href="/general/overview-dynamic-delivery.html">動的配信</a>トランスコーディングが使用されました（ビデオがアップロードされたときに、動的配信またはコンテキストアウェアエンコーディングの取り込みプロファイルが使用されました）。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files-dd.png"/></figure>
     <aside class="bcls-aside bcls-aside--information">注：アカウントでDRMが有効になっている場合は、DRMトグルスイッチもセクションに表示されることがあります。DRMの詳細については、を参照してください。<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-content-drm.html"> DRMによるコンテンツの取り込み</a>。</aside>
@@ -1035,7 +1072,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  ページの最終更新日：2021年2月1日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1097,7 +1141,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1108,8 +1152,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

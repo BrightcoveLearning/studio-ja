@@ -1,12 +1,12 @@
 ﻿<!doctype html>
-<html lang="ja">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="このトピックでは、VOD ビデオとライブイベントのコレクションをライブリニアチャンネルとしてストリーミングする方法を学びます。">
   
-  <title>従来の取り込みプロファイルの作成</title>
+  <title>クラウドプレイアウトの収益化</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -73,11 +81,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       
         
-          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+          <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
         
       
         
-          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+          <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
         
       
         
@@ -129,9 +137,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/admin/">アカウントの管理</a></li>
+      <li class="breadcrumb-item"><a href="/cloud-playout/">クラウドプレイアウト</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">従来の取り込みプロファイルの作成</li>
+      <li class="breadcrumb-item active" aria-current="page">クラウドプレイアウトの収益化</li>
     </ol>
   </nav>
 </header>
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">従来の取り込みプロファイルの作成</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">標準取り込みプロファイル（レガシー）</a></li>
                   
                 
                   
@@ -877,78 +916,75 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
+<h1>クラウドプレイアウトの収益化</h1>
 <article class="bcls-article">
-  <h1>従来の取り込みプロファイルの作成</h1>
-  <summary>このトピックでは、レガシートランスコーディングで使用するカスタムインジェストプロファイルの作成方法の概要について説明します。</summary>
+  <summary>このトピックでは、VOD ビデオとライブイベントのコレクションをライブリニアチャンネルとしてストリーミングする方法を学びます。</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4413807549001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>[Ingest Profiles] 管理ページを使用して、新しいレガシー取り込みプロファイルを作成できます。取り込みプロファイルは JSON を使用して定義されます。新しいレガシープロファイルを作成するときは、<a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">レガシートランスコーディング用の標準インジェストプロファイルドキュメントを確認し</a>、必要なプロファイルと同様のプロファイルを検索すると便利です。その後、Studioで簡単にプロファイルを複製し、変更を加えて編集できます。</p>
-    <p >注：DRM を使用する取り込みプロファイルの作成については、<a href="https://general.support.brightcove.com/general/mpeg-dash-video.html"> MPEG-DASH Video </a>開発者ドキュメントを参照してください。</p>
-    <p >注：各プロファイルでは、最大 25 のレンディションを作成できます。&nbsp;ポスターとサムネイル画像は最大25個にカウントされます。&nbsp;</p>
-    <p>新しいレガシー取り込みプロファイルを作成するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Studioヘッダーの[<strong>ADMIN</strong>]リンクをクリックします。</li>
-      <li>[<strong>トランスコードプロファイル</strong>]リンクをクリックします。</li>
-      <li>複製するレガシープロファイルを探します。プロファイル名をクリックして、プロファイルエディタを開きます。</li>
-      <li>[ <strong>プロファイルの複製</strong> ] をクリックします。プロファイルエディタが開き、新しいプロファイルが表示されます。</li>
-      <li>プロフィールの上部までスクロールします。<code translate="No"><strong>name</strong></code>要素を編集して、プロファイルにわかりやすい名前を付けます。この名前は、ビデオクラウドスタジオ内に表示されます。</li>
-      <li><code translate="No"><strong>description</strong></code>要素を編集して、プロファイルにわかりやすい説明を与えます。
-        <figure class="bcls-figure"><img alt="" src="/assets/images/admin/node18503-edit-profile-name.png"/></figure>
+    <h2 id="requirements">要件</h2>
+    <p>Cloud Playoutでサーバー側の広告挿入（SSAI）を使用するには、以下が必要です。</p>
+    <ul>
+      <li>アカウントは、BrightcoveLiveおよびLivewithSSAIに対して有効になっている必要があります。</li>
+      <li>ブライトコーブライブおよび/またはS3をチャネルの宛先として使用する必要があります。</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="ads">サーバーサイド広告の有効化</h2>
+    <p>Brightcoveのサーバー側広告挿入テクノロジーを使用してサーバー側広告が表示されるようにチャネルを構成することができます。 </p>
+    <aside class="bcls-aside bcls-aside--information">注 
+      <ul>
+        <li>広告挿入を使用する場合、チャネルはBrightcoveライブイベントにのみ出力できます。</li>
+        <li>広告の挿入を有効にすると、チャンネルでライブ入力が使用されない場合があります。</li>
+      </ul>
+      </aside>
+    <h3>広告タグと塗りつぶしスレートの設定</h3>
+    <p>アカウント管理の一環として、広告タグと塗りつぶしスレートが構成されていることを確認してください。広告タグの設定については、を参照してください。<a href="/admin/configuring-server-side-ad-settings.html">サーバー側の広告設定の構成</a>。フィルスレートは、ライブストリームの広告ブレークにギャップがある場合に提供できるコンテンツです。フィルスレートの作成については、を参照してください。<a href="https://live.support.brightcove.com/admin/managing-live-settings.html">ライブ設定の管理</a>。</p>
+    <p>
+      <aside class="bcls-aside bcls-aside--information">注：Cloud Playoutは、の一部として構成されたデフォルトの広告スレートを使用します<a href="https://live.support.brightcove.com/admin/managing-live-settings.html">ライブ設定</a>。</aside>
+    </p>
+    <h3>プレースホルダー広告休憩動画の作成</h3>
+    <p>どの動画を「プレースホルダー」動画として使用するかを指定する必要があります。「プレースホルダー」動画がプログラムリストに挿入され、広告を配信する必要があることと、広告の長さが示されます。Brightcove Liveでサーバー側の広告挿入を使用すると、「プレースホルダー」ビデオが広告コンテンツに置き換えられるため、これを行う必要があります。広告の「プレースホルダー」動画を挿入しない場合、実際の動画の一部が広告コンテンツに置き換えられます。広告の継続時間が返された広告よりも短い場合、SSAIは広告のスレートを表示します。広告の継続時間が返された広告よりも長い場合、広告が表示され、その後に広告スレートが表示されます。 </p>
+    <p>必要な広告休憩時間（2分、4分など）に等しいビデオ長のビデオソースファイルを作成/アップロードする必要がある場合があります。これらのビデオの内容は、実際にはプログラムの一部として再生されないため、重要ではありません。 </p>
+    <p>ビデオを「プレースホルダー」ビデオとしてマークするには、Mediaモジュールを使用してこれらのビデオのビデオプロパティを編集し、タグを付けます<code translate="No">cp-ad-holder</code>。
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/cloud-playout/playout-ad-tag-video.png"/></figure>
+    </p>
+    <h3>チャネルのサーバー側広告の有効化</h3>
+    <p>チャネルを作成するときは、<strong>広告の挿入</strong>オプション<strong>オン</strong>。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/cloud-playout/playout-ad-insertion-option.png"/></figure>
+    <aside class="bcls-aside bcls-aside--information">注：既存のチャネルの場合、広告挿入設定は変更できません。</aside>
+    <h3>プログラムへの広告プレースホルダーの挿入</h3>
+    <p>広告を表示するプログラムリストに広告プレースホルダーを挿入する必要があります。次の手順に従って、広告プレースホルダーを挿入します。</p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>チャンネル名をクリックして編集します。</li>
+      <li>プログラムリストで、ビデオの横にあるチェックボックスをクリックします<strong>後</strong>広告を再生したいもの。</li>
+      <li>クリック<strong>広告を挿入</strong>を選択します<strong>広告期間</strong>。広告期間のリストは、すべての広告休憩の「プレースホルダー」動画の長さに基づいて生成されます（タグ付き）<code translate="No">cp-ad-holder</code>）。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/cloud-playout/playout-insert-ads-button.png"/></figure>
       </li>
-      <li>必要に応じて、レンディション情報を編集します。ポスターとサムネイル画像のデフォルトサイズは、プロファイルの末尾にあります。</li>
-      <li>[<strong>保存</strong>]をクリックします。</li>
+      <li>クリック<strong>OK</strong>。選択した長さの「プレースホルダー」ビデオは、選択したビデオの後にプログラムに挿入されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/cloud-playout/playout-ad-break-inserted.png"/></figure>
+        <aside class="bcls-aside bcls-aside--information">注：「プレースホルダー」として挿入されるビデオ<strong>しない</strong>プログラムの一部として再生されます。この動画は、広告リクエストが行われる場所と広告の長さを示すためにのみ使用されます。</aside>
+      </li>
+      <li>クリック<strong>保存する</strong>プログラムへの変更を保存します。</li>
     </ol>
-    <div class="BCL-subsection">
-      <h3>プロファイルに透かしを追加する</h3>
-      <p><code translate="No">watermarks</code>各レンディションにエレメントを追加することで、ウォーターマークを各レンディションに追加できます<code translate="No">rendition</code>。</p>
-      <pre>
-       透かし」: [{「y」፦20,「x」፦10,「幅」:「20%「,「url」: "http://www.mysite.com/companylogo.png"}]
-       </pre>
-      <p><code translate="No">watermarks</code>要素には、次のパラメータがあります。</p>
-      <table class="bcls-table">
-        <thead class="bcls-table__head">
-          <tr>
-            <th width="13%">パラメーター</th>
-            <th width="14%">タイプ</th>
-            <th width="73%">説明</th>
-          </tr>
-        </thead>
-        <tbody class="bcls-table__body">
-          <tr>
-            <td ><code translate="No">url</code></td>
-            <td >文字列</td>
-            <td >透かし画像の URL</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">width</code></td>
-            <td >文字列</td>
-            <td >ピクセル単位の幅またはフレーム幅のパーセント。例:20 または 10%</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">height</code></td>
-            <td >文字列</td>
-            <td >ピクセル単位の高さまたはフレーム幅のパーセント（例：20または10％）</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">x</code></td>
-            <td >文字列</td>
-            <td >画像の左端から中央までの距離 (ピクセルまたはフレーム幅のパーセント)。例:20 または 10% (透かしを右端を基準にして配置する場合は-10 のような負の値を使用します)</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">y</code></td>
-            <td >文字列</td>
-            <td >画像をピクセルまたはフレームの高さのパーセントで表示する場合は、上端から中央までの距離。例:20 または 10% (透かしを下端を基準にして配置する場合は-10 のような負の値を使用します)</td>
-          </tr>
-        </tbody>
-      </table>
-      &nbsp;
-      <p>透かし付きのサンプルプロファイルを以下に示します。</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node18503-watermark.png"/></figure>
-    </div>
+    <h3>広告構成の選択</h3>
+    <p>プログラムの再生が開始されたら、をクリックします<strong>BrightcoveLiveで表示</strong>ライブモジュールでチャンネルを表示します。プレーヤーの下のドロップダウンを使用して、使用する広告構成を選択できます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートスイッチャー" src="/assets/images/cloud-playout/playout-live-select-ad-config.png"/></figure>
+    <figure class="bcls-figure"></figure>
+    <p>サーバー側の広告挿入の詳細については、<a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">ビデオクラウドSSAIの概要</a>トピック。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Related_topics">関連トピック</h2>
+    <ul>
+      <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+      <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+      <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+      <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+      <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">概要:EPG API </a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG API リファレンス</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-channels.html">チャネル API リファレンス</a></li>
+    </ul>
   </section>
 </article>
-
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -963,7 +999,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  ページの最終更新日：2021年2月1日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1025,7 +1068,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1036,8 +1079,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

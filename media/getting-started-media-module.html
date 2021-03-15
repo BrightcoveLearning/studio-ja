@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ja">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -73,11 +81,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       
         
-          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+          <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
         
       
         
-          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+          <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
         
       
         
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">従来の取り込みプロファイルの作成</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">標準取り込みプロファイル（レガシー）</a></li>
                   
                 
                   
@@ -891,7 +930,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>ページの本体には以下が表示されます。</p>
     <ul>
       <li>動画サムネイルおよび長さ</li>
-      <li>動的配信インジケーター-アカウントで動的配信が有効になっている場合にのみ表示されます
+      <li>動的配信インジケーター 
         <ul>
           <li><img alt="" src="/assets/images/media/node14464-dd-icon.png"/> -ビデオが有効になっていることを示します<a href="/general/overview-dynamic-delivery.html">動的配信</a>（ビデオはDynamic Delivery取り込みプロファイルを使用して取り込まれました）</li>
           <li><img alt="" src="/assets/images/media/node14464-dd-icon-grey.png"/> -ビデオが動的配信に対して有効になっていないことを示します（ビデオはレガシー取り込みプロファイルを使用して取り込まれました）</li>
@@ -904,12 +943,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>参照ID</li>
       <li>ステータス
         <ul>
-          <li><img alt="" src="/assets/images/media/node14464-green-check.png"/> -ビデオがアクティブであることを示します</li>
-          <li><img alt="" src="/assets/images/media/node14464-red-x.png"/> -ビデオがアクティブでない（再生できない）ことを示します</li>
+          <li><img alt="" src="/assets/images/media/icon-green-eye.png"/> -ビデオがアクティブであることを示します</li>
+          <li><img alt="" src="/assets/images/media/icon-red-eye.png"/> -ビデオがアクティブでない（再生できない）ことを示します</li>
         </ul>
       </li>
     </ul>
-    <p>動画のサムネイルには、動画がアカウントで共有されているか、別のアカウントで共有されているかが示されます。下の例では、Brown Pelican動画は別のアカウントに共有されています。一方、Horses Leaving the Paddock動画はこのアカウントでのみ利用できます</p>
+    <p>動画のサムネイルには、動画がアカウントで共有されているか、別のアカウントで共有されているかが示されます。以下の例では、最初のビデオが別のアカウントに共有され、2番目のビデオがこのアカウントに共有されました。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-sharing.png"/></figure>
     <p>ビデオサムネイルは、360バッジを追加することで360度ビデオとしてマークされたビデオも示します。360 度ビデオの操作の詳細については、「<a href="/general/working-360deg-videos.html"> 360° ビデオの操作</a>」を参照してください。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-360-video.png"/></figure>
@@ -943,7 +982,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-confirm-delete.png"/></figure>
     <p>動画が手動プレイリストに追加されると、追加されたことが示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-delete-error.png"/></figure>
-    <p>動画が含まれている手動再生リストを確認するには、動画のタイトルをクリックして動画のプロパティを開きます。動画情報プロパティでは、その動画が追加されている手動プレイリストが表示されます。</p>
+    <p>動画が含まれている手動再生リストを確認するには、動画のタイトルをクリックして動画のプロパティを開きます。ザ・<strong>分類</strong>プロパティには、ビデオが追加された手動プレイリストが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-manual-playlist.png"/></figure>
   </section>
   <section class="bcls-section">
@@ -962,10 +1001,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="publish2">動画とプレイリストを公開する</h2>
     <p>ビデオはさまざまな宛先に公開できます。</p>
     <ul>
-      <li><a href="/publish/publishing-videos-and-playlists-media-module.html"><strong>Webプレーヤー</strong></a> -ビデオへのURLを提供するか、Webページまたはアプリケーションに追加できる公開コードを生成します</li>
-      <li><strong><a href="/publish/publishing-video-email.html">メールのランディングページ</a></strong> -ビデオポスター画像を電子メールに埋め込む機能を提供し、クリックすると、ブラウザタブでビデオを開きます</li>
-      <li><strong><a href="https://social.support.brightcove.com/general/publishing-videos-social-media-platforms.html">ソーシャルネットワーク</a></strong> -BrightcoveSocialを使用してビデオを公開できる新しいブラウザタブを開きます</li>
-      <li><strong><a href="/publish/publishing-videos-page-experience.html">ギャラリーのページ内エクスペリエンス</a></strong> -Brightcove Galleryを使用して、新しいページはめ込みエクスペリエンスを作成します</li>
+      <li><a href="/publish/publishing-videos-and-playlists-media-module.html">Webプレーヤー</a> -ビデオへのURLを提供するか、Webページまたはアプリケーションに追加できる公開コードを生成します</li>
+      <li><a href="/publish/publishing-video-email.html">メールのランディングページ</a> -ビデオポスター画像を電子メールに埋め込む機能を提供し、クリックすると、ブラウザタブでビデオを開きます</li>
+      <li><a href="https://social.support.brightcove.com/general/publishing-videos-social-media-platforms.html">ソーシャルネットワーク</a> -BrightcoveSocialを使用してビデオを公開できる新しいブラウザタブを開きます</li>
+      <li><a href="/publish/publishing-videos-page-experience.html">ギャラリーのページ内エクスペリエンス</a> -Brightcove Galleryを使用して、新しいページはめ込みエクスペリエンスを作成します</li>
     </ul>
   </section>
   <section class="bcls-section">
@@ -1013,7 +1052,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  ページの最終更新日：2021年2月4日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1075,7 +1121,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1086,8 +1132,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ja">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -73,11 +81,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       
         
-          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+          <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
         
       
         
-          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+          <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
         
       
         
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">従来の取り込みプロファイルの作成</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">標準取り込みプロファイル（レガシー）</a></li>
                   
                 
                   
@@ -879,159 +918,89 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <article class="bcls-article">
   <h1>プレーヤーコントロールの設定</h1>
-  <summary
-    >このトピックでは、プレーヤーのコントロールを構成する方法を学習します。</summary
-                >
+  <summary>このトピックでは、プレーヤーのコントロールを構成する方法を学習します。</summary>
   <section class="bcls-section">
-    <p>
-      品質セレクター、再生速度、フルスクリーンコントロール、垂直ボリュームスライダーなどのプレーヤーコントロールをプレーヤー用に構成できます。
-    </p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="スタイルメニュー" src="/assets/images/players/node18509-player-controls-example.png"/>
-    </figure>
-    <p>
-      ここに示すように表示されるコントロールが表示された場合：
-      <figure class="bcls-figure">
-        <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-button-itself.png"/>
-      </figure>
-      ピクチャーインピクチャー機能をオンにします。を参照してください<a href="#picture-in-picture">ピクチャーインピクチャー</a>詳細については、このドキュメントの後半のセクションを参照してください。
-    </p>
-    <p>
-      を構成するには<strong>コントロール</strong>プロパティについては、次の手順に従ってください。
-    </p>
+    <p>品質セレクター、再生速度、フルスクリーンコントロール、垂直ボリュームスライダーなどのプレーヤーコントロールをプレーヤー用に構成できます。 </p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="スタイルメニュー" src="/assets/images/players/node18509-player-controls-example.png"/> </figure>
+    <p>ここに示すように表示されるコントロールが表示された場合：
+      <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-button-itself.png"/> </figure>
+      ピクチャーインピクチャー機能をオンにします。を参照してください<a href="#picture-in-picture">ピクチャーインピクチャー</a>詳細については、このドキュメントの後半のセクションを参照してください。 </p>
+    <p>を構成するには<strong>コントロール</strong>プロパティについては、次の手順に従ってください。 </p>
     <ol class="bcls-tasklist-restart">
-      <li>
-        ナビゲーションヘッダーの[<strong>Players</strong>]をクリックし、Playersモジュールを開きます。
-      </li>
-      <li>
-        設定したいプレーヤー名をクリックします。
-      </li>
-      <li>
-        左側のナビゲーションメニューの [ <strong>コントロール</strong> ] をクリックします。
-      </li>
+      <li>ナビゲーションヘッダーの[<strong>Players</strong>]をクリックし、Playersモジュールを開きます。 </li>
+      <li>設定したいプレーヤー名をクリックします。 </li>
+      <li>左側のナビゲーションメニューの [ <strong>コントロール</strong> ] をクリックします。 </li>
     </ol>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="スタイルメニュー" src="/assets/images/players/node18509-player-controls.png"/>
-    </figure>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="スタイルメニュー" src="/assets/images/players/node18509-player-controls.png"/> </figure>
     <p>次のコントロールを構成できます。</p>
     <ul>
       <li><a href="#quality">品質セレクター</a></li>
       <li><a href="#rates">再生速度</a></li>
       <li><a href="#fullscreen">全画面表示</a></li>
-      <li>
-        <a href="#volume">垂直ボリュームスライダー</a>
-      </li>
-      <li>
-        <a href="#skip">次のビデオにスキップ（プレイリスト）</a>
-      </li>
+      <li> <a href="#volume">垂直ボリュームスライダー</a></li>
+      <li><a href="#seeking">サムネイル探し</a></li>
+      <li> <a href="#skip">次のビデオにスキップ（プレイリスト）</a> </li>
     </ul>
-    <p>
-      変更が加えられたら、変更が表示されるようにプレーヤーを再公開してください。
-    </p>
-    <aside class="bcls-aside bcls-aside--information">
-      注：プレーヤーに行った変更は、公開済みプレーヤーへの反映に最大で5分かかる場合があります。
-    </aside>
+    <p>変更が加えられたら、変更が表示されるようにプレーヤーを再公開してください。 </p>
+    <aside class="bcls-aside bcls-aside--information"> 注：プレーヤーに行った変更は、公開済みプレーヤーへの反映に最大で5分かかる場合があります。 </aside>
   </section>
   <section class="bcls-section">
     <h2 id="quality">品質セレクター</h2>
-    <p>
-      を有効にする<strong>品質セレクター</strong>ビデオの再生中に別のレンディションを手動で選択する機能を提供します。歯車のアイコンがプレーヤーの右下隅に表示されます。
-    </p>
-    <aside class="bcls-aside bcls-aside--information">
-      注：品質セレクターにはBrightcovePlayerバージョン5.17.0以降が必要であり、すべてのブラウザーで機能するとは限りません。
-    </aside>
-    <p>
-      品質セレクターが有効になっている場合、<strong>品質セレクターラベル</strong>有効になっている：
-    </p>
+    <p>を有効にする<strong>品質セレクター</strong>ビデオの再生中に別のレンディションを手動で選択する機能を提供します。歯車のアイコンがプレーヤーの右下隅に表示されます。 </p>
+    <aside class="bcls-aside bcls-aside--information">注：品質セレクターにはBrightcovePlayerバージョン5.17.0以降が必要であり、すべてのブラウザーで機能するとは限りません。 </aside>
+    <p>品質セレクターが有効になっている場合、<strong>品質セレクターラベル</strong>有効になっている： </p>
     <ul>
-      <li>
-        <strong>解像度を表示（例：720p）</strong> -レンディションは水平解像度の線で表示されます
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-resolution.png"/>
-        </figure>
-        <p>
-          このオプションを使用する場合、別のパラメータ（<code translate="No">resolutionLabelBitrates</code>）を品質選択プラグインに追加して、ビットレートを表示することもできます。
-        </p>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-resolution-bitrates.png"/>
-        </figure>
-        <p>
-          現在、PlayersモジュールのUIを使用してこのオプションを構成する方法はないため、これはプラグインパラメーターを編集して行う必要があります。詳細については、を参照してください。<a href="https://player.support.brightcove.com/plugins/quality-selection-plugin.html">品質選択プラグイン</a>資料。
-        </p>
+      <li><strong>解像度を表示（例：720p）</strong> -レンディションは水平解像度の線で表示されます
+        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-resolution.png"/> </figure>
+        <p>このオプションを使用する場合、別のパラメータ（<code translate="No">resolutionLabelBitrates</code>）を品質選択プラグインに追加して、ビットレートを表示することもできます。 </p>
+        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-resolution-bitrates.png"/> </figure>
+        <p>現在、PlayersモジュールのUIを使用してこのオプションを構成する方法はないため、これはプラグインパラメーターを編集して行う必要があります。詳細については、を参照してください。<a href="https://player.support.brightcove.com/plugins/quality-selection-plugin.html">品質選択プラグイン</a>資料。</p>
       </li>
-      <li>
-        <strong>HD / SDを表示</strong> -プレーヤーは、各レンディションのビットレート情報を調べて、SDかHDかを判断します。
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-hd-sd.png"/>
-        </figure>
+      <li><strong>HD / SDを表示</strong> -プレーヤーは、各レンディションのビットレート情報を調べて、SDかHDかを判断します。
+        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-hd-sd.png"/> </figure>
       </li>
     </ul>
   </section>
   <section class="bcls-section">
     <h2 id="rates">再生速度</h2>
-    <p>
-      有効化<strong>再生速度</strong>別の再生速度を手動で選択する機能を提供します。再生速度アイコンがプレーヤーの右下隅に表示されます。
-    </p>
-    <aside class="bcls-aside bcls-aside--information">
-      注
+    <p>有効化<strong>再生速度</strong>別の再生速度を手動で選択する機能を提供します。再生速度アイコンがプレーヤーの右下隅に表示されます。</p>
+    <aside class="bcls-aside bcls-aside--information"> 注
       <ul>
-        <li>
-          再生速度セレクターには、Brightcove Playerバージョン6.35.0以降が必要であり、すべてのブラウザーで機能するとは限りません。
-        </li>
+        <li>再生速度セレクターには、Brightcove Playerバージョン6.35.0以降が必要であり、すべてのブラウザーで機能するとは限りません。 </li>
         <li>再生レートコントロールを表示するには、プレーヤーの幅が424ピクセル以上である必要があります。</li>
       </ul>
     </aside>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-playback-rates.png"/>
-    </figure>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-playback-rates.png"/> </figure>
   </section>
   <section class="bcls-section">
     <h2 id="fullscreen">フルスクリーン</h2>
-    <p>
-      選択する<strong>全画面表示</strong>フルスクリーンコントロールを有効にします。フルスクリーンコントロールは、ディスプレイ全体に表示されるようにプレーヤーのサイズを変更する機能を提供します。動画の再生が始まると、フルスクリーンアイコンがプレーヤーの右下隅に表示されます。
-    </p>
+    <p>選択する<strong>全画面表示</strong>フルスクリーンコントロールを有効にします。フルスクリーンコントロールは、ディスプレイ全体に表示されるようにプレーヤーのサイズを変更する機能を提供します。動画の再生が始まると、フルスクリーンアイコンがプレーヤーの右下隅に表示されます。 </p>
   </section>
   <section class="bcls-section">
     <h2 id="volume">垂直ボリュームスライダー</h2>
-    <p>
-      選択する<strong>垂直ボリュームスライダー</strong>ボリュームスライダーを垂直に表示します。
-    </p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-vertical-volume.png"/>
-    </figure>
-    <aside class="bcls-aside bcls-aside--information language-editable">
-      この機能は、Brightcove Player6.32.0以降でのみ使用できます。
-    </aside>
+    <p>選択する<strong>垂直ボリュームスライダー</strong>ボリュームスライダーを垂直に表示します。 </p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-vertical-volume.png"/> </figure>
+    <aside class="bcls-aside bcls-aside--information language-editable"> この機能は、Brightcove Player6.32.0以降でのみ使用できます。 </aside>
   </section>
   <section class="bcls-section">
-    <h2 id="skip">次の動画にスキップ（プレイリスト）</h2>
-    <p>
-      選択する<strong>次のビデオにスキップ（プレイリスト）</strong>スキップ制御を有効にします。スキップコントロールをクリックすると、プレイリスト内の次のビデオに進むことができます。
-    </p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-skip-control.png"/>
-    </figure>
+    <h2 id="seeking">サムネイル探し</h2>
+    <p>選択する<strong>サムネイル探し</strong>プログレスバーの上にビデオサムネイルを表示します。</p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-thumbnail-seeking.png"/> </figure>
+    <aside class="bcls-aside bcls-aside--information language-editable"> この機能は、Brightcove Player6.41.0以降でのみ使用できます。サムネイルシークの詳細については、を参照してください。<a href="adding-thumbnail-seeking-player.html"> Brightcoveプレーヤーにサムネイルシークを追加する</a>。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="skip">次のビデオにスキップ（プレイリスト）</h2>
+    <p>選択する<strong>次のビデオにスキップ（プレイリスト）</strong>スキップ制御を有効にします。スキップコントロールをクリックすると、プレイリスト内の次のビデオに進むことができます。 </p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-skip-control.png"/> </figure>
   </section>
   <section class="bcls-section">
     <h2 id="picture-in-picture">ピクチャーインピクチャー</h2>
-    <p>
-      HTML5ピクチャーインピクチャー機能は次のように定義されます。<em>Webサイトが常に他のウィンドウの上にフローティングビデオウィンドウを作成できるようにすることで、ユーザーが他のコンテンツサイトやデバイス上のアプリケーションと対話している間もメディアを消費し続けることができます。</em>。
-    </p>
-    <p>
-      ピクチャーインピクチャーの例を次の2つのスクリーンショットに示します。この最初のスクリーンショットは、プレーヤーがビデオを表示しているブラウザーを示しています。プレーヤーの右下にあるピクチャーインピクチャーボタンに、赤い矢印が向いていることに注意してください。
-    </p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="p-in-p nirnak" width="800" height="525" src="/assets/images/players/node18509-normal.png"/>
-    </figure>
-    <p>
-      この次のスクリーンショットは、ピクチャーインピクチャーボタンをクリックした結果を示しています。デフォルトでは、プレーヤーは画面の右下近くに移動します（ブラウザではありません）。プレーヤーは、視聴者が配置したい場所にドラッグできます。
-    </p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="" width="800" height="525" src="/assets/images/players/node18509-p-in-p.png"/>
-    </figure>
-    <p>
-      この機能はデフォルトでオンになっています。すべてのブラウザがこのピクチャーインピクチャー機能をサポートしているわけではありません。次の表に、現在のサポートの詳細を示します。
-    </p>
+    <p>HTML5ピクチャーインピクチャー機能は次のように定義されます。<em>Webサイトが常に他のウィンドウの上にフローティングビデオウィンドウを作成できるようにすることで、ユーザーが他のコンテンツサイトやデバイス上のアプリケーションと対話している間もメディアを消費し続けることができます。</em>。 </p>
+    <p> ピクチャーインピクチャーの例を次の2つのスクリーンショットに示します。この最初のスクリーンショットは、プレーヤーがビデオを表示しているブラウザーを示しています。プレーヤーの右下にあるピクチャーインピクチャーボタンに、赤い矢印が向いていることに注意してください。 </p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="p-in-p nirnak" width="800" height="525" src="/assets/images/players/node18509-normal.png"/> </figure>
+    <p>この次のスクリーンショットは、ピクチャーインピクチャーボタンをクリックした結果を示しています。デフォルトでは、プレーヤーは画面の右下近くに移動します（ブラウザではありません）。プレーヤーは、視聴者が配置したい場所にドラッグできます。 </p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" width="800" height="525" src="/assets/images/players/node18509-p-in-p.png"/> </figure>
+    <p>この機能はデフォルトでオンになっています。すべてのブラウザがこのピクチャーインピクチャー機能をサポートしているわけではありません。次の表に、現在のサポートの詳細を示します。 </p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -1058,12 +1027,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
       </tbody>
     </table>
-    <p>
-      Studioでこの機能をオフにするには、<strong> JSONエディター</strong>からのオプション<strong>プレイヤーズ</strong>モジュール。これを行うには、構成オプションを追加します<code translate="No">"picture_in_picture_control": false,</code>ここに示すように：
-    </p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-json-editor.png"/>
-    </figure>
+    <p>Studioでこの機能をオフにするには、<strong> JSONエディター</strong>からのオプション<strong>プレイヤーズ</strong>モジュール。これを行うには、構成オプションを追加します<code translate="No">"picture_in_picture_control": false,</code>ここに示すように： </p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/players/node18509-json-editor.png"/> </figure>
   </section>
 </article>
 
@@ -1081,7 +1046,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  ページの最終更新日：2021年1月20日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1143,7 +1115,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1154,8 +1126,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

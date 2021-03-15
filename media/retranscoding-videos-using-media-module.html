@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ja">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -73,11 +81,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       
         
-          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+          <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
         
       
         
-          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+          <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
         
       
         
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">従来の取り込みプロファイルの作成</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">標準取り込みプロファイル（レガシー）</a></li>
                   
                 
                   
@@ -885,10 +924,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
     <p>Brightcoveは、VideoCloudアカウントに関連付けられているデフォルトの取り込みプロファイルを更新する権利を留保します。また、独自のカスタム取り込みプロファイルを更新する必要がある場合もあります。取り込みプロファイルが変更された場合、アカウント内の既存のビデオを再トランスコードして、新しい取り込みプロファイル設定に対応するレンディションを含めることができます。</p>
     <aside class="bcls-aside bcls-aside--information">注：既存のビデオを再トランスコードする機能は、ProfessionalアカウントとEnterpriseアカウントでのみ使用できます。この機能に興味がある場合は、アカウントマネージャーにお問い合わせください。</aside>
-    <p>ビデオは、MediaモジュールまたはDynamic IngestAPIを使用して再トランスコードできます。を使用して<span translate="No">Dynamic Ingest API</span>再トランスコーディングが必要なビデオが多数ある場合は、より良い解決策になる可能性があります。Dynamic Ingest APIを使用して動画を再変換するには、<a href="https://apis.support.brightcove.com/dynamic-ingest-legacy/getting-started/overview-dynamic-ingest-api-legacy-ingest.html">動的取り込みAPIの概要</a>開発者向けドキュメント。</p>
-    <aside class="bcls-aside bcls-aside--information">注：お客様のアカウントに共有されている動画を再トランスコードすることはできません。</aside>
+    <p>ビデオは、MediaモジュールまたはDynamic IngestAPIを使用して再トランスコードできます。を使用して<span translate="No">Dynamic Ingest API</span>再トランスコーディングが必要なビデオが多数ある場合は、より良い解決策になる可能性があります。Dynamic Ingest APIを使用して動画を再変換するには、<a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html">動的取り込みAPIの概要</a>開発者向けドキュメント。</p>
+    <aside class="bcls-aside bcls-aside--information">注:お客様のアカウントに共有されている動画を再トランスコードすることはできません。</aside>
     <aside class="bcls-aside bcls-aside--information">注：再トランスコードできるのは、UploadモジュールまたはDynamic IngestAPIを使用してアップロードされた動画のみです。ビデオを再トランスコードできない場合、再トランスコードは失敗します。</aside>
-    <aside class="bcls-aside bcls-aside--information">注：動画を再エンコードできるのは、動画がアカウントに追加されたときに動画マスターがアーカイブされている場合のみです。すべて<a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">標準の取り込みプロファイル</a>マスターをアーカイブします。</aside>
+    <aside class="bcls-aside bcls-aside--information">注：動画を再エンコードできるのは、動画がアカウントに追加されたときに動画マスターがアーカイブされている場合のみです。使用された取り込みプロファイルによっては、古い動画にマスターがない場合があります。</aside>
   </section>
   <section class="bcls-section">
     <h2 id="steps">動画を再トランスコードする手順</h2>
@@ -899,7 +938,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>の中に<strong>ビデオファイル</strong>セクションをクリックします<strong>再トランスコード</strong>。</li>
       <li>使用する取り込みプロファイルを選択します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15921-retranscode-settings.png"/></figure>
-        <aside class="bcls-aside bcls-aside--information">注：動的配信またはコンテキスト対応インジェストプロファイルを使用して最初にトランスコードされた動画は、これらの取り込みプロファイルタイプのいずれかを使用してのみ再変換できます。従来の取り込みプロファイルを使用してトランスコードされた動画は、任意のタイプのプロファイルで再変換できます。</aside>
+        <!-- <aside class="bcls-aside bcls-aside--information">Note: Videos that were initially transcoded using a Dynamic Delivery or Context Aware ingest profile can only be retranscoded using one of those ingest profile types. Videos transcoded using a Legacy ingest profile can be retranscoded with any type of profile.</aside> -->
       </li>
       <li>小切手<strong>既存のサムネイルとポスターの画像を保持する</strong>既存の画像を保持します。このチェックボックスをオフにすると、選択した取り込みプロファイルの画像設定に基づいて新しい画像が生成されます。</li>
       <li>クリック<strong>再トランスコード</strong>。</li>
@@ -922,7 +961,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  ページの最終更新日：2021年1月31日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -984,7 +1030,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -995,8 +1041,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

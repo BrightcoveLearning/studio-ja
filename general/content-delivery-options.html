@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ja">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -73,11 +81,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       
         
-          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+          <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
         
       
         
-          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+          <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
         
       
         
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">従来の取り込みプロファイルの作成</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">標準取り込みプロファイル（レガシー）</a></li>
                   
                 
                   
@@ -883,7 +922,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Introduction">はじめに</h2>
     <p>Video Cloudアカウントを作成した後、最初に決定することの1つは、ビデオファイルの配信をどのように計画するかです。Video Cloudには豊富な選択肢があり、それぞれに異なるメリットと制限事項があります。どのように動画ファイルを保護するか、どのように視聴者にリーチするか、好ましいアップロード方法、動画アセットが別のCDN（コンテンツ配信ネットワークかコンテンツ配信ネットワーク）に格納済みかどうか、などにより選択する配信方法は変わります。</p>
-    <p>このトピックで説明されているコンテンツ配信オプションは、Video CloudEnterpriseパブリッシャーのみが利用できます。Video Cloud ProおよびExpressのパブリッシャーは、BrightcoveをCDNとしてお使いください。</p>
+    <p>このトピックで説明されているコンテンツ配信オプションは、Video CloudEnterpriseパブリッシャーのみが利用できます。Video Cloud EnterpriseおよびExpressのパブリッシャーは、CDNとしてBrightcoveを使用する必要があります。</p>
     <p>このトピックでは、次の点について学習します。</p>
     <ul>
       <li><a href="#what">CDNとは何ですか？</a></li>
@@ -899,7 +938,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="what">CDNとは何ですか</h2>
     <p>パブリッシャーはCDNを使用して、オンライン上の視聴者に対し、メディアを広く配布することができます。<a target="_blank" href="http://en.wikipedia.org/wiki/Content_Delivery_Network">Wikipedia</a> では、CDNを次のように定義しています。</p>
     <p><em>コンテンツ配信ネットワークまたはコンテンツ配信ネットワーク（CDN）は、インターネット上でネットワーク化されたコンピューターのシステムであり、エンドユーザーにパフォーマンス、スケーラビリティ、およびコスト効率を向上させる目的で、ほとんどの場合、透過的に連携してコンテンツを配信します。</em></p>
-    <p>商用のCDNは多数あります。Video Cloud ProまたはExpressのパブリッシャーの場合、BrightcoveがCDNソリューションです。Video Cloud Enterpriseパブリッシャーの場合は、BrightcoveCDN以上を使用してコンテンツを配信することを選択できます。<a href="#cdns"> VideoCloudがサポートするCDN</a>。</p>
+    <p>商用のCDNは多数あります。Video Cloud EnterpriseまたはExpressのパブリッシャーの場合、BrightcoveがCDNソリューションです。Video Cloud Enterpriseパブリッシャーの場合は、BrightcoveCDN以上を使用してコンテンツを配信することを選択できます。<a href="#cdns"> VideoCloudがサポートするCDN</a>。</p>
   </section>
   <section class="bcls-section">
     <h2 id="without">CDNを利用しなくてもコンテンツを配信できますか</h2>
@@ -909,25 +948,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="types">メディアコンテンツはどのように配信されますか</h2>
     <p>コンテンツの配信方法には、複数のタイプがあります。</p>
     <ul>
-      <li><a href="#pd">プログレッシブダウンロード</a></li>
       <li><a href="#fms">ストリーミング</a></li>
+      <li><a href="#pd">プログレッシブダウンロード</a></li>
     </ul>
-    <section id="pd" class="bcls-subsection">
-      <h3>プログレッシブダウンロード（PD）</h3>
-      <p>プログレッシブダウンロードでコンテンツを配信する場合は、通常のWebページやダウンロード可能な文書と同様に、標準のWebサーバーからHTTP経由でファイルが提供されます。動画を再生するとき、動画ファイルは視聴者のコンピュータまたは機器にダウンロードされ、一時ディレクトリに格納されます。コンピュータもしくは機器にファイルが十分にダウンロードされると、動画の再生が始まります。視聴者が動画の別の部分まで早送りまたはスキップしたい場合、動画のその部分がすでにダウンロード、格納されている場合にのみ、早送りまたはスキップができます。ストリーミングビデオと比較すると、プログレッシブダウンロードには、ビデオを配信するためにストリーミングサーバーが必要ないという一貫したメリットが1つだけあります。動画のプログレッシブダウンロードは、通常のWebサーバーで行うことができます。</p>
-      <p>プログレッシブダウンロードは、トラフィック要件が低い愛好家やWebサイトに適しています。コンテンツが視聴者のコンピューター/デバイスにキャッシュされているかどうか、および短い長さのビデオ（10分未満）のみを配信する必要があるかどうかは気にしないでください。高度な機能と動画配信の制御が必要なパブリッシャー、および/またはより多くの視聴者（数百人以上の同時視聴者）に動画を表示する必要があるパブリッシャー、ビデオの使用状況または視聴統計を追跡および報告する必要があるパブリッシャー、または提供したいパブリッシャー最高のインタラクティブ再生体験は、彼らのビデオをストリーミングする必要があります。ストリーミング配信は、視聴されたビデオの一部のみが実際に配信されるため、プログレッシブ配信よりも少ない帯域幅を消費します。</p>
-      <p>プログレッシブダウンロードのキーポイント</p>
-      <ul>
-        <li>限られたシークおよびナビゲーション機能</li>
-        <li>視聴者によるコンテンツへのアクセスや、コンテンツの再利用が可能なこと</li>
-        <li>Video Cloudのダイナミックデリバリー機能を有効に利用しないこと</li>
-        <li>安全性が低く、コンテンツを簡単にコピーできます</li>
-        <li>動画の視聴部分だけでなく全体をダウンロードするので、使用帯域幅が大きいこと</li>
-      </ul>
-    </section>
     <section id="fms" class="bcls-subsection">
       <h3>ストリーミング（HLSまたはDASHとも呼ばれます）</h3>
-      <p>一方、ストリーミング動画はストリーミングサーバーから配信され、ファイルは視聴者のコンピュータもしくは機器にダウンロードされません。視聴者が再生ボタンを押すとすぐに、動画の再生が始まります。ユーザーが動画の他の部分まで早送りまたはスキップしたい場合には、直ちにそれが可能であり、動画の再生はその部分から再開されます。ストリーミングメディアの利点の1つは、ビデオの視聴された部分のみが配信されるため、帯域幅が視聴者が視聴したビデオにのみ使用されることです。クライアント側には何も保持されません。すべてがサーバー側にあります。</p>
+      <p>ストリーミングビデオは、ファイルが視聴者のコンピューター/デバイスにダウンロードされることなく、ストリーミングサーバーを介して配信されます。視聴者が再生ボタンを押すとすぐに、動画の再生が始まります。ユーザーが動画の他の部分まで早送りまたはスキップしたい場合には、直ちにそれが可能であり、動画の再生はその部分から再開されます。ストリーミングメディアの利点の1つは、ビデオの視聴された部分のみが配信されるため、帯域幅が視聴者が視聴したビデオにのみ使用されることです。クライアント側には何も保持されません。すべてがサーバー側にあります。</p>
+      <aside class="bcls-aside bcls-aside--information language-editable">HTML5ビデオプレーヤーの時代では、すべての最新のデバイスとブラウザーはストリーミングをサポートしており、利用可能な場合は（プログレッシブダウンロードではなく）ストリーミングを使用することに注意してください。これは、視聴者がビデオ全体を視聴していない場合に、バッファリングの管理を改善し、帯域幅を節約できるため、良いことです。</aside>
       <p>ストリーミングは、以下のことを行いたい、またはその必要がある場合に便利です。</p>
       <ul>
         <li>長いファイル（10分以上）や、ビットレートの高いファイル（高画質）を配信する。</li>
@@ -939,7 +966,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <p>Apple iOSデバイスは、ビデオファイルの配信にApple HTTP Live Streaming（HLS）とHTTP（プログレッシブダウンロード）のみをサポートします。動画に1つ以上の利用可能なHLSレンディションがあることを確認する必要があります。App Storeのルールでは、長い形式のビデオコンテンツ（5 Mbまたは10分を超える）にApple HTTP LiveStreamingを使用する必要があります。</p>
       <p>ストリーミングのキーポイント</p>
       <ul>
-        <li>一時的な動画リンクによって動画コンテンツのセキュリティが確保されていること</li>
+        <li>ビデオコンテンツは一時的なビデオリンクを介して保護されます</li>
         <li>動画の早送りが可能なこと</li>
         <li>Video Cloudダイナミックデリバリー機能を効果的に利用できること</li>
         <li>より小さい帯域幅でより多くのストリームを配信できること</li>
@@ -947,12 +974,26 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </ul>
       <p>実際には、上記のような優れた機能のいくつかを探さない限り、コンテンツがストリーミングされているのか、段階的にダウンロードされているのかを理解することはめったにありません。</p>
     </section>
-    <section id="images" class="bcls-subsection">
-      <h3>画像アセットの配信形態</h3>
-      <p>動画コンテンツにストリーミングとプログレッシブダウンロードのどちらを使用したとしても、エンドユーザーのVideo Cloudプレーヤー内に配信される画像（サムネイル、動画の静止画像など）はHTTPダウンロードにより配信されます。</p>
-    </section>
+  <section id="pd" class="bcls-subsection">
+    <h3>プログレッシブダウンロード（PD）</h3>
+    <aside class="bcls-aside bcls-aside--information language-editable">プログレッシブダウンロードが必要なのは、非常に古いブラウザまたはデバイスのみです。現在の主な用途は、ユーザーがダウンロードして保存できるレンディションを提供することです。</aside>
+    <p>プログレッシブダウンロードでコンテンツを配信する場合は、通常のWebページやダウンロード可能な文書と同様に、標準のWebサーバーからHTTP経由でファイルが提供されます。動画を再生するとき、動画ファイルは視聴者のコンピュータまたは機器にダウンロードされ、一時ディレクトリに格納されます。コンピュータもしくは機器にファイルが十分にダウンロードされると、動画の再生が始まります。視聴者が動画の別の部分まで早送りまたはスキップしたい場合、動画のその部分がすでにダウンロード、格納されている場合にのみ、早送りまたはスキップができます。ストリーミングビデオと比較すると、プログレッシブダウンロードには、ビデオを配信するためにストリーミングサーバーが必要ないという一貫したメリットが1つだけあります。動画のプログレッシブダウンロードは、通常のWebサーバーで行うことができます。</p>
+    <p>プログレッシブダウンロードは、トラフィック要件が低い愛好家やWebサイトに適しています。コンテンツが視聴者のコンピューター/デバイスにキャッシュされているかどうか、および短い長さのビデオ（10分未満）のみを配信する必要があるかどうかは気にしないでください。高度な機能と動画配信の制御が必要なパブリッシャー、および/またはより多くの視聴者（数百人以上の同時視聴者）に動画を表示する必要があるパブリッシャー、ビデオの使用状況または視聴統計を追跡および報告する必要があるパブリッシャー、または提供したいパブリッシャー最高のインタラクティブ再生体験は、彼らのビデオをストリーミングする必要があります。ストリーミング配信は、視聴されたビデオの一部のみが実際に配信されるため、プログレッシブ配信よりも少ない帯域幅を消費します。</p>
+    <p>プログレッシブダウンロードのキーポイント</p>
+    <ul>
+      <li>限られたシークおよびナビゲーション機能</li>
+      <li>視聴者によるコンテンツへのアクセスや、コンテンツの再利用が可能なこと</li>
+      <li>Video Cloudのダイナミックデリバリー機能を有効に利用しないこと</li>
+      <li>安全性が低く、コンテンツを簡単にコピーできます</li>
+      <li>動画の視聴部分だけでなく全体をダウンロードするので、使用帯域幅が大きいこと</li>
+    </ul>
   </section>
-  <section class="bcls-section">
+  <section id="images" class="bcls-subsection">
+    <h3>画像アセットの配信形態</h3>
+    <p>動画コンテンツにストリーミングとプログレッシブダウンロードのどちらを使用したとしても、エンドユーザーのVideo Cloudプレーヤー内に配信される画像（サムネイル、動画の静止画像など）はHTTPダウンロードにより配信されます。</p>
+  </section>
+</section>
+<section class="bcls-section">
     <h2 id="compare">コンテンツ配信の比較：BrightcoveがホストするビデオアセットとBYOとリモートアセット</h2>
     <p>Video Cloudでは、CDNプロバイダーと設定に応じて、いくつかの基本的なCDN構成を サポートしています。次から選択できます。</p>
     <ul>
@@ -1035,7 +1076,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  ページの最終更新日：2021年1月11日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1097,7 +1145,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1108,8 +1156,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({

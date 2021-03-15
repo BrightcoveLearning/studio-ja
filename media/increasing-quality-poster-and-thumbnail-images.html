@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ja">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
   <script src="/assets/js/sajari-head.js"></script>
 </head>
 
@@ -73,11 +81,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       
         
-          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+          <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
         
       
         
-          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+          <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
         
       
         
@@ -489,8 +497,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
               <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
               <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
                 
                   
                     <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
@@ -698,6 +741,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
                   
                 
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
               </ul>
             
           
@@ -730,10 +777,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/admin/creating-legacy-ingest-profiles.html">従来の取り込みプロファイルの作成</a></li>
-                  
-                
-                  
                     <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
                   
                 
@@ -763,10 +806,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
-                  
-                
-                  
-                    <li><a href="/admin/standard-ingest-profiles-legacy-transcoding.html">標準取り込みプロファイル（レガシー）</a></li>
                   
                 
                   
@@ -915,22 +954,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <ol class="bcls-tasklist-restart">
         <li>Studioヘッダーで、<strong>管理者</strong>リンク。ADMINメニューにアクセスするには、Administratorロールを持つVideo CloudStudioユーザーである必要があることに注意してください。</li>
         <li>クリック<strong>プロファイルの取り込み</strong>。</li>
-        <li>をクリックします<strong>プロファイル名</strong>。プロファイルエディタにプロファイル定義が表示されます。</li>
-        <li>画像サイズの表示方法は、<strong>プロファイルバージョン</strong>クリックされた（つまり、レガシー、動的配信、またはコンテキストアウェア）。
-          <ul>
-            <li>にとって<strong>レガシー</strong>プロファイルについては、プロファイルエディタウィンドウの一番下までスクロールして、<strong><code translate="No">"media_type": "image"</code></strong>。ポスター用とサムネイル用の2つのエントリが必要です。</li>
-            <li>にとって<strong>動的配信</strong>そして<strong>コンテキストアウェア</strong>プロファイル、画像サイズはにリストされています<strong>画像</strong>プロファイル定義のセクション。</li>
-          </ul>
-          <p>次の例は、動的配信プロファイルバージョンからのものです。</p>
+        <li>をクリックします<strong>プロファイル名</strong>。プロファイルエディタにプロファイル定義が表示されます。
+        <!-- <li>The method to view the image sizes will vary based upon the <strong>Profile Version</strong> (i.e. Legacy, Dynamic Delivery or Context-Aware) that was clicked. -->
+            <!-- <li>For <strong>Legacy</strong> profiles, scroll to the bottom of the Profile Editor window and search for <strong><code translate="No">"media_type": "image"</code></strong>. There should be two entries, one for the poster and one for the thumbnail.</li> -->
+					にとって<strong>動的配信</strong>そして<strong>コンテキストアウェア</strong>プロファイル、画像サイズはにリストされています<strong>画像</strong>プロファイル定義のセクション。次の例は、動的配信プロファイルバージョンからのものです。
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node16671-profile-editor.png"/></figure>
         </li>
         <li>ポスターと画像のサイズを確認してください。あなたのプレーヤーのどれかがポスターのサイズより大きい場合、画像は拡大されます。</li>
       </ol>
-      <aside class="bcls-aside bcls-aside--information">注：標準の取り込みプロファイルの画像サイズも、次のいずれかのドキュメントに記載されています。
-        <ul>
-          <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">レガシートランスコーディングの標準インジェストプロファイル</a></li>
-          <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">動的配信およびコンテキスト認識エンコーディングの標準インジェストプロファイル</a></li>
-        </ul>
+      <aside class="bcls-aside bcls-aside--information">注:標準の取り込みプロファイルの画像サイズもドキュメントに記載されています。 
+          <!-- <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Transcoding</a></li> -->
+          <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">動的配信とコンテキストアウェアエンコーディングの標準的な取り込みプロファイル</a>。
       </aside>
     </div>
   </section>
@@ -945,12 +979,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="resize">自動サイズ変更</h2>
     <p>Studio または Dynamic Ingest API 経由でカスタムポスターやサムネイル画像を追加すると、デフォルトでは、Video Cloud は、アカウントのデフォルトの取り込みプロファイルで定義されている画像サイズに合わせてこれらのサイズを変更します。</p>
-    <h3>自動サイズ変更を上書きする</h3>
-    <aside class="bcls-aside bcls-aside--information">注：このオプションは、<strong>レガシー</strong>プロファイルバージョン。</aside>
-    <p>この動作をオーバーライドし、Video Cloud で実際の画像サイズを保持する場合は、次の手順に従います。</p>
+    <!-- <h3>Override auto-resizing</h3>
+    <aside class="bcls-aside bcls-aside--information">Note: This option is only available when using a <strong>Legacy</strong> profile version.</aside>
+    <p>If you want to override this behavior and have Video Cloud retain actual image dimensions, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li><a href="/admin/managing-ingest-profiles.html">アカウントの新しいカスタム取り込みプロファイルの作成</a>（または既存のカスタムプロファイルの変更）</li>
-      <li>投稿とサムネイルの画像レンディションを含める<strong>丁度</strong>これら<code translate="No">width</code>そして<code translate="No">height</code>値：
+      <li><a href="/admin/managing-ingest-profiles.html">Create a new custom ingest profile</a> for your account (or modify an existing custom profile)</li>
+      <li>Include image renditions for the post and thumbnail that have <strong>exactly</strong> these <code translate="No">width</code> and <code translate="No">height</code> values:
         <pre class="line-numbers">
 <code class="language-json" translate="No">{
 "media_type": "image",
@@ -967,9 +1001,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <span style="background-color:#FFFFC9;border:1px #ffcc33" solid="">"height": 9999</span>
 }</code></pre>
       </li>
-      <li><a href="/admin/managing-ingest-profiles.html#default">これをデフォルトのプロファイルにします</a>アカウント用。</li>
+      <li><a href="/admin/managing-ingest-profiles.html#default">Make this the default profile</a> for the account.</li>
     </ol>
-    <p>Studio または Dynamic Ingest を使用してカスタムイメージを追加すると、ソースイメージの元のサイズになります。</p>
+    <p>Now when you add custom images via Studio or Dynamic Ingest, they will have the original dimensions of the source images.</p> -->
   </section>
   <section class="bcls-section">
     <h2 id="existing">私の既存のビデオはどうですか？</h2>
@@ -1004,7 +1038,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
+<div class="last-updated">
+  ページの最終更新日：2021年2月1日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
     <div class="region region-footer-top-center col-md-12">
       <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
 
@@ -1066,7 +1107,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
             <td>
               <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
                 </div>
               </div>
             </td>
@@ -1077,8 +1118,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </div>
 </footer>
 
-</div>
-</div>
 <script>
       
   var searchBox = sajari.init({
