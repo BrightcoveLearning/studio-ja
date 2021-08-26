@@ -912,11 +912,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h1>Video Cloudから動画をダウンロードする</h1>
   <summary>このトピックでは、Video Cloudの動画をダウンロードするさまざまな方法について学習します。</summary>
   <section class="bcls-section">
-    <p>Video Cloudアカウントから動画をダウンロードするにはいくつかの方法があります。APIを使用して、メディアモジュールまたはソーシャルモジュールを使用してビデオをダウンロードできます。また、ダウンロードリンクをプレーヤーに追加して、視聴者がコンテンツをダウンロードできるようにすることができます。</p>
+    <p>Video Cloudアカウントから動画をダウンロードするにはいくつかの方法があります。APIを使用して、MediaモジュールまたはSocialモジュールを使用してビデオをダウンロードできます。また、ダウンロードリンクをプレーヤーに追加して、視聴者がコンテンツをダウンロードできるようにすることができます。</p>
   </section>
   <section class="bcls-section">
     <h2 id="mediamodule">Mediaモジュールを使用して動画をダウンロードする</h2>
-    <p>メディアモジュールを使用して、ビデオのレンディションをダウンロードできます。メディアモジュールのビデオ名の横にあるクラウドアイコンが灰色の場合（<img alt="" src="/assets/images/media/node14363-legacy-icon.png"/>）、ビデオは従来の取り込みプロファイルを使用して取り込まれ、MP4とHLSの両方のレンディションをメディアモジュールにダウンロードできます。緑の雲のアイコン（<img alt="" src="/assets/images/media/node14363-dd-icon.png"/>）は、ビデオがDynamic Deliveryを使用して取り込まれたことを示し、MP4レンディションを作成する取り込みプロファイルが選択されている場合は、MP4レンディションをダウンロードできます。</p>
+    <p>Mediaモジュールを使用して、ビデオのレンディションをダウンロードできます。Mediaモジュールのビデオ名の横にあるクラウドアイコンが灰色の場合（<img alt="" src="/assets/images/media/node14363-legacy-icon.png"/>）、ビデオは従来の取り込みプロファイルを使用して取り込まれ、MP4とHLSの両方のレンディションをMediaモジュールにダウンロードできます。緑の雲のアイコン（<img alt="" src="/assets/images/media/node14363-dd-icon.png"/>）は、ビデオがDynamic Deliveryを使用して取り込まれたことを示し、MP4レンディションを作成する取り込みプロファイルが選択されている場合は、MP4レンディションをダウンロードできます。</p>
     <aside class="bcls-aside bcls-aside--information">
       注
       <ul>
@@ -930,15 +930,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </li>
       </ul>
     </aside>
-    <p>メディアモジュールを使用してビデオをダウンロードするには、次の手順に従います。</p>
+    <p>Mediaモジュールを使用してビデオをダウンロードするには、次の手順に従います。</p>
     <ol class="bcls-tasklist-restart">
       <li><strong>Media</strong> モジュールを開きます。</li>
       <li>ダウンロードしたいビデオのリンクをクリックします。</li>
-      <li>を見つけます<strong>ビデオファイル</strong>セクション。</li>
+      <li><strong>動画ファイル</strong>セクションを見つけます。</li>
       <li>使用されたトランスコーディングのタイプを確認します。
         <ul>
-          <li><strong>動的配信</strong>（緑色の雲のアイコン、以下の例）-内のリンクを右クリックします<strong>寸法</strong>ダウンロードするレンディションの列。クリック可能なダウンロードリンクは、MP4レンディションが作成されている場合にのみ表示されることに注意してください</li>
-          <li><strong>レガシー</strong>（灰色の雲のアイコン）-のリンクを右クリックします<strong>フォーマット</strong>ダウンロードするレンディションの列</li>
+          <li><strong>Dynamic Delivery</strong>(緑色の雲のアイコン) -ダウンロードするレンディションの<strong>サイズ</strong>列のリンクを右クリックします。クリック可能なダウンロードリンクは、MP4レンディションが作成されている場合にのみ表示されることに注意してください</li>
+          <li><strong>レガシー</strong>（灰色の雲のアイコン）-ダウンロードするレンディション<strong>format</strong>列のリンクを右クリックします。</li>
         </ul>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14363-click-download-link.png"/></figure>
       </li>
@@ -947,8 +947,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>レンディションと画像のURLは固定されていないことを理解することが重要です。Brightcove ではメディアアセットのストレージを適宜再構成し、この際に特定のアセットのURLが変わります。これらアセットへのハードコーディングされたURLに依存している場合、リンクがある時点で切れてしまう可能性があります。メディアへのリンクが壊れないようにする最善の方法は、CMSAPIを使用して実行時にVideoCloudからメディアを取得することです。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="socialmodule">ソーシャルモジュールを使用してビデオをダウンロードする</h2>
-    <p>ソーシャルモジュールは、ビデオURLをコピーしたり、ビデオソースファイルをダウンロードしたりする機能を提供します。ダウンロードするとき、最高品質のMP4レンディションがダウンロードされます。</p>
+    <h2 id="socialmodule">Socialモジュールを使用してビデオをダウンロードする</h2>
+    <p>Socialモジュールは、ビデオURLをコピーしたり、ビデオソースファイルをダウンロードしたりする機能を提供します。ダウンロードするとき、最高品質のMP4レンディションでダウンロードされます。</p>
     <p>Socialモジュールを使用してビデオをダウンロードするには、次の手順に従います。</p>
     <ol class="bcls-tasklist-restart">
       <li>Brightcove ソーシャルを開きます。</li>
@@ -964,9 +964,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="cmsapi">CMSAPIを使用したビデオプロパティへのアクセス</h2>
-    <p>ザ・<span translate="No">CMS API</span> VideoCloudアカウント内の任意のビデオのビデオURLを含むメタデータを取得するために使用できます。CMS APIを使用するには、開発スキルが必要です。CMS APIを使用してビデオプロパティにアクセスする方法については、<a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-retrieve-video-data.html"> CMS APIの使用：ビデオデータを取得する</a>開発者向けドキュメント。</p>
-    <p>Brightcove LearningServicesもサンプルを作成しました<span translate="No">CMS API</span>ダウンロードリンクを取得するために使用できるアプリ：<a href="https://apis.support.brightcove.com/cms/code-samples/cms-api-sample-download-links.html">CMS API サンプル:ダウンロードリンク</a>。</p>
+    <h2 id="cmsapi">CMS APIを使用したビデオプロパティへのアクセス</h2>
+    <p><span translate="No">CMS API</span> VideoCloudアカウント内の任意のビデオのビデオURLを含むメタデータを取得するために使用できます。CMS APIを使用するには、開発スキルが必要です。CMS APIを使用してビデオプロパティにアクセスする方法については、<a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-retrieve-video-data.html"> CMS APIの使用：ビデオデータを取得する</a>開発者向けドキュメントを参照して下さい。</p>
+    <p>Brightcove Learning Servicesは、ダウンロードリンクの取得に使用できるサンプル<span translate="No">CMS API</span>アプリも作成しました。CMS APIサンプル：<a href="https://apis.support.brightcove.com/cms/code-samples/cms-api-sample-download-links.html">CMS API サンプル:ダウンロードリンク</a>。</p>
   </section>
   <section class="bcls-section">
     <h2 id="link">動画ファイルのダウンロードリンクを作成する</h2>
