@@ -1,0 +1,61 @@
+---
+title: キャンペーンモジュールのでのプレーヤーイベントの表示
+description: このトピックでは、キャンペーンモジュールでプレーヤーイベントを表示する方法を学習します。
+parent: General Information
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>キャンペーンモジュールは、ビューイベントを追跡する機能を提供します。ビューイベントがキャンペーンモジュールに送信される頻度は、ビデオの長さに基づいて動的に計算されます。キャンペーンは、四分位数ごとに1つずつ、少なくとも4つのイベントを送信します。</p>
+    <aside class="bcls-aside bcls-aside--information">注:ビューイベントデータは、[ <a href="/campaign/admin/exporting-campaign-data-campaign-module.html">データのエクスポート]</a>オプションを使用するか、<a href="/campaign/develop/overview-audience-api.html"> Audience API</a>を使用してエクスポートできます。</aside>
+    <p>イベントの表示を表示するには、キャンペーンモジュールを開き、[ &nbsp;<strong>最近のすべての活動</strong>左側のナビゲーションで。このページには、過去 24 時間の表示イベントアクティビティが表示されます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/general/node15863-view-events.png" /></figure>
+    <p>NS <strong>インタラクションイベントを表示する</strong>リンクは次の場合に有効になります<a href="#events">カスタムイベントまたはメトリック</a>ビューイベントに添付されます。</p>
+    <p>このページには、次の情報が表示されます。</p>
+    <ul>
+      <li><strong>タイムスタンプ</strong> -ビデオビューの日付と時刻</li>
+      <li><strong>ビデオの名前と ID</strong> -ビデオ名とビデオクラウドビデオ ID</li>
+      <li><strong>視聴率</strong> -視聴者がビデオの視聴を停止した時点を、動画の長さで割った値です。例えば、視聴者が 2 分間の動画の最初の 5 秒を視聴し、55 秒のポイントまでスキップし、さらに 5 秒視聴してビデオを停止した場合（またはページを離れた）場合、視聴率は 50% として記録されます。<aside class="bcls-aside bcls-aside--information">注:にとって<strong>ライブビデオ</strong>、キャンペーンで視聴された割合を追跡することはできません。Campaignモジュールはどのくらいの期間続くかを知ることができないため、Campaignモジュールは総視聴時間のみを追跡します。</aside>
+      </li>
+      <li><strong>ウォッチ時間</strong> -合計視聴時間</li>
+      <li><strong>外部 ID</strong> -ビューアを識別するために使用される値。たとえば、Eloqua GUID、Marketo GUID、HubSpot GUID、SSO GUID、またはビューアを識別するために使用された別の一意の値です。</li>
+      <li><strong>Status</strong> -イベントのステータス
+        <ul>
+          <li><strong>未処理</strong> -イベントがマーケティングオートメーションプラットフォームに同期されていません</li>
+          <li><strong>同期済み</strong> -イベントはマーケティングオートメーションプラットフォームに正常に同期されました</li>
+          <li><strong>sync_disabled</strong> -キャンペーンモジュールが同期を無効にして構成されたため、イベントがスキップされました</li>
+          <li><strong>失敗</strong> -同期エラー。ツールチップには、発生したエラーの詳細が表示されます</li>
+          <li><strong>unknown_contact</strong> -不明なユーザーであるため、イベントが同期されませんでした</li>
+          <li><strong>該当なし</strong> - 適用できない;カスタム、キャンペーントラッキング、またはMarketoMunchkin統合を使用する場合に表示されます</li>
+        </ul>
+      </li>
+    </ul>
+    <p>ページの上部にあるドロップダウンリストを使用して、イベントデータをステータス別にフィルタリングすることもできます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/general/node15863-filter.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="events">インタラクションイベントの表示</h2>
+    <p>カスタム指標またはイベントがビューイベントにアタッチされている場合、[ <strong>インタラクションイベントの表示]</strong>リンクが有効になります。たとえば、キャンペーンが有効なプレーヤーでギャラリーのページ内エクスペリエンスを使用していて、エクスペリエンスが次のように構成されている場合<a href="https://gallery.support.brightcove.com/experiences/inpage/adding-interactions-page-experience.html">リンク、カード、またはその他の種類のインタラクティブ要素</a>、エクスペリエンスはインプレッションイベントとコンバージョンイベントをキャンペーンモジュールに送信します。これらのイベントは、キャンペーンカスタムフィールドを使用してキャンペーンに渡されます。イベントデータは、キャンペーンモジュールに<strong>最近のすべての活動</strong>。</p>
+    <aside class="bcls-aside bcls-aside--information">注:<a href="/campaign/general/using-custom-metrics-and-events.html">Campaign カスタム指標とイベントを使用する場合も、インタラクションイベントが表示されることがあります</a>。</aside>
+    <p>次のデータが渡されることがあります。</p>
+    <ul>
+      <li><strong>イベント 1</strong> -視聴者がインタラクションする機会があった CTA 名のコンマ区切りリスト（印象）</li>
+      <li><strong>イベント 2</strong> - <strong></strong>ビューアが操作した CTA 名のカンマ区切りリスト（変換）</li>
+      <li><strong>メトリック 1</strong> -CTA インプレッションの総数</li>
+      <li><strong>メトリック 2</strong> -クリックされたリンク、フォーム送信など、CTA コンバージョンの合計数</li>
+    </ul>
+    <p>イベントを表示するには、ヘッダーの [ <strong>インタラクションイベントの表示]</strong>リンクをクリックします。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/general/node15863-ipx-example.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="viewdata">その他のデータ表示オプション</h2>
+    <p>キャンペーンデータは、他の方法で表示/エクスポートできます。</p>
+    <ul>
+      <li><strong>ビデオアクティビティ</strong> -視聴者のアクティビティをビデオ別に表示するために使用します。詳細については、「<a href="/campaign/general/viewing-video-activity.html">ビデオアクティビティの表示」を参照してください</a>。</li>
+      <li><strong>ビューアプロファイル</strong> -視聴者によるビデオアクティビティの表示に使用します。詳細は、「<a href="/campaign/general/viewing-viewer-profile-information.html">ビューアプロファイル情報の表示」を参照してください</a>。</li>
+      <li><strong>データのエクスポート</strong> -ビデオビューとリードデータをエクスポートするために使用します。詳細については、を参照してください。<a href="/campaign/admin/exporting-campaign-data-campaign-module.html">キャンペーンモジュールからのキャンペーンデータのエクスポート</a>。</li>
+      <li><strong>オーディエンス API</strong> -Audience API を使用して、ビデオビューとリードデータをプログラムで取得できます。詳細については、「<a href="/campaign/develop/overview-audience-api.html">概要」を参照してください。オーディエンス API</a>。</li>
+    </ul>
+  </section>
+</article>

@@ -1,0 +1,177 @@
+---
+title: VideoCloudとSalesforceの統合
+parent: Salesforce 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>ビデオクラウドと Salesforce の統合</h1>
+  <summary>このトピックでは、Salesforceで使用するためにキャンペーンモジュールを構成する方法について説明します。</summary>
+  <section class="bcls-section">
+    <p>キャンペーンモジュールを使用すると、VideoCloudでBrightcoveプレーヤーからの表示データをSalesforceに同期できます。Salesforceでは、このデータをキャンペーンロジック、レポート、リードスコアリング、コミュニケーションのパーソナライズに使うことができます。キャンペーンモジュールとSalesforceの統合は、次の2つの主要コンポーネントで構成されています。</p>
+    <ul>
+      <li>動画視聴回数データのトラッキングを可能にするBrightcoveプレーヤープラグイン</li>
+      <li>動画クラウドから Salesforce にトラッキングデータを送信する同期プロセス</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="requirements">要件</h2>
+    <p>Salesforceでキャンペーンモジュールを使用するには、次のことを行う必要があります。</p>
+    <ul>
+      <li>ProfessionalまたはEnterprise Video Cloudアカウントを保有している</li>
+      <li>Salesforce アカウントを持っている、Salesforce サンドボックスアカウントはサポートされていません</li>
+      <li>キャンペーンモジュールを開いたときに表示される最初のスプラッシュ画面で必要な情報を送信して、アカウントでキャンペーンモジュールを有効にします</li>
+      <li>はじめてモジュールを使用するときにサービス利用契約に同意している</li>
+      <li>Salesforce.com アカウントが<strong> API</strong>使用可能権限を持ち、閲覧データの送信先として選択した Salesforce オブジェクトに対して読み書きできるロールに属している</li>
+      <li>プレーヤーを公開するときは、拡張埋込み（ページ内）パブリッシングコードを使用します。プラグインはiframeの内部で動作するため、親ページURLパラメーターにアクセスできないので、標準埋込み（iframe）パブリッシングコードは機能しません</li>
+      <li>Pardot統合を使用する場合は、<a href="../../../campaign/integrations/salesforce/creating-salesforce-object-pardot.html"> Pardot統合用のカスタムSalesforceオブジェクトの作成</a>トピック。</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="features">特徴</h2>
+    <p>ビデオクラウドと Salesforce 統合の主な機能は次のとおりです。</p>
+    <ul>
+      <li><strong>データ形式</strong> -ビデオクラウドの表示データは Salesforce オブジェクトにマッピングされます</li>
+      <li><strong>データ転送</strong> -表示データは毎時間ビデオクラウドから Salesforce に送信されます。</li>
+      <li><strong>リードフォーム</strong> -視聴者が動画を視聴したときに自動的に表示される Salesforce フォームを作成します。詳細については、「Salesforce <a href="/campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html">のカスタムリードフォームの作成」を参照してください</a>。</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="setupconnection">接続を設定する</h2>
+    <p>Video CloudとSalesforceとの間の接続を設定するには、次の手順を行います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>キャンペーンモジュールを開き、をクリックします<strong>データ接続</strong>左側のナビゲーションで。</li>
+      <li>[<strong>新規コレクションの追加</strong>]をクリックします。</li>
+      <li>統合として[<strong>Salesforce</strong>]を選択します。<aside class="bcls-aside bcls-aside--information">注:利用可能なインテグレーションは、Video Cloud サブスクリプションに基づいています。</aside>
+      </li>
+      <li>(オプション) <strong>接続名を入力します</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select salesforce" src="/assets/images/campaign/integrations/salesforce/node16123-select-salesforce.png" /></figure>
+      </li>
+      <li>[<strong>接続</strong>]をクリックします。</li>
+      <li>[Salesforce <strong>に接続] をクリックします</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connect to salesforce" src="/assets/images/campaign/integrations/salesforce/node16123-connect-to-salesforce.png" /></figure>
+      </li>
+      <li>表示されるログイン画面で、Salesforce <strong></strong><strong>ユーザ名とパスワードを入力します</strong>。[ <strong>ログイン] をクリックします</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Salesforce login" src="/assets/images/campaign/integrations/salesforce/node16123-salesforce-login.png" /></figure>
+      </li>
+      <li>ログインが成功すると、インストールを求めるメッセージが表示されます。<strong> Brightcove Video Connect for Salesforce</strong>アプリ。[<strong>許可</strong>]をクリックします。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/node16123-bc-connect-salesforce.png" /></figure>
+      </li>
+    </ol>
+    <p>SalesforceへのVideo Cloud接続が設定され、使用の準備ができました。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">統合の設定</h2>
+    <p>ビデオクラウドから Salesforce への接続が確立されたら、統合を構成できます。[<strong>Salesforceユーザー情報</strong>]をクリックして、統合をセットアップするときに使用したアカウントに関する情報を確認します。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connected options" src="/assets/images/campaign/integrations/salesforce/node16123-configure.png" /></figure>
+    <ol class="bcls-tasklist-restart">
+      <li>ビューアの識別を構成するには、[ <strong>閲覧者の識別方法を構成する]</strong>リンクをクリックし、オプションを選択します。 </li>
+      <ul>
+        <li><strong>Pardot</strong> -Pardot はビューアを識別するために使用されます。以下の「Pardot <a href="#pardot">統合の設定</a>」セクションを参照してください。</li>
+        <li><strong>マニュアル</strong> -開発スタッフは、ロジックをに追加する責任があります<a href="#identify">視聴者を特定する</a>。</li>
+      </ul>
+      <li>[ <strong>マッピングタイプ] を選択し</strong>、<a href="#configuredata"></a>データマッピングを構成します。</li>
+      <li>デフォルトでは、[ <strong>接続ステータス]</strong>は [ <strong>有効] になります</strong>。<strong></strong>接続ステータスによって、Video Cloud ビデオエンゲージメントデータが Salesforce に送信されるかどうかが決まります。 </li>
+      <ul>
+        <li><strong>有効</strong> -データが収集され、Salesforce に送信されます</li>
+        <li><strong>無効</strong> -データは収集されません（統合は無効です）</li>
+      </ul>
+      <li>デフォルトでは、<strong>不明な視聴者の追跡データ</strong>になります<strong>無効</strong>。この設定では、視聴者が不明な場合に、動画エンゲージメントデータを Video Cloud に保存するかどうかを指定します。既知の閲覧者のデータのみが Salesforce に送信されます。
+        <ul>
+          <li><strong>有効</strong> -すべての視聴者のデータが収集され、VideoCloudに保存されます</li>
+          <li><strong>無効</strong> -不明な視聴者のデータはVideoCloudに保存されません</li>
+        </ul>
+      </li>
+      <li>データ保持ポリシーを選択します。データ保持ポリシーは、表示データとリードフォームデータ（キャンペーンリードフォームを使用している場合）がVideoCloudアカウントに保持される期間を決定します。Video Cloudでデータを保持していると、同期の中断から回復できます。また、キャンペーンは、イベントがデータ保持期間を過ぎて経過するまで、同期に失敗したイベントを再試行し続けます（通常、視聴者はビデオを視聴した時点で既知の連絡先ではないため）。<strong>保持設定は、プライバシーポリシーに従って調整する必要があります</strong>。Video Cloud にユーザーデータを保持する必要はありません。データは、データ保持期間が過ぎると削除されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="data retention options" src="/assets/images/campaign/integrations/salesforce/node16123-data-retention-options.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="pardot">Pardot 統合の設定</h2>
+    <p>BrightcoveキャンペーンとSalesforceの接続が確立されたら、Pardotを使用して視聴者を識別することを選択できます。このセクションでは、Pardot を使用してビューアを識別する手順について説明します。</p>
+    <aside class="bcls-aside bcls-aside--information">注:Pardot 統合を構成する前に、「Pardot 統合用のカスタム Salesforce <a href="/campaign/integrations/salesforce/creating-salesforce-object-pardot.html">オブジェクトの作成」</a>トピックで説明されている手順を完了する必要があります。</aside><aside class="bcls-aside bcls-aside--information">注:2021 年 2 月 15 日現在、Pardot ログインの使用は無効になっています。</aside>
+
+    <ol class="bcls-tasklist">
+      <li>[ <strong>閲覧者の識別方法を構成する]</strong>リンクをクリックします。</li>
+      <li>2つのログインオプションが表示された場合は、<strong> Salesforceログインを使用する</strong>。</li>
+    </ol>
+    <h3 id="pardot-api-key">PardotビジネスユニットIDを取得します</h3>
+    <p>PardotビジネスユニットIDフィールドの値を取得するには、次の手順に従います。</p>
+    <ol  class="bcls-tasklist">
+      <li>Salesforceアカウントにログインします。</li>
+      <li> 歯車のアイコンをクリックします（<img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/pardot-gear-icon.png" />） その後<strong>設定</strong>。</li>
+      <li>左側のナビゲーションでは、<strong>クイック検索</strong>ボックス、検索<strong>Pardot</strong>、次にクリックします<strong>Pardotアカウントの設定</strong>。</li>
+      <li> を見つけます<strong>ビジネスユニットID</strong>分野。に値を入力します<strong>PardotビジネスユニットID</strong>キャンペーンのフィールド。</li>
+    </ol>
+    <h3 id="tracking-ids">トラッキング ID を取得する</h3>
+    <p>[ <strong>トラッキング Piald]</strong>フィールドと [ <strong>トラッキング piCLD</strong> ] フィールドの値を取得するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist">
+      <li>左側のナビゲーションを使用して、<strong>マーケティング</strong>ページ。</li>
+      <li>クリック<strong>キャンペーン</strong>上部のナビゲーション。</li>
+      <li> キャンペーン名をクリックします（またはをクリックします<strong>新しい</strong>キャンペーンがない場合はキャンペーンを作成します）。<aside class="bcls-aside bcls-aside--information">注:選択したキャンペーンは関係ありません。Brightcove Campaign では、視聴者を識別するために Cookie を取得するために両方の値が必要です。</aside>
+      </li>
+      <li> [ <strong>トラッキングコードを表示] をクリックします</strong>。NS <strong> piAId</strong>と<strong>piCId</strong>値が表示されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/pardot-tracking-code.png" /></figure>
+      </li>
+      <li>値をコピーし、それぞれのフィールドに貼り付けます。<aside class="bcls-aside bcls-aside--information">注:Brightcove Campaignでは、PiAid フィールドと picID フィールドは検証されませんが、間違った値が入力されると、Brightcove Campaignはビューアを識別できません。</aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="salesforce integration type" src="/assets/images/campaign/integrations/salesforce/pardot-credentials.png" /></figure>
+      </li>
+      <li>[Pardot <strong>に接続] をクリックします</strong>。</li>
+    </ol>
+    <p>通常、Pardot 統合タイプを使用する場合は、[ <strong></strong>高度なマッピングタイプ] を選択し、作成した<a href="/campaign/integrations/salesforce/creating-salesforce-object-pardot.html"> Salesforce</a>カスタムオブジェクトにビューフィールドをマッピングします。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configuredata">データマッピングを設定する</h2>
+    <p>データマッピングは、ビデオデータを Salesforce オブジェクトの項目にマップする方法を決定します。デフォルトでは、統合は次を使用して構成されます<strong>単純</strong>一部のビデオデータをにマッピングするマッピング<strong>タスク</strong> Salesforceのオブジェクト。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/node16123-simple-mapping.png" /></figure>
+    <p>以下の手順に従って、データマッピングをカスタマイズします。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>[Salesforce <strong>オブジェクトの項目へのデータのマッピング方法の設定]</strong>をクリックするか、[ <strong>マッピング]</strong>リンクをクリックします。</li>
+      <li>[ <strong>マッピングタイプ] で</strong>、[ <strong>詳細] を選択します</strong>。</li>
+      <li>[ <strong>Salesforce オブジェクト]</strong>ドロップダウンリストで、ビデオデータをマッピングするオブジェクトを選択します。</li>
+      <li><strong>適切なビュー項目を</strong> Salesforce 項目にマップします。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/salesforce/node16123-adv-mapping.png" /></figure>
+      </li>
+      <li><strong>[保存]</strong> をクリックして、変更を保存します。</li>
+    </ol>
+    <p>Salesforceとの統合を削除するには、[<strong>切断</strong>]をクリックします。キャンペーンモジュールは、マーケティングプラットフォームへの複数の接続をサポートします。追加の統合を設定するには、[<strong>新規接続の追加</strong>]をクリックします。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player">キャンペーン対応プレーヤーの作成</h2>
+    <p>ビデオエンゲージメントデータは、キャンペーン対応のビデオプレーヤーを使用している場合にのみSalesforceに送信されます。キャンペーン対応のBrightcoveプレーヤーの作成については、を参照してください。<a href="/campaign/general/creating-campaign-enabled-player.html">キャンペーン対応プレーヤーの作成</a>。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="trackingid2">トラッキングIDを渡す</h2>
+    <p>キャンペーンモジュールは、追跡ID値をSalesforceに渡す機能をサポートしています。トラッキング ID は、たとえば、キャンペーン ID の追跡に使用されます。トラッキングIDは、キャンペーンが有効なプレーヤーを表示するURLに追加することも、プレーヤーの埋め込みコードに追加することもできます。</p>
+    <ul>
+      <li>例: URLに追加</li>
+    </ul>
+    <pre>
+  http://www.myurl.com/video.html？<strong>bctrackingid=12345</strong></pre>
+    <ul>
+      <li>例:プレーヤーの埋め込みコードに追加しました</li>
+    </ul>
+    <pre>
+  &lt;video data-video-id = "6033402539001" data-account = "1486906377" data-player = "default" data-embed = "default" data-application-id class = "video-js" <strong> data-bc-trackingid = "12345"</strong>コントロール&gt;&lt;/ビデオ&gt;&lt;スクリプトsrc = "//players.brightcove.net/1486906377/default_default/index.min.js"&gt;&lt; /脚本&gt;</pre>
+    <p>キャンペーンは、同期される別のフィールドとして値をSalesforceに渡します。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="identify">視聴者を識別する</h2>
+    <p>Salesforce接続がを使用するように構成されている場合<strong>マニュアル</strong>視聴者の識別、視聴者を識別するのはあなた次第です。視聴者をトラッキングするには、動画を表示しているページでユーザーIDをURLパラメーターとして渡す必要があります。次の 2 つの URL パラメータがサポートされています。</p>
+    <ul>
+      <li><strong>bcemail</strong> -閲覧者の電子メールアドレスを渡すには (たとえば、<a href="/campaign/general/how-campaign-module-identifies-viewers.html#email">このトピックを参照</a> )</li>
+      <li><strong>bcsfid</strong> - 視聴者のSalesforce IDを渡します</li>
+    </ul>
+    <p>このシナリオでは、トラッキング用に一意に生成されたURLを使って、動画ランディングページが生成されます。次に、キャンペーンモジュールはURLパラメータを使用して、ユーザーのサーバー側を検索し、表示データを同期します。</p>
+    <p>プレーヤー/プラグインがURLパラメーターを読むには、拡張埋込み（ページ内）パブリッシングコードを使用してください。標準埋込み（iframe）パブリッシングコードは機能しません。プラグインはiframeの内部で動作するため、パラメーターを持つ親ページURLにアクセスできないからです。</p>
+    <aside class="bcls-aside bcls-aside--information">注:デフォルトでは、[取引先責任者] テーブルと [リード] テーブルを使用してビューアの Salesforce ID を検索します。代わりにSalesforceのAccountテーブルを使用するようにキャンペーンを設定できます。これを有効にするには、<a href="https://supportportal.brightcove.com"></a>ブライトコーブサポートに連絡し、リクエストしてください。例:「ビューア ID を検索するときに Salesforce アカウントテーブルを使用するようにキャンペーンアカウントを設定してください。「</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sfdata">Salesforceで動画データを表示する</h2>
+    <p>ビデオはキャンペーン対応プレーヤーで表示されるため、ビデオ表示データはSalesforceに同期されます。[ <strong></strong>簡易データマッピング] オプションが選択されている場合、ビデオビューデータは Salesforce 内の<strong> Task</strong>エントリとして表示されます。[ <strong></strong>高度なデータマッピング] オプションを使用すると、マッピングの設定時に選択していた Salesforce オブジェクトの一部として表示データが表示されます。次の例では、<strong></strong>高度なデータマッピングを使用し、ビデオフィールドがカスタム<strong> BC ビデオビュー</strong> Salesforce オブジェクトにマッピングされています。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="task record" src="/assets/images/campaign/integrations/salesforce/salesforce-bc-video-view-record.png" /></figure>
+    <p>動画名をクリックすると、詳細情報が表示されます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="task detail" src="/assets/images/campaign/integrations/salesforce/salesforce-bc-video-view-detail.png" /></figure>
+  </section>
+</article>

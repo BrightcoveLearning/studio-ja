@@ -1,0 +1,81 @@
+---
+title: '概要:チャイナデリバリー」'
+description: 'このトピックでは、BrightcoveのChinaDelivery機能に関する概要を説明します。'
+parent: General Information
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="Introduction">はじめに</h2>
+    <p>ブライトコーブは、広大な新しい市場に参入し、eコマースの機会を大幅に拡大するために、グローバルなeコマース大手Alibabaとのパートナーシップを通じて、中国にビデオを配信する機能を導入できることを嬉しく思います。</p>
+
+    <p>国外から中国にビデオを配信することは、規制と規制のために困難です。これまで、Brightcoveサービスが国内のコンテンツ配信ネットワークを介してビデオコンテンツを配信できるようにするソリューションを提供してきました。ただし、Playback APIのリクエストとレスポンス、Analyticsビーコンなどの重要な通信は信頼性が低く、機能しない場合もありました。</p>
+
+    <p>BrightcoveのChinaDeliveryソリューションは、これらの問題に対処し、次の2つの部分で構成されています。</p>
+    <ul>
+      <li>中国内でホストされているプロキシサーバー</li>
+      <li>接続された中国固有の CDN</li>
+    </ul>
+
+    <p>プロキシは、動画以外のトラフィック（Playback API リクエスト、Analytics ビーコン、ウェブプレーヤー自体）を、中国の視聴者との間で外部にある Brightcove インフラストラクチャにルーティングします。</p>
+
+    <p>CDN はプロキシに接続され、ビデオおよび画像コンテンツを処理します。</p>
+
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Setup">セットアップ</h2>
+    <p>ブライトコーブの中国配信ソリューションをサポートするには、以下の設定が必要です。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        <p>アカウントマネージャーに問い合わせてください。</p>
+        <ul>
+          <li>ブライトコーブエンタープライズアカウントを持っていることを確認する</li>
+          <li>中国配送のアカウントを有効にします。これはVideoCloudへの有料アドオンです</li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--information">このアカウントは、中国の内外に配信できます。別のアカウントはオプションですが、必須ではありません。</aside>
+      <li>
+        <p>ChinaDelivery用のプレーヤーを構成します。BrightcoveWebプレーヤーまたはネイティブSDKプレーヤーのいずれかを使用できます。</p>
+        <ul>
+          <li><a href="https://player.support.brightcove.com/playback/china-delivery-with-bcp.html">ブライトコーブプレイヤーとの中国配信</a></li>
+          <li><a href="https://sdks.support.brightcove.com/features/china-delivery-sdks.html">ネイティブSDKを使用した中国での配信</a></li>
+        </ul>
+      </li>
+      <li>
+        <p><a href="https://en.wikipedia.org/wiki/ICP_license">有効なインターネットコンテンツプロバイダー (ICP) ライセンスを取得する</a></p>
+        <ul>
+          <li>ICP ライセンスに記載されている承認済みドメインまたはサブドメイン名</li>
+          <li>承認されたドメインでホストされている、プレイヤーを公開するための Web サイト</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Limitations">制限事項</h2>
+    <p>以下は、ChinaDeliveryの既知の制限です。</p>
+
+    <h3>現在の制限</h3> 
+    <ul>
+      <li>プレーヤーの構成には、JSONの編集やPlayer ManagementAPIの使用が必要です。スタジオを介した「ワンクリック」プレーヤー構成は、将来を対象としています</li>
+      <li>ChinaDeliveryをサポートするBrightcoveNative Android SDKは、2021年第3四半期の初めに利用可能になります。</li>
+    </ul>
+
+    <h3>サポートされていない機能: </h3>
+    <ul>
+      <li>Brightcoveライブストリーミングとクラウドプレイアウトはサポートされていません</li>
+      <li>動的配信ルールと静的URLはサポートされていません</li>
+    </ul>
+      
+    <p>PlayerおよびSDKプラグインは通常どおり使用できますが、中国国内から外部サービスにアクセスできない可能性があり、Brightcoveはそれらをサポートできません。たとえば、次のような事項が挙げられます。</p>
+    <ul>
+      <li>DRM</li>
+      <li>広告（CSAI + SSAI）</li>
+      <li>サードパーティの分析サービス</li>
+    </ul>
+    
+  </section>
+
+</article>

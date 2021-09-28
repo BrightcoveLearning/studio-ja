@@ -1,0 +1,100 @@
+---
+title: Brightcove Social を使用したビデオクリップの作成
+description: このトピックでは、BrightcoveSocialを使用してビデオクリップを作成する方法を学習します。
+parent: General Information 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Brightcove Social では、Video Cloud アカウントの既存の動画からビデオクリップを作成できます。クリップを作成したい理由はいくつかあります。</p>
+    <ul>
+      <li>ソーシャルメディアに投稿できる短いティーザークリップを作成するには</li>
+      <li>投稿する動画の長さを制限するには（ほとんどのプラットフォームでは動画の長さが制限されています）</li>
+      <li>ソーシャルメディアで短い動画のパフォーマンスが向上することがわかりました</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="create">クリップの作成</h2>
+    クリップを保存すると、ビデオとして Video Cloud アカウントに保存されます。クリップを作成するには、次の手順に従います。
+    <ol class="bcls-tasklist-restart">
+      <li>ブライトコーブソーシャルを開きます。</li>
+      <li>クリック<strong>ビデオ</strong>左側のナビゲーションで。Video Cloud アカウントの動画の一覧が表示されます。</li>
+      <li>クリップを作成するビデオをクリックし、[ <strong>クリップの作成] をクリックします</strong>。クリップエディタが開きます。<aside class="bcls-aside bcls-aside--information">
+          <ul>
+        <li>クリップを作成するには、ソースビデオに少なくとも 1 つの MP4 レンディションが使用可能である必要があります。の場合<strong>クリップを作成する</strong>ボタンが無効になっている場合、ビデオでMP4レンディションを使用できない可能性があります。</li>
+        <li>別のクリップからクリップを作成することはできません。クリップされたビデオを選択した場合、[ <strong>クリップの作成</strong> ] ボタンは無効になります。</li>
+        <li>DRM が有効で（ビデオサムネールにロックが表示される）、従来の取り込みプロファイルを使用してトランスコードされたビデオからクリップを作成することはできません。動的配信インジェストプロファイルを使用してトランスコードされた DRM 対応動画は、クリップできます。クリップを作成できない場合は、<strong>クリップを作成する</strong>ボタンは無効になります。</li>
+        <li>クローズドキャプション付きの動画は Social でクリップできますが、クリップされた動画にはキャプションがありません。クリップされたビデオに新しいキャプションをアップロードする必要があります。Social では、公開時にキャプションが使用されます。</li>
+      </ul>
+      </aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16672-create-clip.png" /></figure>
+      </li>
+      <li><strong>クリップ名を入力します</strong>。</li>
+      <li>タイムラインに表示されるハンドルをドラッグして、ビデオの最初と最後をトリミングします。編集フィールドを使用して、特定の開始時刻と終了時刻を入力することもできます。<a href="#keys">キーボードショートカットを使用すると、編集時のより正確に制御できます</a>。完了したら、[ <strong>続行] をクリックします</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16672-clipped-video.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">注:クリッピングモーダルのプレーヤーは、表示された時点で実際のフレームの 1 つまたは 2 つのフレーム内にスクラブされます。マウスを使用してスライダをドラッグするか、キーボードショートカットを使用してクリップポイントを設定する場合でも、動作は同じです。クリップエディタは、指定された時間に正確にクリップします。</aside>
+      </li>
+      <li>クリップ情報を確認します。クリップ名、タグ、アカウント用に作成されたカスタムフィールドを編集できます。<aside class="bcls-aside bcls-aside--information">注:クリップが既存のプレイリストに表示されたり、ソーシャル配信先と自動同期されるタグを削除することができます。</aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16672-clip-info.png" /></figure>
+      </li>
+      <li>完了したら、次のいずれかのオプションを選択します。
+        <ul>
+          <li><strong>保存</strong> -トランスコーディングを開始し、Video Cloud アカウントにクリップを保存します。</li>
+          <li><strong>保存して公開</strong> -トランスコーディングを開始し、クリップを Video Cloud アカウントに保存します。また、ビデオの公開先を選択することもできます。動画はトランスコードする必要があるため、公開されたクリップがソーシャルメディアサイトに表示されるまでに時間がかかる場合があります。</li>
+          <li><strong>キャンセル</strong> -クリップを破棄します。</li>
+        </ul>
+      </li>
+    </ol>
+    <p>保存されたクリップは、<strong></strong>アカウントのソーシャルクリッピングのデフォルトとして指定された取り込みプロファイルを使用してトランスコードされます。デフォルトの取り込みプロファイルの設定については、「<a href="/admin/managing-ingest-profiles.html">取り込みプロファイルの管理」を参照してください</a>。</p>
+    <p>クリップを作成するときは、ソースビデオ全体をダウンロードする必要があります。長いソース動画の場合、ビデオクラウドアカウントでクリップを利用できるようになるまでに時間がかかることがあります。</p>
+    <aside class="bcls-aside bcls-aside--information">注:クリップソースファイル名は、ソースビデオと同じソースファイル名に設定されます。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="keys">キーボードショートカットキーを使用する</h2>
+    <p>クリッピングをより正確に制御するには、キーボードショートカットキーを使用します。</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th scope="col">ショートカット</th>
+          <th scope="col">説明</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td >J <em>または</em> ←</td>
+          <td >1フレーム戻って</td>
+        </tr>
+        <tr>
+          <td >K</td>
+          <td >再生/一時停止</td>
+        </tr>
+        <tr>
+          <td >L <em>または</em> →</td>
+          <td >1 フレーム進む</td>
+        </tr>
+        <tr>
+          <td >おい</td>
+          <td >現在のフレームをインポイントとしてマーク</td>
+        </tr>
+        <tr>
+          <td >お</td>
+          <td >現在のフレームをアウトポイントとしてマーク</td>
+        </tr>
+        <tr>
+          <td >スペースバー</td>
+          <td >再生/一時停止</td>
+        </tr>
+        <tr>
+          <td >+ I</td>
+          <td >インポイントへ移動</td>
+        </tr>
+        <tr>
+          <td >+ O</td>
+          <td >アウトポイントへ移動</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>

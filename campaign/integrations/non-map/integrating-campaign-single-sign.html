@@ -1,0 +1,115 @@
+---
+title: キャンペーンとシングルサインオンの統合
+description: このトピックでは、シングルサインオンで使用するためにキャンペーンモジュールを構成する方法について説明します。
+parent: Non-MAP 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>キャンペーンモジュールは、視聴者がシングルサインオン（SSO）を使用してシステムにログインしたときに、視聴アクティビティを追跡する機能を提供します。このシナリオでは、表示データは、マーケティング自動化プラットフォームに送信されません。キャンペーンSSO構成では、SAML属性がキャンペーンに渡されてビューアが識別されます。これの一般的なユースケースの 1 つは、社内トレーニングビデオです。従業員は、ビデオを視聴するためにログインする必要がある場合があります。その後、キャンペーンモジュール内で、視聴アクティビティを追跡して表示できます。キャンペーンをSSOで使用できるようにするには、次の手順が必要です。</p>
+    <ol>
+      <li><a href="#sso">シングルサインオンソフトウェアの構成</a></li>
+      <li><a href="#attributes">SSO 属性にアクセスするようにアプリケーションを設定する</a></li>
+      <li><a href="#setupConnection">キャンペーンSSO接続を設定します</a></li>
+      <li><a href="#configure">統合の構成</a></li>
+      <li><a href="#player">キャンペーン対応プレーヤーを作成する</a></li>
+      <li><a href="#viewdata">ビデオデータの表示</a></li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sso">SSO ソフトウェアの構成</h2>
+    <p>SSO ソフトウェアをインストールおよび構成する手順は、このトピックの対象外です。SSO ソフトウェアは、Video Cloud ビデオを見る前に、ユーザーが自身を認証する必要があるように設定する必要があります。SSO ソフトウェアは、外部アプリケーションからアクセスできるように、一部のユーザー属性を公開するように構成する必要があります。たとえば、この Okta SSO 設定では、3 つの属性、<code translate="No">FirstName</code>、<code translate="No">LastName</code>およびが公開されます。<code translate="No">Email</code>。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="okta setup" src="/assets/images/campaign/general/node18363-okta.png" /></figure>
+    <p>このトピックでは、<code translate="No">Email</code>属性は、キャンペーンモジュールの視聴者を識別するために使用されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注:SSO ソフトウェアは、複数の属性を公開するように設定できますが、Campaign では 1 つの属性のみを使用して視聴者を追跡します。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="attributes">SSO 属性にアクセスするためのアプリケーションの設定</h2>
+    <p>Video Cloudビデオの表示に使用されるアプリケーションまたはWebサイトは、JavaScriptを使用してキャンペーンでSSO属性を使用できるように構成する必要があります。この設定は、使用されているアプリケーションまたは Web サイトによって異なります。次の例では、SSO アクセス制御プロファイルが Gallery に作成されています。設定の一部として、<code translate="No">Email</code> SSO 属性は公開されており、ギャラリーサイト内で使用できます。これは、キャンペーンモジュールの視聴者を識別するために使用される値です。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="okta setup" src="/assets/images/campaign/general/node18363-gallery-config.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">注:Gallery <a href="https://gallery.support.brightcove.com/settings/configuring-access-control-profiles.html">でのアクセスコントロールプロファイルの設定については、アクセス制御プロファイルの設定を参照してください</a>。</aside><aside class="bcls-aside bcls-aside--information">注:ギャラリーは複数の属性を公開するように構成できますが、Campaign では視聴者を追跡するために単一の属性しか使用しません。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="setupConnection">接続を設定する</h2>
+    <p>以下の手順に従って、Video Cloud と SSO プロバイダー間の接続を設定します。</p>
+    <h3 id="establishConnection2">ビデオクラウドと SSO 間の接続の確立</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>キャンペーンモジュールを開き、をクリックします<strong>データ接続</strong>左側のナビゲーションで。</li>
+      <li>[<strong>新規コレクションの追加</strong>]をクリックします。</li>
+      <li>選択する<strong>SSO</strong>統合として。<aside class="bcls-aside bcls-aside--information">注:利用可能なインテグレーションは、Video Cloud サブスクリプションに基づいています。</aside>
+      </li>
+      <li>(オプション) <strong>接続名を入力します</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Campaign setup" src="/assets/images/campaign/general/node18363-setup-section.png" /></figure>
+      </li>
+      <li>[<strong>接続</strong>]をクリックします。</li>
+    </ol>
+    <p>これで SSO 接続がセットアップされ、使用できる状態になります。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">統合の設定</h2>
+    <p>SSO 接続を確立したら、統合を構成できます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connected options" src="/assets/images/campaign/general/node18363-connected-options.png" /></figure>
+    <ol class="bcls-tasklist-restart">
+      <li>クリック<code translate="No">empty</code>のリンク<strong>SSOプロパティ</strong>セクション。ページ内で検索する JavaScript 値の名前を入力します。この例では、Gallery が<code translate="No">Email</code> SSO 属性を公開するように構成されているため、ここで使用されているものがこれになります。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="email attribute" src="/assets/images/campaign/general/node18363-email-attribute.png" /></figure>
+        <p>このトピックでは、キャンペーンSSO統合を使用して、表示アクティビティを追跡します。[<strong>保存</strong>]をクリックします。</p>
+        <aside class="bcls-aside bcls-aside--information">注:<strong>SSO</strong>プロパティを空のままにして、<a href="#identify"></a>追加オプションの 1 つを使用してビューアを識別することもできます。</aside>
+      </li>
+      <li>デフォルトでは、[ <strong>接続ステータス]</strong>は [ <strong>有効] になります</strong>。<strong>接続ステータスは</strong>、Video Cloud 動画エンゲージメントデータを保存するかどうかを決定します。
+        <ul>
+          <li><strong>有効</strong> -データが収集されます</li>
+          <li><strong>無効</strong> -データは収集されません（統合は無効です）</li>
+        </ul>
+      </li>
+      <li>データ保持ポリシーを選択します。データ保持ポリシーは、表示データとリードフォームデータ（キャンペーンリードフォームを使用している場合）がVideoCloudアカウントに保持される期間を決定します。<strong>保持設定は、プライバシーポリシーに従って調整する必要があります</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="data retention options" src="/assets/images/campaign/general/node18363-data-retention-options.png" /></figure>
+      </li>
+    </ol>
+    <p>統合を削除するには、[ <strong>切断] をクリックします</strong>。ページの下部には、キャンペーンが有効になっているすべてのプレーヤー、それらが関連付けられている接続、および関連付けられているリードフォームが一覧表示されます。</p>
+    <p>キャンペーンモジュールは、マーケティングプラットフォームへの複数の接続をサポートします。追加の統合を設定するには、[<strong>新規接続の追加</strong>]をクリックします。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="identify">ビューアーを識別するための追加オプション</h2>
+    <p>の値を指定しない場合<strong>SSOプロパティ</strong>統合を構成するときは、視聴者を識別する責任があります。キャンペーンモジュールには、次の情報が必要です。</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>説明</th>
+          <th>URL パラメータ</th>
+          <th>パラメータを埋め込む</th>
+          <th>[値]</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>GUID は何ですか (ビューイベント追跡に必要)</td>
+          <td><code translate="No">bcssoguid</code></td>
+          <td><code translate="No">data-bc-sso-guid</code></td>
+          <td><code translate="No">string</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>このパラメーターは、URL パラメーターまたはプレーヤーの埋め込みコードを介して渡すことができます。視聴者のトラッキングが発生するには、このパラメーターは、動画を表示しているページの URL パラメーターとして渡す必要があります。</p>
+    <aside class="bcls-aside bcls-aside--information">注:プレーヤー/プラグインが URL パラメータを読み取るためには、Advanced (ページ内) 埋め込みコードを使用する必要があります。標準 (iframe) 埋め込みコードは、プラグインが iframe 内で実行されるため、パラメータを持つ親ページ URL にアクセスできないため、機能しません。</aside>
+    <p>ページで使用可能なJavaScript値を使用して、GUIDをキャンペーンプレーヤーに渡すこともできます。プレーヤー構成を使用すると、JavaScript変数の名前をCampaignに伝えることができ、CampaignはそれをカスタムGUIDとして使用してその変数を読み取ろうとします。これを行うには、キャンペーンプレーヤーを編集し、キャンペーンプラグインのプラグインオプションを構成します。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="plugin params" src="/assets/images/campaign/general/node18363-plugin-params.png" /></figure>
+    <p>上記の例では、プレーヤーの設定により、ページにJavaScriptオブジェクトがあることをキャンペーンに通知しています。<code translate="No">samlAttributes</code>そしてそれはと呼ばれるプロパティを持っています<code translate="No">nameID</code>。キャンペーンはそれを読み取って、カスタムGUIDにその値を使用しようとします。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player">キャンペーン対応プレーヤーの作成</h2>
+    <p>ビデオエンゲージメントデータは、キャンペーン対応のビデオプレーヤーを使用している場合にのみ追跡されます。キャンペーン対応のBrightcoveプレーヤーの作成については、を参照してください。<a href="/campaign/general/creating-campaign-enabled-player.html">キャンペーン対応プレーヤーの作成</a>。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="viewdata">ビデオデータの表示</h2>
+    <p>SSO 統合を使用する場合、ビデオデータを表示するためのオプションがいくつかあります。</p>
+    <ul>
+      <li><strong>視聴者の活動（イベント）</strong> -キャンペーンモジュールの一部として提供されるこのオプションは、キャンペーンモジュール内のビデオデータを表示するために使用できます。詳細については、を参照してください。<a href="/campaign/general/viewing-player-events-campaign-module.html">キャンペーンモジュールでのプレーヤーイベントの表示</a>。</li>
+      <li><strong>視聴者プロフィール</strong> -キャンペーンモジュールの一部として提供されるこのオプションは、キャンペーンモジュール内のユーザープロファイル値に基づいてビデオデータを表示するために使用できます。詳細は、「<a href="/campaign/general/viewing-viewer-profile-information.html">ビューアプロファイル情報の表示</a>」を参照してください。</li>
+      <li><strong>データのエクスポート</strong> -キャンペーンモジュールの一部として提供されるこのオプションは、ビデオビューとリードデータをエクスポートするために使用できます。詳細については、を参照してください。<a href="/campaign/admin/exporting-campaign-data-campaign-module.html">キャンペーンモジュールからのキャンペーンデータのエクスポート</a>。</li>
+      <li><strong>オーディエンス API</strong> -Audience API を使用して、ビデオビューとリードデータをプログラムで取得できます。詳細については、「<a href="/campaign/develop/overview-audience-api.html">概要」を参照してください。オーディエンス API</a>。</li>
+    </ul>
+  </section>
+</article>

@@ -1,0 +1,90 @@
+---
+title: Marketo REST統合テストガイドの
+description: このトピックでは、VideoCloudとMarketoの統合を検証する方法を学習します。
+parent: Marketo 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>新しいMarketo RESTベースの統合を設定する場合、動画視聴データが実際にMarketoに配信されているかどうかをテストして確認するのは難しい場合があります。このトピックでは、統合が機能していること、および表示データとリードが Marketto に送信されていることを体系的にテストして確認する方法を学びます。</p>
+    <p class="BCL-aside">REST APIを使用してMarketoで使用するためにキャンペーンモジュールを構成する方法については、を参照してください。&nbsp;<a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html"> RESTAPIを使用したVideoCloudとMarketoの統合</a>。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="start">始める前に</h2>
+    <p>統合を検証する前に、次のことが前提になります。</p>
+    <ul>
+      <li>正常に完了しました<a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">BrightcoveキャンペーンREST統合</a> Marketoと</li>
+      <li>少なくとも1つ作成しました<a href="/campaign/general/creating-campaign-enabled-player.html">キャンペーン対応プレーヤー</a> Marketo接続を使用するように構成しました</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="lead_form">テストリードフォームの設定とビデオの公開</h2>
+    <p>テストの目的で、キャンペーンでカスタムリードフォームを作成して構成する必要があります。これは、キャンペーンに貼り付けた埋め込みコードのMarketoフォームです。実稼働環境でリードフォームを使用しない場合でも、このリードフォームを使用して、データベースおよびページで既知であることが確認されます。Marketoフォームを作成し、それを使用するようにCampaignを構成するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>お客様のMarketoアカウントにログインします。</li>
+      <li>Marketa フォームを作成し、スタイルを設定します。Marketa フォームの作成については、「Marketa <a href="/campaign/integrations/marketo/creating-custom-lead-forms-marketo.html">のカスタムリードフォームの作成」を参照してください</a>。</li>
+      <li>左側のナビゲーションでフォームを右クリックし、[ <strong>埋め込みコード] をクリックします</strong>。</li>
+      <li>フォームの埋め込みコードをクリップボードにコピーします。</li>
+      <li>キャンペーンモジュールに戻ります。</li>
+      <li>Marketa フォームの埋め込みコードを使用して、新しいリードフォームを作成します。</li>
+      <li>5 秒のマークにフォームが表示されるようにカスタムフォームを設定します。このようにして、いつ表示されるべきかを正確に知ることができます。</li>
+      <li>[リードがすでにわかっている場合でも、<strong>常にリードフォームを表示する] チェックボックスをオンにします</strong>。これにより、テスト中に記入した後もフォームが表示され続けます。</li>
+      <li><strong></strong>フォームを保存します。</li>
+      <li>Marketo接続で Brightcove Player を設定して、作成した先ほどの Marketoリードフォームを使用します。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="preview_video">ビデオを見るためのプレビューリンクの生成</h2>
+    <p>ビデオへのプレビューリンクを生成するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Media モジュールを開きます。</li>
+      <li>ビデオを選択し、Web プレーヤーに公開します。リードフォームでキャンペーン対応のプレーヤーを選択してください。</li>
+      <li>プレビューリンクをクリックして、ビデオを新しいブラウザウィンドウで開きます。この方法でテストすると、HTML ページに埋め込まれたプレーヤーによって導入される可能性のある変数がなくなります。</li>
+      <li>ビデオが再生され、リードフォームが 5 秒マークに表示されることを確認します。</li>
+      <li>一意の連絡先情報とメールアドレス（有名人の名前、または「bctest」という単語を含む名前）を使用してリードフォームに記入し、後でMarketoで簡単に見つけることができます。これにより、ブラウザ、プレーヤー、データベースレベルの変数がなくなります。新しいユーザーとしてフォームに記入することで、Marketto の既知のユーザーであることが確認されます。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="confirm_data">キャンペーンがデータを正常にキャプチャしていることを確認する</h2>
+    <p>Marketoでビデオ視聴データを探す前に、まずCampaignが実際にビデオビューをキャプチャしたことを確認してください。データの表示は、キャンペーンUIに表示されるまでに最大3時間かかる場合があることに注意してください。キャンペーンがデータを正常にキャプチャしていることを確認するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>キャンペーンモジュールを開きます。</li>
+      <li>クリック<strong>最近のすべての活動</strong>左側のナビゲーションで。</li>
+      <li>視聴したばかりの動画の名前を示す最近のタイムスタンプが付いたイベントがあることを確認します。<strong>イベントステータスは未処理である必要があります</strong>。これは、キャンペーンがビューをキャプチャしたが、Marketoとの同期をまだ試みていないことを示しています。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-unprocessed.png" /></figure>
+      </li>
+      <li>キャンペーンとMarketo間の同期を手動でトリガーするには、<strong>同期アクティビティ</strong>左側のナビゲーションで。</li>
+      <li><strong>[接続の選択]</strong>ドロップダウンリストから、MarketO 統合を選択します。NS <strong>テスト同期</strong>ボタンが表示されます。</li>
+      <li>[ <strong></strong>同期のテスト] をクリックして、手動同期をトリガーします。手動同期をトリガーできる頻度は制限されます。デフォルトでは、キャンペーンは1時間に1回ビューをMarketoに同期します。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-test-sync.png" /></figure>
+      </li>
+      <li>クリック<strong>最近のすべての活動</strong>左側のナビゲーションで。</li>
+      <li><strong>ビューイベントのステータスはキューに入れられます</strong>。データが実際にMarketo に同期されるには 15 分ほどかかる場合があります。データが同期されると、ステータスは次の 2 つのステータスのいずれかに変更されます。
+        <ul>
+          <li><strong>synced</strong> -ユーザーが既知のユーザーであり、データがアクティビティログに正常に配信されたことを示します。データは、数分以内にMarketoでも表示できるはずです。</li>
+          <li><strong>unknown_contact</strong> -ユーザーが不明と見なされ、Marketo がデータを受け入れることができなかったことを示します。<strong>不明な連絡先ステータスになった場合は</strong>、正しいプレーヤーを使用してビデオを公開し、Marketo フォームを配置し、プレビューリンクを使用してテストしていること、ページに埋め込まれていないことを確認します。
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-synced.png" /></figure>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="confirm_marketo">動画ビューデータがMarketoにあることを確認する</h2>
+    <p>キャンペーンが表示されたら<strong>同期</strong>ステータスが表示されたら、次の手順に従って、データがMarketoにあることを確認します。</p>
+    <aside class="bcls-aside bcls-aside--information">注:Marketto UI が Campaign から受け取った新しいデータで更新されるには 5 ～ 10 分かかります。</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>お客様のMarketoアカウントにログインします。</li>
+      <li>引合データベースに移動し、新しい引合を検索します。リードフォームに入力するときに使用した一意の名前または電子メールアドレスを使用して検索します。</li>
+      <li>新しいリードをダブルクリックして、リード情報を開きます。</li>
+      <li>[ <strong>アクティビティログ</strong> ] タブをクリックします。</li>
+      <li><strong>クイック検索の使用...</strong>ページの下部で、[ <strong>ブライトコーブ] ビデオビューを検索します</strong>。</li>
+      <li>行をダブルクリックして、キャンペーンに入力されたフィールドを表示します。ポップアップには、プレーヤーID、ビデオID、ビデオ名、視聴率、その他のフィールドなど、キャンペーンからMarketoに配信されたビデオ視聴データが表示されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-marketo-info.png" /></figure>
+      </li>
+    </ol>
+  </section>
+</article>

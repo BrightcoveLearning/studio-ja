@@ -1,0 +1,74 @@
+---
+title: キャンペーンモジュールが視聴者を識別する方法
+description: このトピックでは、キャンペーンモジュールが視聴者を識別しようとするさまざまな方法について学習します。
+parent: General Information 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>キャンペーンモジュールは、さまざまなデータソースを使用して視聴者を識別しようとします。</p>
+    <ul>
+      <li><a href="#cookie">キャンペーンクッキー</a></li>
+      <li><a href="#eloqua">オラクル Eloqua GUID</a></li>
+      <li><a href="#marketo">Marketoマンチキン・クッキー</a></li>
+      <li><a href="#sfurl">セールスフォース ID URL パラメータ</a></li>
+      <li><a href="#sfid">Salesforce ID HTML属性</a></li>
+      <li><a href="#hubspot">HubSpot UTK クッキー</a></li>
+      <li><a href="#email">電子メールパラメータ</a></li>
+    </ul>
+    <p>キャンペーンモジュールは、に関するユーザーのブラウザ設定に従います<a href="#dnt">追跡しません</a>。</p>
+    <aside class="bcls-aside bcls-aside--information">注:カスタム統合を使用する場合は、ビューアを識別する責任があります。詳細については、<a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">キャンペーンモジュールを使用したカスタムインテグレーションの作成を参照してください</a>。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="cookie">キャンペーンクッキー</h2>
+    <p>キャンペーン対応プレイヤー&nbsp;アカウントでキャンペーントラッキングが有効になっていて、プレーヤーがそれを使用している場合、サードパーティのCookieを設定し、それを使用して表示データを同じユーザーに関連付けます。ユーザーがキャンペーンリードフォームに入力すると、キャンペーンはその視聴者のプロファイルを作成し、すべての視聴データがそのプロファイルに関連付けられます。</p>
+    <p>キャンペーンが設定するCookieの名前は<strong>_bc_uuid</strong>。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="eloqua">オラクル Eloqua GUID</h2>
+    <p>Eloquaと統合されたキャンペーン対応のプレーヤーは、EloquaのAPIを呼び出して、訪問者ID（Eloqua GUIDと呼ばれることが多い）を取得します。このIDは、キャンペーンモジュールの表示データに取り込まれ、表示データをEloquaに同期するために使用されます。</p>
+    <p>Eloquaは独自のCookieセットを使用し、Brightcove PlayerがEloqua統合で構成されている場合、CampaignはEloqua Cookie内のGUIDをキャプチャし、Eloquaサーバー側と通信して、ユーザーが誰であるかを把握しようとします。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="marketo">マルケトマンチキンクッキー</h2>
+    <p>Marketoと統合されたキャンペーン対応のプレーヤーは、ユーザーのブラウザで作成されたMunchkin Cookie（_mkto_trk）を参照します。この値は、キャンペーンモジュールの表示データに取り込まれ、表示データをMarketoに同期するために使用されます。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sfurl">Salesforce ID URL パラメータ</h2>
+    <p>Salesforce 統合の場合、プラグインは<strong> bcsfid というパラメータの URL をチェックして、</strong>ビューアを識別できます。これにより、Salesforce ユーザは、URL にリードの Salesforce ID を指定することにより、トラッキングの目的で一意に生成されたランディングページ URL を使用してメールキャンペーンを送信できます。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sfid">Salesforce ID HTML 属性</h2>
+    <p>Salesforce 統合の場合、プラグインが<strong> bcsfid</strong> URL パラメータをチェックしてビューアを識別できない場合、プラグインは<strong> data-bc-sfid</strong>属性を<code translate="No">&lt;video&gt; </code>ビデオの HTML 埋め込みパブリッシングコードの要素であり、設定されている場合はその値をリードの Salesforce ID として使用します。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="hubspot">ハブスポット UTK クッキー</h2>
+    <p>HubSpot 統合の場合、プラグインは HubSpot の JavaScript トラッキングコードを注入し、ユーザーのブラウザーに<strong> hubspotutk</strong>クッキーを削除します。この Cookie は、HubSpot 内で訪問者の身元を追跡し、Brightcoveの閲覧データを連絡先に関連付けるために使用されます。ユーザーがすでに持っている場合<strong>hubspotutk</strong>プレーヤーがCookieをロードすると、CampaignはHubSpotにAPIリクエストを送信し、Cookieの値が既知の連絡先に対応するかどうかを尋ねます。対応する場合、Campaignは表示データをそのユーザーに関連付けます。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="email">電子メールパラメータ</h2>
+    <p>キャンペーンモジュールには、電子メールアドレスを介してユーザーが誰であるかを通知することもできます。キャンペーンは、というタイトルのURLパラメータを探します<strong>bcemail</strong>。これは、トラッキングの目的で一意に生成されたランディングページ URL を持つメールキャンペーンで便利です。マーケティングプラットフォームから、または MailChimp などのサードパーティの電子メールサービスから、リストにバッチメールを送信する場合は、送信側プラットフォームの設定で E メールパラメーターを構成して、ユーザーがクリックしたリンクを動的に更新する必要があります。次に、キャンペーンはこの電子メールパラメータを使用して、ユーザーサーバー側を検索し、表示データを同期します。email パラメーターは、プレーヤーの埋め込みコードに埋め込むこともできます。</p>
+    <h3>URL の例</h3>
+    <code translate="No">http://go.brightcove.com/be-video-hero-cust?<strong>bcemail</strong>=msmith@brightcove.com </code>
+    <p>キャンペーンプラグインがメールアドレスを見つけられない場合<strong>bcemail</strong> URLパラメータ、それはそれからチェックします<code translate="No">&lt;video&gt; </code> HTML埋め込み公開コードの要素。ビデオ要素の<strong> data-bc-email</strong>属性を検索し、設定されている場合はその値を電子メールアドレスとして使用します。</p>
+    <h3>埋め込みの例</h3>
+    <pre>
+&lt;video id = "player" data-account = "0000000001" data-player = "default" data-video-id = "0000000002" <strong> data-bc-email</strong> = "msmith@brightcove.com" class = "video-js"コントロール&gt;&lt;/ビデオ&gt;
+</pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="dnt">追跡しない</h2>
+    <p>キャンペーン対応のプレーヤーは順守します&nbsp;追跡禁止（DNT）に関する視聴者のブラウザ設定により、追跡禁止が有効になっていることを確認した場合、通常のCookieを使用または設定しません。また、Video Cloud の顧客がすべての視聴者やユーザーごとに無効にしたい場合に、プレーヤープラグインをトラッキングしないように指示することもできます。これを行うには、ページ内埋め込みコードを使用し、値を 1 <code translate="No">data-do-not-track </code>に設定します。</p>
+    <pre>
+&lt;video-js data-video-id = "9240259371001" data-account = "3491906377" <strong> data-do-not-track = "1"</strong> data-player = "7dccc39d-0e2d-4b27-bea9-af44b2166148" data-embed = "default" class = "video-js"コントロール&gt;&lt;/ video-js&gt;&lt;スクリプトsrc = "https://players.brightcove.net/1486906377/7dccc39d-0e2d-4b27-bea9-af44b2166148_default/index.min.js"&gt;&lt; /脚本&gt;
+</pre>
+    <h3>オラクル・エロクア</h3>
+    <p>Eloqua は、要求を追跡せず、Eloqua GUID を返すように処理しない (基本的に無視する) と述べています。現在、キャンペーンはこれを特別な方法で処理していません。つまり、キャンペーンがDNTを検出したときにEloqua JavaScriptAPIを使用していません。Eloqua は、EU プライバシー要件を満たす厳格なモードもサポートしています。Eloqua アカウントでこれが有効になっている場合、フォーム経由でオプトインしない限り、エンドユーザーは追跡されません。</p>
+    <h3>Marketo</h3>
+    <p>Marketoでは、DNTをサポートしていますが、特定のアカウントでDNTをオン/オフするのはお客様に任されています。詳細については、Marketo ドキュメント「追跡しない」<a href="https://docs.marketo.com/pages/releaseview.action?pageId=6095047">ブラウザサポート設定の編集を参照してください</a>。</p>
+    <h3>HubSpot</h3>
+    <p>HubSpot は、<a href="https://knowledge.hubspot.com/getting-started-with-hubspot-v2/how-to-enable-a-privacy-policy-alert-if-you-are-doing-business-in-europe">このドキュメントに従って DNT</a>を尊重しています。</p>
+  </section>
+</article>

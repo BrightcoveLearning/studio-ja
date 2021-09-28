@@ -1,0 +1,538 @@
+- section:
+  name: ホーム
+  url: /index.html
+- section:
+  name: 入門編
+  url: /get-started/index.html
+  docs:
+    - name: ビデオクラウドスタジオの入門
+      url: /get-started/getting-started-video-cloud-studio.html
+    - name: Video Cloud トライアルの使用を開始する
+      url: /get-started/getting-started-your-video-cloud-trial.html
+    - name: ブライトコーブサポートサイトのナビゲート
+      url: /get-started/navigating-brightcove-support-site.html
+    - name: ビデオクラウドへのクイックスタート
+      url: /get-started/quick-start-video-cloud.html
+    - name: 'ステップバイステップ:ビデオクラウド公開ワークフロー'
+      url: /get-started/step-step-video-cloud-studio-publishing-workflow.html
+    - name: 'トレーニング:ビデオクラウド分析の概要'
+      url: /training/training-demand-introduction-video-cloud-analytics.html
+    - name: 'トレーニング:ビデオクラウドの概要'
+      url: /training/training-demand-introduction-video-cloud.html
+    - name: 'トレーニング:ビデオクラウドの基本'
+      url: /training/training-demand-video-cloud-basics.html
+    - name: ビデオクラウド用語集
+      url: /get-started/video-cloud-glossary.html
+    - name: ビデオクラウドスタジオトレーニングビデオ
+      url: /training/video-cloud-studio-training-videos.html
+- section:
+  name: 基本を学ぼう
+  url: /basics/index.html
+  docs:
+    - name: ビデオのアクティブ化と非アクティブ化
+      url: /basics/video-cloud-basics-activating-and-deactivating-video.html
+    - name: Video Cloud アカウントへのユーザーの追加
+      url: /basics/video-cloud-basics-adding-user-video-cloud-account.html
+    - name: ビデオポスターとサムネイル画像のキャプチャ
+      url: /basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
+    - name: 手動プレイリストの作成
+      url: /basics/video-cloud-basics-creating-manual-playlist.html
+    - name: プレーヤーを作成する
+      url: /basics/video-cloud-basics-creating-player.html
+    - name: プレイリストプレーヤーの作成
+      url: /basics/video-cloud-basics-creating-playlist-player.html
+    - name: スマートプレイリストの作成
+      url: /basics/video-cloud-basics-creating-smart-playlist.html
+    - name: ビデオの視聴量の決定
+      url: /basics/video-cloud-basics-determining-how-much-video-being-watched.html
+    - name: 視聴回数の多い動画を特定する
+      url: /basics/video-cloud-basics-determining-which-videos-have-most-views.html
+    - name: 基本的なビデオプロパティの編集
+      url: /basics/video-cloud-basics-editing-basic-video-properties.html
+    - name: 複数のビデオのビデオプロパティの編集
+      url: /basics/video-cloud-basics-editing-video-properties-multiple-videos.html
+    - name: フォルダを使用したビデオの整理
+      url: /basics/video-cloud-basics-organizing-videos-using-folders.html
+    - name: プレイリストを Web に公開する
+      url: /basics/video-cloud-basics-publishing-playlist-web.html
+    - name: 1 つのビデオを Web に公開する
+      url: /basics/video-cloud-basics-publishing-single-video-web.html
+    - name: プレーヤーのスタイリング
+      url: /basics/video-cloud-basics-styling-player.html
+    - name: 動画ポスター＆サムネイル画像のアップロード
+      url: /basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
+    - name: 動画をアップロード中
+      url: /basics/video-cloud-basics-uploading-videos.html
+    - name: Brightcoveのシステムステータスページの表示
+      url: /basics/video-cloud-basics-viewing-brightcove-system-status-page.html
+- section:
+  name: 一般情報
+  url: /general/index.html
+  docs:
+    - name: Facebook の「いいね！」ボタンをプレーヤーに追加する
+      url: /general/adding-facebook-button-brightcove-player.html
+    - name: 'ベストプラクティス: トランスコーディングとアップロード'
+      url: /general/best-practices-video-creating-transcoding-and-uploading-workflow.html
+    - name: 中国配送の概要
+      url: /general/china-delivery-overview.html
+    - name: コンテンツ配信オプション
+      url: /general/content-delivery-options.html
+    - name: オーディオのみのレンディションの作成
+      url: /general/creating-audio-only-renditions-low-bandwidth-delivery.html
+    - name: アクセス可能でなければならないドメインとポート
+      url: /general/domains-and-ports-must-be-accessible-video-cloud.html
+    - name: DRM 出力保護の設定
+      url: /general/drm-output-protection-settings.html
+    - name: YouTube で長い動画を有効にする
+      url: /general/enabling-longer-videos-youtube.html
+    - name: 動画コンテンツをインデックス可能にする
+      url: /general/making-your-video-content-indexable.html
+    - name: 最適なビデオ寸法
+      url: /general/optimal-video-dimensions.html
+    - name: コンテキスト認識エンコーディングの概要
+      url: /general/overview-context-aware-encoding.html
+    - name: '概要:デジタル著作権管理 (DRM)'
+      url: /general/overview-digital-rights-management-drm-video-cloud.html
+    - name: 動的配信の概要
+      url: /general/overview-dynamic-delivery.html
+    - name: HLS 暗号化によるビデオの保護
+      url: /general/protecting-videos-hls-encryption.html
+    - name: スタジオパスワードのリセット
+      url: /general/resetting-your-studio-password.html
+    - name: Twitterプレイヤーカードに動画を共有する
+      url: /general/sharing-videos-twitter-player-cards.html
+    - name: スタジオのシステム要件
+      url: /general/studio-system-requirements.html
+    - name: サポートされているビデオおよびオーディオ形式
+      url: /general/supported-video-and-audio-formats-codecs-and-containers.html
+    - name: メディア、プレーヤー、および API の URL の TLS
+      url: /general/tls-media-player-and-api-urls.html
+    - name: ビデオクラウドアーキテクチャの概要
+      url: /general/video-cloud-architecture-overview.html
+    - name: ビデオクラウドスタジオクッキー
+      url: /general/video-cloud-studio-cookies.html
+    - name: ビデオソースファイルの仕様と推奨事項
+      url: /general/video-source-file-specifications-and-recommendations.html
+    - name: 360° ビデオの操作
+      url: /general/working-360deg-videos.html
+    - name: 音声のみのコンテンツの操作
+      url: /general/working-audio-content.html
+    - name: 複数のアカウントでの作業
+      url: /general/working-multiple-video-cloud-accounts.html
+- section:
+  name: ビデオを管理する
+  url: /media/index.html
+  docs:
+    - name: ビデオへのオーディオトラックの追加
+      url: /media/adding-audio-tracks-videos-using-media-module.html
+    - name: 動画にキャプションを追加する
+      url: /media/adding-captions-videos-using-media-module.html
+    - name: ビデオへのチャプターの追加
+      url: /media/adding-chapters-video.html
+    - name: ポスターとサムネイル画像のキャプチャ
+      url: /media/capturing-poster-and-thumbnail-images.html
+    - name: ビデオ可用性の設定
+      url: /media/configuring-video-availability.html
+    - name: プレイリストの作成と管理
+      url: /media/creating-and-managing-playlists.html
+    - name: Video クラウドから動画をダウンロードする
+      url: /media/downloading-videos-video-cloud.html
+    - name: ビデオプロパティの編集
+      url: /media/editing-video-properties-using-media-module.html
+    - name: クイック編集を使用したプロパティの編集
+      url: /media/editing-video-properties-using-quick-edit.html
+    - name: ビデオデータの書き出し
+      url: /media/exporting-video-data.html
+    - name: メディアモジュールの使用開始
+      url: /media/getting-started-media-module.html
+    - name: 動画と再生リストを検索する方法
+      url: /media/how-search-videos-and-playlists-media-module.html
+    - name: ポスター画像の品質を向上させる
+      url: /media/increasing-quality-poster-and-thumbnail-images.html
+    - name: プレイリストの概要
+      url: /media/introduction-playlists.html
+    - name: メディア共有
+      url: /media/media-sharing-using-media-module.html
+    - name: フォルダを使用したビデオの整理
+      url: /media/organizing-videos-using-folders.html
+    - name: '概要:動画にキャプションを追加する'
+      url: /media/overview-adding-captions-video.html
+    - name: ビデオソースファイルの置き換え
+      url: /media/replacing-video-source-file.html
+    - name: 動画の再トランスコーディング
+      url: /media/retranscoding-videos-using-media-module.html
+    - name: 必須フィールドの設定
+      url: /media/setting-required-fields-videos.html
+    - name: キャプションのスタイル設定
+      url: /media/styling-captions.html
+    - name: ポスターとサムネイル画像のアップロード
+      url: /media/uploading-poster-and-thumbnail-images.html
+    - name: 動画をアップロード中
+      url: /media/uploading-videos-using-upload-module.html
+    - name: 動画のアップロードリモートURL
+      url: /media/uploading-videos-remote-urls.html
+    - name: キューポイントの操作
+      url: /media/working-cue-points-media-module.html
+    - name: 多言語メタデータの操作
+      url: /media/working-multi-lingual-metadata.html
+    - name: リモートアセットビデオの操作
+      url: /media/working-remote-asset-videos.html
+- section: 
+  name: クラウドプレイアウトチャネルの管理
+  url: /cloud-playout/index.html
+  docs:
+    - name: '概要:クラウドプレイアウト'
+      url: /cloud-playout/cloud-playout-overview.html
+    - name: クラウドプレイアウトチャネルの作成
+      url: /cloud-playout/cloud-playout-stream-vod.html
+    - name: クラウドプレイアウトチャネルへのコンテンツの追加
+      url: /cloud-playout/cloud-playout-add-content.html
+    - name: 静止画像オーバーレイ
+      url: /cloud-playout/static-image-overlays.html
+    - name: チャネルアクションの使用
+      url: /cloud-playout/using-channel-actions.html
+    - name: クラウドプレイアウトへのバンパーの追加
+      url: /cloud-playout/adding-bumpers-to-vod.html
+    - name: クラウドプレイアウトの収益化
+      url: /cloud-playout/enabling-server-side-ads.html
+    - name: ミッドロール広告をチャネルに追加する
+      url: /cloud-playout/mid-roll-ad-insertion.html
+    - name: チャネル埋め込みコードの生成
+      url: /cloud-playout/generating-channel-embed-code.html
+    - name: チャネル出力と分析の表示
+      url: /cloud-playout/viewing-channel-output-and-analytics.html
+- section:
+  name: プレーヤーの管理
+  url: /players/index.html
+  docs:
+    - name: サムネイルシークの追加
+      url: /players/adding-thumbnail-seeking-player.html
+    - name: プレーヤーオーバーレイの構成
+      url: /players/configuring-player-overlay-using-overlay-plugin.html
+    - name: プレイリストエンドスクリーンの設定
+      url: /players/configuring-playlist-endscreen-using-plugin.html
+    - name: Adobe Analytics イベントトラッキングの設定
+      url: /players/configuring-adobe-analytics-event-tracking.html
+    - name: Google アナリティクスのイベントトラッキングの設定
+      url: /players/configuring-google-analytics-event-tracking.html
+    - name: プレーヤー広告の構成
+      url: /players/configuring-player-advertising-using-players-module.html
+    - name: プレーヤーコンテンツ制限の設定
+      url: /players/configuring-player-content-restrictions.html
+    - name: プレーヤーコントロールの設定
+      url: /players/configuring-player-controls.html
+    - name: プレーヤーエンドスクリーンの設定
+      url: /players/configuring-player-endscreen.html
+    - name: プレーヤーローカリゼーションの設定
+      url: /players/configuring-player-localization.html
+    - name: プレーヤーの再生プロパティの設定
+      url: /players/configuring-player-playback-properties.html
+    - name: プレーヤープラグインの設定
+      url: /players/configuring-player-plugins.html
+    - name: ソーシャルプロパティの設定
+      url: /players/configuring-social-properties-player.html
+    - name: プレーヤー埋め込みコードの生成
+      url: /players/generating-player-embed-code.html
+    - name: プレイヤーズモジュールの開始にあたって
+      url: /players/getting-started-players-module.html
+    - name: プレイヤー情報プロパティの設定
+      url: /players/setting-player-information-properties.html
+    - name: プレーヤーのプロパティの設定
+      url: /players/setting-player-properties.html
+    - name: プレーヤー更新モードの設定
+      url: /players/setting-player-update-mode-and-version.html
+    - name: プレーヤーのスタイリング
+      url: /players/styling-players.html
+- section:
+  name: '動画とプレーヤーの公開'
+  url: /publish/index.html
+  docs:
+    - name: 3Play MediaInteractiveトランスクリプトの追加
+      url: /publish/adding-3play-media-interactive-transcript-video.html
+    - name: 埋め込みコードへのアプリケーションIDの追加
+      url: /publish/adding-application-id-player-embed-code.html
+    - name: Facebookファンページへのプレーヤーの追加
+      url: /publish/adding-brightcove-player-facebook-fan-page.html
+    - name: プレーヤーでのビデオの変更
+      url: /publish/changing-video-player-without-changing-embed-code.html
+    - name: 正しい埋め込みコードの選択
+      url: /publish/choosing-correct-embed-code.html
+    - name: 高品質のスクリーンキャストの作成と公開
+      url: /publish/creating-and-publishing-high-quality-screencasts.html
+    - name: ディープリンク
+      url: /publish/deep-linking.html
+    - name: 電子メールによるビデオビューの促進
+      url: /publish/driving-video-views-through-email.html
+    - name: プレーヤーへのビデオの動的な割り当て
+      url: /publish/dynamically-assigning-videos-player.html
+    - name: Googleサイトページへのプレーヤーの埋め込み
+      url: /publish/embedding-brightcove-player-google-sites-page.html
+    - name: Wordpressページでのプレーヤーの公開
+      url: /publish/publishing-brightcove-player-wordpress-page.html
+    - name: Facebookインスタント記事でのプレーヤーの公開
+      url: /publish/publishing-brightcove-players-facebook-instant-articles.html
+    - name: Joomlaでのプレーヤーの公開
+      url: /publish/publishing-brightcove-players-joomla.html
+    - name: 電子メールへのビデオの公開
+      url: /publish/publishing-video-email.html
+    - name: 動画と再生リストの公開
+      url: /publish/publishing-videos-and-playlists-media-module.html
+    - name: ページ内エクスペリエンスへのビデオの公開
+      url: /publish/publishing-videos-page-experience.html
+    - name: 'ステップバイステップ:プレイヤーの作成と公開'
+      url: /publish/step-step-using-players-module-create-and-publish-player.html
+    - name: 1 つのページで複数のプレイヤーを使用する
+      url: /publish/using-multiple-players-one-page.html
+    - name: 参照 ID の使用
+      url: /publish/using-reference-ids.html
+- section:
+  name: ソーシャルシェアリング
+  url: /social/index.html
+  docs:
+    - name: 公開先の作成
+      url: /social/creating-social-media-publishing-destinations.html
+    - name: ビデオクリップの作成
+      url: /social/creating-video-clip-using-brightcove-social.html
+    - name: ソーシャル入門
+      url: /social/getting-started-brightcove-social.html
+    - name: ソーシャルメディアへのビデオの公開
+      url: /social/publishing-videos-social-media-platforms.html
+    - name: ソーシャルアナリティクスの確認
+      url: /social/reviewing-social-analytics.html
+    - name: ソーシャルエンゲージメント分析の確認
+      url: /social/reviewing-social-engagement-analytics.html
+    - name: ソーシャルビュー分析の確認
+      url: /social/reviewing-social-views-analytics.html
+    - name: 動画のプライバシーステータスの設定
+      url: /social/setting-privacy-status-video.html
+    - name: 自動同期の使用
+      url: /social/using-auto-sync-synchronize-videos-social-media-accounts.html
+    - name: 公開されたビデオの表示
+      url: /social/viewing-videos-published-social-media.html
+- section:
+  name: マーケティングオートメーション
+  url: /campaign/index.html
+  docs:
+  - name: 入門編
+    url: /campaign/get-started/index.html
+    docs:
+      - name: キャンペーン入門
+        url: /campaign/get-started/getting-started-campaign-module.html
+      - name: キャンペーン対応プレーヤーの作成
+        url: /campaign/general/creating-campaign-enabled-player.html
+      - name: ビデオコンテンツタイプの概要
+        url: /campaign/get-started/overview-video-content-types.html
+      - name: Chrome 拡張機能を使用する
+        url: /campaign/get-started/using-hud.html
+  - name: 一般情報
+    url: /campaign/general/index.html
+    docs:
+      - name: キャンペーンフィールドとデータ定義
+        url: /campaign/general/campaign-fields-and-data-definitions.html
+      - name: キャンペーン設定の構成
+        url: /campaign/general/configuring-campaign-settings.html
+      - name: キャンペーン対応プレーヤーの作成
+        url: /campaign/general/creating-campaign-enabled-player.html
+      - name: キャンペーンリードフォームの作成
+        url: /campaign/general/creating-campaign-lead-form.html
+      - name: キャンペーンが視聴者を特定する方法
+        url: /campaign/general/how-campaign-module-identifies-viewers.html
+      - name: 動画のベンチマークスコアの計算方法
+        url: /campaign/general/how-vbs-calculated.html
+      - name: ビデオコンテンツタイプの概要
+        url: /campaign/general/overview-video-content-types.html
+      - name: 電子メールへのビデオの公開
+        url: /campaign/general/publishing-video-email-using-campaign-module.html
+      - name: カスタムメトリックスとイベントの使用
+        url: /campaign/general/using-custom-metrics-and-events.html
+      - name: プレーヤーイベントの表示
+        url: /campaign/general/viewing-player-events-campaign-module.html
+      - name: ビデオアクティビティの表示
+        url: /campaign/general/viewing-video-activity.html
+      - name: ビューアープロファイル情報の表示
+        url: /campaign/general/viewing-viewer-profile-information.html
+      - name: UTMフィールドの操作
+        url: /campaign/general/working-utm-fields-campaign-module.html
+  - name: 統合
+    url: /campaign/integrations/index.html
+    docs:
+      - name: エロクア
+        url: /campaign/integrations/eloqua/index.html
+        docs:
+          - name: カスタムリードフォームの作成
+            url: /campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html
+          - name: Eloqua 統合テストガイド
+            url: /campaign/integrations/eloqua/eloqua-integration-testing-guide.html
+          - name: ランディングページへの動画の埋め込み
+            url: /campaign/integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html
+          - name: OracleEloquaとの統合
+            url: /campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html
+      - name: HubSpot
+        url: /campaign/integrations/hubspot/index.html
+        docs:
+          - name: カスタムリードフォームの作成
+            url: /campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html
+          - name: HubSpot RESTAPIテストガイド
+            url: /campaign/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html
+          - name: 'HubSpot（クライアント側API）との統合'
+            url: /campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html
+          - name: 'HubSpot（REST API）との統合'
+            url: /campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html
+      - name: マルケト
+        url: /campaign/integrations/marketo/index.html
+        docs:
+          - name: カスタムリードフォームの作成
+            url: /campaign/integrations/marketo/creating-custom-lead-forms-marketo.html
+          - name: 'Marketo（マンチキン）との統合'
+            url: /campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html
+          - name: 'Marketoとの統合（REST API）'
+            url: /campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html
+          - name: Marketto REST 統合テストガイド
+            url: /campaign/integrations/marketo/marketo-rest-integration-testing-guide.html
+      - name: 非MAP
+        url: /campaign/integrations/non-map/index.html
+        docs:
+          - name: カスタム統合の作成
+            url: /campaign/integrations/non-map/creating-custom-integrations-campaign-module.html
+          - name: シングルサインオンとの統合
+            url: /campaign/integrations/non-map/integrating-campaign-single-sign.html
+          - name: キャンペーンを使用して視聴者を追跡する
+            url: /campaign/integrations/non-map/using-campaign-module-track-viewers.html
+      - name: セールスフォース
+        url: /campaign/integrations/salesforce/index.html
+        docs:
+          - name: カスタムリードフォームの作成
+            url: /campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html
+          - name: PardotのSalesforceオブジェクトの作成
+            url: /campaign/integrations/salesforce/creating-salesforce-object-pardot.html
+          - name: Salesforceとの統合
+            url: /campaign/integrations/salesforce/integrating-video-cloud-salesforce.html
+  - name: キャンペーンの管理
+    url: /campaign/admin/index.html
+    docs:
+      - name: キャンペーンからのデータのエクスポート
+        url: /campaign/admin/exporting-campaign-data-campaign-module.html
+      - name: ギャラリーリードデータのエクスポート
+        url: /campaign/admin/exporting-gallery-lead-data.html
+      - name: ビューアデータの管理
+        url: /campaign/admin/managing-viewer-data.html
+      - name: キャンペーンの問題のトラブルシューティング
+        url: /campaign/admin/troubleshooting-campaign-issues.html
+  - name: 開発者
+    url: /campaign/develop/index.html
+    docs:
+      - name: '概要:オーディエンス API'
+        url: /campaign/develop/overview-audience-api.html
+      - name: オーディエンス API リファレンス
+        url: /campaign/develop/reference.html
+- section:
+  name: アナリティクスの確認
+  url: /analytics/index.html
+  docs:
+    - name: 分析モジュールUI用語集
+      url: /analytics/analytics-module-ui-glossary.html
+    - name: 分析レポートリファレンス
+      url: /analytics/analytics-report-reference.html
+    - name: ビデオエンゲージメントスコアの計算
+      url: /analytics/calculating-video-engagement-score.html
+    - name: カスタム分析レポートの作成
+      url: /analytics/creating-custom-analytics-reports.html
+    - name: エンゲージメントレポートのリファレンス
+      url: /analytics/engagement-report-reference.html
+    - name: データのエクスポート
+      url: /analytics/exporting-data-analytics-module.html
+    - name: 'よくある質問: 分析モジュール'
+      url: /analytics/faq-analytics-module.html
+    - name: 分析モジュール入門
+      url: /analytics/getting-started-analytics-module.html
+    - name: 動画を検索する方法
+      url: /analytics/how-search-videos-analytics-module.html
+    - name: スケジュールされたレポートの管理
+      url: /analytics/managing-scheduled-reports.html
+    - name: パフォーマンスレポートリファレンス
+      url: /analytics/performance-report-reference.html
+    - name: GoogleAnalyticsでのプレーヤーイベントの確認
+      url: /analytics/reviewing-player-event-data-google-analytics.html
+    # - name: 今トレンドレポートリファレンス
+    #   url: /analytics/trending-now-report-reference.html
+- section:
+  name: アカウントの管理
+  url: /admin/index.html
+  docs:
+    - name: SSOを使用したStudioユーザーの認証
+      url: /admin/authenticating-studio-users-using-single-sign.html
+    - name: 言語設定の構成
+      url: /admin/configuring-language-settings.html
+    - name: サーバーサイド広告設定の構成
+      url: /admin/configuring-server-side-ad-settings.html
+    - name: カスタムメタデータフィールドの作成
+      url: /admin/creating-custom-metadata-fields.html
+    - name: コンテキスト認識エンコーディングの取り込みプロファイルの作成
+      url: /admin/creating-ingest-profiles-context-aware-encoding.html
+    - name: 動的配信用の取り込みプロファイルの作成
+      url: /admin/creating-ingest-profiles-dynamic-delivery.html
+    # - name: レガシー取り込みプロファイルの作成
+    #   url: /admin/creating-legacy-ingest-profiles.html
+    - name: プロファイルの取り込みに関するベストプラクティス
+      url: /admin/ingest-profiles-best-practices.html
+    - name: アカウント情報の管理
+      url: /admin/managing-account-information.html
+    - name: アカウント設定の管理
+      url: /admin/managing-account-settings.html
+    - name: API 認証資格情報の管理
+      url: /admin/managing-api-authentication-credentials.html
+    - name: 取り込みプロファイルの管理
+      url: /admin/managing-ingest-profiles.html
+    - name: メディア共有設定の管理
+      url: /admin/managing-media-sharing-settings.html
+    - name: プロファイル情報の管理
+      url: /admin/managing-profile-information.html
+    - name: '標準の取り込みプロファイル（DDおよびCAE）'
+      url: /admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html
+    # - name: '標準の取り込みプロファイル（レガシー）'
+    #   url: /admin/standard-ingest-profiles-legacy-transcoding.html
+    - name: ユーザーの管理
+      url: /admin/managing-users.html
+    - name: ダイレクトマイグレーションツールの使用
+      url: /admin/using-directed-migration-tool-migrate-brightcove-smart-players.html
+    - name: 請求情報の表示
+      url: /admin/viewing-billing-information.html
+- section:
+  name: トレーニング
+  url: /training/index.html
+  docs:
+    - name: すべてのオンライントレーニングコース
+      url: /training/online-training-courses.html
+    - name: インストラクター主導トレーニングへの登録
+      url: /training/register-training.html
+    - name: 'トレーニング:ビデオクラウドの概要'
+      url: /training/training-demand-introduction-video-cloud.html
+    - name: 'トレーニング:ビデオクラウド分析の概要'
+      url: /training/training-demand-introduction-video-cloud-analytics.html
+    - name: 'トレーニング:ビデオクラウドの基本'
+      url: /training/training-demand-video-cloud-basics.html
+    - name: ビデオクラウドスタジオトレーニングビデオ
+      url: /training/video-cloud-studio-training-videos.html
+    - name: Brightcove Universityトレーニングコース
+      url: /training/brightcove-university.html
+- section:
+  name: リリースノート
+  url: /release-notes/index.html
+  docs:
+    - name: ビデオクラウドスタジオリリースノート
+      url: /release-notes/video-cloud-studio-release-notes.html
+- section:
+  name: サポート
+  url: /support/index.html
+  docs:
+    - name: 'Brightcoveのシステムステータスページの表示'
+      url: '/support/viewing-brightcove-system-status-page.html'
+    - name: 'サポートケースを開く'
+      url: '/support/opening-case-with-brightcove-support.html'
+    - name: 'サポートポータルのパスワードをリセットする'
+      url: '/support/reset-support-portal-password.html'
+    - name: '営業へのお問い合わせ'
+      url: '/support/contact-sales.html'
+# TODO correct and add additional sections/pages
+# TODO note that the order of items here determines the order in navigation
+# TODO indentation in YAML is crucial and must be with spaces (not tabs!)

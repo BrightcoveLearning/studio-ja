@@ -1,0 +1,91 @@
+---
+title: Eloqua統合テストガイドの
+description: このトピックでは、VideoCloudとEloquaの統合を検証する方法を学習します。
+parent: Eloqua 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>新しいEloqua統合をセットアップする場合、ビデオ視聴データが実際にEloquaに配信されていることをテストおよび確認するのは難しい場合があります。このトピックでは、統合が機能し、表示データとリードがEloquaに送信されていることを体系的にテストして確認する方法を学習します。</p>
+    <aside class="bcls-aside bcls-aside--information">注:Eloqua で使用するためにキャンペーンモジュールを設定する方法については、ビデオクラウドと Oracle Eloqua &nbsp;<a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html">の統合を参照してください</a>。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="start">始める前に</h2>
+    <p>統合を検証する前に、次のことが前提になります。</p>
+    <ul>
+      <li>正常に完了しました<a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html">BrightcoveキャンペーンとEloquaの統合</a></li>
+      <li>少なくとも1つ作成しました<a href="/campaign/general/creating-campaign-enabled-player.html">キャンペーン対応プレーヤー</a> Eloqua接続を使用するように構成しました</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="lead_form">テストリードフォームの設定とビデオの公開</h2>
+    <p>テストの目的で、キャンペーンでカスタムリードフォームを作成して構成する必要があります。これは、キャンペーンに貼り付けた埋め込みコードのEloquaフォームです。実稼働環境でリードフォームを使用しない場合でも、このリードフォームを使用して、データベースおよびページで既知であることが確認されます。Eloquaフォームを作成し、それを使用するようにCampaignを構成するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Eloqua アカウントにログインします。</li>
+      <li>Eloquaフォームを作成してスタイルを設定します。Eloquaフォームの作成の詳細は、Oracle <a href="/campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html"> Eloqua用のカスタムリード・フォームの作成を参照してください</a>。</li>
+      <li>ページの上部にある [ <strong>アクション] &gt; [フォーム HTML</strong>を表示] をクリックします。</li>
+      <li>フォームの埋め込みコードをクリップボードにコピーします。</li>
+      <li>キャンペーンモジュールに戻ります。</li>
+      <li>Eloquaフォーム埋め込みコードを使用して新しいリードフォームを作成します。</li>
+      <li>5 秒のマークにフォームが表示されるようにカスタムフォームを設定します。このようにして、いつ表示されるべきかを正確に知ることができます。</li>
+      <li>[リードがすでにわかっている場合でも、<strong>常にリードフォームを表示する] チェックボックスをオンにします</strong>。これにより、テスト中に記入した後もフォームが表示され続けます。</li>
+      <li><strong></strong>フォームを保存します。</li>
+      <li>作成したばかりの Eloqua リードフォームを使用するように Eloqua 接続で Brightcove Player を設定します。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="preview_video">ビデオを見るためのプレビューリンクの生成</h2>
+    <p>ビデオへのプレビューリンクを生成するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Media モジュールを開きます。</li>
+      <li>ビデオを選択し、Web プレーヤーに公開します。リードフォームでキャンペーン対応のプレーヤーを選択してください。</li>
+      <li>プレビューリンクをクリックして、ビデオを新しいブラウザウィンドウで開きます。この方法でテストすると、HTML ページに埋め込まれたプレーヤーによって導入される可能性のある変数がなくなります。</li>
+      <li>ビデオが再生され、リードフォームが 5 秒マークに表示されることを確認します。</li>
+      <li>一意の連絡先情報とメールアドレス（有名人の名前、または「bctest」という単語を含む名前）を使用してリードフォームに記入し、後でEloquaで簡単に見つけることができます。これにより、ブラウザ、プレーヤー、データベースレベルの変数がなくなります。新しいユーザーとしてフォームに記入することで、あなたがEloquaの既知のユーザーであることを確認できます。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="confirm_data">キャンペーンがデータを正常にキャプチャしていることを確認する</h2>
+    <p>Eloquaでビデオ視聴データを探す前に、まずCampaignが実際にビデオビューをキャプチャしたことを確認してください。データの表示は、キャンペーンUIに表示されるまでに最大3時間かかる場合があることに注意してください。キャンペーンがデータを正常にキャプチャしていることを確認するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>キャンペーンモジュールを開きます。</li>
+      <li>クリック<strong>最近のすべての活動</strong>左側のナビゲーションで。</li>
+      <li>視聴したばかりの動画の名前を示す最近のタイムスタンプが付いたイベントがあることを確認します。<strong>イベントステータスは未処理である必要があります</strong>。これは、キャンペーンがビューをキャプチャしたが、まだEloquaとの同期を試みていないことを示しています。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node18742-unprocessed.png" /></figure>
+      </li>
+      <li>キャンペーンとEloqua間の同期を手動でトリガーするには、<strong>同期アクティビティ</strong>左側のナビゲーションで。</li>
+      <li><strong>[接続の選択]</strong>ドロップダウンリストから、Eloqua 統合を選択します。NS <strong>テスト同期</strong>ボタンが表示されます。</li>
+      <li>[ <strong></strong>同期のテスト] をクリックして、手動同期をトリガーします。手動同期をトリガーできる頻度は制限されます。デフォルトでは、キャンペーンは1時間に1回ビューをEloquaに同期します。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node18742-test-sync.png" /></figure>
+      </li>
+      <li>クリック<strong>最近のすべての活動</strong>左側のナビゲーションで。</li>
+      <li><strong>ビューイベントのステータスはキューに入れられます</strong>。データがEloquaに実際に同期されるまでに15分ほどかかる場合があります。データが同期されると、ステータスは次の 2 つのステータスのいずれかに変更されます。
+        <ul>
+          <li><strong>synced</strong> -ユーザーが既知のユーザーであり、データがアクティビティログに正常に配信されたことを示します。データは、数分以内にEloquaでも表示できます。</li>
+          <li><strong>unknown_contact</strong> -ユーザーが不明とみなされ、Eloqua がデータを受け入れることができなかったことを示します。<strong></strong> unknown_contactのステータスが取得された場合は、正しいプレーヤーを使用して動画を公開したことを確認し、Eloquaフォームを設置し、ページに埋め込まれていないプレビューリンクを使用してテストしています。
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node18742-synced.png" /></figure>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="confirm_marketo">ビデオビューデータがEloquaにあることの確認</h2>
+    <p>キャンペーンが表示されたら<strong>同期</strong>ステータスが表示されたら、次の手順に従って、データがEloquaにあることを確認します。</p>
+    <aside class="bcls-aside bcls-aside--information">注:Eloqua UIがCampaignから受け取った新しいデータで更新されるまでに5〜10分かかります。</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>Eloqua アカウントにログインします。</li>
+      <li><strong>カスタムオブジェクトに移動します</strong>。</li>
+      <li><strong>brightCoveVideoView</strong>カスタムオブジェクトを見つけます。</li>
+      <li>その横にあるドロップダウン矢印をクリックし、[ <strong>カスタムオブジェクト] [取引先責任者の内訳にマップされたレコード] をクリックします</strong>。このカスタムオブジェクトにビデオ視聴データがある連絡先の一覧が表示されます。</li>
+      <li>リードフォームに入力するときに使用した一意の名前または電子メールアドレスを探します。</li>
+      <li>連絡先をクリックして、詳細ページを開きます。連絡先のすべてのビデオビューレコードのリストが表示されます。これは、キャンペーンからEloquaに配信されたビデオビューデータです。ビデオ名、ビデオID、プレーヤーID、視聴時間、視聴率などのフィールドが含まれています。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node18742-eloqua-info.png" /></figure>
+      </li>
+    </ol>
+    <p>Eloquaでは、カスタムデータオブジェクトに配信されるデータを既知の連絡先に割り当てる必要があります。Eloqua は既知の連絡先のデータのみを受け付けます。不明な連絡先のデータは同期されません。リードフォームを使用しない場合、不明なユーザーが既知のユーザーに変換する方法がないため、データは同期されません。</p>
+  </section>
+</article>

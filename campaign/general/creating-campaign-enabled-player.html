@@ -1,0 +1,63 @@
+---
+title: キャンペーン対応のプレーヤーの作成
+description: このトピックでは、キャンペーン対応のBrightcoveプレーヤーを作成する方法を学習します。
+parent: General Information 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>ビデオエンゲージメントデータは、キャンペーン対応のBrightcoveプレーヤー内でビデオコンテンツが表示された場合にのみ記録されます。キャンペーン対応プレーヤーを作成するには、次の2つの方法があります。</p>
+    <ul>
+      <li><a href="#newplayer">キャンペーンモジュールを使用して新しいプレーヤーを作成します</a></li>
+      <li><a href="#existingplayer">既存のプレーヤーでCamapignを有効にする</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="newplayer">キャンペーンモジュールを使用して新しいプレーヤーを作成する</h2>
+    <p>キャンペーンモジュールを使用してキャンペーン対応プレーヤーを作成する前に、キャンペーンモジュールを少なくとも1つのデータ接続で構成する必要があります。</p>
+    <ul>
+      <li><a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html">エロクア</a></li>
+      <li><a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">マルケト (Munchkin)</a></li>
+      <li><a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">MarketO (REST API)</a></li>
+      <li><a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html">セールスフォース</a></li>
+      <li><a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">HubSpot (REST API)</a></li>
+      <li><a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">HubSpot (クライアント側 API)</a></li>
+      <li><a href="/campaign/integrations/non-map/integrating-campaign-single-sign.html">SSO</a></li>
+      <li><a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">カスタム統合</a></li>
+    </ul>
+    <p>ご了承ください<a href="/campaign/integrations/non-map/using-campaign-module-track-viewers.html">キャンペーン追跡</a>デフォルトで提供されます。キャンペーンモジュールを使用してキャンペーン対応プレーヤーを作成するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>キャンペーンモジュールを開きます。</li>
+      <li>クリック<strong>キャンペーンプレイヤー</strong>左側のナビゲーションで。</li>
+      <li>[<strong>プレーヤの作成</strong>]をクリックします。新しいキャンペーン対応プレーヤーが作成され、プレーヤーのリストに表示されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="new player" src="/assets/images/campaign/general/node16419-new-player.png" /></figure>
+      </li>
+      <li>[ <strong>接続先]</strong>ドロップダウンを使用して、プレーヤーが使用するデータ接続を選択します。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select integration" src="/assets/images/campaign/general/node16419-select-integration.png" /></figure>
+      </li>
+      <li><strong>（オプション）</strong>を使用して<strong>リードフォーム</strong>ドロップダウンで、<a href="/campaign/general/creating-campaign-lead-form.html">リードフォーム</a>プレイヤーが使用するもの。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="existingplayer">既存のプレーヤーでキャンペーンを有効にする</h2>
+    <p>既存のプレーヤーをキャンペーン可能にするには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li><strong>Players</strong> モジュールを開きます。</li>
+      <li>プレーヤー名をクリックして、プレーヤーのプロパティを開きます。</li>
+      <li>クリック<strong>運動</strong>左側のナビゲーションメニューにあります。</li>
+      <li>を確認してください<strong>キャンペーンを有効にする</strong>オプション。</li>
+      <li>使用<strong>に接続します</strong>ドロップダウンを使用して、キャンペーン接続を選択します。</li>
+      <li>（オプション）[ <strong>リードフォーム]</strong>ドロップダウンを使用して、<a href="/campaign/general/creating-campaign-lead-form.html"></a>使用するリードフォームを選択します。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="unpublished changes message" src="/assets/images/campaign/general/node16419-campaign-props.png" /></figure>
+      </li>
+      <li>[<strong>保存</strong>]をクリックします。未公開の変更があることを示すメッセージが表示されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="unpublished changes message" src="/assets/images/campaign/general/node16419-unpublished-changes.png" /></figure>
+      </li>
+      <li>「<strong></strong>公開して埋め込む」をクリックし、「<strong>変更を公開」</strong>をクリックして、変更をプレイヤーに公開します。</li>
+      <li>キャンペーンモジュールに戻ります。クリック<strong>キャンペーンプレイヤー</strong>左側のナビゲーションで。</li>
+      <li>キャンペーンプレーヤーのリストにプレーヤーが表示されていることを確認します。</li>
+    </ol>
+  </section>
+</article>

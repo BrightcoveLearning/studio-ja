@@ -1,0 +1,97 @@
+  name: 入門編
+  url: /get-started/index.html
+  docs:
+    - name: オーディエンス入門
+      url: /get-started/getting-started-audience-module.html
+    - name: オーディエンストレーニングビデオ
+      url: /get-started/audience-training-videos.html
+  name: 一般情報
+  url: /general/index.html
+  docs:
+    - name: 対象者フィールドとデータ定義
+      url: /general/audience-fields-and-data-definitions.html
+    - name: オーディエンス設定の構成
+      url: /general/configuring-audience-settings.html
+    - name: オーディエンス対応プレーヤーの作成
+      url: /general/creating-audience-enabled-player.html
+    - name: オーディエンスリードフォームの作成
+      url: /general/creating-audience-lead-form.html
+    - name: 視聴者が視聴者を特定する方法
+      url: /general/how-audience-module-identifies-viewers.html
+    - name: 電子メールへのビデオの公開
+      url: /general/publishing-video-email-using-audience-module.html
+    - name: カスタムメトリックスとイベントの使用
+      url: /general/using-custom-metrics-and-events.html
+    - name: プレーヤーイベントの表示
+      url: /general/viewing-player-events-audience-module.html
+    - name: ビデオアクティビティの表示
+      url: /general/viewing-video-activity.html
+    - name: ビューアープロファイル情報の表示
+      url: /general/viewing-viewer-profile-information.html
+    - name: UTMフィールドの操作
+      url: /general/working-utm-fields-audience-module.html
+  name: 統合
+  url: /integrations/index.html
+  docs:
+    - name: エロクア
+      url: /integrations/eloqua/index.html
+      docs:
+        - name: カスタムリードフォームの作成
+          url: /integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html
+        - name: Eloqua 統合テストガイド
+          url: /integrations/eloqua/eloqua-integration-testing-guide.html
+        - name: ランディングページへの動画の埋め込み
+          url: /integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html
+        - name: OracleEloquaとの統合
+          url: /integrations/eloqua/integrating-video-cloud-oracle-eloqua.html
+    - name: HubSpot
+      url: /integrations/hubspot/index.html
+      docs:
+        - name: カスタムリードフォームの作成
+          url: /integrations/hubspot/creating-custom-lead-forms-hubspot.html
+        - name: HubSpot RESTAPIテストガイド
+          url: /integrations/hubspot/hubspot-rest-api-integration-testing-guide.html
+        - name: 'HubSpot（クライアント側API）との統合'
+          url: /integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html
+        - name: 'HubSpot（REST API）との統合'
+          url: /integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html
+    - name: マルケト
+      url: /integrations/marketo/index.html
+      docs:
+        - name: カスタムリードフォームの作成
+          url: /integrations/marketo/creating-custom-lead-forms-marketo.html
+        - name: 'Marketo（マンチキン）との統合'
+          url: /integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html
+        - name: 'Marketoとの統合（REST API）'
+          url: /integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html
+        - name: Marketto REST 統合テストガイド
+          url: /integrations/marketo/marketo-rest-integration-testing-guide.html
+    - name: 非MAP
+      url: /integrations/non-map/index.html
+      docs:
+        - name: カスタム統合の作成
+          url: /integrations/non-map/creating-custom-integrations-audience-module.html
+        - name: シングルサインオンとの統合
+          url: /integrations/non-map/integrating-audience-single-sign.html
+        - name: 視聴者を追跡するための視聴者の使用
+          url: /integrations/non-map/using-audience-module-track-viewers.html
+    - name: セールスフォース
+      url: /integrations/salesforce/index.html
+      docs:
+        - name: カスタムリードフォームの作成
+          url: /integrations/salesforce/creating-custom-lead-forms-salesforce.html
+        - name: PardotのSalesforceオブジェクトの作成
+          url: /integrations/salesforce/creating-custom-lead-forms-salesforce.html
+        - name: Salesforceとの統合
+          url: /integrations/salesforce/integrating-video-cloud-salesforce.html
+  name: オーディエンスの管理
+  url: /admin/index.html
+  docs:
+    - name: オーディエンスからのデータのエクスポート
+      url: /admin/exporting-audience-data-audience-module.html
+    - name: ギャラリーリードデータのエクスポート
+      url: /admin/exporting-gallery-lead-data.html
+    - name: ビューアデータの管理
+      url: /admin/managing-viewer-data.html
+    - name: オーディエンスの問題のトラブルシューティング
+      url: /admin/troubleshooting-audience-issues.html

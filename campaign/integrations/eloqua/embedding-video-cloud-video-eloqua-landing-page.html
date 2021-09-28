@@ -1,0 +1,57 @@
+---
+title: Eloquaランディングページのにビデオクラウドビデオを埋め込む
+description: このトピックでは、OracleEloquaランディングページにVideoCloudビデオを埋め込む方法を学習します。
+parent: Eloqua 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>キャンペーンモジュールは、クラウドコンテンツの一種としてビデオクラウドビデオをEloquaランディングページに追加する機能を提供します。EloquaランディングページWYSIWYGエディター内からランディングページにビデオが追加されます。</p>
+    <p>Eloquaランディングページにビデオを追加するには、次の手順を実行する必要があります。</p>
+    <ol>
+      <li><a href="#landingpage">Eloquaでランディングページを作成する</a></li>
+      <li><a href="#video">ビデオとプレーヤーを選択します</a></li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="landingpage">Eloquaランディングページの作成</h2>
+    <p>Eloqua ランディングページは、Eloqua から送信された電子メールからクリックスルーした訪問者の目的地として使用できます。ランディングページを作成するには、次の手順に従います。</p>
+    <aside class="bcls-aside bcls-aside--information">注:Eloqua ランディング・ページの詳細は、<a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/LandingPages/LandingPages.htm"> Oracle Eloqua のドキュメントを参照してください</a>。</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>VideoCloudアカウントにサインインします。ランディングページで使用する動画があるアカウントを選択します。このアカウントには、キャンペーンモジュールへのアクセス権も必要です。</li>
+      <li>お客様のEloquaアカウントにサインインします。</li>
+      <li><strong>アセット</strong> &gt; <strong></strong>ランディングページに移動し、「<strong>ランディングページの作成」をクリックします</strong>。</li>
+      <li>[ <strong>空白の HTML ランディングページ]</strong>をクリックし、[ <strong>選択] をクリックします</strong>。</li>
+      <li>左側のナビゲーションで、[ <strong>クラウドコンテンツ] をクリックします</strong>。[クラウドコンテンツ]ダイアログが開きます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node16128-cloud-content.png" /></figure>
+      </li>
+      <li><strong>Brightcove Video</strong>オブジェクトを HTML ページにドラッグし、<code translate="No">&lt;body&gt;</code>タグの間にドロップします。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node16128-drag-cloud-content.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">注:<code translate="No">&lt;body&gt;</code>タグの間にプレイヤーをドラッグ＆ドロップすることで、複数のプレイヤーをランディングページに追加できます。各プレイヤーを追加した後、ランディングページを保存します。</aside>
+      </li>
+    </ol>
+    <p>NS <strong>クラウドコンテンツの構成</strong>できる場所でダイアログが開きます<a href="#video">ビデオとプレーヤーを選択します</a>。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="video">動画とプレーヤーを選択する</h2>
+    <p>クラウドコンテンツ設定ダイアログは、Video Cloud アカウント、ビデオ、プレーヤーを選択するために使用します。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>右上のドロップダウンリストを使用して、使用する Video Cloud アカウントを選択します。アカウントが選択されると、ダイアログが更新され、選択したアカウントの動画とプレーヤーが表示されます。</li>
+      <li>ランディングページに表示するビデオを選択します。最新の20本のビデオがリストに表示されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node16128-select-video.png" /></figure>
+      </li>
+      <li>使用するプレーヤーを選択します。キャンペーンが有効なプレイヤーのみが表示されます。</li>
+      <li><strong>プレイヤーサイズを設定します</strong>。</li>
+      <li>[ <strong>保存</strong> ] をクリックして変更を保存します。</li>
+      <li>[ <strong>X] をクリックして</strong>、[クラウドコンテンツ設定] ダイアログボックスを閉じます。HTMLは、プレーヤーを埋め込むためのコードで更新されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node16128-html.png" /></figure>
+      </li>
+      <li><strong>(オプション)</strong>ランディングページに他のオブジェクトを追加します。</li>
+      <li>[ <strong>保存</strong> ] をクリックして、ランディングページを保存します。</li>
+      <li>ランディングページに名前を付けて、[ <strong>保存] をクリックします</strong>。</li>
+    </ol>
+  </section>
+</article>

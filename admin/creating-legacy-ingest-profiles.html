@@ -1,0 +1,76 @@
+---
+title: レガシー取り込みプロファイルの作成
+parent: Administering Accounts
+description: This topic provides an overview of how to create custom ingest profiles for use with Legacy transcoding.
+layout: staging 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>[Ingest Profiles] 管理ページを使用して、新しいレガシー取り込みプロファイルを作成できます。取り込みプロファイルは JSON を使用して定義されます。新しいレガシープロファイルを作成する場合は、「<a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">レガシートランスコーディングの標準取り込みプロファイル」</a>ドキュメントを確認し、必要なものと同様のプロファイルを見つけると便利です。その後、Studioで簡単にプロファイルを複製し、変更を加えて編集できます。</p>
+    <p >注:DRM を使用する取り込みプロファイルの作成については、<a href="https://general.support.brightcove.com/general/mpeg-dash-video.html"> MPEG-DASH</a>ビデオ開発者ドキュメントを参照してください。</p>
+    <p >注:各プロファイルでは、最大 25 のレンディションを作成できます。&nbsp;ポスターとサムネイル画像は、最大 25 にカウントされます。&nbsp;</p>
+    <p>新しいレガシー取り込みプロファイルを作成するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Studio ヘッダーの [ <strong>管理者]</strong>リンクをクリックします。</li>
+      <li>[ <strong>プロファイルの取り込み]</strong>リンクをクリックします。</li>
+      <li>複製するレガシープロファイルを探します。プロファイル名をクリックして、プロファイルエディタを開きます。</li>
+      <li>[ <strong>プロファイルの複製] をクリックします</strong>。プロファイルエディタが開き、新しいプロファイルが表示されます。</li>
+      <li>プロフィールの上部までスクロールします。<code translate="No"><strong>name</strong></code>要素を編集して、プロファイルに意味のある名前を付けます。この名前は、ビデオクラウドスタジオ内に表示されます。</li>
+      <li><code translate="No"><strong>description</strong></code>要素を編集して、プロファイルに意味のある説明を付けます。
+        <figure class="bcls-figure"><img alt="" src="/assets/images/admin/node18503-edit-profile-name.png" /></figure>
+      </li>
+      <li>必要に応じて、レンディション情報を編集します。ポスターとサムネイル画像のデフォルトサイズは、プロファイルの末尾にあります。</li>
+      <li>[ <strong>保存] をクリックします</strong>。</li>
+    </ol>
+    <div class="BCL-subsection">
+      <h3>プロファイルに透かしを追加する</h3>
+      <p><code translate="No">watermarks</code>各レンディションに要素を追加することで、ウォーターマークを各レンディションに追加できます<code translate="No">rendition</code>。</p>
+      <pre>
+       透かし」: [ { "y": -20, "x": -10, "width": "20%", "url": "http://www.mysite.com/companylogo.png" } ]
+       </pre>
+      <p><code translate="No">watermarks</code>要素には、次のパラメータがあります。</p>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+          <tr>
+            <th width="13%">[パラメータ]</th>
+            <th width="14%">タイプ</th>
+            <th width="73%">説明</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+          <tr>
+            <td ><code translate="No">url</code></td>
+            <td >ひも</td>
+            <td >透かし画像の URL</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">width</code></td>
+            <td >ひも</td>
+            <td >ピクセル単位の幅、またはフレーム幅のパーセント（例: 20 または 10%）</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">height</code></td>
+            <td >ひも</td>
+            <td >ピクセル単位の高さまたはフレーム幅のパーセント（例: 20または10％）</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">x</code></td>
+            <td >ひも</td>
+            <td >画像の左端から中心までの距離（ピクセルまたはフレーム幅のパーセント）。例: 20 または 10%（右端に対してウォーターマークを配置するには、-10 などの負の値を使用します）。</td>
+          </tr>
+          <tr>
+            <td ><code translate="No">y</code></td>
+            <td >ひも</td>
+            <td >画像の上端から中央までの距離（ピクセルまたはフレームの高さの割合）。例: 20 または 10%（-10などの負の値を使用して、下端に対してウォーターマークを配置します）</td>
+          </tr>
+        </tbody>
+      </table>
+      &nbsp;
+      <p>透かし付きのサンプルプロファイルを以下に示します。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node18503-watermark.png" /></figure>
+    </div>
+  </section>
+</article>

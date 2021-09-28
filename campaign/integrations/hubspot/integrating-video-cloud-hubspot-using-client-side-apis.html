@@ -1,0 +1,113 @@
+---
+title: クライアント側APIのを使用したVideoCloudとHubSpotの統合
+description: このトピックでは、クライアント側APIを使用してHubSpotで使用するキャンペーンモジュールを構成する方法について説明します。
+parent: HubSpot 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>キャンペーンモジュールを使用すると、VideoCloudはBrightcoveプレーヤーからHubSpotへの表示データを同期できます。HubSpot に入ると、このデータは、セグメンテーション、キャンペーンロジック、レポート、リードスコアリング、およびコミュニケーションのパーソナライズに使用できます。</p>
+    <p>Video Cloud と HubSpot を統合するには、次の 2 つのオプションがあります。</p>
+    <ul>
+      <li><strong>標準（REST API）メソッドの使用</strong> -この方法では、キャンペーンは既知の視聴者の視聴データのみを追跡します。デフォルトでは、リードフォームは未知の閲覧者にのみ表示されます。このタイプの統合の詳細については、REST API を使用したビデオクラウドと HubSpot <a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">の統合を参照してください</a>。</li>
+      <li><strong>大量の使用（クライアント側</strong><strong>API）メソッド</strong> -この方法では、キャンペーンはすべての視聴者の視聴データを追跡します。このトピックでは、このメソッドについて説明します。</li>
+    </ul>
+    <p>キャンペーンモジュールとHubSpotの統合は、次の2つの主要コンポーネントで構成されています。</p>
+    <ul>
+      <li>動画視聴回数データのトラッキングを可能にするBrightcoveプレーヤープラグイン</li>
+      <li>Video Cloud から HubSpot にトラッキングデータを送信する同期プロセス</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="requirements">要件</h2>
+    <p>HubSpotでキャンペーンモジュールを使用するには、次のことを行う必要があります。</p>
+    <ul>
+      <li>HubSpot アカウントを持っている</li>
+      <li>ProfessionalまたはEnterprise Video Cloudアカウントを保有している</li>
+      <li>キャンペーンモジュールを開いたときに表示される最初のスプラッシュ画面で必要な情報を送信して、アカウントでキャンペーンモジュールを有効にします</li>
+      <li>はじめてモジュールを使用するときにサービス利用契約に同意している</li>
+      <li>プレーヤーを公開するときは、高度な埋め込み (ページ内) 公開コードを使用してください。標準埋め込み (iframe) 公開コードはプラグインが iframe 内で実行されるため、機能しません。したがって、親ページの URL パラメータにアクセスできず、正しい Cookie を取得できない可能性があります</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="features">特徴</h2>
+    <p>Video Cloud-HubSpot 統合の主な機能は次のとおりです。</p>
+    <ul>
+      <li><strong>リードフォーム</strong> -視聴者が動画を視聴したときに自動的に表示される HubSpot フォームを作成します。詳細については、「HubSpot <a href="/campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html">のカスタムリードフォームの作成」を参照してください</a>。</li>
+      <li><strong>データ形式</strong> -表示データは、<a href="https://developers.hubspot.com/docs/methods/timeline/timeline-overview"></a>カスタムタイムラインイベントタイプとして配信されます。HubSpot にレプリケートされるデータは次のとおりです。
+        <ul>
+          <li>ビデオ名</li>
+          <li>ビデオ ID</li>
+          <li>アカウント ID (ビデオクラウド)</li>
+          <li>ページ URL（参照先のページの URL）</li>
+          <li>プレーヤー ID (ビデオクラウドプレーヤー)</li>
+          <li>% 視聴率 (25%, 50%, 75%, 95%)</li>
+        </ul>
+      </li>
+      <li><strong>データ転送</strong> -データの表示は、自動化されたプロセスを使用して HubSpot に送信されます。ただし、HubSpot プラットフォームの一部のレポートでは、更新に時間がかかる場合があります</li>
+      <li><strong>データ保持</strong> -収集されたデータは、オプションで Video Cloud に最大 6 か月間保持できます</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="setupConnection">接続のセットアップ</h2>
+    <p>以下の手順に従って、Video Cloud と HubSpot 間の接続を設定します。</p>
+    <h3 id="establishConnection">ビデオクラウドと HubSpot 間の接続の確立</h3>
+    <ol class="bcls-tasklist">
+      <li>キャンペーンモジュールを開き、をクリックします<strong>データ接続</strong>左側のナビゲーションで。</li>
+      <li>[<strong>新規コレクションの追加</strong>]をクリックします。</li>
+      <li>選択する<strong>HubSpot</strong>統合として。<aside class="bcls-aside bcls-aside--information">注:利用可能なインテグレーションは、Video Cloud サブスクリプションに基づいています。</aside>
+      </li>
+      <li>(オプション) <strong>接続名を入力します</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Campaign setup" src="/assets/images/campaign/integrations/hubspot/node18751-setup-section.png" /></figure>
+      </li>
+      <li>[<strong>接続</strong>]をクリックします。</li>
+      <li>[ <strong>高ボリューム (クライアント側 API)] を選択します</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connect to hubspot" src="/assets/images/campaign/integrations/hubspot/node18751-select-high-volume.png" /></figure>
+      </li>
+      <li>[ <strong>保存] をクリックします</strong>。</li>
+    </ol>
+    <p>これで、HubSpot への Video Cloud 接続がセットアップされました。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">統合の設定</h2>
+    <p>Video Cloud から HubSpot への接続が確立されたら、以下の手順に従って統合を設定します。</p>
+    <ol class="bcls-tasklist">
+      <li>統合には、HubSpot アカウント ID が必要です。<strong></strong>空のリンクをクリックし、HubSpot アカウント ID を入力し、[ <strong>保存] をクリックします</strong>。<aside class="bcls-aside bcls-aside--information">注:同じアカウント ID を持つ複数の HubSpot 接続はサポートされていません。</aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connected options" src="/assets/images/campaign/integrations/hubspot/node18751-enter-account-id.png" /></figure>
+      </li>
+      <li>デフォルトでは、[ <strong>接続ステータス]</strong>は [ <strong>有効] になります</strong>。<strong></strong>接続ステータスによって、Video Cloud ビデオエンゲージメントデータがHubSpotに送信されるかどうかが決まります。
+        <ul>
+          <li><strong>有効</strong> -データが収集され、HubSpot に送信されます</li>
+          <li><strong>無効</strong> -データは収集されません（統合は無効です）</li>
+        </ul>
+      </li>
+    </ol>
+    <p>HubSpot との統合を削除するには、[ <strong>切断] をクリックします</strong>。キャンペーンモジュールは、マーケティングプラットフォームへの複数の接続をサポートします。追加の統合を設定するには、[<strong>新規接続の追加</strong>]をクリックします。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player">キャンペーン対応プレーヤーの作成</h2>
+    <p>ビデオエンゲージメントデータは、キャンペーン対応のビデオプレーヤーを使用している場合にのみHubSpotに送信されます。キャンペーン対応のBrightcoveプレーヤーの作成については、を参照してください。<a href="/campaign/general/creating-campaign-enabled-player.html">キャンペーン対応プレーヤーの作成</a>。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="trackingid">トラッキングIDを渡す</h2>
+    <p>キャンペーンモジュールは、トラッキングID値をHubSpotに渡す機能をサポートしています。トラッキング ID は、たとえば、キャンペーン ID の追跡に使用されます。トラッキングIDは、キャンペーンが有効なプレーヤーを表示するURLに追加することも、プレーヤーの埋め込みコードに追加することもできます。</p>
+    <ul>
+      <li>例: URLに追加</li>
+    </ul>
+    <pre>
+  http://www.myurl.com/video.html？<strong>bctrackingid=12345</strong></pre>
+    <ul>
+      <li>例:プレーヤーの埋め込みコードに追加しました</li>
+    </ul>
+    <pre>
+  &lt;video data-video-id = "6033402539001" data-account = "1486906377" data-player = "default" data-embed = "default" data-application-id class = "video-js" <strong> data-bc-trackingid = "12345"</strong>コントロール&gt;&lt;/ビデオ&gt;&lt;スクリプトsrc = "//players.brightcove.net/1486906377/default_default/index.min.js"&gt;&lt; /脚本&gt;</pre>
+    <p>キャンペーンは、同期される別のフィールドとして値をHubSpotに渡します。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="identify">視聴者を識別する</h2>
+    <p>HubSpot 統合の場合、プラグインは HubSpot の JavaScript トラッキングコードを注入し、ユーザーのブラウザーに<strong> hubspotutk</strong>クッキーを削除します。この Cookie は、HubSpot 内で訪問者の身元を追跡し、Brightcoveの閲覧データを連絡先に関連付けるために使用されます。ユーザーがすでに持っている場合<strong>hubspotutk</strong>プレーヤーがCookieをロードすると、CampaignはHubSpotにAPIリクエストを送信し、Cookieの値が既知の連絡先に対応するかどうかを尋ねます。対応する場合、Campaignは表示データをそのユーザーに関連付けます。  </p>
+  </section>
+</article>
