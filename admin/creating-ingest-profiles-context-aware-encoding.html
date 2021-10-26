@@ -14,10 +14,10 @@ description: 'This topic provides an overview of how to create custom ingest pro
 				<li>カスタムプロファイルで取り込んだビデオを再トランスコードできるようにしたい場合は、<strong>デジタルマスターをアーカイブする必要があります</strong>（すべての標準プロファイルと同様）。見る<a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">アーカイブマスター</a>これを行う方法の詳細については。</li>
 			</ul>
 		</aside>
-    <p>[インジェストプロファイル] 管理ページにアクセスするには、[管理] <strong></strong>リンクをクリックし、[ <strong>プロファイルの取り込み] をクリックします</strong>。取り込みプロファイルのリストが表示されます。</p>
+    <p>[インジェストプロファイル] 管理ページにアクセスするには、[管理] リンクをクリックし、[ <strong>プロファイルの取り込み] をクリックします</strong>。取り込みプロファイルのリストが表示されます。</p>
     <aside class="bcls-aside bcls-aside--information">注:[プロファイルの取り込み] ページにアクセスするには、管理者ロールを持つ Video Cloud Studio ユーザーである必要があります。</aside>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node18434-profile-list.png" /></figure>
-    <p>Video Cloud アカウントには、1 つ以上のトランスコーディングオプションが設定されます。すべての Video Cloud アカウントは、編集または削除できない初期設定の取り込みプロファイルで設定されています。これらはでマークされています<strong>タイプ</strong>の<strong>標準VOD</strong>スタジオで。<strong></strong>プロファイルバージョンには、プロファイルで使用されるトランスコーディングのタイプが表示されます。ブライトコーブが提供するインジェストプロファイルで提供されるレンディションの詳細については、該当するドキュメントを参照してください。</p>
+    <p>Video Cloud アカウントには、1 つ以上のトランスコーディングオプションが設定されます。すべての Video Cloud アカウントは、編集または削除できない初期設定の取り込みプロファイルで設定されています。これらはでマークされています<strong>タイプ</strong>の<strong>標準VOD</strong>スタジオで。プロファイルバージョンには、プロファイルで使用されるトランスコーディングのタイプが表示されます。ブライトコーブが提供するインジェストプロファイルで提供されるレンディションの詳細については、該当するドキュメントを参照してください。</p>
     <ul>
       <!-- <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">Legacy</a></li> -->
       <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">動的配信</a></li>
@@ -40,7 +40,7 @@ description: 'This topic provides an overview of how to create custom ingest pro
           <li><strong>画像をキャプチャしないでください。自分の画像をアップロードまたはキャプチャします</strong> -ポスターとサムネイル画像は<a href="/media/capturing-poster-and-thumbnail-images.html">キャプチャされた</a>また<a href="/media/uploading-poster-and-thumbnail-images.html">アップロード</a>メディアモジュールを使用します。</li>
         </ul>
       </li>
-      <li><strong></strong><strong></strong><strong></strong><strong></strong>ポスターおよびサムネイル画像の幅と高さを入力します。</li>
+      <li>ポスターおよびサムネイル画像の幅と高さを入力します。</li>
       <li>[コーデック] ドロップダウンリストを使用して、使用するビデオコーデックを選択します。H264とHEVCのどちらかを選択するか、両方のコーデック（H264、HEVC）を使用してレンディションを作成する混合コーデックプロファイルを使用できます。
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/admin/codec-options.png" alt="Codec Options">
@@ -54,7 +54,7 @@ description: 'This topic provides an overview of how to create custom ingest pro
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node18434-max-bitrate.png" /></figure>
       </li>
       <li><strong>必要な出力解像度を選択します</strong>。ソースファイルの解像度よりも高い場合は、必要な解像度は作成されません。</li>
-      <li><strong></strong>エンコーディング品質管理を調整して、ビデオの品質と帯域幅の使用量を調整します。帯域幅の使用についてより懸念があり、帯域幅消費を最小限に抑えるように最適化する場合は、スライダを左に移動します。画質についてより懸念があり、画質を向上するために帯域幅を増やしても問題ない場合は、スライダを右に移動します。
+      <li>エンコーディング品質管理を調整して、ビデオの品質と帯域幅の使用量を調整します。帯域幅の使用についてより懸念があり、帯域幅消費を最小限に抑えるように最適化する場合は、スライダを左に移動します。画質についてより懸念があり、画質を向上するために帯域幅を増やしても問題ない場合は、スライダを右に移動します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node18434-encoding-quality.png" /></figure>
       </li>
       <li><strong>作成するプログレッシブ MP4 レンディションを選択します</strong>。Social モジュールを使用してソーシャルメディアアカウントに動画を投稿したり、動画のダウンロードを許可したりするには、少なくとも 1 つの MP4 レンディションが必要です。選択する<strong>なし</strong> MP4レンディションを作成しない場合。

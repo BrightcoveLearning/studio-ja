@@ -22,7 +22,7 @@ parent: Reviewing Analytics
   </section>
   <section class="bcls-section">
     <h2 id="engagement">動画エンゲージメントの計算</h2>
-    <p><strong></strong>エンゲージメントは視聴者ではなく、視聴者の尺度です。エンゲージメントデータのレポートでは、動画を 100 等分に分割し、100 番目の各視聴回数をカウントします。100回目のパートを5回観ている視聴者1人、それを1回見ている視聴者5人の区別はない。</p>
+    <p>エンゲージメントは視聴者ではなく、視聴者の尺度です。エンゲージメントデータのレポートでは、動画を 100 等分に分割し、100 番目の各視聴回数をカウントします。100回目のパートを5回観ている視聴者1人、それを1回見ている視聴者5人の区別はない。</p>
     <p>測定値は、アナリティクス UI で丸められて表示されます。この数字は、個人による視聴回数をカウントし、動画のタイムラインの割合に沿ってその数を正規化した結果です。エクスポート API は、このカウントの結果を返します。これらはカウントされた値であるため、値の有意性を特定の桁数に推定する簡単な方法はありません。</p>
     <p>動画の長さが固定されていないため、ライブ配信のエンゲージメント統計は信頼できないことに注意してください。</p>
     <p>エンゲージメントスコアは 100 より大きくなる可能性があります。ビデオをスクラブして再視聴しても、新しい video_view イベントはトリガーされませんが、video_engagement がトラッキングされます。たとえば、ページ上の単一のビデオプレーヤーにビデオがあるとします。以下のイベントは、動画エンゲージメントが大きく異なることを示しています。</p>
@@ -51,12 +51,12 @@ parent: Reviewing Analytics
       <li><strong>100% での視聴回数</strong> -ビデオの 100% ポイントで記録された視聴回数はいくつですか</li>
     </ul>
     <p>いずれの場合も、x% での視聴回は、動画のこのセグメントがプレーヤーで再生されたことを意味します。</p>
-    <p>x% <strong></strong>のビューは、<strong></strong>パフォーマンスレポートのビデオビューと同じではないことに注意してください。動画再生回数は、動画の再生開始時にカウントされます。1% の視聴率は、最初のパーセントが視聴されたときに記録されます。ここでの違いは、最初のパーセントが複数回視聴された場合（たとえば、ビデオが自動再生に設定されている場合）、カウントが増加するのに対し、ビデオビューは、ビデオが最初に再生を開始したときにカウントされますが、カウントされないことです。リプレイ（ユーザーがページをリロードしたり、プレイリスト内の別のビデオを見たりしない限り）。</p>
+    <p>x% のビューは、パフォーマンスレポートのビデオビューと同じではないことに注意してください。動画再生回数は、動画の再生開始時にカウントされます。1% の視聴率は、最初のパーセントが視聴されたときに記録されます。ここでの違いは、最初のパーセントが複数回視聴された場合（たとえば、ビデオが自動再生に設定されている場合）、カウントが増加するのに対し、ビデオビューは、ビデオが最初に再生を開始したときにカウントされますが、カウントされないことです。リプレイ（ユーザーがページをリロードしたり、プレイリスト内の別のビデオを見たりしない限り）。</p>
     <aside class="bcls-aside bcls-aside--information">注:アナリティクスの用語と定義の完全なリストについては、<a href="/analytics/analytics-module-ui-glossary.html"> Analytics 用語集を参照してください</a>。</aside><aside class="bcls-aside bcls-aside--information">注:同じアカウント内の同時レポートリクエストは連続して実行されます。レポートの日付範囲が大きく、多くのフィールドが選択されている場合は、すべての結果が返されるまで遅延が発生する可能性があります。良い選択肢は、大規模なレポートをスケジュールすることです。</aside>
   </section>
   <section class="bcls-section">
     <h2 id="video" class="bcls-sectionTitle">ビデオディメンション分析の表示</h2>
-    <p><strong></strong>ビデオディメンションを選択すると、選択した期間の全体的なビデオエンゲージメントがグラフに表示されます。このレポートでは、各プレーヤーに対する動画の名前、動画のID、長さ、およびエンゲージメントの詳細が表示されます。</p>
+    <p>ビデオディメンションを選択すると、選択した期間の全体的なビデオエンゲージメントがグラフに表示されます。このレポートでは、各プレーヤーに対する動画の名前、動画のID、長さ、およびエンゲージメントの詳細が表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Account Engagement  Report" src="/assets/images/analytics/node10105-engagement-report.png" /></figure>
     <p>動画のリンクをクリックすると、その動画の動画エンゲージメントが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Video Engagement  Report" src="/assets/images/analytics/node10105-video-engagement.png" /></figure>
@@ -65,13 +65,13 @@ parent: Reviewing Analytics
   </section>
   <section class="bcls-section">
     <h2 id="player" class="bcls-sectionTitle">プレーヤーディメンション分析の表示</h2>
-    <p><strong></strong>プレーヤーディメンションを選択すると、選択した期間の全体的なビデオエンゲージメントがグラフに表示されます。このレポートでは、各プレーヤーに対するエンゲージメントの詳細が表示されます。</p>
+    <p>プレーヤーディメンションを選択すると、選択した期間の全体的なビデオエンゲージメントがグラフに表示されます。このレポートでは、各プレーヤーに対するエンゲージメントの詳細が表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Engagement by Player" src="/assets/images/analytics/node10105-player-engagement.png" /></figure>
     <p>プレーヤーのリンクをクリックすると、そのプレーヤーの動画エンゲージメントが表示されます。</p>
   </section>
   <section class="bcls-section">
     <h2 id="day" class="bcls-sectionTitle">日ディメンション分析の表示</h2>
-    <p><strong></strong> Day ディメンションを選択すると、選択した期間のビデオエンゲージメントがグラフに表示されます。レポートの本文には、各日のエンゲージメントの詳細が記載されています。レポートの本文では、ドロップダウンリストを使用して、ビデオまたはプレーヤーごとのビデオエンゲージメントを表示できます。</p>
+    <p> Day ディメンションを選択すると、選択した期間のビデオエンゲージメントがグラフに表示されます。レポートの本文には、各日のエンゲージメントの詳細が記載されています。レポートの本文では、ドロップダウンリストを使用して、ビデオまたはプレーヤーごとのビデオエンゲージメントを表示できます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Engagement by Day" src="/assets/images/analytics/node10105-day-engagement.png" /></figure>
   </section>
   <section class="bcls-section">
@@ -84,8 +84,8 @@ parent: Reviewing Analytics
       <li>データは次の方法でフィルタリングできます<strong>タグ</strong>、<strong>カスタムフィールド</strong>、<strong>国</strong>および/または<strong>デバイスタイプ</strong>。フィルタパネルを使用してフィルタ基準を設定します。次の例では、フィルタを適用します。
 <ul>
           <li>タグ = <strong>オンデマンドトレーニング</strong> AND</li>
-          <li><strong>カスタムフィールド製品</strong> = <strong></strong>ビデオクラウドと</li>
-          <li>国<strong></strong> = <strong>アメリカ</strong></li>
+          <li><strong>カスタムフィールド製品</strong> = ビデオクラウドと</li>
+          <li>国 = <strong>アメリカ</strong></li>
         </ul>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/analytics/node10105-filter-panel.png" /></figure>
       </li>

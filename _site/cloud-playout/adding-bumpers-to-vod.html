@@ -716,11 +716,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>チャンネルでサーバーサイド広告（SSAI）を有効にしていない場合でも、バンパー（社内広告、その他の告知やプロモーションなど）を含むことができます。バンパーを使用して、ライブプログラミングセグメントのバッファを作成することもできます。</p>
     <p>最初のチャンネル作成では何もする必要はありません。チャンネルが作成されると、<span class="button-blue"> [バンパーを挿入]</span>オプションが自動的に表示されます。これは、ライブストリームまたはSSAIで有効になっているチャンネルを含むすべてのチャンネルに適用されます</p>
     <p>同じビデオに複数のバンパーを追加でき、ビデオと同じように、プログラムの順序でバンパーを並べ替えることができます。しかし、これを行うにはいくつかの注意が必要です。そうしないと、不正確なEPGで終わる可能性があります。詳細については<a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html#epg_bumpers">、EPG</a>とバンパーを参照してください。</p>
-    <p><strong></strong><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html"></a>バンパーはEPGには表示されませんが、バンパーのデュレーションはビデオの前後に追加されます（プリロールかポストロールかによって異なります）。</p>
+    <p><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html"></a>バンパーはEPGには表示されませんが、バンパーのデュレーションはビデオの前後に追加されます（プリロールかポストロールかによって異なります）。</p>
   </section>
   <section class="bcls-section">
     <h2 id="Enabling_bumper_content">バンパーコンテンツを有効にする</h2>
-    <p>バンパーはアカウント内のどの動画でも使用できますが、<strong></strong>次のタグのいずれかが必要です。</p>
+    <p>バンパーはアカウント内のどの動画でも使用できますが、次のタグのいずれかが必要です。</p>
     <ul>
       <li><code translate="no">cp-プレロール-バンパー</code></li>
       <li><code translate="no">cp-postroll-バンパー</code></li>
@@ -735,7 +735,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="inserting-bumpers">バンパーの挿入</h2>
     <ol class="bcls-tasklist-restart">
-      <li>バンパーを挿入する前に、<a href="/cloud-playout/cloud-playout-stream-vod.html#add_videos"></a>チャンネルにビデオやライブイベントを追加し、<strong></strong>変更を保存する必要があります。</li>
+      <li>バンパーを挿入する前に、<a href="/cloud-playout/cloud-playout-stream-vod.html#add_videos"></a>チャンネルにビデオやライブイベントを追加し、変更を保存する必要があります。</li>
       <li>
         1つまたは複数のビデオやライブイベントを選択して、<span class="button-blue">バンパーを挿入</span>。<sup><strong><a href="#note1-1">[1-1] </a></strong></sup>
         <figure class="bcls-figure">

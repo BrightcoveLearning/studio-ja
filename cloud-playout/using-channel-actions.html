@@ -19,10 +19,10 @@ parent: Cloud Playout
 		<h2 id="Resource_deallocation_on_channel_stop">チャネル停止時のリソースの割り当て解除</h2>
 		<p>チャンネルを停止すると、次のことが起こります。</p>
 		<ol>
-			<li>クラウドプレイアウトチャンネルが停止すると、<strong></strong>ドラフト状態になり、ユーザーはチャンネル設定を再度変更できます。</li>
+			<li>クラウドプレイアウトチャンネルが停止すると、ドラフト状態になり、ユーザーはチャンネル設定を再度変更できます。</li>
 			<li>これにより、連鎖したBCライブイベントが存在する場合にもクリアされます。</li>
-			<li>リソースが割り当てられ、<strong></strong>チャネルがスケジュールされた状態になるように、<strong></strong>チャネルを再度アクティブ化する必要があります。</li>
-			<li>Cloud Playoutチャンネルがライブストリームで有効になっている場合、RTMP <strong></strong>取り込みの静的エントリポイントが表示されます。このエントリポイントはチャネルの存続期間中静的なままになります。チャネルが停止して再び開始された回数に関係なく、チャネルの存続期間中静的なままになります。
+			<li>リソースが割り当てられ、チャネルがスケジュールされた状態になるように、チャネルを再度アクティブ化する必要があります。</li>
+			<li>Cloud Playoutチャンネルがライブストリームで有効になっている場合、RTMP 取り込みの静的エントリポイントが表示されます。このエントリポイントはチャネルの存続期間中静的なままになります。チャネルが停止して再び開始された回数に関係なく、チャネルの存続期間中静的なままになります。
 				<figure class="bcls-figure">
 					<img class="bcls-image" src="/assets/images/cloud-playout/static-entry-point-for-rtmp-ingest.png" alt="Static Entry Point for RTMP Ingest">
 					<figcaption class="bcls-caption--image">RTMP取り込みの静的エントリポイント</figcaption>

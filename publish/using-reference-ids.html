@@ -25,7 +25,7 @@ parent: 'Publishing Videos &amp; Players'
     <pre class="line-numbers">
 <code class="language-html" translate="No">&lt;video-js data-video-id="ref:skivideo"</code></pre>
     <p>同じことがプレイリスト ID にも当てはまります。詳細については、以下の例を参照してください。</p>
-    <aside class="bcls-aside bcls-aside--information">注:参照 ID は、<strong></strong>アカウント内のすべての動画で一意である必要があります。</aside>
+    <aside class="bcls-aside bcls-aside--information">注:参照 ID は、アカウント内のすべての動画で一意である必要があります。</aside>
     <p>参照IDの一意性を保証するために、参照IDを含む操作では、最大30秒間IDがロックされます。つまり、ビデオから参照 ID を削除する（またはそのビデオを削除する）し、すぐに別のビデオに参照 ID を使用しようとすると、操作は409エラーで失敗します。このエラーが表示されてから 30 秒以上待ってから、操作を再試行してください。</p>
     <p>参照 ID を使用してビデオを作成しようとしたときに、（参照 ID とは無関係な理由で）失敗した場合、その参照 ID は 30 秒間ロックされ、参照 ID のロックが解除されるまでビデオの作成を繰り返し試行できません。</p>
     <p>参照 ID 名でエスケープする必要がある文字は、<a href="https://html.spec.whatwg.org/multipage/syntax.html#syntax-attributes"> HTML の仕様に従った二重引用符と二重引用符で囲まれた属性のアンパサンドのみです</a>。</p>
@@ -49,7 +49,7 @@ parent: 'Publishing Videos &amp; Players'
     <p>iframe 実装を使用するには、次の操作を行います。</p>
     <ol class="bcls-tasklist">
       <li><strong>Media</strong>モジュールで、プレーヤーで動画を公開します。</li>
-      <li><strong></strong>標準埋め込みコードをコピーして、HTML ページコードに貼り付けます。</li>
+      <li>標準埋め込みコードをコピーして、HTML ページコードに貼り付けます。</li>
       <li><code translate="No">videoId</code>値を適切な参照 ID に変更し、<strong> ref:</strong> term の前に付けます。</li>
     </ol>
     <pre class="line-numbers">
@@ -76,7 +76,7 @@ parent: 'Publishing Videos &amp; Players'
     <p>インページ埋め込み実装を使用するには、次の操作を行います。</p>
     <ol class="bcls-tasklist">
       <li><strong>Media</strong>モジュールで、プレーヤーで動画を公開します。</li>
-      <li><strong></strong>高度な埋め込みコードをコピーして、HTML ページコードに貼り付けます。</li>
+      <li>高度な埋め込みコードをコピーして、HTML ページコードに貼り付けます。</li>
       <li><code translate="No">data-video-id</code>値を適切な参照 ID に変更し、<strong> ref:</strong> term の前に付けます。</li>
     </ol>
     <pre class="line-numbers">
@@ -111,7 +111,7 @@ parent: 'Publishing Videos &amp; Players'
     <p>iframe 実装を使用するには、次の操作を行います。</p>
     <ol class="bcls-tasklist">
       <li><strong>Media</strong>モジュールで、プレーヤーで動画を公開します。</li>
-      <li><strong></strong>標準埋め込みコードをコピーして、HTML ページコードに貼り付けます。</li>
+      <li>標準埋め込みコードをコピーして、HTML ページコードに貼り付けます。</li>
       <li><code translate="No">playlistId</code>値を適切な参照 ID に変更し、<strong> ref:</strong> term の前に付けます。</li>
     </ol>
     <pre class="line-numbers">
@@ -138,7 +138,7 @@ parent: 'Publishing Videos &amp; Players'
     <p>インページ埋め込み実装を使用するには、次の操作を行います。</p>
     <ol class="bcls-tasklist">
       <li><strong>Media</strong>モジュールで、プレーヤーで動画を公開します。</li>
-      <li><strong></strong>高度な埋め込みコードをコピーして、HTML ページコードに貼り付けます。</li>
+      <li>高度な埋め込みコードをコピーして、HTML ページコードに貼り付けます。</li>
       <li><code translate="No">data-playlist-id</code>値を適切な参照 ID に変更し、<strong> ref:</strong> term の前に付けます。</li>
     </ol>
     <pre class="line-numbers">

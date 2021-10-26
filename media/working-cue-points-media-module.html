@@ -12,7 +12,7 @@ parent: Managing Videos
     <p>キューポイントには 2 つのタイプがありますが、どちらも単にキューポイントオブジェクトの<strong> type</strong>プロパティに文字列値を指定します。適切な値は、キューポイント情報の処理中にカスタム JavaScript で使用される場合にのみ役立ちます。&nbsp;</p>
     <ul>
       <li><strong>Ad</strong> - <strong> AD</strong>の文字列値を<strong> type</strong>プロパティに割り当てます。</li>
-      <li><strong>Code</strong> - <strong> CODE </strong><strong></strong>の文字列値を型プロパティに割り当てます。</li>
+      <li><strong>Code</strong> - <strong> CODE </strong>の文字列値を型プロパティに割り当てます。</li>
     </ul>
     <p>Media モジュールまたはカタログ API を使用して、キューポイントをビデオに追加できます。Catalog API を使用したキューポイントの追加の詳細については、開発者向けドキュメント「<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">プログラムによるキューポイントの実装」を参照してください</a>。</p>
     <aside class="bcls-aside bcls-aside--information">注:キューポイントは、ライブのリモートアセットビデオに追加できません。</aside>
@@ -25,14 +25,14 @@ parent: Managing Videos
       <li>プレビュープレーヤーを使用してビデオを再生します。キューポイントを追加するポイントでビデオを一時停止します。</li>
       <li>[ <strong>キューポイントを追加] をクリックします</strong>。</li>
       <li>必要に応じて、<strong>キューポイントのタイムコード (hh: mm: ss)</strong>の値を調整します。<strong>seconds</strong>フィールドは、小数点以下のミリ秒をサポートすることに注意してください。</li>
-      <li>[ <strong></strong>キューポイントのタイプ] を選択し、適切なメタデータを追加します。
+      <li>[ キューポイントのタイプ] を選択し、適切なメタデータを追加します。
         <ul>
           <li><strong>広告</strong> -広告リクエストが行われます。広告キューポイントを使用する場合は、<a href="/players/configuring-player-advertising-using-players-module.html">プレーヤーを広告用に構成する必要があります</a>。</li>
           <li><strong>コード</strong> -キューポイントはプログラムによって処理されます。詳細については、「<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">プログラムによるキューポイントの実装」</a>開発者ドキュメントを参照してください。</li>
         </ul>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15151-add-code-cue-point.png" /></figure>
       </li>
-      <li><strong></strong>キューポイントの名前を入力します。<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">名前の値にはプログラムからアクセスすることができます</a>。</li>
+      <li>キューポイントの名前を入力します。<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">名前の値にはプログラムからアクセスすることができます</a>。</li>
       <li><strong>メタデータ</strong> (コードキューポイントの場合) <strong>またはキー/値のペア</strong> (広告キューポイントの場合) を入力します。
         <ul>
           <li><strong>Metadata</strong> -キューポイントとともに格納されるオプションのメタデータ。<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">メタデータにはプログラムからアクセスすることができます</a>。コードキューポイントを使用してメタデータを渡す場合の一例は、ビデオの再生中にさまざまなアクション呼び出しを表示する場合です。<a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-cue-points-display-cta.html">ブライトコーブプレーヤーのサンプルをご覧ください。キューポイントは CTA</a>を例として表示します。</li>

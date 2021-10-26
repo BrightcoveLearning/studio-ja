@@ -735,7 +735,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Eloquaフォーム埋め込みコードを使用して新しいリードフォームを作成します。</li>
       <li>5 秒のマークにフォームが表示されるようにカスタムフォームを設定します。このようにして、いつ表示されるべきかを正確に知ることができます。</li>
       <li>[リードがすでにわかっている場合でも、<strong>常にリードフォームを表示する] チェックボックスをオンにします</strong>。これにより、テスト中に記入した後もフォームが表示され続けます。</li>
-      <li><strong></strong>フォームを保存します。</li>
+      <li>フォームを保存します。</li>
       <li>作成したばかりの Eloqua リードフォームを使用するように Eloqua 接続で Brightcove Player を設定します。</li>
     </ol>
   </section>
@@ -761,14 +761,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>キャンペーンとEloqua間の同期を手動でトリガーするには、<strong>同期アクティビティ</strong>左側のナビゲーションで。</li>
       <li><strong>[接続の選択]</strong>ドロップダウンリストから、Eloqua 統合を選択します。NS <strong>テスト同期</strong>ボタンが表示されます。</li>
-      <li>[ <strong></strong>同期のテスト] をクリックして、手動同期をトリガーします。手動同期をトリガーできる頻度は制限されます。デフォルトでは、キャンペーンは1時間に1回ビューをEloquaに同期します。
+      <li>[ 同期のテスト] をクリックして、手動同期をトリガーします。手動同期をトリガーできる頻度は制限されます。デフォルトでは、キャンペーンは1時間に1回ビューをEloquaに同期します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node18742-test-sync.png" /></figure>
       </li>
       <li>クリック<strong>最近のすべての活動</strong>左側のナビゲーションで。</li>
       <li><strong>ビューイベントのステータスはキューに入れられます</strong>。データがEloquaに実際に同期されるまでに15分ほどかかる場合があります。データが同期されると、ステータスは次の 2 つのステータスのいずれかに変更されます。
         <ul>
           <li><strong>synced</strong> -ユーザーが既知のユーザーであり、データがアクティビティログに正常に配信されたことを示します。データは、数分以内にEloquaでも表示できます。</li>
-          <li><strong>unknown_contact</strong> -ユーザーが不明とみなされ、Eloqua がデータを受け入れることができなかったことを示します。<strong></strong> unknown_contactのステータスが取得された場合は、正しいプレーヤーを使用して動画を公開したことを確認し、Eloquaフォームを設置し、ページに埋め込まれていないプレビューリンクを使用してテストしています。
+          <li><strong>unknown_contact</strong> -ユーザーが不明とみなされ、Eloqua がデータを受け入れることができなかったことを示します。 unknown_contactのステータスが取得された場合は、正しいプレーヤーを使用して動画を公開したことを確認し、Eloquaフォームを設置し、ページに埋め込まれていないプレビューリンクを使用してテストしています。
             <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/eloqua/node18742-synced.png" /></figure>
           </li>
         </ul>

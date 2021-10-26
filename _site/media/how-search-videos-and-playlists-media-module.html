@@ -776,7 +776,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>部分単語のサポートはありません</td>
           <td><ul>
               <li><code translate="No">name:"great blue"</code>一致する<code translate="No">"Great Blue Heron"</code></li>
-              <li><code translate="No">name:"great blu"</code><strong></strong>一致しません<code translate="No">"Great Blue Heron"</code></li>
+              <li><code translate="No">name:"great blu"</code>一致しません<code translate="No">"Great Blue Heron"</code></li>
               <li><code translate="No">name:great blu</code>一致する<code translate="No">"Great Blue Heron"</code></li>
             </ul></td>
         </tr>
@@ -784,13 +784,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>ビデオ ID</td>
           <td>完全一致のみ</td>
           <td><a href="#stemming"></a>部分単語やステミングのサポートはありません</td>
-          <td><strong>5591838791001</strong>はIDの動画をマッチします 5591838791001 <strong></strong> 5591838791 <strong></strong>はそのビデオと一致しません</td>
+          <td><strong>5591838791001</strong>はIDの動画をマッチします 5591838791001  5591838791 はそのビデオと一致しません</td>
         </tr>
         <tr>
           <td>タグ</td>
           <td>単語全体にのみマッチします。</td>
           <td><a href="#stemming"></a>部分単語やステミングのサポートはありません</td>
-          <td><code translate="No">tags:publ</code><strong></strong>タグ付きの動画は一致しません<code translate="No">"public"</code></td>
+          <td><code translate="No">tags:publ</code>タグ付きの動画は一致しません<code translate="No">"public"</code></td>
         </tr>
         <tr>
           <td>参照ID</td>
@@ -798,7 +798,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>参照 ID で始まらない部分文字列はありません</td>
           <td><ul>
               <li><code translate="No">reference_id:myv</code>参照ID「myvid1」の動画にマッチします</li>
-              <li><code translate="No">reference_id:"myv"</code><strong></strong>参照IDの動画が一致しない<code translate="No">"myvid1"</code></li>
+              <li><code translate="No">reference_id:"myv"</code>参照IDの動画が一致しない<code translate="No">"myvid1"</code></li>
             </ul></td>
         </tr>
         <tr>
@@ -809,22 +809,22 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td>個々のテキストカスタムフィールド</td>
-          <td>1 <a href="#stemming"></a>つ以上の単語全体とステミングのサポート。<strong></strong>完全検索文字列の場合は、単語全体が一致するだけです。</td>
+          <td>1 <a href="#stemming"></a>つ以上の単語全体とステミングのサポート。完全検索文字列の場合は、単語全体が一致するだけです。</td>
           <td>部分単語のサポートはありません</td>
           <td><ul>
               <li><code translate="No">custom_fields:place</code>カスタムフィールドの値で動画を一致させます<code translate="No">"places"</code></li>
-              <li><code translate="No">custom_fields:plac</code><strong></strong>カスタムフィールドの値を持つビデオは一致しません。<code translate="No">"places"</code></li>
-              <li><code translate="No">custom_fields:"place"</code><strong></strong>カスタムフィールドの値を持つビデオは一致しません。<code translate="No">"places"</code></li>
+              <li><code translate="No">custom_fields:plac</code>カスタムフィールドの値を持つビデオは一致しません。<code translate="No">"places"</code></li>
+              <li><code translate="No">custom_fields:"place"</code>カスタムフィールドの値を持つビデオは一致しません。<code translate="No">"places"</code></li>
             </ul></td>
         </tr>
         <tr>
           <td>個々のリストのカスタムフィールド</td>
-          <td><a href="#stemming"></a> 1つまたは複数の単語全体とステミングのサポート。<strong></strong>完全検索文字列、単語全体が一致するだけです。</td>
+          <td><a href="#stemming"></a> 1つまたは複数の単語全体とステミングのサポート。完全検索文字列、単語全体が一致するだけです。</td>
           <td>部分単語のサポートはありません</td>
           <td><ul>
               <li><code translate="No">topic:place</code>動画を「places」というトピックリストタイプのカスタムフィールド値と一致させます</li>
-              <li><code translate="No">topic:plac</code><strong></strong>トピックリストタイプのカスタムフィールドの値と動画を一致させない<code translate="No">"places"</code></li>
-              <li><code translate="No">topic:"place"</code><strong></strong>トピックリストタイプのカスタムフィールドの値と動画を一致させない<code translate="No">"places"</code></li>
+              <li><code translate="No">topic:plac</code>トピックリストタイプのカスタムフィールドの値と動画を一致させない<code translate="No">"places"</code></li>
+              <li><code translate="No">topic:"place"</code>トピックリストタイプのカスタムフィールドの値と動画を一致させない<code translate="No">"places"</code></li>
             </ul></td>
         </tr>
       </tbody>
@@ -879,7 +879,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="advsearch">高度な検索</h2>
-    <p>詳細検索では、検索修飾子を使用して特定のフィールドの値を検索できます。たとえば、ビデオ名またはタグフィールドのみを検索するように指定できます。また、特定の用語で動画を除外することもできます。たとえば、<strong>スポーツを含む動画を検索し</strong>、<strong></strong>野球を含む動画を除外できます。[詳細検索] ダイアログを開くには、[ <strong>その他の検索オプション]</strong>リンクをクリックします。</p>
+    <p>詳細検索では、検索修飾子を使用して特定のフィールドの値を検索できます。たとえば、ビデオ名またはタグフィールドのみを検索するように指定できます。また、特定の用語で動画を除外することもできます。たとえば、<strong>スポーツを含む動画を検索し</strong>、野球を含む動画を除外できます。[詳細検索] ダイアログを開くには、[ <strong>その他の検索オプション]</strong>リンクをクリックします。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Advanced Search" src="/assets/images/media/node15529-advanced-search.png" /></figure>
     <p>以下の検索基準を使って検索をカスタマイズできます。</p>
     <ul>
@@ -959,7 +959,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="advsearchsyntax">高度な検索構文</h2>
     <p>[詳細検索] ダイアログを使用してビデオを検索すると、検索条件を入力した後、検索ボックスに高度な検索構文が表示されます。このセクションでは、検索構文の概要を説明します。[拡張検索] ダイアログボックスを使用せずに、検索ボックスに検索構文を入力することもできます。[詳細検索] ダイアログを開くには、[ <strong>その他の検索オプション]</strong>リンクをクリックします。</p>
-    <p>検索語を必須（<strong></strong>返された動画が一致している必要があります）または除外する（<strong></strong>返された動画は一致しない）とマークするには、<strong> +</strong>または<strong>-</strong>用語の直前に署名します。</p>
+    <p>検索語を必須（返された動画が一致している必要があります）または除外する（返された動画は一致しない）とマークするには、<strong> +</strong>または<strong>-</strong>用語の直前に署名します。</p>
     <p>次の検索修飾子と値がサポートされています。</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">

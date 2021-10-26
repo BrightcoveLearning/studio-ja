@@ -758,16 +758,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li><strong>Image URL</strong> -チャンネルの画像ファイルへのURL。チャンネルのメタデータの一部として取得できるチャンネル画像を意味します。</li>
         </ul>
       </li>
-      <li><strong></strong>チャンネルスケジュールの詳細を入力します。
+      <li>チャンネルスケジュールの詳細を入力します。
         <ul>
-          <li><strong>ループ再生コンテンツ</strong> - <strong>オンにすると</strong>、プログラムはループで再生され、<strong></strong>終了日/時刻が有効になります。プログラムはいつでも変更することができ、変更は現在のプログラムとフォローするループに反映されます。以下の「<a href="#looping">ループプログラムの作成</a>」セクションを参照してください。</li>
-          <li><strong>広告挿入</strong> -オンの場合、チャンネルの再生中に広告を表示できます。このオプションを選択すると、ライブ入力は許可されず、<strong></strong>ブライトコーブのライブイベントまたは<strong> Amazon S3 バケットにのみ出力できます</strong>。<a href="/cloud-playout/enabling-server-side-ads.html">コンテンツの収益化を参照してください</a>。</li>
+          <li><strong>ループ再生コンテンツ</strong> - <strong>オンにすると</strong>、プログラムはループで再生され、終了日/時刻が有効になります。プログラムはいつでも変更することができ、変更は現在のプログラムとフォローするループに反映されます。以下の「<a href="#looping">ループプログラムの作成</a>」セクションを参照してください。</li>
+          <li><strong>広告挿入</strong> -オンの場合、チャンネルの再生中に広告を表示できます。このオプションを選択すると、ライブ入力は許可されず、ブライトコーブのライブイベントまたは<strong> Amazon S3 バケットにのみ出力できます</strong>。<a href="/cloud-playout/enabling-server-side-ads.html">コンテンツの収益化を参照してください</a>。</li>
           <li><strong>開始日時</strong> -チャンネルの再生を開始する時刻。すべてのアセットの開始時間は、この開始時刻に期間を加算して計算されます。この時間は、チャネルが実行状態でない場合にのみ更新できます。</li>
-          <li><strong>終了日時</strong> -値が入力されず、<strong></strong>ループ再生コンテンツが選択されていない場合、再生が完了するとストリームが終了します。<strong></strong>ループ再生コンテンツが選択され、<strong>終了日時がない場合</strong>、チャンネルが停止するまで再生がストリーミングされます。この時刻はいつでも更新できます。</li>
+          <li><strong>終了日時</strong> -値が入力されず、ループ再生コンテンツが選択されていない場合、再生が完了するとストリームが終了します。ループ再生コンテンツが選択され、<strong>終了日時がない場合</strong>、チャンネルが停止するまで再生がストリーミングされます。この時刻はいつでも更新できます。</li>
         </ul>
       </li>
       <li>ライブ入力を使用する場合は、[ライブ入力] を [オン] <strong>に設定し、スレートの URL を入力します。ただし、既定のブライトコーブ MP4 をスレートに使用する場合を除きます。</strong>エンコーダが停止したり、技術的な問題によってライブストリームがブロックされたりして、ライブ入力が停止されるたびに、スレートMP4が再生されます。<strong>ご了承ください<strong>スレートURLは、常に利用可能な静的URLである必要があります</strong>（短命のCDN URLは許可されていません）。</strong></li>
-      <li><strong></strong>チャネルの送信先の詳細を入力します。クラウドプレイアウトは同時に2つの出力をサポートします。たとえば、HLS を S3 バケットに、RTMP フィードをブライトコーブのライブチャンネルまたはサードパーティの取り込みポイントに出力できます。<strong></strong>ブライトコーブのライブイベントと<strong> RTMP</strong>を同時に送信先として組み合わせることはサポートされていないことに注意してください。
+      <li>チャネルの送信先の詳細を入力します。クラウドプレイアウトは同時に2つの出力をサポートします。たとえば、HLS を S3 バケットに、RTMP フィードをブライトコーブのライブチャンネルまたはサードパーティの取り込みポイントに出力できます。ブライトコーブのライブイベントと<strong> RTMP</strong>を同時に送信先として組み合わせることはサポートされていないことに注意してください。
         <ul>
           <li><strong>[表示の最適化]</strong> : 出力のビットレートと寸法をコントロールします。
             <ul>
@@ -778,8 +778,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li><strong>出力領域</strong> -チャンネルが作成されるリージョン。ブライトコーブでは、大部分のオーディエンスが期待される場所に地理的に最も近い地域を選択することをお勧めします。</li>
           <li><strong>出力先</strong> -チャンネルの出力方法を選択します
             <ul>
-              <li><strong>ブライトコーブのライブイベント</strong> -以前に作成した Brightcove ライブチャンネルを作成または使用します。新しいチャンネルを作成すると、<strong></strong>選択した出力リージョンに基づいてチャンネルのリージョンが最適化されます。</li>
-              <li><strong>RTMP</strong> -RTMP または RTP 取り込みポイントにストリームを出力するために選択します。RTP は、サードパーティの取り込みポイントでは利用できません。<strong></strong><strong></strong>広告挿入とブライトコーブのライブイベントが有効になっている場合にのみ使用できます。選択すると、<strong> RTMP URL</strong>フィールドが表示されます。ライブストリーミングサービスの RTMP 入力 URL を入力します。</li>
+              <li><strong>ブライトコーブのライブイベント</strong> -以前に作成した Brightcove ライブチャンネルを作成または使用します。新しいチャンネルを作成すると、選択した出力リージョンに基づいてチャンネルのリージョンが最適化されます。</li>
+              <li><strong>RTMP</strong> -RTMP または RTP 取り込みポイントにストリームを出力するために選択します。RTP は、サードパーティの取り込みポイントでは利用できません。広告挿入とブライトコーブのライブイベントが有効になっている場合にのみ使用できます。選択すると、<strong> RTMP URL</strong>フィールドが表示されます。ライブストリーミングサービスの RTMP 入力 URL を入力します。</li>
               <li><strong>Amazon S3 バケット</strong> -HLS 出力を Amazon S3 バケットにプッシュするときに選択します。バケット名、リージョン、アクセスキー、秘密キーを入力する必要があります。バケットは公開され、書き込み可能である必要があります。</li>
             </ul>
             <aside class="bcls-aside bcls-aside--information">に出力することに注意してください<strong>ブライトコーブライブイベント</strong>アカウントのライブ時間を自動的に生成します。これは請求可能です。Cloud Playoutの使用には追加料金はかかりませんが、ライブストリーミング時間には通常の料金が適用されます。RTMPまたはAmazonS3に出力しても、請求可能なライブ時間は生成されません。
@@ -812,7 +812,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <figcaption class="bcls-caption--image">インジェストポイント</figcaption>
     </figure>
     <p>使用しているエンコーダによっては、RTMP インジェストポイントとストリーム名の両方を入力する必要があります。<strong>チャネルのストリーム名はチャネル ID で</strong>、Ingest Point アドレスの最後の部分でもあります。</p>
-    <aside class="bcls-aside bcls-aside--information">OBSソフトウェアエンコーダーを使用している場合は、を指定する必要があることに注意してください。<strong>カスタム...</strong>サービス、および入力する必要があります<strong>サーバ</strong>と<strong>ストリームキー</strong>。<strong></strong><strong>サーバーはインジェストポイントの最初の部分になり</strong>、<strong> Steam</strong>キーは下の例に示すように残りの部分になります。
+    <aside class="bcls-aside bcls-aside--information">OBSソフトウェアエンコーダーを使用している場合は、を指定する必要があることに注意してください。<strong>カスタム...</strong>サービス、および入力する必要があります<strong>サーバ</strong>と<strong>ストリームキー</strong>。<strong>サーバーはインジェストポイントの最初の部分になり</strong>、<strong> Steam</strong>キーは下の例に示すように残りの部分になります。
       <figure class="bcls-figure">
         <img class="bcls-image" src="/assets/images/cloud-playout/cloud-playout-key-for-obs.png" alt="Cloud Playout Ingest Point">
         <figcaption class="bcls-caption--image">クラウドプレイアウトインジェストポイント</figcaption>

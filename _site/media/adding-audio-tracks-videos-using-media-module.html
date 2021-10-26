@@ -723,7 +723,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <ul>
         <li>複数のオーディオトラックは、<a href="/general/overview-dynamic-delivery.html">ダイナミック配信用に設定されたビデオでのみ使用できます</a>。また、複数のオーディオトラックに対してアカウントを有効にする必要があります。詳細については、アカウントマネージャーにお問い合わせください。</li>
         <li>ビデオが最初に取り込まれた後にタイトルにオーディオトラックが追加された場合、オーディオトラックの処理時に、パブリッシャーのアカウントのデフォルトの取り込みプロファイルが選択されます。元のビデオタイトルと同じ取り込みプロファイルでオーディオトラックを処理し、同じオーディオビットレート/レンディションが使用されるようにすることをお勧めします。デフォルトの取り込みプロファイルの設定の詳細については、「<a href="/admin/managing-ingest-profiles.html#default">取り込みプロファイルの管理」を参照してください</a>。</li>
-        <li>ダイナミックデリバリー取り込みプロファイルを使用して動画をアップロードすると、ビデオのソースオーディオが取り込みプロファイルに従ってトランスコードされ、メディアモジュールのビデオの「<strong>オーディオトラック</strong>」セクションに表示されます。デフォルトでは、<strong></strong><strong></strong>オーディオ言語は英語に設定されており、<strong></strong>バリアントタイプが<strong> main</strong>です。デフォルトは Brightcove サポートで変更できます。その後、追加のオーディオトラックを追加できます。</li>
+        <li>ダイナミックデリバリー取り込みプロファイルを使用して動画をアップロードすると、ビデオのソースオーディオが取り込みプロファイルに従ってトランスコードされ、メディアモジュールのビデオの「<strong>オーディオトラック</strong>」セクションに表示されます。デフォルトでは、オーディオ言語は英語に設定されており、バリアントタイプが<strong> main</strong>です。デフォルトは Brightcove サポートで変更できます。その後、追加のオーディオトラックを追加できます。</li>
         <li>ビデオにオーディオトラックを追加する場合、HLS で正常に再生されるように、すべてのオーディオトラックが同じビットレート/レンディションプロファイルを持っている必要があります（DASH 再生は引き続き機能します）。</li>
         <li>オーディオトラックをビデオに追加し、最初のトラックのアップロードが完了する前に複製を追加すると、いずれかのトラックが破損し、<strong>黙ってビデオの再生に失敗することがあります</strong>。各トラックが完全にアップロードされるまで待ってから、別のトラックをアップロードしてください。</li>
       </ul>
@@ -754,7 +754,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-audio-track-properties.png" /></figure>
       </li>
       <li>[ <strong>言語</strong> ] フィールドには、<a href="http://www.w3schools.com/tags/ref_language_codes.asp"></a>トラックテキストデータの言語を指定する言語コードが含まれている必要があります。</li>
-      <li>[ <strong></strong>テキストのバリアント] トラックを選択します。<strong>バリアントは、</strong>オーディオトラックの種類を記述します。オプションは以下のとおりです。
+      <li>[ テキストのバリアント] トラックを選択します。<strong>バリアントは、</strong>オーディオトラックの種類を記述します。オプションは以下のとおりです。
         <ul>
           <li><strong translate="No">主要</strong> -メイントラック、通常はビデオファイルに多重化されたトラック</li>
           <li><strong translate="No">代わりの</strong> -代替オーディオトラック</li>
@@ -764,16 +764,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </ul>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-spanish-audio.png" /></figure>
       </li>
-      <li>「<strong></strong>オーディオトラックを追加」をクリックして、オーディオトラック情報を保存します。
+      <li>「オーディオトラックを追加」をクリックして、オーディオトラック情報を保存します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-spanish-audio-added.png" /></figure>
       </li>
-      <li>[ <strong></strong>オーディオトラックを追加] をクリックして別のオーディオトラックを追加するか、[ <strong>保存]</strong>をクリックしてオーディオトラックを保存します。処理が終了すると、新しく追加されたオーディオトラックがリストに表示されます。
+      <li>[ オーディオトラックを追加] をクリックして別のオーディオトラックを追加するか、[ <strong>保存]</strong>をクリックしてオーディオトラックを保存します。処理が終了すると、新しく追加されたオーディオトラックがリストに表示されます。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-tracks-added.png" /></figure>
         <aside class="bcls-aside bcls-aside--information">注:オーディオトラックのプロパティに加えた変更は、公開済みのプレーヤーに表示されるまでに最大 15 分かかる場合があります。</aside>
       </li>
     </ol>
     <p>オーディオトラックを削除するには、削除アイコン（<img alt="" src="/assets/images/media/node18591-delete-icon.png" />）オーディオトラックの横。UIが更新され、オーディオトラックが表示されなくなるまでに、遅延が発生する可能性があることに注意してください。</p>
-    <p>複数のオーディオトラックを含むビデオが公開されている場合、ヘッドフォンボタン（<img alt="" src="/assets/images/media/node18591-headphone-icon.png" />）はプレーヤーのクロムに表示されます。<strong></strong>ボタンをクリックして、オーディオトラックを選択します。</p>
+    <p>複数のオーディオトラックを含むビデオが公開されている場合、ヘッドフォンボタン（<img alt="" src="/assets/images/media/node18591-headphone-icon.png" />）はプレーヤーのクロムに表示されます。ボタンをクリックして、オーディオトラックを選択します。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-headphone-icon-in-player.png" /></figure>
   </section>
   <section class="bcls-section">
@@ -828,7 +828,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <dd>
         <ul>
           <li>すべてのオーディオセグメントがダウンロードされる前のトラック切り替え</li>
-          <li>Silverlightプラグイン（10未満のIEのバージョン、またはウィンドウ8未満のバージョンのIEのバージョン）を使用してビデオを再生する場合、<strong></strong>複数のオーディオトラックはSilverlightでサポートされません。</li>
+          <li>Silverlightプラグイン（10未満のIEのバージョン、またはウィンドウ8未満のバージョンのIEのバージョン）を使用してビデオを再生する場合、複数のオーディオトラックはSilverlightでサポートされません。</li>
           <li>オーディオとビデオのデュレーションが異なる場合は、短いものがなくなるたびにプレーヤーが停止することがあります。</li>
         </ul>
       </dd>

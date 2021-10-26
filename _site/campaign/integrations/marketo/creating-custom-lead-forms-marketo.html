@@ -729,17 +729,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Marketo は、閲覧者の情報をキャプチャするフォームを作成する機能を提供します。これらのフォームは、キャンペーン対応のBrightcoveプレーヤー内に表示できます。取り込んだデータは、将来のコミュニケーションをカスタマイズする際に使用できます。以下の手順では、名、姓、メールアドレスをキャプチャする簡単なフォームを作成します。Marketon フォームの詳細については、<a href="https://docs.marketo.com/display/public/DOCS/Forms"> Marketon のドキュメントを参照してください</a>。</p>
     <ol class="bcls-tasklist-restart">
       <li>Marketoアカウントにサインインします。</li>
-      <li><strong>Design Studio</strong> &gt; <strong></strong>フォームに移動し、「新規」&gt;「<strong>新規フォーム」をクリックします</strong>。[新規フォーム] ダイアログが開きます。</li>
-      <li><strong></strong>フォームの名前を入力し、[ <strong>作成] をクリックします</strong>。
+      <li><strong>Design Studio</strong> &gt; フォームに移動し、「新規」&gt;「<strong>新規フォーム」をクリックします</strong>。[新規フォーム] ダイアログが開きます。</li>
+      <li>フォームの名前を入力し、[ <strong>作成] をクリックします</strong>。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-lead-form.png" /></figure>
       </li>
       <li>フォームデザイナが開きます。デフォルトでは、名、姓、および電子メールアドレスのフィールドがフォームに表示されます。必要に応じて、フィールドのプロパティと動作を編集します。[ <strong>次へ] をクリックします</strong>。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-lead-form-design.png" /></figure>
       </li>
-      <li>矢印アイコンをクリックして、フォームテーマを選択します。フォームテーマは、フォームのスタイル設定を制御します。[ <strong></strong>下書きをプレビュー] をクリックして、フォームのプレビューを表示します。この例では、<strong> Dark</strong>テーマが選択されています。
+      <li>矢印アイコンをクリックして、フォームテーマを選択します。フォームテーマは、フォームのスタイル設定を制御します。[ 下書きをプレビュー] をクリックして、フォームのプレビューを表示します。この例では、<strong> Dark</strong>テーマが選択されています。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-preview-draft.png" /></figure>
       </li>
-      <li>[ <strong></strong>ドラフトを編集] をクリックして、フォームエディタに戻ります。</li>
+      <li>[ ドラフトを編集] をクリックして、フォームエディタに戻ります。</li>
       <li>[ <strong>次へ] をクリックします</strong>。</li>
       <li>追加のフォーム設定を構成し、[ <strong>完了] をクリックします</strong>。</li>
       <li>[ <strong>承認して閉じる] をクリックします</strong>。</li>
@@ -749,21 +749,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="formcss">オプション-CSSを使用してフォームをスタイリングする</h2>
     <p>Marketo は、フォームの作成時に、フォームテーマを選択して基本的なフォームスタイルを提供する機能を提供します。独自のカスタム CSS を使用してフォームをカスタマイズすることもできます。このセクションでは、ダークテーマをカスタマイズし、ラベルのテキストを白と太字にします。Marketon フォームの詳細については、<a href="https://docs.marketo.com/display/public/DOCS/Edit+the+CSS+of+a+Form+Theme"> Marketon のドキュメントを参照してください</a>。</p>
     <ol class="bcls-tasklist-restart">
-      <li><strong>Design Studio</strong> &gt; <strong></strong>フォームに移動し、フォームをクリックします。</li>
+      <li><strong>Design Studio</strong> &gt; フォームに移動し、フォームをクリックします。</li>
       <li>[ <strong>フォームの編集] をクリックします</strong>。</li>
       <li>[ <strong>フォーム設定]</strong>をクリックし、歯車アイコンをクリックします。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-edit-form-css.png" /></figure>
       </li>
-      <li>[テーマ CSS <strong></strong>を表示] をクリックすると、現在のテーマ CSS が表示されます。[カスタム CSS <strong>を編集] をクリックします</strong>。次の CSS コードを貼り付けて、ラベルテキストを白と太字にします。
+      <li>[テーマ CSS を表示] をクリックすると、現在のテーマ CSS が表示されます。[カスタム CSS <strong>を編集] をクリックします</strong>。次の CSS コードを貼り付けて、ラベルテキストを白と太字にします。
         <pre>
 .mktoFormラベル{ font-weight: bold; color: #FFF; }</pre>
         <aside class="bcls-aside bcls-aside--information">注:カスタム CSS（異なる部分のみ）のみを入力します。テーマ全体のCSSに貼り付ける必要はありません。</aside>
       </li>
       <li>[<strong>SAVE</strong>]をクリックします。</li>
-      <li>[ <strong></strong>下書きをプレビュー] をクリックして、フォームのプレビューを表示します。ラベルのテキストは白で太字にする必要があります。
+      <li>[ 下書きをプレビュー] をクリックして、フォームのプレビューを表示します。ラベルのテキストは白で太字にする必要があります。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node16110-preview-draft-after.png" /></figure>
       </li>
-      <li>[ <strong></strong>ドラフトを編集] をクリックして、フォームエディタに戻ります。</li>
+      <li>[ ドラフトを編集] をクリックして、フォームエディタに戻ります。</li>
       <li>[ <strong>完了] をクリックし</strong>、[ <strong>承認して閉じる] をクリックします</strong>。</li>
     </ol>
   </section>
@@ -790,11 +790,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit lead form (1)" src="/assets/images/campaign/integrations/marketo/node16110-edit-lead-form-1.png" /></figure>
       </li>
       <li>フォームのタイプを[<strong>カスタムリードフォーム</strong>]に設定します。</li>
-      <li>Marketto <strong></strong>からフォーム HTML に貼り付けます。</li>
+      <li>Marketto からフォーム HTML に貼り付けます。</li>
       <li><strong>（オプション）</strong>に貼り付けます<strong>確認HTML</strong>。確認画面が 5 秒間表示され、ビデオの再生が再開されます。確認 HTML が含まれていない場合は、フォームの送信後にビデオの再生が再開されます。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit lead form (2)" src="/assets/images/campaign/integrations/marketo/node16110-edit-lead-form-2.png" /></figure>
       </li>
-      <li><strong>（オプション）</strong> [ <strong></strong>フォームのプレビュー] をクリックして、フォームのプレビューを開きます。</li>
+      <li><strong>（オプション）</strong> [ フォームのプレビュー] をクリックして、フォームのプレビューを開きます。</li>
       <li>[ <strong>保存</strong> ] をクリックして、リードフォームを保存します。</li>
     </ol>
   </section>

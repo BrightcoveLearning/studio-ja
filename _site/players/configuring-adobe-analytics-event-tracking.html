@@ -767,17 +767,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>パラメータは追加のデータを格納し、イベントとともに渡されます。記録されるすべてのブライトコーブパラメータは、Adobe Analytics でトラフィック変数（eVarXX、XX は 88 のような数字）として作成する必要があります。その後、という名前のパラメータは、Players モジュール内で使用されます。これにより、ブライトコーブのパラメータを Adobe トラフィック変数に渡すことができます。以下のパラメータのリストを確認して、キャプチャするパラメータを決定します。</p>
     <ul>
       <li><strong>アカウント ID &nbsp; (bcvideo_account)</strong> -ブライトコーブのアカウント名</li>
-      <li><strong>プレイヤーID &nbsp; (bcvideo_player) </strong><strong></strong> -プレイヤーID</li>
-      <li><strong>プレイヤー名&nbsp; (bcvideo_player_name) </strong><strong></strong> -プレイヤー名</li>
+      <li><strong>プレイヤーID &nbsp; (bcvideo_player) </strong> -プレイヤーID</li>
+      <li><strong>プレイヤー名&nbsp; (bcvideo_player_name) </strong> -プレイヤー名</li>
       <li><strong>プレイヤーバージョン&nbsp; (bcvideo_platform_version)</strong> -プレーヤーのバージョン番号</li>
-      <li><strong>セッション&nbsp; (bcvideo_session) </strong><strong></strong> -セッション識別子</li>
-      <li><strong>ビデオ ID &nbsp; (bcvideo_video) </strong><strong></strong> -ビデオのビデオ ID</li>
+      <li><strong>セッション&nbsp; (bcvideo_session) </strong> -セッション識別子</li>
+      <li><strong>ビデオ ID &nbsp; (bcvideo_video) </strong> -ビデオのビデオ ID</li>
       <li><strong>ビデオ名&nbsp;（bcvideo_video_name）</strong> -ビデオの名前</li>
-      <li><strong>範囲&nbsp; (bcvideo_range) </strong><strong></strong> -開始秒.. endSecond の形式で表示される秒の範囲</li>
+      <li><strong>範囲&nbsp; (bcvideo_range) </strong> -開始秒.. endSecond の形式で表示される秒の範囲</li>
       <li><strong>動画の閲覧時間&nbsp;（bcvideo_video_seconds_video_seconds_閲覧時間）</strong> -視聴した秒</li>
-      <li><strong>ビデオ再生時間&nbsp; (bcvideo_video_duration) </strong><strong></strong> -ビデオの継続時間 (秒)</li>
+      <li><strong>ビデオ再生時間&nbsp; (bcvideo_video_duration) </strong> -ビデオの継続時間 (秒)</li>
       <li><strong>動画の閲覧率&nbsp;（bcvideo_video_percent_percent_rewed）</strong> -視聴した動画の割合</li>
-      <li><strong>エラーコード&nbsp; (bcvideo_error_code) </strong><strong></strong> -イベントに関連付けられたプラットフォーム固有のエラーコード</li>
+      <li><strong>エラーコード&nbsp; (bcvideo_error_code) </strong> -イベントに関連付けられたプラットフォーム固有のエラーコード</li>
     </ul>
     <h3>例</h3>
     <ol>
@@ -847,7 +847,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>ギャラリーモジュールを開きます。</li>
       <li>Adobe Analytics 統合でプレーヤーを使用してエクスペリエンスを編集します。</li>
       <li>クリック<strong>設定&gt;高度</strong>左側のナビゲーションで。</li>
-      <li>JavaScript <strong></strong>コードセクションに以下を追加します。
+      <li>JavaScript コードセクションに以下を追加します。
         <pre>
 window.s_gi = window.top.s_gi</pre>
       </li>
