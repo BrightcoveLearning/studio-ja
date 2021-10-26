@@ -487,7 +487,7 @@
       url: /admin/managing-media-sharing-settings.html
     - name: プロファイル情報の管理
       url: /admin/managing-profile-information.html
-    - name: '標準の取り込みプロファイル（DDおよびCAE）'
+    - name: '標準の取り込みプロファイル（DDおよびCAE)'
       url: /admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html
     # - name: '標準の取り込みプロファイル（レガシー）'
     #   url: /admin/standard-ingest-profiles-legacy-transcoding.html
