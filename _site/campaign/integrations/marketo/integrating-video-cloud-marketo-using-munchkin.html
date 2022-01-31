@@ -816,8 +816,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ul>
       <li>例:プレーヤーの埋め込みコードに追加しました</li>
     </ul>
-    <pre>
-  &lt;video data-video-id = "6033402539001" data-account = "1486906377" data-player = "default" data-embed = "default" data-application-id class = "video-js" <strong> data-bc-trackingid = "12345"</strong>コントロール&gt;&lt;/ビデオ&gt;&lt;スクリプトsrc = "//players.brightcove.net/1486906377/default_default/index.min.js"&gt;&lt; /脚本&gt;</pre>
+<pre><code translate="No" language="html">
+<video data-video-id="6033402539001" 
+  data-account="1486906377" 
+  data-player="default" 
+  data-embed="default" 
+  data-application-id 
+  class="video-js"
+  data-bc-trackingid="12345" 
+  controls></video>
+<script src="//players.brightcove.net/1486906377/default_default/index.min.js"></script>
+</code></pre>
     <p>キャンペーンは、同期される別のフィールドとして値をMarketoに渡します。</p>
   </section>
   <section class="bcls-section">
