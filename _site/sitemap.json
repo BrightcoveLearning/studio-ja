@@ -485,7 +485,7 @@
   },
 
   {
-      "newURL": "https://ja.studio.support.brightcove.com/release-notes/",
+      "newURL": "https://ja.studio.support.brightcove.com/publish/",
       "oldURL": "/index"
   },
 
@@ -495,17 +495,12 @@
   },
 
   {
-      "newURL": "https://ja.studio.support.brightcove.com/campaign/get-started/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://ja.studio.support.brightcove.com/campaign/integrations/eloqua/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://ja.studio.support.brightcove.com/campaign/",
+      "newURL": "https://ja.studio.support.brightcove.com/campaign/get-started/",
       "oldURL": "/index"
   },
 
@@ -515,12 +510,12 @@
   },
 
   {
-      "newURL": "https://ja.studio.support.brightcove.com/admin/",
+      "newURL": "https://ja.studio.support.brightcove.com/campaign/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://ja.studio.support.brightcove.com/cloud-playout/",
+      "newURL": "https://ja.studio.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
@@ -531,6 +526,11 @@
 
   {
       "newURL": "https://ja.studio.support.brightcove.com/campaign/integrations/marketo/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://ja.studio.support.brightcove.com/cloud-playout/",
       "oldURL": "/index"
   },
 
@@ -550,17 +550,17 @@
   },
 
   {
-      "newURL": "https://ja.studio.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://ja.studio.support.brightcove.com/social/",
+      "newURL": "https://ja.studio.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://ja.studio.support.brightcove.com/campaign/admin/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://ja.studio.support.brightcove.com/social/",
       "oldURL": "/index"
   },
 
@@ -595,7 +595,7 @@
   },
 
   {
-      "newURL": "https://ja.studio.support.brightcove.com/publish/",
+      "newURL": "https://ja.studio.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
@@ -722,6 +722,11 @@
   {
       "newURL": "https://ja.studio.support.brightcove.com/cloud-playout/mid-roll-ad-insertion.html",
       "oldURL": "/mid-roll-ad-insertion"
+  },
+
+  {
+      "newURL": "https://ja.studio.support.brightcove.com/general/migration-dynamic-delivery.html",
+      "oldURL": "/migration-dynamic-delivery"
   },
 
   {

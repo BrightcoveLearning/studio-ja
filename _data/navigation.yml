@@ -69,6 +69,8 @@
   name: 一般情報
   url: /general/index.html
   docs:
+    - name: Static DeliveryからDynamic Deliveryへの移行
+      url: /general/migration-dynamic-delivery.html
     - name: Facebook の「いいね！」ボタンをプレーヤーに追加する
       url: /general/adding-facebook-button-brightcove-player.html
     - name: 'ベストプラクティス: トランスコーディングとアップロード'
