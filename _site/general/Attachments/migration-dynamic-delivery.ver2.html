@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Video Cloudは、コンテンツ、解像度、接続速度に関係なく、単一のアップロードがデスクトップ、モバイルデバイス、および接続されたTVで美しく再生されるように、ビデオの公開プロセスを簡素化するように設計されています。">
+  <meta name="description" content="2022年4月15日、ブライトコーブはレガシーインジェストシステムを使用してトランスコードされたすべての動画を動的配信(Dynamic Delivery)への移行を開始する予定です。">
   
-  <title>ベストプラクティス: 動画の作成、トランスコーディング、 アップロードのワークフロー</title>
+  <title>静的配信(Static Delivery) の廃止及び 動的配信(Dynamic Delivery) への移行について</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -58,9 +58,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item first-item"><a href="/">ホーム</a></li>
         
-      <li class="breadcrumb-item"><a href="/general/">General Information</a></li>
+      <li class="breadcrumb-item"><a href="/general/Attachments/">General Information</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">ベストプラクティス: 動画の作成、トランスコーディング、 アップロードのワークフロー</li>
+      <li class="breadcrumb-item active" aria-current="page">静的配信(Static Delivery) の廃止及び 動的配信(Dynamic Delivery) への移行について</li>
     </ol>
   </nav>
 </header>
@@ -710,194 +710,39 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </details>
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
+<h1>静的配信(Static Delivery) の廃止及び 動的配信(Dynamic Delivery) への移行について</h1>
 <article class="bcls-article">
-  <h1>ベストプラクティス: 動画の作成、トランスコーディング、 アップロードのワークフロー</h1>
-  <summary>Video Cloudは、コンテンツ、解像度、接続速度に関係なく、単一のアップロードがデスクトップ、モバイルデバイス、および接続されたTVで美しく再生されるように、ビデオの公開プロセスを簡素化するように設計されています。</summary>
+  <summary>2022年4月15日、ブライトコーブはレガシーインジェストシステムを使用してトランスコードされたすべての動画を動的配信(Dynamic Delivery)への移行を開始する予定です。</summary>
   <section class="bcls-section">
-    <p>ビデオをアップロードすると、Video Cloudは、単一のビデオをレンディションのコレクションに自動的にトランスコードします。各レンディションは、視聴者の帯域幅と解像度の一般的な範囲に適しています。次に、Video Cloud は、動画を再生する環境から画面サイズと接続速度を動的に検出し、各視聴者が利用できる速度とパワーを考慮して、ビデオの適切なレンディションを提供し、品質を最大化します。この記事では、Video Cloud 動画のレコーディング、エクスポート、アップロード、公開に関するベストプラクティスについて説明します。これにより、再生されるあらゆる場所でコンテンツを最適に再生できます。</p>
-    <p>次の表は、ビデオコンテンツの作成時に使用できる設定をまとめたものです。</p>
-    <h3 class="BCL_subsectionTitle">ビデオ</h3>
-    <table class="bcls-table">
-      <tbody class="bcls-table__body">
-        <tr>
-          <td  style="width:25%"><strong>フォーマット</strong></td>
-          <td  style="width:75%">MP4、M4V、MOV</td>
-        </tr>
-        <tr>
-          <td ><strong>Codec</strong></td>
-          <td >H.264、H.265（HEVC）<sup><strong><a href="#note1-1">[1-1] </a></strong></sup></td>
-        </tr>
-        <tr>
-          <td ><strong>ビットレート</strong></td>
-          <td >最高のレンディションの 2 倍のビットレート</td>
-        </tr>
-        <tr>
-          <td ><strong>フレームレート</strong></td>
-          <td >定数。通常は 15 ～ 60 フレーム/秒</td>
-        </tr>
-        <tr>
-          <td ><strong>アスペクト比</strong></td>
-          <td >動画のアスペクト比は保持されます。16:9 のアスペクト比が一般的です。</td>
-        </tr>
-      </tbody>
-    </table>
-    <h4>注</h4>
-    <ul>
-      <li id="note1-1"><sup><strong>[1-1]</strong></sup> HEVCサポートは有料のアドオンです。アカウントにHEVCサポートを追加することに興味がある場合は、アカウントマネージャーに連絡してください。詳細については、<a href="https://apis.support.brightcove.com/ingest-profiles/guides/hevc-video.html"> HEVC</a>ビデオを参照してください。</li>
-    </ul>
-    <h3 class="BCL_subsectionTitle">オーディオ</h3>
-    <table class="bcls-table">
-      <tbody class="bcls-table__body">
-        <tr>
-          <td  style="width:25%"><strong>コーデック</strong></td>
-          <td  style="width:75%">AAC（高度なオーディオコーデック）</td>
-        </tr>
-        <tr>
-          <td ><strong>ビットレート</strong></td>
-          <td >定数、128kbps</td>
-        </tr>
-        <tr>
-          <td ><strong>チャンネル</strong></td>
-          <td >ステレオ</td>
-        </tr>
-      </tbody>
-    </table>
-    &nbsp;
-    <p>これで、これらの設定の詳細をさらに調べる準備ができました。</p>
-    <p>Video Cloud パブリッケーションワークフローには、次のプロセスが含まれます。</p>
-    <ul>
-      <li><a href="#beforerecord">ステップ 1:録音する前に</a></li>
-      <li><a href="#recording">ステップ 2:収録曲</a></li>
-      <li><a href="#exporting">ステップ 3:書き出し</a></li>
-      <li><a href="#uploading">ステップ 4:アップロード中</a></li>
-      <li><a href="#transcoding">ステップ 5:トランスコーディング</a></li>
-    </ul>
+    <h2 id="Introduction">はじめに</h2>
+    <p>レガシーインジェストシステムは2021年に廃止され、より効率的で柔軟な動的配信( Dynamic Delivery) システムの導入から数年経ち、旧システムよりもお客様のニーズに応えることが可能となりました。しかし、レガシーインジェストシステムで作成された動画は、お客様からの要望がない限りDynamic Deliveryシステムに移行されることはありませんでしたが、4 月中旬から数カ月にわたり、ブライトコーブはこれらの動画を Dynamic Delivery システムへ移行し、レガシーのデータ センターの必要性を排除することを予定しております。この移行はシームレスに行われるため、お客様の弊社サービス利用に影響を与えず、移行にかかる追加費用等も発生致しません。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="beforerecord">ステップ 1:録音する前に</h2>
-    <div class="BCL_subsection">
-      <h3 class="BCL_subsectionTitle">ソースエンコーディング</h3>
-      <p>トランスコードされたメディアの全体的な結果に影響を与える要因は数多くあります。すべてのサイズにフィットする推奨を提供することは現実的ではないため、この手順では、より重要な考慮事項と、それらが出力に与える影響をいくつか挙げます。</p>
-      <div class="BCL_subsection">
-        <h4 class="BCL_subsectionTitle">将軍</h4>
+    <h2 id="faq">FAQ</h2>
+    <dl>
+      <dt>静的配信(Static Delivery) から移行はなぜ必要ですか？</dt>
+      <dd>レガシー インジェスト サービスが 2021 年に廃止となり、お客様は新しい動画はすべて動的配信( Dynamic Delivery) システムを使用してインジェストされるようになりました。Dynamic Delivery では、動画のトランスコードや保存に対して効率的且つ柔軟な仕様となっております。一方で、Static Delivery は、レガシーのデータセンターに依存しており、非効率であることからすべてのクラウド ベースの SaaS ソリューションを Dynamic Delivery に移行したいと考えています。移行プロセスはバックエンドで行われるため、お客様が何かアクションを行う必要はなく、シームレスに行われます。
+        <p>Dynamic Deliveryを使用するためにコンテンツを移行する費用は、ブライトコーブが負担致します。</p>
+      </dd>
+      <dt>お客様のDynamic Deliveryへの移行はどのように行われますか？</dt>
+      <dd>
         <ul>
-          <li>可能であれば、可能な限り高いソースメディアから始めましょう。トランスコードパスが連続して行われると、全体的な品質が指数関数的に低下します。可能であれば、非圧縮ソースから始めます。ファイルの転送と取り込み時間が長いため、生のソースを送信することは必ずしも意味がありません。このような場合、生成するレンディションの最大ビットレートの 2 ～ 3 倍のビットレートを持つソースをアップロードすることをお勧めします。したがって、3 Mbps のビデオビットレートでトップレンディションを使用する場合は、6 ～ 9 Mbps のビットレートでソースビデオをアップロードします。</li>
-          <li>アップロードする前に raw ソースを圧縮する必要がある場合は、H.264 および AAC が優先されるビデオコーデックとオーディオコーデックです。</li>
-          <li>複数のビデオストリームまたはオーディオストリームを使用しないでください。場合によっては、複数のオーディオストリームまたはビデオストリームを持つソースメディアが表示されることがあります。これは、多くの場合、DVDから直接コピーされたメディアの場合です。どのストリームを使用するかについて最もよく推測しますが、どのストリームが優先されたかを知る方法はありません。</li>
-          <li>ストリームの遅延を避ける。たとえば、一部のビデオ編集ツールでは、オーディオストリームの開始時刻が挿入され、ビデオの後にある時点でオーディオの再生が開始されます。このプロセス中にオーディオ同期の問題が発生するツールもあります。</li>
+          <li>Dynamic Deliveryへの移行とその影響については、対象となるすべてのお客様に通知しております。</li>
+          <li>移行前に動画ライブラリを変更する必要があるお客様は2022 年 4 月 15 日までに、ブライトコーブにお知らせ下さい。</li>
+          <li>移行は、2022 年 4 月から 7 月の間に行われる予定ですが、移行前に変更が必要なお客様は、2022 年 6 月 15 日以降にスケジュールが組まれる予定です。</li>
+          <li>移行が完了致しましたら、ブライトコーブは再度お客様に完了の旨を通知致します。</li>
         </ul>
-      </div>
-      <div class="BCL_subsection">
-        <h4 class="BCL_subsectionTitle">ビデオ</h4>
-        <ul>
-          <li>フレームサイズは、少なくとも予想される最大のレンディションと同じ大きさでなければなりません。ただし、元のフレームサイズよりも大きいフレームサイズにメディアをスケールしないでください。</li>
-          <li>H.264 では、フレームサイズが 4 の倍数であることが必要であり、16 の倍数に最適化されています。この要件を満たすようにトランスコードをスケールしますが、最良の結果を得るには、ソースメディアはすでに16の倍数でエンコードする必要があります。8 または 4 の倍数でも、パフォーマンスがわずかに低下しても機能します。</li>
-          <li>インターレースは避けてください。ほとんどのウェブおよびモバイルビデオプレーヤーは、インターレースコンテンツをうまく処理しません。インターレースを検出して除去しますが、変換中に品質が低下する可能性があります。</li>
-          <li>アナモルフィックビデオは避けてください。アナモルフィックビデオ、または非正方形ピクセル縦横比のビデオは、一部のモバイルプレーヤーと Web プレーヤーでは正しく再生されません。アナモルフィックビデオを検出して変換しようとしますが、元のソースメタデータが正しくないことがあります。これにより、材料が正しく変換されるのを防ぐことができます。</li>
-          <li>Camtasia <a href="/publish/creating-and-publishing-high-quality-screencasts.html">などのツールを使用してスクリーンキャストを作成する場合は、スクリーンキャストをエクスポートして Video Cloud</a>にアップロードする際のベストプラクティスとヒントについては、「高品質スクリーンキャストの作成と公開」を参照してください。</li>
-        </ul>
-      </div>
-      <div class="BCL_subsection">
-        <h4 class="BCL_subsectionTitle">オーディオ</h4>
-        <ul>
-          <li>互換性を最大限に高めるには、ステレオまたはモノラルオーディオを使用し、5.1 は使用しないでください。</li>
-          <li>オーディオトラックを標準レベルにノーマライズして、「クリッピング」を回避しながら、音量を低く抑えます。</li>
-          <li>一緒に表示される可能性のあるメディア全体で、オーディオレベルが一貫していることを確認してください。</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="recording">ステップ 2:収録曲</h2>
-    <div class="BCL_subsection">
-      <h3 class="BCL_subsectionTitle">私のコンテンツは何ですか、それはどこで再生されますか？</h3>
-      <p>ほとんどの場合、ビデオを Video Cloud に公開すると、ブラウザ内の他のコンテンツやフルスクリーンモード、小さなモバイルデバイスの画面の中での再生、大型モニターにまたがるなど、すべての配信ターゲットで動画が見栄えがよくなります。それでも、ビデオの録画では、コンテンツの性質と視聴者の視聴条件の両方を考慮することが最善です。困難な状況下に表示するために、トリッキーなコンテンツを録画する場合は、他のブラウザーコンテンツに含まれているプレーヤーとフルスクリーンビデオの両方から鮮明で読みやすいようにしたい小さなテキストを含む説明スクリーンキャスト、または国に表示される HD ニュースキャストなど、いくつかの対策を講じることができます。低帯域幅のインターネットアクセスを持つ人口。</p>
-      <p>コンテンツと再生に関する問題を回避するための録音方法に関する推奨事項を次に示します。</p>
-      <ul>
-        <li><strong>記録時のインターレース解除</strong>。最高品質の再生を実現するために、Video Cloud はすべてのコンテンツをインターレース解除します。ビデオカメラで録画する場合は、録音設定をインターレースではなくプログレッシブに設定します。すでに録音されたインターレースビデオをソースファイルとして操作している場合は、Video Cloud へのアップロードに備えて、圧縮時にビデオ編集ソフトウェアでインターレース解除設定を確認してください。Video Cloud でビデオをトランスコードせず、インターレースビデオを撮影した場合は、アップロードする前にビデオファイルをインターレース解除してください。</li>
-        <li><strong>一定のフレームレートでキャプチャします。</strong>再生中の吃音を避けるには、一定のフレームレートでビデオを録画し、ソースファイルの作成時に可変フレームレートを避けてください。また、プログレッシブ撮影し、パブリッシュするフレームレートと同じフレームレートを使用します-30 fpsを開始するには良い場所です。</li>
-        <li><strong>スクリーンキャストの戦略を採用する。</strong>ブラウザー内と全画面モードの両方で再生するソフトウェアチュートリアルビデオを作成する場合、明確で鮮明で読みやすいテキストで録音を作成することは特に困難です。見る<a href="/publish/creating-and-publishing-high-quality-screencasts.html">高品質のスクリーンキャストの作成と公開</a>スクリーンキャストをエクスポートしてVideoCloudにアップロードする際のベストプラクティスとヒントについては、こちらをご覧ください。</li>
-        <li><strong>手ぶれを避けてください。</strong>これは見るには明白に思えるかもしれませんが、揺れは実際にはモーション推定アルゴリズムを使用して材料を圧縮するエンコーダの能力に影響を与えます。言い換えれば、圧縮率が低く、品質が低くなります。</li>
-        <li><strong>ノイズの多い背景を避けてください。</strong>これは、オーディオだけでなくビデオにも当てはまります。ビデオの場合、背景の動き（例: トラフィック）や複雑な背景画像（例えば、ノイズの多い壁紙）のようなものは、圧縮に悪影響を及ぼします。同様に、インタビュー中のバックグラウンドノイズは、オーディオ圧縮を減らします。</li>
-        <li><strong>適切な照明を使用してください。</strong>暗いシーンは、品質を損なうことなくエンコードするのが難しくなります。</li>
-      </ul>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="exporting">ステップ 3:エクスポート中</h2>
-    <div class="BCL_subsection">
-      <h3 class="BCL_subsectionTitle">Video Cloud にアップロードする圧縮形式は何ですか？</h3>
-      <p>ブライトコーブでは、H.264 形式でエンコードされた動画ソースファイルをアップロードして、幅広い配信ターゲットに最適な品質を活用することをお勧めします。H.264 コーデックは、Video Cloud のトランスコーディングエンジンが、ビデオを再生するさまざまな解像度と帯域幅で最高品質のレンディションを作成できる最大の機会を提供します。見る<a href="/general/supported-video-and-audio-formats-codecs-and-containers.html">サポートされているビデオコーデックとコンテナ</a>コーデック、コンテナ、およびファイルタイプの違いの詳細については。Video Cloud 動画アップロードに最適な形式の詳細については、「<a href="/general/video-source-file-specifications-and-recommendations.html">動画ソースファイルの仕様と推奨事項」を参照してください</a>。</p>
-      <h3 id="quicktime" class="BCL_subsectionTitle">動画のコーデックの確認</h3>
-      <p>ビデオソースファイルが H.264 形式でエンコードされていることを確認するには、QuickTime プレーヤーのムービーインスペクタで形式を確認します。</p>
-      <ol class="bcls-tasklist-restart">
-        <li>QuickTime プレーヤーを開きます。<a href="https://www.apple.com/quicktime/download/">https://www.apple.com/quicktime/download/ でQuickTimeを無料で入手できます</a>。</li>
-        <li>[ <strong>ファイル]</strong> &gt; [ <strong>ファイルを開く...] を選択します。</strong>をクリックし、書き出したビデオファイルを選択します。</li>
-        <li>QuickTime プレーヤーで開いているビデオから、<strong>ウィンドウ／ムービーインスペクターを表示を選択します</strong>。
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/node6187-inspector.png" /></figure>
-        </li>
-        <li>ビデオのムービーインスペクターウィンドウで、フォーマットが H.264/MPEG-4 AVC（高度なビデオコーディング）であることを確認します。</li>
-      </ol>
-      <p>QuickTime ムービーインスペクタは、圧縮されたビデオソースファイルの形式、解像度、フレームレート、その他のプロパティをレポートするための便利なツールです。</p>
-      <h3 id="principles" class="BCL_subsectionTitle">ビデオ編集ソフトウェアからエクスポートする際の指針の原則</h3>
-      <p>お気に入りのビデオエディタからビデオを圧縮およびエクスポートする場合は、H.264 コーデックを使用してビデオを圧縮し、複数の解像度とビットレートに最適なレンディションを Video Cloud に自動的に作成することをお勧めします。さらに、次のことを推奨します。</p>
-      <ul type="square">
-        <li><strong>Flashを使用しない</strong>。ビデオ制作ソフトウェアからビデオをレンダリングする場合は、コーデックまたはコンテナであるH.264コーデックオプションを選択します<em> 以外</em> フラッシュまたはSWF。</li>
-        <li><strong>シングルターゲット のフォーマットを避けます</strong>。Web、iPhone、YouTube、DVD、または BlueRay などの特定のターゲットに合わせてビデオをエンコードするワンクリックソリューションを提供する編集ソフトウェアに付属の合理化されたエンコードオプションを避けます。Video Cloud が配信を処理できるようにするには、最も柔軟なネイティブ H.264 コーデックを作成する QuickTime 変換設定を使用してビデオをフォーマットし、Video Cloud が単一の H.264 アップロードから複数のレンディションを作成し、Web、iPhone、およびを含む複数の配布ターゲットに配信できるようにします。YouTube、複数の解像度と接続速度も同様です。</li>
-        <li><strong>マルチパス、時間があれば</strong>。ベストプラクティスでは、可能な限り最高品質のビデオをアップロードすることをお勧めします。マルチパス処理は、高品質のソースファイルを作成するためのベストプラクティスの1つです。状況によっては、ビデオの品質がわずかに向上しただけで、2 パスプロセスを使用してエンコードするのにかかる時間が正当化されない場合があります。2パスエンコーディングは、ビデオアーティファクトの発生率を減らし、高い動きのある領域を持つビデオに最も大きなメリットをもたらします。</li>
-        <li><strong>ファイルサイズにケチするなよ</strong>Video Cloud は、大きなファイルのアップロードを処理するために構築されています。アップロードを成功させるためにファイルを圧縮するのに慣れていれば、そうしないでください。高品質のソースファイルをアップロードしてください。</li>
-        <li><strong>高品質のファイルを入手してください。</strong>生成すると予想される最も高いレンディションの 2 ～ 3 倍のビットレートを持つソースをお勧めします。したがって、3 Mbps のビデオビットレートでトップレンディションを使用する場合は、6 ～ 9 Mbps のビットレートでソースビデオをアップロードします。また、データが多すぎる動画では、HTTP経由でスムーズにストリームできない場合があります。画質が過度に高すぎると、バッファリングが発生する可能性があります。<br />
-          <!-- <p>
-      Video Cloud Express customers have access to fixed renditions and need not exceed the bit rate for their fastest rendition when considering data compression rates. Video Cloud Enterprise customers should consider the bit rate of their current fastest rendition as well as any rendition they might opt to create in the future when re-encoding existing videos with new transcoding settings.
-    </p> --></li>
-        <li><strong>フレームレートに一貫性を持たせます</strong>。吃音を避けるために、撮影したフレームレートで書き出します。また、書き出しフレームレート設定がソースと同じでない場合、非同期のビデオトラックとオーディオトラックが危険にさらされます。</li>
-        <li><strong>ネイティブファイルのコピーを保持します</strong>。ネイティブビデオファイルを編集したり、新たに圧縮したり、再エンコードしたりする場合に備えて、ネイティブビデオファイルを保存することをお勧めします。<a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html"></a>ターゲットオーディエンスと一致する標準インジェストプロファイルのリストからプロファイルを使用するか、独自のインジェストプロファイルを作成します。 <!-- <p>
-        <a href="node/3412">Re-encoding existing videos</a> is available only to Video Cloud Enterprise publishers. You may find after publication that your video would benefit by making changes to the exporting settings. Video Cloud does provide a way to <a href="node/3412#newsource">re-encode your video from a higher quality source</a> file, which allows you to keep all the metadata assigned to a title but to upload a video in the latest most flexible encoding format.
-      </p> --></li>
-        <li><strong>高解像度でエクスポートする場合は、アクションとサイズを考慮してください</strong>。高解像度のビデオは、再生品質を維持しながら最小ビットレートを使用することで特にメリットを得られます。見る<a href="video-source-file-specifications-and-recommendations.html#highres">高解像度エンコーディングの推奨事項</a>ビデオサイズ、アスペクト比、およびコンテンツ内のアクションの量を考慮する場合のビットレートの最小値。</li>
-        <li><strong>モバイル戦略を採用</strong>。デスクトップモニタに加えてモバイルデバイスに動画を表示する場合は、動画を柔軟な H.264 形式でエンコードし、その他のエンコードオプションを検討する必要があります。 <!-- <p>
-        See the <a href="node/4390#flexibility">Encoding recommendations for maximum flexibility</a> table of settings in the <em>Encoding for Mobile Delivery</em> article.
-      </p> --></li>
-      </ul>
-      <h3 class="BCL_subsectionTitle">ステップバイステップのエクスポート手順</h3>
-      <p>Apple Final Cut Pro X、Telestream ScreenFlow、Adobe Premiere Pro、または Techsmith Camtasia Studio などのツールからビデオをエクスポートするための推奨手順については、これらのソフトウェアパッケージで提供される詳細な手順を参照してください。</p>
-      <!-- <p>For recommended specific instructions to export videos from Final Cut Pro 7 for MAC, and Camtasia Studio 7 for PC, see <a href="node/6297">Exporting High Quality Video Source Files with Popular Video Editing Programs</a>. If you're exporting from iMovie, and Snapz, consider the guiding principles listed above, as well as the Final Cut Pro 7 processes; the Final Cut Pro video and audio compression settings are identical to those for iMovie and Snapz.</p> --></div>
-  </section>
-    <section class="bcls-section">
-    <h2 id="uploading">ステップ 4:アップロード中</h2>
-    <div class="BCL_subsection">
-      <h3 class="BCL_subsectionTitle">ソースファイルから必要な柔軟性を入手するにはどうすればよいですか？</h3>
-      <p>Video Cloud Studio の [アップロード] モジュールを使用して、動画をアップロードします。&nbsp;詳細については、&nbsp;<a href="/media/uploading-videos-using-upload-module.html"></a>&nbsp;アップロードモジュールを使用したビデオのアップロードを参照してください。&nbsp;または、<a href="https://apis.support.brightcove.com/dynamic-ingest-legacy/getting-started/overview-dynamic-ingest-api-legacy-ingest.html">動的取り込み API を使用して動画のバッチをアップロードすることもできます</a>。<br />
-        <!-- See <a href="node/571">H.264 Videos</a> for specifications on uploading this format. --></p>
-      <p>Video Cloudプラットフォームにアップロードした動画は、デジタルマスタとして保存されます。このデジタルマスターは、Video Cloud が作成するすべてのレンディションのソースです。<a href="/media/retranscoding-videos-using-media-module.html"></a>トランスコード設定を変更するためにビデオを再トランスコードすることを選択する必要がある場合は、デジタルマスターもソースになります。 <!-- For more on re-encoding videos see <a href="node/8927">Re-encoding Existing Videos</a>. At upload time, you can optionally choose <strong>Add H.264 source as a rendition</strong> to have a copy of this digital master available as the highest quality version rendition in addition to other renditions created by Video Cloud's transcoding engine. --></p>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="transcoding">ステップ 5:トランスコーディング</h2>
-      <div class="BCL_subsection">
-      <h3 class="BCL_subsectionTitle">動画の処理にはどれくらい時間がかかりますか？</h3>
-      <p>トランスコーディング処理が完了するまでにビデオの再生時間が最大 3 倍かかることがあります。</p>
-    </div>
-    <div class="BCL_subsection">
-      <h3 class="BCL_subsectionTitle">自分のコンテンツは何ですか、視聴者はどこで見ていますか、視聴者は何を視聴していますか？</h3>
-      <p>デスクトップ、モバイルデバイス、ワイドモニターテレビへの公開という 3 つの画面戦略など、さまざまな画面サイズでビデオを美しく再生したい場合や、ダイヤルアップから携帯電話、高速ケーブルまで、さまざまな接続速度でビデオをスムーズに再生するには、まず、それぞれの環境で可能な限り最適に再生されるビデオファイルを使用します。動画が視聴者のさまざまなサイズと速度条件で可能な限り美しく表示されるように、Video Cloud では、マルチビットレートレンディションと呼ばれる動画ファイルのコレクションを、さまざまなサイズと品質で作成します。Video Cloud は、デバイスの解像度、帯域幅、およびビデオの再生を要求するその他の条件を検出すると、モバイルデバイスの画面の制約や低帯域幅接続の制約に合わせて小さくて遅いバージョンでも、その環境に最適なビデオレンディションを提供します。高速、高精細機能を備えたワイドスクリーンモニターを活用した品質バージョン。</p>
-      <p>これらのレンディションファイルの速度、サイズ、エンコード品質を細かく制御できます。視聴者の接続速度、デバイス、画面解像度がわかっている場合は、動画の各レンディションファイルを調整して、それらの視聴者のサイズと速度の条件を対象としたレンディションのコレクションを作成できます。</p>
-      <h3 class="BCL_subsectionTitle">マルチビットレートレンディションの設定についてさらに読む</h3>
-      <ul>
-        <li><a href="/general/overview-dynamic-delivery.html"></a>ダイナミックデリバリのトランスコーディングの概要については、ダイナミック配信の概要を参照してください。</li>
-        <li>推奨されるトランスコード設定の詳細については、「<a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">標準インジェストプロファイル</a>」を参照してください</li>
-        <!-- <li>See
-        <a href="node/3396"> Setting Your Transcoding Options</a>
-        for overall recommended settings for a range of target resolutions and bandwidths</li> -->
-        <li><a href="video-source-file-specifications-and-recommendations.html#highres">高解像度ビデオのレンディション設定に関するベストプラクティスについては、「高解像度エンコーディングの推奨事項</a>」を参照してください。</li>
-        <li>Brightcove Player <a href="https://player.support.brightcove.com/playback/determining-which-rendition-will-play.html"></a>がどのレンディションを再生するかを決定する方法については、「どのレンディションが再生されるかを決定する」を参照してください。</li>
-        <!-- <li>See <a href="node/6701">Multi-Bitrate Rendition Switching Logic</a> for more samples of rendition switching behavior and troubleshooting scenarios that cause improper rendition selection</li> -->
-        <li>16: 9 と 4:3 のアスペクト比の推奨ビデオ幅と高さについては、<a href="/general/optimal-video-dimensions.html">最適なビデオサイズを参照してください。</a></li>
-        <li>見る<a href="https://apis.support.brightcove.com/ingest-profiles-legacy/guides/rendition-settings-and-video-quality.html">レンディション設定とビデオ品質</a>ビデオの品質とパフォーマンスの最適化について。</li>
-      </ul>
-    </div>
+      </dd>
+      <dt>Dynamic Delivery への移行に関して注意するべき点はありますか？</dt>
+      <dd>動画や画像コンテンツのそのものへの URL が変更となるため、動画や画像の URL そのものを取得してハードコードしている場合、動画や画像が表示されなくなります。その場合、CMS API や Playback API を介してコンテンツを取得するように変更する必要ございます。詳細は、<a href="https://apis.support.brightcove.com/cms/getting-started/best-practices-cms-and-playback-apis.html#using_media_urls">ベストプラクティス: CMS および Playback APIs</a>をご覧下さい。</dd>
+      <dt>新しい動画はどうなるのでしょうか？</dt>
+      <dd>レガシー インジェスト サービス の廃止以降、すべての新しいビデオは Dynamic Delivery を使って取り込まれています。これは今後も継続されます。この移行は、2021年以前にレガシー インジェスト サービスを使用して取り込まれ、Dynamic Deliveryに移行されていないコンテンツにのみ影響します。</dd>
+      <dt>期限を越えて延長することは可能ですか？</dt>
+      <dd>はい、移行は一括で行われるため、アカウントごとに異なる日程（2022年4月～7月の間）で移行を予定しています。延長をご希望の場合は、担当営業までご連絡ください。</dd>
+    </dl>
   </section>
 </article>
+
 
 <!-- complete bootstrap layout -->
     </div>
@@ -914,7 +759,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  ページの最終更新日26 Oct 2021
+  ページの最終更新日30 Mar 2022
 </div>
 
 
