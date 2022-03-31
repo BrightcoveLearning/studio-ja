@@ -5,6 +5,8 @@
   name: 入門編
   url: /get-started/index.html
   docs:
+    - name: Video Cloud Studio入門 - ナビゲーションメニューの更新
+      url: /get-started/getting-started-video-cloud-studio-new-nav.html
     - name: ビデオクラウドスタジオの入門
       url: /get-started/getting-started-video-cloud-studio.html
     - name: Video Cloud トライアルの使用を開始する
