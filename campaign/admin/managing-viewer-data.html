@@ -1,0 +1,42 @@
+---
+title: ビューアーデータの管理
+description: このトピックでは、キャンペーンモジュールでビューアデータを管理する方法を学習します。
+parent: Administering Campaign 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>[ビューアデータの管理] オプションを使用すると、ユーザーを検索し、そのユーザーを削除するか、そのユーザーのデータをエクスポートすることができます。</p>
+    <aside class="bcls-aside bcls-aside--information">注意:
+      <ul>
+        <li>通常、マーケティングオートメーションプラットフォームと統合する場合（MAP統合）、データ保持期間の設定を使用して、データを保持する期間を制御します</li>
+        <li>[ビューアデータの管理]メニューにアクセスするには、アカウント管理者である必要があります</li>
+      </ul>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <p>ビューアデータを管理するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>キャンペーンモジュールを開きます。</li>
+      <li>クリック<strong>ビューアデータの管理</strong>左側のナビゲーションで。</li>
+      <li>検索するユーザーを入力します。通常、これは次のいずれかの値になります。
+        <ul>
+          <li><strong>Eメール</strong> -キャンペーントラッキングを使用していて、キャンペーンリードフォームが使用されている場合、またはSSO統合がある場合</li>
+          <li><strong>ユーザー ID</strong> -SSO またはカスタムインテグレーションを使用する場合</li>
+          <li><strong>カスタム GUID</strong> -匿名ユーザー用</li>
+          <li><strong>外部 GUID</strong> -MAP 統合が使用されているとき</li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export lead data" src="/assets/images/campaign/admin/node18548-search.png" /></figure>
+      </li>
+      <li>一致するものが見つかった場合は、次のいずれかのアクションを選択します。
+        <ul>
+          <li><strong>閲覧者データの削除</strong> -ユーザーの閲覧データとリードデータを削除します</li>
+          <li><strong>ビューアーデータのエクスポート</strong> -ユーザーのリードと表示イベントデータをエクスポートします。リードデータには、キャンペーンリードフォームに入力されたデータが含まれます。ビューイベントデータには、ビューアのすべてのビューイベントが含まれます。</li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export lead data" src="/assets/images/campaign/admin/node18548-select-action.png" /></figure>
+      </li>
+    </ol>
+  </section>
+</article>

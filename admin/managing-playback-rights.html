@@ -1,0 +1,173 @@
+---
+title: 再生権の管理
+parent: Administering Accounts
+description: In this topic you will learn how to create playback rights. 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>再生権は、ビデオの再生を制限するために使用されます。再生権限を作成したら、Media モジュールを使用してビデオに割り当てることができます。</p>
+    <p>[再生権限] 管理ページにアクセスするには、[ <strong>管理者]</strong>リンクをクリックし、[ <strong>再生権限] をクリックします</strong>。再生権の一覧が表示されます。</p>
+    <p>
+      <aside class="bcls-aside bcls-aside--information">注:[再生権限] ページにアクセスするには、管理者ロールを持つ Video Cloud Studio ユーザーである必要があります。</aside>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-list.png" /></figure>
+      再生権限は、メディアモジュールのビデオのプロパティページの「<strong>再生制限</strong>」セクションでビデオに割り当てられます。 </p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-assign.png" /></figure>
+    <p>との再生権<strong>状態</strong>の<strong>非活性</strong>メディアモジュールのビデオに割り当てることはできません。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="create">再生権限の作成</h2>
+    <p>再生権限を作成するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Video Cloud Studio に管理者としてログインします。</li>
+      <li>ナビゲーションヘッダーで、[ <strong>管理者</strong> ]、[ <strong>再生権限] の順にクリックします</strong>。管理者メニューにアクセスするには、アカウント管理者である必要があります。</li>
+      <li>[ <strong>新しい再生権限] をクリックします</strong>。</li>
+      <li><strong>再生権限名を入力します</strong>。</li>
+      <li><strong>[</strong>トークンなしでプレイバック権限を許可] をオンにすると、JSON Web トークン (JWT) なしで再生リクエストを行うことができます。<aside class="bcls-aside bcls-aside--information">注:このオプションのチェックを外しても、その再生権に設定された制限には影響しませんが、再生要求には、プレーヤーレベルでプログラムで設定された有効なJWTが必要になります。詳細については、開発者向けドキュメント「Brightcove Player での再生認証 DRM <a href="https://apis.support.brightcove.com/playback-authorization/guides/using-pas-with-bcp.html">の使用」を参照してください</a>。</aside>
+      </li>
+      <li>チェック<strong>デフォルトとして使用</strong>これをデフォルトの再生権にします。これにより、設定された再生権の制限がアップロードされた動画に適用されます。<aside class="bcls-aside bcls-aside--information">注:ビデオが再トランスコードされた場合、デフォルトの再生権は割り当てられません。</aside>
+      </li>
+      <li>[<strong>保存</strong>]をクリックします。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-create.png" /></figure>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">注:アカウントで持つことができる再生権の最大数は100です。制限を引き上げる必要がある場合は、<a href="https://supportportal.brightcove.com">ブライトコーブサポートにお問い合わせください</a>。</aside>
+    <p>左側のナビゲーションで制限リンクをクリックして、右側の再生に制限を追加します。</p>
+    <ul>
+      <li><a href="#geo">地理的</a></li>
+      <li><a href="#domain">ドメイン</a></li>
+      <li><a href="#proxy">プロキシー</a></li>
+      <li><a href="#date">時間</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">再生権の編集</h2>
+    <p>再生権限を編集するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>再生の権利をクリックします。</li>
+      <li>必要な変更を行い、[ <strong>保存] をクリックします</strong>。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="duplicate">再生権限の複製</h2>
+    <p>再生権利を複製するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>再生の権利をクリックします。</li>
+      <li>[ <strong>複製] をクリックします</strong>。</li>
+      <li>必要な変更を行い、[ <strong>保存] をクリックします</strong>。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="activate">再生権限の有効化/無効化</h2>
+    <p>再生権限は削除できませんが、Media モジュール内のビデオに割り当てることはできません。再生権限を有効または無効にするには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>再生の権利をクリックします。</li>
+      <li>[ <strong>アクティブ化</strong> ] をクリックして再生権をアクティブ化するか、[ <strong>非アクティブ化]</strong>をクリックして再生権を非アクティブにします。非アクティブ化された再生権限は、Media モジュール内のビデオに割り当てることはできません。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="geo">地理的制限の割り当て</h2>
+    <p>地理的な制限により、国、郵便番号、IP、および指定された市場地域に基づいてビデオの再生を制限できます。再生権に地理的制限を割り当てるには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>再生の権利をクリックします。</li>
+      <li>左側のナビゲーションで、[ <strong>地理的制限] をクリックします</strong>。</li>
+    </ol>
+    <p>NS <strong>グローバルルール</strong>に設定することができます<strong>すべて許可</strong>また<strong>すべてブロックする</strong>。</p>
+    <ul>
+      <li><strong>すべて許可</strong>
+        <ul>
+          <li>アクセスできない少数のグループをブラックリストに登録する場合に使用します</li>
+          <li>すべてのユーザーに表示を許可する場合に選択し、ブラックリストに登録されている国、郵便番号、IP、および表示が禁止されているDMAのリストを追加します</li>
+        </ul>
+      </li>
+      <li><strong>すべてブロックする</strong>
+        <ul>
+          <li>アクセスできる少数のグループをホワイトリストに登録する場合に使用します</li>
+          <li>すべての表示をブロックすることを選択してから、表示が許可されているホワイトリストに登録された国、郵便番号、IP、またはDMAのリストを追加します</li>
+        </ul>
+      </li>
+    </ul>
+    <p>地理的な制限を追加して、以下に基づいて表示を許可/防止できます。</p>
+    <ul>
+      <li><a href="#countries">国</a></li>
+      <li><a href="#zip">郵便番号</a></li>
+      <li><a href="#ip">IP 制限</a></li>
+      <li><a href="#dma">指定マーケットエリア（DMA）</a></li>
+    </ul>
+    <h3 id="countries">国へのアクセスを制限する</h3>
+    <p>国の再生権を使用して、表示を特定の国に制限できます。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>表示を禁止（ブラックリスト）または許可（ホワイトリスト）する国を選択します。入力すると、選択リストがフィルタリングされます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-countries.png" /></figure>
+      </li>
+      <li>[<strong>保存</strong>]をクリックします。</li>
+    </ol>
+    <h3 id="zip">郵便番号へのアクセスを制限する</h3>
+    <p>郵便番号の再生権限を使用して、表示を特定の郵便番号に制限できます。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>表示を禁止（ブラックリスト）または許可（ホワイトリスト）する郵便番号のリストを入力します。郵便番号の先頭には、大文字、2 文字の国コード、ハイフン ( <strong>US-90045) を付ける必要があります</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-zip.png" /></figure>
+      </li>
+    </ol>
+    <p>郵便番号を含む.csvファイルをアップロードすることもできます。[CSV のアップロード] をクリックして、アップロードするファイルを参照して選択します。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-upload-csv.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">注:.csv ファイルをアップロードすると、郵便番号フィールドの内容が置き換えられます。</aside>
+    <h3 id="ip">IPへのアクセスを制限する</h3>
+    <p>IP再生権を使用して、表示をIPアドレス範囲に制限できます。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>表示を禁止（ブラックリスト）または許可（ホワイトリスト）するIPアドレスの範囲を入力します。<a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDRブロック表記</a>もサポートされています。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-ip.png" /></figure>
+      </li>
+      <li>[<strong>保存</strong>]をクリックします。</li>
+    </ol>
+    <h3 id="dma">DMAへのアクセスを制限する</h3>
+    <p>メディアマーケットとも呼ばれる指定マーケットエリア（DMA）は、テレビおよびラジオ市場を定義するために使用される米国の地域です。再生権を使用して、DMAに基づいて表示を制限できます。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>表示を禁止（ブラックリスト）または許可（ホワイトリスト）するDMAのリストを入力します
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-dma.png" /></figure>
+      </li>
+      <li>[<strong>保存</strong>]をクリックします。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="domain">ドメイン制限の割り当て</h2>
+    <p>ドメイン制限を使用すると、ドメインに基づいてビデオの再生を制限できます。再生権限にドメイン制限を割り当てるには、次の手順を実行します。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>再生の権利をクリックします。</li>
+      <li>左側のナビゲーションで、[ <strong>ドメインの制限] をクリックします</strong>。</li>
+      <li>[ <strong>ブラックリストドメイン</strong> ] フィールドに、表示できないドメインを入力します。 </li>
+      <li>[ <strong>ホワイトリストドメイン</strong> ] フィールドに、表示を許可するドメインを入力します。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-domain.png" /></figure>
+      </li>
+      <li>[<strong>保存</strong>]をクリックします。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="proxy">プロキシ制限の割り当て</h2>
+    <p>プロキシ制限を使用すると、特定の接続タイプに基づいてビデオの再生を制限できます。再生権にプロキシ制限を割り当てるには、次の手順に従います。</p>
+    <aside class="bcls-aside bcls-aside--information">注:VPNプロバイダーがサービスを改善し続けると、IPアドレスの解決は、ブロックされたIPアドレスに対して定義したものから変更される可能性があります。このため、プロキシブロッキングは 100% 保証されません。</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>再生を右クリックします。</li>
+      <li>左側のナビゲーションで、[ <strong>プロキシ制限] をクリックします</strong>。</li>
+      <li>ブロックするプロキシタイプを選択します。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-proxy.png" /></figure>
+      </li>
+      <li>[<strong>保存</strong>]をクリックします。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="date">時間制限の割り当て</h2>
+    <p>時間制限により、指定した開始日に基づいてビデオの再生を制限できます。再生権に時間制限を割り当てるには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>再生を右クリックします。</li>
+      <li>左側のナビゲーションで、をクリックします<strong>時間制限</strong>。</li>
+      <li>カレンダーコントロールをクリックして、<strong>開始日</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-date.png" /></figure>
+      </li>
+      <li>（オプション）クリック<strong>終了日を追加</strong>終了日を選択します。</li>
+      <li>[<strong>保存</strong>]をクリックします。</li>
+    </ol>
+  </section>
+</article>

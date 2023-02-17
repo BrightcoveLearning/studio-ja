@@ -1,0 +1,39 @@
+---
+title: 静的配信(Static Delivery) の廃止及び 動的配信(Dynamic Delivery) への移行について
+description: 2022年4月15日、ブライトコーブはレガシーインジェストシステムを使用してトランスコードされたすべての動画を動的配信(Dynamic Delivery)への移行を開始する予定です。
+parent: General Information
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">はじめに</h2>
+    <p>レガシーインジェストシステムは2021年に廃止され、より効率的で柔軟な動的配信( Dynamic Delivery) システムの導入から数年経ち、旧システムよりもお客様のニーズに応えることが可能となりました。しかし、レガシーインジェストシステムで作成された動画は、お客様からの要望がない限りDynamic Deliveryシステムに移行されることはありませんでしたが、4 月中旬から数カ月にわたり、ブライトコーブはこれらの動画を Dynamic Delivery システムへ移行し、レガシーのデータ センターの必要性を排除することを予定しております。この移行はシームレスに行われるため、お客様の弊社サービス利用に影響を与えず、移行にかかる追加費用等も発生致しません。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="faq">FAQ</h2>
+    <dl>
+      <dt>静的配信(Static Delivery) から移行はなぜ必要ですか？</dt>
+      <dd>レガシー インジェスト サービスが 2021 年に廃止となり、お客様は新しい動画はすべて動的配信( Dynamic Delivery) システムを使用してインジェストされるようになりました。Dynamic Delivery では、動画のトランスコードや保存に対して効率的且つ柔軟な仕様となっております。一方で、Static Delivery は、レガシーのデータセンターに依存しており、非効率であることからすべてのクラウド ベースの SaaS ソリューションを Dynamic Delivery に移行したいと考えています。移行プロセスはバックエンドで行われるため、お客様が何かアクションを行う必要はなく、シームレスに行われます。
+        <p>Dynamic Deliveryを使用するためにコンテンツを移行する費用は、ブライトコーブが負担致します。</p>
+      </dd>
+      <dt>お客様のDynamic Deliveryへの移行はどのように行われますか？</dt>
+      <dd>
+        <ul>
+          <li>Dynamic Deliveryへの移行とその影響については、対象となるすべてのお客様に通知しております。</li>
+          <li>移行前に動画ライブラリを変更する必要があるお客様は2022 年 4 月 15 日までに、ブライトコーブにお知らせ下さい。</li>
+          <li>移行は、2022 年 4 月から 7 月の間に行われる予定ですが、移行前に変更が必要なお客様は、2022 年 6 月 15 日以降にスケジュールが組まれる予定です。</li>
+          <li>移行が完了致しましたら、ブライトコーブは再度お客様に完了の旨を通知致します。</li>
+        </ul>
+      </dd>
+      <dt>Dynamic Delivery への移行に関して注意するべき点はありますか？</dt>
+      <dd>動画や画像コンテンツのそのものへの URL が変更となるため、動画や画像の URL そのものを取得してハードコードしている場合、動画や画像が表示されなくなります。その場合、CMS API や Playback API を介してコンテンツを取得するように変更する必要ございます。詳細は、<a href="https://apis.support.brightcove.com/cms/getting-started/best-practices-cms-and-playback-apis.html#using_media_urls">ベストプラクティス: CMS および Playback APIs</a>をご覧下さい。</dd>
+      <dt>新しい動画はどうなるのでしょうか？</dt>
+      <dd>レガシー インジェスト サービス の廃止以降、すべての新しいビデオは Dynamic Delivery を使って取り込まれています。これは今後も継続されます。この移行は、2021年以前にレガシー インジェスト サービスを使用して取り込まれ、Dynamic Deliveryに移行されていないコンテンツにのみ影響します。</dd>
+      <dt>期限を越えて延長することは可能ですか？</dt>
+      <dd>はい、移行は一括で行われるため、アカウントごとに異なる日程（2022年4月～7月の間）で移行を予定しています。延長をご希望の場合は、担当営業までご連絡ください。</dd>
+    </dl>
+  </section>
+</article>
+

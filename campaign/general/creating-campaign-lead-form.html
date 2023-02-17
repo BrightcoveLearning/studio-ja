@@ -1,0 +1,85 @@
+---
+title: キャンペーンリードフォームの作成
+description: このトピックでは、キャンペーン対応プレーヤーに表示できるリードフォームを作成する方法を学習します。
+parent: General Information 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>リードフォームは、ビデオの再生中に視聴者情報をキャプチャするために使用できます。リードフォームには次の2つのタイプがあります。</p>
+    <ul>
+      <li><strong>キャンペーンリードフォーム</strong> -一連のフィールドから選択でき、フォームデータはVideoCloudにローカルに保存されます。これらのフォームは、キャンペーントラッキングで構成されたプレーヤーで使用されます。</li>
+      <li><strong>カスタムリードフォーム</strong> -マーケティングオートメーションプラットフォームから生成されたカスタムフォームHTMLを入力できます。これらのフォームは、マーケティングオートメーションプラットフォームへの接続で構成されたプレーヤーで使用されます。</li>
+    </ul>
+    <p>マーケティングオートメーションプラットフォームを使用したカスタムリードフォームの作成の詳細については、プラットフォームのドキュメントを参照してください。</p>
+    <ul>
+      <li><a href="/campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html">オラクル・エロクア</a></li>
+      <li><a href="/campaign/integrations/marketo/creating-custom-lead-forms-marketo.html">マルケト</a></li>
+      <li><a href="/campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html">HubSpot</a></li>
+      <li><a href="/campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html">セールスフォース</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="leadform">リードフォームを作成する</h2>
+    <p>リードフォームを作成するには、次の手順に従います。</p>
+    <h3>フォームの内容を構成する</h3>
+    <ol class="bcls-tasklist">
+      <li>
+        <p>キャンペーンモジュールを開きます。</p>
+      </li>
+      <li>クリック<strong>リードフォーム</strong>左側のナビゲーションで。リードフォームが作成されている場合は、それらが表示されます。
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="manage lead forms section" src="/assets/images/campaign/general/node15860-manage-lead-forms.png" /></figure>
+      </li>
+      <li>「<strong>リードフォームの作成」をクリックします</strong>。</li>
+      <li><strong>リードフォームにはわかりやすい名前を付けます</strong>。</li>
+      <li>「<strong>引合フォーム・ステータス」を選択します</strong>。
+        <ul>
+          <li><strong>アクティブ</strong></li>
+          <li><strong>非アクティブ</strong></li>
+        </ul>
+      </li>
+      <li><strong>フォームの言語を選択します</strong>。</li>
+      <li>[ <strong>フォームのタイミング] を選択します</strong>。フォームのタイミングによって、リードフォームが表示されるタイミングが決まります。</li>
+      <li>ビデオを視聴するためにリードフォームの送信を要求するには、[ビデオを視聴するには送信を要求する] をオンにします。</li>
+      <li>チェック中<strong>リードがすでにわかっている場合でも、常にリードフォームを表示します</strong>リードがすでにわかっている場合でも、常にリードフォームが表示されます。チェックされていない場合、リードが既知の場合、リードフォームは表示されません。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit lead form" src="/assets/images/campaign/general/node15860-edit-lead-form-1.png" /></figure>
+      </li>
+      <li>フォームのタイプを選択します。
+        <ul>
+          <li><strong>キャンペーンリードフォーム</strong> -フォームはデフォルトのレイアウトとフィールドのセットを使用して構築され、データはVideoCloudにローカルに保存されます</li>
+          <li><strong>カスタムリードフォーム</strong> -カスタム HTML（通常はマーケティングオートメーションプラットフォームから）を入力する機能を提供し、データはマーケティングオートメーションプラットフォームに保存されます。</li>
+        </ul>
+      </li>
+      <li><strong>トップメッセージを入力します</strong>。先頭のメッセージは、リードフォームの上部に表示されるものです。</li>
+      <li>リードフォームに表示するフィールドを選択します。最大 4 つのフィールドを選択できます。</li>
+      <li><strong>プライバシーポリシーのテキストとプライバシーポリシー URL を入力します</strong>。これらのフィールドは、リードフォームを保存するために必要です。</li>
+      <li>[ <strong>キャンセル]</strong>および [ <strong>送信] ボタンに使用するボタンテキストを入力します</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit lead form" src="/assets/images/campaign/general/node15860-edit-lead-form-2.png" /></figure>
+      </li>
+      <li><strong>（オプション）</strong> [ フォームのプレビュー] をクリックして、フォームのプレビューを開きます。プレビューダイアログを使用して、モバイル、タブレット、デスクトップデバイスでフォームをプレビューできます。クリック<strong>選ぶ</strong>それが終わったら。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="preview lead form" src="/assets/images/campaign/general/node15860-preview-lead-form.png" /></figure>
+      </li>
+      <li>[<strong>保存</strong>]をクリックして、リードフォームを保存します。</li>
+    </ol>
+    <p>リードフォームを編集するには、[ <strong>編集]</strong>ボタンをクリックします。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="assign">プレイヤーにリードフォームを割り当てる</h2>
+    <p>リードフォームをプレーヤーに割り当てるには、次の手順に従います。</p>
+    <ol class="bcls-tasklist">
+      <li>クリック<strong>キャンペーンプレイヤー</strong>左側のナビゲーションで。</li>
+      <li>プレイヤーを見つけ、[ <strong>リードフォーム]</strong>ドロップダウンリストを使用してリードフォームを選択します。</li>
+    </ol>
+    <p>これでセットアップは完了しました。リード情報を取得する準備ができました。キャンペーン対応プレーヤーを使用してビデオを公開すると、フォームのタイミング設定に従ってリードフォームが表示されます。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="export">リードフォームデータのエクスポート</h2>
+    <p>リードデータをエクスポートするには、2 つのオプションがあり、両方とも左側のナビゲーションメニューからアクセスできます。</p>
+    <ul>
+      <li><strong>キャンペーンデータのエクスポート</strong> -キャンペーン対応のBrightcoveプレーヤーから収集されたリードデータをエクスポートするために使用されます。詳細については、を参照してください。<a href="/campaign/admin/exporting-campaign-data-campaign-module.html">キャンペーンモジュールからのキャンペーンデータのエクスポート</a>。</li>
+      <li><strong>ギャラリーリードのエクスポート</strong> -ギャラリーエクスペリエンスから収集されたリードデータをエクスポートするために使用します。詳細は、「<a href="https://gallery.support.brightcove.com/experiences/portal/exporting-gallery-lead-data.html">ギャラリーリードデータのエクスポート」を参照してください</a>。</li>
+    </ul>
+  </section>
+</article>

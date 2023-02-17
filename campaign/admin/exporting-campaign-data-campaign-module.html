@@ -1,0 +1,73 @@
+---
+title: キャンペーンモジュールのからのキャンペーンデータのエクスポート
+description: このトピックでは、ビューイベントデータとリードフォームデータをエクスポートする方法を学習します。
+parent: Administering Campaign 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>キャンペーン対応のプレーヤーを使用して動画を視聴すると、視聴イベントが記録されます。リードデータは、ユーザーがキャンペーンリードフォームにデータを入力すると取得されます。キャンペーンモジュールは、次の2種類のリードフォームを提供します。</p>
+    <ul>
+      <li><strong>キャンペーンリードフォーム</strong> -これらのフォームは、キャンペーンモジュールの事前定義されたフィールドのセットから選択することによって作成されます。これらのフォームは、リードデータを Video Cloud に保存します。キャンペーンリードフォームの作成については、を参照してください。<a href="/campaign/general/creating-campaign-lead-form.html">キャンペーンリードフォームの作成</a>。</li>
+      <li><strong>カスタムリードフォーム</strong> -これらのフォームは、マーケティング自動化プラットフォームを使用して構築されます。次に、フォーム埋め込みコードをキャンペーンモジュールで使用して、カスタムリードフォームを作成します。これらのフォームは、リードデータをマーケティングオートメーションプラットフォームに送信します。リードフォームの作成については、マーケティングプラットフォーム用のドキュメントを参照してください。
+        <ul>
+          <li><a href="/campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html">エロクア</a></li>
+          <li><a href="/campaign/integrations/marketo/creating-custom-lead-forms-marketo.html">マルケト</a></li>
+          <li><a href="/campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html">セールスフォース</a></li>
+          <li><a href="/campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html">HubSpot</a></li>
+        </ul>
+      </li>
+    </ul>
+    <p>キャンペーンモジュールからリードデータをエクスポートする場合、キャンペーンリードフォームを使用してキャプチャされたデータのみがエクスポートされます。カスタムリードフォームからのリードデータは、マーケティング自動化ソフトウェアに保存されます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export lead data" src="/assets/images/campaign/admin/node15862-export.png" /></figure>
+    <p>データをエクスポートするには、次の手順を実行します。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>キャンペーンモジュールを開きます。</li>
+      <li>クリック<strong>輸出キャンペーン&nbsp;データ</strong>左側のナビゲーションで。<aside class="bcls-aside bcls-aside--information">注:[データのエクスポート] メニューにアクセスするには、アカウント管理者である必要があります。</aside>
+      </li>
+      <li><strong>データをエクスポートするデータ接続を選択します</strong>。[ <strong>データ接続]</strong>ドロップダウンには、設定されているすべての統合が一覧表示されます。</li>
+      <li>エクスポートするデータを選択します。
+        <ul>
+          <li><strong>イベントを見る</strong> -キャンペーン対応プレーヤーによる記録</li>
+          <li><strong>リード</strong> -リードフォームを使用してキャプチャ</li>
+        </ul>
+      </li>
+      <li>日付ピッカーを使用して、<strong>開始日と終了日を選択します</strong>。</li>
+      <li>[ &nbsp;<strong>エクスポート形式] を選択します</strong>。
+        <ul>
+          <li>カンマ区切り値 (CSV)</li>
+          <li>エクセル (XLS)</li>
+        </ul>
+      </li>
+      <li>[ <strong>エクスポート</strong> ] をクリックして、リードデータをダウンロードします。</li>
+      <li>リードフォームとビューイベントデータは、別々のファイルにダウンロードされます。リードデータには、リードフォームに入力されたデータと、次のフィールドが含まれます。
+        <ul>
+          <li><strong>externalID</strong> -これは、[すべての最近のアクティビティ] ページに表示される外部 ID です。Oracle Eloqua の場合は、Eloqua GUID です。マルケトでは、それはマルケートのGUIDです</li>
+          <li><strong>PlayerID</strong> -フォームが表示されたときに使用されたプレーヤーのプレーヤー ID</li>
+          <li><strong>VideoID</strong> -フォームが表示されたときに再生されているビデオのビデオ ID</li>
+          <li><strong>PageURL</strong> -リードフォームを表示したページ URL（ギャラリーエクスペリエンスのみ）</li>
+          <li><strong>CreateDat</strong> -データがキャプチャされた日時</li>
+          <li><strong>エクスペリエンス</strong> -データを収集したギャラリーエクスペリエンス (ギャラリーのエクスペリエンスのみ)</li>
+        </ul>
+        <p>ビューイベントデータには、次のフィールドが含まれます。</p>
+        <ul>
+          <li><strong>externalID</strong> -これは、[すべての最近のアクティビティ] ページに表示される外部 ID です。Oracle Eloqua の場合は、Eloqua GUID です。マルケトでは、それはマルケートのGUIDです</li>
+          <li><strong>VideoID</strong> -ビデオのビデオ ID</li>
+          <li><strong>VideoName</strong> -ビデオの名前</li>
+          <li><strong>見た</strong> -視聴した動画の割合（最も近いパーセント）</li>
+          <li><strong>TimeWatchd</strong> -合計視聴時間</li>
+          <li><strong>PlayerID</strong> -ビデオの視聴に使用されたプレーヤーのプレーヤー ID</li>
+          <li><strong>pageURL</strong> -プレイヤーを含むページの URL</li>
+          <li><strong>CreateDat</strong> -データがキャプチャされた日時</li>
+          <li><strong>updateDat</strong> -イベントが最後に保存された日付と時刻。これはおおむね視聴者が視聴を停止した時点に変換されます。ビデオの長さが 1 分だけであれば、createDat と updateDat が非常に近い状態になります。</li>
+          <li><strong>isSynced</strong> -このビューイベントが、パブリッシャーのマーケティング自動化ツールに自動的にエクスポートされるかどうかを指定します。</li>
+          <li><strong>trackingId</strong> -URL パラメータとして渡されるトラッキング ID。トラッキングIDの操作については、を参照してください。<a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">キャンペーンモジュールとのカスタム統合の作成</a>。</li>
+          <li><strong>UTMフィールド</strong> -UTMソース、UTMMedium、UTMCampaign、UTMTerm、UTMContent。UTMフィールドの操作については、を参照してください。<a href="/campaign/general/working-utm-fields-campaign-module.html">キャンペーンモジュールでのUTMフィールドの操作</a>。</li>
+          <li><strong>metric1-3</strong>、<strong> event1-3</strong> - <a href="/campaign/general/using-custom-metrics-and-events.html">カスタム指標とイベントを使用するときに使用</a></li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+</article>

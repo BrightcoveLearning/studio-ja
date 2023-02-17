@@ -1,0 +1,47 @@
+---
+title: 「playlist-endscreenプラグインを使用したプレイリストエンドスクリーンの構成」の
+description: このトピックでは、playlist-endscreenプラグインを使用して、プレイリストのエンドスクリーンをプレーヤーに追加する方法を学習します。
+parent: Managing Players 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p class="BCL-objective">NS <span translate="No">プレイリスト-エンドスクリーン</span>プラグインを使用すると、動画の再生リストをプレーヤーのエンドスクリーンに表示できます。次に、視聴者はビデオのサムネイル画像をクリックして別のビデオを見ることができます。このプレーヤーでは、プレイリストの終了画面が構成されています。</p>
+    <p>
+      <iframe src="//players.brightcove.net/1752604059001/noMlYptKE_default/index.html?videoId=4817237857001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 640px; height: 360px;"></iframe>
+    </p>
+    <p>プレーヤーのエンドスクリーンの他のオプションについては、を参照してください。<a href="configuring-player-endscreen.html">プレーヤーのエンドスクリーンの構成</a>。</p>
+    <aside class="bcls-aside bcls-aside--information">注:プレイリストの終了画面をプログラムで設定する方法については、<a href="https://player.support.brightcove.com/plugins/playlist-endscreen-plugin.html">開発者向けドキュメントを参照してください</a>。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">プレイリスト終了画面プラグインの構成</h2>
+    <p>Playersモジュールを使用してplaylist-endscreenプラグインを実装するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Playersモジュールを開き、プレーヤーを見つけます。</li>
+      <li>プレーヤーのリンクをクリックして、プレーヤーのプロパティを開きます。</li>
+      <li>クリック<strong>プラグイン</strong>左側のナビゲーションで。</li>
+      <li>クリック<strong>プラグインを追加する&gt;Brightcoveプラグイン</strong>。</li>
+      <li>のために<strong>Brightcoveプラグイン</strong>、 選択する<strong translate="No">プレイリスト-エンドスクリーン</strong>。</li>
+      <li>NS <strong>オプション（JSON）</strong>が含まれています
+        <ul>
+          <li><strong>プレイリストID</strong> -エンドスクリーンに表示するプレイリストのID</li>
+          <li><strong>題名</strong>（オプション）-ビデオのリストの上に表示するタイトル</li>
+        </ul>
+      </li>
+      <blockquote>
+        <pre><code translate="No">{
+  &quot;playlistId&quot;: &quot;1234567001&quot;,
+  &quot;title&quot;: &quot;Related Videos&quot;
+}</code></pre>
+      </blockquote>
+      <figure class="bcls-figure">
+        <blockquote>
+          <p><img class="bcls-image--no-border" alt="" src="/assets/images/players/playlist-endscreen-settings.png" /></p>
+        </blockquote>
+      </figure>
+      <li>[ <strong>保存</strong> ] をクリックし、プレイヤーを公開します。公開されたプレーヤーに変更が表示されるまで、最大5分かかる場合があることに注意してください。</li>
+    </ol>
+  </section>
+</article>

@@ -1,0 +1,119 @@
+---
+title: キャンペーンモジュールのを使用したカスタム統合の作成
+description: このトピックでは、カスタム統合用にキャンペーンモジュールを構成する方法について説明します。
+parent: Non-MAP 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p class="BCL-objective">キャンペーンモジュールを使用すると、VideoCloudでキャンペーン対応の表示データを同期できます&nbsp; BrightcovePlayersから人気のあるマーケティングオートメーションプラットフォームへ。CampaignCampaignモジュールは、カスタム統合を使用して構成することもできます。カスタム統合では、視聴データはVideo Cloudでローカルに保存されます。Audience APIを使用して、そのデータをプログラムで抽出できます。</p>
+    <p>キャンペーンモジュールの統合は、2つの主要なコンポーネントで構成されています。</p>
+    <ul>
+      <li>動画視聴回数データのトラッキングを可能にするBrightcoveプレーヤープラグイン</li>
+      <li>オーディエンス API を使用して表示データを取得するカスタム開発</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="requirements">要件</h2>
+    <p>キャンペーンモジュールを使用するには、次のことを行う必要があります。</p>
+    <ul>
+      <li>ProfessionalまたはEnterprise Video Cloudアカウントを保有している</li>
+      <li>キャンペーンモジュールを開いたときに表示される最初のスプラッシュ画面で必要な情報を送信して、アカウントでキャンペーンモジュールを有効にします</li>
+      <li>はじめてモジュールを使用するときにサービス利用契約に同意している</li>
+      <li>リードを集めるには、<a href="/campaign/general/creating-campaign-lead-form.html"></a>リードフォームを設定してプレイヤーに割り当てる必要があります。</li>
+      <li>プレーヤーを公開するときは、詳細設定 (ページ内) 埋め込みコードを使用してください。標準 (iframe) 埋め込みコードはプラグインが iframe 内で実行されるため、親ページの URL パラメータにアクセスできなくなります。</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="setupconnection">接続のセットアップ</h2>
+    <p>カスタム統合を設定するには次の手順を行ってください。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>キャンペーンモジュールを開き、をクリックします<strong>データ接続</strong>左側のナビゲーションで。</li>
+      <li>[<strong>新規コレクションの追加</strong>]をクリックします。</li>
+      <li>統合として[<strong>カスタム</strong>]を選択します。<aside class="bcls-aside bcls-aside--information">注:利用可能なインテグレーションは、Video Cloud サブスクリプションに基づいています。</aside>
+      </li>
+      <li>(オプション) <strong>接続名を入力します</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select custom" src="/assets/images/campaign/integrations/custom/node16577-select-custom.png" /></figure>
+      </li>
+      <li>[<strong>接続</strong>]をクリックします。</li>
+    </ol>
+    <p>これで、カスタム接続がセットアップされ、使用できる状態になります。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">統合の設定</h2>
+    <p>接続を完了した後、統合を設定できます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="connected options" src="/assets/images/campaign/integrations/custom/node16577-configure.png" /></figure>
+    <ol class="bcls-tasklist-restart">
+      <li>デフォルトでは、[ <strong>接続ステータス]</strong>は [ <strong>有効] になります</strong>。接続ステータスによって、Video Cloud ビデオエンゲージメントデータが保存されるかどうかが決まります。
+        <ul>
+          <li><strong>有効</strong> -データが収集され、保存されます</li>
+          <li><strong>無効</strong> -データは収集されません（統合は無効です）</li>
+        </ul>
+      </li>
+      <li>データ保持ポリシーを選択します。データ保持ポリシーは、表示データとリードフォームデータ（キャンペーンリードフォームを使用している場合）がVideoCloudアカウントに保持される期間を決定します。<aside class="bcls-aside bcls-aside--information">注:[<strong>保持しない</strong>]を選択すると、データは保存されません。API を使用してデータをダウンロードすると、何もありません。</aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="data retention options" src="/assets/images/campaign/integrations/custom/node16577-data-retention-options.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player">キャンペーン対応プレーヤーの作成</h2>
+    <p>ビデオエンゲージメントデータは、次の場合にのみ保存されます&nbsp;キャンペーン対応のビデオプレーヤーを使用しています。キャンペーン対応のBrightcoveプレーヤーの作成については、を参照してください。<a href="/campaign/general/creating-campaign-enabled-player.html">キャンペーン対応プレーヤーの作成</a>。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="trackingid">トラッキングIDを渡す</h2>
+    <p>キャンペーンモジュールは、トラッキングIDを渡す機能をサポートしています。トラッキング ID は、たとえば、キャンペーン ID の追跡に使用されます。トラッキングIDは、キャンペーンが有効なプレーヤーを表示するURLに追加することも、プレーヤーの埋め込みコードに追加することもできます。</p>
+    <ul>
+      <li>例: URLに追加</li>
+    </ul>
+    <pre>
+  http://www.myurl.com/video.html？<strong>bctrackingid=12345</strong></pre>
+    <ul>
+      <li>例:プレーヤーの埋め込みコードに追加しました</li>
+    </ul>
+    <pre>
+<code language="html">&lt;video data-video-id = "6033402539001" data-account = "1486906377" data-player = "default" data-embed = "default" data-application-id class = "video-js" <strong> data-bc-trackingid = "12345"</strong>コントロール&gt;&lt;/ビデオ&gt;&lt;スクリプトsrc = "//players.brightcove.net/1486906377/default_default/index.min.js"&gt;&lt; /脚本&gt;</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="identify">視聴者を識別する</h2>
+    <p>カスタム統合を使用するとき、お客様には視聴者を識別する責任があります。キャンペーンプラグインには、次の2つの重要な情報が必要です。</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>説明</th>
+          <th>URL パラメータ</th>
+          <th>パラメータを埋め込む</th>
+          <th>[値]</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>視聴者は既知ですか (リードフォームに必要な)</td>
+          <td><code translate="No">bcknownuser</code></td>
+          <td><code translate="No">data-bc-known-user</code></td>
+          <td><code translate="No">0</code>または<code translate="No">1</code></td>
+        </tr>
+        <tr>
+          <td>GUID は何ですか (ビューイベント追跡に必要)</td>
+          <td><code translate="No">bccustomguid</code></td>
+          <td><code translate="No">data-bc-custom-guid</code></td>
+          <td><code translate="No">string</code></td>
+        </tr>
+      </tbody>
+    </table>
+    &nbsp;
+    <p>これらの値は、URL パラメータまたはプレーヤーの埋め込みコードを介して渡すことができます。視聴者のトラッキングが発生するには、動画を表示しているページの URL パラメーターとしてユーザー ID を渡す必要があります。潜在顧客フォームには、既知のユーザーパラメーターが必要です (不明な閲覧者に対して潜在顧客フォームを条件付きで表示する場合)。</p>
+    <aside class="bcls-aside bcls-aside--information">注:プレーヤー/プラグインが URL パラメータを読み取るためには、詳細設定 (ページ内) 埋め込みコードを使用する必要があります。標準 (iframe) 埋め込みコードは、プラグインが iframe 内で実行されるため、パラメータを持つ親ページ URL にアクセスできないため、機能しません。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="viewdata">ビデオデータの表示</h2>
+    <p>カスタムインテグレーションを使用する場合、ビデオデータを表示するためのオプションがいくつかあります。</p>
+    <ul>
+      <li><strong>視聴者の活動（イベント）</strong> -キャンペーンモジュールの一部として提供されるこのオプションは、キャンペーンモジュール内のビデオデータを表示するために使用できます。詳細については、を参照してください。<a href="/campaign/general/viewing-player-events-campaign-module.html">キャンペーンモジュールでのプレーヤーイベントの表示</a>。</li>
+      <li><strong>データのエクスポート</strong> -キャンペーンモジュールの一部として提供されるこのオプションは、ビデオビューとリードデータをエクスポートするために使用できます。詳細については、を参照してください。<a href="/campaign/admin/exporting-campaign-data-campaign-module.html">キャンペーンモジュールからのキャンペーンデータのエクスポート</a>。</li>
+      <li><strong>オーディエンス API</strong> -Audience API を使用して、ビデオビューとリードデータをプログラムで取得できます。詳細については、「<a href="/campaign/develop/overview-audience-api.html">概要」を参照してください。オーディエンス API</a>。</li>
+    </ul>
+  </section>
+</article>

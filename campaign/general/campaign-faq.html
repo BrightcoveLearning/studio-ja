@@ -1,0 +1,144 @@
+---
+title: Brightcove Campaign FAQの
+description: このトピックには、Brightcoveキャンペーンに関してよく寄せられる質問の一部が含まれています。
+parent: General Information 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section" id="why-how">
+    <h2>キャンペーンの理由と仕組み</h2>
+    <dl>
+      <dt class="bcls-question">マーケティングオートメーションソリューションで動画を追跡する必要があるのはなぜですか？</dt>
+      <dd class="bcls-answer">マーケティング自動化ソリューションは、今日の動画を追跡しません。強力なコンテンツとして動画に投資する場合は、その効果を追跡し、コンテンツを閲覧したリード/ユーザーとのコミュニケーションを自動化する必要があります。 </dd>
+      <dt class="bcls-question">BrightcoveとキャンペーンモジュールはCookieを使用しますか？</dt>
+      <dd class="bcls-answer">キャンペーンモジュールは、統合が行われているときにユーザーを識別するためにサードパーティのCookieを作成して使用します。この方法では、視聴者はリードフォームに二度目に記入するよう求められることはありません。このモジュールでは、Marketo、HubSpot、Eloqua API も利用し、クッキーを使用してビューアを追跡します。キャンペーンプロファイルを使用する場合、BrightcoveCookieが使用されます。</dd>
+      <dt class="bcls-question">Brightcoveキャンペーンはすべての顧客に対して有効になっていますか？</dt>
+      <dd class="bcls-answer">いいえ。キャンペーンは、Video Marketing Suite（VMS）の購入可能なアドオンとして利用できます。ただし、キャンペーンプロファイルは、すべてのBrightcoveのお客様が無料で利用できます。あなたはそれを「キャンペーンライト」と考えることができます。</dd>
+      <dt class="bcls-question">キャンペーンプロファイルの対象となるのは誰か。</dt>
+      <dd class="bcls-answer">2017年第4四半期以降、すべてのVMSのお客様はキャンペーンプロファイルに無料でアクセスできるようになります。<a href="/campaign/integrations/non-map/using-campaign-module-track-viewers.html">トラッキングデータを開始するには、この機能をアクティブ化する必要があります</a>。Enterprise Video Suite（EVS）のお客様は、キャンペーンSSO追跡も利用できます。</dd>
+    </dl>
+  </section>
+  <section class="bcls-section" id="tracking-limitations">
+    <h2>視聴者の追跡と制限</h2>
+    <dl>
+      <dt class="bcls-question">フル機能のキャンペーンモジュールと比較して、キャンペーンプロファイルにはどのような制限がありますか？</dt>
+      <dd class="bcls-answer">
+        <ul>
+          <li>サードパーティ製システムとの統合は不要</li>
+          <li>APIアクセスなし</li>
+          <li>カスタムリードフォームなし（キャンペーンリードフォームのみ）</li>
+          <li>1000 ビュー/最大 24 時間キャプチャ時間</li>
+        </ul>
+        キャンペーンデータをCSVまたはXLSファイルに手動でエクスポートすることはできます。</dd>
+      <dt class="bcls-question">マーケティングオートメーションプラットフォームに接続した場合、キャンペーンにはどのような制限/要件がありますか？</dt>
+      <dd class="bcls-answer">制限と要件については、各プラットフォームのドキュメントに記載されています。
+        <ul>
+          <li><a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html">オラクル・エロクア</a></li>
+          <li>HubSpot ( <a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">クライアント側 API</a>または<a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html"> REST API</a> )</li>
+          <li>MarketO ( <a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">Munchkin</a>または<a href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html"> REST API</a> )</li>
+          <li><a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html">セールスフォース</a></li>
+        </ul>
+      </dd>
+      <dt class="bcls-question">オーディエンス API をポーリングできる頻度に制限はありますか？動画検索結果に1000のキャップがあることは知っていますが、そのAPIエンドポイントには他の周波数関連のキャップがありますか？ </dt>
+      <dd class="bcls-answer">API 呼び出しあたりのビューイベントの最大数は 100 です。レート制限はありませんが、あまりにも多くを呼び出そうとすると、おそらく少し遅くなります。</dd>
+      <dt class="bcls-question">現在存在する3時間の遅延よりも速くキャンペーンデータを取得する方法はありますか？私は「リアルタイムに近い」指標を取得したいと思います。</dt>
+      <dd class="bcls-answer">なしリアルタイムメトリクスが必要な場合は、独自のプラグインを作成し、データを自分のシステムに送信する必要があります。</dd>
+      <dt class="bcls-question">イベントビューがキャンペーンに送信されるトリガーは何ですか？ビデオが完了したとき、プレーヤーウィンドウが閉じられたとき、または何か他のものですか？ユーザーがビデオを完了せず、プレーヤーウィンドウを閉じない場合はどうなりますか？</dt>
+      <dd class="bcls-answer">さまざまですが、基本的に、キャンペーンプラグインは10秒ごとにハートビートをサーバーに送り返します。</dd>
+      <dt class="bcls-question">キャンペーンでは、ビューの追跡が「完了」したと見なされるのはいつですか。プレーヤーウィンドウが閉じているときですか、ビデオが完成したときですか？彼らが間近で見て、ビデオを一時停止し、プレーヤーウィンドウを閉じない場合はどうなりますか？</dt>
+      <dd class="bcls-answer">私たちが最後にハートビートを見たから15分が経過した時です。基本的に活動が不足しています。</dd>
+      <dt class="bcls-question">キャンペーンの視聴データで利用可能になった視聴者データを変更することはできますか？そのイベントデータは、将来何らかのログ統合によって更新されますか？ </dt>
+      <dd class="bcls-answer">UIまたはAPIを介してキャンペーンでデータが利用可能になると、データは「解決済み」と見なされ、変更されることはありません。</dd>
+    </dl>
+  </section>
+  <section class="bcls-section" id="data-protection">
+    <h2>データ保護と記録保持</h2>
+    <dl>
+      <dt class="bcls-question">キャンペーンGDPRに準拠していますか？</dt>
+      <dd class="bcls-answer">
+        <p>はい、キャンペーンにより、顧客はユーザーに代わって行動し、キャンペーンを通じて収集したデータを検索して削除することができます。 </p>
+        <p><a href="/campaign/admin/managing-viewer-data.html">https://studio.support.brightcove.com/campaign/admin/managing-viewer-data.html</a></p>
+      </dd>
+      <dt class="bcls-question">キャンペーンでデータを保持できる期間はどれくらいですか？</dt>
+      <dd class="bcls-answer">MAP 統合は最大 6 か月に設定でき、非 Map 統合は 3 年に設定できます。 </dd>
+      <dt class="bcls-question">GUID ルックアップがキャッシュされる期間はどれくらいですか</dt>
+      <dd class="bcls-answer">既知の場合は 30 日、不明の場合は 7 日間 (MAP 統合にのみ適用され、非 Map 統合にはルックアップは必要ありません)</dd>
+    </dl>
+  </section>
+  <section id="marketing-automation" class="bcls-section">
+    <h2>マーケティング自動化とビューア分析</h2>
+    <dl>
+      <dt class="bcls-question">マーケティングオートメーションプラットフォームの他のメディアと動画のトラッキングについて何が違うのですか？</dt>
+      <dd class="bcls-answer">ウェブページやダウンロード可能なホワイトペーパーとは異なり、ビデオを使用すると、視聴者が視聴したビデオの量、つまりどのコンテンツが公開されているかを正確に判断できます。 </dd>
+      <dt class="bcls-question">Eloqua/marketo/HubSpotアカウントとどのように接続しますか？</dt>
+      <dd class="bcls-answer">キャンペーンモジュールのビデオマーケティングスイートから直接、Eloqua / Marketo / HubSpotアカウントにログインできます。そこから、MAPトラッキングを内蔵したプレイヤーとリードフォームを作成できるため、動画分析のトラッキングをすぐに開始できます。</dd>
+      <dt class="bcls-question">Eloqua/marketo/HubSpotページだけでなく、非Eloqua/marketo/HubSpotのランディングページ（サイトコア/ワードプレス/ギャラリーなど）のビューを追跡できますか？ </dt>
+      <dd class="bcls-answer">はい、使用されているプレーヤーが「キャンペーン対応」（キャンペーンプラグインがインストールされている）である限り、プレーヤーがMAPランディングページまたは他のランディングページに存在するかどうかにかかわらず、すべてのビューが追跡されます。</dd>
+      <dt class="bcls-question">この統合で追跡できるものは何ですか？</dt>
+      <dd class="bcls-answer">当社の統合により、データベースにすでに存在する既知の連絡先の動画視聴分析（動画、動画 ID、閲覧率、視聴時間）を追跡できます。</dd>
+      <dt class="bcls-question">不明な連絡先はどうですか？彼らも追跡できますか？</dt>
+      <dd class="bcls-answer">Brightcove Campaignを使用すると、不明な連絡先を追跡でき、Eloqua / HubSpotフォームを送信すると（既知になる）、Campaignは視聴者情報をその新しい連絡先にさかのぼって関連付けることができます。キャンペーンは、視聴者情報を毎日再送信して、不明な連絡先からのビューデータをOracle Eloqua / HubSpotインスタンスに照合します。 </dd>
+      <dt class="bcls-question">私のビデオビューのデータは、マップ内のどこに表示されますか？</dt>
+      <dd class="bcls-answer">これは、使用している MAP によって異なります。については、次のドキュメントを参照してください<a href="/campaign/integrations/eloqua/eloqua-integration-testing-guide.html">Oracle Eloqua</a>、<a href="/camapign/integrations/marketo/marketo-rest-integration-testing-guide.html"> Marketo</a>と<a href="/campaign/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html">HubSpot</a>。</dd>
+      <dt class="bcls-question">Salesforce の動画視聴データはどこに表示されますか？</dt>
+      <dd class="bcls-answer">ビデオビューは、[アクティビティ] セクションのビューアの連絡先の下にタスクとして Salesforce に配信されます。見る<a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html#sfdata">Salesforceでのビデオデータの表示</a>この例については。 </dd>
+      <dt class="bcls-question">連絡先の 1 人が動画を視聴したときに Salesforce で通知を受けることはできますか？</dt>
+      <dd class="bcls-answer">直接じゃないただし、連絡先の活動を通知するレポートを実行することはできます。</dd>
+      <dt class="bcls-question">SalesforceとOracle Eloqua/Marketoとの追跡に違いはありますか？</dt>
+      <dd class="bcls-answer">最大の違いは、Salesforce がユーザを追跡するために Cookie を使用しないことです。したがって、ビューアを識別するために、一意の識別子を渡す必要があります。詳細については、<a href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html#identify"></a>このドキュメントを参照してください。さらに、CRM である Salesforce は、自動化されたフォローアップやリードスコアリングを提供していません。ただし、Salesforce で ToDo を作成し、実際のフォローアップのために営業チームに割り当てることができます。</dd>
+      <dt class="bcls-question">キャンペーンには「カスタム」統合オプションがありますが、これを使用してキャンペーンを統合できる他のプラットフォームは何ですか？</dt>
+      <dd class="bcls-answer">
+        <p>キャンペーンは、次のようなデータプラットフォームと「統合」できます。</p>
+        <ol>
+          <li>各連絡先レコードに一意の識別子を使用します。</li>
+          <li>サードパーティのプラットフォーム（キャンペーンなど）から追加のデータを受信できるAPIがあります</li>
+        </ol>
+      </dd>
+    </dl>
+  </section>
+  <section id="lead-forms" class="bcls-section">
+    <h2>プレイヤーリードフォーム</h2>
+    <dl>
+      <dt class="bcls-question">キャンペーンはいつリードフォームを表示しますか？</dt>
+      <dd class="bcls-answer">デフォルト設定では、MAP データベース内の不明なユーザー (既知のユーザーに変換するユーザー) へのリードフォームのみが表示されます。リードフォームを常に表示するように選択した場合は、設定でこれを上書きできます。これはテストに最も役立ちます。既知のユーザーは自動的に追跡され、そのデータは MAP 内の連絡先に関連付けられ、フォームを表示する必要はありません。</dd>
+      <dt class="bcls-question">リードフォームをカスタマイズできますか？</dt>
+      <dd class="bcls-answer">UI を使用して、表示されるテキストとフィールドを調整できます。UI で利用可能なものを超えて変更することはできません (ギャラリーでは、フォームがサイトと一致するようにスタイルを更新できます) </dd>
+    </dl>
+  </section>
+  <section id="general" class="bcls-section">
+    <h2>一般的なトピック</h2>
+    <dl>
+      <dt class="bcls-question">どの埋め込みコードを使うべきですか？iframeかページ内？</dt>
+      <dd class="bcls-answer">キャンペーンを機能させるには、高度な埋め込みコードを使用する必要があります。標準（iframe）埋め込みコードが使用されている場合、プレーヤーはページから分離されます。つまり、キャンペーンプラグインは一意の識別子を認識できないため、すべてのユーザーが「不明」と見なされます。</dd>
+      <dt class="bcls-question">マーケティング自動化とは何ですか？</dt>
+      <dd class="bcls-answer">マーケティング自動化は、さまざまなオンラインマーケティングチャネル（電子メール、ウェブ、フォーム、コンテンツ、ビデオ、ソーシャルなど）とのリード/ユーザーのインタラクションを追跡する技術です。マーケティング自動化により、マーケティング担当者はこれらのチャネル全体でより効果的にマーケティングを行い、反復的なマーケティングタスク（電子メール通信など）を自動化できます。マーケティング自動化により、マーケティング担当者は事前定義された変数に基づいて、自動化されたパーソナライズされたタスクを設定できます。たとえば、ユーザーが特定の動画の 75% を視聴した場合、その特定の件名に関するメールを送信しますが、12% しか視聴していない場合は別のものを送信します。 </dd>
+      <dt class="bcls-question">ブライトコーブはマーケティングオートメーション企業ですか？</dt>
+      <dd class="bcls-answer">いいえ、ブライトコーブは動画マーケティングのための完全なソリューションを提供しています。当社のソリューションにより、動画をオンラインで入手し、コンテンツを整理、プレーヤーの作成、ビデオポータルの作成、分析の追跡、既存のマーケティング自動化プラットフォームとの統合を行うことができます。ブライトコーブは、動画分析をマーケティングオートメーションプラットフォームに統合します。</dd>
+      <dt class="bcls-question">MarketOカスタムアクティビティが正しく設定されているかどうかを確認するにはどうすればよいですか？</dt>
+      <dd class="bcls-answer">キャンペーンには、特定の種類の統合のためのいくつかのデバッグツールを提供する非表示のURLがあり、MarketoRESTがその1つです。<a href="https://studio.brightcove.com/products/videocloud/campaign/debug"> https://studio.brightcove.com/products/videocloud/campaign/debug</a>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Campaign settings " src="/assets/images/campaign/general/faq-debug.png" /></figure>
+      </dd>
+      <dt class="bcls-question">カスタムインテグレーションを構成するには何が必要ですか？</dt>
+      <dd class="bcls-answer">次の3つのことをする必要があります。
+        <ol>
+          <li>キャンペーンで取得できるページのURLまたはコードで一意の識別子を公開する必要があります。</li>
+          <li> Audience API を使用してデータを JSON ファイルとして取得するスクリプトを作成します（Brightcove グローバルサービスがこれを支援します）。</li>
+          <li> データを宛先データベースのフィールドにマップします (スプレッドシートの結合を考えて)。</li>
+        </ol>
+        次のサポートドキュメントでは、これらのタスクについて説明します。
+        <ul>
+          <li><a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">キャンペーンモジュールとのカスタム統合の作成</a> -キャンペーンがキャプチャできる一意の識別子を提供する方法について説明します</li>
+          <li> <a href="/campaign/develop/overview-audience-api.html">Audience API</a> -すべてのデータを JSON ファイルとしてプログラムで取得し、選択したデータ処理システムにインポートする方法を説明します。</li>
+        </ul>
+      </dd>
+      <dt class="bcls-question">キャンペーンはどのようにCDOデータをEloquaにプッシュしますか？</dt>
+      <dd class="bcls-answer">カスタムオブジェクトバルク API を使用します。<a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/api-bulk-2.0-customobjects.html">https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/api-bulk-2.0-customobjects.html</a></dd>
+      <dt class="bcls-question">キャンペーンは外部資産活動をどのように推進しますか？「キャンペーン」、「外部資産」および「活動タイプ」を使用する方法を制御できますか。</dt>
+      <dd class="bcls-answer">外部アクティビティ API ( <a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/op-api-rest-2.0-data-activity-post.html">https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/op-api-rest-2.0-data-activity-post.html</a> ) を使用しています。キャンペーンの名前、アセット名、タイプを制御することはできません。私たちは、独自のキャンペーン（BrightCoveVideoPlay という名前の）を作成し、アクティビティの作成に進みます。BrightCoveVideoPlay という名前もあります。 </dd>
+      <dt class="bcls-question">キャンペーンがサービスXと通信できるように、どのIPアドレスをホワイトリストに登録できますか？</dt>
+      <dd class="bcls-answer">キャンペーンは、IPホワイトリストに使用する必要がある一連のIPアドレスを確立しました。リストを表示するには、Eloqua接続を編集して、<a ng-click="showInfo()" ng-if="::!ctrl.hideWhitelistInfo &amp;&amp; ctrl.isEloqua(ctrl.integration)" context="troubleSeeing"><strong> Eloquaでキャンペーンデータを表示できませんか？</strong></a>リンクをクリックして、IPアドレスのリストを表示します。</dd>
+    </dl>
+  </section>
+</article>

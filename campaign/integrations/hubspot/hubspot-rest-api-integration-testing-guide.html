@@ -1,0 +1,90 @@
+---
+title: HubSpot REST API統合テストガイドの
+description: このトピックでは、RESTAPIを使用してVideoCloudとHubSpotの統合を検証する方法を学習します。
+parent: HubSpot 
+grandparent: Integrations 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>REST API を使用して新しい HubSpot 統合を設定する場合、動画視聴データが実際に HubSpot に配信されているかどうかをテストして確認することは困難です。このトピックでは、統合が機能していること、および表示データとリードが HubSpot に送信されていることを体系的にテストして確認する方法を学びます。</p>
+    <aside class="bcls-aside bcls-aside--information">注:このトピックは、REST API を使用して作成された HubSpot 接続を検証するためのものです。</aside><aside class="bcls-aside bcls-aside--information">注:HubSpot で使用するキャンペーンモジュールを設定する方法については、REST API を使用したビデオクラウドと HubSpot &nbsp;<a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">の統合を参照してください</a>。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="start">始める前に</h2>
+    <p>統合を検証する前に、次のことが前提になります。</p>
+    <ul>
+      <li>正常に完了しました<a href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">BrightcoveキャンペーンとHubSpotの統合</a></li>
+      <li>少なくとも1つ作成しました<a href="/campaign/general/creating-campaign-enabled-player.html">キャンペーン対応プレーヤー</a> HubSpot接続を使用するように構成しました</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="lead_form">テストリードフォームの設定とビデオの公開</h2>
+    <p>テストの目的で、キャンペーンでカスタムリードフォームを作成して構成する必要があります。これは、キャンペーンに貼り付けた埋め込みコードのHubSpotフォームです。実稼働環境でリードフォームを使用しない場合でも、このリードフォームを使用して、データベースおよびページで既知であることが確認されます。HubSpotフォームを作成し、それを使用するようにCampaignを構成するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>HubSpot アカウントにログインします。</li>
+      <li>HubSpot フォームを作成し、スタイルを設定します。HubSpot フォームの作成の詳細は、「HubSpot <a href="/campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html">のカスタムリードフォームの作成」を参照してください</a>。</li>
+      <li>クリック<strong>共有</strong>ページの上部にあります。</li>
+      <li>フォームの埋め込みコードをクリップボードにコピーします。</li>
+      <li>キャンペーンモジュールに戻ります。</li>
+      <li>HubSpot フォームの埋め込みコードを使用して、新しいリードフォームを作成します。</li>
+      <li>5 秒のマークにフォームが表示されるようにカスタムフォームを設定します。このようにして、いつ表示されるべきかを正確に知ることができます。</li>
+      <li>[リードがすでにわかっている場合でも、<strong>常にリードフォームを表示する] チェックボックスをオンにします</strong>。これにより、テスト中に記入した後もフォームが表示され続けます。</li>
+      <li>フォームを保存します。</li>
+      <li>作成したばかりの HubSpot リードフォームを使用するように HubSpot 接続で Brightcove Player を設定します。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="preview_video">ビデオを見るためのプレビューリンクの生成</h2>
+    <p>ビデオへのプレビューリンクを生成するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Media モジュールを開きます。</li>
+      <li>ビデオを選択し、Web プレーヤーに公開します。リードフォームでキャンペーン対応のプレーヤーを選択してください。</li>
+      <li>プレビューリンクをクリックして、ビデオを新しいブラウザウィンドウで開きます。この方法でテストすると、HTML ページに埋め込まれたプレーヤーによって導入される可能性のある変数がなくなります。</li>
+      <li>ビデオが再生され、リードフォームが 5 秒マークに表示されることを確認します。</li>
+      <li>一意の連絡先情報とメールアドレス (有名人の名前、または「bctest」という単語を含む名前) を使用してリードフォームに記入し、後でHubSpotで簡単に見つけることができます。これにより、ブラウザ、プレーヤー、データベースレベルの変数がなくなります。新しいユーザーとしてフォームに入力することで、HubSpot で既知のユーザーであることが確認されます。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="confirm_data">キャンペーンがデータを正常にキャプチャしていることを確認する</h2>
+    <p>HubSpotでビデオ視聴データを探す前に、まずCampaignが実際にビデオビューをキャプチャしたことを確認してください。データの表示は、キャンペーンUIに表示されるまでに最大3時間かかる場合があることに注意してください。キャンペーンがデータを正常にキャプチャしていることを確認するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>キャンペーンモジュールを開きます。</li>
+      <li>クリック<strong>最近のすべての活動</strong>左側のナビゲーションで。</li>
+      <li>視聴したばかりの動画の名前を示す最近のタイムスタンプが付いたイベントがあることを確認します。<strong>イベントステータスは未処理である必要があります</strong>。これは、Campaignがビューをキャプチャしたが、HubSpotへの同期をまだ試みていないことを示しています。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node18741-unprocessed.png" /></figure>
+      </li>
+      <li>キャンペーンとHubSpot間の同期を手動でトリガーするには、<strong>同期アクティビティ</strong>左側のナビゲーションで。</li>
+      <li><strong>[接続の選択]</strong>ドロップダウンリストから、HubSpot 統合を選択します。NS <strong>テスト同期</strong>ボタンが表示されます。</li>
+      <li>[ 同期のテスト] をクリックして、手動同期をトリガーします。手動同期をトリガーできる頻度は制限されます。デフォルトでは、キャンペーンは1時間に1回ビューをHubSpotに同期します。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node18741-test-sync.png" /></figure>
+      </li>
+      <li>クリック<strong>最近のすべての活動</strong>左側のナビゲーションで。</li>
+      <li><strong>ビューイベントのステータスはキューに入れられます</strong>。データが HubSpot に実際に同期されるには 15 分ほどかかる場合があります。データが同期されると、ステータスは次の 2 つのステータスのいずれかに変更されます。
+        <ul>
+          <li><strong>synced</strong> -ユーザーが既知のユーザーであり、データがアクティビティログに正常に配信されたことを示します。データは、数分以内に HubSpot でも表示できます。</li>
+          <li><strong>unknown_contact</strong> -ユーザーが不明と見なされ、HubSpot がデータを受け入れることができなかったことを示します。<strong>unknown_contact</strong>のステータスが取得された場合は、正しいプレーヤーを使用して動画を公開したことを確認し、HubSpot フォームを設置し、ページに埋め込まれていないプレビューリンクを使用してテストします。
+            <figure class="bcls-figure"></figure>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="confirm_marketo">動画ビューのデータが HubSpot にあることの確認</h2>
+    <p>キャンペーンが表示されたら<strong>同期</strong>ステータスが表示されたら、次の手順に従って、データがHubSpotにあることを確認します。</p>
+    <aside class="bcls-aside bcls-aside--information">注:HubSpot UI がキャンペーンから受け取った新しいデータで更新されるには 5 ～ 10 分かかります。</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>HubSpot アカウントにログインします。</li>
+      <li>HubSpot で [ <strong>連絡先]</strong>領域に移動し、リードフォームに入力するときに使用した一意の名前または電子メールアドレスを探します。</li>
+      <li>連絡先をクリックして、アクティビティログを開きます。</li>
+      <li>クリックしてください<strong>アクティビティをフィルタリングする</strong>ドロップダウン（ページの下のページの上部<strong>アクティビティ</strong>メニュー）そしてそれを確認する<strong>Brightcove Video Connect</strong>チェックされます。これにより、ビデオ視聴アクティビティがアクティビティログに表示されます。</li>
+      <li>アクティビティログで、<strong>ブライトコーブ</strong>アクティビティ。詳細を展開して、ビデオビューイベントのデータを表示します。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node18741-video-event.png" /></figure>
+      </li>
+    </ol>
+    <p>HubSpot では、API 経由で配信されるデータを既知の連絡先に割り当てる必要があります。HubSpot は、既知の連絡先のデータのみを受け付けます。不明な連絡先のデータは同期されません。リードフォームを使用しない場合、不明なユーザーが既知のユーザーに変換する方法がないため、データは同期されません。</p>
+  </section>
+</article>

@@ -1,0 +1,84 @@
+---
+title: キャンペーンの問題のトラブルシューティングの
+description: このトピックでは、キャンペーンモジュールを使用する際のトラブルシューティング手法について学習します。
+parent: Administering Campaign 
+---
+
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="logging">詳細ログの有効化</h2>
+    <p>詳細ログを有効にすると、ブラウザコンソールでキャンペーン関連の情報を表示できます。これは、キャンペーンの問題をデバッグするときに役立ちます。追加することにより、詳細ログを有効にできます&nbsp;<code translate="No">bcverbose=1</code>キャンペーン対応プレーヤーを使用してページのURLに移動するか、キャンペーンプラグインを構成して<code translate="No">"verbose": true</code>オプション: </p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="configure plugin" src="/assets/images/campaign/admin/node18487-plugin.png" /></figure>
+    <p>ログメッセージは、コンソールで表示できます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="console" src="/assets/images/campaign/admin/node18487-console.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="leadform">リードフォームに関する問題</h2>
+    <p>以下は、リードフォームで見た一般的な問題と質問です。</p>
+    <h3>フォームが送信された後も Marketo Munchkin 統合でリードフォームが表示され続けるのはなぜですか？</h3>
+    <p>Munchkin統合は、ユーザーが知られているかどうかを尋ねるために使用できるAPIを持っていません。既知のユーザーかどうかわからないので、常にリードフォームを表示します。Marketo REST 統合では API が提供されるため、既知のユーザーと不明なユーザーを特定できます。Marketa REST 統合に切り替えることが推奨され、この問題を回避できます。</p>
+    <h3>カスタムリードフォームは、送信時にリダイレクトするように設定されています。フォームを送信した後、1、2 秒間、リダイレクトされるページが表示されるのはなぜですか。</h3>
+    <p>リードフォームを破棄する前に、リダイレクトされたページが完全に読み込まれるまで待たなければなりません。解決策の1つは、軽量なページ（画像やJavaScriptが少なくない）、またはこの問題に対処するために特別にセットアップした空白ページ（所在地<code translate="No">https://map.brightcove.com/lead/complete</code>）にリダイレクトすることです。</p>
+    <h3>確認HTMLでリードフォームを設定しました。提出後数秒間黒い画面が表示されるのはなぜですか？</h3>
+    <p>HTML のテキストの色を必ず変更してください。確認HTMLはおそらく表示されます。デフォルトのテキストの色は黒であるため、表示されません。</p>
+    <h3>HubSpot リードフォームが提出後に却下されないのはなぜですか？</h3>
+    <p>HubSpot のリードフォームがにリダイレクトするように設定されていることを確認します<code translate="No"><strong>http://map.brightcove.com/lead/complete</strong></code>。確認メッセージを表示する場合は、HubSpotではなくキャンペーン内で構成してください。</p>
+    <h3>リードフォームが表示されないのはなぜですか？</h3>
+    <p>リードフォームが表示されない場合は、まず、リードフォームを表示するためのすべての基準が満たされていることを確認します。視聴している複数の動画に依存する基準は、ページの更新では機能しません。これらは、次のビデオが同じプレーヤーに自動的にキューに入れられるユースケースを対象としています。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>キャンペーンプラグインがプレーヤーに追加されていることを確認します。詳細については、を参照してください。<a href="/campaign/general/creating-campaign-enabled-player.html">キャンペーン対応プレーヤーの作成</a>。</li>
+      <li>統合が正しくセットアップされ、プラグインに送信されていることを確認します。</li>
+      <li>リードフォームがそのプレイヤーに追加されていることを確認します。プラグインの設定に対する呼び出しに対する応答には、リードフォームがプレーヤーに追加されている場合、LeadForm プロパティの下にリードフォーム表示情報が含まれている必要があります。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="leadform debug" src="/assets/images/campaign/admin/node18487-leadform-debug.png" /></figure>
+      </li>
+      <li>ビューアーがまだリードしていないことを確認します。リードフォームは、キャンペーンが、視聴者がマーケティングオートメーションプラットフォーム（MAP）のリードではないこと、またはリードフォームにまだ記入していないことを識別した場合にのみ表示されます。プラグインは、キャンペーンサーバーに対して個別のJSONP呼び出しを行い、ビューアがリードであるかどうかを確認します。ビューアがリードの場合、サーバーはステータスが 1 で、ビューデータを MAP に同期するのに便利なその他の識別子で応答します。ビューアがリードでない場合、サーバーはステータスが 0 で応答します。
+        <ul>
+          <li>リードではないビューアに対するレスポンスの例:
+            <pre>
+/**/ typeof JSONPCallback_2935650618 == '関数'  &amp;jsonpCallback_2935650618 ( {"status":0} );</pre>
+          </li>
+          <li>リードであるビューアに対するレスポンスの例:
+            <pre>
+/**/ jsonpCallback_45936049288 == '関数'  &amp; JSONPCallback_45936049288 ( {"status":1,"eloqua":{"contactId":"5","internalId":"CTCPB000000000005"} });</pre>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sync">同期の問題</h2>
+    <p>以下は、私たちが見た同期の一般的な問題をいくつか挙げます。</p>
+    <h3>Marketo REST ビューイベントがエラーと同期に失敗したアクティビティタイプ ID '000000' が見つかりません</h3>
+    <p>これは、統合に関連付けられたカスタム Marketa アクティビティが削除された場合に発生します。Marketoの REST 統合が作成されると、アクティビティを取得し、その ID を保存し、その ID を使用してイベントを同期します。解決策（新しい Brightcove Video View アクティビティが作成されていることを前提として）は、統合を切断して再作成して、新しいアクティビティの ID を取得することです。</p>
+    <h3>同期していないイベントを表示</h3>
+    <p>統合がMAPで正しく設定されている場合、キャンペーン対応プレーヤーからのデータを表示すると、<strong>最近のすべての活動</strong>それぞれのMAPの既知のリードに対応するページおよびビューイベントは、最終的にツールに同期する必要があります。</p>
+    <p>まず、[ <strong>すべての最近のアクティビティ]</strong>ページにビューデータが表示されていることを確認します。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="viewer activity" src="/assets/images/campaign/admin/node18487-viewer-activity.png" /></figure>
+    <p>ビューイベントがリストされているがMAPにない場合、ユーザーは、APIを介してビューデータをMAPにインポートするための十分な権限を持たないユーザーとして、MAPでキャンペーンを承認したか、統合が正しく構成されていない可能性があります。キャンペーンのホームページには、最近のビューイベントの同期操作のステータスが一覧表示されます。ビューイベントが MAP に同期されない理由を示すために、フィードバックがそこに表示されます。</p>
+    <p>ビューイベントがキャンペーンに表示されている場合は、<strong>状態</strong>列は<strong>同期</strong>。これは、キャンペーンがデータをMAPに正常に配信できたことを示しています。<strong>unknown_contact のステータスが表示された場合</strong>、これはユーザーが認識されておらず、マップがそれを受信できないことを意味します。ほとんどの MAP は、既知のユーザーのサードパーティデータのみを受け入れます。解決策は、マップで作成されたカスタムリードフォームを使用して、実際に既知のユーザーであることを保証することです。</p>
+    <p>ビューイベントがリストされていない場合は、キャンペーンが有効なプレーヤーでキャンペーンが設定されていない可能性があります。開発者ツールが有効になっているブラウザを使用して、問題のあるビデオを含むページにアクセスし、特定のHTTP呼び出しがキャンペーンプラグインによって行われることを確認します。</p>
+    <p>プレーヤーが読み込まれると、プラグインはキャンペーン構成エンドポイントを呼び出して、統合に基づいてプラグインの動作を決定するパラメーターを取得する必要があります。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="plugin config" src="/assets/images/campaign/admin/node18487-debug-config.png" /></figure>
+    <p>このコールがネットワークトラフィックから欠落している場合は、プレーヤーにインテグレーションが割り当てられていないことを意味します。これを行う方法については、を参照してください。<a href="/campaign/general/creating-campaign-enabled-player.html">キャンペーン対応プレーヤーの作成</a>。</p>
+    <p>この呼び出しは JSONPを使用して行われます。JSONPレスポンスが空のオブジェクトである場合、埋め込みコードが正しくないため、間違ったアカウント ID が指定されている可能性があります。構成リクエストにアカウントとプレーヤーの両方のURLパラメーターが含まれていない場合、または指定されたアカウントをキャンペーン固有のデータベースから取得できなかった場合（URL /埋め込みで間違ったアカウントが指定された可能性が高い）、このエンドポイントから空のオブジェクトが返されます。コードであり、データベースで見つかりませんでした）。</p>
+    <pre>
+/**/ typeof JSONPCallback_78754666587 == '関数'  &amp; JSONPCallback_78754666587 ( {} );</pre>
+    <p>オブジェクトに ID パラメーターがあり、統合パラメーターがない場合、ユーザーはマーケティングオートメーションツールとの統合を設定していないため、ビューイベントは記録されません。</p>
+    <p>キャンペーン対応プレーヤーの公開時に標準埋め込み（iframe）コードが使用された場合も、データ同期の問題が発生します。プレーヤーを公開するときは、高度な埋め込み (ページ内) コードを使用します。キャンペーンプラグインはiframe内で実行されるため、標準の埋め込み（iframe）公開コードは機能しません。そのため、親ページのCookieにアクセスできません。&nbsp; URLパラメータ。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="connection">接続の問題</h2>
+    <h3>キャンペーンモジュールは、Eloqua統合をセットアップできないと言っています</h3>
+    <p>Eloqua <a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html#requirements">の要件を確認してください</a>。IPホワイトリストセキュリティ機能を使用している場合、指定されたIPアドレスをホワイトリストに登録してCampaign-Eloquaトラフィックを許可しない限り、CampaignはEloquaと通信できません。コンタクト<a href="https://supportportal.brightcove.com/s/login/?language=en_US/create">Brightcoveサポート</a>詳細については。</p>
+    <h3>キャンペーンによると、Marketo RESTカスタムアクティビティにフィールドがありませんが、Marketoを見ると、すべてのフィールドが存在することがわかります</h3>
+    <p>確認すべきことはいくつかあります: </p>
+    <ol class="bcls-tasklist-restart">
+      <li>フィールド名は正確に一致する必要があります。「イベント 1」は「Event1」と同じではありません。</li>
+      <li>アクティビティは承認済みで、ドラフト状態ではない必要があります。</li>
+      <li>カスタムアクティビティを削除し、新しい Marketto REST 統合を設定せずに再作成した場合は、古いインテグレーションを切断し、新しい統合を作成する必要があります。カスタムアクティビティを検索し、統合ごとにその ID 値を保存します。IDを削除して変更した場合、新しいIDを自動的に取得することはできません。</li>
+      <li>新しいフィールドが最近アクティビティに追加された場合、Marketa のシステムに変更が有効になるまでに最大 24 時間かかることがあります。</li>
+    </ol>
+  </section>
+</article>
