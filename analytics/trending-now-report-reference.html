@@ -1,6 +1,6 @@
 ---
-title: Trending Nowレポートリファレンス
-description: このトピックでは、Analyticsモジュールの一部として提供されるTrendingNowレポートについて学習します。
+title: 現在の傾向 (Trending Now) レポートリファレンス
+description: このトピックでは、Analyticsモジュールの一部として提供される現在の傾向(Trending Now)レポートについて学習します。
 parent: Analytics
 layout: staging
 ---
@@ -8,18 +8,18 @@ layout: staging
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <aside class="bcls-aside bcls-aside--information">注:この機能は現在ベータ版です。アカウントでの有効化に関心がある場合は、アカウントマネージャーにお問い合わせください。</aside>
-    <p>Trending Nowレポートを表示するには、Analyticsモジュールを開き、[ <span class="BCL_command"><strong>今流行っている</strong></span>左側のナビゲーションから。レポートには、過去 1 時間の同時視聴者数を示すグラフが表示されます。グラフは5秒ごとに更新されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注:この機能は現在ベータ版です。お客様のアカウントでの有効にすることに興味がある場合は、アカウントマネージャーにお問い合わせください。</aside>
+    <p>現在の傾向(Trending Now)レポートを表示するには、Analyticsモジュールを開き、左側のナビゲーションから <span class="BCL_command"><strong>現在の傾向</strong></span>を選択します。レポートには、過去 1 時間の同時視聴者数を示すグラフが表示されます。グラフは45秒ごとに更新されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="trending now graph" src="/assets/images/analytics/trending-now-report.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">
-      <p>注:一意のユーザーは、ブラウザーユーザーエージェントと IP アドレスを組み合わせて決定されます。同じブラウザーで実行されている同じプレーヤーの複数のタブは、1 ユーザーのみになります。</p>
-      <p>[Trending Now] レポートでは、投機的なウィンドウを使用して、部分的に完了した値を計算します。これらの集計は、1 分ごとに新しい細かい値を放出し、その後、分の最後に完全な値を放出します。システムの負荷によっては、上書きプロセスが完了せず、CCU レポートに 1 分間の未処理のスパイクが発生することがあります。</p>
+      <p>注:ユニークユーザーは、ブラウザーユーザーエージェントと IP アドレスを組み合わせて決定されます。同じブラウザーで同じプレーヤーの複数のタブを実行しても、1 ユーザーのみになります。</p>
+      <p>現在の傾向(Trending Now)レポートでは、投機的なウィンドウ処理を使用して、部分的に完了した値を計算します。これらの集計は、1 分ごとに新しい分単位の値を発行し、その後、1分の終わりに完全な値を発行します。システム負荷によっては、上書き処理が完了せず、CCU レポートに 1 分間の未処理のスパイクが発生する場合がございます。</p>
     </aside>
-    <p>アカウントでBrightcoveLiveが有効になっている場合は、すべての動画、VODアセット、またはライブアセットの同時視聴者数を表示するオプションがあります。</p>
+    <p>アカウントでBrightcoveLiveが有効になっている場合は、すべての動画、VODアセット、またはライブアセットの同時視聴者数を表示するオプションが表示されます。</p>
     <p>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/analytics/trending-now-select-all-vod-live.png" /></figure>
     </p>
-    <p>グラフの下のセクションには、<strong>トップビデオ</strong>、<strong>上位の国</strong>と<strong>トップ都市</strong>直前に、5秒ごとに更新されます。</p>
+    <p>グラフの下のセクションには、直近1分間の<strong>上位の動画</strong>、<strong>上位の国</strong>と<strong>上位の市</strong>が表示され、5秒ごとに更新されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/analytics/trending-now-top-sections.png" /></figure>
   </section>
 </article>

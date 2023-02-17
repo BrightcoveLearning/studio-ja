@@ -5,25 +5,26 @@ parent: Reviewing Analytics
 ---
 
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
+  <h1>AnalyticsモジュールUI用語集</h1>
+  <summary>このトピックでは、AnalyticsモジュールのUIで使用される用語を一覧表示します。</summary>
 <p>
-<style type="text/css">dt {font-weight: bold;} dd { padding-bottom: 10px; }
+<style type="text/css">dt {font-weight: bold;}
+dd { padding-bottom: 10px; }
 </style>
 </p>
 
 <p>| <a href="#A">-A-</a> | <a href="#B">-B-</a> | <a href="#C">-C-</a> | <a href="#D">-D-</a> | <a href="#E">-E-</a> | <a href="#F">-F-</a> | <a href="#G">-G-</a> | <a href="#H">-H-</a> | <a href="#I">-I-</a> | <a href="#J">-J-</a> | <a href="#K">-K-</a> | <a href="#L">-L-</a> | <a href="#M">-M-</a> | <a href="#N">-N-</a> | <a href="#O">-O-</a> | <a href="#P">-P-</a> | <a href="#Q">-Q-</a> | <a href="#R">-R-</a> | <a href="#S">-S-</a> | <a href="#T">-T-</a> | <a href="#U">-U-</a> | <a href="#V">-V-</a> | <a href="#W">-W-</a> | <a href="#X">-X-</a> | <a href="#Y">-Y-</a> | <a href="#Z">-Z-</a> |</p>
 
-<aside class="bcls-aside bcls-aside--information">注:<span translate="No">Analytics API</span>によって返されるデータ項目のリストおよび分析データのエクスポート時には、<a href="https://apis.support.brightcove.com/analytics/general/analytics-api-glossary.html"> Analytics API 用語集を参照してください</a>。</aside>
+<aside class="bcls-aside bcls-aside--information">注：<span translate="No">Analytics API</span>によって返されるデータ項目のリストおよび分析データをエクスポートする場合は、<a href="https://apis.support.brightcove.com/analytics/general/analytics-api-glossary.html"> AnalyticsAPI用語集</a>を参照してください。</aside>
 
 <section class="bcls-section">
 <h2 id="A">A</h2>
 
 <dl>
 	<dt id="active_media">アクティブメディア</dt>
-	<dd>アカウント内のアクティブな動画の数です。このデータはリアルタイムではありません。ビデオライブラリから 1 日 1 回同期されます。また、「リアルタイム」分析データ (3 日未満) を見ている場合、このデータは正確ではない場合があります。</dd>
-	<dt id="api">アナリティクス API</dt>
-	<dd>REST ベースのアプリケーションプログラミングインターフェイスで、開発者は Video Cloud 動画の分析指標を JSON 形式で直接取得できます。NS <span translate="No"> Analytics API</span> Video Cloud StudioのAnalyticsUIのデータを提供します。</dd>
+	<dd>アカウント内のアクティブな動画の数です。このデータはリアルタイムではないことに注意してください。ビデオライブラリから 1 日に 1 回同期されます。また、「リアルタイム」分析データ (3 日未満) を見ている場合、このデータは正確ではない場合があります。</dd>
+	<dt id="api">Analytics API</dt>
+	<dd>REST ベースのアプリケーションプログラミングインターフェイスで、開発者は Video Cloud 動画の分析指標を JSON 形式で直接取得できます。 <span translate="No">Analytics API</span>は、Video Cloud StudioのAnalytics UI用のデータを提供します。</dd>
 </dl>
 </section>
 
@@ -31,19 +32,19 @@ parent: Reviewing Analytics
 <h2 id="B">B</h2>
 
 <dl>
-	<dt id="totalbandwidth">総帯域幅</dt>
-	<dd>動画、画像、プレーヤーの負荷を配信するために使用される総帯域幅。帯域幅データの一部は、CDN などの外部ソースから取得されるため、遅延が発生することに注意してください。通常、情報は48時間以内に完了しますが、場合によっては5日ほどかかる場合があります。</dd>
-	<dt id="browser_type">ブラウザの種類</dt>
-	<dd>ブラウワータイプ。一般的な値は次のとおりです。
+	<dt id="totalbandwidth">合計帯域幅</dt>
+	<dd>ビデオ、画像、プレーヤーを配信するために使用される合計帯域幅。帯域幅データの一部は、CDNなどの外部ソースから取得されるため、遅延することに注意してください。通常、情報は48時間以内に完了しますが、場合によっては1日が5日にもなることもあります。</dd>
+	<dt id="browser_type">ブラウザーのタイプ</dt>
+	<dd>ブラウザータイプ。一般的な値は次のとおりです。
 	<ul>
-		<li>クロム</li>
-		<li>サファリ</li>
+		<li>Chrome</li>
+		<li>Safari</li>
 		<li>Firefox</li>
-		<li>すなわち</li>
+		<li>IE</li>
 	</ul>
 	</dd>
 	<dt id="bytes_delivered">配信されたバイト数</dt>
-	<dd>視聴者に配信されるデータの総数（バイト単位）。これには、ビデオ/オーディオデータ（再生されたかどうかにかかわらず、バッファリングされたデータを含む）、ポスターおよびサムネイル画像、動画プレーヤーに関連付けられたデータが含まれます。</dd>
+	<dd>ビデオ/オーディオデータ（再生されたかどうかに関係なくバッファリングされたデータを含む）、ポスターとサムネイル画像、およびビデオプレーヤーに関連付けられたデータを含む、視聴者に配信されたバイト単位の総数。</dd>
 </dl>
 </section>
 
@@ -52,11 +53,11 @@ parent: Reviewing Analytics
 
 <dl>
 	<dt id="city">市</dt>
-	<dd>ビデオが視聴された都市。</dd>
+	<dd>動画が視聴された都市</dd>
 	<dt id="country">国</dt>
-	<dd>ビデオが視聴された国の英語の短縮名。<a href="http://en.wikipedia.org/wiki/ISO_3166">ISO 3166</a>規格に準拠しています。</dd>
+	<dd>動画が視聴された国の英語の省略名。<a href="http://en.wikipedia.org/wiki/ISO_3166">ISO 3166</a> 標準に準拠しています。</dd>
 	<dt id="csv">CSV</dt>
-	<dd>カンマ区切りの値。分析データは、この形式でエクスポートできます。</dd>
+	<dd>コンマ区切りの値。分析データはこの形式でエクスポートできます。</dd>
 </dl>
 </section>
 
@@ -64,66 +65,66 @@ parent: Reviewing Analytics
 <h2 id="D">D</h2>
 
 <dl>
-	<dt id="daily-unique-users">デイリーユニークユーザー</dt>
-	<dd>これは、特定の日に動画が持っていたユニーク視聴者の推定数です。このデータは、アカウントレベルでのみ利用可能な調整データ (3 日後) です。詳細については、「<a href="https://apis.support.brightcove.com/analytics/general/analytics-api-unique-users.html">アナリティクス API:一意のユーザー</a>。</dd>
+	<dt id="daily-unique-users">日次ユニークユーザー</dt>
+	<dd>特定の1日における動画のユニーク視聴者の推定数です。このデータは、調整済みデータ（3日後）および、アカウントレベルでのみ利用できます。詳細については、<a href="https://apis.support.brightcove.com/analytics/general/analytics-api-unique-users.html"> Analytics API：ユニークユーザー</a>を参照してください。</dd>
 	<dt id="day">日</dt>
-	<dd>ビデオが視聴された月の日です。</dd>
+	<dd>動画が視聴された日付</dd>
 	<dt id="device">デバイス</dt>
-	<dd><a href="#device_type"></a><a href="#device_os"></a>ビデオを表示するために使用されるデバイスタイプとデバイスオペレーティングシステムの組み合わせ。</dd>
+	<dd>動画の視聴に使用した<a href="#device_type">デバイスタイプ</a>と<a href="#device_os">デバイスオペレーティングシステム</a>の組み合わせ</dd>
 	<dt id="device_os">デバイスオペレーティングシステム</dt>
-	<dd>ビデオを見るためにデバイス上で使用されるデバイスのオペレーティングシステム。指定可能な値は次のとおりです。
+	<dd>動画の視聴に使用したデバイスオペレーティングシステム。指定可能な値は次のとおりです。
 	<ul>
-		<li>アンドロイド</li>
-		<li>バダ</li>
+		<li>Android</li>
+		<li>Bada</li>
 		<li>iOS</li>
-		<li>リナックス</li>
+		<li>Linux</li>
 		<li>OS X</li>
-		<li>RIM (ブラックベリー)</li>
-		<li>シンビアン</li>
-		<li>ウェブ OS</li>
+		<li>RIM（ブラックベリー）</li>
+		<li>Symbian</li>
+		<li>Web OS</li>
 		<li>Windows</li>
-		<li>その他-上記のいずれにもマッピングされていないユーザーエージェントの場合</li>
+		<li>その他 - 上記のいずれにも該当しないユーザーエージェント用</li>
 	</ul>
 	</dd>
-	<dt id="device_manufacterer">デバイス製造者</dt>
-	<dd>デバイスの製造者。典型的な値は次のとおりです。
+	<dt id="device_manufacterer">デバイスメーカー</dt>
+	<dd>デバイスのメーカー。いくつかの典型的な値は次のとおりです。
 	<ul>
 		<li>レノボ</li>
-		<li>リンゴ</li>
+		<li>apple</li>
 		<li>ソニー</li>
-		<li>マイクロソフト</li>
+		<li>microsoft</li>
 	</ul>
 	</dd>
 	<dt id="device_type">デバイスタイプ</dt>
-	<dd>ビデオの視聴に使用するデバイスタイプ。指定可能な値は次のとおりです。
+	<dd>動画の視聴に使用したデバイスタイプ。指定可能な値は次のとおりです。
 	<ul>
-		<li>デスクトップ-デスクトップコンピュータとラップトップコンピュータを含む</li>
-		<li>タブレット-iPad、Androidタブレットなどが含まれています。</li>
-		<li>モバイル-携帯電話</li>
-		<li>接続テレビ/ゲーム機/コンパニオンデバイス-スマートテレビ、セットトップボックス、ゲーム機を含む</li>
-		<li>その他-上記のいずれにもマッピングされていないユーザーエージェントの場合</li>
+		<li>デスクトップ ｰ デスクトップPCとノートPCが含まれます</li>
+		<li>タブレット ｰ iPad、Androidタブレットなどが含まれます</li>
+		<li>モバイル ｰ 携帯電話</li>
+		<li>コネクティッドTV/ゲーム機/コンパニオンデバイス ｰ スマートテレビ、セットトップボックス、ゲーム機が含まれます</li>
+		<li>その他 - 上記のいずれにも該当しないユーザーエージェントの場合</li>
 	</ul>
 	</dd>
 	<dd>&nbsp;</dd>
-	<dt id="dimension">次元</dt>
-	<dd>ディメンションは、レポートおよびフィルタリングできる分析データカテゴリです。現在利用可能な寸法:
+	<dt id="dimension">ディメンション</dt>
+	<dd>ディメンションは、ユーザーがレポートおよびフィルター処理できる分析データカテゴリーです。現在利用できるディメンションは次のとおりです。
 	<ul>
-		<li><a href="#player">プレイヤー</a></li>
-		<li><a href="#video">ビデオ</a></li>
+		<li><a href="#player">プレーヤー</a></li>
+		<li><a href="#video">動画</a></li>
 		<li><a href="#country">国</a></li>
 		<li><a href="#day">日</a></li>
-		<li><a href="#display_domain">ディスプレイドメイン</a></li>
+		<li><a href="#display_domain">ドメイン名</a></li>
 		<li><a href="#device">デバイス</a></li>
 		<li><a href="#device_type">デバイスタイプ</a></li>
 		<li><a href="#device_os">デバイスOS</a></li>
-		<li><a href="#traffic_sources">トラフィックの発信元</a></li>
+		<li><a href="#traffic_sources">トラフィックソース</a></li>
 	</ul>
 	</dd>
 	<dd>&nbsp;</dd>
-	<dt id="display_domain">ドメインを表示</dt>
-	<dd>クライアント（ブラウザなど）によって報告された参照ドメイン。</dd>
-	<dt id="display_url">URLを表示</dt>
-	<dd>視聴者がビデオを視聴したときに表示されていた URL。</dd>
+	<dt id="display_domain">ドメイン名</dt>
+	<dd>クライアントから報告された参照ドメイン（ブラウザまたはその他）</dd>
+	<dt id="display_url">表示URL</dt>
+	<dd>動画の視聴時に視聴者が使用したURL</dd>
 </dl>
 </section>
 
@@ -132,7 +133,7 @@ parent: Reviewing Analytics
 
 <dl>
 	<dt id="engagement_score">エンゲージメントスコア</dt>
-	<dd>動画再生あたりの平均視聴率（すべての視聴率を動画再生回数で割って算出）。この計算方法の詳細については、「<a href="/analytics/calculating-video-engagement-score.html">動画エンゲージメントスコアの計算」を参照してください</a>。</dd>
+	<dd>動画視聴1件当たりの平均視聴率（全視聴割合の合計を動画視聴回数で割って計算します）。計算方法の詳細については、<a href="/analytics/calculating-video-engagement-score.html">「動画エンゲージメントスコアの計算」</a>を参照してください。</dd>
 </dl>
 </section>
 
@@ -164,7 +165,7 @@ parent: Reviewing Analytics
 </section>
 
 <section class="bcls-section">
-<h2 id="I">おい</h2>
+<h2 id="I">I</h2>
 
 <dl>
 	<dt id="">&nbsp;</dt>
@@ -218,7 +219,7 @@ parent: Reviewing Analytics
 </section>
 
 <section class="bcls-section">
-<h2 id="O">お</h2>
+<h2 id="O">O</h2>
 
 <dl>
 	<dt id="">&nbsp;</dt>
@@ -227,19 +228,17 @@ parent: Reviewing Analytics
 </section>
 
 <section class="bcls-section">
-<h2 id="P">うP</h2>
+<h2 id="P">P</h2>
 
 <dl>
 	<dt id="play_rate">再生率</dt>
 	<dd>再生率は、ビデオが再生された回数（video_view）を再生の機会の数（video_impression）で割ったものです。</dd>
-	<dt id="play_request">再生リクエスト</dt>
-	<dd>再生ボタンがクリックされるたびに、再生リクエストがカウントされます。</dd>
-	<dt id="player">プレイヤー</dt>
-	<dd>ビデオクラウドプレーヤー ID。</dd>
-	<dt id="player_load">プレーヤーロード</dt>
-	<dd>プレイヤーがロードされた回数。</dd>
-	<dt id="player_name">プレイヤー名</dt>
-	<dd>ビデオクラウドプレーヤーの名前。</dd>
+	<dt id="player">プレーヤー</dt>
+	<dd>Video CloudプレーヤーID</dd>
+	<dt id="player_load">プレーヤーのロード</dt>
+	<dd>プレーヤーをロードした回数</dd>
+	<dt id="player_name">プレーヤー名</dt>
+	<dd>Video Cloudプレーヤーの名前</dd>
 </dl>
 </section>
 
@@ -257,7 +256,7 @@ parent: Reviewing Analytics
 
 <dl>
 	<dt id="region">地域</dt>
-	<dd>ビデオが視聴された州または州名。<a href="http://en.wikipedia.org/wiki/ISO_3166">ISO 3166</a>規格に準拠しています。</dd>
+	<dd>動画が視聴された都道府県名。<a href="http://en.wikipedia.org/wiki/ISO_3166">ISO 3166</a> 規格に準拠しています。</dd>
 </dl>
 </section>
 
@@ -275,24 +274,24 @@ parent: Reviewing Analytics
 
 <dl>
 	<dt id="traffic_sources">トラフィックソース</dt>
-	<dd>視聴者がプレーヤーページに到達した方法を示します。指定可能な値は次のとおりです。
+	<dd>視聴者がプレーヤーページに到達するまでの経路を示す情報。可能な値は次のとおりです。
 	<ul>
-		<li>紹介-ユーザーが動画へのリンクをたどった</li>
-		<li>Direct-ユーザーが直接リンクを入力したり、ブックマークを使用したり、電子メールからのリンクを使用したりした</li>
-		<li>オーガニック検索-ユーザーが検索を実行し、結果をクリックして動画にアクセスした</li>
-		<li>有料検索-ユーザーが検索を実行し、有料の結果をクリックしてビデオにアクセスしました</li>
-		<li>セキュア検索-ユーザーはGoogleアカウントでログインし、検索を実行し、結果をクリックしました（有料またはオーガニック。検索情報はこの場合は含まれません）</li>
+		<li>紹介 - ユーザーが動画まで辿ったリンク</li>
+		<li>直接-ユーザーがリンクを直接入力したか、ブックマークを使用したか、メールからのリンクを使用した</li>
+		<li>オーガニック検索 － ユーザーは検索を行って結果をクリックし、動画にアクセスした</li>
+		<li>有料検索 － ユーザーは検索を行って有料結果をクリックし、動画にアクセスした</li>
+		<li>安全な検索 － ユーザーはGoogleアカウントにログインして検索を行い、結果をクリックした（有料またはオーガニック。この場合、検索情報は含まれない）</li>
 	</ul>
 	</dd>
 </dl>
 </section>
 
 <section class="bcls-section">
-<h2 id="U">う</h2>
+<h2 id="U">U</h2>
 
 <dl>
 	<dt id="unique-users">ユニークユーザー</dt>
-	<dd><a href="#daily-unique-users">毎日のユニークユーザーを見る</a></dd>
+	<dd><a href="#daily-unique-users">日次ユニークユーザー</a> を参照</dd>
 </dl>
 </section>
 
@@ -300,32 +299,32 @@ parent: Reviewing Analytics
 <h2 id="V">V</h2>
 
 <dl>
-	<dt id="video">ビデオ</dt>
-	<dd>ビデオのビデオクラウド ID。</dd>
-	<dt id="videobandwidth">ビデオ帯域幅</dt>
-	<dd>動画のみの配信に使用される総帯域幅。</dd>
-	<dt id="video_duration">ビデオ再生時間</dt>
-	<dd>ビデオの長さ（秒）。</dd>
-	<dt id="video_engagement">ビデオエンゲージメント</dt>
-	<dd>動画再生数あたりの平均視聴率（すべての視聴率を動画再生回数で割って算出）この計算方法の詳細については、「<a href="/analytics/calculating-video-engagement-score.html">動画エンゲージメントスコアの計算」を参照してください</a>。</dd>
-	<dt id="video_name">ビデオ名</dt>
-	<dd>ビデオの名前。</dd>
-	<dt id="video_view">ビデオビュー</dt>
-	<dd>ストリームの開始時に記録されたビデオの再生回数です（巻き戻しまたは再生は含まれません）。それは個々の視聴者の尺度ではありません。</dd>
-	<dt id="video_view">閲覧した分</dt>
-	<dd>ビデオが視聴された合計時間（分）</dd>
-	<dt id="video_engagement_1">1% でのビュー</dt>
-	<dd>動画の 1% ポイントで記録された再生数。</dd>
-	<dt id="video_engagement_25">25% で表示</dt>
+	<dt id="video">動画</dt>
+	<dd>動画のVideo Cloud ID</dd>
+	<dt id="videobandwidth">動画帯域幅</dt>
+	<dd>ビデオのみの配信に使用された総帯域幅。</dd>
+	<dt id="video_duration">動画再生時間</dt>
+	<dd>動画の長さ（秒）</dd>
+	<dt id="video_engagement">動画エンゲージメント</dt>
+	<dd>動画視聴1件当たりの平均視聴割合（全視聴割合の合計を動画視聴で割って計算します）計算方法の詳細については、<a href="/analytics/calculating-video-engagement-score.html">「動画エンゲージメントスコアの計算」</a>を参照してください。</dd>
+	<dt id="video_name">動画タイトル</dt>
+	<dd>ファイルの名前</dd>
+	<dt id="video_view">動画視聴回数</dt>
+	<dd>動画の再生が始まった回数。ストリームの開始時に記録されます（巻き戻しまたはリプレイを含みません）。動画視聴回数は、個々の視聴者の測定値ではありません。</dd>
+	<dt id="video_view">視聴時間</dt>
+	<dd>動画が視聴された合計時間（分）</dd>
+	<dt id="video_engagement_1">1%時点の視聴回数</dt>
+	<dd>動画の1%ポイントで記録された視聴回数</dd>
+	<dt id="video_engagement_25">25%時点の視聴回数</dt>
 	<dd>動画の 25% ポイントで記録された再生数です。</dd>
-	<dt id="video_engagement_50">50% で表示</dt>
+	<dt id="video_engagement_50">50%時点の視聴回数</dt>
 	<dd>動画の 50% ポイントで記録された再生数。</dd>
-	<dt id="video_engagement_75">75% で表示</dt>
+	<dt id="video_engagement_75">75%時点の視聴回数</dt>
 	<dd>動画の 75% ポイントで記録された再生数です。</dd>
-	<dt id="video_engagement_100">100% で表示</dt>
+	<dt id="video_engagement_100">100%時点の視聴回数</dt>
 	<dd>動画の 100% ポイントで記録された再生数。</dd>
 	<dt id="video_impression">動画インプレッション</dt>
-	<dd>ビデオがプレーヤーにロードされ、インタラクションの準備が完了した回数。</dd>
+	<dd>プレーヤーに動画が読み込まれインタラクションの準備ができた回数</dd>
 </dl>
 </section>
 
@@ -343,7 +342,7 @@ parent: Reviewing Analytics
 
 <dl>
 	<dt id="xlsx">XLSX</dt>
-	<dd>マイクロソフトエクセルファイル。分析データは、この形式でエクスポートできます。</dd>
+	<dd>Microsoft Excelファイル。解析データはこの形式でエクスポートできます。</dd>
 </dl>
 </section>
 
