@@ -120,13 +120,18 @@
   },
 
   {
+      "newURL": "https://ja.studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
+      "oldURL": "/cloud-playout-stream-vod"
+  },
+
+  {
       "newURL": "https://ja.studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://ja.studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
-      "oldURL": "/cloud-playout-stream-vod"
+      "newURL": "https://ja.studio.support.brightcove.com/admin/configure-langauge-settings.html",
+      "oldURL": "/configure-langauge-settings"
   },
 
   {

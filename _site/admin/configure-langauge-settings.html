@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、Brightcoveプレーヤー用のチャプタービデオを作成する方法について説明します。">
+  <meta name="description" content="このトピックでは、主要なメタデータ言語を定義し、サポートされているメタデータ言語を追加する方法について説明します。">
   
-  <title>動画のに章を追加する</title>
+  <title>言語設定の構成</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -58,9 +58,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item first-item"><a href="/">ホーム</a></li>
         
-      <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
+      <li class="breadcrumb-item"><a href="/admin/">Administering Accounts</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">動画のに章を追加する</li>
+      <li class="breadcrumb-item active" aria-current="page">言語設定の構成</li>
     </ol>
   </nav>
 </header>
@@ -715,107 +715,46 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>動画のに章を追加する</h1>
-  <summary>このトピックでは、Brightcoveプレーヤー用のチャプタービデオを作成する方法について説明します。</summary>
+  <h1>言語設定の構成</h1>
+  <summary>このトピックでは、主要なメタデータ言語を定義し、サポートされているメタデータ言語を追加する方法について説明します。</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5167166949001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script></section>
-
-  <section class="bcls-section">
-    <h2 id="workingSample">作業サンプル</h2>
-    <p>チャプタービデオの実用的なサンプルを見てみましょう-以下のビデオを開始し、マウスを上に置きます <img alt="chapter menu" src="/assets/images/media/node18078-chapter-menu.png" /> チャプターメニューを表示するアイコン: </p>
-    <div style="display: block; position: relative; max-width: 32em;">
-      <div style="padding-top: 56.25%;">
-        <iframe src="//players.brightcove.net/1752604059001/7a8a2bf7-6696-4dda-b31d-876a9cb1792a_default/index.html?videoId=2026618970001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe>
-      </div>
-    </div>
+    <aside class="bcls-aside bcls-aside--information">注:この機能はすべてのお客様にご利用いただけますが、デフォルトでは有効になっていません。お客様のアカウントでこの機能を有効にしたい場合は、アカウントマネージャーにお問い合わせください。</aside>
+    <p>[言語設定] では、第一言語を定義し、追加のメタデータ言語を追加および管理します。第一言語は、アカウントが現在動画のメタデータに使用している言語です。アカウントに言語を追加する前の、既存のメタデータは、第一言語として定義した言語に関連付けられます。第一言語は、Media モジュールでビデオプロパティを編集するときに最初に表示される言語です。 </p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/language-settings.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="code">仕組み</h2>
-    <aside class="bcls-aside bcls-aside--information">チャプター名を大文字で表示するには、プレーヤーをバージョン6.18.3以降に設定する必要があることを考慮してください。</aside>
-    <p>チャプタービデオには以下が必要です。</p>
-    <ul>
-      <li>ブライトコーブプレーヤー-特別なプロパティ、スタイリング、プラグインは必要ありません</li>
-      <li>ビデオの章を記述した WebVTT ファイル (例:
-<pre class="line-numbers"><code class="language-html" translate="No">WEBVTT
-
-00:00:00.000 --&gt; 00:00:30.000
-Lionfish
-
-00:00:30.000 --&gt; 00:00:54.000
-Anemone
-
-00:00:54.000 --&gt; 00:01:25.000
-Clownfish
-
-00:01:25.000 --&gt; 00:01:54.000
-Sea Horse
-
-00:01:54.000 --&gt; 00:02:23.000
-Crab
-
-00:02:23.000 --&gt; 00:02:35.000
-Dolphins</code></pre>
+    <h2 id="primary">第一言語の設定</h2>
+    <p>第一言語を設定するには、次の手順に従います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Video Cloud スタジオにログインします。</li>
+      <li>ナビゲーションヘッダーで、[ <strong>管理</strong> ]、[ <strong>言語設定] の順にクリックします</strong>。管理者メニューにアクセスするには、アカウント管理者である必要があります。</li>
+      <li>第一言語を入力します。入力すると、一致する言語の一覧が表示されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/primary-language-list.png" /></figure>
       </li>
-    </ul>
-    <p>上記の例では、各チャプターエントリが 2 行で構成されていることに注意してください。</p>
-    <ol>
-      <li>チャプタの開始時刻と終了時刻の形式で、次のようになります。<code translate="No">hours:minutes:seconds.milliseconds</code>00:02:23 .000) と厳密に解析されます。必要な場合は、数字をゼロに埋めなければなりません。</li>
-      <li>プレイヤーチャプターメニューに表示されるチャプタータイトル。プレーンテキストのみがサポートされており、タイトルにサブストリングを含めることはできません。<code translate="No">--&gt;</code></li>
+      <li>言語をクリックして選択します。</li>
+      <li>[ <strong>言語を保存] をクリックします</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/primary-language-saved.png" /></figure>
+      </li>
     </ol>
-    <aside class="bcls-aside bcls-aside--tip">注意:
-      <ul>
-        <li><a href="https://quuz.org/webvtt/">このバリデータを使用して WebVTT</a>形式を検証できます。</li>
-        <li>正しく表示するには、WebVTTファイルをUTF-8でエンコードする必要があります。</li>
-      </ul>
-    </aside>
-    <div class="video-cloud-only">
-      <p>WebVTT ファイルは、次の 3 つの方法のいずれかでビデオに関連付けることができます。</p>
-      <ol>
-
-        <li>を使用してWebVTTファイルをアップロードします<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">WebVTTファイルの取り込み</a>のドキュメント<span translate="No">動的取り込みAPI</span>情報。</li>
-        <li>Studio <a href="/media/adding-captions-videos-using-media-module.html"></a>のビデオのテキストトラックプロパティに WebVTT ファイルの URL を追加します。[詳細設定] <code translate="No">Kind</code>にアクセスして、を<code translate="No">Chapters</code> :
-          <figure class="bcls-figure"><img class="bcls-image" alt="studio text track settings" src="/assets/images/media/node18078-text-tracks-studio.png" /></figure>
-          <aside class="bcls-aside bcls-aside--information">注意してください<code translate="No">default</code>値はトラックごとではありませんが、<code translate="No">true</code>同じ言語のすべてのトラック（<code translate="No">srclang</code>）</aside>
-        </li>
-        <li><code translate="No">&lt;track&gt;</code>タグ内の WebVTT ファイルの URL をページ内埋め込みコードに参照します。
-          <pre class="line-numbers">
-            <code class="language-html" translate="No">&lt;video-js
-              data-video-id="4426931680001"
-              data-account="1752604059001"
-              data-player="default"
-              data-embed="default"
-              class="video-js" controls&gt;
-                  <span class="bcls-highlight">&lt;track src="/assets/webvtt/sea-marvels-chapters.vtt" kind="chapters" label="Chapters" srclang="en"&gt;</span>
-            &lt;/video-js&gt;
-            &lt;script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
-        </li>
-      </ol>
-    </div>
-    <div class="player-only">
-      <p><code translate="No">&lt;track&gt;</code>タグを使用してチャプターの WebVTT ファイルをページ内埋め込みコードに追加します。</p>
-      <pre class="line-numbers">
-            <code class="language-html" translate="No">&lt;video-js
-              data-account="3676484086001"
-              data-player="df134dc9-c997-4464-a69c-e36acf59aef7"
-              data-embed="default"
-              class="video-js" controls&gt;
-                  <span class="bcls-highlight">&lt;track src="/assets/webvtt/sea-marvels-chapters.vtt" kind="chapters" label="Chapters" srclang="en"&gt;</span>
-              &lt;/video-js&gt;
-            &lt;script src="https://players.brightcove.net/3676484086001/df134dc9-c997-4464-a69c-e36acf59aef7_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
-    </div>
-    <aside class="bcls-aside bcls-aside--information">注:独自のサーバーでキャプションファイルをホストしている場合は、Brightcove プレーヤーがアクセスできる URL にファイルがあることを確認してください。キャプションファイルをホストしているサーバーでも、クロスオリジンリソース共有 (CORS) を有効にする必要があります。CORS <a href="https://general.support.brightcove.com/developer/concepts-cors.html">についての詳細はこちらで読むことができます</a>。</aside><aside class="bcls-aside bcls-aside--information">注:チャプターメニューは WebVTT ファイルに複数のチャプターキューポイントがある場合にのみ表示されます。</aside>
-    <p>次の図は、プレーヤーのチャプターメニューがwebVTTファイルからどのように生成されるかを示しています。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="player-vtt-interaction" src="/assets/images/media/node18078-chaptered-video-player-vc.png" /></figure>
-    </section>
+    第一言語を変更するには、言語をクリックし、新しい言語を選択し、[ <strong>保存] をクリックします</strong>。</section>
   <section class="bcls-section">
-    <h2 id="publishing">プレーヤーの公開</h2>
-    <p class="video-cloud-only">iframe またはページ内埋め込みのいずれかを使用できます。チャプターは両方で同じように機能します。</p>
-    <p class="player-only">.vtt <code translate="No">track</code><code translate="No">video</code>ファイルのタグをに追加する必要があるため、チャプタービデオにはページ内埋め込みを使用する必要があります。</p>
-    <p>追加のプラグイン、CSS、または JavaScript コードは必要ありません。</p>
+    <h2 id="add_languages">言語を追加する</h2>
+    <p>第一言語を保存した後、追加のメタデータ言語を追加できます。言語を追加することで、Media モジュールに追加の多言語のメタデータを入力できます。追加の言語を追加するには、次の手順を実行します。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>[ <strong>言語を追加] をクリックします</strong>。</li>
+      <li>言語を入力します。入力すると、一致する言語の一覧が表示されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/add-additional-language.png" /></figure>
+      </li>
+      <li>言語をクリックして選択します。</li>
+      <li>[ <strong>言語を保存] をクリックします</strong>。言語が [追加言語] テーブルに追加されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/additional-language-table.png" /></figure>
+      </li>
+      <li>[ 言語を追加] をクリックして、必要に応じて言語を追加します。</li>
+    </ol>
+    <p>Mediaモジュールに表示される言語名を編集するには、その言語をクリックして変更し、[ <strong>保存] をクリックします</strong>。言語を削除するには、削除アイコン（<img class="bcls-image--no-border" alt="" src="/assets/images/admin/delete-icon.png" />）。</p>
+    <aside class="bcls-aside bcls-aside--information">注:使用中の言語を削除すると、その言語に関連付けられているすべてのメタデータは非表示になります。関連するメタデータを復元するには、言語を再度追加します。</aside>
   </section>
 </article>
-
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
