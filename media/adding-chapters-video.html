@@ -10,6 +10,7 @@ parent: Managing Videos
   <section class="bcls-section">
     <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5167166949001">&nbsp;</div>
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script></section>
+
   <section class="bcls-section">
     <h2 id="workingSample">作業サンプル</h2>
     <p>チャプタービデオの実際のサンプルを見てみましょう-以下のビデオを開始し、アイコン <img alt="chapter menu" src="/assets/images/media/node18078-chapter-menu.png" /> の上にマウスを置いてチャプターメニューを表示します: </p>
@@ -61,8 +62,9 @@ Dolphins</code></pre>
     <div class="video-cloud-only">
       <p>WebVTT ファイルは、次の 3 つの方法のいずれかでビデオに関連付けることができます。</p>
       <ol>
-        <li><span translate="No">Dynamic Ingest API</span>情報の<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Ingest WebVTTファイル</a>ドキュメントを使用してWebVTTファイルをアップロードします。</li>
-        <li>Studio <a href="/media/adding-captions-videos-using-media-module.html"></a>のビデオのテキストトラックプロパティに WebVTT ファイルの URL を追加します。必ず <code translate="No">種類</code>を<code translate="No">チャプタ</code>に設定して下さい :
+
+        <li>を使用してWebVTTファイルをアップロードします<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">WebVTTファイルの取り込み</a>のドキュメント<span translate="No">動的取り込みAPI</span>情報。</li>
+        <li>Studio <a href="/media/adding-captions-videos-using-media-module.html"></a>のビデオのテキストトラックプロパティに WebVTT ファイルの URL を追加します。[詳細設定] <code translate="No">Kind</code>にアクセスして、を<code translate="No">Chapters</code> :
           <figure class="bcls-figure"><img class="bcls-image" alt="studio text track settings" src="/assets/images/media/node18078-text-tracks-studio.png" /></figure>
           <aside class="bcls-aside bcls-aside--information"><code translate="No">デフォルト</code>値はトラック単位でなく、同じ言語の全てのトラックで<code translate="No">true</code>に設定されています（<code translate="No">srclang</code>）。</aside>
         </li>

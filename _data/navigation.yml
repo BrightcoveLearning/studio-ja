@@ -11,6 +11,45 @@
       url: /get-started/getting-started-video-cloud-studio.html
     - name: Video Cloud トライアルの使用を開始する
       url: /get-started/getting-started-your-video-cloud-trial.html
+    - name: 基本を学ぼう
+      url: /get-started/basics/index.html
+      docs:
+        - name: ビデオのアクティブ化と非アクティブ化
+          url: /get-started/basics/video-cloud-basics-activating-and-deactivating-video.html
+        - name: Video Cloud アカウントへのユーザーの追加
+          url: /get-started/basics/video-cloud-basics-adding-user-video-cloud-account.html
+        - name: ビデオポスターとサムネイル画像のキャプチャ
+          url: /get-started/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
+        - name: 手動プレイリストの作成
+          url: /get-started/basics/video-cloud-basics-creating-manual-playlist.html
+        - name: プレーヤーを作成する
+          url: /get-started/basics/video-cloud-basics-creating-player.html
+        - name: プレイリストプレーヤーの作成
+          url: /get-started/basics/video-cloud-basics-creating-playlist-player.html
+        - name: スマートプレイリストの作成
+          url: /get-started/basics/video-cloud-basics-creating-smart-playlist.html
+        - name: ビデオの視聴量の決定
+          url: /get-started/basics/video-cloud-basics-determining-how-much-video-being-watched.html
+        - name: 視聴回数の多い動画を特定する
+          url: /get-started/basics/video-cloud-basics-determining-which-videos-have-most-views.html
+        - name: 基本的なビデオプロパティの編集
+          url: /get-started/basics/video-cloud-basics-editing-basic-video-properties.html
+        - name: 複数のビデオのビデオプロパティの編集
+          url: /get-started/basics/video-cloud-basics-editing-video-properties-multiple-videos.html
+        - name: フォルダを使用したビデオの整理
+          url: /get-started/basics/video-cloud-basics-organizing-videos-using-folders.html
+        - name: プレイリストを Web に公開する
+          url: /get-started/basics/video-cloud-basics-publishing-playlist-web.html
+        - name: 1 つのビデオを Web に公開する
+          url: /get-started/basics/video-cloud-basics-publishing-single-video-web.html
+        - name: プレーヤーのスタイリング
+          url: /get-started/basics/video-cloud-basics-styling-player.html
+        - name: 動画ポスター＆サムネイル画像のアップロード
+          url: /get-started/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
+        - name: 動画をアップロード中
+          url: /get-started/basics/video-cloud-basics-uploading-videos.html
+        - name: Brightcoveのシステムステータスページの表示
+          url: /get-started/basics/video-cloud-basics-viewing-brightcove-system-status-page.html
     - name: ブライトコーブサポートサイトのナビゲート
       url: /get-started/navigating-brightcove-support-site.html
     - name: ビデオクラウドへのクイックスタート
@@ -27,46 +66,6 @@
       url: /get-started/video-cloud-glossary.html
     - name: ビデオクラウドスタジオトレーニングビデオ
       url: /training/video-cloud-studio-training-videos.html
-- section:
-  name: 基本を学ぼう
-  url: /basics/index.html
-  docs:
-    - name: ビデオのアクティブ化と非アクティブ化
-      url: /basics/video-cloud-basics-activating-and-deactivating-video.html
-    - name: Video Cloud アカウントへのユーザーの追加
-      url: /basics/video-cloud-basics-adding-user-video-cloud-account.html
-    - name: ビデオポスターとサムネイル画像のキャプチャ
-      url: /basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
-    - name: 手動プレイリストの作成
-      url: /basics/video-cloud-basics-creating-manual-playlist.html
-    - name: プレーヤーを作成する
-      url: /basics/video-cloud-basics-creating-player.html
-    - name: プレイリストプレーヤーの作成
-      url: /basics/video-cloud-basics-creating-playlist-player.html
-    - name: スマートプレイリストの作成
-      url: /basics/video-cloud-basics-creating-smart-playlist.html
-    - name: ビデオの視聴量の決定
-      url: /basics/video-cloud-basics-determining-how-much-video-being-watched.html
-    - name: 視聴回数の多い動画を特定する
-      url: /basics/video-cloud-basics-determining-which-videos-have-most-views.html
-    - name: 基本的なビデオプロパティの編集
-      url: /basics/video-cloud-basics-editing-basic-video-properties.html
-    - name: 複数のビデオのビデオプロパティの編集
-      url: /basics/video-cloud-basics-editing-video-properties-multiple-videos.html
-    - name: フォルダを使用したビデオの整理
-      url: /basics/video-cloud-basics-organizing-videos-using-folders.html
-    - name: プレイリストを Web に公開する
-      url: /basics/video-cloud-basics-publishing-playlist-web.html
-    - name: 1 つのビデオを Web に公開する
-      url: /basics/video-cloud-basics-publishing-single-video-web.html
-    - name: プレーヤーのスタイリング
-      url: /basics/video-cloud-basics-styling-player.html
-    - name: 動画ポスター＆サムネイル画像のアップロード
-      url: /basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
-    - name: 動画をアップロード中
-      url: /basics/video-cloud-basics-uploading-videos.html
-    - name: Brightcoveのシステムステータスページの表示
-      url: /basics/video-cloud-basics-viewing-brightcove-system-status-page.html
 - section:
   name: 一般情報
   url: /general/index.html
