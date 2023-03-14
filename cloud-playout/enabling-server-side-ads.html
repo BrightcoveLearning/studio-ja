@@ -1,6 +1,6 @@
 ---
-title: クラウドプレイアウトの収益化
-description: このトピックでは、クラウドプレイアウトチャネルのサーバーサイド広告（SSAI）を有効にする方法を学習します。
+title: Cloud Playoutの収益化
+description: このトピックでは、Cloud Playoutチャネルのサーバーサイド広告（SSAI）を有効にする方法を学習します。
 parent: Cloud Playout
 ---
  <h1>{{ page.title }}</h1>
@@ -8,9 +8,9 @@ parent: Cloud Playout
   <summary>{{ page.description }}</summary>
 	<section class="bcls-section">
 		<h2 id="introduction">はじめに</h2>
-		<p>クラウドプレイアウトチャネルを収益化する1つの方法は、広告を使用することです。広告を配信する最も信頼できる方法は、サーバー側の広告挿入（SSAI）を使用することです。</p>
+		<p>Could Playoutチャネルを収益化する1つの方法は、広告を使用することです。広告を配信する最も信頼できる方法は、サーバーサイド広告挿入（SSAI）を使用することです。</p>
 		<aside class="bcls-aside bcls-aside--information">アカウントにSSAI機能を追加することに興味がある場合は、アカウントマネージャーに連絡してください。</aside>
-		<p>このトピックでは、クラウドプレイアウトチャネルでSSAIを有効にし、プレロールおよびポストロールの広告挿入を設定する方法について説明します。ミッドロール広告の挿入は異なる働きをするので、それはでカバーされています<a href="/cloud-playout/mid-roll-ad-insertion.html">ミッドロール広告をチャネルに追加する</a>。プレロール、ポストロール、ミッドロールの広告はすべて、VODコンテンツのチャンネルに挿入できます。</p>
+		<p>このトピックでは、Cloud PlayoutチャネルでSSAIを有効にし、プレロールおよびポストロールの広告挿入を設定する方法について説明します。ミッドロール広告の挿入は仕組みが異なるため、<a href="/cloud-playout/mid-roll-ad-insertion.html">ミッドロール広告をチャネルに追加する</a>で説明します。プレロール、ポストロール、ミッドロールの広告は全てチャンネルに挿入できます。</p>
     <aside class="bcls-aside bcls-aside--information">SSAI対応チャネルの場合、宛先を広告対応RTPライブイベントに設定する必要があります。
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/cloud-playout/advanced-options-for-live-job.png" alt="Live Settings for SSAI Channel">
@@ -20,37 +20,36 @@ parent: Cloud Playout
 	</section>
   <section class="bcls-section">
     <h2 id="requirements">要件</h2>
-    <p>クラウドプレイアウトでサーバーサイド広告挿入（SSAI）を使用するには、次のものが必要です。</p>
+    <p>Cloud Playでサーバーサイド広告挿入（SSAI）を使用するには、次のものが必要です。</p>
     <ul>
-      <li>アカウントは、ブライトコーブのライブおよびライブwith SSAI で有効にする必要があります。</li>
-      <li>チャンネルの宛先として Brightcove Live または S3 を使用する必要があります。</li>
+      <li>アカウントは、Brightcove LiveおよびLive with SSAI が有効になっている必要があります。</li>
+      <li>Brightcove Live または S3 をチャンネルの配信先として使用する必要があります。</li>
     </ul>
   </section>
   <section class="bcls-section">
     <h2 id="ads">サーバーサイド広告の有効化</h2>
-    <p>チャネルを作成するときに、SSAIを有効にするオプションがあります。これにより、Brightcoveのサーバー側広告挿入テクノロジーを使用してサーバー側広告が表示されます。有効にすることもできます </p>
+    <p>チャネルを作成する際、SSAIを有効にするオプションがあり、Brightcoveのサーバーサイド広告挿入技術を使用してサーバーサイド広告が表示されるようにします。また、ミッドロール キューポイントのインポートを有効にすることもできます。 </p>
 		<figure class="bcls-figure">
 			<img class="bcls-image" src="/assets/images/cloud-playout/new-channel-with-ssai.png" alt="Enable SSAI">
 			<figcaption class="bcls-caption--image">SSAI を有効にする</figcaption>
 		</figure>
     <aside class="bcls-aside bcls-aside--information">注意: 
       <ul>
-        <li>広告挿入を使用する場合、チャネルはBrightcoveライブイベントにのみ出力できます。</li>
-        <li>広告の挿入を有効にすると、チャンネルでライブ入力が使用されない場合があります。</li>
+        <li>広告挿入を使用する場合、チャンネルはBrightcove Liveイベントへの出力のみ可能です。</li>
       </ul>
       </aside>
-    <h3>広告タグと塗りつぶしスレートの設定</h3>
-    <p>アカウント管理の一環として、広告タグと塗りつぶしスレートが設定されていることを確認してください。広告タグの構成については、「<a href="/admin/configuring-server-side-ad-settings.html">サーバー側広告設定の構成」を参照してください</a>。フィルスレートは、ライブストリームの広告ブレークにギャップがある場合に提供できるコンテンツです。フィルスレートの作成については、<a href="https://live.support.brightcove.com/admin/managing-live-settings.html">ライブ設定の管理を参照してください</a>。</p>
+    <h3>広告タグとフィルスレートの設定</h3>
+    <p>アカウント管理の一環として、広告タグとフィルスレートが設定されていることを確認してください。広告タグの設定については、「<a href="/admin/configuring-server-side-ad-settings.html">サーバーサイド広告設定の構成」を参照してください</a>。フィルスレートは、ライブストリームの広告ブレークにギャップがある場合に提供できるコンテンツです。フィルスレートの作成については、<a href="https://live.support.brightcove.com/admin/managing-live-settings.html">ライブ設定の管理を参照してください</a>。</p>
     <p>
       <aside class="bcls-aside bcls-aside--information">注:Cloud Playout は、<a href="https://live.support.brightcove.com/admin/managing-live-settings.html">ライブ設定の一部として構成されたデフォルトの広告スレートを使用します</a>。</aside>
     </p>
-    <h3>プレースホルダー広告休憩動画の作成</h3>
-    <p>どの動画を「プレースホルダ」動画として使用するかを指定する必要があります。「プレースホルダ」動画がプログラムリストに挿入され、広告が配信され、広告の長さが示されます。Brightcove Live でサーバー側広告挿入を使用すると、「プレースホルダ」動画が広告コンテンツに置き換えられるため、この操作を行う必要があります。広告の「プレースホルダ」動画を挿入しないと、実際の動画の一部が広告コンテンツに置き換えられます。広告期間が返された広告よりも短い場合、SSAI は広告スレートを表示します。広告期間が返された広告よりも長い場合は、広告の後に広告スレートが表示されます。 </p>
-    <p>広告休憩時間と同じ動画の長さを持つ動画ソースファイル（2 分、4 分など）を作成/アップロードする必要がある場合があります。彼らは実際にプログラムの一部として再生されないので、これらのビデオの内容は重要ではありません。 </p>
-    <p>ビデオを「プレースホルダー」ビデオとしてマークするには、Media モジュールを使用してこれらのビデオのビデオプロパティを編集し、タグを付けます<code translate="No">cp-ad-holder</code>。
+    <h3>プレースホルダー広告ブレーク動画の作成</h3>
+    <p>どの動画を「プレースホルダ」動画として使用するかを指定する必要があります。「プレースホルダ」動画は、広告が配信される事と、広告の長さを示すために、プログラムに挿入されます。Brightcove Live でサーバーサイド広告挿入を使用する場合、「プレースホルダ」動画は広告コンテンツに置き換えられるため、この操作を行う必要があります。広告の「プレースホルダ」動画を挿入しない場合、実際の動画の一部が広告コンテンツに置き換えられます。広告時間が返された広告よりも短い場合、SSAI は広告スレートを表示します。広告時間が返された広告よりも長い場合は、広告の後に広告スレートが表示されます。 </p>
+    <p>希望する広告時間の長さ（2 分、4 分など）と同じ長さの動画ソースファイルを作成/アップロードする必要があります。これらのビデオの内容は、実際にプログラムの一部として再生されないので、ビデオの内容は重要ではありません。 </p>
+    <p>ビデオを「プレースホルダー」動画としてマークするには、Media モジュールを使用してこれらの動画のビデオプロパティを編集し、<code translate="No">cp-ad-holder</code>のタグを付けます。
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/cloud-playout/playout-ad-tag-video.png" /></figure>
     </p>
-    <h3>チャネルのサーバー側広告の有効化</h3>
+    <h3>チャネルのサーバーサイド広告の有効化</h3>
     <p>チャンネルを作成するときは、[ <strong>広告挿入</strong> ] オプションを [ <strong>オン] に設定します</strong>。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/cloud-playout/playout-ad-insertion-option.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">注:既存のチャンネルの場合、広告挿入の設定は変更できません。</aside>
@@ -64,12 +63,12 @@ parent: Cloud Playout
       </li>
       <li>[ <strong>OK] をクリックします</strong>。選択した長さの「プレースホルダー」ビデオは、選択したビデオの後にプログラムに挿入されます。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/cloud-playout/playout-ad-break-inserted.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">注:「プレースホルダー」として挿入されるビデオ<strong>しない</strong>プログラムの一部として再生されます。この動画は、広告リクエストが行われる場所と広告の長さを示すためにのみ使用されます。</aside>
+        <aside class="bcls-aside bcls-aside--information">注:「プレースホルダー」として挿入される映像は、番組の一部として再生されることは<strong>ありません</strong>。この動画は、広告リクエストが行われる場所と広告の長さを示すためにのみ使用されます。</aside>
       </li>
       <li>[ <strong>保存</strong> ] をクリックして、プログラムへの変更を保存します。</li>
     </ol>
     <h3>広告設定の選択</h3>
-    <p>プログラムの再生が開始されたら、[ブライトコーブ Live で表示] をクリックして、ライブモジュールでチャンネルを表示します。プレーヤーの下のドロップダウンを使用して、使用する広告構成を選択できます。</p>
+    <p>プログラムの再生が開始されたら、[Brightcove Live で表示] をクリックして、Liveモジュールでチャンネルを表示します。プレーヤーの下のドロップダウンを使用して、使用する広告構成を選択できます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/cloud-playout/playout-live-select-ad-config.png" /></figure>
     <figure class="bcls-figure"></figure>
     <p>サーバーサイド広告挿入の詳細については、「<a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">Video Cloud SSAI の概要」</a>トピックを参照してください。</p>
