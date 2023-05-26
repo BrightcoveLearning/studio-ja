@@ -1,50 +1,41 @@
-<!DOCTYPE html>
-<html lang="ja"> 
-    <head>
-        <title>Setting Up an Automatic Ingestion Folder on Dropbox</title>
-        
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic explains how to set up a connection to Dropbox and select a folder that Video Cloud will watch to automatically ingest videos placed in the folder.">
-        
-        <!-- Google Font -->
-        <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
-        <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
-        
-        <!-- FontAwesome JS-->
-        
-        <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
-        
-        <!-- Plugins CSS -->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
-        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
+<!doctype html>
+<html lang="ja">
 
-        <!-- Theme CSS -->  
-        <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
-        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
-        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="このトピックでは、サポートポータルのパスワードをリセットする方法を学習します。">
+  
+  <title>Dropboxに自動取り込みフォルダを設定する</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-2728311-17');
+</script>
+  <script src="/assets/js/sajari-head.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
-        <script translate="no">
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-XBJC11HF8Z');
-        </script>
-        <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
-        <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
-        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
-
-    </head> 
-
-    <body class="docs-page">
-        
+<body class="body">
 
       <header>
         <div class="div-header">
@@ -986,142 +977,125 @@
 </div>
 </div>
 </div>
-<div class="page-content" style="background-color: rgb(1, 5, 14);">
-  <div class="container" style="width: 50%;">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-6 col-md">
-          <h5 class="h5-text">Brightcove Support</h5>
-          <ul class="list-unstyled text-small" style="color: white ;">
-            <li><a class="a-text" href="https://status.brightcove.com">System Status</a></li>
-            <li><a class="a-text" href="https://supportportal.brightcove.com">Contact Support</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/search.html">Search all documentation</a></li>
-          </ul>
-        </div>
-      
-        <div class="col-6 col-md">
-          <h5 class="h5-text">Training</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
-            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
-          </ul>
-        </div>
-      
-        <div class="col-6 col-md">
-          <h5 class="h5-text">Brightcove</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
-            <li><a class="a-text" href="https://www.linkedin.com/groups/3229573/">Bright Spot Community</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">Product release notes</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">Documentation updates</a></li>
-          </ul>
-        </div>
-      </div>
-    
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>© Brightcove Inc. All rights reserved.</p>
-      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">Privacy</a> 
-      <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a>
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+        <img src="https://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_KO.svg" class="bc-footer-logo" alt="Brightcove">
 
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
-        title="LinkedIn" target="_blank" class="gf-social-linkedin"
-        style="margin-right: 1rem;"><i data-feather="linkedin"
-          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+        <h2>ブライトコーブのサポート</h2>
 
-        <li class="ms-3"><a
-        href="https://twitter.com/brightcove" title="Twitter" target="_blank"
-        class="gf-social-twitter" style="margin-right: 1rem;"><i
-          data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">システムステータス</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">サポートへのお問い合わせ</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">ドキュメンテーション</a>
+          </li>
+        </ul>
 
-        <li class="ms-3"><a
-        href="https://www.facebook.com/Brightcove" title="Facebook"
-        target="_blank" class="gf-social-facebook"><i data-feather="facebook"
-          style="color:#8E9093;height: 1.25rem;"></i></a></li>
-      </ul>
-      </div>
-    </footer>
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>トレーニング</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">オンラインコース</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">コースに登録する</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">ブライトコーブ大学</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>ブライトコーブ</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">お問合せ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
-
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> ブライトコーブ Inc. すべての権利を保有</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script translate="no">
+      
   var searchBox = sajari.init({
     mode: "search-box",
     project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documentation", // Set this to your collection.
+    collection: "brightcove-documenation", // Set this to your collection.
     instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder,
-    styling: {
-      components: {
-        
-        input: {
-          container: {
-          backgroundColor: 'white',
-          }
-        
-        }
-      }
-    },
+    inputPlaceholder: "Search", // Input element placeholder
     maxSuggestions: 5, // Maximum number of suggestions to show
-      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
   });
-
   
-
-
     searchBox("sub", "pipeline.search-sent", function (_, query) {
-    window.location = "/search.html?q=" + encodeURIComponent(query.q);
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
     });
   
-  </script>
-  
-  <!-- Javascript -->          
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 
-
-  <!-- Page Specific JS -->
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
-  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
-  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
-
-  <!-- original footer components -->
-
+</script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
-  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
-  <script src="/assets/s-site-assets-scripts/selector.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
   
-  <script src="/assets/s-site-assets-scripts/prism.js"></script>
-  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
   
-  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
   <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
-  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
-  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
-  
+  <!-- <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script> -->
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
   <script src="/assets/js/sites_nav.js"></script>
-  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
-  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
-  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/sajari-reindex.js"></script>
   <script src="/assets/js/feedback.js"></script>
   
-  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  <script src="/assets/js/sajari-search-foot.js"></script>
   
   <script translate="no">
     feather.replace()
   </script>
   <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
-  <style translate="no">
+  <style>
     a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
       background-color: lightblue;
     }
@@ -1148,5 +1122,6 @@
     }
     </style>
 
-  </body>
-</html> 
+</body>
+
+</html>
