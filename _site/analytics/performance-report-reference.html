@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="このトピックでは、Analyticsモジュールの一部として提供されるパフォーマンスレポートについて学習します。">
   
-  <title>パフォーマンスレポートリファレンスの</title>
+  <title>パフォーマンス レポートの参照</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -1187,269 +1187,294 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>パフォーマンスレポートリファレンスの</h1>
+  <h1>パフォーマンス レポートの参照</h1>
   <summary>このトピックでは、Analyticsモジュールの一部として提供されるパフォーマンスレポートについて学習します。</summary>
   <section class="bcls-section">
     <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2350861666001">&nbsp;</div>
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>アナリティクスデータは、ネイティブプレーヤー SDK によって提供されるものを含め、ブライトコーブプレーヤーによって自動的に送信されます。あなたがいる場合<strong>いいえ</strong> Brightcoveプレーヤーを使用してVideoCloudビデオを配信するには、データをデータコレクターに送信するために使用しているプレーヤーをインストルメント化する必要があります。<a href="https://apis.support.brightcove.com/data-collection/overview-data-collection-api-v2.html">概要を参照してください。詳細については、データ収集 API</a>のトピックを参照してください。</p>
-    <p>パフォーマンスレポートを表示するには、分析モジュールを開いて、<span class="BCL_command"><strong>パフォーマンス</strong></span>左側のナビゲーションから。レポートには、選択した期間の 1 日あたりの合計ビデオ視聴数を示すグラフが表示されます。ドロップダウンリストを使用して、別の指標を選択できます。</p>
+    <p>アナリティクスデータは、ネイティブプレーヤー SDK によって提供されるものを含め、Brightcoveプレーヤーによって自動的に送信されます。Brightcoveプレーヤーを使用<strong>しない</strong>で、Video Cloud 動画を配信している場合は、データをデータコレクターに送信するために、使用しているプレーヤーをインストルメント化する必要があります。詳細については、<a href="https://apis.support.brightcove.com/data-collection/overview-data-collection-api-v2.html">概要: データ収集 API</a>のトピックを参照してください。</p>
+    <p>パフォーマンス レポートを表示するには、Analytics モジュールを開いて、左側のナビゲーションから<span class="BCL_command"><strong>パフォーマンス</strong></span>を選択します。レポートには、選択した期間の 1 日あたりの動画総視聴回数がグラフで表示されます。ドロップダウン リストを使用して、別の指標を選択できます。</p>
     <ul>
-      <li><strong>動画再生回数</strong> -ストリーミングが開始されたときに録画された動画の再生回数です（巻き戻しや再生は含まれません）。個々の視聴者の指標ではありません。プリロール広告を含む動画の場合、動画が遊びます</li>
-      <li><strong>動画のインプレッション数</strong> -動画が読み込まれ、インタラクションの準備が完了した回数</li>
-      <li><strong>再生率</strong> -実際に再生された動画の割合（動画再生回数/動画インプレッション数）</li>
-      <li><strong>閲覧時間（分）</strong> -ビデオが視聴された分数</li>
-      <li><strong>エンゲージメントスコア</strong> -動画視聴あたりの平均視聴率（すべての視聴率を動画再生数で割って算出）</li>
-      <li><strong>毎日のユニークビューア</strong> -視聴者のIPアドレスとユーザーエージェントを使用して計算されます。ブライトコーブは、クッキーがブラウザによってブロックされるようになっているため、サードパーティクッキーを使用しないという決定を下しました。デイリーユニークビューアーは、アカウントまたはビデオレベルで利用できます。このメトリックは、ビデオ（またはその他）でフィルタリングする場合は使用できません。さらに、ブライトコーブはユニーク視聴者をIPアドレスではなくお客様が提供した値に基づくようにする機能を提供しています。詳細については、<a href="https://apis.support.brightcove.com/data-collection/overview-data-collection-api-v2.html#uniqueuser"> Analytics</a>イベントトラッキング開発者ドキュメントを参照してください。</li>
-      <li><strong>ビデオ帯域幅</strong> -ビデオのみの帯域幅が含まれます。帯域幅データは、3～5日遅れることに注意してください。</li>
-      <li><strong>合計帯域幅</strong> -ビデオ、画像、プレーヤーの負荷の帯域幅が含まれます。帯域幅データは、3～5日遅れることに注意してください。</li>
+      <li><strong>動画視聴回数</strong> -ストリーミングが開始された時に記録される、動画の再生回数です（巻き戻しやリプレイは含まれません）。個々の視聴者の指標ではありません。プリロール広告を含む動画では、再生が始まるまで記録されません。</li>
+      <li><strong>動画インプレッション</strong> -動画が読み込まれ、インタラクション(再生）の準備ができた回数</li>
+      <li>
+        <strong>プレイ リクエスト</strong> - 再生が要求された回数 - 再生リクエストは、以下によって生成されます:
+        <ul>
+          <li>視聴者が最初に再生ボタンをクリックした時。</li>
+          <li>視聴者が動画を一時停止し、再度再生をクリックして再生を再開した時。</li>
+          <li>自動再生イベント。</li>
+          <li>視聴者が再生タイムラインをスクラブまたはクリックした場合（自動的に一時停止と再スタートが行われます）。</li>
+        </ul>
+          <aside class="bcls-aside bcls-aside--information language-editable">注: Brightcove Player バージョン 7 では、<code>play_request</code> イベントは、最初の再生要求時にメディア ソースごとに 1 回ディスパッチされます。動画を一時停止してから再起動しても、 <code>play_request</code>イベントが再度発生することはありません。</aside>
+      </li>
+      <li><strong>再生率</strong> -読み込まれた動画のうち、実際に再生された動画の割合（動画再生回数/動画インプレッション数）。</li>
+      <li><strong>表示時間（分）</strong> -ビデオが視聴された分数。</li>
+      <li><strong>エンゲージメント スコア</strong> -動画視聴あたりの平均視聴率（すべての視聴率を動画再生数で割って算出）。</li>
+      <li><strong>日次ユニーク視聴者</strong> -視聴者のIPアドレスとユーザーエージェントを使用して算出されます。Brightcoveは、ブラウザによってクッキーがブロックされることが多くなっているため、サードパーティーのクッキーを使用しないという決定を下しました。日次ユニーク視聴者は、アカウントまたは動画レベルで利用できます。この指標は、動画（またはその他のもの）でフィルタリングする場合は使用できません。Brightcoveはユニーク視聴者をIPアドレスの代わりに、お客様が提供した値に基づくようにする機能を提供しています。詳細については、<a href="https://apis.support.brightcove.com/data-collection/overview-data-collection-api-v2.html#uniqueuser"> Analyticsイベントトラッキング開発者ドキュメント</a>を参照してください。</li>
+      <li><strong>ビデオ帯域幅</strong> -ビデオ、画像、テキスト、オーディオトラックを含む配信コンテンツの帯域幅を含みます。帯域幅のデータは3～5日遅れることにご注意ください。</li>
+      <li><strong>合計帯域幅</strong> -ビデオ帯域幅とプレーヤーの読み込みによって生成される帯域幅を含みます。帯域幅データは3～5日遅れることにご注意ください。</li>
     </ul>
-    <p>デフォルトでは、レポートにはすべてのストリームタイプのパフォーマンスデータが表示されます。アカウントで Brightcove Live が有効になっている場合は、すべての動画、VOD アセット、ライブアセットのパフォーマンスデータを表示できます。[ <strong>ストリームタイプ]</strong>ピルをクリックして、選択を行います。</p>
+    <p>デフォルトでは、レポートにはすべてのストリームタイプのパフォーマンス データが表示されます。アカウントで Brightcove Live が有効になっている場合は、すべての動画、VOD アセット、Liveアセットのパフォーマンス データを表示できます。[ <strong>ストリームタイプ</strong>]のピルをクリックして、選択します。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/analytics/node10104-select-all-vod-live.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">注意:
       <ul>
-        <li>解析レポートには、お客様のアカウントから削除された動画の解析が含まれます。Analytics モジュールで削除された動画を検索して、削除された特定の動画に関するレポートを表示することはできません。このようなレポートを取得するには、削除された動画の動画 ID を知り、<a href="https://docs.brightcove.com/analytics-api/v1/doc/index.html"> Analytics API</a>を使用してレポートを生成する必要があります。</li>
-        <li>毎日のユニーク視聴者数と動画帯域幅のデータが使用可能になるには、最長で 3 日かかります。</li>
-        <li>ビデオビューは、エンゲージメントレポートの x% での視聴回数と同じではありません。動画再生回数は、動画の再生開始時にカウントされます。1% の視聴率は、最初のパーセントが視聴されたときに記録されます。ここでの違いは、最初の割合が複数回視聴された場合（例えば、ビデオが自動再生に設定されている場合）、カウントが増加します。一方、ビデオビューは、ビデオが最初に再生を開始したときにカウントされますが、再生にはカウントされません（ユーザーがページをリロードするか、プレイリストなど）。</li>
-        <li>同じアカウント内で同時にレポートリクエストが連続して実行されます。レポートの日付範囲が大きく、多くのフィールドが選択されている場合は、すべての結果が返されるまで遅延が発生する可能性があります。大きなレポートのスケジュールを設定するのが良い方法です。</li>
-        <li><a href="https://gallery.support.brightcove.com/experiences/inpage/overview-creating-editing-and-publishing-page-experiences.html">ページ内エクスペリエンスでは</a>、動画がプレーヤーにロードされているように見えますが、視聴者が再生ボタンのオーバーレイをクリックするまで動画は読み込まれません。そのため、視聴者が動画を再生するまで Analytics モジュールでは、動画のインプレッションは記録されません。</li>
+        <li>Analytics レポートには、お客様のアカウントから削除された動画のアナリティックスが含まれます。Analytics モジュールで削除された動画を検索して、削除された特定の動画に関するレポートを表示することはできません。このようなレポートを取得するには、削除された動画の動画 ID を取得し、<a href="https://docs.brightcove.com/analytics-api/v1/doc/index.html"> Analytics API</a>を使用してレポートを生成する必要があります。</li>
+        <li>日次ユニーク視聴者数と動画帯域幅のデータが利用可能になるまで、最長で 3 日かかります。</li>
+        <li>動画視聴回数は、エンゲージメントレポートの x% での視聴回数と同じではありません。動画視聴回数は、動画の再生開始時にカウントされます。1% の視聴率は、最初の1%が視聴されたときに記録されます。ここでの違いは、最初の%が複数回視聴された場合（例えば、ビデオが自動再生に設定されている場合など）、カウントが増加するのに対し、動画視聴回数は、ビデオが最初に再生を開始したときにカウントされますが、再生時にはカウントされません（ユーザーがページをリロードするか、プレイリスト内の別の動画を視聴しない限り）。</li>
+        <li>同一アカウント内で同時にレポート リクエストが連続して実行されます。レポートの日付範囲が大きく、多くのフィールドが選択されている場合は、すべての結果が返されるまで遅延が発生する可能性があります。従って、代わりに大規模なレポートのスケジュールを設定することをお勧めします。</li>
+        <li><a href="https://gallery.support.brightcove.com/experiences/inpage/overview-creating-editing-and-publishing-page-experiences.html">インページ エクスペリエンス</a>では、動画がプレーヤーにロードされているように見えますが、視聴者が再生ボタンのオーバーレイをクリックするまで動画は読み込まれません。そのため、視聴者が動画を再生するまで Analytics モジュールでは、動画のインプレッションは記録されません。</li>
       </ul>
     </aside>
-    <p>グラフの下にあるレポートスイッチャーを使用すると、別のレポートにすばやく切り替えることができます。</p>
+    <p>グラフの下にあるレポート スイッチャーを使用すると、別のレポートにすばやく切り替えることができます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/analytics/node10104-report-switcher.png" /></figure>
-    <p>レポートスイッチャーの右側にあるドロップダウンリストを使用して、レポートディメンションを選択できます。パフォーマンスレポートでは、次のディメンションを使用できます。</p>
+    <p>レポート スイッチャーの右側にあるドロップダウン リストを使用して、レポート ディメンションを選択できます。レポートの下部には、表示する行数を選択したり、他のページに移動するためのコントロールがあります。</p>
+    <p>パフォーマンス レポートでは、以下のディメンションを使用できます:<sup><strong><a href="#note1-1">[1-1]</a></strong></sup></p>
     <ul>
-      <li><a href="#video">ビデオ</a></li>
-      <li><a href="#player">プレイヤー</a></li>
-      <li><a href="#traffic">トラフィックの発信元</a></li>
-      <li><a href="#domain">ディスプレイドメイン</a></li>
+      <li><a href="#video">動画</a></li>
+      <li><a href="#player">プレーヤー</a></li>
+      <li><a href="#traffic">トラフィックソース</a></li>
+      <li><a href="#domain">ドメイン名</a></li>
       <li><a href="#country">国</a></li>
       <li><a href="#device">デバイス</a></li>
-      <li><a href="#devicetype">デバイスタイプ</a></li>
-      <li><a href="#deviceos">デバイスOS</a></li>
-      <li><a href="#deviceman">デバイス製造元</a></li>
-      <li><a href="#browser">ブラウザタイプ</a></li>
+      <li><a href="#devicetype">デバイスのタイプ</a></li>
+      <li><a href="#deviceos">デバイスのOS</a></li>
+      <li><a href="#deviceman">機器メーカー</a></li>
+      <li><a href="#browser">ブラウザのタイプ</a></li>
       <li><a href="#day">日</a></li>
     </ul>
-    <p>使用可能なディメンションは、選択したレポートに基づいて変化することに注意してください。レポートの下部には、表示する行の数を選択したり、他のページに移動するためのコントロールがあります。</p>
+    <p>Notes:
+        <ul>
+          <li id="note1-1" style="list-style: none;"><sup><strong>[1-1]</strong></sup> 利用可能なディメンションは、選択されているレポートに基づいて変更されます。</li>
+          <li id="note1-2" style="list-style: none;"><sup><strong>[1-2]</strong></sup> アカウントで Viewer dimension が有効になっている場合。または、Viewer dimension では、 <strong>Today</strong> は日付範囲としてサポートされていないことに注意してください。</li>
+        </ul>
+         </p>
   </section>
   <section class="bcls-section">
     <h2 id="compare">前の期間と比較する</h2>
     <p>[<strong>前の期間と比較</strong>]チェックボックスを選択すると、前の期間のデータを表す点線グラフが追加されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/node10104-compare-previous.png" /></figure>
-    <p>前の期間は、報告日範囲に現在選択されている範囲によって決まります。たとえば、過去 7 日間の日付範囲を選択した場合、前の期間は 2 週間前になります。週間の傾向を比較する場合は、完全な週をカバーする日付範囲を選択することをお勧めします。たとえば、月曜日から始まる日付を選択する場合は、終了日を日曜日に設定します。開始日が金曜日の場合は、終了日を木曜日に設定します。バーと破線の両方にマウスを置くと、日付および対応する値を表示できます。</p>
+    <p>前の期間は、レポートの日付範囲に現在選択されている範囲によって決まります。例えば、過去 7 日間の日付範囲を選択した場合、前の期間は 2 週間前になります。週単位の傾向を比較する場合は、完全な週をカバーする日付範囲を選択することをお勧めします。例えば、月曜日から始まる日付を選択する場合は、終了日を日曜日に設定します。開始日が金曜日の場合は、終了日を木曜日に設定します。棒グラフと破線の両方にマウスを置くと、日付および対応する値を表示できます。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="details">パフォーマンスレポートの詳細</h2>
-    <p>レポートの本文に表示される最初の列は、選択したレポートディメンション（動画名、プレイヤー名、国、デバイスの種類など）によって異なります。すべてのレポートには、次のデータが表示されます。</p>
+    <h2 id="details">パフォーマンス レポートの詳細</h2>
+    <p>レポートの本文に表示される最初の列は、選択したレポート ディメンション（動画名、プレイヤー名、国、デバイスの種類など）によって異なります。すべてのレポートには、次のデータが表示されます。</p>
     <ul>
-      <li><strong>動画再生回数</strong> -ストリーミングの開始時に録画された動画の再生回数（巻き戻しまたは再生は含まれません）。個々の視聴者の測定値ではありません</li>
-      <li><strong>動画のインプレッション</strong> -動画がプレーヤーにロードされ、インタラクションの準備が完了した回数</li>
-      <li><strong>再生率</strong> -動画を読み込んだ後に再生したユーザーの割合（動画視聴回数を動画のインプレッション数で割った値）</li>
-      <li><strong>閲覧時間（分）</strong> -ビデオが視聴された合計時間（分）</li>
-      <li><strong>エンゲージメントスコア</strong> -動画視聴あたりの平均視聴率（すべての視聴率を動画再生回数で割って算出）</li>
+      <li><strong>動画視聴回数</strong> -ストリームの開始時に記録された、動画の再生開始回数（巻き戻しまたはリプレイは含まれません）。個々の視聴者の測定値ではありません。</li>
+      <li><strong>動画インプレッション</strong> -動画がプレーヤーにロードされ、インタラクション(再生）の準備が完了した回数。</li>
+      <li><strong>再生率</strong> -動画を読み込んだ後に再生したユーザーの割合（動画視聴回数を動画のインプレッション数で割った値）。</li>
+      <li><strong>表示時間（分）</strong> -ビデオが視聴された合計時間（分）。</li>
+      <li><strong>エンゲージメント スコア</strong> -動画視聴あたりの平均視聴率（すべての視聴率を動画再生回数で割って算出）。</li>
     </ul>
-    <p>[ <strong>ビデオ]</strong>ディメンションと [ <strong>日]</strong>ディメンションには<strong>、</strong>その期間における1日の平均ユニーク視聴者数である [日次ユニーク視聴者] も表示されます。選択した。これは、ビューアの IP アドレスとユーザーエージェントを使用して計算されます。</p>
+    <p>[<strong>動画</strong>] と [ <strong>日</strong>]ディメンションには、選択した期間の1日の平均ユニーク視聴者数である<strong>日次ユニーク視聴者数</strong>も表示されます。これは、視聴者の IP アドレスとユーザーエージェントを使用して計算されます。</p>
+    <p>視聴者ディメンションには、<strong>合計視聴時間</strong>、<strong>完了した動画の数</strong> (視聴者が少なくとも 90% を視聴した動画の数) および <strong>最終視聴日</strong> が表示されます。</p>
     <h3 id="traffic_sources">トラフィックソース</h3>
-    <p>トラフィックソース別のパフォーマンスを表示する場合、考えられるトラフィックソースは次のとおりです。</p>
+    <p>トラフィックソース別のパフォーマンスを見る場合、考えられるトラフィックソースは次のとおりです。</p>
     <ul>
-      <li><strong>紹介</strong> -ユーザーが動画へのリンクをたどった</li>
-      <li><strong>Direct</strong> -ユーザーがリンクを直接入力したか、リファラーを特定できませんでした</li>
-      <li><strong>安全な検索</strong> -ユーザーはGoogleアカウントでログインし、検索を実行し、結果をクリックしました（有料またはオーガニック。検索情報はこの場合は含まれません）</li>
-      <li><strong>オーガニック検索</strong> -ユーザーが検索を実行し、結果をクリックして動画にアクセスした</li>
-      <li><strong>有料検索</strong> -ユーザーが検索を実行し、有料の結果をクリックして動画にアクセスした</li>
+      <li><strong>参照</strong> -ユーザーが動画への辿ったリンク。</li>
+      <li><strong>直接</strong> -ユーザーがリンクを直接入力したか、リファラーが特定できなかった場合。</li>
+      <li><strong>安全な検索</strong> -ユーザーが、Googleアカウントでログインし、検索を実行し、結果をクリックした（有料またはオーガニック。検索情報はこの場合は含まれません）。</li>
+      <li><strong>オーガニック検索</strong> -ユーザーが検索を実行し、結果をクリックして動画にアクセスした場合。</li>
+      <li><strong>有料検索</strong> -ユーザーが検索を実行し、有料の結果をクリックして動画にアクセスした場合。</li>
     </ul>
-    <h3 id="device_types">デバイスタイプ</h3>
-    <p>パフォーマンス・レポートの中には、デバイス・タイプ別に表示できるものもあります。可能なデバイスタイプは次のとおりです。</p>
+    <h3 id="device_types">デバイス タイプ</h3>
+    <p>パフォーマンス レポートの中には、デバイス タイプ別に表示できるものもあります。可能なデバイスタイプは次のとおりです。</p>
     <ul>
-      <li><strong>デスクトップ</strong> -デスクトップコンピュータとラップトップコンピュータを含む</li>
+      <li><strong>デスクトップ</strong> -デスクトップコンピュータとラップトップコンピュータを含む。</li>
       <li><strong>タブレット</strong> -iPad、Androidタブレットなどが含まれています。</li>
       <li><strong>モバイル</strong> -携帯電話</li>
-      <li><strong>接続テレビ/ゲーム機/コンパニオンデバイス</strong> -スマートテレビ、セットトップボックス、ゲーム機を含む</li>
-      <li><strong>その他</strong> -上記のいずれにもマッピングされていないユーザーエージェントの場合</li>
+      <li><strong>コネクティッドTV/ゲーム機/コンパニオンデバイス</strong> -スマートテレビ、セットトップボックス、ゲーム機を含む。</li>
+      <li><strong>その他</strong> -上記のいずれにもマッピングされていないユーザーエージェントの場合。</li>
     </ul>
-    <h3 id="device_os">デバイスオペレーティングシステム</h3>
-    <p>パフォーマンスレポートの中には、デバイスのオペレーティングシステム別に表示できるものもあります。可能なオペレーティングシステムは次のとおりです。</p>
+    <h3 id="device_os">デバイス オペレーティング システム</h3>
+    <p>パフォーマンス レポートの中には、デバイスのオペレーティング システム別に表示できるものもあります。可能なオペレーティングシステムは次のとおりです。</p>
     <ul>
-      <li>アンドロイド</li>
-      <li>バダ</li>
+      <li>Android</li>
+      <li>Bada</li>
       <li>iOS</li>
-      <li>リナックス</li>
+      <li>Linux</li>
       <li>OS X</li>
-      <li>リム</li>
-      <li>シンビアン</li>
-      <li>ウェブ OS</li>
+      <li>RIM</li>
+      <li>Symbian</li>
+      <li>Web OS</li>
       <li>Windows</li>
       <li>その他-上記のいずれにもマッピングされていないユーザーエージェントの場合</li>
     </ul>
-    <h3 id="device_manufacturer">デバイスの製造元</h3>
-    <p>パフォーマンスレポートの中には、デバイスのオペレーティングシステム別に表示できるものもあります。可能なデバイスメーカーは次のとおりです。</p>
+    <h3 id="device_manufacturer">機器メーカー</h3>
+    <p>パフォーマンス レポートの中には、デバイスのオペレーティング システム別に表示できるものもあります。可能な機器メーカーは次のとおりです。</p>
     <ul>
-      <li>アップル</li>
-      <li>アマゾン</li>
+      <li>Apple</li>
+      <li>Amazon</li>
       <li>ASUS</li>
-      <li>ブラックベリー</li>
-      <li>富士通</li>
-      <li>グーグル</li>
-      <li>ファーウェイ</li>
+      <li>Blackberry</li>
+      <li>Fujitsu</li>
+      <li>Google</li>
+      <li>Huawei</li>
       <li>HTC</li>
-      <li>京セラ</li>
-      <li>レノボ</li>
+      <li>Kyocera</li>
+      <li>Lenovo</li>
       <li>LG</li>
-      <li>マイクロマックス</li>
-      <li>マイクロソフト</li>
-      <li>任天堂</li>
-      <li>パナソニック</li>
-      <li>ろく</li>
-      <li>サムスン</li>
-      <li>シャープ</li>
-      <li>ソニー</li>
-      <li>ヴィツィオ</li>
+      <li>Micromax</li>
+      <li>Microsoft</li>
+      <li>Nintendo</li>
+      <li>Panasonic</li>
+      <li>Roku</li>
+      <li>Samsung</li>
+      <li>Sharp</li>
+      <li>Sony</li>
+      <li>Vizio</li>
       <li>ZTE</li>
-      <li>その他-デバイスの製造元を特定できないとき。その他が報告されている一般的なケースは次のとおりです。
+      <li>その他-デバイスの製造元を特定できない場合。その他が報告されている一般的なケースは次のとおりです。
         <ul>
-          <li>デスクトップブラウザのユーザーエージェントがメーカーを示さない場合</li>
-          <li>ブライトコーブがデバイスの識別に使用するサードパーティがデバイスの詳細情報を持っていない</li>
+          <li>デスクトップ ブラウザのユーザーエージェントがメーカーを示さない場合。</li>
+          <li>Brightcoveがデバイスの識別に使用するサードパーティがデバイスの詳細情報を持っていない。</li>
         </ul>
       </li>
     </ul>
-    <h3 id="browser_type">ブラウザの種類</h3>
-    <p>パフォーマンスレポートの中には、ブラウザの種類別に表示できるものもあります。可能なブラウザの種類は次のとおりです。</p>
+    <h3 id="browser_type">ブラウザのタイプ</h3>
+    <p>パフォーマンス レポートの中には、ブラウザの種類別に表示できるものもあります。可能なブラウザの種類は次のとおりです。</p>
     <ul>
-      <li>クロム</li>
-      <li>エッジ</li>
-      <li>Firefoxの</li>
-      <li>インターネットエクスプローラー</li>
-      <li>オペラ</li>
-      <li>サファリ</li>
+      <li>Chrome</li>
+      <li>Edge</li>
+      <li>Firefox</li>
+      <li>Internet Explorer</li>
+      <li>Opera</li>
+      <li>Safari</li>
       <li>その他すべて-上記のいずれにもマップされていないユーザーエージェントの場合</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">注:アナリティクスの用語と定義の完全なリストについては、<a href="/analytics/analytics-module-ui-glossary.html"> Analytics 用語集を参照してください</a>。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: アナリティクスの用語と定義の完全なリストについては、<a href="/analytics/analytics-module-ui-glossary.html"> Analytics 用語集</a>を参照してください。</aside>
   </section>
   <section class="bcls-section">
     <h2 id="video">ビデオ分析の表示</h2>
-    <p>ビデオディメンションを選択すると、選択した期間の 1 日あたりのビデオ視聴回数がグラフに表示されます。このレポートでは各プレーヤーに対する動画の名前、動画のID、長さ、およびパフォーマンスの詳細が表示されます。</p>
+    <p>[<strong>動画</strong>]ディメンションを選択すると、選択した期間の 1 日あたりの動画視聴回数がグラフに表示されます。このレポートでは、各動画の動画名、動画ID、視聴時間、およびパフォーマンスの詳細が表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Account Performance Report" src="/assets/images/analytics/node10104-account-performance.png" /></figure>
     <p>動画のリンクをクリックすると、その動画のパフォーマンスが表示されます。</p>
-    <aside class="bcls-aside bcls-aside--information">注:Video Cloud ライブラリにないビデオが Video Cloud プレーヤーで再生される場合（リモートアセットや、プレーヤーモジュールのプレビュープレーヤーに表示されるプレースホルダビデオなど）、関連ビデオ ID なしで他の/サードパーティが表示されます。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: Video Cloud ライブラリにない動画が Video Cloud プレーヤーで再生される場合（リモートアセットや、Playerモジュールのプレビュープレーヤーに表示されるプレースホルダ動画など）、関連する動画 ID がない状態で、他の/サードパーティが表示されます。</aside>
   </section>
   <section class="bcls-section">
     <h2 id="player">プレーヤー分析の表示</h2>
-    <p><strong>Player</strong>ディメンションを選択すると、選択した期間の 1 日あたりのビデオ視聴回数がグラフに表示されます。レポートの本体では、各プレーヤーについてパフォーマンスの詳細が表示されます。</p>
+    <p>[<strong>プレーヤー</strong>]ディメンションを選択すると、選択した期間の 1 日あたりの動画視聴回数がグラフに表示されます。レポートの本体では、各プレーヤーのパフォーマンスの詳細が表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Player Performance" src="/assets/images/analytics/node10104-player-performance.png" /></figure>
     <p>プレーヤーのリンクをクリックすると、そのプレーヤーのパフォーマンスが表示されます。</p>
-    <aside class="bcls-aside bcls-aside--information">注:2016年2月より前は、iOSまたはAndroid用のBrightcove Player SDKを使用して構築されたアプリで使用されるプレーヤーは、次のプレーヤー名で表示されていました。 <em><strong>カスタムまたはネイティブ再生</strong></em>。2016 年 2 月以降、アプリで指定されたソースとデスティネーションの値を使用して、これらのプレーヤーを識別できるようになりました。詳細については、<a href="https://sdks.support.brightcove.com/ios/analytics/sending-brightcove-analytics-native-sdk-ios.html"> iOS</a>または<a href="https://sdks.support.brightcove.com/android/analytics/sending-brightcove-analytics-native-sdk-android.html"> Android</a> SDK のドキュメントを参照してください。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: 2016年2月以前は、iOSまたはAndroid用のBrightcove Player SDKを使用して構築されたアプリで使用されるプレーヤーは、プレーヤー名が<em><strong>カスタムまたはネイティブ再生</strong></em>で表示されていました。2016 年 2 月以降、これらのプレーヤーは、アプリで指定されたソースとデスティネーションの値を使用して、これらのプレーヤーを識別できるようになりました。詳細については、<a href="https://sdks.support.brightcove.com/ios/analytics/sending-brightcove-analytics-native-sdk-ios.html"> iOS</a>または<a href="https://sdks.support.brightcove.com/android/analytics/sending-brightcove-analytics-native-sdk-android.html"> Android</a> SDK のドキュメントを参照してください。</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="traffic">トラフィック分析のソースを表示する</h2>
-    <p>[ <strong>トラフィックのソース]</strong>ディメンションを選択すると、選択した期間の 1 日あたりのビデオ視聴回数がグラフに表示されます。レポートの本文には、<a href="#traffic_sources">各トラフィックソースのパフォーマンスデータが表示されます</a>。選択した期間内にデータがあるカテゴリーのみが表示されます。</p>
+    <h2 id="traffic">トラフィックソース分析を表示する</h2>
+    <p>[<strong>トラフィックソース</strong>]ディメンションを選択すると、選択した期間の 1 日あたりの動画視聴回数がグラフに表示されます。レポートの本文には、各<a href="#traffic_sources">トラフィックソース</a>のパフォーマンスデータが表示されます。選択した期間内にデータがあるカテゴリーのみが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Traffic Performance Report" src="/assets/images/analytics/node10104-traffic-performance.png" /></figure>
-    <p>トラフィックソースのリンクをクリックすると、選択したトラフィックソースに関するトラフィックソースパフォーマンスが表示されます。</p>
+    <p>いずれかのトラフィックソースのリンクをクリックすると、選択したトラフィックソースに関するトラフィックソースのパフォーマンスが表示されます。</p>
   </section>
   <section class="bcls-section">
     <h2 id="domain">表示ドメイン分析の表示</h2>
-    <p><strong>Display Domain</strong>ディメンションを選択すると、選択した期間の 1 日あたりのビデオ視聴回数がグラフに表示されます。レポートの本文には、表示ドメインのパフォーマンスデータが表示されます。表示ドメインとは、動画の視聴時に視聴者が使用していたドメインのことです。</p>
+    <p>[<strong>ドメイン名</strong>]ディメンションを選択すると、選択した期間の 1 日あたりの動画視聴回数がグラフに表示されます。レポートの本文には、表示ドメインのパフォーマンスデータが表示されます。表示ドメインとは、動画の視聴時に視聴者が使用していたドメイン名のことです。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Traffic Performance Report" src="/assets/images/analytics/node10104-display-domain-performance.png" /></figure>
-    <p>表示ドメインのいずれかのリンクをクリックすると、選択した表示ドメインの表示URLが表示されます。</p>
-    <aside class="bcls-aside bcls-aside--information">注:プレーヤーが iframe にある場合、表示ドメインは iframe 内のページの URL として記録されます。</aside>
+    <p>いずれかの表示ドメインのリンクをクリックすると、選択した表示ドメインの表示URLが表示されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注: プレーヤーが iframe にある場合、表示ドメインは iframe 内のページの URL として記録されます。</aside>
   </section>
   <section class="bcls-section">
     <h2 id="country">国の分析を表示する</h2>
-    <p>国ディメンションを選択すると、グラフには、選択した期間の 1 日あたりのビデオ視聴数が表示されます。レポートの本文には、動画が視聴された国ごとのパフォーマンスデータが表示されます。選択した期間内にデータがある国のみが表示されます。</p>
-    <aside class="bcls-aside bcls-aside--information">注:Brightcoveは、サードパーティのサービスを使用して、IPアドレスと場所の情報を提供します。問題のIPアドレスのエントリがない場合、国情報を取得できず、 Unknownと表示されます。</aside>
+    <p>[<strong>国</strong>]ディメンションを選択すると、グラフには、選択した期間の 1 日あたりの動画視聴数が表示されます。レポートの本文には、動画が視聴された各国ごとのパフォーマンスデータが表示されます。選択した期間内にデータがある国のみが表示されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注: Brightcoveは、サードパーティのサービスを使用して、IPアドレスと場所の情報を提供しています。問題のIPアドレスのエントリがない場合、国情報を取得できず、<strong>Unknown</strong>と表示されます。</aside>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Country Performance Report" src="/assets/images/analytics/node10104-country-performance.png" /></figure>
     <p>個々の動画ではなく、アカウントのアナリティクスを表示している場合、いずれかの国のリンクをクリックすると、選択した国の地域別または都市別のパフォーマンスが表示されます。</p>
   </section>
   <section class="bcls-section">
     <h2 id="device">デバイス分析の表示</h2>
-    <p>デバイスディメンションを選択すると、選択した期間の 1 日あたりのビデオ視聴回数がグラフに表示されます。レポートの本文には、<strong>ビデオの表示に使用されたデバイスタイプ-</strong>デバイスオペレーティングシステムの各組み合わせのパフォーマンスデータが表示されます。選択した期間内にデータがあるデバイスのみが表示されます。</p>
+    <p>[<strong>デバイス</strong>]ディメンションを選択すると、選択した期間の 1 日あたりの動画視聴回数がグラフに表示されます。レポートの本文には、ビデオの表示に使用された<strong>デバイスタイプ- デバイスオペレーティング システム</strong>の各組み合わせのパフォーマンスデータが表示されます。選択した期間内にデータがあるデバイスのみが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Device Performance Report" src="/assets/images/analytics/node10104-device-performance.png" /></figure>
-    <p>デバイスタイプのいずれかのリンクをクリックすると、そのデバイスのオペレーティングシステムのパフォーマンスが表示されます。</p>
-    <aside class="bcls-aside bcls-aside--information">注:Analyticsモジュールは、user-agentヘッダーを使用してデバイスを判断します。誰かがヘッダーを偽装してデバイスを使用している場合には、その偽装されたヘッダーに基づいてデータが作成されます。Analytics モジュールは、ユーザーエージェントが改ざんされるのを防ぐための努力をしません。</aside>
+    <p>デバイスタイプのいずれかのリンクをクリックすると、そのデバイスのオペレーティング システムのパフォーマンスが表示されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注: Analyticsモジュールは、user-agentヘッダーを使用してデバイスを判断します。誰かがヘッダーを偽装してデバイスを使用している場合には、その偽装されたヘッダーに基づいてデータが作成されます。Analytics モジュールは、ユーザーエージェントが改ざんないようにすることは一切行いません。</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="devicetype">デバイスタイプ分析の表示</h2>
-    <p>デバイスタイプディメンションを選択すると、選択した期間の 1 日あたりのビデオ視聴回数がグラフに表示されます。レポートの本文には、<a href="#device_types">デバイスタイプ別のパフォーマンスの詳細が表示されます</a>。選択した期間内にデータがあるカテゴリーのみが表示されます。</p>
+    <h2 id="devicetype">デバイス タイプ分析の表示</h2>
+    <p>[<strong>デバイスのタイプ</strong>]ディメンションを選択すると、選択した期間の 1 日あたりの動画視聴回数がグラフに表示されます。レポートの本文には、<a href="#device_types">デバイスタイプ</a>別のパフォーマンスの詳細が表示されます。選択した期間内にデータがあるカテゴリーのみが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Device Type Performance" src="/assets/images/analytics/node10104-device-type-performance.png" /></figure>
-    <p>デバイスタイプのいずれかのリンクをクリックすると、そのデバイスのオペレーティングシステムのパフォーマンスが表示されます。</p>
+    <p>デバイス タイプのいずれかのリンクをクリックすると、そのデバイスのオペレーティング システムのパフォーマンスが表示されます。</p>
   </section>
   <section class="bcls-section">
     <h2 id="deviceos">デバイスOS分析の表示</h2>
-    <p><strong>Device OS</strong>ディメンションを選択すると、グラフには、選択した期間の 1 日あたりのビデオビュー数が表示されます。レポートの本文には、<a href="#device_os">各デバイスのオペレーティングシステムのパフォーマンスデータが表示されます</a>。選択した期間内にデータがあるカテゴリーのみが表示されます。</p>
+    <p>[<strong>デバイスのOS</strong>]ディメンションを選択すると、グラフには、選択した期間の 1 日あたりの動画視聴回数が表示されます。レポートの本文には、各<a href="#device_os">デバイスのオペレーティング システム</a>のパフォーマンスデータが表示されます。選択した期間内にデータがあるカテゴリーのみが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Device OS Performance" src="/assets/images/analytics/node10104-device-os-performance.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="deviceman">デバイスメーカーの分析を表示する</h2>
-    <p>[ <strong>デバイス製造元]</strong>ディメンションを選択すると、選択した期間の 1 日あたりのビデオ視聴回数がグラフに表示されます。レポートの本文には、<a href="#device_manufacturer">各デバイスメーカーのパフォーマンスデータが表示されます</a>。選択した期間内にデータがあるデバイスのみが表示されます。</p>
+    <h2 id="deviceman">機器メーカー分析の表示</h2>
+    <p>[<strong>機器メーカー</strong>]ディメンションを選択すると、選択した期間の 1 日あたりの動画視聴回数がグラフに表示されます。レポートの本文には、各<a href="#device_manufacturer">機器メーカー</a>のパフォーマンスデータが表示されます。選択した期間内にデータがあるデバイスのみが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Device Manufacturer Performance" src="/assets/images/analytics/node10104-device-man-performance.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="browser">ブラウザタイプ分析の表示</h2>
-    <p>ブラウザータイプディメンションを選択すると、選択した期間の 1 日あたりのビデオ視聴回数がグラフに表示されます。レポートの本文には、<a href="#browser_type">ブラウザの種類ごとのパフォーマンスデータが表示されます</a>。選択した期間内のデータを持つブラウザのみが表示されます。</p>
+    <p>[<strong>ブラウザのタイプ</strong>]ディメンションを選択すると、選択した期間の 1 日あたりの動画視聴回数がグラフに表示されます。レポートの本文には、<a href="#browser_type">ブラウザの種類</a>ごとのパフォーマンスデータが表示されます。選択した期間内のデータを持つブラウザのみが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Browser Type Performance" src="/assets/images/analytics/node10104-browser-type-performance.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="day">日分析の表示</h2>
-    <p> Day ディメンションを選択すると、選択した期間の 1 日あたりのビデオ視聴回数がグラフに表示されます。レポートの本文には、各日のパフォーマンスデータが表示されます。選択した期間内にデータがある日のみが表示されます。</p>
+    <p>[<strong>日</strong>]ディメンションを選択すると、選択した期間の 1 日あたりの動画視聴回数がグラフに表示されます。レポートの本文には、各日のパフォーマンスデータが表示されます。選択した期間内にデータがある日のみが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/analytics/node10104-day-performance.png" /></figure>
   </section>
   <section class="bcls-section">
+    <h2 id="viewer">視聴者分析の表示</h2>
+    <p>[<strong>視聴者</strong>]ディメンションを選択すると、選択した期間の 1 日あたりの動画視聴数がグラフで表示されます。レポート本文には、各視聴者のパフォーマンス データが表示されます。選択した期間内にデータがある日のみが表示されます。</p>
+    <p>視聴者IDがプレーヤーから分析データコレクターに送信されない場合、視聴者のIPアドレスとユーザーエージェントから視聴者IDを構築しようとします。視聴者アナリティクスは、ログインした視聴者がいて、その視聴者を確実に識別できる場合に最も役立ちます。視聴者 ID の送信については <a href="https://apis.support.brightcove.com/analytics/general/analytics-api-unique-users.html#identifyUsers">Analytics API</a>ドキュメントを参照してください。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/s-analytics-img/reports/node10104-viewer-performance.png" /></figure>
+    <p>視聴者をクリックすると、その視聴者の詳細が表示されます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/s-analytics-img/reports/node10104-viewer-details.png" /></figure>
+  </section>
+  <section class="bcls-section">
     <h2 id="filter">フィルタの使用</h2>
-    <p>フィルターを使用して、レポートに表示されるデータを制限できます。フィルターを追加するには、次の手順に従います。</p>
+    <p>フィルタを使用して、レポートに表示されるデータを制限できます。フィルタを追加するには、次の手順に従ってください。</p>
     <ol class="bcls-tasklist">
-      <li>レポートの上部にある [ <strong>+ フィルタの追加]</strong>ピルをクリックします。
+      <li>レポートの上部にある <strong>+ フィルタの追加</strong>のピルをクリックします。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="add filter" src="/assets/images/analytics/node10104-add-filter.png" /></figure>
       </li>
-      <li>データは次の方法でフィルタリングできます<strong>タグ</strong>、<strong>カスタムフィールド</strong>、<strong>国</strong>と<strong>デバイスタイプ</strong>。フィルタパネルを使用してフィルタ基準を設定します。次の例では、フィルタを適用します。
+      <li>データは、<strong>タグ</strong>、<strong>カスタムフィールド</strong>、<strong>国</strong>と<strong>デバイスタイプ</strong>でフィルタリングできます。フィルタパネルを使用してフィルタ条件を設定します。次の例では、フィルタを適用します。
 <ul>
-          <li>タグ = <strong>オンデマンドトレーニング</strong> AND</li>
-          <li><strong>カスタムフィールド製品</strong> = ビデオクラウドと</li>
-          <li>国= <strong>アメリカ</strong></li>
+          <li>タグ = <strong>on demand training</strong> AND</li>
+          <li>カスタムフィールド<strong>Product</strong> = <strong>Video Cloud</strong> AND</li>
+          <li>国= <strong>United States</strong></li>
         </ul>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report filter" src="/assets/images/analytics/node10104-filter-panel.png" /></figure>
       </li>
-      <li>[ <strong>フィルタの適用] をクリックします</strong>。</li>
+      <li><strong>フィルタの適用</strong> をクリックします。</li>
     </ol>
-    <p>適用されたフィルターは、レポートの上部にある丸薬に表示されます。各ピルには、フィルタータイプと最大 2 つの値が表示されます。最大 3 つの丸薬が表示されます。</p>
+    <p>適用されたフィルタは、レポートの上部にあるピルに表示されます。各ピルには、フィルタ タイプと最大 2 つの値が表示されます。最大 3 つのピルが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/analytics/node10104-filter-pills.png" /></figure>
-    <p>追加のピルはオーバーフローピルに折りたたまれ、ホバー時にツールチップに表示されます。</p>
+    <p>追加のピルはオーバーフローピルに折りたたまれ、カーソルを合わせるとにツールチップに表示されます。</p>
     <p>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/analytics/node10104-pill-hover.png" /></figure>
     </p>
     <p>フィルタを削除するには、ピルをクリックして、フィルタパネルからフィルタをクリアします。</p>
-    <h3>フィルターの使用に関する注意事項</h3>
+    <h3>フィルタの使用に関する注意事項</h3>
     <ul>
-      <li>&nbsp;ストリームタイプを使用できるのは、アカウントで Brightcove Live が有効になっている場合のみです</li>
-      <li>アカウントでカスタムフィールドが有効になっていない場合、カスタムフィールドセクションは無効になります</li>
-      <li>フィルタの種類右側にあるプラス/マイナスボタンを使用して、フィルタを追加/削除できます</li>
+      <li>&nbsp;ストリームタイプを使用できるのは、アカウントで Brightcove Live が有効になっている場合のみです。</li>
+      <li>アカウントでがカスタムフィールドが有効になっていない場合、カスタムフィールドセクションは無効になります。</li>
+      <li>フィルターは、フィルタータイプの右側にあるプラス/マイナスボタンで追加/削除できます。</li>
       <li>フィルターは適用されているように見えますが、Analytics モジュールのすべてのセクションに適用できるわけではありません。
         <ul>
-          <li>特定のビデオまたはプレーヤーにドリルすると、タグとカスタムフィールドフィルタは適用されません（ただし、ビデオまたは日単位でのプレーヤーのディメンションは唯一の例外です）。</li>
-          <li>エンゲージメントレポートのエンゲージメントグラフ</li>
+          <li>特定の動画またはプレーヤーをクリックして、その動画やプレーヤのパフォーマンス詳細を表示しても、タグやカスタムフィールドフィルタは適用されません（ただし、ビデオまたは日単位でのプレーヤーのディメンションは唯一の例外です）。</li>
+          <li>エンゲージメント グラフ(エンゲージメント レポート ページ上部のグラフ)。</li>
         </ul>
       </li>
-      <li>フィルターを適用すると、分析データの読み込みに少し時間がかかることがあります</li>
-      <li>フィルタータイプ
+      <li>フィルタを適用すると、分析データの読み込みに少し時間がかかることがあります。</li>
+      <li>フィルタのタイプ
         <ul>
-          <li><strong>全て</strong> -含める必要があります<strong>全て</strong>値</li>
-          <li><strong>どれでも</strong> -含まれる可能性があります<strong>どれか</strong>値</li>
-          <li><strong>なし</strong> -含める必要があります<strong>なし</strong>選択した値の</li>
+          <li><strong>すべて</strong> -<strong>すべて</strong>の値を含める必要があります。</li>
+          <li><strong>いずれか</strong> -<strong>任意</strong>の値を含むことができます。</li>
+          <li><strong>なし</strong> -選択された値のいずれも<strong>含まれない</strong>。</li>
         </ul>
       </li>
     </ul>
   </section>
   <section class="bcls-section">
     <h2 id="export" class="BCL_conceptTitle">レポートデータのエクスポート</h2>
-    <p>レポートデータのダウンロードは、コンマ区切り形式とExcel形式で可能です。エクスポート機能は、データをから直接保存することに注意してください。<span translate="No"> Analytics API</span>電話。エクスポートされたデータはUIデータのようには操作されず、UIで表示されるフィールドのサブセットのみでなく、レポートの基礎となるデータすべてを含んでいます。UI に表示されるものとエクスポートされたデータとの相違点は次のとおりです。</p>
+    <p>レポートデータのダウンロードは、CSV(コンマ区切り)形式とExcel形式で可能です。エクスポート機能は、<span translate="No"> Analytics API</span>コールから直接データを保存することに注意してください。エクスポートされたデータは、UI データのように操作されることはなく、現在のところ、UI で表示されるフィールドのサブセットだけでなく、レポートのすべての基礎データが含まれています。UIで表示されるものとエクスポートされたデータの違いの一部は以下になります。</p>
     <ul>
-      <li>異なる単位（分対秒）</li>
+      <li>異なる単位（分と秒）</li>
       <li>数値の四捨五入</li>
       <li>UIのどこにいるかに関係なく、データのエクスポートには、パフォーマンス指標とエンゲージメント指標の両方が含まれます</li>
-      <li><strong>Others/Third</strong> Party エントリは、関連するビデオ ID またはビデオ名なしでエクスポートされます。</li>
+      <li><strong>その他/サードパーティ</strong>のエントリは、関連する動画ID または動画名ない状態でエクスポートされます。</li>
     </ul>
-    <p>すべてのデータをAPIの元のフォーマットで保持することで、UIで提供される方法以外でもデータを操作することができます。</p>
+    <p>APIからすべてのデータをオリジナルのフォーマットで入手することで、UIで提供される以外の方法でデータを操作することができます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Export Data" src="/assets/images/analytics/node10104-export.png" /></figure>
-    <p>レポートは印刷に適したスタイルシートをサポートしています。したがって、レポートを印刷したりPDFに保存すると、印刷用のページが生成されます。</p>
+    <p>グラフの上にあるエクスポートボタンは、グラフデータをエクスポートします。レポートは印刷に適したスタイルシートをサポートしているので、レポートを印刷したりPDFに保存したりすると、印刷に適したページが生成されます。</p>
   </section>
 </article>
 
