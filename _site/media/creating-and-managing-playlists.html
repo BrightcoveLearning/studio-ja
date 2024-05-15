@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="このトピックでは、Video Cloud Studioでプレイリストを作成および管理する方法を学習します。">
   
-  <title>プレイリストの作成と管理の</title>
+  <title>プレイリストの作成と管理</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -60,7 +60,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">プレイリストの作成と管理の</li>
+      <li class="breadcrumb-item active" aria-current="page">プレイリストの作成と管理</li>
     </ol>
   </nav>
 </header>
@@ -1187,63 +1187,68 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>プレイリストの作成と管理の</h1>
-  <summary>このトピックでは、Video Cloud Studioでプレイリストを作成および管理する方法を学習します。</summary>
-  <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6038250741001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6040424098001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>プレイリストは、プレーヤーで再生するために特定の順序でグループ化されているビデオのコレクションです。Media モジュールを使用すると、プレイリストの作成や再生リストへのビデオの追加が簡単に行えます。プレイリストを作成したら、プレイリストをプレイヤーに公開できます。<span class="BCL-objective">プレイリストの公開の詳細については、「<a href="/publish/publishing-videos-and-playlists-media-module.html">メディアモジュールを使用したビデオとプレイリストの公開」を参照してください</a>。</span></p>
-    <p><span class="BCL-objective">プレイリストの詳細については、プレイリストを効果的に使用するためのベストプラクティスやヒントなど、<a href="/media/introduction-playlists.html">プレイリストの概要を参照してください</a>。</span></p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="types">プレイリストの種類</h2>
-    <p>プレイリストには、次の 2 つのタイプがあります。</p>
-    <ul>
-      <li><strong>手動</strong> -手動プレイリストでは、特定の動画を再生リストに割り当てて、手動で並べ替えます。</li>
-      <li><strong>スマート</strong> -スマートプレイリストでは、ビデオタグやその他のビデオプロパティに基づいて、再生リストのビデオのリストが自動的に作成されます。スマートプレイリストは動的で、メディアライブラリ内の動画とプレイリストを定義するルールに基づいて自動的に更新されます。</li>
-    </ul>
-    <p>プレイリストに追加できる動画は最大100本（手動とスマートの両方）。作成できるプレイリストの数に制限はありません。プレーヤーのプレイリストに最初に読み込まれる動画は、再生リストのタイプによって決まります。</p>
-    <ul>
-      <li><strong>手動プレイリスト</strong> -動画は、手動再生リストのビデオの順序に基づいて再生リストに読み込まれます。</li>
-      <li><strong>スマートプレイリスト</strong> -再生順序プレイリストの設定に基づいて、ビデオがプレイリストにロードされます。</li>
-    </ul>
-    <p>プログラムで追加の動画を再生リストに取り出す方法については、<a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-playback-api-paging.html"> Playback API</a>ページングプレーヤーのサンプルを参照してください。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="create">プレイリストを作成する</h2>
-    <p>プレイリストを作成するには、Media モジュールを開き、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>サイド・ナビゲーション・パネルで、「<strong>プレイリストを作成」をクリックします</strong>。新規プレイリストダイアログが開きます。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15152-new-manual-playlist.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">注:サイドナビゲーションボタンをクリックすると、サイドナビゲーションパネルを表示または非表示にできます <img alt="" src="/assets/images/media/node15152-side-nav-button.png" />。</aside>
-      </li>
-      <li>プレイリストのタイプを[<strong>手動</strong>]または[<strong>スマート</strong>]から選択します。</li>
-      <li>次のガイドラインに従って、プレイリスト名を入力します。
-        <ul>
-          <li>名前は100文字に制限されています</li>
-          <li>不正な文字:/</li>
-        </ul>
-      </li>
-      <li>（任意）。<strong>参照 ID </strong><strong>と説明を入力します</strong>。</li>
-      <li>サイドバーにプレイリストを表示するには、[<strong>サイドバーにプレイリストを表示</strong>]を選択します。<aside class="bcls-aside bcls-aside--information">注:サイドバーには最大 100 個のプレイリストを表示できます。</aside>
-      </li>
-      <li>[<strong>保存</strong>]をクリックします。</li>
-    </ol>
-    <div class="BCL-subsection">
-      <h3>スマートプレイリストの操作</h3>
-      <p>スマートプレイリストを作成する場合は、以下の設定も使用できます。</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15152-new-smart-playlist.png" /></figure>
+    <h1>プレイリストの作成と管理</h1>
+    <summary>このトピックでは、Video Cloud Studio でプレイリストを作成および管理する方法を学びます。</summary>
+    <section class="bcls-section">
+      <p>プレイリストは、プレーヤーで再生するために特定の順序で一緒にグループ化されたビデオの集まりです。Media モジュールでは、プレイリストを簡単に作成し、プレイリストに動画を追加することができます。プレイリストを作成したら、プレイリストをプレーヤーに公開することが出来ます。プレイリストの公開の詳細については、 <span class="BCL-objective"><a href="/publish/publishing/publishing-videos-and-playlists-media-module.html">Mediaモジュールによる動画とプレイリストの公開</a>を参照して下さい。</span></p>
+      <p><span class="BCL-objective">プレイリストのベストプラクティスや効果的な使い方のヒントなど、プレイリストの詳細については、<a href="/media/organize/introduction-playlists.html">プレイリスト入門</a>をご覧下さい。</span></p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="types">プレイリストの種類</h2>
+      <p>プレイリストには2つの種類があります:</p>
       <ul>
-        <li><strong>タグ</strong> - タグを使用して、プレイリストに表示する動画を定義します。[ <strong>タグ</strong> ] ドロップダウンには、次のオプションがあります。
-          <ul>
-            <li><strong>1 つ以上を含む</strong> -1 つ以上のタグがリストされている動画を含めます。</li>
-            <li><strong>すべてを含む</strong> -プレイリスト内のすべての動画にリストされているすべてのタグを持っていることを要求します</li>
-          </ul>
-          <p>タグテキストフィールドに、プレイリストを定義するために使用する 1 つ以上のタグ（カンマで区切って）を入力します。</p>
+        <li><strong>手動</strong> - 手動プレイリストでは、特定の動画をプレイリストに割り当て、手動で順序を変更します。</li>
+        <li><strong>スマート</strong> - スマート プレイリストを使用すると、プレイリスト内の動画がビデオ パラメータに基づいて自動的に構築されます。パラメータには、名前、タグ、説明、カスタム フィールド、日付フィールドが含まれます。スマート プレイリストは動的であり、メディア ライブラリ内のビデオとプレイリストを定義するルールに基づいて自動的に更新されます。</li>
+      </ul>
+      <p>プレイリストには最大1,000本のビデオを追加できます（手動とスマートの両方）。作成できるプレイリストの数に制限はありません。プレーヤーのプレイリストに最初に読み込まれるビデオは、プレイリストのタイプによって決まります:</p>
+      <ul>
+        <li><strong>手動プレイリスト</strong> - 動画は、プレイリスト内の動画の順序に基づいてプレイリストに読み込まれます。</li>
+        <li><strong>Smart Playlists</strong> - 動画は、プレイリストの <strong>再生順序</strong> 設定に基づいてプレイリストに読み込まれます。</li>
+      </ul>
+      <p>プレイリストに追加の動画をプログラムで取得する方法については、<a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-playback-api-paging.html">Playback API ページング</a> プレーヤー サンプルを参照してください。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="view">すべてのプレイリストの表示</h2>
+      <p>アカウント内のすべてのプレイリストを表示するには、サイドナビゲーションパネルで <strong>すべてのプレイリスト</strong> をクリックします。ページが表示されます:</p>
+      <ul>
+        <li><strong>プレイリスト名</strong> - プレイリスト名</li>
+        <li><strong>参照 ID</strong> - プレイリストの参照ID</li>
+        <li><strong>パラメーター</strong> - プレイリストの作成に使用するパラメータ（スマートプレイリストのみ）</li>
+        <li><strong>更新日</strong> - プレイリストの最終更新日</li>
+        <li><strong>動画数</strong> - プレイリスト内の動画数</li>
+      </ul>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/organize/node15152-all-playlists.png" /></figure>
+    </section>
+    <section class="bcls-section">
+      <h2 id="create">プレイリストの作成</h2>
+      <p>プレイリストを作成するには、以下の手順に従ってください:</p>
+      <ol class="bcls-tasklist-restart">
+        <li><i data-feather="video"></i> <strong>Media</strong> モジュールを開きます。</li>
+        <li>サイドナビゲーションパネルで、<strong>新規プレイリスト</strong> をクリックします。<strong>新規プレイリスト</strong> のダイアログが開きます。
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/organize/node15152-new-manual-playlist1.png" /></figure>
         </li>
-        <li><strong>再生順序</strong> -再生リストのビデオを再生する順序を制御します。次のオプションを使用できます。
+        <li><strong>プレイリスト名</strong>を入力します。</li>
+        <li><strong>プレイリストのタイプ</strong>をクリックして下さい。</li>
+        <li><strong>プレイリストを作成</strong>をクリックします。パネルが一旦閉じ、再度開きます。スマート プレイリストの場合は、<a href="#smart-props">スマート プレイリスト パラメーター</a>を設定します。</li>
+        <li><strong>概要</strong>タブをクリックします。</li>
+        <li>必要に応じて概要設定を行います。
+          <ul>
+            <li><strong>名前</strong> - プレイリスト名</li>
+            <li><strong>参照 ID</strong> - パブリッシャーがプレイリストに割り当てるユニークなID</li>
+            <li><strong>説明</strong> - プレイリストの説明</li>
+            <li><strong>サイドバーにプレイリストを表示</strong> - チェックすると、プレイリストがサイドバーに表示されます
+              <aside class="bcls-aside bcls-aside--information">注: サイドバーに表示できるプレイリストは最大100件です。</aside>
+              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/organize/node15152-new-smart-playlist-overview.png" /></figure>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+    <section class="bcls-section">
+      <h2 id="smart-props">スマートプレイリストの設定</h2>
+      <p>スマート プレイリストを作成する場合は、<strong>スマート</strong> タブをクリックして以下の設定を行います。</p>
+      <ul>
+        <li><strong>再生順序</strong> - プレイリスト内のビデオの再生順序を制御します。以下のオプションがあります。
           <table class="bcls-table">
             <thead class="bcls-table__head">
               <tr>
@@ -1253,124 +1258,159 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </thead>
             <tbody class="bcls-table__body">
               <tr>
-                <td>有効日 (古い順)</td>
-                <td>動画がアクティブ化された日付に基づいて、最も古い動画が最初になります</td>
+                <td>アクティブ化された日 (古い順)</td>
+                <td>動画が有効化された日付に基づき、古い動画から順に表示されます。</td>
               </tr>
               <tr>
-                <td>有効日 (新しい順)</td>
-                <td>動画が有効化された日付に基づいて、最新の動画が最初に表示されます</td>
+                <td>アクティブ化された日 (新しい順)</td>
+                <td>動画が有効化された日付に基づき、新しい動画から順に表示されます。</td>
               </tr>
               <tr>
-                <td>ビデオ名 (A-Z)</td>
-                <td>動画名のアルファベット順</td>
+                <td>動画名 (A - Z)</td>
+                <td>動画名のアルファベット順。</td>
               </tr>
               <tr>
-                <td>総再生数</td>
-                <td>合計ビデオ再生数に基づきます</td>
+                <td>総再生回数</td>
+                <td>動画の総再生回数に基づく。</td>
               </tr>
               <tr>
-                <td>最後の週再生</td>
-                <td>最後の週の総動画再生数に基づきます<sup><strong><a href="#1">[1] </a></strong></sup></td>
+                <td>先週よく再生された順</td>
+                <td>過去 1 週間の動画総再生回数に基づいています。動画のメタデータに保持されている過去 1 週間の再生回数のデータは、最大 2 日間前のものである可能性があるため、Analytics モジュールで過去 7 日間の動画再生回数を見た場合に表示される動画と一致しない場合があることに注意してください。</td>
               </tr>
               <tr>
-                <td>開始日（古い順）</td>
-                <td>動画の開始予定日に基づいて、最も古い動画が最初になります。動画に開始日が指定されていない場合、開始日順に並べられた再生リストには表示されません。注:ビデオスケジューリングは、Video Cloud エンタープライズアカウントでのみ使用できます。</td>
+                <td>開始日 (古い順)</td>
+                <td>動画の開始予定日に基づいて、古い動画から順に表示されます。動画の開始日が指定されていない場合、開始日順に並んだプレイリストには表示されません。注: 動画のスケジューリングは、Video Cloud Enterprise アカウントでのみ利用できます。</td>
               </tr>
               <tr>
                 <td>開始日 (新しい順)</td>
-                <td>動画の開始予定日に基づいて、最新の動画が最初に表示されます。動画に開始日が指定されていない場合、開始日順に並べられた再生リストには表示されません。注:ビデオスケジューリングは、Video Cloud エンタープライズアカウントでのみ使用できます。</td>
+                <td>動画の開始予定日に基づき、新しい動画から順に表示されます。動画の開始日が指定されていない場合、開始日順に並んだプレイリストには表示されません。注: 動画のスケジューリングは、Video Cloud Enterprise アカウントでのみ利用できます。</td>
               </tr>
             </tbody>
           </table>
-          <p>注</p>
-          <ul>
-            <li id="1"><sup><strong>[1]</strong></sup> 動画メタデータに保持されている最後の週の再生データは最大2日経過している可能性があるため、Analyticsモジュールで過去7日間の動画再生を確認した場合に表示される動画と一致しない可能性があることに注意してください。</li>
-          </ul>
         </li>
-        <li><strong>動画数の制限</strong> - プレイリストに入れる動画の最大数を入力します。</li>
+        <li><strong>動画数の制限</strong> - プレイリストに含まれるビデオの最大数を入力します（デフォルトは100、最大は1,000）。</li>
       </ul>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="addmanual">動画を手動プレイリストに追加する</h2>
-    <p>手動プレイリストに動画を追加するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>プレイリストに追加する必要がある動画の横にあるチェックボックスをオンにします。</li>
-      <li>ページの上部にある [ <strong>その他] &gt; [</strong>プレイリストに追加] をクリックします。</li>
-      <li>動画を追加するプレイリストを選択します。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15152-add-videos-manual-playlist.png" /></figure>
-      </li>
-      <li>[ <strong>追加] をクリックします</strong>。手動プレイリストに追加した動画は、再生リストの先頭に追加されます。</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="order">プレイリストの動画の順序を変更する</h2>
-    <p>再生リストのビデオの順序を変更するには、操作している再生リストのタイプに応じた手順に従います。</p>
-    <div class="BCL-subsection">
-      <h3>手動再生リストのビデオの順序を変更する</h3>
-      <ol class="bcls-tasklist-restart">
-        <li>次のいずれかの方法を使用して、プレイリストを開きます。
+      <h3>スマート プレイリスト パラメーター</h3>
+      <p><strong>パラメーター</strong> セクションは、プレイリストに表示されるビデオを定義するために使用されます。以下のパラメータがサポートされています。</p>
+      <ul>
+        <li><strong>タグ</strong> - ビデオタグは、プレイリストに表示されるビデオを定義するために使用されます。(カンマで区切って）1 つ以上のタグを入力します。 <strong>タグ</strong> ドロップダウンには、以下のオプションがあります:
           <ul>
-            <li>サイド・ナビゲーション・パネルのプレイリスト名をクリックします</li>
-            <li>クリック<strong>すべてのプレイリスト</strong>サイドナビゲーションパネルで、プレイリストを見つけて、プレイリスト名のリンクをクリックします。</li>
+            <li><strong>いずれかに一致</strong> - リストされたタグを1つ以上持つ動画を含める。</li>
+            <li><strong>すべてに一致</strong> - プレイリスト内のすべての動画が、リストされたすべてのタグを持っている必要があります。</li>
           </ul>
         </li>
-        <li>プレイリストの動画の一覧が表示されます。</li>
-        <li>ビデオをクリックし、新しい場所にドラッグします。暗い線は新しい位置を示します。</li>
-      </ol>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15152-edit-manual-playlist-order.png" /></figure>
-      <aside class="bcls-aside bcls-aside--information">注:[ <strong>再生順序</strong> ] フィールドを編集して、ビデオの順序を変更することもできます。</aside><aside class="bcls-aside bcls-aside--information">ドラッグアンドドロップによる並べ替えは<strong>いいえ</strong> IE11またはEdgeで動作しますが、の番号を編集することでアイテムを並べ替えることができます<strong>注文を再生</strong>分野。</aside>
-    </div>
-    <div class="BCL-subsection">
-      <h3>スマートプレイリスト内の動画の順序を変更する</h3>
+        <li><strong>名前</strong> - ビデオ名は、プレイリストに表示されるビデオを定義するために使用されます。検索するビデオ名を入力してください。</li>
+        <li><strong>説明</strong> - 動画の短い説明文と長い説明文は、プレイリストに表示される動画を定義するために使用されます。検索する説明を入力します。</li>
+        <li><strong>カスタムフィールド</strong> - 動画のカスタム フィールドは、プレイリストに表示する動画を定義するために使用します。ドロップダウンリストからカスタム フィールドを選択し、カスタム フィールドの値を選択/入力します。<strong>リスト</strong>型カスタム フィールドの場合:
+          <ul>
+            <li><strong>いずれかに一致</strong> - リストされたカスタム フィールド値のいずれかを持つ動画を含めます。</li>
+            <li><strong>を含まない</strong>- 選択したカスタムフィールドの値がリストされている動画を除外します。</li>
+          </ul>
+        </li>
+        
+        <li><strong>更新日</strong> - 動画の最終更新日</li>
+        <li><strong>作成日</strong> - ビデオが作成された日付</li>
+        <li><strong>最終アクティブ化日</strong> - ビデオが最後にアクティブ化された日付</li>
+        <li><strong>開始予定日</strong> - ビデオの開始予定日</li>
+        <li><strong>終了予定日</strong> - ビデオの終了予定日</li>
+      </ul>
+      <p><strong>名前</strong>、<strong>説明</strong>、<strong>カスタムフィールド</strong> (<strong>テキスト</strong>タイプ) オプションは、以下のオプションをサポートしています:</p>
+      <ul>
+        <li><strong>含めるテキスト</strong>- 名前、短い説明文、長い説明文、またはカスタム フィールドにテキストが含まれている動画を含めます。</li>
+        <li><strong>除外するテキスト</strong>- 名前、短いまたは長い説明フィールド、カスタム フィールドにテキストがある動画を除外します。</li>
+      </ul>
+      <p>すべての日付けパラメーターは、<strong>開始日</strong> と <strong>終了日</strong> をサポートします。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/organize/node15152-new-smart-playlist1.png" /></figure>
+      <h3>複数のパラメータの使用</h3>
+      <p>複数のパラメータを入力するには、<strong>パラメーターの追加</strong> をクリックしてから、追加のパラメータを入力します。デフォルトでは、複数のパラメータは <strong>OR</strong> 演算で評価されます。複数のパラメータの評価方法を変更するには、<strong>パラメーター</strong>見出しの横にあるセレクター アイコン(<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/organize/node15152-icon-parameters.png" />) をクリックします。</p>
+      <p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/organize/node15152-combine-parameters.png" /></figure>
+      </p>
+      <p>次の例では、タグが <strong>birds</strong> または <strong>animals</strong> であるが <strong>Subject</strong> カスタムフィールドの値が <strong>Animals</strong> である全ての動画がプレイリストに追加されます。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/organize/node15152-parameter-example.png" /></figure>
+      <p><span class="button-blue"> 適用 </span> をクリックして変更を保存します。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="addmanual">手動プレイリストに動画を追加</h2>
+      <p>手動プレイリストに動画を追加するには、以下の手順に従ってください:</p>
       <ol class="bcls-tasklist-restart">
-        <li>サイドバーにプレイリストが表示されている場合は、プレイリストをクリックし、プレイリストの横にある下向き矢印をクリックし、[ <strong>設定の編集] をクリックします</strong>。</li>
-        <li>サイドバーにプレイリストが表示されない場合は、サイド・ナビゲーションの「<strong>すべてのプレイリスト」</strong>の見出しをクリックし、プレイリストを見つけてプレイリスト名のリンクをクリックし、「<strong>設定の編集」をクリックします</strong>。</li>
-        <li>プレイリストの新しい再生順序を選択します。</li>
-        <li>[ <strong>保存] をクリックします</strong>。</li>
+        <li>プレイリストに追加するビデオの横にあるボックスにチェックを入れます。</li>
+        <li>ページ上部の <strong>詳細 &gt; プレイリストに追加</strong> をクリックします。</li>
+        <li>動画を追加するプレイリストを選択します。
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/organize/node15152-add-videos-manual-playlist.png" /></figure>
+        </li>
+        <li><span class="button-blue">追加</span>をクリックします。手動プレイリストに追加されたビデオは、プレイリストの一番上に追加されます。</li>
       </ol>
-      <p>スマートプレイリストは、プレーヤーが利用可能なビデオ情報から読み込まれるときに動的に作成されるため、順序には常に現在の状態が反映されている必要があります。ただし、プレーヤーは常に、最大20分間キャッシュされたデータを使用するPlaybackAPIを介して情報を取得します。プレイリストは更新に時間がかかる場合があり、<span translate="No"> CMS API</span>表示されます。</p>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">プレイリストの設定を編集する</h2>
-    <p>手動プレイリストまたはスマートプレイリストの設定を編集するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>サイドバーにプレイリストが表示されている場合は、プレイリストをクリックし、プレイリストの横にある下向き矢印をクリックし、[ <strong>設定の編集] をクリックします</strong>。</li>
-      <li>サイドバーにプレイリストが表示されない場合は、サイド・ナビゲーションの「<strong>すべてのプレイリスト」</strong>の見出しをクリックし、プレイリストを見つけてプレイリスト名のリンクをクリックし、「<strong>設定の編集」をクリックします</strong>。</li>
-      <li>プレイリストの設定を編集し、[<strong>保存</strong>]をクリックします。</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">あなたがするかもしれないことに注意してください<strong>いいえ</strong>手動プレイリストをスマートプレイリストに、またはその逆に変換します。</aside>
-    <p>サイド・ナビゲーション・パネルにプレイリストが表示されている場合は、プレイリストをクリックし、プレイリストの横にある下向き矢印をクリックし、「<strong>設定の編集」をクリックします</strong>。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">プレイリストの削除</h2>
-    <p>プレイリストを削除するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>[ <strong>すべてのプレイリスト</strong> ] をクリックして、すべてのプレイリストのリストを表示します。</li>
-      <li>削除するプレイリストの隣のチェックボックスをチェックします。</li>
-      <li>削除ボタンをクリックします（<img alt="" src="/assets/images/media/node15152-delete-icon.png" />）。</li>
-      <li>[ <strong>プレイリストの削除] をクリックして</strong>、削除を確定します。</li>
-    </ol>
-    <p>サイド・ナビゲーション・パネルにプレイリストが表示されている場合は、プレイリストをクリックし、プレイリストの横にある下向き矢印をクリックして、「<strong>削除」をクリックします</strong>。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remove">手動プレイリストから動画を削除する</h2>
-    <p>手動再生リストから動画を削除するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>次のいずれかの方法を使用して、手動プレイリストを開きます。
-        <ul>
-          <li>サイド・ナビゲーション・パネルのプレイリスト名をクリックします</li>
-          <li>クリック<strong>すべてのプレイリスト</strong>サイドナビゲーションパネルで、プレイリストを見つけて、プレイリスト名のリンクをクリックします。</li>
-        </ul>
-      </li>
-      <li>プレイリストの動画の一覧が表示されます。</li>
-      <li>削除する動画の横にあるチェックボックスをクリックします。</li>
-      <li>[ <strong>プレイリストから削除] をクリックします</strong>。</li>
-    </ol>
-    <p>ビデオのプロパティを編集して、手動再生リストからビデオを削除することもできます。[ <strong>分類</strong> ] セクションで、[ <strong>手動プレイリスト]</strong>セクションからプレイリストを削除します。</p>
-  </section>
-</article>
+    </section>
+    <section class="bcls-section">
+      <h2 id="order">プレイリスト内の動画の順序の変更</h2>
+      <p>プレイリスト内のビデオの順序を変更するには、作業しているプレイリストの種類に応じた手順に従ってください。</p>
+      <div class="BCL-subsection">
+        <h3>手動プレイリストのビデオの順序を変更する</h3>
+        <ol class="bcls-tasklist-restart">
+          <li>以下のいずれかの方法でプレイリストを開いてください:
+            <ul>
+              <li>サイドナビゲーションパネルでプレイリスト名をクリック。</li>
+              <li>サイドナビゲーションパネルで <strong>すべてのプレイリスト</strong> をクリックし、プレイリストを探し、プレイリスト名のリンクをクリックします。</li>
+            </ul>
+          </li>
+          <li>プレイリストの動画の一覧が表示されます。</li>
+          <li>動画をクリックし、順番の新しい位置にドラッグします。濃い線が新しい位置を示します。</li>
+        </ol>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/organize/node15152-edit-manual-playlist-order.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">注: <strong>再生順序</strong>フィールドを編集することによって、ビデオの順序を変更することもできます。</aside>
+        <aside class="bcls-aside bcls-aside--information">注: ドラッグ＆ドロップによる並び替えはIE11やEdgeでは機能<strong>しません</strong>が、<strong>再生順序</strong>フィールドの数字を編集することで並び替えが可能です。</aside>
+      </div>
+      <div class="BCL-subsection">
+        <h3>スマートプレイリスト内の動画の順序を変更する</h3>
+        <ol class="bcls-tasklist-restart">
+          <li>プレイリストがサイドバーに表示されている場合は、プレイリストをクリックし、プレイリストの横にある下向き矢印をクリックして、<strong>設定の編集</strong>をクリックします。</li>
+          <li>プレイリストがサイドバーに表示されていない場合は、サイドナビゲーションの<strong>すべてのプレイリスト</strong>をクリックし、プレイリストを探し、プレイリスト名のリンクをクリックし、<strong>設定の編集</strong>をクリックします。</li>
+          <li>プレイリストの新しい<strong>再生順序</strong>を選択します。</li>
+          <li><span class="button-blue">保存</span>をクリックします。</li>
+        </ol>
+        <p>スマート プレイリストは、プレーヤーが使用可能な動画情報からロードされるときに動的に作成されるため、順序は常に現在の状態を反映する必要があります。ただし、プレーヤーは常に、最大 20 分間キャッシュされたデータを使用する Playback API を介して情報を取得します。プレイリストの更新にはそれだけの時間がかかるため、CMS API が表示する情報に遅れが生じる可能性があります。</p>
+      </div>
+    </section>
+    <section class="bcls-section">
+      <h2 id="edit">プレイリスト設定の編集</h2>
+      <p>手動プレイリストまたはスマート プレイリストの設定を編集するには、以下の手順に従ってください:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>プレイリストがサイドバーに表示されている場合は、プレイリストをクリックし、プレイリストの横にある下向き矢印をクリックして<strong>設定の編集</strong>をクリックします。</li>
+        <li>プレイリストがサイドバーに表示されていない場合は、サイドナビゲーションの<strong>すべてのプレイリスト</strong>をクリックし、プレイリストを検索してプレイリスト名のリンクをクリックし、<strong>設定の編集</strong>をクリックします。</li>
+        <li>プレイリストの設定を編集し、<span class="button-blue">適用</span>をクリックします。</li>
+      </ol>
+      <p>プレイリストがサイドナビゲーションパネルに表示されている場合は、プレイリストをクリックし、プレイリストの横にある下向き矢印をクリックして、<strong>設定の編集</strong>をクリックします。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="delete">プレイリストの削除</h2>
+      <p>プレイリストを削除するには、以下の手順に従ってください:</p>
+      <ol class="bcls-tasklist-restart">
+        <li><strong>すべてのプレイリスト</strong>をクリックすると、すべてのプレイリストのリストが表示されます。</li>
+        <li>削除するプレイリストの横のチェックボックスをクリックします。</li>
+        <li>削除ボタン (<img alt="" src="/assets/images/s-media-img/organize/node15152-delete-icon.png" />) をクリックします。</li>
+        <li><span class="button-red">プレイリストを削除</span>をクリックして、削除を確定します。</li>
+      </ol>
+      <p>プレイリストがサイドナビゲーションパネルに表示されている場合は、プレイリストをクリックし、プレイリストの横にある下向き矢印をクリックして、<span class="button-blue">プレイリストの削除</span>をクリックすることができます。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="remove">手動プレイリストから動画を削除する</h2>
+      <p>手動プレイリストからビデオを削除するには、以下の手順に従ってください:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>以下のいずれかの方法で手動プレイリストを開きます:
+          <ul>
+            <li>サイドナビゲーションパネルでプレイリスト名をクリック。</li>
+            <li>サイドナビゲーションパネルで <strong>すべてのプレイリスト</strong> をクリックし、プレイリストを探し、プレイリスト名のリンクをクリックします。</li>
+          </ul>
+        </li>
+        <li>プレイリストのビデオのリストが表示されます。</li>
+        <li>削除するビデオの横にあるチェックボックスをクリックします。</li>
+        <li><strong>プレイリストから削除</strong>をクリックします。</li>
+      </ol>
+      <p>動画のプロパティを編集して、手動プレイリストから動画を削除することもできます。<strong>分類</strong>セクションで、<strong>手動プレイリスト</strong>セクションからプレイリストを削除します。</p>
+    </section>
+  </article>
+  
 
 <!-- complete bootstrap layout -->
     </div>
