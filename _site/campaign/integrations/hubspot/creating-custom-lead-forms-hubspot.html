@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、HubSpotフォームを使用してBrightcoveプレーヤー内のリードデータをキャプチャする方法を学習します。">
+  <meta name="description" content="このトピックでは、HubSpotフォームを使用してBrightcoveプレーヤー内でリードデータをキャプチャする方法を学習します。">
   
-  <title>HubSpotの用のカスタムリードフォームの作成</title>
+  <title>HubSpotのカスタムリードフォームの作成</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -60,7 +60,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       <li class="breadcrumb-item"><a href="/campaign/integrations/hubspot/">HubSpot</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">HubSpotの用のカスタムリードフォームの作成</li>
+      <li class="breadcrumb-item active" aria-current="page">HubSpotのカスタムリードフォームの作成</li>
     </ol>
   </nav>
 </header>
@@ -1187,61 +1187,60 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>HubSpotの用のカスタムリードフォームの作成</h1>
-  <summary>このトピックでは、HubSpotフォームを使用してBrightcoveプレーヤー内のリードデータをキャプチャする方法を学習します。</summary>
+  <h1>HubSpotのカスタムリードフォームの作成</h1>
+  <summary>このトピックでは、HubSpotフォームを使用してBrightcoveプレーヤー内でリードデータをキャプチャする方法を学習します。</summary>
   <section class="bcls-section">
-    <p>キャンペーンモジュールは、Brightcoveプレーヤー内でビデオが再生されるときに、視聴者情報をキャプチャできるカスタムリードフォームを作成する機能を提供します。リードデータは HubSpot に送信され、HubSpot によって処理されます。</p>
-    <p>カスタム潜在顧客フォームを作成するには、次の手順を実行する必要があります。</p>
+    <p>Campaign モジュールは、カスタム リード フォームを作成する機能を提供し、動画が Brightcove プレーヤー内で再生される際に視聴者の情報を取得できます。リード データは HubSpot に送信され、HubSpot で処理されます。</p>
+    <p>カスタム リード フォームを作成するには、次の手順を実行する必要があります。</p>
     <ol>
       <li><a href="#form">HubSpot でフォームを作成する</a></li>
       <li><a href="#edit">フォームの埋め込みコードをコピーして編集する</a></li>
-      <li><a href="#leadform">キャンペーンモジュールでカスタムリードフォームを作成します</a></li>
+      <li><a href="#leadform">Campaign モジュールでカスタムリードフォームを作成する</a></li>
       <li><a href="#player">リードフォームをプレーヤーに割り当てる</a></li>
       <li><a href="#formdata">HubSpot でフォームデータを検証する</a></li>
     </ol>
-    <aside class="bcls-aside bcls-aside--information">注:視聴者の情報を取得して Video Cloud に保存する標準リードフォームの詳細については、<a href="/campaign/general/creating-campaign-lead-form.html">キャンペーンリードフォームの作成を参照してください</a>。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: 視聴者の情報を取得して Video Cloud に保存する標準リードフォームの詳細については、<a href="/campaign/general/creating-campaign-lead-form.html">Campaign リードフォームの作成</a>を参照してください。</aside>
   </section>
   <section class="bcls-section">
     <h2 id="form">HubSpot でフォームを作成する</h2>
-    <p>HubSpot フォームを使用して、Web サイトの訪問者からリード情報を生成できます。これらのフォームは、ブライトコーブプレーヤーの内部に表示することもできます。以下の手順では、閲覧者の情報をキャプチャする簡単なフォームを作成します。HubSpot フォームの詳細については、<a href="https://knowledge.hubspot.com/landing-page-user-guide-v2/how-to-create-a-form-for-your-landing-page"> HubSpot のドキュメントを参照してください</a>。</p>
+    <p>HubSpot フォームを使用して、Web サイトの訪問者からリード情報を生成できます。これらのフォームは、Brightcoveプレーヤーの内部に表示することもできます。以下の手順では、視聴者の情報を取得する簡単なフォームを作成します。HubSpot フォームの詳細については、<a href="https://knowledge.hubspot.com/landing-page-user-guide-v2/how-to-create-a-form-for-your-landing-page"> HubSpot のドキュメント</a>を参照してください。</p>
     <ol class="bcls-tasklist-restart">
-      <li>HubSpot アカウントにサインインします。</li>
-      <li><strong>マーケティング &gt; フォームをクリックします</strong>。クラシックメニューを使用している場合は、[ <strong>連絡先]</strong> &gt; [ <strong>フォーム] をクリックします</strong>。</li>
-      <li>[ <strong>フォームを作成] をクリックします</strong>。</li>
-      <li>クリック<strong>埋め込みフォーム</strong>次にクリックします<strong>次</strong>。デフォルトでは、フォームには<strong>Eメール</strong>フィールドと<strong>送信</strong>ボタン。</li>
-      <li>[ <strong>空白のテンプレート]</strong>が選択されていることを確認します。[ <strong>開始] をクリックします</strong>。</li>
-      <li>ヘッダーの既定の名前をクリックし、フォームの名前を指定します。<strong>Enter</strong>キーを押して、変更を保存します。 </li>
-      <li>ヘッダーの既定の名前をクリックし、フォームの名前を指定します。<strong>Enter</strong>キーを押して、変更を保存します。
+      <li>HubSpot アカウントにログインします。</li>
+      <li><strong>マーケティング &gt; フォーム</strong>をクリックします。クラシックメニューを使用している場合は、<strong>連絡先 &gt; フォーム</strong> をクリックします。</li>
+      <li><strong>フォームを作成</strong> をクリックします。</li>
+      <li><strong>埋め込みフォーム</strong>をクリックし、<strong>次へ</strong>をクリックします。デフォルトでは、フォームには<strong>Eメール</strong>フィールドと<strong>送信</strong>ボタンが含まれます。</li>
+      <li><strong>空白のテンプレート</strong>が選択されていることを確認します。<strong>開始</strong>をクリックします。</li>
+      <li>ヘッダーのデフォルト名をクリックし、フォームに名前を付けます。<strong>Enter</strong>キーを押して、変更を保存します。 </li>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node16772-name-form.png" /></figure>
       </li>
-      <li>ページの左側には、フォームに追加できるフィールドのリストが含まれています。ドラッグアンドドロップ<strong>ファーストネーム</strong>と<strong>苗字</strong>ページの右側にあるフォームに必要なフィールド。
+      <li>ページの左側には、フォームに追加できるフィールドのリストが含まれています。フォームに追加したい<strong>姓</strong>と<strong>名</strong>のフィールドをページの右側にドラッグ&ドロップします。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node16772-drag-field.png" /></figure>
       </li>
-      <li>フィールドを必須にするには、そのフィールドにマウスポインターを置き、[ <strong>その他] &gt; [必須にする] をクリックします</strong>。必須フィールドには、フィールドラベルの横に「*」が表示されます。
+      <li>フィールドを必須にするには、そのフィールドにカーソルを合わせ、<strong>その他 &gt; 必須にする</strong> をクリックします。必須フィールドには、フィールドラベルの横に「*」が表示されます。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node16772-req-field.png" /></figure>
       </li>
-      <li>ページの上部にある [ <strong>オプション]</strong>リンクをクリックします。</li>
-      <li>[ <strong>訪問者がこのフォームを送信した後にどうなるべきか]</strong>で、[ <strong>ありがとうメッセージを表示する] をクリックします</strong>。デフォルトのメッセージは表示されないので、そのままにします。
+      <li>ページの上部にある <strong>オプション</strong>リンクをクリックします。</li>
+      <li><strong>訪問者がこのフォームを送信した後の動作</strong>については、<strong>ありがとうメッセージを表示する</strong>をクリックして下さい。デフォルトのメッセージは表示されないので、そのままにしておきます。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node16772-submit-form-options.png" /></figure>
       </li>
-      <li>ページの上部にある [ <strong>スタイルとプレビュー]</strong>リンクをクリックします。デフォルトでは、デスクトッププレビューが表示されます。</li>
-      <li>クリック<strong>公開</strong>ページの上部にあるフォームへの変更を公開します。</li>
+      <li>ページの上部の <strong>スタイルとプレビュー</strong>リンクをクリックします。デフォルトでは、デスクトップのプレビューが表示されます。</li>
+      <li>ページ上部の<strong>公開</strong>をクリックし、フォームへの変更を公開します。</li>
     </ol>
   </section>
   <section class="bcls-section">
     <h2 id="edit">フォームの埋め込みコードのコピーと編集</h2>
-    <p>キャンペーンモジュール内でフォームを使用するには、フォーム埋め込みコードをコピーして編集する必要があります。また、フォームに基本的なスタイリングを行うこともできます。以下の手順では、フォーム埋め込みコードを HTML エディターにコピーし、フォームにいくつかのスタイル変更を行います。</p>
+    <p>Campaign モジュール内でフォームを使用するには、フォーム埋め込みコードをコピーして編集する必要があります。また、フォームに基本的なスタイリング設定を行うこともできます。以下の手順では、フォーム埋め込みコードを HTML エディターにコピーし、フォームのスタイル変更を行います。</p>
     <ol class="bcls-tasklist-restart">
-      <li>クリック<strong>共有</strong>ページの右上にある埋め込みコードをクリップボードにコピーします。
+      <li>ページ右上の<strong>共有</strong>をクリックし、埋め込みコードをクリップボードにコピーします。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node16772-copy-form-embed.png" /></figure>
       </li>
       <li>任意の HTML エディタに埋め込みコードを貼り付けます。</li>
-      <li>埋め込みコードを少し変更する必要があるため、キャンペーンはフォームが送信されたときにフォームを閉じることを認識します。<strong><code translate="No"> formId:</code></strong>行の末尾にカンマを追加している行を探します。</li>
-      <li><strong><code translate="No"> formId:</code></strong>この行をラインの下に追加します。
+      <li>埋め込みコードは、Campaignが送信時にフォームを閉じることを認識するように、ちょっとした変更が必要です。<strong><code translate="No"> formId:</code></strong> がある行を探します。行の末尾にカンマを追加して下さい。</li>
+      <li><strong><code translate="No"> formId:</code></strong> の行の下に次の行を追加します。
         <pre>
 <code translate="No">onFormSubmit: bcLeadForm.submit</code></pre>
       </li>
-      <li>デフォルトでは、フォームが Brightcove Player 内に表示される場合、フォームはプレーヤーの上に透明な背景に表示されます。次のCSSを埋め込みコードに追加して、背景色を灰色に変更します。<br />
+      <li>デフォルトでは、フォームが Brightcove プレーヤー 内に表示されると、フォームはプレーヤーの上に透明な背景で表示されます。埋め込みコードに以下のCSSを追加して、背景色を灰色に変更します。<br />
         <code translate="No">&lt;style&gt;<br />
         body {<br />
         background-color: rgba(204,204,204,0.9);<br />
@@ -1253,45 +1252,45 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="leadform">キャンペーンモジュールでカスタムリードフォームを作成する</h2>
-    <p>フォーム埋め込みコードを編集したら、キャンペーンモジュールでカスタムリードフォームを作成し、リードフォームをキャンペーン対応プレーヤーに関連付けます。</p>
+    <h2 id="leadform">Campaign モジュールでカスタム リード フォームを作成する</h2>
+    <p>フォーム埋め込みコードを編集したら、Campaign モジュールでカスタム リード フォームを作成し、リード フォームをCampaign対応プレーヤーに関連付けます。</p>
     <ol class="bcls-tasklist-restart">
-      <li>キャンペーンモジュールを開きます。</li>
-      <li>クリック<strong>リードフォーム</strong>左側のナビゲーションで。リードフォームが作成されている場合は、それらが表示されます。</li>
-      <li>「<strong>リードフォームの作成」をクリックします</strong>。</li>
-      <li><strong>リードフォームにはわかりやすい名前を付けます</strong>。</li>
-      <li><strong>フォームの言語を選択します</strong>。</li>
-      <li>[ <strong>フォームのタイミング] を選択します</strong>。フォームのタイミングで、リードフォームがいつ表示されるかが決まります。
+      <li>Campaign モジュールを開きます。</li>
+      <li>左側のナビゲーションで <strong>リードフォーム</strong>をクリックします。リードフォームが作成されている場合は、それらが表示されます。</li>
+      <li><strong>リードフォームの作成</strong>をクリックします。</li>
+      <li>リードフォームにはわかりやすい<strong>名前</strong>を付けます。</li>
+      <li><strong>フォームの言語</strong>を選択します。</li>
+      <li><strong>フォームのタイミング</strong>を選択します。フォームのタイミングは、リードフォームが表示されるタイミングが決定します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit lead form (1)" src="/assets/images/campaign/integrations/hubspot/node16772-edit-lead-form-1.png" /></figure>
       </li>
-      <li>フォームのタイプを[<strong>カスタムリードフォーム</strong>]に設定します。</li>
-      <li><strong>フォームの埋め込みコードを貼り付けます</strong>。</li>
-      <li><strong>（オプション）</strong>に貼り付けます<strong>確認HTML</strong>。確認画面が 5 秒間表示され、ビデオの再生が再開されます。確認HTMLが含まれない場合は、フォームの送信後に動画の再生が再開されます。<aside class="bcls-aside bcls-aside--information">注:確認HTMLのスタイルを設定して、黒い背景に黒いテキストで終わらないようにする必要があります。</aside>
+      <li>フォームのタイプを<strong>カスタム リード フォーム</strong>に設定します。</li>
+      <li><strong>フォームの埋め込みコード</strong>を貼り付けます。</li>
+      <aside class="bcls-aside bcls-aside--information">注: Hubspotのフォームを使用する場合、確認用HTMLを入力することは<strong>できません</strong>。</aside>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit lead form (2)" src="/assets/images/campaign/integrations/hubspot/node16772-edit-lead-form-2.png" /></figure>
       </li>
-      <li><strong>（オプション）</strong> [ フォームのプレビュー] をクリックして、フォームのプレビューを開きます。</li>
-      <li>[ <strong>保存</strong> ] をクリックして、リードフォームを保存します。</li>
+      <li><strong>（オプション）</strong> フォームのプレビュー をクリックして、フォームのプレビューを開きます。</li>
+      <li><strong>保存</strong> をクリックして、リードフォームを保存します。</li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="player">プレイヤーにリードフォームを割り当てる</h2>
-    <p>リードフォームを作成したら、プレイヤーに割り当てる必要があります。リードフォームをプレーヤーに割り当てるには、次の手順を行います。</p>
+    <h2 id="player">リードフォームをプレーヤー割り当てる</h2>
+    <p>リードフォームを作成したら、それをプレーヤーに割り当てる必要があります。リードフォームをプレーヤーに割り当てるには、次の手順を行います。</p>
     <ol class="bcls-tasklist-restart">
-      <li>クリック<strong>キャンペーンプレイヤー</strong>左側のナビゲーションで。</li>
-      <li>プレイヤーを見つけ、[ <strong>リードフォーム]</strong>ドロップダウンリストを使用してリードフォームを選択します。</li>
+      <li>左のナビゲーションの<strong>Campaignプレーヤー</strong>をクリックします。</li>
+      <li>プレーヤーを見つけ、<strong>リードフォーム</strong>ドロップダウンリストを使用してリードフォームを選択します。</li>
     </ol>
-    <p>これでセットアップは完了しました。リード情報を取得する準備ができました。キャンペーン対応プレーヤーを使用してビデオを公開すると、フォームのタイミング設定に従ってリードフォームが表示されます。</p>
+    <p>これで設定は完了し、リード情報を取得する準備ができました。Campaign対応プレーヤーを使用してビデオを公開すると、フォームのタイミング設定に従ってリードフォームが表示されます。</p>
   </section>
   <section class="bcls-section">
     <h2 id="formdata">HubSpot でフォームデータを検証する</h2>
-    <p>カスタムリードフォームを使用してキャプチャされたリードは、HubSpot アカウントの連絡先として追加されます。リードフォームによってキャプチャされたデータを表示する簡単な方法は、HubSpotでスマート・リストを作成することです。</p>
+    <p>カスタム リード フォームを使用して獲得したリードは、HubSpot アカウントに連絡先として追加されます。リードフォームによって獲得したデータを表示する簡単な方法は、HubSpotでスマート リストを作成することです。</p>
     <ol class="bcls-tasklist-restart">
-      <li>HubSpot アカウントにサインインします。</li>
-      <li>クリック<strong>マーケティング</strong> &gt; <strong>フォーム</strong>。</li>
-      <li>フォームの上にマウスを置くと、<strong>行動</strong>メニューが表示されます。[ <strong>アクション] &gt; [提出物の表示] をクリックします</strong>。フォーム送信のリストが表示されます。
+      <li>HubSpot アカウントにログインします。</li>
+      <li><strong>マーケティング</strong> &gt; <strong>フォーム</strong>をクリックします。</li>
+      <li>フォームの上にマウスオーバーすると、<strong>アクション</strong>メニューが表示されます。<strong>アクション &gt; 送信の表示</strong> をクリックします。フォーム送信のリストが表示されます。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="assign-lead-form-to-player" src="/assets/images/campaign/integrations/hubspot/node16772-form-submissions.png" /></figure>
       </li>
-      <li>行にマウスを合わせると、<strong>提出物を見る</strong>フォームデータを表示します。
+      <li>行にマウスオーバーしたら、<strong>送信の表示</strong>をクリックして、フォームデータを表示します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="assign-lead-form-to-player" src="/assets/images/campaign/integrations/hubspot/node16772-submission-details.png" /></figure>
       </li>
     </ol>
