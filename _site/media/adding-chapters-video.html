@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、Brightcoveプレーヤー用のチャプタービデオを作成する方法について説明します。">
+  <meta name="description" content="このトピックでは、ビデオにチャプターを追加する方法について説明します。">
   
-  <title>動画のにチャプターを追加する</title>
+  <title>動画にチャプターを追加する</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -60,7 +60,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">動画のにチャプターを追加する</li>
+      <li class="breadcrumb-item active" aria-current="page">動画にチャプターを追加する</li>
     </ol>
   </nav>
 </header>
@@ -1187,15 +1187,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>動画のにチャプターを追加する</h1>
-  <summary>このトピックでは、Brightcoveプレーヤー用のチャプタービデオを作成する方法について説明します。</summary>
+  <h1>動画にチャプターを追加する</h1>
+  <summary>このトピックでは、ビデオにチャプターを追加する方法について説明します。</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5167166949001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script></section>
+    <p>チャプターがあると、視聴者は動画の特定のポイントに簡単に行くことができます。これは特に長い形式の動画に役立ちます。動画をスクラブするのではなく、チャプターメニューを使って動画の特定のポイントにジャンプすることができます。</p>
+    
+    <!-- <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5167166949001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> -->
+   
+    <aside class="bcls-aside bcls-aside--information language-editable">注: Interactivity モジュールを使用して、動画に簡単にチャプターを追加することもできます。詳しくは、Interactivity ドキュメントの <a href="/interactivity/annotations/adding-chapters-video.html">動画にチャプターを追加する</a> を参照してください。</aside>
 
   <section class="bcls-section">
     <h2 id="workingSample">作業サンプル</h2>
-    <p>チャプタービデオの実際のサンプルを見てみましょう-以下のビデオを開始し、アイコン <img alt="chapter menu" src="/assets/images/media/node18078-chapter-menu.png" /> の上にマウスを置いてチャプターメニューを表示します: </p>
+    <p>チャプター付きビデオの実際のサンプルを見てみましょう-以下のビデオを開始し、アイコン <img alt="chapter menu" src="/assets/images/media/node18078-chapter-menu.png" /> の上にマウスを置いてチャプターメニューを表示します: </p>
     <div style="display: block; position: relative; max-width: 32em;">
       <div style="padding-top: 56.25%;">
         <iframe src="//players.brightcove.net/1752604059001/7a8a2bf7-6696-4dda-b31d-876a9cb1792a_default/index.html?videoId=2026618970001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe>
@@ -1204,10 +1208,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="code">仕組み</h2>
-    <aside class="bcls-aside bcls-aside--information">チャプター名を大文字で表示するには、プレーヤーをバージョン6.18.3以降に設定する必要があることに注意して下さい。</aside>
     <p>チャプタービデオには以下が必要です。</p>
     <ul>
-      <li>Brightcoveプレーヤー-特別なプロパティ、スタイリング、プラグインは必要ありません。</li>
+      <li>Brightcoveプレーヤー - 特別なプロパティ、スタイリング、プラグインは必要ありません。</li>
       <li>ビデオのチャプターを記述した WebVTT ファイル (例:
 <pre class="line-numbers"><code class="language-html" translate="No">WEBVTT
 
@@ -1233,11 +1236,11 @@ Dolphins</code></pre>
     <p>上のサンプルでは、各チャプターの項目が2行で構成されていることに注意してください。</p>
     <ol>
       <li>チャプターの開始時刻と終了時刻の形式で、次のようになります。<code translate="No">hours:minutes:seconds.milliseconds</code>00:02:23 .000) と厳密に解析されます。必要に応じて、数値をゼロで埋める必要があります。</li>
-      <li>プレーヤーのチャプターメニューに表示されるチャプタータイトル。プレーンテキストのみがサポートされており、タイトルにサブストリングを含めてはならない事に注意して下さい。<code translate="No">--&gt;</code></li>
+      <li>プレーヤーのチャプターメニューに表示されるチャプタータイトル  - プレーンテキストのみがサポートされており、タイトルにサブストリングを含めてはならない事に注意して下さい。<code translate="No">--&gt;</code></li>
     </ol>
     <aside class="bcls-aside bcls-aside--tip">注意:
       <ul>
-        <li><a href="https://quuz.org/webvtt/">このバリデータを使用して WebVTT</a>形式を検証できます。</li>
+        <li>この<a href="https://quuz.org/webvtt/">バリデータ</a>を使用して WebVTT形式を検証できます。</li>
         <li>正しく表示するには、WebVTTファイルをUTF-8でエンコードする必要があります。</li>
       </ul>
     </aside>
@@ -1245,12 +1248,12 @@ Dolphins</code></pre>
       <p>WebVTT ファイルは、次の 3 つの方法のいずれかでビデオに関連付けることができます。</p>
       <ol>
 
-        <li>を使用してWebVTTファイルをアップロードします<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">WebVTTファイルの取り込み</a>のドキュメント<span translate="No">動的取り込みAPI</span>情報。</li>
-        <li>Studio <a href="/media/adding-captions-videos-using-media-module.html"></a>のビデオのテキストトラックプロパティに WebVTT ファイルの URL を追加します。[詳細設定] <code translate="No">Kind</code>にアクセスして、を<code translate="No">Chapters</code> :
+        <li><span translate="No">Dynamic Ingest API</span> 情報の<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">WebVTTファイルの取り込み</a>ドキュメントを使用して、WebVTTファイルをアップロードします。</li>
+        <li><a href="/media/adding-captions-videos-using-media-module.html">Studioのビデオのテキスト トラックプロパティ</a>に、WebVTT ファイルの URL を追加します。 必ず<code translate="No">種類</code> を <code translate="No">チャプタ</code>に設定して下さい :
           <figure class="bcls-figure"><img class="bcls-image" alt="studio text track settings" src="/assets/images/media/node18078-text-tracks-studio.png" /></figure>
-          <aside class="bcls-aside bcls-aside--information"><code translate="No">デフォルト</code>値はトラック単位でなく、同じ言語の全てのトラックで<code translate="No">true</code>に設定されています（<code translate="No">srclang</code>）。</aside>
+          <aside class="bcls-aside bcls-aside--information"><code translate="No">デフォルト</code>値はトラック単位でなく、同じ言語の全てのトラックに対して<code translate="No">true</code>に設定されていることに注意して下さい（<code translate="No">srclang</code>）。</aside>
         </li>
-        <li><code translate="No">&lt;track&gt;</code>タグ内の WebVTT ファイルの URL をページ内埋め込みコードに参照します。
+        <li><code translate="No">&lt;track&gt;</code>タグ内の WebVTT ファイルの URL をページ内の埋め込みコードに参照します。
           <pre class="line-numbers">
             <code class="language-html" translate="No">&lt;video-js
               data-video-id="4426931680001"
@@ -1276,7 +1279,7 @@ Dolphins</code></pre>
               &lt;/video-js&gt;
             &lt;script src="https://players.brightcove.net/3676484086001/df134dc9-c997-4464-a69c-e36acf59aef7_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
     </div>
-    <aside class="bcls-aside bcls-aside--information">注:独自のサーバーでキャプションファイルをホストしている場合は、Brightcove プレーヤーがアクセスできる URL にファイルがあることを確認してください。キャプションファイルをホストしているサーバーでも、クロスオリジンリソース共有 (CORS) を有効にする必要があります。CORS <a href="https://general.support.brightcove.com/developer/concepts-cors.html">についての詳細はこちらで読むことができます</a>。</aside><aside class="bcls-aside bcls-aside--information">注:チャプターメニューは WebVTT ファイルに複数のチャプターキューポイントがある場合にのみ表示されます。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: 自分のサーバーでキャプション ファイルをホストしている場合、そのファイルがブライトコーブ プレーヤがアクセスできる URL にあることを確認してください。また、キャプション ファイルをホストするサーバーは、CORS（Cross-Origin Resource Sharing）を有効にしておく必要があります。CORS の詳細については <a href="https://general.support.brightcove.com/developer/concepts-cors.html">こちら</a>を参照して下さい。</aside><aside class="bcls-aside bcls-aside--information">注: チャプターメニューは WebVTT ファイルに複数のチャプター キューポイントがある場合にのみ表示されます。</aside>
     <p>次の図は、プレーヤーのチャプターメニューがwebVTTファイルからどのように生成されるかを示しています。</p>
     <figure class="bcls-figure"><img class="bcls-image" alt="player-vtt-interaction" src="/assets/images/media/node18078-chaptered-video-player-vc.png" /></figure>
     </section>
@@ -1286,6 +1289,14 @@ Dolphins</code></pre>
     <p class="player-only">.vtt <code translate="No">track</code><code translate="No">video</code>ファイルのタグをに追加する必要があるため、チャプタービデオにはページ内埋め込みを使用する必要があります。</p>
     <p>追加のプラグイン、CSS、または JavaScript コードは必要ありません。</p>
   </section>
+
+  <section class="bcls-section">
+    <h2 id="limitations">制限事項</h2>
+    <ul>
+      <li>メディア モジュールのプレビュー プレーヤーにチャプター アイコンが表示されません。チャプター アイコンをプレビューできるようにするには、プレーヤーを Web に公開する必要があります。</li>
+    </ul>
+  </section>
+
 </article>
 
 <!-- complete bootstrap layout -->
