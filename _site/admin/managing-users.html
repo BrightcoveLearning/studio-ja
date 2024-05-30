@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic you will learn how to manage the users that have access to Studio.">
+  <meta name="description" content="このトピックでは、Studio にアクセスできるユーザを管理する方法について説明します。">
   
   <title>ユーザーの管理</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -60,7 +60,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       <li class="breadcrumb-item"><a href="/admin/">Administering Accounts</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">ユーザーの管理</li>
+      <li class="breadcrumb-item active" aria-current="page">アカウント情報の管理</li>
     </ol>
   </nav>
 </header>
@@ -1187,95 +1187,243 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>ユーザーの管理</h1>
-  <summary>In this topic you will learn how to manage the users that have access to Studio.</summary>
-  <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4052428130001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>［ユーザー管理］ページでは、Studioの使用を許可されたユーザーを管理します。「ユーザー管理」ページにアクセスするには、管理者ロールを持つユーザーである必要があります。</p>
-    <p>「ユーザー管理」ページにアクセスするには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Studioにログインします。</li>
-      <li>ナビゲーションヘッダーで、[ <strong>管理者</strong> ]、[ <strong>ユーザー管理] の順にクリックします</strong>。</li>
-    </ol>
-    <p>[ユーザー管理] ページには、次の項目が表示されます。</p>
-    <ul>
-      <li>姓、名</li>
-      <li>メールアドレス</li>
-      <li>役割-標準または管理者</li>
-      <li>モジュールアクセス-ユーザーがアクセスできる各モジュールには、緑色のチェックマークが表示されます（<img alt="" src="/assets/images/admin/node14054-green-check-icon.png" />)</li>
-      <li>最終ログイン-ユーザーが Video Cloud Studio に最後にログインした日時。これは、現在のアカウントだけでなく、すべての Video Cloud Studio アカウントの最後のログインです</li>
-    </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node14054-manage-users.png" /></figure>
-    <p>[ユーザー管理] ページを使用すると、次のことができます。</p>
-    <ul>
-      <li><a href="#create">新しいユーザーの作成</a></li>
-      <li><a href="#edit">既存のユーザーの編集</a></li>
-      <li><a href="#delete">ユーザーを削除する</a></li>
-      <li><a href="#primary">プライマリユーザーを変更する</a></li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="many">私は何人のユーザーを持っていますか？</h2>
-    <p>作成できるユーザーの数は、アカウントの種類によって異なります。さらにユーザーを追加する必要がある場合は、プランをより多くのユーザーを提供するプランにアップグレードできます。この制限は、任意の時点で存在するユーザーの合計数にのみ適用されます。10 人のユーザーを作成し、そのうちの 5 つを削除し、さらに 3 人のユーザーを作成すると、8 人のユーザーと見なされます。「ユーザー」ページには、資格が付与されているユーザーの数と、作成できる追加ユーザーの数が表示されます。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="purchase">追加ユーザーの購入</h2>
-    <p>さらにユーザーを追加する必要がある場合は、プランをより多くのユーザーを提供するプランにアップグレードできます。Pro および Enterprise レベルのアカウントでは、アカウントマネージャーにユーザーを追加する方法について問い合わせてください。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="create">新規ユーザーの作成</h2>
-    <p>新しいユーザーを作成するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li><strong>ユーザーの電子メール</strong>、<strong>名</strong>、<strong>姓を入力します。</strong></li>
-      <li>ロールをユーザーに割り当てます。
-        <ul>
-          <li><strong>管理者</strong> - ユーザーはADMINメニューにアクセスできます（ユーザーアカウント、カスタムインジェストプロファイル、カスタムフィールド、メディア共有の設定など）</li>
-          <li><strong>Standard</strong> - ユーザーは管理者メニューにアクセスできません</li>
-        </ul>
-      </li>
-      <li>ユーザーがアクセスできるモジュールを選択します。モジュールをオフにすると、ユーザーがアクセスできる UI のセクションのみが制限されます。</li>
-      <li>[ <strong>ユーザーの追加] をクリックします</strong>。</li>
-    </ol>
-    <p>ユーザーは、アカウントに追加されたことを示す電子メールメッセージを受信します。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">既存のユーザーの編集</h2>
-    <p>既存のユーザーを編集するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>編集するユーザーをクリックします。ユーザーの詳細がページの上部に表示されます。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node14054-edit-user.png" /></figure>
-      </li>
-      <li>ユーザーの詳細を編集します。<aside class="bcls-aside bcls-aside--information">注:としてログインしたユーザーは編集できません。</aside>
-      </li>
-      <li><strong>[保存]</strong> をクリックして、変更を保存します。</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">ユーザーの削除</h2>
-    <p>ユーザーを削除するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>削除アイコンをクリックします（<img alt="" src="/assets/images/admin/node14054-trash-icon.png" />）ユーザーに関連付けられています。</li>
-      <li>[<strong>OK</strong>]をクリックして、削除を確認します。</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="primary">プライマリユーザーの変更</h2>
-    <p>各アカウントの 1 人のユーザーがプライマリユーザーとして指定されます。<strong>プライマリユーザには常に管理者ロールが割り当てられ</strong>、Brightcove サポートのみが削除できます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node14054-primary-user.png" /></figure>
-    <p>ある時点でプライマリユーザーを変更する必要がある場合は、新しいプライマリユーザーを選択し、[このユーザーをこのアカウントのプライマリ管理者にする] をクリックします。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node14054-new-primary-user.png" /></figure>
-    <p>プライマリユーザーの変更を確認するよう求められます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node14054-confirm-new-primary-user.png" /></figure>
-    <p>新しいプライマリユーザーのロールが<strong> Standard の場合</strong>、プライマリユーザーになったときに管理者ロールが割り当てられます。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="users">複数のアカウントでの作業</h2>
-    <p>追加のアカウントを追加する場合の一般的な誤解は、最初の Video Cloud アカウントで行った場合と同様に、10 人のユーザーが追加されることです。追加の Video Cloud アカウントには、追加のユーザーアカウントは含まれません。たとえば、10 人のユーザーが最初のアカウントに追加され、同じ 10 人のユーザーが 2 番目のアカウントに追加された場合、合計ユーザー数はまだ 10 になります。10 人のユニークユーザーはライセンス契約に従っており、1 つの一意のユーザー ID を複数のアカウントで使用でき、1 人のユーザーとしてカウントされます。</p>
-    <p>複数のアカウントをお持ちの場合は、ユーザーを各アカウントに個別に追加する必要があります。アカウントAとアカウントBの2つのアカウントがあるとします。ユーザーがアカウントAに追加されても、アカウントBに自動的にアクセスすることはできません。ユーザーはアクセスが必要な各アカウントに追加する必要があります。</p>
-    <p>複数のアカウントでの作業の詳細については、を参照してください。<a href="/general/working-multiple-video-cloud-accounts.html">複数のビデオクラウドアカウントの操作</a>。</p>
-  </section>
-</article>
+    <h1>ユーザーの管理</h1>
+    <summary>このトピックでは、Studio にアクセスできるユーザを管理する方法について説明します。</summary>
+    <section class="bcls-section">
+      
+      <div style="max-width: 950px;">
+        <style>
+        video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+          padding-top: 56.25%;
+        }
+        </style><video-js
+          data-account="20318290001"
+          data-player="default"
+          data-embed="default"
+          controls=""
+          data-video-id="1796595014041444036"
+          data-playlist-id=""
+          data-application-id=""
+          class="vjs-fluid"></video-js>
+      </div>
+      <script
+        src="https://players.brightcove.net/20318290001/default_default/index.min.js">
+      </script>
+          
+      <p>ユーザ管理ページでは、Studioの使用が許可されたユーザを管理します。ユーザー管理ページにアクセスするには、管理者権限を持つユーザである必要があります。</p>
+      <p>ユーザー管理ページにアクセスするには:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Studio にログインします。</li>
+        <li><strong>管理者</strong> (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+          <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+        </svg>) メニューを開きます。</li>
+        <li><strong>ユーザー管理</strong>をクリックします。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/admin-module-v2.png" style="width: 875px;" /></figure>
+      </ol>
+      <p>ユーザータブがどのように表示されるかに注目してください:</p>
+      <ul>
+        <li>名, 姓</li>
+        <li>電子メール</li>
+        <li>役割 - 標準、管理者またはカスタム</li>
+        <li>モジュール アクセス - ユーザーがアクセスできる各モジュールには、チェックマーク (<img alt="" src="/assets/images/s-admin-img/general/node14054-green-check-icon.png" />)が表示されます。</li>
+        <li>最終ログイン - ユーザーが Video Cloud Studio に最後にログインした日時。これは、現在のアカウントだけでなく、すべての Video Cloud Studio アカウントの最終ログインです。</li>
+        <li>設定 (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+          </svg>) - ここでは、どのタブを表示するかしないかをパーソナライズすることができます。また、3つのドットでユーザーを編集または削除することができます。</li>
+      </ul>
+      <aside class="bcls-aside bcls-aside--tip language-editable">注: <strong>検索タブ</strong>を使用して、必要なユーザーを検索します。</aside>
+      
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/search-tab.png" style="width: 875px;"/></figure>
+          
+          
+      <aside class="bcls-aside bcls-aside--information language-editable">注: UIに表示された情報を直接スプレッドシートにエクスポートすることはできません。</aside>
+      <aside class="bcls-aside bcls-aside--information language-editable">注: 各ユーザの最終ログイン情報は、 Brightcoveによって保存されません。</aside>
+      <p>ユーザー管理ページでは以下のことができます:</p>
+      <ul>
+        <li><a href="#create">新規ユーザーの作成</a></li>
+        <li><a href="#edit">既存ユーザーの編集</a></li>
+        <li><a href="#delete">ユーザーの削除</a></li>
+        <li><a href="#primary">プライマリーユーザーの変更</a></li>
+        <li><a href="#add">役割の追加</a></li>
+        <li><a href="#assign">役割の割り当て</a></li>
+        <li><a href="#legacy">レガシーの役割の置き換え</a></li>
+      </ul>
+    </section>
+    <section class="bcls-section">
+      <h2 id="many">何人ユーザーを登録することができますか？</h2>
+      <p>作成できるユーザー数は、ご契約のアカウントの種類によって異なります。より多くのユーザーを追加する必要がある場合は、より多くのユーザーを提供するプランにアップグレードすることができます。10人のユーザーを作成し、そのうち5人を削除し、さらに3人のユーザーを作成した場合、8人のユーザーを作成したものとみなされます。ユーザー管理ページには、お客様が権利を有するユーザー数と、追加作成可能なユーザー数が表示されます。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="purchase">追加ユーザーの購入</h2>
+      <p>より多くのユーザーを追加する必要がある場合は、より多くのユーザーを提供するプランにアップグレードすることができます。Pro および Enterprise レベルのアカウントは、ユーザー追加に関する情報を弊社営業にお問い合わせください。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="create">新規ユーザーの作成</h2>
+      <p>新規ユーザーを作成するには、以下の手順に従ってください:</p>
+      <ol class="bcls-tasklist-restart">
+        <li><span class="button-blue">ユーザーの追加</span>をクリックします。</li>
+        <li>ユーザーの <strong>名</strong>、<strong>姓</strong> および <strong>電子メール</strong> を入力して下さい。</li>
+        <aside class="bcls-aside bcls-aside--information">注: 既存のユーザーのEメールを変更することはできません。</aside>
+        <li>ユーザーに <strong>役割</strong> を割り当てます:
+          <ul>
+            <li><strong>管理者</strong> - <strong>管理者</strong>メニューにアクセスできるユーザー（ユーザーアカウントの作成、カスタム トランスコード プロファイル、カスタムフィールド、メディア共有の設定など）。</li>
+            <li><strong>標準</strong> - ユーザーは <strong>管理者</strong>メニューにアクセスできません。</li>
+            <li><strong>カスタム ロール</strong> - 割り当てられた役割に応じて特定のモジュールにアクセスできます。</li>
+          </ul>
+        </li>
+        <aside class="bcls-aside bcls-aside--information">注: 1人のユーザに最大8つの異なるロールを追加することができます。</aside>
+        <li><span class="button-blue">保存</span>をクリックします。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add user UI" src="/assets/images/s-admin-img/general/add-user.png" style="width: 875px;" /></figure>
+      </ol>
+      <p>ユーザーは、アカウントに追加されたことを示すEメールメッセージを受け取ります。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="edit">既存ユーザーの編集</h2>
+      <p>既存のユーザーを編集するには、以下の手順に従ってください:</p>
+      <ol class="bcls-tasklist-restart">
+        <li><strong>設定タブ</strong>(<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+          <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+        </svg>) 下にある3点リーダーをクリックし、<strong>編集</strong> オプションをクリックして、ユーザーの詳細を表示します。
+        </li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Edit user UI" src="/assets/images/s-admin-img/general/edit-user.png" style="width: 875px;" /></figure>
+        <li>他の利用可能な <strong>役割</strong> を選択することで、ユーザーの役割を変更することができます。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Edit user role UI" src="/assets/images/s-admin-img/general/edit-user-modal.png" style="width: 875px;" /></figure>
+          <aside class="bcls-aside bcls-aside--information">注: ユーザーは、<a href="managing-profile-information.html">プロフィール情報</a>を編集することで、姓と名を更新することができます。</aside>
+        <li><span class="button-blue">保存</span> をクリックして変更を更新します。</li>
+      </ol>
+    </section>
+    <section class="bcls-section">
+      <h2 id="delete">ユーザーの削除</h2>
+      <p>ユーザーを削除するには、以下の手順に従ってください:</p>
+      <ol class="bcls-tasklist-restart">
+        <li><strong>設定タブ</strong>(<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+          <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+        </svg>)の下にある3点リーダーをクリックし、<strong>削除</strong> オプションをクリックします。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Delete user UI" src="/assets/images/s-admin-img/general/delete-user.png" style="width: 875px;" /></figure>
+        <li><span class="button-red">削除</span> をクリックし、削除を確定します。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Delete user UI" src="/assets/images/s-admin-img/general/delete-user-modal.png" style="width: 875px;" /></figure>
+      </ol>
+    </section>
+    <section class="bcls-section">
+      <h2 id="primary">プライマリーユーザーの変更</h2>
+      <p>各アカウントの 1 人のユーザーがプライマリーユーザーに指定されます。プライマリーユーザーは常に <strong>管理者</strong>の役割を持ち、Brightcove サポートによってのみ削除できます。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14054-primary-user.png" /></figure>
+      <p>ある時点でプライマリーユーザーを変更する必要がある場合は <strong>設定タブ</strong>(<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+      </svg>)下にある3点リーダーをクリックし、<strong>編集</strong> オプションをクリックすると、ユーザーの詳細が表示されます。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Primary user UI" src="/assets/images/s-admin-img/general/primary-user.png" style="width: 875px;" /></figure>
+      <p><strong>このユーザーをこのアカウントのプライマリ管理者にする</strong> をクリックします。プライマリーユーザーの変更を確認するプロンプトが表示されます。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Confirm primary user change" src="/assets/images/s-admin-img/general/primary-user-prompt.png" style="width: 875px;" /></figure>
+      <aside class="bcls-aside bcls-aside--information language-editable">ユーザがプライマリーに指定されると、そのユーザには自動的に管理者の役割が割り当てられます。管理者の役割は、ユーザがアカウントのすべての機能にアクセスできるようにします。例えば、新しいプライマリーユーザーが <strong>標準</strong> の役割を持つ場合、プライマリーユーザーになると <strong>管理者</strong> の役割が割り当てられます。</aside>
+    </section>
+              
+    <section class="bcls-section">
+      <h2 id="add">新しい役割の追加</h2>
+      <p>新しい役割を追加するには、以下の手順に従ってください:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>ナビゲーションバーの <strong>ロール</strong> タブを選択します。</li>
+        <li><span class="button-blue">ロールの追加</span> をクリックします。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add role UI" src="/assets/images/s-admin-img/general/add-role.png" style="width: 875px;" /></figure>
+        <li>以下の役割の詳細を入力してください:
+          <ul>
+            <li><strong>ロール名</strong> - ユーザーの役割をよりよく説明する名前を割り当てます。</li>
+            <li><strong>管理者</strong> - このロールが管理者機能を持つかどうかを確認してください。</li>
+            <li><strong>モジュールのアクセス権</strong> - このロールがアクセスできるモジュールを選択します。</li>
+            <li><strong>動画機能</strong> - ユーザーロールに動画機能があるかどうかを確認します（動画の有効化または無効化 動画の削除 動画メタデータの編集 動画のアップロード）。</li>
+            </ul>
+        <aside class="bcls-aside bcls-aside--information">注: 最大8つの異なるロールを作成できます。</aside></li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Create user role UI" src="/assets/images/s-admin-img/general/create-role.png" style="width: 875px;" /></figure>
+        <li><span class="button-blue">保存</span>をクリックします。</li>
+      </ol>
+      <p>ロールタブが、どのように表示されるかに注目してください:</p>
+      <ul>
+        <li>ロール</li>
+        <li>そのロールを所有するユーザーの数。</li>
+        <li>モジュール アクセス - ロールがアクセスできる各モジュールにはチェックマーク (<img alt="" src="/assets/images/s-admin-img/general/node14054-green-check-icon.png" />) が表示されます。</li>
+        <li>設定 (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+          </svg>) - ここで、どのタブを表示するかしないかをパーソナライズできます。</li>
+      </ul>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/role-ui.png" style="width: 875px;"/></figure>
+    </section>
+    <section class="bcls-section">
+      <h2 id="assign">役割の割り当て</h2>
+      <p>新しいロールを割り当てるには、以下の手順に従ってください:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>新しいロールを割り当てたいユーザーを1人または複数選択します。</li>
+        <li><strong>ロールの役割</strong>をクリックします。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/assign-role.png" style="width: 875px;" /></figure>
+        <li>選択したユーザーに対して 1 つ以上の既存のロールを選択します。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/choose-role.png" style="width: 875px;" /></figure>
+        <li><span class="button-blue">ロールの役割</span>をクリックします。</li>
+    </section>
+    <section class="bcls-section">
+      <h2 id="legacy">レガシーの役割の置き換え</h2>
+      <div style="max-width: 950px;">
+        <style>
+        video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+          padding-top: 56.25%;
+        }
+        </style><video-js
+          data-account="20318290001"
+          data-player="default"
+          data-embed="default"
+          controls=""
+          data-video-id="1796613350614773130"
+          data-playlist-id=""
+          data-application-id=""
+          class="vjs-fluid"></video-js>
+      </div>
+      <script
+        src="https://players.brightcove.net/20318290001/default_default/index.min.js">
+      </script>
+      <p>前回の更新以降、Brightcoveは新しいユーザー ロールによって、より詳細な機能を追加しました。移行されていないユーザーには、これらの新機能を持たない <strong>(レガシー)</strong> ラベルが表示されます。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/legacy-role.png" /></figure>
+      <p>従来のロールを新しいロールに置き換えるには、以下の手順に従います:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>新しいロールに置き換えたいユーザの <strong>設定タブ</strong>(<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+          <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+        </svg>) の下にある3点リーダーをクリックし、<strong>編集</strong> オプションをクリックして、ユーザの詳細を表示します。
+        </li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/edit-legacy-role.png" style="width: 875px;" /></figure>
+        <li>ドロップダウンから新しいロールを選択して、従来のロールを置き換えます。</li>
+        <li><span class="button-blue">編集</span> をクリックして変更を保存します。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/assign-new-role.png" style="width: 875px;" /></figure>
+      </ol>
+      <ol class="bcls-tasklist-restart">
+        <h3>レガシー ロールを一括置き換え</h3>
+        <li>新しいロールを割り当てたいレガシーユーザーを1人以上選択します。</li>
+        <li><strong>ロールの役割</strong>をクリックします。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/assign-legacy-bulk.png" style="width: 875px;" /></figure>
+        <li>選択したユーザーに対して 1 つ以上の既存のロールを選択します。</li>
+        <li><strong>レガシーロールの置換</strong>のために必要な条件を確認して下さい。</li>
+        <li><span class="button-blue">ロールの役割</span>をクリックします。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/legacy-replace.png" style="width: 875px;" /></figure>
+      </ol>
+    </section>
+    <section class="bcls-section">
+      <h2 id="users">複数のアカウントでの作業</h2>
+      <p>アカウントを追加する際によくある誤解は、最初の Video Cloud アカウントと同じように 10 人のユーザが追加されるというものです。追加の Video Cloud アカウントには、、追加のユーザー アカウントは含まれません。たとえば、最初のアカウントに 10 人のユーザーが追加され、同じ 10 人のユーザーが 2 番目のアカウントに追加された場合でも、合計ユーザー数は 10 人のままです。10 人の一意のユーザーはライセンス契約によるものであり、1 つの固有ユーザ ID を複数のアカウントで使用しても 1 人のユーザとしてカウントされます。</p>
+      <p>複数のアカウントがある場合、ユーザーは各アカウントに個別に追加する必要があります。アカウントAとアカウントBの2つのアカウントがあるとします。アカウントAにユーザーを追加しても、アカウントBには自動的にアクセスできません。</p>
+      <p>複数のアカウントでの作業の詳細については、<a href="/general/references/working-multiple-video-cloud-accounts.html">複数の Video Cloud アカウントでの作業</a>を参照して下さい。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="limit">制限事項</h2>
+      <ul>
+        <li>レガシー ロールを新しいロールで一括編集することはできません。編集しようとすると、このようなポップアップメッセージが表示されます:</p>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/bulk-edit-error.png" style="width: 875px;" /></figure>
+          <aside class="bcls-aside bcls-aside--information">注: この制限により、選択されたユーザーとは反対のタイプのユーザーは無効になります。これは 2 番目のユーザーが選択されるまで発生します。</aside>
+      </ul>
+    </section>
+        
+  </article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
