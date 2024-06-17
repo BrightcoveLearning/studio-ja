@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="デフォルトでは、YouTube は最大 15 分間の動画アップロードを許可します。15 分を超える動画をアップロードしようとすると、アップロードは失敗します。これは、Brightcoveの制限ではなく、YouTubeの制限です。">
+  <meta name="description" content="デフォルトでは、YouTube は 15 分までの動画アップロードを許可しています。15 分を超える動画をアップロードしようとすると、アップロードは失敗します。これは、Brightcoveの制限ではなく、YouTubeの制限です。">
   
-  <title>YouTubeのでより長い動画を有効にする</title>
+  <title>YouTube でより長い動画を有効にする</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -60,7 +60,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       <li class="breadcrumb-item"><a href="/general/">General Information</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">YouTubeのでより長い動画を有効にする</li>
+      <li class="breadcrumb-item active" aria-current="page">YouTube でより長い動画を有効にする</li>
     </ol>
   </nav>
 </header>
@@ -185,9 +185,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
               <ul class="sidenav-submenu" style="display:none;">
                  
                     <li><a href="/general/migration-dynamic-delivery.html">静的配信(Static Delivery) の廃止及び 動的配信(Dynamic Delivery) への移行について</a></li>
-                    
-                    <li><a href="/general/adding-facebook-button-brightcove-player.html">Facebook の「いいね！」ボタンをプレーヤーに追加する</a></li>
-                    
+            
                     <li><a href="/general/best-practices-video-creating-transcoding-and-uploading-workflow.html">ベストプラクティス: トランスコーディングとアップロード</a></li>
                     
                     <li><a href="/general/china-delivery-overview.html">中国配送の概要</a></li>
@@ -199,8 +197,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/general/domains-and-ports-must-be-accessible-video-cloud.html">アクセス可能でなければならないドメインとポート</a></li>
                     
                     <li><a href="/general/drm-output-protection-settings.html">DRM 出力保護の設定</a></li>
-                    
-                    <li><a href="/general/enabling-longer-videos-youtube.html">YouTube で長い動画を有効にする</a></li>
                     
                     <li><a href="/general/making-your-video-content-indexable.html">動画コンテンツをインデックス可能にする</a></li>
                     
@@ -430,6 +426,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><a href="/social/using-auto-sync-synchronize-videos-social-media-accounts.html">自動同期の使用</a></li>
                     
                     <li><a href="/social/viewing-videos-published-social-media.html">公開されたビデオの表示</a></li>
+
+                    <li><a href="/general/adding-facebook-button-brightcove-player.html">Facebook の「いいね！」ボタンをプレーヤーに追加する</a></li>
+
+                    <li><a href="/general/enabling-longer-videos-youtube.html">YouTube で長い動画を有効にする</a></li>
                    
               </ul>
               <h5 class="submenu-header"><a href="/interactivity/index.html"><span style="color:#8E9093">+ </span>&nbsp;&nbsp;Interactivity</a></h5>
@@ -1187,20 +1187,20 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>YouTubeのでより長い動画を有効にする</h1>
+  <h1>YouTube でより長い動画を有効にする</h1>
   <summary>デフォルトでは、YouTube は最大 15 分間の動画アップロードを許可します。15 分を超える動画をアップロードしようとすると、アップロードは失敗します。これは、Brightcoveの制限ではなく、YouTubeの制限です。</summary>
   <section class="bcls-section">
     <p>長い動画を YouTube にアップロードするには、YouTube でアカウントを確認する必要があります。</p>
     <ol class="bcls-tasklist-restart">
-      <li><a href="https://www.youtube.com/upload">https://www.youtube.com/upload で YouTube アップロードページを開きます</a>。</li>
-      <li>ページ下部の[<strong>上限を引き上げましょう</strong>]リンクをクリックします。
+      <li><a href="https://www.youtube.com/upload">https://www.youtube.com/upload</a>で、YouTube のアップロードページを開きます。</li>
+      <li>ページ下部の[<strong>上限を引き上げる</strong>]リンクをクリックします。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Click &quot;Increase your limit.&quot;" src="/assets/images/general/node8450-youtube-increase-limit.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">注:[<strong>上限を引き上げましょう</strong>]リンクが見つからない場合は、すでに長い動画をアップロードできる可能性があります。<a href="https://www.youtube.com/features">YouTube</a>アカウント機能ページの <strong>[長い動画]</strong>セクションをチェックして、この機能がすでに有効になっているかどうかを確認します。</aside>
+        <aside class="bcls-aside bcls-aside--information">注:[<strong>上限の引き上げ</strong>]リンクが見つからない場合は、すでに長い動画をアップロードできるようになっている可能性があります。<a href="https://www.youtube.com/features">YouTube</a>アカウント機能ページの <strong>[長い動画]</strong>セクションをチェックして、この機能がすでに有効になっているかどうかを確認します。</aside>
       </li>
       <li>手順に従って、携帯電話でアカウントを確認します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Enter your mobile phone number to receive a verification code by text message." src="/assets/images/general/node8450-youtube-enter-mobile.png" /></figure>
       </li>
-      <li>YouTubeからの返信を携帯メールで受信後、携帯メールの確認コードを入力し、[<strong>送信</strong>]をクリックします。
+      <li>YouTube からのテキスト メッセージが届いたら、テキスト メッセージに記載されている確認コードを入力し、[<strong>送信</strong>]をクリックします。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Enter verfication code from text message." src="/assets/images/general/node8450-youtube-verify-mobile.png" /></figure>
       </li>
     </ol>
