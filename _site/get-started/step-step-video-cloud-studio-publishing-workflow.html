@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、Video Cloud Studioを使用して基本的なビデオ公開ワークフローを実行します。このトピックでは、VideoCloudの機能のいくつかを発見するために自分で実行できる一連の実践的な手順を提供します。">
+  <meta name="description" content="このトピックでは、Video Cloud Studio を使用して基本的な動画公開ワークフローについて説明します。このトピックでは、Video Cloud の機能のいくつかを発見するために自分で作業できる一連の手順を提供します。">
   
-  <title>ステップバイステップ: ビデオクラウド Studio 公開ワークフロー</title>
+  <title>ステップ・バイ・ステップ: ビデオクラウド スタジオ での動画公開ワークフロー</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -60,7 +60,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       <li class="breadcrumb-item"><a href="/get-started/">Getting Started</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">ステップバイステップ: ビデオクラウド Studio 公開ワークフロー</li>
+      <li class="breadcrumb-item active" aria-current="page">ステップ・バイ・ステップ: ビデオクラウド スタジオ での動画公開ワークフロー</li>
     </ol>
   </nav>
 </header>
@@ -1187,143 +1187,144 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>ステップバイステップ: ビデオクラウド Studio 公開ワークフロー</h1>
-  <summary>このトピックでは、Video Cloud Studioを使用して基本的なビデオ公開ワークフローを実行します。このトピックでは、VideoCloudの機能のいくつかを発見するために自分で実行できる一連の実践的な手順を提供します。</summary>
+  <h1>ステップ・バイ・ステップ: ビデオクラウド スタジオ での動画公開ワークフロー</h1>
+  <summary>このトピックでは、Video Cloud Studio を使用して基本的な動画公開ワークフローについて説明します。このトピックでは、Video Cloud の機能のいくつかを発見するために自分で作業できる一連の手順を提供します。</summary>
   <section class="bcls-section">
-    <p>このトピックは、Video Cloud <a href="/training/training-demand-introduction-video-cloud.html"></a>入門オンデマンドトレーニングコースのコンパニオンです。このトレーニングの実践的な演習は、このドキュメントの手順に基づいています。このトレーニングを見て、この文書を使用して、自分で実践的な手順を完了することをお勧めします。</p>
+    <p>このトピックは、オンデマンド トレーニング コースの <a href="/training/training-demand-introduction-video-cloud.html">Video Cloud 入門</a>に付随するものです。このトレーニングの実践的な演習は、このドキュメントの手順に基づいています。このトレーニングを見て、このドキュメントを使用して、ご自身で実践的な手順を完了できるようにすることをお勧めします。</p>
   </section>
   <section class="bcls-section">
     <h2>前提条件</h2>
     <ul>
-      <li>Video Cloud アカウント- &nbsp;<a href="https://register.brightcove.com">こちらでトライアルアカウントにサインアップできます。</a></li>
-      <li>使用できるサンプルビデオがいくつかあるはずです。&nbsp;<a href="/assets/downloads/Video-Cloud-Quick-Start-Videos.zip">ダウンロード</a>&nbsp;いくつかのサンプルビデオ</li>
+      <li>Video Cloud アカウント- &nbsp;<a href="https://register.brightcove.com">こちらで</a>トライアル アカウントにサインアップできます。</li>
+      <li>使用できるテスト動画が必要で。テスト動画を<a href="/assets/downloads/Video-Cloud-Quick-Start-Videos.zip">ダウンロード</a>することもできます。</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">注:このトピックの手順とスクリーンショットでは、提供されているサンプルビデオを使用します。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: このトピックの手順とスクリーンショットは、提供されているサンプルビデオを使用しています。</aside>
   </section>
   <section class="bcls-section">
-    <h2>アウトライン</h2>
-    <p>このトピックでは、単一のビデオとプレイリストの両方について、基本的な動画公開プロセスを説明します。次のトピックについて説明します。</p>
+    <h2>概要</h2>
+    <p>このトピックでは、単一の動画とプレイリストの両方について、基本的な動画公開プロセスについて説明します。次のトピックについて説明します。</p>
     <ul>
-      <li><a href="#upload">動画をアップロードする</a></li>
-      <li><a href="#properties">ビデオプロパティの編集</a></li>
-      <li><a href="#players">プレイヤーの作成とスタイル設定</a></li>
-      <li><a href="#publish">ビデオを Web に公開する</a></li>
-      <li><a href="#playlist">プレイリストを作成する</a></li>
+      <li><a href="#upload">動画のアップロード</a></li>
+      <li><a href="#properties">ビデオ プロパティの編集</a></li>
+      <li><a href="#players">プレーヤーの作成とスタイル設定</a></li>
+      <li><a href="#publish">動画を Web に公開</a></li>
+      <li><a href="#playlist">プレイリストの作成</a></li>
       <li><a href="#publish_playlist">プレイリストの公開</a></li>
     </ul>
-    <p>このクイックスタートでは、Video Cloud Analytics モジュールは対象外です。ビデオクラウド分析の詳細については、&nbsp;<a href="../training/training-demand-introduction-video-cloud-analytics.html"></a>&nbsp;ビデオクラウド分析入門オンデマンドトレーニングコースをご覧ください。</p>
+    <p>Video Cloud Analytics モジュールは、このクイックスタートの一環としてカバーされません。Video Cloud Analytics の詳細については、&nbsp;<a href="../training/training-demand-introduction-video-cloud-analytics.html">Video Cloud Analytics 入門</a>&nbsp;オンデマンド トレーニング コースをご覧ください。</p>
   </section>
   <section class="bcls-section">
     <h2 id="upload">Video Cloud に動画をアップロードする</h2>
-    <p>先に進む前に、<a href="/assets/downloads/Video-Cloud-Quick-Start-Videos.zip"></a>サンプルビデオを使用またはダウンロードできるサンプル動画をいくつか用意しておく必要があります。</p>
+    <p>先に進む前に、使用できるテスト動画をいくつか用意しておくか、テスト動画を<a href="/assets/downloads/Video-Cloud-Quick-Start-Videos.zip">ダウンロード</a>しておきましょう。</p>
     <h3>Video Cloud アカウントにログインする</h3>
     <ol class="bcls-tasklist-restart">
-      <li>ブラウザウィンドウで<a href="https://studio.brightcove.com"> https://studio.brightcove.com に移動します</a>。</li>
-      <li>資格情報を入力し、[ <strong>サインイン] をクリックします</strong>。</li>
+      <li>ブラウザ ウィンドウで<a href="https://studio.brightcove.com"> https://studio.brightcove.com </a>に移動します。</li>
+      <li>認証情報を入力し、[<strong>サインイン</strong>] をクリックします。</li>
     </ol>
     <h3>ローカル動画を Video Cloud にアップロードする</h3>
     <ol class="bcls-tasklist-restart">
-      <li>[<strong>Upload</strong>]をクリックして、Uploadモジュールを開きます。
+      <li>[<strong>アップロード</strong>]をクリックして、Uploadモジュールを開きます。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-upload-menu.png" /></figure>
       </li>
-      <li>アップロードモジュールで、取り込みプロファイルを選択します。</li>
-      <li>[ 動画の参照] をクリックし、提供された動画またはすべてのサンプル動画を参照して選択します。</li>
-      <li>このページには、すべての動画とアップロードの進行状況が表示されます。
+      <li>Upload モジュールで、トランスコード プロファイルを選択します。</li>
+      <li>[ 動画を参照する] をクリックし、ご用意頂いた動画またはすべてのテスト動画を参照して選択します。</li>
+      <li>ページには、すべての動画とアップロードの進行状況が表示されます。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-upload-progress.png" /></figure>
-        <p><strong>アップロードが処理状態にある間は、ブラウザウィンドウを閉じたり、ブラウザウィンドウから離したりしないでください。</strong>そうすると、アップロードが不完全になる可能性があります。</p>
+        <p><strong>アップロードの処理中は、ブラウザ ウィンドウを閉じたり、ブラウザ ウィンドウから離れたりしないでください</strong>。アップロードが失敗する可能性があります。</p>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-video-processing.png" /></figure>
-        <p>アップロードが完了すると、「<strong>処理完了</strong>」ステータスが表示されます。これは、処理が完了し、アップロードモジュールから安全に移動できることを示します。</p>
+        <p>アップロードが完了すると、「<strong>処理完了</strong>」ステータスが表示されます。これは、処理が完了し、Upload モジュールから安全に移動できることを示します。</p>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-video-processing-complete.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">注:クリックすることが可能です<strong>編集</strong>ファイル名の横にあるボタンをクリックして、ビデオメタデータの一部を編集します。ビデオメタデータの追加については、次のクイックスタートトピックで説明します。</aside>
+        <aside class="bcls-aside bcls-aside--information">注: ファイルの横にある<strong>編集</strong>ボタンをクリックすると、動画のメターデータの一部を編集できます。ビデオ メタデータの追加については、次のクイック スタート トピックで説明します。</aside>
       </li>
     </ol>
-    <h3>Video Cloudにリモート動画をアップロードする</h3>
+    <h3>Video Cloud にリモート動画をアップロードする</h3>
     <ol class="bcls-tasklist-restart">
       <li><span class="BCL_uiCommand">Upload</span> モジュールで、[<strong>URLを入力する</strong>]をクリックします。</li>
-      <li>AmazonS3アカウントでホストされているファイルへの次のURLを入力します。<br />
+      <li>Amazon S3 アカウントでホストされているファイルへの次のURLを入力します。<br />
         <code translate="No">http://learning-services-media.brightcove.com/vc-quick-start/oystercatcher.mp4</code></li>
-      <li>[ ビデオの処理] をクリックして、アップロードを開始します。</li>
+      <li>[<strong>キューに追加</strong>] をクリックして、アップロードを開始します。</li>
     </ol>
-    <h3>（オプション）モバイルデバイスを使用して動画をアップロードする</h3>
+    <h3>（オプション）モバイル デバイスを使用して動画をアップロードする</h3>
     <ol class="bcls-tasklist-restart">
-      <li>モバイルデバイスを使用して、<a href="https://studio.brightcove.com"> https://studio.brightcove.com で Video Cloud Studio を開きます</a>。</li>
-      <li>アップロードモジュールを開きます。</li>
-      <li>取り込みプロファイルを選択します。</li>
-      <li>[ <strong>ビデオの参照] をクリックします</strong>。デバイスのカメラロールアプリケーションが開きます。</li>
+      <li>モバイル デバイスを使用して、<a href="https://studio.brightcove.com"> https://studio.brightcove.com </a>にアクセスし、Video Cloud Studio を開きます。</li>
+      <li>Upload モジュールを開きます。</li>
+      <li>トランスコード プロファイルを選択します。</li>
+      <li>[<strong>ビデオの参照</strong>] をクリックします。デバイスのカメラ ロール アプリケーションが開きます。</li>
       <li>アップロードする動画を選択します。アップロードが開始され、アップロードの進行状況が表示されます。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-iphone-upload-progress.png" /></figure>
       </li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="properties">ビデオプロパティの編集</h2>
+    <h2 id="properties">ビデオ プロパティの編集</h2>
     <p>このタスクでは、ビデオのプロパティを編集します。</p>
     <ol class="bcls-tasklist-restart">
-      <li>Video Cloud Studio で、[ <strong>メディア</strong> ] をクリックして [メディア] モジュールを開きます。</li>
-      <li><strong>Brown Pelican</strong>ビデオのタイトルをクリックし、[ <strong>ビデオ情報]</strong>セクションを見つけて、[ <strong>編集] をクリックします</strong>。[ <strong>短い説明]</strong>をに設定します<code translate="No">Pelican on the rocks</code>。</li>
-      <li>のタグを追加します<code translate="No">birds</code>。
+      <li>Video Cloud Studio で、[<strong>メディア</strong>] をクリックして Media モジュールを開きます。</li>
+      <li><strong>Brown Pelican</strong> のビデオのタイトルをクリックし、[<strong>動画情報</strong>]セクションを見つけて、[<strong>編集</strong>] をクリックします。[<strong>短い説明</strong>] に <code translate="No">Pelican on the rocks</code> と設定します。</li>
+      <li><code translate="No">birds</code> のタグを追加します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-pelican-properties.png" /></figure>
       </li>
-      <li>[ ビデオに戻る] をクリックして、ビデオのリストに戻ります。</li>
-      <li><strong>http://learning-services-media.brightcove.com/vc-quick-start/oystercatcher.mp4</strong>ビデオのタイトルをクリックし、[ <strong>ビデオ情報]</strong>セクションを見つけて、[ <strong>編集] をクリックします。</strong>。次のプロパティを設定します。
+      <li>保存をクリックします</li>
+      <li>[<strong>動画一覧に戻る</strong>] をクリックして、ビデオのリスト一覧に戻ります。</li>
+      <li><strong>http://learning-services-media.brightcove.com/vc-quick-start/oystercatcher.mp4</strong> のビデオのタイトルをクリックし、[<strong>ビデオ情報</strong>] セクションを見つけて、[<strong>編集</strong>] をクリックし、次のプロパティを設定します。
         <ul>
-          <li><strong>名前:</strong><code translate="No">Oystercatcher</code></li>
-          <li><strong>短い説明:</strong><code translate="No">Oystercatcher on the beach</code></li>
-          <li><strong>タグ:</strong><code translate="No">birds</code></li>
+          <li><strong>名前: </strong><code translate="No">Oystercatcher</code></li>
+          <li><strong>短い説明: </strong><code translate="No">Oystercatcher on the beach</code></li>
+          <li><strong>タグ: </strong><code translate="No">birds</code></li>
         </ul>
-        <p>クリック<strong>保存する</strong>完了したら、をクリックします<strong>ビデオに戻る</strong>ビデオのリストに戻ります。</p>
+        <p>完了したら [<strong>保存する</strong>] をクリックし、<strong>動画一覧に戻る</strong> をクリックしてビデオの一覧に戻ります。</p>
       </li>
-      <li>チカディーとウッドペッカーの両方のビデオを編集してください。動画にタグを付けます<code translate="No">birds</code>。</li>
-      <li>（オプション）動物動画の一部を編集し、動画にタグを付けます<code translate="No">animals</code>。</li>
+      <li><strong>Chickadee</strong> と <strong>Woodpecker</strong> の両方のビデオを編集してください。動画に <code translate="No">birds</code> のタグを付けます。</li>
+      <li>（オプション）いくつかの動物のビデオを編集し、動画に <code translate="No">animals</code> のタグを付けます。</li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="players">プレイヤーの作成とスタイリング</h2>
-    <p>このタスクでは、プレイヤーを作成し、スタイルを設定します。</p>
+    <h2 id="players">プレーヤーの作成とスタイリング</h2>
+    <p>このタスクでは、プレーヤーを作成し、スタイルを設定します。</p>
     <h3>新しいプレーヤーを作成する</h3>
     <ol class="bcls-tasklist-restart">
-      <li>Video Cloud Studio で、[ <strong>プレーヤー</strong> ] をクリックして [プレーヤー] モジュールを開きます。</li>
-      <li>[ <strong>新しいプレーヤー] をクリックします</strong>。</li>
-      <li><code translate="No">Custom Player</code>名前を入力し、[ <strong>保存] をクリックします</strong>。</li>
+      <li>Video Cloud Studio で、[<strong>プレーヤー</strong>] をクリックして Player モジュールを開きます。</li>
+      <li>[<strong>プレーヤーの追加</strong>] をクリックします。</li>
+      <li><code translate="No">Custom Player</code>と名前を入力し、[<strong>保存</strong>] をクリックします。</li>
     </ol>
     <h3>プレーヤーのスタイリング</h3>
     <ol class="bcls-tasklist-restart">
-      <li>[ <strong>カスタムプレーヤー]</strong>リンクをクリックして、プレーヤーのプロパティを開きます。</li>
-      <li><strong>プレイヤータイプがシングルビデオであることを確認します</strong>。</li>
-      <li>左側のナビゲーションメニューで [ <strong>スタイリング</strong> ] をクリックします。</li>
-      <li>[ <strong>タイトルと説明を表示] をオンにします</strong>。</li>
-      <li>[ <strong>再生ボタンの形状]</strong>と [ <strong>再生ボタンの位置] を選択します</strong>。</li>
-      <li><strong>Play Button</strong>カラーセレクターをクリックし、色を赤の色に設定します。
+      <li><strong>Custom Player</strong> リンクをクリックして、プレーヤーのプロパティを開きます。</li>
+      <li><strong>プレーヤータイプ</strong> が <strong>単一動画</strong>であることを確認します。</li>
+      <li>左側のナビゲーションメニューで [<strong>スタイリング設定</strong>] をクリックします。</li>
+      <li>[<strong>タイトルおよび説明を表示</strong>] をオンにします。</li>
+      <li>[<strong>再生ボタンの形</strong>] と [<strong>再生ボタンの位置</strong>] を選択します。</li>
+      <li><strong>再生ボタン</strong> カラー セレクターをクリックし、色を赤の色に設定します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-select-color.png" /></figure>
       </li>
-      <li>色の変化がプレビュープレーヤーに反映されていることを確認します。</li>
-      <li>[ <strong>パブリッシュと埋め込み] &gt; [</strong>変更の公開] をクリックして、変更を公開します。</li>
+      <li>プレビュープレーヤーに色の変更が反映されていることを確認します。</li>
+      <li>[<strong>公開</strong>] をクリックして、変更を公開します。</li>
     </ol>
   </section>
   <section class="bcls-section">
     <h2 id="publish">動画を Web に公開する</h2>
-    <p>このタスクでは、ビデオを Web に公開します。</p>
+    <p>このタスクでは、動画を Web に公開します。</p>
     <div class="BCL-taskSubsection">
       <h3>1 つの動画を公開する</h3>
       <ol class="bcls-tasklist-restart">
-        <li>Video Cloud Studio で、[ <strong>メディア</strong> ] をクリックして [メディア] モジュールを開きます。</li>
-        <li><strong>Brown Pelican</strong>ビデオの横にあるチェックボックスをクリックし、[ <strong>公開と埋め込み] &gt; [Web に公開] の順にクリックします</strong>。<aside class="bcls-aside bcls-aside--information">注:その他の公開オプションについては、対応するドキュメントを参照してください。
+        <li>Video Cloud Studio で、[ <strong>メディア</strong> ] をクリックして Media モジュールを開きます。</li>
+        <li><strong>Brown Pelican</strong>ビデオの横にあるチェック ボックスをクリックし、[<strong>公開と埋め込み]</strong>をクリックし [<strong>Web プレーヤー</strong>] を選択します。<aside class="bcls-aside bcls-aside--information">注: その他の公開オプションについては、対応するドキュメントを参照してください。
             <ul>
-              <li><strong>Eメールランディングページ</strong> - <a href="/publish/publishing-video-email.html">ビデオを電子メールに公開する</a></li>
-              <li><strong>ソーシャルネットワーク</strong> - <a href="https://social.support.brightcove.com/general/publishing-videos-social-media-platforms.html">ソーシャルメディアプラットフォームへのビデオの公開</a></li>
-              <li><strong>ギャラリーのページ内エクスペリエンス</strong> - <a href="/publish/publishing-videos-page-experience.html">ページはめ込みエクスペリエンスへの動画の公開</a></li>
+              <li><strong>Eメール ランディングページ</strong> - <a href="/publish/publishing-video-email.html">ビデオを電子メールに公開する</a></li>
+              <li><strong>ソーシャルに公開</strong> - <a href="https://social.support.brightcove.com/general/publishing-videos-social-media-platforms.html">ソーシャル メディア プラットフォームへのビデオの公開</a></li>
+              <li><strong>Gallery のページ内エクスペリエンス</strong> - <a href="/publish/publishing-videos-page-experience.html">ページ内埋め込みエクスペリエンスへの動画の公開</a></li>
             </ul>
           </aside>
         </li>
-        <li>[公開]ダイアログが開くことを確認します。
+        <li>[<strong>公開</strong>] ダイアログが開くことを確認します。
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-publishing-dialog.png" /></figure>
         </li>
-        <li><strong>[プレーヤーを選択]</strong>ドロップダウンリストで、[ <strong>カスタムプレーヤー] を選択します</strong>。このプレーヤーは前のセクションで作成されました。<aside class="bcls-aside bcls-aside--information">注:<strong>Brightcove</strong>のデフォルトプレーヤーは、すべての Video Cloud アカウントにデフォルトで作成されます。</aside>
+        <li>[<strong>プレーヤーを選択</strong>] ドロップダウンリストで、[<strong>Custom Player]</strong> を選択します。このプレーヤーは前のセクションで作成したものです。<aside class="bcls-aside bcls-aside--information">注: <strong>Brightcove</strong> のデフォルト プレーヤーは、すべての Video Cloud アカウントにデフォルトで作成されます。</aside>
         </li>
-        <li>クリック<strong>URL</strong>プレビュープレーヤーの下で、新しいブラウザタブで開きます。ビデオが表示され、再生できることを確認します。<aside class="bcls-aside bcls-aside--information">注:<strong>短縮 URL</strong>を生成するには、[短縮] をクリックします。</aside>
+        <li>プレビュープレーヤーの下の <strong>URL</strong> をクリックして、新しいブラウザタブで開きます。ビデオが表示され、再生できることを確認して下さい。<aside class="bcls-aside bcls-aside--information">注: 短縮 URLを生成するには、<strong>短縮</strong> をクリックします。</aside>
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-published-video.png" /></figure>
         </li>
-        <li>（オプション）URLをモバイルデバイスに電子メールで送信します。リンクをクリックして、ビデオがモバイルデバイスで再生されることを確認します。
+        <li>（オプション）URLをモバイル デバイスに電子メールで送信します。リンクをクリックして、ビデオがモバイル デバイスで再生されることを確認します。
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-iphone-video.png" /></figure>
         </li>
       </ol>
@@ -1331,75 +1332,78 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="playlist">プレイリストを作成する</h2>
-    <p>このタスクでは、手動およびスマートプレイリストを作成します。</p>
+    <p>このタスクでは、手動およびスマート プレイリストを作成します。</p>
     <h3>手動プレイリストを作成する</h3>
     <ol class="bcls-tasklist-restart">
-      <li>Video Cloud Studio で、[ <strong>メディア</strong> ] をクリックして [メディア] モジュールを開きます。</li>
-      <li>サイド・ナビゲーション・パネルで、「<strong>プレイリストを作成」</strong>リンクをクリックします。[新しいプレイリスト] ダイアログが開きます。</li>
-      <li>プレイリストの種類を [ <strong>手動] に設定します</strong>。</li>
-      <li>プレイリスト名をに設定します<code translate="No">Favorites</code>。</li>
-      <li>サイドバーにプレイリストを表示するには、[<strong>サイドバーにプレイリストを表示</strong>]を選択します。
+      <li>Video Cloud Studio で、[<strong>メディア</strong>] をクリックして Media モジュールを開きます。</li>
+      <li>サイド ナビゲーション パネルで、[<strong>新規プレイリスト</strong>] リンクをクリックします。新規プレイリスト ダイアログが開きます。</li>
+      <li>プレイリストの種類を [<strong>手動</strong>] に設定します。</li>
+      <li>プレイリスト名を <code translate="No">Favorites</code> に設定します。</li>
+      <li>サイドバーにプレイリストを表示するには、[<strong>サイドバーにプレイリストを表示</strong>] を選択します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-manual-playlist.png" /></figure>
       </li>
-      <li>[<strong>保存</strong>]をクリックします。</li>
+      <li>[<strong>保存</strong>] をクリックします。</li>
     </ol>
-    <h3>マニュアルプレイリストに動画を追加する</h3>
+    <h3>手動プレイリストに動画を追加する</h3>
     <ol class="bcls-tasklist-restart">
-      <li>クリック<strong>すべてのビデオ</strong>アカウント内のすべてのビデオを表示するには、サイドナビゲーションパネルで。</li>
-      <li>再生リストに追加する動画の横にあるチェックボックスをクリックします。</li>
-      <li>[ <strong>その他] &gt; [プレイリストに追加] をクリックします</strong>。</li>
-      <li>[ <strong>お気に入り]</strong>プレイリストを選択し、[ <strong>追加] をクリックします</strong>。
+      <li>サイド ナビゲーション パネルの <strong>すべての動画</strong> をクリックすると、アカウント内のすべてのビデオを表示されます。</li>
+      <li>プレイリストに追加したい動画の横にあるチェックボックスをクリックします。</li>
+      <li>[<strong>詳細</strong>] をクリックし、[<strong>プレイリストに追加</strong>] を選択します。</li>
+      <li>[<strong>Favorites</strong>]プレイリストを選択し、[<strong>追加</strong>] をクリックします。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-select-playlist.png" /></figure>
       </li>
-      <li>サイド・ナビゲーション・パネルの「<strong>お気に入り」</strong>プレイリストをクリックし、動画がプレイリストに追加されたことを確認します。
+      <li>サイド ナビゲーション パネルで [<strong>Favorites</strong>] リンクをクリックします。動画がプレイリストに追加されたことを確認します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-favorites-playlist.png" /></figure>
       </li>
       <li>動画の順序を並べ替えるには、行をクリックし、リストの新しい位置までドラッグします。</li>
     </ol>
-    <h3>スマートプレイリストを作成する</h3>
+    <h3>スマート プレイリストを作成する</h3>
     <ol class="bcls-tasklist-restart">
-      <li>サイド・ナビゲーション・パネルで、「<strong>プレイリストを作成」</strong>リンクをクリックします。</li>
-      <li>プレイリストの種類を [ <strong>スマート] に設定します</strong>。</li>
-      <li>プレイリスト名をに設定します<code translate="No">Birds</code>。</li>
+      <li>サイド ナビゲーション パネルで、[<strong>新規プレイリスト</strong>] リンクをクリックします。</li>
+      <li>プレイリストの種類を [<strong>スマート プレイリスト</strong>] に設定します。</li>
+      <li>プレイリスト名を <code translate="No">Birds</code> にします。</li>
       <li>サイドバーにプレイリストを表示をオンにして、プレイリストをサイドバーに表示します。</li>
-      <li>をセットする<strong>タグ</strong>フィールドに<strong>1つ以上が含まれています</strong>と入力します<code translate="No">birds</code>タグ用。
+      <li><strong>パラメーター</strong>を<strong>タグ</strong>に設定します。</li>
+      <li>演算子を<strong>いずれかに一致</strong>に設定します。</li>
+      <li><strong>タグ</strong> に <code translate="No">birds</code> と入力し、エンターキーを押します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-smart-playlist.png" /></figure>
       </li>
-      <li>[<strong>保存</strong>]をクリックします。</li>
-      <li>クリック<strong>鳥</strong>サイドナビゲーションパネルでプレイリストを表示し、鳥の動画がプレイリストに追加されていることを確認します。</li>
+      <li>[<strong>適用</strong>] をクリックします。</li>
+      <li>[<strong>概要</strong>] タブをクリックします。</li>
+      <li>サイド ナビゲーション パネルの <strong>Birds</strong> プレイリストをクリックし、鳥の動画がプレイリストに追加されていることを確認します。</li>
     </ol>
   </section>
   <section class="bcls-section">
     <h2 id="publish_playlist">プレイリストの公開</h2>
     <p>このタスクでは、新しいプレーヤーを作成し、プレイリストをサポートするようにプレーヤーの設定を編集し、プレイリストを公開します。</p>
     <h3>プレイリストをサポートするようプレーヤーの設定を編集する</h3>
-    <aside class="bcls-aside bcls-aside--information">注:レスポンシブサイズ設定オプションを選択すると、標準 (iframe) コードがうまく機能し、プレイヤーとプレイリストの両方が応答します。詳細設定（ページ内埋め込み）コードを使用すると、プレーヤーは応答しますが、プレイリストは応答しません。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: レスポンシブ サイズ設定オプションを選択すると、標準 (iframe) コードがうまく機能し、プレーヤーとプレイリストの両方がレスポンシブになります。詳細設定（ページ内埋め込み）コードを使用すると、プレーヤーはレスポンシブですが、プレイリストはレスポンシブではありません。</aside>
     <ol class="bcls-tasklist-restart">
-      <li>Video Cloud Studioにログインし、[<strong>Players</strong>]をクリックして、Playersモジュールを開きます。</li>
-      <li>[ <strong>新しいプレーヤー] をクリックします</strong>。プレイヤーの名前を付け<code translate="No">Playlist Player</code>、[ <strong>保存] をクリックします</strong>。</li>
-      <li>プレイリストプレーヤーを見つけて、プレイヤー名をクリックしてプレーヤーのプロパティを開きます。</li>
-      <li>を選択<strong>プレイヤータイプ</strong>の<strong>プレイリスト</strong>。</li>
-      <li>アスペクト比を<strong> 16:9 に設定します</strong>。</li>
-      <li>プレーヤーの寸法を [ <strong>幅]</strong>に設定します<code translate="No">640</code>。</li>
-      <li>[ <strong>保存] をクリックします</strong>。</li>
-      <li>左側のナビゲーションメニューで [ <strong>スタイリング</strong> ] をクリックします。</li>
-      <li>[ <strong>プレイリストタイプ]</strong>の [ <strong>プレイリスト (垂直)] をクリックします</strong>。</li>
-      <li>左側のナビゲーションメニューで [ <strong>再生</strong> ] をクリックします。</li>
-      <li>[ <strong>選択したときにビデオを再生する] をオンにします</strong>。</li>
-      <li>連続再生モードをチェックします。</li>
-      <li><strong>パブリッシュと埋め込み &gt;</strong>変更を公開をクリックして、変更をプレイヤーに公開します。</li>
+      <li>Video Cloud Studio にログインし、[<strong>プレーヤー</strong>]をクリックして、Players モジュールを開きます。</li>
+      <li>[<strong>プレーヤーの追加</strong>]をクリックします。プレーヤーに <code translate="No">Playlist Player</code> と名前を付け、[<strong>保存</strong>] をクリックします。</li>
+      <li>Playlist Player を見つけて、プレーヤー名をクリックしてプレーヤーのプロパティを開きます。</li>
+      <li><strong>プレーヤーの種類</strong> で <strong>プレイリスト</strong> を選択します。</li>
+      <li><strong>アスペクト比</strong> を <strong>16:9</strong> に設定します。</li>
+      <li><strong>プレーヤーの寸法</strong> を <strong>幅</strong> <code translate="No">640</code> に設定します。</li>
+      <li>[<strong>保存</strong>] をクリックします。</li>
+      <li>左側のナビゲーション メニューで [<strong>スタイル設定</strong>] をクリックします。</li>
+      <li>[<strong>プレイリストのタイプ</strong>] の [<strong>プレイリスト (縦)</strong>] をクリックします。</li>
+      <li>左側のナビゲーションメニューから [<strong>再生</strong>] をクリックします。</li>
+      <li>[<strong>選択時に動画を再生</strong>] にチェックを入れます。</li>
+      <li>[<strong>連続再生モード</strong>] を チェックします。</li>
+      <li>[<strong>公開</strong>] をクリックして、変更をプレーヤーに公開します。</li>
     </ol>
     <h3>プレイリストの公開</h3>
     <ol class="bcls-tasklist-restart">
-      <li>[ <strong>メディア</strong> ] をクリックして、メディアモジュールを開きます。</li>
-      <li>クリック<strong>すべてのプレイリスト</strong>サイドナビゲーションパネルで、すべてのプレイリストを表示します。</li>
-      <li><strong>Birds</strong>プレイリストの横にあるチェックボックスをクリックします。</li>
-      <li>[ <strong>パブリッシュと埋め込み] &gt; [Web にパブリッシュ] をクリックします</strong>。</li>
-      <li><strong>プレイリストプレーヤーを選択します</strong>。</li>
-      <li><strong>URL</strong>リンクをクリックします。プレーヤーは新しいブラウザタブで開きます。プレイリストプレーヤーが表示され、プレイリスト内のビデオを再生できることを確認します。
+      <li>[<strong>メディア</strong>] をクリックして、Media モジュールを開きます。</li>
+      <li>すべてのプレイリストを表示するには、サイド ナビゲーション パネルの [<strong>すべてのプレイリスト</strong>] をクリックします。</li>
+      <li><strong>Birds</strong> プレイリストの横にあるチェックボックスをクリックします。</li>
+      <li>[<strong>公開と埋め込み]</strong> &gt; [<strong>web プレーヤー</strong>] をクリックします。</li>
+      <li><strong>Playlist Player</strong>を選択します。</li>
+      <li><strong>URL</strong> リンクをクリックします。新しいブラウザのタブでプレーヤーが開きます。プレイリスト プレーヤーが表示され、プレイリスト内の動画が再生できることを確認します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-published-playlist.png" /></figure>
       </li>
-      <li>モバイルデバイスに電子メールでプレーヤーURLを送信します（オプション）。リンクをクリックして、プレイリストプレーヤーが表示され、プレイリスト内のビデオを再生できることを確認します。
+      <li>(オプション) プレーヤーの URL をモバイル デバイスに電子メールで送信します。リンクをクリックし、プレイリスト プレーヤーが表示され、プレイリスト内の動画が再生できることを確認します。
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-playlist-iphone.png" /></figure>
       </li>
     </ol>
