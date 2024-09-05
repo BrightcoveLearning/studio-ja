@@ -1190,7 +1190,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <h1>HubSpotのカスタムリードフォームの作成</h1>
   <summary>このトピックでは、HubSpotフォームを使用してBrightcoveプレーヤー内でリードデータをキャプチャする方法を学習します。</summary>
   <section class="bcls-section">
-    <p>Campaign モジュールは、カスタム リード フォームを作成する機能を提供し、動画が Brightcove プレーヤー内で再生される際に視聴者の情報を取得できます。リード データは HubSpot に送信され、HubSpot で処理されます。</p>
+    <p>Campaign モジュールは、カスタム リード フォームを作成する機能を提供し、動画が Brightcove プレーヤー内で再生される際に視聴者の情報を取得することができます。リード データは HubSpot に送信され、HubSpot で処理されます。</p>
     <p>カスタム リード フォームを作成するには、次の手順を実行する必要があります。</p>
     <ol>
       <li><a href="#form">HubSpot でフォームを作成する</a></li>
@@ -1205,26 +1205,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="form">HubSpot でフォームを作成する</h2>
     <p>HubSpot フォームを使用して、Web サイトの訪問者からリード情報を生成できます。これらのフォームは、Brightcoveプレーヤーの内部に表示することもできます。以下の手順では、視聴者の情報を取得する簡単なフォームを作成します。HubSpot フォームの詳細については、<a href="https://knowledge.hubspot.com/landing-page-user-guide-v2/how-to-create-a-form-for-your-landing-page"> HubSpot のドキュメント</a>を参照してください。</p>
     <ol class="bcls-tasklist-restart">
-      <li>HubSpot アカウントにログインします。</li>
-      <li><strong>マーケティング &gt; フォーム</strong>をクリックします。クラシックメニューを使用している場合は、<strong>連絡先 &gt; フォーム</strong> をクリックします。</li>
-      <li><strong>フォームを作成</strong> をクリックします。</li>
-      <li><strong>埋め込みフォーム</strong>をクリックし、<strong>次へ</strong>をクリックします。デフォルトでは、フォームには<strong>Eメール</strong>フィールドと<strong>送信</strong>ボタンが含まれます。</li>
-      <li><strong>空白のテンプレート</strong>が選択されていることを確認します。<strong>開始</strong>をクリックします。</li>
-      <li>ヘッダーのデフォルト名をクリックし、フォームに名前を付けます。<strong>Enter</strong>キーを押して、変更を保存します。 </li>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node16772-name-form.png" /></figure>
+      <li>HubSpotアカウントにログインします。</li>
+      <li><strong>Marketing &gt; Forms</strong> をクリックします。 クラシックメニューを使用している場合は、<strong>Contacts</strong> &gt; <strong>Forms</strong> をクリックします。</li>
+      <li><strong>Create form</strong> をクリックします。</li>
+      <li><strong>Embedded form</strong> をクリックし、<strong>Next</strong> をクリックします。デフォルトでは、フォームには <strong>Email</strong> フィールドと <strong>Submit</strong> ボタンが含まれます。</li>
+      <li><strong>Blank template</strong> が選択されていることを確認します。<strong>Start</strong>をクリックします。</li>
+      <li>ヘッダーのデフォルト名をクリックし、フォームに名前を付けます。<strong>Enter</strong> キーを押して変更を保存します。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/hubspot/node16772-name-form.png" /></figure>
       </li>
-      <li>ページの左側には、フォームに追加できるフィールドのリストが含まれています。フォームに追加したい<strong>姓</strong>と<strong>名</strong>のフィールドをページの右側にドラッグ&ドロップします。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node16772-drag-field.png" /></figure>
+      <li>ページの左側には、フォームに追加できるフィールドのリストがあります。フォームに追加したい <strong>First name</strong> と <strong>Last name</strong> のフィールドをページの右側にドラッグ＆ドロップします。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/hubspot/node16772-drag-field.png" /></figure>
       </li>
-      <li>フィールドを必須にするには、そのフィールドにカーソルを合わせ、<strong>その他 &gt; 必須にする</strong> をクリックします。必須フィールドには、フィールドラベルの横に「*」が表示されます。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node16772-req-field.png" /></figure>
+      <li>フィールドを必須フィールドにするには、そのフィールドにカーソルを合わせ、<strong>More &gt; Make required</strong> をクリックします。 必須フィールドには、フィールド ラベルの横に「*」が表示されます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/hubspot/node16772-req-field.png" /></figure>
       </li>
-      <li>ページの上部にある <strong>オプション</strong>リンクをクリックします。</li>
-      <li><strong>訪問者がこのフォームを送信した後の動作</strong>については、<strong>ありがとうメッセージを表示する</strong>をクリックして下さい。デフォルトのメッセージは表示されないので、そのままにしておきます。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/hubspot/node16772-submit-form-options.png" /></figure>
+      <li>ページ上部の <strong>Options</strong> リンクをクリックします。</li>
+      <li><strong>What should happen after a visitor submits this form</strong> (訪問者がこのフォームを送信した後の動作) については、<strong>Display a thank you message</strong> (サンキューメッセージを表示する)をクリックしてください。 デフォルトのメッセージは表示されないので、そのままにしておきます。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/hubspot/node16772-submit-form-options.png" /></figure>
       </li>
-      <li>ページの上部の <strong>スタイルとプレビュー</strong>リンクをクリックします。デフォルトでは、デスクトップのプレビューが表示されます。</li>
-      <li>ページ上部の<strong>公開</strong>をクリックし、フォームへの変更を公開します。</li>
+      <li>ページ上部の <strong>Style &amp; preview</strong> リンクをクリックします。 デフォルトでは、<strong>Desktop</strong> のプレビューが表示されます。</li>
+      <aside class="bcls-aside bcls-aside--warning">Safari は <strong>Style & Preview</strong> タブを使用したフォームをサポートしません。Brightcoveは、<strong>Set as raw HTML form</strong> オプションをオンにすることをお勧めします。</aside>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/hubspot/safari-hubspot.png" style="width: 875px;" /></figure>
+      <li>ページ上部の <strong>Publish </strong>をクリックし、フォームの変更を公開します。</li>
     </ol>
   </section>
   <section class="bcls-section">
