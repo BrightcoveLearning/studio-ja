@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、Twitter プレーヤーカードを使ってツイートに動画を埋め込む方法について説明します。">
+  <meta name="description" content="このトピックでは、X プレーヤーカードを使ってツイートに動画を埋め込む方法について説明します。">
   
-  <title>Twitter プレーヤーカードへの動画共有</title>
+  <title>X (旧Twitter) プレーヤーカードへの動画共有</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -1187,41 +1187,41 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-      <h1>Twitter プレーヤーカードへの動画共有</h1>
-  <summary>このトピックでは、Twitter プレーヤーカードを使ってツイートに動画を埋め込む方法について説明します。</summary>
+      <h1>X (旧Twitter) プレーヤーカードへの動画共有</h1>
+  <summary>このトピックでは、X プレーヤーカードを使ってツイートに動画を埋め込む方法について説明します。</summary>
   <section class="bcls-section">
-    <p>デフォルトでは、視聴者が Brightcove Player のソーシャル共有機能を使用して動画をツイートすると、動画を含むページの URL が視聴者の Twitter フィードに表示されます。</p>
+    <p>デフォルトでは、視聴者が Brightcove Player のソーシャル共有機能を使用して動画をツイートすると、動画を含むページの URL が視聴者の X フィードに表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node15772-tweet-link.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">注: Brightcove Player のソーシャル共有設定の詳細については、<a href="/players/appearance/configuring-social-properties-player.html">プレーヤーのソーシャル プロパティを設定する</a>を参照して下さい。</aside>
-    <p>Twitterは、Twitterカードでコンテンツを表示するオプションを提供しており、ウェブサイトにトラフィックを誘導するツイートに写真や動画を添付することができます。Twitterカードを使用すると、Twitterフィードに埋め込みプレーヤーが表示されます。</p>
+    <p>Xは、Xカードでコンテンツを表示するオプションを提供しており、ウェブサイトにトラフィックを誘導するツイートに写真や動画を添付することができます。Xカードを使用すると、Xフィードに埋め込みプレーヤーが表示されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node15772-tweet-link-media.png" /></figure>
-    <p>動画のサムネイルをクリックすると、Twitter フィード内の Brightcove Player を使用して動画が再生されます。</p>
+    <p>動画のサムネイルをクリックすると、X フィード内の Brightcove Player を使用して動画が再生されます。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node15772-twitter-card.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="addvideo">Twitter プレーヤー カードの設定</h2>
-    <p>Twitterプレーヤー カードを実装するには、以下の手順を完了する必要があります:</p>
+    <h2 id="addvideo">X プレーヤー カードの設定</h2>
+    <p>Xプレーヤー カードを実装するには、以下の手順を完了する必要があります:</p>
     <ol class="bcls-tasklist">
       <li><a href="#create">(オプション）動画をホストするページを作成する。</a></li>
-      <li><a href="#metatags">必要なTwitterのメタタグをページに追加する。</a></li>
-      <li><a href="#validate">Twitterのバリデータツールを使ってURLを検証する。</a></li>
+      <li><a href="#metatags">必要なXのメタタグをページに追加する。</a></li>
+      <li><a href="#validate">Xのバリデータツールを使ってURLを検証する。</a></li>
       <li><a href="#approve">ホワイトリストの承認をリクエストする。</a></li>
     </ol>
-    <p>これらの手順が完了すると、プレーヤーへのURLをツイートすることができ、詳細表示のツイートの下に Twitterカードが表示されます。</p>
-    <aside class="bcls-aside bcls-aside--information">注: Twitterカードの詳細については、<a href="https://dev.twitter.com/cards/overview">Twitter ドキュメント</a>をご覧下さい。</aside>
+    <p>これらの手順が完了すると、プレーヤーへのURLをツイートすることができ、詳細表示のツイートの下に Xカードが表示されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注: Xカードの詳細については、<a href="https://dev.twitter.com/cards/overview">X ドキュメント</a>をご覧下さい。</aside>
   </section>
   <section class="bcls-section">
     <h2 id="create">(オプション）動画をホストするページを作成する</h2>
     <p>動画がページに公開されていない場合は、動画をホストするHTMLページを作成する必要があります。ページを作成する際は、以下のガイドラインに従ってください:</p>
     <ul>
-      <li>プレーヤーのソーシャル共有を有効にし、Twitter オプションを有効にしてください。</li>
-      <li>プレーヤーのサイズをレスポンシブに設定するか、プレーヤーのサイズが Twitter フィード内に収まることを確認してください（幅約 480 ピクセル）。</li>
+      <li>プレーヤーのソーシャル共有を有効にし、X オプションを有効にしてください。</li>
+      <li>プレーヤーのサイズをレスポンシブに設定するか、プレーヤーのサイズが X フィード内に収まることを確認してください（幅約 480 ピクセル）。</li>
       <li>動画を公開する際は、<strong>標準 (iframe)</strong> の埋め込みコードを使用します。</li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="metatags">必要なTwitterメタタグをページに追加する</h2>
-    <p>Twitter プレーヤーカードを有効にするには、ページに Twitter固有のメタタグを追加する必要があります。</p>
+    <h2 id="metatags">必要なXメタタグをページに追加する</h2>
+    <p>X プレーヤーカードを有効にするには、ページに X固有のメタタグを追加する必要があります。</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -1231,41 +1231,41 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td>twitter:card</td>
-          <td>Twitterカードのタイプ; "player "に設定する必要があります。</td>
+          <td>X:card</td>
+          <td>Xカードのタイプ; "player "に設定する必要があります。</td>
         </tr>
         <tr>
-          <td>twitter:title</td>
+          <td>X:title</td>
           <td>カードに表示されるコンテンツのタイトル。</td>
         </tr>
         <tr>
-          <td>twitter:site</td>
-          <td>カードが属する Twitter の @ユーザー名</td>
+          <td>X:site</td>
+          <td>カードが属する X の @ユーザー名</td>
         </tr>
         <tr>
-          <td>twitter:description</td>
+          <td>X:description</td>
           <td>コンテンツの説明（オプション）</td>
         </tr>
         <tr>
-          <td>twitter:player</td>
+          <td>X:player</td>
           <td>iframe プレーヤーへの HTTPS URL。これは、Web ブラウザでアクティブな混合コンテンツの警告を生成しない HTTPS URL である必要があります (プレーヤーをホストしているページの URL)。</td>
         </tr>
         <tr>
-          <td>twitter:player:width</td>
-          <td>twitter:player で指定されたIFRAMEの幅（ピクセル単位)</td>
+          <td>X:player:width</td>
+          <td>X:player で指定されたIFRAMEの幅（ピクセル単位)</td>
         </tr>
         <tr>
-          <td>twitter:player:height</td>
-          <td>twitter:playerで指定されたIFRAMEの高さ（ピクセル単位)</td>
+          <td>X:player:height</td>
+          <td>X:playerで指定されたIFRAMEの高さ（ピクセル単位)</td>
         </tr>
         <tr>
-          <td>twitter:image</td>
+          <td>X:image</td>
           <td>iframeまたはインライン プレーヤーをサポートしていないプラットフォームで、プレーヤーの代わりに表示される画像。この画像はプレーヤーと同じサイズにする必要があります。</td>
         </tr>
       </tbody>
     </table>
     &nbsp;
-    <p>以下は Twitter のメタタグのサンプルです:</p>
+    <p>以下は X のメタタグのサンプルです:</p>
     <pre>
 &lt;meta name="twitter:card" content="player" /&gt;
 &lt;meta name="twitter:title" content="Bison in Yellowstone" /&gt;
@@ -1277,18 +1277,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 &lt;meta name="twitter:image" content="https://solutions.brightcove.com/bcls/twittercards/bison.jpg" /&gt;
 </pre>
     <aside class="bcls-aside bcls-aside--information">注: すべてのパスがセキュア（https://）に指定されていることを確認して下さい。</aside>
-    <p>Twitterはツイートをキャッシュするため、Twitterのメタタグに変更を加えている場合、その変更が新しいツイートに反映されないことがあります。タイトルタグを変更することで、最新の変更が反映されていることを確認できます。テスト時にキャッシュの問題を回避する方法については、<a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/troubleshooting-cards#refreshing">Twitter ドキュメント</a>を参照して下さい。</p>
+    <p>Xはツイートをキャッシュするため、Xのメタタグに変更を加えている場合、その変更が新しいツイートに反映されないことがあります。タイトルタグを変更することで、最新の変更が反映されていることを確認できます。テスト時にキャッシュの問題を回避する方法については、<a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/troubleshooting-cards#refreshing">X ドキュメント</a>を参照して下さい。</p>
     &nbsp;
-    <aside class="bcls-aside bcls-aside--information">注: Twitter Card タグの概要については、<a href="https://dev.twitter.com/cards/markup">Twitter ドキュメント</a>をご覧下さい。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: X Card タグの概要については、<a href="https://dev.twitter.com/cards/markup">X ドキュメント</a>をご覧下さい。</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="validate">Twitter バリデータツールを使ってURLを検証する</h2>
-    <p>metaタグを追加してページを公開したら、ページのURLを<a href="https://cards-dev.twitter.com/validator">Twitter カード バリデータ</a>にコピー＆ペーストし、<strong>プレビュー カード</strong>をクリックします。</p>
+    <h2 id="validate">X バリデータツールを使ってURLを検証する</h2>
+    <p>metaタグを追加してページを公開したら、ページのURLを<a href="https://cards-dev.twitter.com/validator">X カード バリデータ</a>にコピー＆ペーストし、<strong>プレビュー カード</strong>をクリックします。</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node15772-twitter-validator.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="approve">ホワイトリストの承認をリクエストする</h2>
-    <p>ドメインが Twitterのホワイトリストに登録されていない場合、プレーヤーカードは表示されません。URLを検証する際、URLがホワイトリストに登録されていない旨のメッセージが表示されます。承認プロセスの詳細については、<a href="https://dev.twitter.com/cards/types/player/approval">Twitter ドキュメント</a>をご覧下さい。</p>
+    <p>ドメインが Xのホワイトリストに登録されていない場合、プレーヤーカードは表示されません。URLを検証する際、URLがホワイトリストに登録されていない旨のメッセージが表示されます。承認プロセスの詳細については、<a href="https://dev.twitter.com/cards/types/player/approval">X ドキュメント</a>をご覧下さい。</p>
   </section>
 </article>
 

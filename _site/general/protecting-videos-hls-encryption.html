@@ -1196,7 +1196,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="how">HLS 暗号化を使用して、Brightcove はコンテンツをどのように保護しますか？</h2>
     <p>Apple HTTP Live Streaming (HLS) は、暗号化とは無関係に、異なるビットレートを使用する動画配信プロトコルです。Video Cloud は、ネットワーク帯域幅の変化やサービスの変動に応じて、レンディション間をインテリジェントに切り替える複数のレンディションの作成をサポートします。HLS は、基本的に動画を小さなファイル ダウンロードのシーケンスに分割し、それぞれが HTTP 経由で一度に 1 つの短いチャンク（セグメント）をロードします。</p>
-    <aside class="bcls-aside bcls-aside--information">注: Appleは、長編動画、つまり5分を超える動画、または10分を超える動画に対してにHLSを要求しています。iOS デバイスで約 10 分以上の動画を再生するには、暗号化に関係なく、HLS レンディションを作成する必要があります。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: Appleは、長編動画、5Mbを超える動画、または10分を超える動画に対してにHLSを要求しています。iOS デバイスで約 10 分以上の動画を再生するには、暗号化に関係なく、HLS レンディションを作成する必要があります。</aside>
     <p>Video Cloud は Apple HLS 向けの動画レンディションの暗号化をサポートしているため、パブリッシャーは HLS 経由でデバイスに配信される長尺動画コンテンツを保護できます。HLS 暗号化は、Video Cloud の標準 HLS ソリューションに AES を追加することでコンテンツを保護します。Apple HLS 向けに暗号化を実装する場合、Video Cloud は動画の小さなファイル セグメントをそれぞれ暗号化し、レンディション選択を処理するファイルを安全に配信します。</p>
     <aside class="bcls-aside bcls-aside--information">注: Brightcove には、HLSe コンテンツのみを強制的に配信するオプションがあります。有効にすると、動画は DASH レンディション上に HLSe コンテンツのみを配信します。</aside>
   </section>
@@ -1207,11 +1207,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ul>
       <li>各セグメント ファイルは暗号化されます。</li>
       <li>Video Cloud から配信される HLS マニフェスト（.m3u8 ファイル）には、各セグメントのキーへのリンクが含まれています。</li>
-      <li>デフォルトでは、キーは 10 分ごとにローテーションされます。<code translate="No">encryption_key_rotation_period</code>カスタムインジェストプロファイルでを指定できます。</li>
-      <li><a href="/general/overview-dynamic-delivery.html">動的配信が有効になっているアカウントの HLS レンディションに暗号化を追加するには</a>、アカウントの HLSE を有効にするリクエストを Brightcove サポートに送信するだけです。（HLSE で既に有効になっているアカウントの場合、アカウントが動的配信が有効になっている場合、暗号化はすべての HLS レンディションに適用されます）。</li>
-      <li><a href="/general/architecture/overview-dynamic-delivery.html">Dynamic Delivery</a> (動的配信)が有効なアカウントの HLS レンディションに暗号化を追加するには、Brightcove サポートにリクエストを送信し、アカウントの HLSe を有効にします。(既に HLSe が有効になっているアカウントの場合、アカウントが動的配信に有効になっていれば、暗号化はすべての HLS レンディションに引き続き適用されます)。</li>
+      <li><a href="/general/overview-dynamic-delivery.html">Dynamic Delivery (動的配信)</a>が有効になっているアカウントの HLS レンディションに暗号化を追加するには、アカウントの HLSe を有効にするリクエストを Brightcove サポートに送信するだけです。（すでに HLSe が有効になっているアカウントの場合、アカウントで Dynamic Delivery が有効になっていれば、暗号化はすべての HLS レンディションに引き続き適用されます）。</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">注: ビデオ暗号化は、それ自体が強力なコンテンツ保護ではありません。コンテンツセキュリティが組織にとって重要な場合は、<a href="https://player.support.brightcove.com/content-protection/overview-content-protection.html">DRM 保護</a>を採用する必要があります。HLS 暗号化と DRM 保護のバンドルについて詳しくは、弊社営業にお問い合わせください。これにより、再生場所を問わずコンテンツを保護することができます。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: ビデオ暗号化は、それだけで強力なコンテンツ保護にはなりません。コンテンツのセキュリティが組織にとって重要な場合は、<a href="https://player.support.brightcove.com/content-protection/overview-content-protection.html">DRM 保護</a>を採用する必要があります。HLS 暗号化と DRM 保護のバンドルについて詳しくは、弊社営業にお問い合わせください。これにより、再生場所を問わずコンテンツを保護することができます。</aside>
   </section>
   <section class="bcls-section">
     <h2 id="after">HLS暗号化実装後の流れ</h2>
@@ -1224,12 +1222,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Video Cloud は、Media モジュールに HLS 暗号された動画を識別するインジケータを表示しません。</li>
       <li>ユーザーが Apple デバイスで HLS 暗号化ビデオを再生し、TTL の有効期限が切れた後に再生を試みると、再生の開始に失敗し、ユーザーに警告メッセージは表示されません。</li>
       <li>HLSe は <a href="https://sdks.support.brightcove.com/getting-started/brightcove-native-player-sdks.html">Android SDK</a> でサポートされており、古いバージョンでも VisualOn コンポーネントでサポートされます。HLSe は、HTML5 プレーヤーを使用する 4.x でも動作するはずです。Android デバイスでの HLSe のサポートについては <a href="https://developer.android.com/guide/appendix/media-formats.html">Android でサポートされるメディア形式</a>をご覧下さい。</li>
-      <li>ブライトコーブプレーヤーを使用する場合、IE8 または IE9 では HLS 再生はサポートされません。これらのデバイスは、MP4にフォールバックされます。</li>
-      <li>HLSE は<a href="https://sdks.support.brightcove.com/getting-started/brightcove-native-player-sdks.html"> Android SDK</a>でサポートされており、VisualOn コンポーネントで古いバージョンでサポートされます。HLSE は、HTML5 プレーヤーで 4.x でも動作するはずです。Android デバイスでの HLSE のサポートの詳細については、Android でサポートされるメディアフォーマットを参照してください<a href="http://developer.android.com/guide/appendix/media-formats.html"></a>。</li>
-      <li>HTML5プレーヤーの場合、HLSeのサポートは基盤となるOSやデバイスによって決まります。</li>
+      <li>HTML5プレーヤーの場合、HLSeのサポートは基盤となるOS/デバイスによって完全に決定されます。</li>
       <li>HLS暗号化の停止を選択すると、アカウント内のすべてのビデオから暗号化が解除されます。</li>
       <li>現在、Android、iOS、tvOS 用 Brightcove Native SDK を使用したオフライン再生では、HLSe コンテンツはサポートされていません。</li>
-      <li>HLSe コンテンツの制限は、ページ内エクスペリエンスではサポートされていません。</li>
+      <li>HLSe コンテンツの制限は、Galleryのイン・ページ・エクスペリエンスではサポートされていません。</li>
     </ul>
   </section>
 </article>

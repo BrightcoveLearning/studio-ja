@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このドキュメントでは、ビデオをVideoCloudにアップロードするときに使用できるサポートされているコンテナとコーデックを一覧表示します。">
+  <meta name="description" content="このドキュメントでは、Video Cloudに動画をアップロードする際に使用できる、サポートされているコンテナとコーデックの一覧を示します。">
   
   <title>サポートされているビデオおよびオーディオ形式、コーデック、およびコンテナ</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -1188,92 +1188,108 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
  <h1>サポートされているビデオおよびオーディオ形式、コーデック、およびコンテナ</h1>
 <article class="bcls-article">
-  <summary>このドキュメントでは、ビデオをVideoCloudにアップロードするときに使用できるサポートされているコンテナとコーデックを一覧表示します。</summary>
+  <summary>このドキュメントでは、Video Cloudに動画をアップロードする際に使用できる、サポートされているコンテナとコーデックの一覧を示します。</summary>
   <section class="bcls-section">
-    <h2 id="terms">コーデック、コンテナー、およびファイル拡張子を理解する</h2>
-    <p>コーデック、コンテナ、ファイル拡張子は同等ではありませんが、しばしば互いに混同されます。たとえば、H.264 videoは、拡張子を持つファイルを意味するだけではありません<code translate="No">.mp4</code>。エンコードされ、頻繁に圧縮された音声および動画データだけでなく、メタデータ（長さ、サイズなど）も動画ファイルには含まれます。</p>
+    <h2 id="terms">コーデック、コンテナ、およびファイル拡張子について</h2>
+    <p>コーデック、コンテナ、およびファイル拡張子は同じものではありませんが、よく混同されることがあります。例えば、H.264 ビデオは、単に <code translate="No">.mp4</code> 拡張子を持つのファイルを指すわけではありません。ビデオファイルはメタデータ（再生時間、サイズなど）を含めてエンコードされ、圧縮された音声と映像データの両方が含まれます。</p>
     <ul>
-      <li>NS <em>容器</em> formatは、メタデータがオーディオおよびビデオデータとともにどのように保存されるかを定義します。データのコーディングや圧縮は定義しません。</li>
-      <li><em>コーデック</em> ビデオファイル内のビデオおよびオーディオストリームのエンコードとデコードを担当します。これらは可逆でも可逆でもでき、通常は特定のタイプの伝送用に最適化されています。コーデックとコンテナが単一の定義を共有する場合もありますが、これらは一般的ではありません。</li>
+      <li><em>コンテナ</em> 形式は、メタデータと音声および映像データがどのように格納されるかを定義しますが、データのエンコードや圧縮方法を定義するものではありません。</li>
+      <li><em>コーデック</em> は、ビデオファイル内の音声・映像ストリームをエンコードおよびデコードする役割を担っています。コーデックには損失あり（非可逆）または損失なし（可逆）で動作し、特定の種類の伝送に最適化されていることが多いです。コーデックとコンテナが同一の定義を持つ場合もありますが、これは稀です。</li>
     </ul>
-    <p>よく混同される他の用語は、エンコード/デコードと多重化/デマルチクシングです。</p>
+    <p>あた
+        また、エンコード/デコードとマルチプレクシング（muxing）/デマルチプレクシング（demuxing）という用語も混同されがちです。</p>
     <ul>
-      <li><em>エンコーディング </em>かつ <em>デコード </em>エンコードされたビデオおよびオーディオデータを、再生可能なストリームとの間で変換することを参照してください。</li>
-      <li><em>マックス </em>かつ <em>デマックス </em>さまざまなコンテナ形式との間のオーディオおよびビデオストリームの書き込みと読み取りを指します。</li>
+      <li><em>エンコーディング </em>と <em>デコードディング </em>とは、エンコードされた映像および音声データを、再生可能なストリームに変換することを指します。</li>
+      <li><em>マルチプレクシング（muxing)</em> と <em>デマルチプレクシング（demuxing）</em> は、音声および映像ストリームをさまざまなコンテナ形式に書き込んだり、読み取ったりすることを指します。</li>
     </ul>
-    <p>詳細は、以下を参照してください。</p>
+    <p>詳しくは以下のリンクをご参照ください。</p>
     <ul>
-      <li>コンテナについては、<a class="external-link" rel="nofollow" href="http://en.wikipedia.org/wiki/Comparison_of_container_formats">この記事で説明します</a>。</li>
-      <li>コーデックの詳細については、<a class="external-link" rel="nofollow" href="http://en.wikipedia.org/wiki/Video_codec">この記事を参照してください</a>。</li>
-      <li>コーデック ID とコードに関するその他の参照は、<a class="external-link" rel="nofollow" href="http://www.fourcc.org/codecs.php"></a><a class="external-link" rel="nofollow" href="http://mp4ra.org/#/codecs">こことここにあります</a>。</li>
+      <li>コンテナについては、こちらの<a class="external-link" rel="nofollow" href="http://en.wikipedia.org/wiki/Comparison_of_container_formats">記事</a>を参照してください。</li>
+      <li>コーデックの詳細については、こちらの<a class="external-link" rel="nofollow" href="http://en.wikipedia.org/wiki/Video_codec">記事</a>を参照してください。</li>
+      <li>コーデック ID とコードに関する追加の参考資料は、<a class="external-link" rel="nofollow" href="http://www.fourcc.org/codecs.php">こちら</a> と <a class="external-link" rel="nofollow" href="http://mp4ra.org/#/codecs">こちら</a>でご覧いただけます。</li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="supported_source_formats">サポートされているソースビデオタイプ</h2>
-    <p>以来<span translate="No">ブライトコーブ</span>一般に、さまざまなプラットフォーム、ブラウザ、デバイスアプリに適したコーデックと形式でレンディションを作成する複雑さを処理します。最も懸念されるのは、トランスコードできるソースビデオの種類です。</p>
-    <p>以来<span translate="No">ブライトコーブ</span>非常に多くのビデオ入力タイプをサポートしているため、サポートされていない形式について説明する方が実際には役立ちます。現時点では、いくつかしかありません。以下のリストはフォーマットを示しています<strong><em>not</em></strong><a href="https://zencoder.support.brightcove.com"><span translate="No">Zencoder </span></a>、<span translate="No"></span><a href="/media/uploading-videos-using-upload-module.html">ビデオクラウドアップロードモジュールでサポートされています</a><a href="https://apis.support.brightcove.com/dynamic-ingest/"><span translate="No">動的取り込み API </span></a>です。以下のリストにフォーマットが含まれていない場合は、<strong>それがサポートされていると仮定できます</strong>。</p>
+    <h2 id="supported_source_formats">対応しているソース動画の種類</h2>
+    <p><span translate="No">Brightcove</span>は、さまざまなプラットフォーム、ブラウザ、デバイスアプリに適したコーデックやフォーマットでのレンディション作成を複雑さを意識することなく利用できます。特に重要なの点はどのような種類のソース動画をトランスコードできるかという点です。</p>
+    <p><span translate="No">Brightcove</span>は、非常に多くのビデオ入力タイプに対応しています。以下のリストは、<a href="https://zencoder.support.brightcove.com"><span translate="No">Zencoder </span></a>、Video Cloud <span translate="No"><a href="/media/uploading-videos-using-upload-module.html">Upload モジュール</a></span>、および <a href="https://apis.support.brightcove.com/dynamic-ingest/"><span translate="No">Dynamic Ingest API</span></a> でサポート<strong><em>されていない</em></strong>形式を示しています。以下のリストに含まれて<strong>いない</strong>形式は、基本的に<strong>サポートされているます</strong>。</p>
     <ul>
       <li><code translate="No">Apple Intermediate</code></li>
       <li><code translate="No">HDV 720p60</code></li>
       <li><code translate="No">Go2Meeting3 (G2M3)</code></li>
       <li><code translate="No">Avid Meridien Uncompressed</code></li>
       <li><code translate="No">Windows Media Audio Lossless</code></li>
-      <li><code translate="No">CineForm</code> -一部サポートされています。ソースをエンコードするために使用されるソフトウェアや、Zencoderがソースを使用できないOSから派生するバリアントがあります。私たちはまだ問題の原因となる正確な要因を特定しようとしています。</li>
-      <li><code translate="No">SWF</code> -部分的にサポートされています<span translate="No">Zencoder</span> ;の場合<code translate="No">SWF</code>ビデオまたはオーディオトラックが含まれています、それらは処理できますが、多くは<code translate="No">SWFs</code>しない。</li>
-      <li><code translate="No">Animated .gif</code> -公式にはサポートされていませんが、機能する可能性があります</li>
+      <li><code translate="No">CineForm</code> - 一部サポートされています。エンコードに使用されたソフトウェアや OS によっては、Zencoder で使用できない場合があります。現在、問題の原因を特定するために調査中です。</li>
+      <li><code translate="No">SWF</code> - <span translate="No">Zencoder</span>で一部サポートされています。<code translate="No">SWF</code> ファイルに動画や音声トラックが含まれている場合は処理可能ですが、全ての <code translate="No">SWFs</code> が対応しているわけではありません。</li>
+      <li><code translate="No">Animated .gif</code> - 公式にはサポートされていませせん。*場合によっては動作する場合もあります。</li>
     </ul>
     <h3>特別なケース</h3>
     <ul>
       <li>
-        <aside class="bcls-aside bcls-aside--information">ノート: <code translate="No">AVdh (DNxHQ)</code>また、のために動作しません<strong>422個の10ビットおよび444個の12ビットソース（のみ）</strong> -これはバグであり、このメモは修正されると削除されます。</aside>
+        <aside class="bcls-aside bcls-aside--information">注: <code translate="No">AVdh (DNxHQ)</code> は、<strong>422 10ビット および 444 12ビットのソース（のみ）</strong>でも動作しません。 - これはバグであり、修正され次第、この注釈は削除されます。</aside>
       </li>
-      <li>KMS で暗号化されたコンテンツはサポートされていますが、オブジェクトの URL に事前に署名する必要があります。ここで概説する内容: <a href="https://aws.amazon.com/blogs/developer/generating-amazon-s3-pre-signed-urls-with-sse-kms-part-2/">https://aws.amazon.com/blogs/developer/generating-amazon-s3-pre-signed-urls-with-sse-kms-part-2/</a>。
+      <li>KMS で暗号化されたコンテンツはサポートされていますが、ここに概説されているように、オブジェクトURLに事前に署名する必要があります: <a href="https://aws.amazon.com/blogs/developer/generating-amazon-s3-pre-signed-urls-with-sse-kms-part-2/">https://aws.amazon.com/blogs/developer/generating-amazon-s3-pre-signed-urls-with-sse-kms-part-2/</a>。
         <p>実装する手順:</p>
         <ol>
-          <li>KMS 管理の暗号化バケットを作成する</li>
-          <li>ビデオクラウド/Zencoder 取り込みポリシーを追加する</li>
-          <li>KMS キーを使用して署名済み URL を作成する</li>
-          <li>動画を取り込むときにこの URL を使用する</li>
+          <li>KMS が管理する暗号化バケットを作成します。</li>
+          <li>Video Cloud / Zencoder Ingest ポリシーを追加します。</li>
+          <li>KMS キーを使用して署名済み URL を作成します。</li>
+          <li>動画を取り込む際に、この URL を使用します。</li>
         </ol>
       </li>
     </ul>
-    <p>上記のものとは別に、私たちはほとんどすべての既知のビデオフォーマットをサポートしていると考えています。別のビデオ形式で問題が発生した場合は、<a href="https://supportportal.brightcove.com/s/login/?language=en_US">コンタクト<span translate="No">ブライトコーブ</span>サポート</a>そしてまたしましょう<a href="mailto:docs@brightcove.com"><span translate="No">ブライトコーブ</span>学習サービス</a>知る。</p>
+    <p>上記以外の動画形式は、ほぼすべてサポートしていると考えています。別の動画形式で問題が発生した場合は、<a href="https://supportportal.brightcove.com/s/login/?language=en_US"<span translate="No">Brightcove</span> サポート</a>にお問い合わせ頂くか、<a href="mailto:docs@brightcove.com"><span translate="No">Brightcove</span>Learning Services</a> にご連絡ください。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="audio_concerns">オーディオフォーマット</h2>
-    <h3>摂取</h3>
-    <p>取り込み側では、8 チャンネルのオーディオを超える場合を除き、ほとんどのフォーマットがサポートされます。（また、オーディオは、単一のマルチチャネルトラックまたは複数のモノラルトラックとして設定する必要があります）。</p>
-    <aside class="bcls-aside bcls-aside--information">注:Video Cloud の取り込みでは、ソースにマルチチャンネルオーディオがある場合は、チャンネルを正しくマッピングするためのカスタムオーディオレンディションの作成をサポートする必要があります。</aside>
+    <h2 id="audio_concerns">オーディオ フォーマット</h2>
+    <h3>取り込み (Igestion)</h3>
+    <p>取り込みに関しては、ほとんどのフォーマットがサポートされていますが、オーディオチャンネルが8つ以上の場合はサポートされません。（またオーディオは単一のマルチチャンネルトラックとして設定するか、複数のモノラルトラックとして設定する必要があります。）</p>
+    <aside class="bcls-aside bcls-aside--information">注: Video Cloud Ingestion (取り込み)では、ソースにマルチチャンネルオーディオが含まれている場合、チャネルを正しくマッピングするためにカスタム オーディオレンディションの作成をサポートチームに依頼する必要があります。</aside>
     <h3>エンコーディングとトランスコーディング</h3>
     <ul>
-      <li>マルチチャンネルオーディオの場合、AC-3（ドルビーデジタル）とEAC-3（ドルビーデジタルプラス）の両方が最大5.1チャンネルでサポートされます。</li>
+      <li>マルチチャンネルオーディオについては、AC-3（Dolby Digital）および EAC-3（Dolby Digital Plus）が最大5.1チャンネルまでサポートされています。</li>
       <li>ステレオおよびモノラルの場合、AACがサポートされています。</li>
     </ul>
-    <h3>再生（Brightcoveプレーヤーで）</h3>
+    <h3>再生（Brightcove プレーヤーでの再生）</h3>
     <ul>
       <li>AAC、モノラルまたはステレオで。5.1チャンネルオーディオのサポートは、ブラウザの機能によって異なります。</li>
-      <li>Safariは、ネイティブでサポートしている唯一の現在のブラウザであり、利用可能な場合は5.1オーディオトラックを選択します。</li>
-      <li>Brightcove Playerはサポートを確認し、5.1サポートが利用できない場合は自動的に2.0ステレオAACを選択します。</li>
+      <li>現在、Safariのみがネイティブで5.1オーディオトラックをサポートしており、利用可能な場合は5.1オーディオトラックを選択します。</li>
+      <li>Brightcove プレーヤーはサポートを確認し、5.1サポートがない場合は自動的に 2.0 ステレオAACを選択します。</li>
     </ul>
-    <h3>再生（SDKネイティブプレーヤー内）</h3>
+    <h3>再生（SDKネイティブプレーヤーでの再生）</h3>
     <ul>
-      <li>AAC、モノラルまたはステレオで。</li>
-      <li>iOS、iPadOS、およびtvOSデバイスは、EAC-3およびAC-3 5.1オーディオ、およびステレオAACをサポートします。</li>
-      <li>ほとんどのAndroidデバイスはEAC-3およびAC-35.1オーディオをサポートしており、利用可能な場合はステレオAACレンディションにフォールバックします。</li>
+      <li>モノラルまたはステレオのAAC</li>
+      <li>iOS、iPadOS、および tvOSデバイスは、EAC-3およびAC-3の5.1オーディオ、およびステレオAACをサポートしています。 </li>
+      <li>ほとんどのAndroidデバイスはEAC-3およびAC-3の5.1オーディオをサポートしており、利用可能な場合はステレオAACレンディションにフォールバックします。</li>
     </ul>
     <h3>再生（その他のデバイス）</h3>
     <ul>
-      <li>Chromecastは、EAC-3およびAC-3 5.1オーディオ、およびステレオAACをサポートしています。</li>
-      <li>AirPlay to Apple TVは、tvOS 5.1 / stereo機能を活用します。</li>
+      <li>Chromecastは、EAC-3 および AC-3の 5.1オーディオ、ステレオAACをサポートしています。</li>
+      <li>AirPlayを使用してApple TVに送信すると、tvOSの5.1/ステレオ機能が利用されます。</li>
     </ul>
-    <h3>注</h3>
+    <h3>備考</h3>
     <ul>
-      <li>5.1オーディオを提供する場合、BrightcoveはEAC-3とAC-3の両方のエンコーディングタイプを含めることをお勧めします。</li>
-      <li>一部のデバイスは5.1AACをサポートしていますが、これらは一般的ではなく、明示的に必要とされない限り、AAC5.1を唯一のマルチチャネル形式として提供しないでください。</li>
-      <li>すべてのストリームには、5.1をサポートしていないデバイスとブラウザ用に少なくとも1つのステレオAACトラックが含まれている必要があります。</li>
+      <li>オーディオソースファイルはMP3、M4A、またはWAV形式で提供できます。</li>
+      <li>5.1オーディオを提供する場合は、EAC-3 と AC-3の両方のエンコードタイプを含めることを Brightcoveは推奨しています。</li>
+      <li>5.1 AACに対応しているデバイスは少ないため、5.1 AACだけをマルチチャンネルフォーマットとして提供することは推奨していません。（明示的に要求されている場合を除く）。</li>
+      <li>すべてのストリームには、5.1チャンネルが再生できないデバイスやブラウザ向けに、ステレオのAACトラックを必ず1つ含めることが推奨されます。</li>
       <li>
-        <p><strong>ウィンドウ:</strong>AAC の 48kHz を超えるオーディオのコンテンツは Windows ではサポートされていないため、プレーヤーが失敗します。詳細については<a href="https://docs.microsoft.com/en-gb/windows/desktop/medfound/aac-decoder#format-constraints">、この Microsoft</a>ドキュメントを参照してください。</p>
+        <p><strong>Windows:</strong>AACで48kHz以上のオーディオを含むコンテンツは Windows OS 上でサポートされておらず、プレーヤーが動作しなくなる原因となります。詳細については、こちらの<a href="https://docs.microsoft.com/en-gb/windows/desktop/medfound/aac-decoder#format-constraints"> Microsoft ドキュメント</a>を参照してください。</p>
       </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Image_formats">画像フォーマット</h2>
+    <p>ポスターおよびサムネイルには以下の画像フォーマットがサポートされています:</p>
+    <ul>
+      <li>png</li>
+      <li>jpg</li>
+    </ul>
+    <p><strong>現在サポートされて<em>いない</em></strong>フォーマットは以下の通りです:</p>
+    <ul>
+      <li>gif</li>
+      <li>webp</li>
+      <li>svg</li>
     </ul>
   </section>
 </article>
