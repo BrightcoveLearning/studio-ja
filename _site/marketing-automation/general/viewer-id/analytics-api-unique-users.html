@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>setUser の使用</title>
+        <title>user の使用</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
@@ -2447,7 +2447,7 @@
                       
                       
                       <li class="nav-item">
-                        <a class="nav-link" href="/marketing-automation/general/viewer-id/analytics-api-unique-users.html" aria-current="page">Utilizing <code>setUser</code></a>
+                        <a class="nav-link" href="/marketing-automation/general/viewer-id/analytics-api-unique-users.html" aria-current="page">Utilizing <code>user</code></a>
                       </li>
                       
                       
@@ -3551,7 +3551,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Using <code translate="no">setUser</code></li>
+            <li class="breadcrumb-item active" aria-current="page">Using <code translate="no">user</code></li>
             
             
           </ol>
@@ -3572,7 +3572,7 @@
       <br>
       
       
-<h1><code translate="no">setUser</code> の使用</h1>
+<h1><code translate="no">user</code> の使用</h1>
 <article class="bcls-article">
   <summary>このトピックでは、<span translate="No">Analytics API</span> を介してユニークユーザーに関するデータを取得する方法について学びます。</summary>
     <!-- <section class="bcls-section"> -->
@@ -3710,18 +3710,23 @@
     <section class="bcls-section">
       <h2 id="Send_viewer_id_web_player">視聴者ID の送信 - Brightcove プレーヤー</h2>
       <aside class="bcls-aside bcls-aside--information language-editable">注: ネイティブ SDK プレーヤーでの視聴者IDの設定については、<a href="https://sdks.support.brightcove.com/features/cross-device-resume-sdks.html">ネイティブSDKでのクロスデバイス再開</a>を参照して下さい。</aside>
+      <h2 id="Requirements">必要条件</h2>
+    <p>視聴者IDトラッキングには以下の要件が必要です:</p>
+    <ul>
+      <li>Brightcove プレーヤー v7.18.0 またはそれ以降のバージョン</li>
+    </ul>
       <p>まず、ユーザーの視聴アクティビティを保存するために、ユーザー識別子を設定する必要があります。</p>
       <h3>Brightcove プレーヤー</h3>
       <p>
-        Brightcove プレーヤー を使用している場合は、以下の手順に従ってください:
+        Brightcove Player を使用している場合は、以下の手順に従ってください:
       </p>
     
       <ol class="bcls-tasklist-restart">
         <li>
           <p>
-            視聴者データは自動的に Brightcove アナリティクスに送信されますが、ユーザー識別子を設定する必要があります。 これを行うには、<code translate="No">setUser()</code> メソッドを使用します。 例えば:
+            視聴者データは自動的に Brightcove アナリティクスに送信されますが、ユーザー識別子を設定する必要があります。 これを行うには、<code translate="No">user()</code> メソッドを使用します。 例えば:
           </p>
-          <pre class="line-numbers"><code class="language-javascript" translate="No">myPlayer.bcAnalytics.client.setUser('<span class="bcls-input">viewer id</span>');</code></pre>
+          <pre class="line-numbers"><code class="language-javascript" translate="No">myPlayer.bcAnalytics.client.user('<span class="bcls-input">viewer id</span>');</code></pre>
           <p>Brightcove プレーヤー をホストする Web サイトでは、認証ゲートウェイまたは ID 管理ソリューションを使用して視聴者を追跡することができます。 この視聴者 ID を Brightcove アナリティクスに渡す視聴者 ID として使用します。</p>
           <aside class="bcls-aside bcls-aside--warning"><span class="bcls-input">viewer id</span> の値は一意な文字列でなければなりません。 数値のような無効な値は無視されます。</aside>
           <aside class="bcls-aside bcls-aside--tip language-editable">ここで追加された値は、Insights レポートでは、<code>customerId</code> と呼ばれます。</aside>
@@ -3747,11 +3752,11 @@
         var myPlayer = this;
     
         // Set the viewer id for Brightcove analytics
-        myPlayer.bcAnalytics.client.setUser('<span class="bcls-input">viewer id</span>');
+        myPlayer.bcAnalytics.client.user('<span class="bcls-input">viewer id</span>');
       });
     &lt;/script&gt;</code></pre>
         </li>
-        <li><code translate="No">setUser()</code> メソッドを使用すると、値はハッシュされず、後続のすべてのビーコンと一緒にクリアで送信されます。
+        <li><code translate="No">user()</code> メソッドを使用すると、値はハッシュされず、後続のすべてのビーコンと一緒にクリアで送信されます。
           <p>
             <code translate="No">player_init</code> イベントにはこの場合、<code translate="No">user</code> フィールドが含まれませんが、すべての <code translate="No">video_*</code> イベントには含まれることに注意してください。
           </p>
