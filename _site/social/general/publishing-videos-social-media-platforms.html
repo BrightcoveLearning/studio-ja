@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、BrightcoveSocialを使用してソーシャルメディアにビデオを公開する方法を学習します。">
+  <meta name="description" content="このトピックでは、Brightcove Social を使用して動画をソーシャル メディアに公開する方法について学びます。">
   
-  <title>ソーシャルメディアプラットフォームへのビデオの公開の</title>
+  <title>ソーシャルメディア プラットフォームへのビデオの公開</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -1187,312 +1187,409 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>ソーシャルメディアプラットフォームへのビデオの公開の</h1>
-  <summary>このトピックでは、BrightcoveSocialを使用してソーシャルメディアにビデオを公開する方法を学習します。</summary>
+  <h1>ソーシャルメディア プラットフォームへのビデオの公開</h1>
+  <summary>このトピックでは、Brightcove Social を使用して動画をソーシャル メディアに公開する方法について学びます。</summary>
   <section class="bcls-section">
     <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5018055033001">&nbsp;</div>
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>ブライトコーブソーシャルでは、動画クラウドアカウントの動画を YouTube、Facebook、Twitter に簡単に公開できます。動画を公開する前に、動画の公開先となるソーシャルアカウントについて、公開先を作成する必要があります。発行先の作成の詳細は、「<a href="/social/creating-social-media-publishing-destinations.html">ソーシャルメディア発行先の作成」を参照してください</a>。</p>
-    <p>自動同期を使用し、Social モジュールを使用して手動でビデオを公開することは独立した操作であることに注意してください。自動同期は、Social モジュールを使用して手動で公開されたビデオを認識しません。自動同期がソーシャル配信先のいずれかに公開されるような方法で動画にタグが付けられている場合、その動画が以前にSocialモジュールを使用して手動で公開されているかどうかに関係なく、その動画が配信されます。</p>
+    <p>Brightcove Social を使用すると、Video Cloud アカウントの動画を YouTube、Facebook、X（旧 Twitter）に簡単に公開することができます。 動画を公開する前に、動画を公開したいソーシャルメディア アカウントの配信先を作成する必要があります。 配信先の作成については <a href="/social/creating-social-media-publishing-destinations.html">ソーシャルメディアの配信先の作成</a>を参照して下さい。</p>
+    <p>自動同期を使用することと、Social モジュールを使用して手動で動画を公開することは、独立した別の操作であることに注意してください。 自動同期は、Social モジュールを使用して手動で公開された動画を認識しません。 動画にタグが付けられ、自動同期がその動画をソーシャル配信先の 1 つに公開する場合、その動画が以前に Social モジュールを使用して手動で公開されているかどうかに関係なく公開されます。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="rules">パブリッシュするレンディションの決定</h2>
-    <p>ソーシャルプラットフォームにビデオを配信するには、動画に少なくとも 1 つの MP4 レンディションまたはビデオマスターが必要です。Brightcove が提供する標準インジェストプロファイルを使用してアップロードされた動画は、デフォルトでマスターを保存します。マスターのアーカイブの詳細については、「<a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">マスターのアーカイブ」</a>ドキュメントを参照してください。</p>
-    <p>動画をソーシャルプラットフォームに配信する場合、ブライトコーブ Social は、個々のソーシャルプラットフォームによって適用されるルールを満たす最高品質のレンディションの配信を試みます。ソーシャルプラットフォームに送信されたレンディションが拒否された場合、別のレンディションを送信することはできません。</p>
-    <p>動画のランク付けルールは次のとおりです。</p>
+    <h2 id="rules">公開するレンディションの決定</h2>
+    <p>ソーシャル プラットフォームに動画を配信するには、動画に少なくとも 1 つの MP4 レンディションまたは動画マスターが必要です。 Brightcove が提供する標準トランスコード プロファイルのいずれかを使用してアップロードされた動画は、デフォルトでマスターを保存します。 マスターのアーカイブの詳細については <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">マスターのアーカイブ</a> を参照してください。</p>
+    <p>ソーシャル プラットフォームに動画を配信する場合、Brightcove Social は、各ソーシャル プラットフォームが適用するルールに適合する、（ビットレートに基づく）最高品質のレンディションの配信を試みます。 ソーシャル プラットフォームに送信されたレンディションが拒否された場合、別のレンディションの送信は試みられません。</p>
+    <p>動画のランク付けルールは次の通りです。</p>
     <ul>
-      <li>MP4アセットは他のどのビデオコンテナよりも優れています。他のタイプのビデオコンテナは注文されません。</li>
-      <li>ビデオコンテナの品質が同等の場合は、エンコードレートの高いビデオの方が優れていると見なされます。</li>
-      <li>エンコーディングレートが同じ場合、解像度の高い動画が優先されます。ビデオのすべてのレンディションが必ずしも同じアスペクト比を持つわけではないので、それぞれのビデオの高さと幅の積を使用して、計算された「' 複合プロキシ」に基づいてビデオを比較します。</li>
+      <li>MP4アセットは、他のどのビデオコンテナよりも優れており、他のタイプのビデオコンテナは使用する事はできません。</li>
+      <li>ビデオコンテナの品質が同等であれば、解像度（ピクセル幅×高さ）の高いビデオの方が優れているとみなされます。</li>
+      <li>エンコーディング レートが同等の品質であれば、解像度（ピクセル幅×高さ）の高い映像の方が優れているとみなされます。 動画のすべてのレンディションが必ずしも同じアスペクト比を持つとは限らないため、それぞれの動画の高さと幅の積を使用して解像度の計算された「複合」プロキシに基づいて動画を比較することに注意してください。</li>
     </ul>
-    <p>ビデオアセットの 1 つに、比較に必要な上記の情報が不足している場合、そのビデオは、' 必要なすべての情報を持つビデオよりも「悪い」と見なされます。</p>
+    <p>動画アセットの1つに、比較に必要な上記の情報のいずれかが欠けている場合、そのビデオは、必要な情報をすべて持っているビデオよりも「劣っている」と見なされることに注意してください。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="publish">ソーシャルメディアに動画を公開する</h2>
-    <p><a href="/social/creating-social-media-publishing-destinations.html">公開先を作成したら</a>、以下の手順に従ってビデオをソーシャルメディアに公開します。</p>
+    <h2 id="publish">ソーシャルメディアへの動画の公開</h2>
+    <p><a href="/social/creating-social-media-publishing-destinations.html">配信先を作成したら</a>、以下の手順に従ってビデオをソーシャルメディアに公開します。</p>
     <ol class="bcls-tasklist-restart">
-      <li>ブライトコーブソーシャルを開きます。</li>
-      <li>クリック<strong>ビデオ</strong>左側のナビゲーションで。Video Cloud アカウントの動画の一覧が表示されます。ソーシャルメディアアカウントに公開されていないビデオは、<strong>状態</strong>の<strong>公開されたことがない</strong>。公開されているビデオには「<strong>ステータスの確認」が表示されます</strong>。リンクをクリックすると、ソーシャルメディアの配信先での動画の公開状況を確認できます。
+      <li><strong>Social</strong> モジュールを開きます。</li>
+      <li>左側のナビゲーションで <strong>動画</strong> をクリックします。Video Cloud アカウントにある動画の一覧が表示されます。ソーシャルメディア アカウントに公開されていないビデオは、<strong>未公開</strong> という <strong>ステータス</strong> が表示されます。公開済みの動画には <strong>ステータスの確認</strong> が表示されます。リンクをクリックすると、ソーシャルメディアの配信先での動画の公開状況を確認できます。
+        <aside class="bcls-aside bcls-aside--information">注: DRM が有効な動画には、動画のサムネイルに鍵アイコンが表示されます。 Dynamic Delivery (動的配信) トランスコード プロファイルを使用してインジェストされた DRM 対応動画は公開できますが、ダウンロードやクリップの作成はできません。 DRM 対応動画を選択すると、これらのボタンは無効になります。</aside>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-video-list.png" /></figure>
       </li>
-      <li>公開するビデオをクリックし、[ <strong>公開] をクリックします</strong>。<aside class="bcls-aside bcls-aside--information">注:DRM が有効になっているビデオでは、ビデオのサムネイルにロックアイコンが表示されます。動的配信インジェストプロファイルを使用して取り込んだDRM対応のビデオは公開できますが、ダウンロードしたり、クリップを作成したりすることはできません。DRM 対応ビデオを選択すると、これらのボタンは無効になります。</aside>
+      <li>ビデオをクリックし、<strong>公開 </strong>をクリックします。</li>
+      <li>1つまたは複数の配信先を選択し、 <span class="button-blue">次へ <i data-feather="arrow-right"></i>をクリックします。</span>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-video-list-2.webp" /></figure>
+    </li>
+    <li>配信先ごとに投稿を編集します。 以下のタブをクリックすると、さまざまな投稿をナビゲートできます。
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/post-navigation.webp" /></figure>
+    </li>
+    <li><span class="button-blue">次へ <i data-feather="arrow-right"></i></span>をクリックします。</li>
+    <li>変更内容を確認し、<span class="button-blue">公開 <i data-feather="arrow-right"></i></span>をクリックします。</li>
+  </ol>
+</section>
+<section class="bcls-section">
+  <h2 id="youtube">YouTubeの動画プロパティの設定</h2>
+  <p>デフォルトでは、15分までの動画をYouTubeにアップロードできます。 長い動画のアップロードについては、<a href="/social/general/enabling-longer-videos-youtube.html">YouTube で長い動画を有効にする</a>を参照してください。動画を YouTube に公開した後、Studio でソース動画を更新しても、YouTube 側では更新されません。</p>
+  <p>YouTube の配信先を選択する際、以下のビデオプロパティを設定することができます。</p>
+  <ul>
+    <li><a href="#ytthumb">サムネイル ソース</a></li>
+    <li><a href="#ytpostinfo">投稿情報</a></li>
+    <li><a href="#ytschedule">スケジュール</a></li>
+    <li><a href="#ytcaptions">キャプション</a></li>
+    <li><a href="#ytvisibility">表示</a></li>
+    <li><a href="#ytlicense">ライセンス</a></li>
+  </ul>
+  <aside class="bcls-aside bcls-aside--information"> 注:
+    <ul>
+      <li><a href="../module/creating-social-media-publishing-destinations.html#youtube_defaults">YouTube のデフォルト ビデオプロパティ</a> は、配信先を編集することで設定できます。</li>
+      <li>YouTube の API は現在の API でコメントを無効にすることをサポートしていないので、Social モジュール UIでコメントを無効にするオプションはありません。</li>
+      <li>ビデオの名前と説明文に特殊文字を使わないでください。"<" や ">" を使うと失敗することが知られていますが、その他の特殊文字も問題を引き起こす可能性があります。</li>
+    </ul>
+  </aside>
+  <div id="ytthumb" class="BCL-subsection">
+    <h3>サムネイル ソースの設定</h3>
+    <p>YouTube に投稿する際、動画のサムネイル ソースを設定することができます。</p>
+    <ul>
+      <li><strong>YouTube</strong> - YouTube がサムネイルを選択します。</li>
+      <li><strong>Video Cloud</strong> - Video Cloud サムネイル画像を YouTube サムネイルとして使用します。</li>
+      <li><strong>カスタム画像</strong> - カスタム サムネイル画像を参照して選択します。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-yt-thumb.png" /></figure>
+    <p><strong>すべての配信先の使用</strong> をチェックすると、現在公開されているすべての配信先でこのサムネイルが使用されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注: Brightcove Social から YouTube にカスタム動画サムネイルを投稿する前に、YouTube アカウントを認証する必要があります。 YouTube アカウントの認証については、<a href="https://www.youtube.com/verify">このリンク</a>を参照して下さい。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: Studio でサムネイル画像を更新しても、YouTube 側のサムネイル画像は更新されません。</aside>
+  </div>
+  <div id="ytpostinfo" class="BCL-subsection">
+    <h3>投稿情報プロパティの設定</h3>
+    <p><strong>投稿情報</strong> リンクをクリックします。 以下の YouTube 動画のプロパティを設定できます。</p>
+    <ul>
+      <li><strong>タイトル</strong> - 動画のタイトル（デフォルトは Video Cloud のタイトル）。 YouTube は 100 文字までサポートしています。</li>
+      <li><strong>説明</strong> - 動画の説明（デフォルトは Video Cloud 長い説明）。 YouTube は最大 5000 文字をサポートします。</li>
+      <li><strong>YouTube カテゴリー</strong> - ビデオのコンテンツ カテゴリー。</li>
+      <li><strong>タグ</strong> - 動画のタグ（デフォルトは Video Cloud タグ）。 タグ数には特に制限はありません。1 つのタグに最大 30 文字まで使用でき、テキスト フィールドには最大 500 文字まで入力できます。</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">タグの文字数制限について、いくつのか注意点:
+      <ol>
+        <li>プロパティ値はリストであり、リスト内の項目間のカンマは500文字制限にカウントされます。</li>
+        <li>タグにスペースが含まれている場合、API サーバーはタグの値を引用符で囲んだものとして扱い、引用符は文字数制限にカウントされます。 したがって、<code translate="No">late news</code> のようなタグがある場合、これは <code translate="No">"late news"</code> として扱われ、11文字（引用符を含む）としてカウントされます。</li>
+        <li>タグの文字数制限を超えても、Social モジュールでエラーは報告されません。 動画が正常に共有されたことを確認するには、左のナビゲーションで <strong>公開済み</strong> をクリックし、YouTubeで確認するか、<a href="https://apis.support.brightcove.com/social/getting-started/overview-social-api.html">Social API</a> を使ってステータスを取得してください。</li>
+      </ol>
+    </aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-yt-post-info.png" /></figure>
+  </div>
+  <div id="ytschedule" class="BCL-subsection">
+    <h3>スケジュール プロパティの設定</h3>
+    <p><strong>スケジュール</strong> リンクをクリックし、スケジュール設定を選択します。</p>
+    <ul>
+      <li><strong>すぐに公開</strong> - ビデオをすぐに公開します。</li>
+      <li><strong>公開日をスケジュール設定</strong> - ビデオの公開日時を選択します。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-yt-schedule-info.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">注: YouTube へのスケジュール日時の送信は、ビデオが YouTube に送信される際に一度だけ行われます。 スケジュール日時を変更する必要がある場合は YouTube で変更する必要があります。 Social モジュールは YouTube への最初の同期後、スケジュールの日付や時間を更新することはありません。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: <a href="#ytvisibility">動画の表示</a> を <strong>限定公開</strong> または <strong>非公開</strong> に設定するには、<strong>スケジュール</strong> オプションを <strong>すぐに公開</strong> に設定し、<strong>表示</strong> オプションを <strong>限定公開</strong> または <strong>非公開</strong> にします。</aside>
+  </div>
+  <div id="ytcaptions" class="BCL-subsection">
+    <h3>キャプション プロパティの設定</h3>
+    <p><strong>キャプション</strong> リンクをクリックします。 キャプションのソースを選択します。</p>
+    <ul>
+      <li><strong>Video Cloudのキャプションを使用</strong> - 動画に関連付けられたキャプションを使用します。 キャプションの操作については、<a href="/media/captions/overview-adding-captions-video.html">概要: 動画にキャプションを追加する</a>を参照して下さい。</li>
+      <li><strong>キャプションなし</strong> - キャプションはYouTubeに送信されません。</li>
+      <li><strong>キャプションのアップロード</strong> - <strong>キャプションのアップロード</strong> をクリックし、キャプションファイルを参照して選択します。キャプションファイルは、.VTTまたは.SRT形式である必要があります。 キャプションの <strong>言語</strong> を選択し、<strong>ラベル</strong> を追加して、<strong>フォーマット</strong> を選択し、<strong>キャプション ファイルの追加</strong> をクリックします。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-yt-captions-info.png" /></figure>
+  </div>
+  <aside class="bcls-aside bcls-aside--information">クローズド キャプション付きの動画は Social モジュールでクリップできますが、クリップされた動画にはキャプションは付きません。 クリップした動画に新しいキャプションをアップロードする必要があり、Social モジュールは公開時にそのキャプションを使用します。</aside>
+  <div id="ytvisibility" class="BCL-subsection">
+    <h3>表示プロパティの設定</h3>
+    <p><strong>表示</strong> リンクをクリックし、動画のプライバシー設定を選択します。 以下のプライバシー設定が可能です。</p>
+    <ul>
+      <li><strong>公開</strong> - 誰でもビデオを見ることができます。</li>
+      <li><strong>限定公開</strong> - ビデオへのリンクを持っている人なら誰でも見ることができます。</li>
+      <li><strong>非公開</strong> - ビデオは、あなたと指定されたユーザーのみが見ることができます。</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">注: YouTube の配信先では、動画に関連付けられたカスタム フィールドを使用して、プライバシー設定を動的に割り当てることができます。 詳しくは、<a href="/social/general/setting-privacy-status-video.html">動画のプライバシー ステータスを設定する</a>を参照して下さい。</aside>
+    <p><strong>動画が YouTube に投稿されると購読者に通知</strong>する設定もあります。チェックすると、購読者は購読フィードであなたの動画を見ることができ、動画がアップロードされたという通知を受け取ることができます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-yt-privacy-info.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">注: YouTubeのプライバシー設定の詳細については、<a href="https://support.google.com/youtube/answer/157177">YouTube ドキュメント</a>を参照して下さい。</aside>
+  </div>
+  <div id="ytlicense" class="BCL-subsection">
+    <h3>ライセンス プロパティの設定</h3>
+    <p><strong>ライセンス</strong> リンクをクリックし、動画のライセンスと権利所有者の設定を選択します。 以下の設定が可能です:</p>
+    <ul>
+      <li>標準YouTubeライセンス</li>
+      <li>クリエイティブコモンズ - 帰属</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-yt-license-info.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">注: YouTubeのライセンスと権利所有の詳細については、<a href="https://support.google.com/youtube/answer/2797468">YouTube ドキュメント</a>を参照して下さい。</aside>
+  </div>
+  <div id="ytshorts" class="BCL-subsection"></div>
+  <h3>YouTube ショート</h3>
+  <p>YouTubeショートビデオは、最大60秒の一口サイズのビデオクリップです。 設定方法は以下の通りです。</p>
+    <ul>
+      <li>60秒以内のポートレートモードのビデオを選びます。</li>
+      <li>タイトルか説明文のどちらかにハッシュタグ #Shorts を追加します。</li>
+      <li>ビデオをエンドポイントに公開します。</li>
+      </ul>
+</section>
+
+<section class="bcls-section">
+  <h2 id="facebook">Facebook のビデオ プロパティの設定</h2>
+  <p>Facebook の配信先を選択する際、以下のビデオ プロパティを設定することができます。</p>
+  <ul>
+    <li><a href="#fbthumb">サムネイル</a></li>
+    <li><a href="#fbpostinfo">投稿情報</a></li>
+    <li><a href="#fbschedule">スケジュール</a></li>
+    <li><a href="#fbcaptions">キャプション</a></li>
+    <li><a href="#fbtarget">ターゲット</a></li>
+    <li><a href="#fbmonetize">マネタイズ</a></li>
+    <li><a href="#fbrights">権限</a></li>
+    <li><a href="#fbdistribution">配信</a></li>
+    <li><a href="#fbtracking">トラッキング</a></li>
+  </ul>
+  <p>動画が Facebook に公開されると、Studio でソース動画を更新しても Facebook 側では更新されません。</p>
+  <aside class="bcls-aside bcls-aside--information">注: <a href="../module/creating-social-media-publishing-destinations.html#facebook_defaults">Facebook のデフォルト ビデオプロパティ</a> は、配信先を編集することで設定できます。</aside>
+  <aside class="bcls-aside bcls-aside--information">注: Facebook は.gif画像を許可していません。 サムネイル画像に .gif を使用している場合、Facebook への公開は失敗します。</aside>
+  <div id="fbthumb" class="BCL-subsection">
+    <h3>サムネイル ソースの設定</h3>
+    <p>Facebookに投稿する際、動画のサムネイルソースを設定することができます。</p>
+    <ul>
+      <li><strong>Facebook</strong> - Facebook がサムネイルを選択します。</li>
+      <li><strong>Video Cloud</strong> - Video Cloud サムネイル画像を Facebook サムネイルとして使用します。</li>
+      <li><strong>カスタム画像</strong> - カスタムサムネイル画像を参照して選択します。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-fb-thumb.png" /></figure>
+    <p><strong>すべての配信先で使用する</strong> をチェックすると、現在公開されているすべての配信先でこのサムネイルが使用されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注: Studio でサムネイル画像を更新しても、Facebook 側のサムネイル画像は更新されません。</aside>
+  </div>
+  <div id="fbpostinfo" class="BCL-subsection">
+    <h3>投稿情報プロパティの設定</h3>
+    <p><strong>投稿情報</strong> リンクをクリックします。 以下の Facebook 動画のプロパティを設定できます。</p>
+    <ul>
+      <li><strong>タイトル</strong> - 動画のタイトル（デフォルトは Video Cloud のタイトル）。 Facebook は 65 文字で切り捨てます。</li>
+      <li><strong>ステータス メッセージ</strong> - 動画の説明（デフォルトは Video Cloud の短い説明)。 Facebook は検索 API を無効にしているため、Facebook へのメンションを自動完了することはできないことに注意して下さい。</li>
+      <li><strong>タグ</strong> - リストから Facebook のタグを選択します。 Facebook がタグを管理していることに注意してください。 Social モジュールはタグに従わなければならないので、<strong>タグ</strong> フィールドに入力する際に Social はリストをチェックします。</li>
+      <li><strong>Facebook カテゴリー</strong> - ビデオのコンテンツ カテゴリー。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-fb-post-info.png" /></figure>
+  </div>
+  <div id="fbschedule" class="BCL-subsection">
+    <h3>スケジュール プロパティの設定</h3>
+    <p><strong>スケジュール</strong> リンクをクリックします。すぐに動画を公開する場合は、<strong>すぐに公開</strong> を選択するか、<strong>スケジュール設定</strong> を選択し、<strong>公開日時</strong> を選択します。 <strong>投稿は期限なし</strong> または <strong>有効期限設定</strong> を選択し、<strong>有効期限日時</strong> を選択することもできます。<strong> タイムゾーン</strong> も選択することができます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-fb-schedule-info.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">注: スケジュール日時はビデオが Facebook に送信される際に、一度だけ Facebook に送信されます。 スケジュール日時を変更する必要がある場合は、Facebook で変更する必要があります。 Soccial モジュールは Facebook との最初の同期後、スケジュールの日付や時間を更新することはありません。</aside>
+  </div>
+  <div id="fbcaptions" class="BCL-subsection">
+    <h3>キャプション プロパティの設定</h3>
+    <p><strong>キャプション</strong> リンクをクリックします。 キャプションのソースを選択します。</p>
+    <ul>
+      <li><strong>Video Cloudのキャプションを使用</strong> - 動画に関連付けられたキャプションを使用します。 キャプションの操作については <a href="/media/captions/overview-adding-captions-video.html">概要：動画にキャプションを追加する</a>を参照して下さい。
+        <p>キャプションの場合、Facebook には、Social がテキストトラックの <code translate="No">言語</code> から入力する <code translate="No">言語</code> と、Social がテキストトラックの <code translate="No">ラベル</code> から入力する <code translate="No">名前</code> が必要です。</p>
+        <p>この <code translate="No">名前</code> は、Facebook プレーヤーの「設定」メニューと「クローズド・キャプション」メニューを通じて視聴者に表示されることに注意してください。 テキストトラックのラベルは、視聴者にとって意味のあるものに設定することをお勧めします。 (例えば、異なる言語のキャプションをその言語で表示するなど）。</p>
       </li>
-      <li>動画の公開先を選択します。[ <strong>新しい宛先を追加] をクリックして</strong>、<a href="/social/creating-social-media-publishing-destinations.html">新しい宛先を作成することもできます</a>。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-publish-preview.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">注:エラーのある宛先にはエラーアイコンが表示されます（<img alt="" src="/assets/images/social/node16344-error-icon.png" />）名前の横。宛先を選択し、[ <strong>再接続]</strong>をクリックして問題を解決します。</aside>
-      </li>
-      <li>各公開先の動画メタデータプロパティを確認します。動画のプロパティは、公開するソーシャルメディアプラットフォームによって異なります。詳細については、各ソーシャルメディアプラットフォームのセクションを参照してください。
+      <li><strong>キャプションなし</strong> - キャプションは Facebook に送信されません。</li>
+      <li><strong>キャプションのアップロード</strong> - <strong>キャプションのアップロード</strong> をクリックし、キャプションファイルを参照して選択します。 キャプションファイルは、.VTTまたは.SRT形式である必要があります。 キャプションの <strong>言語</strong> と <strong>形式</strong> を選択します。<strong>キャプション ファイルの追加</strong>をクリックします。</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">注: Facebook では、キャプション言語に言語に加えて国を含める必要があります。例: en-US または en-UK など。国コードのみの言語コード (つまり、「us」)の場合、同期時に失敗します。</aside>
+    <aside class="bcls-aside bcls-aside--information">クローズド キャプション付きの動画はSocialでクリップできますが、クリップされた動画にはキャプションは付きません。 クリップした動画に新しいキャプションをアップロードする必要があり、Social は公開時にそのキャプションを使用します。</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-fb-captions-info.png" /></figure>
+  </div>
+  <div id="fbtarget" class="BCL-subsection">
+    <h3>ターゲット(対象) プロパティの設定</h3>
+    <p><strong>対象</strong> リンクをクリックして、動画を公開する場所を設定します。 以下のオプションがあります</p>
+    <ul>
+      <li><strong>視聴者最適化関心事項</strong> - タグを追加して、あなたの投稿を楽しむ可能性の高い人々の興味を説明します。詳しくは <a href="https://www.facebook.com/facebookmedia/get-started/interest-targeting">Facebook ドキュメント</a>をご覧ください。</li>
+      <li><strong>地域制限</strong> - 投稿した動画を表示する、または表示しない国を追加します。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-fb-targeting-info.png" /></figure>
+  </div>
+  <div id="fbmonetize" class="BCL-subsection">
+    <h3>マネタイズ プロパティの設定</h3>
+    <p><strong>マネタイズ </strong> リンクをクリックします。 以下のプロパティを設定できます。</p>
+    <ul>
+      <li><strong>この配信先への投稿のビジネスパートナー</strong> - ブランデッドコンテンツ投稿用のビジネスパートナーを追加します。 入力すると、一致するビジネスのリストが表示されます。 Facebookのブランデッドコンテンツについては <a href="https://www.facebook.com/facebookmedia/solutions/branded-content">Facebook ドキュメント</a>を参照して下さい。</li>
+      <li><strong>ビジネスパートナーの投稿促進を許可</strong></li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-fb-monetize-info.png" /></figure>
+  </div>
+  <div id="fbrights" class="BCL-subsection">
+    <h3>権限プロパティの設定</h3>
+    <aside class="bcls-aside bcls-aside--information">注: 権限オプションを表示するには、Facebookアカウントが Facebook Rights Manager にアクセスできる必要があります。</aside>
+    <p><strong>権限 </strong>リンクをクリックします。 以下のプロパティを設定できます。</p>
+    <ul>
+      <li><strong>一致するコンテンツの検出</strong> - Facebook権限管理を有効にする場合はチェックを入れてください。 詳しくは <a href="https://rightsmanager.fb.com">Facebook ドキュメント</a>を参照して下さい。</li>
+      <li><strong>所有者の指定</strong> - ビデオ、オーディオ、またはその両方の著作権所有者を指定します。</li>
+      <li><strong>地域制限</strong> - <strong>世界中</strong>、<strong>含まれる国</strong>、<strong>除外する国</strong> のいずれかを選択します。含めるまたは除外するを選択した場合は、<strong>地域制限</strong> を追加します。</li>
+      <li><strong>一致ルールの適用</strong> - ルールを選択します。<strong>マッチルール</strong> は、ユーザーが一致した動画をアップロードしたときに実行される自動アクションを決定します。マッチルールは Facebook 内で管理されます。</li>
+      <li><strong>権限の付与</strong> - 特定のユーザー、ページ、または Instagram アカウントに、コンテンツに一致する動画を投稿する権限を与えることを許可します。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-fb-rights-info.png" /></figure>
+  </div>
+  <div id="fbdistribution" class="BCL-subsection">
+    <h3>配信プロパティの設定</h3>
+    <p><strong>配信 </strong>リンクをクリックして、動画の視聴可能な場所を設定します。以下の<strong> カスタム配信およびモデレーション </strong>オプションを使用できます。</p>
+    <ul>
+      <li><strong>ニュースフィードに表示</strong> - ニュースフィードに動画を表示します。</li>
+      <li><strong>埋め込みを許可</strong> - サードパーティーサイトへのビデオの埋め込みを許可します。</li>
+      <li><strong>秘密の動画として追加</strong> - 動画は直接 URL からのみアクセス可能で、Facebook で検索することはできません。
         <ul>
-          <li><a href="#youtube">ユーチューブ</a></li>
-          <li><a href="#facebook">フェイスブック</a></li>
-          <li><a href="#twitter">ツイッター</a></li>
+          <li><strong>ソーシャル アクションをブロック</strong> - いいね！とコメントを禁止します。</li>
         </ul>
       </li>
-      <li>[ <strong>宛先に公開</strong> ] ボタンをクリックして、動画を公開します。左ナビゲーションの[<strong>公開済み</strong>]をクリックして、配信ステータスをモニターします。ストリームの公開ステータスの表示の詳細は、「<a href="/social/viewing-videos-published-social-media.html">ソーシャルメディア公開ストリームの表示」を参照してください</a>。</li>
-    </ol>
-    <p>[公開] ボタンを使用した動画の公開は、1 回限りの公開操作です。この方法を使用して公開されたビデオは、最初のアップロード後に Social モジュールからメタデータの更新を受信しません。</p>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-fb-distribution.png" /></figure>
+  </div>
+  <div id="fbtracking" class="BCL-subsection">
+    <h3>トラッキング プロパティの設定</h3>
+    <p><strong>トラッキング</strong> リンクをクリックして、システム間でビデオを追跡するためのユニバーサルIDを割り当てます。以下の <strong>ユニバーサル ID</strong> オプションを使用できます。</p>
+    <ul>
+      <li>空白のままにする。</li>
+      <li>Video Cloud の動画 ID を使用する。</li>
+      <li>存在する場合、Video Cloud の リファレンス ID を使用する。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-fb-tracking.png" /></figure>
+  </div>
+</section>
+<section class="bcls-section">
+  <h2 id="x">X（旧Twitter）の動画プロパティの設定</h2>
+  <p>X の配信先を選択する際、以下のプロパティを設定することができます。</p>
+  <ul>
+    <li><a href="#twpostinfo">投稿情報</a></li>
+  </ul>
+  <p class="BCL-aside">動画が X に公開された後、Studio でソース動画が更新されても、X 側では更新されません。</p>
+  <aside class="bcls-aside bcls-aside--warning">注: 現在、私たちのプラットフォームは、X（Twitter）プレミアムエディションの機能である2時間以上の動画をサポートしていません。</aside>
+  <aside class="bcls-aside bcls-aside--information">注:<a href="../module/creating-social-media-publishing-destinations.html#twitter_defaults"> Xのデフォルトビデオプロパティ</a> は、配信先を編集して設定することができます。</aside>
+  <div id="twpostinfo" class="BCL-subsection">
+    <h3>投稿情報プロパティの設定</h3>
+    <p><strong>投稿情報</strong> リンクをクリックし、<strong>ツイート</strong> 内容を入力します。 @メンションは X に送信されるときに #ハッシュタグに変換されることに注意してください。詳細については、<a href="https://www.brightcove.com/en/resources/blog/deprecation-twitter-mentions-brightcove-social">Brightcove Social における X @メンションの廃止</a>を参照して下さい。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-twitter-tweet.png" /></figure>
+  </div>
+  <aside class="bcls-aside bcls-aside--information">Xのパブリッシャーは、140秒（Xの最大許容長）以上の動画に自動タグ付けします。 詳細は <a href="https://studio.support.brightcove.com/social/general/viewing-videos-published-social-media.html#errors">こちら</a>を参照して下さい。</aside>
+</section>
+<section class="bcls-section">
+  <h2 id="linkedin">LinkedIn の動画プロパティの設定</h2>
+  <p>15分までの動画をLinkedInにアップロードできます。 LinkedIn の動画の要件については <a href="https://www.linkedin.com/help/linkedin/answer/a527229/share-photos-or-videos?lang=en">LinkedIn ドキュメント</a>をご覧ください。LinkedIn の配信先を選択する場合、次の動画プロパティを設定できます。</p>
+  <ul>
+    <li><a href="#ytthumb">サムネイル ソース</a></li>
+    <li><a href="#ytpostinfo">投稿情報</a></li>
+    <li><a href="#ytcaptions">キャプション</a></li>
+    <li><a href="#ytvisibility">表示プロパティの設定</a></li>
+  </ul>
+  <aside class="bcls-aside bcls-aside--information"> 注:
+    <ul>
+      <li><a href="../module/creating-social-media-publishing-destinations.html#linkedin_defaults">LinkedIn のデフォルト ビデオプロパティ</a> は、配信先を編集することで設定できます。</li>
+      <li>ビデオの名前と説明文に特殊文字を使わないでください。"<" や ">" を使うと失敗することが知られていますが、その他の特殊文字も問題を引き起こす可能性があります。</li>
+    </ul>
+  </aside>
+  <div id="linkedinthumb" class="BCL-subsection">
+    <h3>サムネイル ソースの設定</h3>
+    <p>LinkedIn に投稿する際、動画のサムネイルのソースを設定することができます。</p>
+    <ul>
+      <li><strong>Video Cloud</strong> - Video Cloud サムネイル画像を LinkedIn サムネイルとして使用します。</li>
+      <li><strong>LinkedIn</strong> - LinkedInがサムネイルを選択します。</li>
+      <li><strong>カスタム画像</strong> - 使用するカスタム サムネイル画像を参照して選択します。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-linkedin-thumb.png" /></figure>
+    <p><strong>すべての配信先で使用</strong> をチェックすると、現在公開されているすべての配信先でこのサムネイルが使用されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注: Studio でサムネイル画像を更新しても、LinkedIn 側のサムネイル画像は更新されません。</aside>
+  </div>
+  <div id="linkedinpostinfo" class="BCL-subsection">
+    <h3>投稿情報プロパティの設定</h3>
+    <p><strong>投稿情報</strong> リンクをクリックします。 以下の LinkedIn ビデオのプロパティを設定できます。</p>
+    <ul>
+      <li><strong>タイトル</strong> - 動画のタイトル（デフォルトは Video Cloud のタイトル）</li>
+      <li><strong>説明</strong> - 動画の説明（デフォルトは Video Cloud の短い説明）。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-linkedin-post-info.png" /></figure>
+  </div>
+  <div id="linkedincaptions" class="BCL-subsection">
+    <h3>キャプション プロパティの設定</h3>
+    <p><strong>キャプション</strong> リンクをクリックします。 キャプションのソースを選択します。</p>
+    <ul>
+      <li><strong>Video Cloudのキャプションを使用</strong> - 動画に関連付けられたキャプションを使用します。 キャプションの操作については、<a href="/media/captions/overview-adding-captions-video.html">概要: 動画にキャプションを追加する</a>を参照して下さい。</li>
+      <li><strong>キャプションなし</strong> - キャプションが LinkedIn に送信されることはありません。</li>
+      <li><strong>キャプションのアップロード</strong> - <strong>キャプションのアップロード</strong> をクリックし、キャプション・ファイルを参照して選択します。 キャプションファイルは、.VTTまたは.SRT形式である必要があります。キャプションの <strong>言語</strong> を選択し、<strong>ラベル</strong> を追加して <strong>形式</strong> を選択します。 <strong>キャプションファイルの追加</strong> をクリックします。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-linkedin-captions-info.png" /></figure>
+  </div>
+  <aside class="bcls-aside bcls-aside--information">クローズド キャプション付きの動画は Social モジュールでクリップできますが、クリップされた動画にはキャプションは付きません。 クリップした動画に新しいキャプションをアップロードする必要があり、Social モジュールは公開時にそのキャプションを使用します。</aside>
+  <div id="linkedinvisibility" class="BCL-subsection">
+    <h3>表示プロパティの設定</h3>
+    <p><strong>表示</strong> リンクをクリックし、動画の表示設定を選択します。 以下の設定が可能です。</p>
+    <ul>
+      <li><strong>PUBLIC</strong> - 誰でもビデオを見ることができます。</li>
+      <li><strong>LOGGED IN</strong> - ログインしていれば誰でもビデオを見ることができます。</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-linkedin-visibility-info.png" /></figure>
+  </div>
+</section>
+    <section class="bcls-section">
+    <h2 id="Instagram">Instagram 動画プロパティの設定</h2>
+  <p>Instagram の配信先を選択する際、以下の動画の詳細を入力することができます。</p>
+  <ul>
+    <li><strong>キャプション</strong> - 画像、ビデオ、またはカルーセルのキャプションを書きます。最大 2200 文字、ハッシュタグ 30 個、タグ 20 個までです。</li>
+    <li><strong>フィードに共有</strong> - 投稿をフィードとリールタブに表示するか、リールタブのみに表示するかを選択します。</li>
+    <li><strong>コメント</strong> - コメントは非表示にも表示にもできます。
+     </li>
+  <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/module/publish-social/instagram-post.webp" /></figure>
+  <aside class="bcls-aside bcls-aside--information"> 注:
+    <li>Instagram に投稿する動画の長さは3秒以上14分以内です。</li> 
+    <li>位置情報など、サポートされていないフィールドもあります。</li>
+  </aside>
   </section>
   <section class="bcls-section">
-    <h2 id="youtube">YouTube のビデオプロパティの設定</h2>
-    <p>デフォルトでは、15 分までの動画を YouTube にアップロードできます。長い動画をアップロードする方法については、「YouTube <a href="/general/enabling-longer-videos-youtube.html">で長い動画を有効にする」を参照してください</a>。動画が YouTube に公開された後、Studio でソースビデオを更新しても YouTube 側で更新されません。</p>
-    <p>YouTube配信先を選択する際に、次の動画プロパティを設定できます。</p>
-    <ul>
-      <li><a href="#ytthumb">サムネソース</a></li>
-      <li><a href="#ytpostinfo">投稿情報</a></li>
-      <li><a href="#ytschedule">スケジュール</a></li>
-      <li><a href="#ytcaptions">キャプション</a></li>
-      <li><a href="#ytvisibility">可視性</a></li>
-      <li><a href="#ytlicense">ライセンス</a></li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information">ノート: 
-      <ul>
-        <li><a href="creating-social-media-publishing-destinations.html#youtube_defaults">YouTubeのデフォルトのビデオプロパティは</a>、宛先を編集することによって設定できます。</li>
-        <li>YouTube API は、現在の API によるコメントの無効化をサポートしていないため、Social UI でコメントを無効にするオプションはありません。</li>
-        <li>ビデオの名前と説明に特殊文字を使用しないでください。「」または &lt; 「&gt;」を使用すると失敗することがわかっていますが、その他の特殊文字も問題を引き起こす可能性があります。</li>
-      </ul>
+    <h2 id="Pinterest">Pinterest 用の投稿の作成</h2>
+    <aside class="bcls-aside bcls-aside--information"> 注:
+      <li>始める前に Pinterest アカウントをビジネスアカウントとして設定する必要があります。</li>
+      <li>投稿を公開するには、少なくとも1つのボードが必要です。</li>
     </aside>
-    <div id="ytthumb" class="BCL-subsection">
-      <h3>サムネイルソースの設定</h3>
-      <p>YouTubeに投稿する場合、動画のサムネイルソースは次のように設定できます。</p>
-      <ul>
-        <li><strong>YouTube</strong> -YouTubeがサムネを選ぶ</li>
-        <li><strong>ビデオクラウド</strong> -動画クラウドのサムネイル画像を YouTube のサムネイルとして使用する</li>
-        <li><strong>カスタムイメージ</strong> -使用するカスタムサムネイルイメージを参照して選択します。</li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-yt-thumb.png" /></figure>
-      <p>[ すべての宛先に使用] をオンにすると、現在公開されているすべての宛先にこのサムネールが使用されます。</p>
-      <aside class="bcls-aside bcls-aside--information">注:カスタム動画のサムネイルを Brightcove Social から YouTube に投稿する前に、YouTube アカウントを確認する必要があります。YouTube アカウントの確認については、<a href="https://www.youtube.com/verify">このリンクを参照してください</a>。</aside><aside class="bcls-aside bcls-aside--information">注:Studio でサムネイル画像を更新しても、YouTube 側のサムネイル画像は更新されません。</aside>
-    </div>
-    <div id="ytpostinfo" class="BCL-subsection">
-      <h3>投稿情報プロパティを設定する</h3>
-      <p>[ <strong>投稿情報]</strong>リンクをクリックします。次の YouTube 動画プロパティを設定できます。</p>
-      <ul>
-        <li><strong>タイトル</strong> -動画のタイトル（デフォルトはビデオクラウドのタイトルです）。YouTube は 100 文字までサポートしています。</li>
-        <li><strong>説明</strong> -ビデオの説明（デフォルトは Video Cloud の簡単な説明です）。YouTubeは5000文字までサポートしています。</li>
-        <li><strong>YouTube カテゴリ</strong> -動画のコンテンツカテゴリ</li>
-        <li><strong>タグ</strong> -ビデオのタグ (既定は Video Cloud タグ)。特定のタグ数の制限はありません。タグごとに最大 30 文字を使用でき、テキストフィールドには最大 500 文字を使用できます。</li>
-      </ul>
-      <aside class="bcls-aside bcls-aside--information">タグの文字数制限について注意すべき点がいくつかあります。
-        <ol>
-          <li>プロパティ値はリストであり、リスト内の項目間のカンマは 500 文字の制限にカウントされます。</li>
-          <li>タグにスペースが含まれている場合、API サーバーはタグの値を引用符で囲むように処理し、引用符は文字数の制限にカウントされます。したがって、などのタグがある場合<code translate="No">late news</code>、<code translate="No">"late news"</code>これはとして扱われ、11 文字（引用符を含む）としてカウントされます。</li>
-          <li>タグの文字数制限を超えると、Social モジュールにエラーは報告されません。ビデオが正常に共有されたことを確認するには、をクリックします<strong>公開済み</strong>左側のナビゲーションで、YouTubeを確認するか、<a href="/social/overview-social-api.html">Social API</a>。</li>
-        </ol>
-      </aside>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-yt-post-info.png" /></figure>
-    </div>
-    <div id="ytschedule" class="BCL-subsection">
-      <h3>公開設定プロパティを設定する</h3>
-      <p>[ <strong>スケジュール]</strong>リンクをクリックし、スケジュール設定を選択します。</p>
-      <ul>
-        <li><strong>すぐに公開</strong> -ビデオをすぐに公開するには</li>
-        <li><strong>公開日をスケジュールする</strong> -ビデオの公開日時を選択します。</li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-yt-schedule-info.png" /></figure>
-      <aside class="bcls-aside bcls-aside--information">注:スケジュールの日付と時刻は、動画がYouTubeに送信されたときに一度だけYouTubeに送信されます。スケジュールの日付や時刻を変更する必要がある場合は、YouTube で変更する必要があります。Social モジュールでは、YouTube への初回同期後のスケジュールの日付や時刻は更新されません。</aside><aside class="bcls-aside bcls-aside--information">注:<a href="#ytvisibility">ビデオの表示設定を</a> <strong>[非公開]</strong>または <strong>[非公開]</strong> に設定するには、<strong>[スケジュール]</strong> オプションを設定します。すぐに公開し、<strong>[表示設定]</strong> オプションを <strong>[非公開]</strong> または <strong>[非公開]</strong> に設定します。</aside>
-    </div>
-    <div id="ytcaptions" class="BCL-subsection">
-      <h3>キャプションプロパティの構成</h3>
-      <p>キャプションリンクをクリックします。キャプションのソースを選択します。</p>
-      <ul>
-        <li><strong>Video Cloud キャプションを使用する</strong> -動画に関連付けられたキャプションを使用します。Video Cloud でのキャプションの操作について詳しくは、「<a href="/media/overview-adding-captions-video.html">概要」を参照してください。動画にキャプションを追加する</a>。</li>
-        <li><strong>キャプションなし</strong> -YouTube にキャプションは送信されません</li>
-        <li><strong>キャプションのアップロード</strong> - <strong>キャプションをアップロードをクリックし</strong>、キャプションファイルを参照して選択します。キャプションファイルは、.VTT または.SRT 形式である必要があります。<strong>キャプションの言語を選択し</strong>、ラベルを追加し、[ <strong>形式] を選択します</strong>。[ <strong>キャプションファイルを追加] をクリックします</strong>。</li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-yt-captions-info.png" /></figure>
-    </div>
-    <aside class="bcls-aside bcls-aside--information">クローズドキャプション付きの動画はソーシャル経由でクリップできますが、クリップされた動画にはキャプションがありません。クリップされた動画に新しいキャプションをアップロードする必要があり、Social は公開時にそれらを使用します。</aside>
-    <div id="ytvisibility" class="BCL-subsection">
-      <h3>可視性プロパティの設定</h3>
-      <p>[ <strong>表示設定]</strong>リンクをクリックし、動画のプライバシー設定を選択します。次のプライバシー設定を使用できます。</p>
-      <ul>
-        <li><strong>パブリック</strong> -誰でもビデオを見ることができます</li>
-        <li><strong>非上場</strong> -動画へのリンクを持っている人は誰でも閲覧できます</li>
-        <li><strong>非公開</strong> - お客様とお客様が選択したユーザーのみがその動画を見ることができます。</li>
-      </ul>
-      <aside class="bcls-aside bcls-aside--information">注:YouTube の配信先では、動画に関連付けられたカスタムフィールドを使用して、プライバシー設定を動的に割り当てることができます。詳細については、<a href="/social/setting-privacy-status-video.html">ビデオのプライバシーステータスの設定を参照してください</a>。</aside>
-      <p><strong>動画が YouTube に投稿されたときに登録者に通知する設定もあります</strong>。オンにすると、チャンネル登録者は自分の動画を [サブスクリプション] フィードに表示し、その動画がアップロードされたことを示す通知を受け取ることがあります。</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-yt-privacy-info.png" /></figure>
-      <aside class="bcls-aside bcls-aside--information">注:YouTube プライバシー設定の詳細については、<a href="https://support.google.com/youtube/answer/157177"> YouTube のドキュメントを参照してください</a>。</aside>
-    </div>
-    <div id="ytlicense" class="BCL-subsection">
-      <h3>ライセンスプロパティを設定する</h3>
-      <p>[ <strong>ライセンス]</strong>リンクをクリックし、ビデオの [ライセンスと権利の所有権] 設定を選択します。次の設定を使用できます。</p>
-      <ul>
-        <li>標準YouTubeのライセンス</li>
-        <li>クリエイティブコモンズ - 帰属</li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-yt-license-info.png" /></figure>
-      <aside class="bcls-aside bcls-aside--information">注:YouTube のライセンスと権利の所有権の詳細については、<a href="https://support.google.com/youtube/answer/2797468"> YouTube のドキュメントを参照してください</a>。</aside>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="facebook">Facebook向けに動画プロパティを設定する</h2>
-    <p>Facebook の宛先を選択する場合、次のビデオプロパティを設定できます。</p>
+    <p>Pinterest の配信先を選択する際、以下の動画の詳細を入力することができます。</p>
     <ul>
-      <li><a href="#fbthumb">サムネイル</a></li>
-      <li><a href="#fbpostinfo">投稿情報</a></li>
-      <li><a href="#fbschedule">スケジュール</a></li>
-      <li><a href="#fbcaptions">キャプション</a></li>
-      <li><a href="#fbtarget">ターゲット</a></li>
-      <li><a href="#fbmonetize">収益化</a></li>
-      <li><a href="#fbrights">権利</a></li>
-      <li><a href="#fbdistribution">ディストリビューション</a></li>
-      <li><a href="#fbtracking">トラッキング</a></li>
+      <li><strong>Pin's タイトル</strong> - ピンの名前を記入してください。 最大100文字。</li>
+      <li><strong>説明</strong> - ビデオの内容を説明してください。</li>
+      <li><strong>ボード</strong> - 動画を公開するボードを選択してください。 少なくとも1つのボードを作成する必要があります。</li>
+      <li><strong>配信先リンク</strong> - Pinterest の配信先リンク。</li>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/module/publish-social/pinterest-post.webp" /></figure>
     </ul>
-    <p>ビデオを Facebook に公開した後、Studio のソースビデオに対する更新は Facebook 側で更新されません。</p>
-    <aside class="bcls-aside bcls-aside--information">注:<a href="creating-social-media-publishing-destinations.html#facebook_defaults">Facebookのデフォルトのビデオプロパティは、</a>宛先を編集して設定できます。</aside><aside class="bcls-aside bcls-aside--information">注:フェイスブックは.gif 画像を許可していません。動画がサムネイル画像に.gif を使用している場合、Facebook への公開は失敗します。</aside>
-    <div id="fbthumb" class="BCL-subsection">
-      <h3>サムネイルソースの設定</h3>
-      <p>Facebook に投稿する場合、動画のサムネイルソースは次のように設定できます。</p>
-      <ul>
-        <li><strong>フェイスブック</strong> -Facebookはサムネイルを選択します</li>
-        <li><strong>ビデオクラウド</strong> -ビデオクラウドのサムネイル画像を Facebook のサムネイルとして使用する</li>
-        <li><strong>カスタムイメージ</strong> -使用するカスタムサムネイルイメージを参照して選択します。</li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-fb-thumb.png" /></figure>
-      <p>[ すべての宛先に使用] をオンにすると、現在公開されているすべての宛先にこのサムネールが使用されます。</p>
-      <aside class="bcls-aside bcls-aside--information">注:Studio でサムネイル画像を更新しても、Facebook 側のサムネイル画像は更新されません。</aside>
-    </div>
-    <div id="fbpostinfo" class="BCL-subsection">
-      <h3>投稿情報プロパティを設定する</h3>
-      <p>[ <strong>投稿情報]</strong>リンクをクリックします。以下の Facebook ビデオプロパティを設定できます。</p>
-      <ul>
-        <li><strong>タイトル</strong> -動画のタイトル（デフォルトはビデオクラウドのタイトルです）。Facebookは65文字後に切り捨てる</li>
-        <li><strong>ステータスメッセージ</strong> -ビデオの説明（デフォルトは Video Cloud の簡単な説明）。Facebookは検索APIを無効にしているため、Facebookのメンションを自動補完することはできません。</li>
-        <li><strong>タグ</strong> -リストからFacebookのタグを選択します。Facebookがタグを管理していることに注意してください。Social モジュールは、タグフィールドに入力するときにリストをチェックするため、Social モジュールはこれらに準拠する必要があります。</li>
-        <li><strong>Facebookのカテゴリ</strong> -動画のコンテンツカテゴリ</li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-fb-post-info.png" /></figure>
-    </div>
-    <div id="fbschedule" class="BCL-subsection">
-      <h3>公開設定プロパティを設定する</h3>
-      <p>[ <strong>スケジュール]</strong>リンクをクリックします。[ すぐに公開] を選択してビデオをすぐに公開するか、[ <strong>公開日のスケジュール]</strong>を選択して [ <strong>公開日時] を選択します</strong>。また、投稿の有効期限を設定したり、[ 有効期限をスケジュール設定] を選択してから、[ <strong>有効期限の日付と時刻] を選択することもできます</strong>。タイムゾーンも選択できます。</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-fb-schedule-info.png" /></figure>
-      <aside class="bcls-aside bcls-aside--information">注:スケジュールの日付と時刻は、ビデオがFacebookに送信されるときに一度だけFacebookに送信されます。スケジュール日や時刻を変更する必要がある場合は、Facebookで変更する必要があります。Social モジュールは、Facebook への最初の同期後、スケジュールの日付や時刻を更新しません。</aside>
-    </div>
-    <div id="fbcaptions" class="BCL-subsection">
-      <h3>キャプションプロパティの構成</h3>
-      <p>キャプションリンクをクリックします。キャプションのソースを選択します。</p>
-      <ul>
-        <li><strong>Video Cloud キャプションを使用する</strong> -動画に関連付けられたキャプションを使用します。Video Cloud でのキャプションの操作について詳しくは、「<a href="/media/overview-adding-captions-video.html">概要」を参照してください。動画にキャプションを追加する</a>。
-          <p>キャプションの場合、Facebook には<code translate="No">language</code>、<code translate="No">language</code>テキストトラック上のからSocialが入力され、<code translate="No">name</code>。<code translate="No">label</code>テキストトラック上のからSocialが移入する。</p>
-          <p>は、「設定」<code translate="No">name</code>メニューと「クローズドキャプション' 」' メニューからFacebookプレーヤーの視聴者に表示されることに注意してください。テキストラックラベルは、視聴者に意味のあるものに設定することをお勧めします。（たとえば、異なる言語のキャプションにそれらの言語でラベルを付ける。）</p>
-        </li>
-        <li><strong>キャプションなし</strong> -YouTube にキャプションは送信されません</li>
-        <li><strong>キャプションのアップロード</strong> - <strong>キャプションをアップロードをクリックし</strong>、キャプションファイルを参照して選択します。キャプションファイルは、.VTT または.SRT 形式である必要があります。キャプションの [ <strong>言語]</strong>と [ <strong>形式] を選択します</strong>。[ <strong>キャプションファイルを追加] をクリックします</strong>。</li>
-      </ul>
-      <aside class="bcls-aside bcls-aside--information">注:Facebookでは、キャプション言語に言語に加えて国を含める必要があります（例: en-US または en-UK）。国コードだけの言語コード (つまり「米国」) は、同期時に失敗します。</aside><aside class="bcls-aside bcls-aside--information">クローズドキャプション付きの動画はソーシャル経由でクリップできますが、クリップされた動画にはキャプションがありません。クリップされた動画に新しいキャプションをアップロードする必要があり、Social は公開時にそれらを使用します。</aside>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-fb-captions-info.png" /></figure>
-    </div>
-    <div id="fbtarget" class="BCL-subsection">
-      <h3>ターゲットプロパティの設定</h3>
-      <p><strong>TARGET</strong>リンクをクリックして、ビデオを見ることができる場所を設定します。次のオプションを使用できます。</p>
-      <ul>
-        <li><strong>オーディエンスの最適化興味</strong> -あなたの投稿を楽しむ可能性が最も高いユーザーの興味を説明するタグを追加します。詳細については、<a href="https://www.facebook.com/facebookmedia/get-started/interest-targeting"> Facebook のドキュメントを参照してください</a>。</li>
-        <li><strong>場所の制限</strong> -投稿の表示に含める、または除外する国を追加します</li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-fb-targeting-info.png" /></figure>
-    </div>
-    <div id="fbmonetize" class="BCL-subsection">
-      <h3>収益化のプロパティの設定</h3>
-      <p>収益化リンクをクリックします。次のプロパティを設定できます。</p>
-      <ul>
-        <li><strong>この宛先への投稿のビジネスパートナーは誰ですか？</strong> -ブランドコンテンツの投稿にビジネスパートナーを追加します。入力すると、一致するビジネスのリストが表示されます。Facebook ブランドコンテンツの詳細については、<a href="https://www.facebook.com/facebookmedia/solutions/branded-content"> Facebook のドキュメントを参照してください</a>。</li>
-        <li><strong>ビジネスパートナーが投稿を後押しできるようにする</strong></li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-fb-monetize-info.png" /></figure>
-    </div>
-    <div id="fbrights" class="BCL-subsection">
-      <h3>Rights プロパティの設定</h3>
-      <aside class="bcls-aside bcls-aside--information">注:「権利」オプションが表示されるには、Facebook アカウントが Facebook の権利マネージャーにアクセスできる必要があります。</aside>
-      <p>[ <strong>権利]</strong>リンクをクリックします。次のプロパティを設定できます。</p>
-      <ul>
-        <li><strong>一致するコンテンツを検出</strong> -Facebookの権利管理を有効にする場合にオンにします。詳細については、<a href="https://rightsmanager.fb.com"> Facebook のドキュメントを参照してください</a>。</li>
-        <li><strong>所有権の指定</strong> -ビデオ、オーディオ、またはその両方の著作権所有権を指定します。</li>
-        <li><strong>国の選択</strong> - <strong>ワールドワイドを選択</strong>、<strong>国を含める、</strong>または国を除外します。[含める] または [除外] が選択されている場合は、[ <strong>ロケーション制限] を追加します</strong>。</li>
-        <li><strong>一致ルールの適用</strong> -ルールを選択します。<strong>マッチルールは、</strong>ユーザーが一致した動画をアップロードしたときに実行される自動アクションを決定します。マッチルールは Facebook 内で管理されます。</li>
-        <li><strong>許可を付与</strong> -特定のユーザー、Pages、または Instagram アカウントに、コンテンツに一致する動画を投稿する権限を与えることを許可します。</li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-fb-rights-info.png" /></figure>
-    </div>
-    <div id="fbdistribution" class="BCL-subsection">
-      <h3>配布プロパティの設定</h3>
-      <p>配布リンクをクリックして、ビデオを見ることができる場所を設定します。次のカスタム配布およびモデレーションオプションを使用できます。</p>
-      <ul>
-        <li><strong>ニュースフィードで表示</strong> -ニュースフィードに動画を表示します</li>
-        <li><strong>埋め込みを許可する</strong> -サードパーティのサイトへのビデオの埋め込みを許可する</li>
-        <li><strong>シークレットビデオとして追加</strong> -動画は直接 URL からのみアクセスでき、Facebook 上のユーザーには検索できません
-          <ul>
-            <li><strong>リアクション、コメント、共有をオフにする</strong> -いいね！とコメントを禁止する</li>
-          </ul>
-        </li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-fb-distribution.png" /></figure>
-    </div>
-    <div id="fbtracking" class="BCL-subsection">
-      <h3>トラッキングプロパティの設定</h3>
-      <p><strong>TRACKING</strong>リンクをクリックして、ユニバーサルIDを割り当てて、システム間でビデオをトラッキングします。<strong>次のユニバーサル ID</strong>オプションを使用できます。</p>
-      <ul>
-        <li>空白のままにする</li>
-        <li>ビデオクラウドのビデオ ID を使用する</li>
-        <li>存在する場合、Video Cloudの リファレンスIDを使用</li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-fb-tracking.png" /></figure>
-    </div>
   </section>
-  <section class="bcls-section">
-    <h2 id="twitter">Twitter向けに動画プロパティを設定する</h2>
-    <p>Twitter の宛先を選択する場合、次のプロパティを設定できます。</p>
-    <ul>
-      <li><a href="#twpostinfo">投稿情報</a></li>
-    </ul>
-    <p class="BCL-aside">動画がTwitterに公開された後、Studioでソースビデオを更新しても、Twitter側で更新されません。</p>
-    <aside class="bcls-aside bcls-aside--information">注:<a href="creating-social-media-publishing-destinations.html#twitter_defaults">Twitterのデフォルトの動画プロパティは、</a>送信先を編集して設定できます。</aside>
-    <div id="twpostinfo" class="BCL-subsection">
-      <h3>投稿情報プロパティを設定する</h3>
-      <p>[ <strong>投稿情報]</strong>リンクをクリックし、ツイートのコンテンツを入力します。@mentions はTwitterに送信されると #hashtags に変換されることに注意してください。詳細については、ブログ記事「ブライトコーブ Social の Twitter @mentions <a href="https://www.brightcove.com/en/blog/2018/11/deprecation-twitter-mentions-brightcove-social">の非推奨」を参照してください</a>。</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-twitter-tweet.png" /></figure>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="clip">クリップの作成</h2>
-    <p>Brightcove Social では、Video Cloud アカウントの既存の動画からビデオクリップを作成できます。クリップは、ソーシャルメディアに投稿できる短いティーザービデオとして使用できます。クリップを作成するには、[ <strong>クリップを作成] をクリックします</strong>。クリップの作成の詳細については、「Brightcove Social <a href="/social/creating-video-clip-using-brightcove-social.html">を使用してビデオクリップを作成する」を参照してください</a>。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="download">動画をダウンロードする</h2>
-    <p>ブライトコーブソーシャルでは、動画 URL をコピーしたり、動画ソースファイルをダウンロードしたりできます。ダウンロード時に、最高品質の MP4 レンディションがダウンロードされます。MP4レンディションがなければ、[<strong>ダウンロード</strong>]リンクは無効になります。</p>
-    <p>レンディションと画像のURLは固定されていないことを理解することが重要です。ブライトコーブは、メディアアセットの保存を随時再設定します。この場合、特定のアセットの URL が変更されます。これらのアセットへのハードコードされた URL に依存している場合、リンクがある時点で破損する可能性があります。メディアへのリンクが壊れないようにする最善の方法は、実行時にVideoCloudからメディアを取得することです。 CMS API。</p>
-    <aside class="bcls-aside bcls-aside--information">注:DRM が有効になっている動画はダウンロードできません（動画のサムネイルにロックが表示されます）。DRM 対応ビデオを選択すると、[ <strong>ダウンロード]</strong>ボタンが無効になります。</aside>
-    <p>動画をダウンロードするには次の手順を行ってください。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>ブライトコーブソーシャルを開きます。</li>
-      <li>クリック<strong>ビデオ</strong>左側のナビゲーションで。Video Cloud アカウントの動画の一覧が表示されます。</li>
-      <li>ダウンロードするビデオをクリックし、[ <strong>ダウンロード] をクリックします</strong>。</li>
-      <li>動画 URL をコピーするか、リンクをクリックして、ブラウザでビデオを開きます。<span class="bcl-aside">ソースファイルをローカルに保存するには、動画を右クリックします。</span>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-download-info1.png" /></figure>
-      </li>
-      <li>[<strong>完了</strong>]をクリックします。</li>
-    </ol>
-    <p>ダウンロードリンクの目的は、ファイルをダウンロードできるようにするか、ソーシャルプラットフォームのアップローダモジュール（URL からのアップロードをサポートするプラットフォームの場合）に提供できる値として URL を使用することです。この URL は、パブリックソーシャルプラットフォームの投稿に貼り付ける、長期間有効なパブリックアクセス可能な URL であることを意図していません。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="viewvc">Media モジュールでのビデオの表示</h2>
-    <p>[ビデオ] ページのビデオは、ビデオをクリックし、[ <strong>メディアで表示] をクリックすると、[メディア] モジュールで確認できます</strong>。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-view-in-vc.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">公開された場所を表示する</h2>
-    <p>ソーシャルメディアへの公開が試みられた動画が表示されます<strong>ステータスを確認する</strong> [ステータス]列にあります。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-status1.png" /></figure>
-    <p>[ <strong>ステータスを確認]</strong>リンクをクリックすると、動画が公開されたソーシャル配信先のリストと公開のステータスが表示されます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16344-published-locations1.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="360">360°動画を公開する</h2>
-    <p>YouTube、Facebook、ブライトコーブプレーヤーの両方が 360° 動画再生をサポートしています。ブライトコーブソーシャルを使用して 360° 動画を YouTube または Facebook に公開すると、動画は 360° モードで再生されます。360° エフェクトの処理中は、遅延が発生する場合があります。360° 動画を Video Cloud にアップロードする前に、いくつかの作業を行う必要があります。360° ビデオの操作については、360° <a href="/general/working-360deg-videos.html">ビデオの操作を参照してください</a>。動画がアップロードされると、360° 動画を公開するプロセスは、通常の動画と同じです。</p>
-    <aside class="bcls-aside bcls-aside--information">注:360° ビデオの再生は、特定のブラウザに限定されます。</aside><aside class="bcls-aside bcls-aside--information">注:Social モジュールを使用して 360° ビデオを同期する場合は、ビデオの取り込みに使用する取り込みプロファイルをマスターファイルを保存するように構成する必要があります。そうしないとビデオは 360 で同期されません。</aside>
-  </section>
+<section class="bcls-section">
+  <h2 id="clip">クリップの作成</h2>
+  <p>Brightcove Social は、Video Cloud アカウントにある既存の動画から動画クリップを作成する機能を提供します。 クリップは、ソーシャルメディアに投稿できる短いティーザー動画として使用できます。 クリップを作成するには、<strong>クリップ</strong> をクリックします。クリップの作成については、<a href="/social/general/creating-video-clip-using-brightcove-social.html">Brightcove Social を使用して動画クリップを作成する</a>を参照して下さい。</p>
+</section>
+<section class="bcls-section">
+  <h2 id="download">ビデオのダウンロード</h2>
+  <p>Brightcove Social には、動画 URL をコピーするか、動画ソース ファイルをダウンロードする機能があります。 ダウンロードする場合、最高品質の MP4 レンディションがダウンロードされます。 MP4レンディションがない場合、<strong>ダウンロード</strong> リンクは無効になります。</p>
+  <p>レンディションや画像の URL は固定ではないことを理解しておくことが重要です。 Brightcove はメディア アセットのストレージを随時再構成しており、その際、特定のアセットの URL は変更されます。 これらのアセットへのハードコードされた URL に依存している場合、リンクがいつか壊れる可能性があります。 メディアへのリンク切れを防ぐ最善の方法は、CMS API を使用して実行時に Video Cloud からメディアを取得することです。</p>
+  <aside class="bcls-aside bcls-aside--information">注: DRM が有効になっているビデオはダウンロードできません（ビデオのサムネイルに鍵アイコンが表示されます）。 DRMが有効なビデオを選択した場合、<strong>ダウンロード</strong> ボタンは無効になります。</aside>
+  <p>ビデオをダウンロードするには、以下の手順に従ってください。</p>
+  <ol class="bcls-tasklist-restart">
+    <li><strong>Social </strong>モジュールを開いて下さい。</li>
+    <li>左のナビゲーションで <strong>動画</strong> をクリックします。 Video Cloud アカウントにある動画のリストが表示されます。</li>
+    <li>ダウンロードするビデオをクリックし、<span class="button-blue-text-bordered"><i data-feather="download"></i> ダウンロード</span>をクリックします。</li>
+    <li>動画のURLをコピーするか、リンクをクリックしてブラウザで動画を開きます。<span class="bcl-aside">動画を右クリックして、ソースファイルをローカルに保存します。</span>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-download-info1.png" /></figure>
+    </li>
+    <li><span class="button-blue">閉じる</span> をクリックします。</li>
+  </ol>
+  <p>ダウンロード リンクの目的は、ファイルをダウンロードしたり、ソーシャル プラットフォームのアップローダー モジュール (URL からのアップロードをサポートするプラットフォームの場合) に提供できる値として URL を使用したりできるようにすることです。この URL は、ソーシャル プラットフォームの公開投稿に貼り付けるような、有効期間が長く、一般にアクセスできる URL を意図したものではありません。</p>
+</section>
+<section class="bcls-section">
+  <h2 id="viewvc">Mediaモジュールでビデオを見る</h2>
+  <p>動画ページのビデオは、ビデオをクリックしてから <span class="button-blue-text-bordered">メディアで閲覧する</span>をクリックすると、Mediaモジュールで表示できます。</p>
+  <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-view-in-vc.png" /></figure>
+</section>
+<section class="bcls-section">
+  <h2 id="status">公開ロケーションの表示</h2>
+  <p>ソーシャルメディアへの公開が試みられた動画は、ステータス欄に <strong>ステータスの確認</strong> と表示されます。</p>
+  <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-status.png" /></figure>
+  <p><strong>ステータスの確認</strong> リンクをクリックすると、動画が公開された Social 配信先のリストと公開ステータスが表示されます。</p>
+  <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16344-published-locations.png" /></figure>
+</section>
+<section class="bcls-section">
+  <h2 id="360">360° 動画の公開</h2>
+  <p>YouTube、Facebook、および Brightcove プレーヤーは、いずれも 360° 動画再生をサポートします。 360° 動画が Brightcove Social を使用して YouTube または Facebook に公開されると、動画は 360° モードで再生されます。 360° エフェクトの処理中に遅延が発生する場合があります。 360° 動画を Video Cloud にアップロードする前に、いくつか行うことがあります。 360° 動画での作業については、<a href="/general/references/working-360deg-videos.html">360° 動画での作業</a>を参照してください。 動画がアップロードされたら、360°動画を公開する手順は通常の動画と同じです。</p>
+  <aside class="bcls-aside bcls-aside--information">注: 360°動画の再生は一部のブラウザに制限されています。</aside>
+  <aside class="bcls-aside bcls-aside--information">注: Social モジュールを使用して 360°ビデオを同期する場合、ビデオのインジェストに使用するトランスコード プロファイルは、マスターファイルを保存するように設定する必要があります。</aside>
+</section>
 </article>
 
 <!-- complete bootstrap layout -->
