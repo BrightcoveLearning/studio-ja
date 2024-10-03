@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>サーバーサイド接続</title>
+        <title>カスタマーIDの検索</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="サーバーサイド接続でデータを渡します。">
+        <meta name="description" content="このトピックでは、さまざまなプラットフォームでカスタマーIDを見つける方法について説明します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -2453,7 +2453,7 @@
                       
                       
                       <li class="nav-item subsection-doc">
-                        <a class="nav-link" href="/marketing-automation/general/viewer-id/analytics-api-unique-users.html">Utilizing <code>setUser</code></a>
+                        <a class="nav-link" href="/marketing-automation/general/viewer-id/analytics-api-unique-users.html">Utilizing <code>user</code></a>
                       </li>
                       
                       
@@ -3583,7 +3583,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Server-side Connections</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/general/data-to-external-systems/server-side/">Server side</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Finding your customer ID</li>
             
             
           </ol>
@@ -3596,70 +3600,119 @@
   <div class="container">
     <div class="docs-overview py-5">
       
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
       
-<article>
-    <h1 class=""></i> サーバーサイド接続</h1>
-    <article class="bcls-article">
-        <summary>サーバーサイド接続でデータを渡します。</summary>
-        <div class="row">
-        
-
-            <div class="col-12 col-lg-4 py-3">
-                <div class="card shadow-sm" style="background: white" onclick="window.location.href = ''">
-                    <div class="card-body">
-                        <h5 class="card-title text-center m-2">はじめに</h5>
-                        <section class="flex-container">
-                            <div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/overview-server-side.html" style="text-decoration: none;">概要: サーバー サイド接続</a></li>
-                                    <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/finding-your-customer-id.html" style="text-decoration: none;">カスタマーIDの検索</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        <div class="col-12 col-lg-4 py-3">
-            <div class="card shadow-sm" style="background: white" onclick="window.location.href = ''">
-                <div class="card-body">
-                    <h5 class="card-title text-center m-2">視聴データ統合</h5>
-                    <section class="flex-container">
-                        <div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html" style="text-decoration: none;">Eloqua</a></li>
-                                <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/s3-integration.html" style="text-decoration: none;">S3</a></li>
-                                <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/salesforce-integration.html" style="text-decoration: none;">Salesforce</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4 py-3">
-            <div class="card shadow-sm" style="background: white" onclick="window.location.href = ''">
-                <div class="card-body">
-                    <h5 class="card-title text-center m-2">コンタクト オブジェクト統合</h5>
-                    <section class="flex-container">
-                        <div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/salesforce-sales-cloud/index.html" style="text-decoration: none;">Salesforce Sales Cloud</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_marketo.html" style="text-decoration: none;">Marketo</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_spotlight_hubspot.html" style="text-decoration: none;">Hubspot</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html">Eloqua</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_spotlight_braze.html">Braze</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_spotlight_blueshift.html" style="text-decoration: none;">Blueshift</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration-s3.html" style="text-decoration: none;">S3</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-        </div>
-    </article>
-</article>
+      
+<h1>カスタマーIDの検索</h1>
+<article class="bcls-article">
+  <summary>このトピックでは、さまざまなプラットフォームでカスタマーIDを見つける方法について説明します。</summary>
   
+
+    <section class="bcls-section"></section>
+        <h2 id="braze">Braze</h2>
+        <br>
+        <ol class="bcls-tasklist">
+            <li>Braze にログインします。</li>
+            <li>左サイドバーの Audience にカーソルを合わせます。</li>
+            <li>Search Users (ユーザーの検索)をクリックします。</li>
+            <li>電子メール、エイリアス、外部 ID などでユーザーを検索します。</li>
+            <li>コンタクトIDは、一番上のカードのユーザーIDになります。
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/brazeid.webp">
+                </figure>
+            </li>
+        </ol>
+
+        <br>
+        <h2 id="eloqua">Eloqua</h2>
+        <br>
+        <ol class="bcls-tasklist-restart">
+            <li>Eloqua にログインします。</li>
+            <li>トップナビゲーションバーのIDカードアイコンにカーソルを合わせてください。</li>
+            <li>Contacts (コンタクト)をクリックします。</li>
+            <li>検索バーで、Eメールなどで連絡先を検索します。</li>
+            <li>テーブル内の連絡先をダブルクリックします。</li>
+            <li>Field Details (フィールドの詳細)をクリックします。</li>
+            <li>ドロップダウンボックスで、All Contact Fields (すべてのコンタクトフィールド)を選択します。</li>
+            <li>コンタクトIDは、Eloqua Contact IDとなります。
+                <figure class="bcls-figure"></figure>
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/eloquaid.webp">
+                </figure>
+            </li>
+        </ol>
+
+        <br>
+        <h2 id="hubspot">Hubspot</h2>
+        <br>
+        <ol class="bcls-tasklist-restart">
+            <li>Hubspot にログインします。</li>
+            <li>右のナビゲーションバーで CRM にカーソルを合わせます。</li>
+            <li>Contacts (コンタクト)をクリックします。</li>
+            <li>検索バーで、Eメールなどで連絡先を検索します。</li>
+            <li>コンタクトIDは URL の末尾に記載されます。
+                <figure class="bcls-figure"></figure>
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/hubspot-id.webp">
+                </figure>
+            </li>
+        </ol>
+
+        <br>
+        <h2 id="marketo">Marketo</h2>
+        <br>
+        <ol class="bcls-tasklist-restart">
+            <li>Marketo にログインします。</li>
+            <li>上部のナビゲーションバーで、Database (データベース)をクリックします。</li>
+            <li>検索バーで、Eメールなどで連絡先を検索します。</li>
+            <li>コンタクトID は、LeadsテーブルのID列に表示されます。
+                <figure class="bcls-figure"></figure>
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/marketo-id.webp">
+                </figure>
+            </li>
+            <aside class="bcls-aside bcls-aside--tip language-editable">また、Created date (作成日)にも注意してください。</aside>
+        </ol>
+
+        <br>
+        <h2 id="s3">S3</h2>
+        <br>
+        <ol class="bcls-tasklist-restart">
+            <li>Brightcove Video Cloud にログインします。</li>
+            <li>左のナビゲーションバーで、Analytics モジュールをクリックします。</li>
+            <li>左のナビゲーションバーでパフォーマンスをクリックします。</li>
+            <li>視聴者でフィルターします。</li>
+            <li>視聴者の列からコンタクIDを選択します。
+                <figure class="bcls-figure"></figure>
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/s3-id.webp">
+                </figure>
+            </li>
+        </ol>
+
+        <br>
+        <h2 id="salesforce">Salesforce</h2>
+        <br>
+        <ol class="bcls-tasklist-restart">
+            <li>Salesforce にログインします。</li>
+            <li>上部のナビゲーションバーで、Contacts (コンタクト)をクリックします。</li>
+            <li>テーブル内のコンタクトをクリックします。</li>
+            <li>コンタクトIDは、 "/Contact/" の後の URL になります。
+                <figure class="bcls-figure"></figure>
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/salesforce-id.webp">
+                </figure>
+            </li>
+        </ol>
+    </section>
+</article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">Page Contents</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
   
 <!-- </div> -->
 </div>
