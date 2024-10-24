@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>Mediaモジュールを使用してビデオにオーディオトラックを追加する</title>
+        <title>キャプションのスタイル設定</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="このトピックでは、Mediaモジュールを使用してビデオにオーディオトラックを追加する方法について学習します。">
+        <meta name="description" content="このトピックでは、キャプションのスタイルを設定する方法について学習します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -569,7 +569,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/media/captions/adding-audio-tracks-videos-using-media-module.html" aria-current="page">Adding Audio Tracks to Videos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/adding-audio-tracks-videos-using-media-module.html">Adding Audio Tracks to Videos</a></li>
                   
                   
                   
@@ -587,7 +587,7 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/captions/styling-captions.html">Styling Captions</a></li>
+                  <li class="nav-item section-doc"><a class="nav-link" href="/media/captions/styling-captions.html" aria-current="page">Styling Captions</a></li>
                   
                   
                   
@@ -3585,7 +3585,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Adding Audio Tracks to Videos using the Media Module</li>
+            <li class="breadcrumb-item active" aria-current="page">Styling Captions</li>
             
             
           </ol>
@@ -3606,143 +3606,195 @@
       <br>
       
       
-      <article class="bcls-article">
-        <h1>Media モジュールを使用してビデオにオーディオトラックを追加する</h1>
-        <summary>このトピックでは、Media モジュールを使用してビデオにオーディオトラックを追加する方法を学習します。</summary>
-        <section class="bcls-section">
-          <p>動画には複数のオーディオトラックを設定できます。複数のオーディオトラックを使用して、次のことができます。</p>
-          <ul>
-            <li>同じ動画を異なる言語で再生。</li>
-            <li>視覚障害者のために、説明を音声で提供。</li>
-            <li>ステレオとマルチ チャンネル（サラウンド）オーディオを提供。</li>
-          </ul>
-          <p>HLS V4+ および DASHでは、DRM保護の有無にかかわらず、複数のオーディオトラックがサポートされています。複数のオーディオトラックを含むビデオには、コントロールバーにヘッドフォンのアイコン（<img alt="" src="/assets/images/media/node18591-headphone-icon.png" />）が表示されます。アイコンをクリックすると、視聴者はオーディオトラックを選択できます。</p>
-          <aside class="bcls-aside bcls-aside--information">注意:
-            <ul>
-              <li>オーディオ ソースファイルはMP3、M4A、または WAV 形式になります。</li>
-              <li>お客様のアカウントで複数のオーディオトラックを使用できるようにする必要があります。詳細については、弊社営業にお問い合わせください。</li>
-              <li>全てのオーディオ トラックは、動画のアップロードに使用した<strong>トランスコード プロファイル</strong>と同じオーディオ レンディションを生成する<strong>トランスコード プロファイル</strong>を使用して追加する必要があります。</li>
-              <li>デフォルトでは、オーディオ言語は英語に設定され、バリエーション タイプはメインです。デフォルトは、オーディオトラックを編集するときにデフォルトオプション (<img alt="" src="/assets/images/media/default-button.png" />) をチェックすることで変更できます。</li>
-              <li>動画にオーディオ トラックを追加する場合、HLS での再生を確実に成功させるためには、それらすべてのビットレート/レンディション・プロファイルが同じでなければなりません（DASH での再生は可能です）。</li>
-              <li>1つのビデオに対して、アクティブなインジェストジョブは1つだけです。また、複数のトラックを追加する場合は、それぞれのトラックの処理が終了してから追加してください。</li>
-              <li>トランスコードプロファイルで<strong>mezz ファイル</strong>を保存するように設定した場合、再トランスコードを実行しても削除されません。</li>
-            </ul>
-          </aside>
-          <p>以下は、複数のオーディオトラックで構成されたビデオの例です。</p>
-          <p>
-            <!-- <iframe src="//players.brightcove.net/1752604059001/default_default/index.html?videoId=6033855353001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="encrypted-media" width="640" height="360"></iframe> -->
-            <div style="position: relative; display: block; max-width: 640px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/57838016001/default_default/index.html?videoId=5413700943001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
-          </p>
-          <aside class="bcls-aside bcls-aside--information">注: APIを使用して、複数のオーディオトラックをビデオに追加することもできます。詳細については、<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/implementing-multiple-audio-tracks-using-apis.html">APIを使用した複数のオーディオトラックの実装</a>を参照してください。</aside>
-        </section>
-        <section class="bcls-section">
-          <h2 id="audiotrack">オーディオトラック ファイルの追加</h2>
-          <p>オーディオトラック ファイルは、Brightcoveがアップロードしてホストしたり、インターネットにアクセスできる URL に保存したりできます。ビデオのオーディオトラックのプロパティを表示および編集するには、次の手順に従います。</p>
-          <ol class="bcls-tasklist-restart">
-            <li>Media モジュールを開きます。</li>
-            <li>ビデオタイトルのリンクをクリックし、「<strong>オーディオトラック</strong>」セクションを見つけます。ソースビデオのオーディオトラックが表示されます。
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-audio-tracks-section.png" /></figure>
-            </li>
-            <li>[<strong>編集</strong>] をクリックするか、セクションをダブルクリックします。</li>
-            <li>[<strong>オーディオトラックを追加</strong>] をクリックします。</li>
-            <li>オーディオトラック ファイルをローカル ファイルシステムからアップロードするか、外部 URL からアップロードするかを選択します。
-              <ul>
-                <li><strong>[ファイルのアップロード]</strong> -[ <strong>参照</strong> ] をクリックし、ローカルファイルシステムからオーディオトラック ファイルを選択します。ファイルは Video Cloud にアップロードされます。</li>
-                <li><strong>URL アップロード</strong> -オーディオトラック ファイルが存在する公開 URL を入力し、[<strong>アップロード</strong>] をクリックします。ファイルは Video Cloud にアップロードされます。<aside class="bcls-aside bcls-aside--information">注: 括弧、疑問符、引用符、スペース、その他の特殊文字を含むオーディオトラック ファイル名は、アップロード時に自動的に失敗します。Brightcoveでは、特殊文字を含まないファイル名を使用することをお勧めします。</aside>
-                </li>
-              </ul>
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-audio-track-properties.png" /></figure>
-            </li>
-            <li>[<strong>言語</strong>] フィールドには、トラックテキスト データの言語を指定する<a href="http://www.w3schools.com/tags/ref_language_codes.asp">言語コード</a>が含まれている必要があります。</li>
-            <li>オーディオトラックの<strong>バリエーション</strong>を選択します。バリエーションは、オーディオトラックの種類を表します。オプションは以下のとおりです。
-              <ul>
-                <li><strong translate="No">メイン</strong> -メイントラック、通常はビデオファイルに多重化されたトラック</li>
-                <li><strong translate="No">代替</strong> -代替オーディオトラック</li>
-                <li><strong translate="No">実況</strong> -ビデオトラックを解説するオーディオトラック</li>
-                <li><strong translate="No">吹き替え</strong> -異なる言語による話し言葉の吹き替え版を含むトラック</li>
-                <li><strong translate="No">解説</strong> -トラックは、何らかの方法でビデオコンテンツを説明しています</li>
-              </ul>
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-spanish-audio.png" /></figure>
-            </li>
-            <li><strong>トランスコード プロファイル</strong>を選択します。オーディオ ファイルを追加するには、現在存在するオーディオ ファイルと一致する必要があります。Brightcoveでは、ビデオのアップロードに使用されたトランスコード プロファイルをメモしておき、このアップロード場所に移動するときにどのプロファイルを選択すればよいかわかるようにすることをお勧めします。</li>
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-spanish-audio-added.png" /></figure>
-            </li>
-            <li>[<strong>オーディオトラックを追加</strong>]をクリックし、オーディオトラックを保存するには、[<strong>保存</strong>]をクリックします。
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-tracks-added.png" /></figure>
-              <li>別のオーディオトラックを追加するには、[<strong>オーディオトラックを追加</strong>]をクリックし、オーディオトラックを追加し、オーディオトラックを保存するには<strong>保存</strong>をクリックします。処理が完了すると、新しく追加されたオーディをトラックがリストに表示されます。
-              <aside class="bcls-aside bcls-aside--information">注: オーディオトラックのプロパティに加えた変更は、公開済みのプレーヤーに表示されるまでに最大 15 分かかる場合があります。</aside>
-            </li>
-          </ol>
-          <p>オーディオトラックを削除するには、オーディオトラックの横にある削除アイコン（<img alt="" src="/assets/images/media/node18591-delete-icon.png" />）をクリックします。UIが更新され、オーディオトラックが表示されなくなるまでに、時間がかかることがあります。</p>
-          <p>複数のオーディオトラックを含むビデオが公開されている場合、ヘッドフォンボタン（<img alt="" src="/assets/images/media/node18591-headphone-icon.png" />）はプレーヤーのクロームに表示されます。ボタンをクリックして、オーディオトラックを選択してください。</p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-headphone-icon-in-player.png" /></figure>
-        </section>
-        <section class="bcls-section">
-          <h2 id="defaulttrack">デフォルトのオーディオトラックの設定</h2>
-          <p>動画がアップロードされると、ソースオーディオがメイン（デフォルト）トラックとして設定されます。オーディオトラックをデフォルトトラックに設定するには、次の手順に従います。</p>
-          <ol class="bcls-tasklist-restart">
-            <li>「<strong>編集</strong>」をクリックするか、「<strong>オーディオトラック</strong>」セクションをダブルクリックします。</li>
-            <li>現在デフォルトのオーディオトラックであるトラックをクリックします。</li>
-            <li>[ <strong>デフォルト]</strong>オプションのチェックを外します。</li>
-            <li>デフォルトのオーディオトラックとして設定されるトラックをクリックします。</li>
-            <li>[ <strong>デフォルト]</strong>オプションをオンにします。
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18591-set-default-track.png" /></figure>
-            </li>
-            <li>[<strong>オーディオトラックを更新</strong>]をクリックします。</li>
-          </ol>
-        </section>
-        <section class="bcls-section">
-          <h2 id="limitations">制限事項</h2>
-          <p>複数のオーディオトラックを使用する場合は、次の制限が適用されます</p>
-          <dl>
-            <dt>オーディオマスターが保存されてない</dt>
-            <dd>ビデオマスターからビデオを再トランスコードすると、追加のオーディオトラックが失われ、再追加する必要があります。</dd>
-            <dt>オーディオのみのファイルを使用する必要があります</dt>
-            <dd>オーディオトラックは、ビデオトラックを含まないオーディオのみのファイルである必要があります。</dd>
-            <dt>HLSv3、オーディオとビデオを同じセグメントに含むHLS</dt>
-            <dd>
-              <ul>
-                <li>再生 API は HLSv3 マニフェストを返しません。</li>
-                <li>すべての HLS マニフェストには、多重化解除されたビデオ/オーディオが含まれます。</li>
-              </ul>
-            </dd>
-            <dt>スムーズ ストリーミング</dt>
-            <dd>スムーズ ストリーミング URL は使用できません。</dd>
-            <dt>ソーシャル配信</dt>
-            <dd>配信に使用するオーディオトラックを選択することはできません。ビデオソースに含まれるトラック（多重化されたオーディオ）が常に使用されます。</dd>
-            <dt>1つの「デフォルト」トラックを超えるオーディオトラックの順序付け</dt>
-            <dd>
-              <ul>
-                <li><code translate="No">is_default</code> フィールドに <code translate="No">true</code> を設定することで、タイトルごとに <span translate="No">CMS API</span> でデフォルトのオーディオトラックを選択できます。</li>
-                <li>アカウントのデフォルトもあります。これはサポートで設定できます。</li>
-                <li>これはHLSマニフェストの「デフォルト」トラックにのみ影響します。</li>
-                <li>他の順番にはできません。</li>
-              </ul>
-            </dd>
-            <dt>1 つのソースから複数のオーディオトラックを取り込む</dt>
-            <dd><strong>ソースビデオに供給されたソースから、1つのオーディオトラック</strong>サポートしています。追加のオーディオトラックは、別のオーディオファイルとしてインジェストする必要があります。</dd>
-            <dt>オーディオのみを含む動画の DRM 保護</dt>
-            <dd>ビデオトラックが追加されると、すぐに、DRM 保護が有効になります。</dd>
-            <dt>エンドユーザーにわかりやすいラベル</dt>
-            <dd>オーディオトラックのカスタムラベルはサポートしていません。必要な場合は、Player API を使用してクライアント側で変更を行う必要があります。</dd>
-            <dt>トラックを切り替えると Brightcove Player が不安定になる場合があります。</dt>
-            <dd>
-              <ul>
-                <li>すべてのオーディオセグメントがダウンロードされる前のトラック切り替え</li>
-                <li>オーディオとビデオの再生時間が異なる場合、短い方の再生時間が終了すると、プレーヤーは停止します。</li>
-              </ul>
-            </dd>
-            <dt>ビデオ「デュレーション」</dt>
-            <dd>オーディオトラックのデュレーションが異なる場合、Catalog/Playback APIによって報告されるビデオの <code translate="No">duration</code> が正しくない場合があります。</dd>
-            <dt>他のアカウントから共有された動画</dt>
-            <dd>他のアカウントから共有された動画にオーディオトラックを追加することはできません。オーディオ トラックは、動画が共有されたアカウントに追加する必要があります。</dd>
-            <dt>サファリ</dt>
-            <dd>Brightcoveは、サファリがデフォルトとしてマークされたオーディオ トラックを常に読み込まないケースを確認しています。サファリはネイティブでコンテンツを読み込むため、読み込むオーディオ トラックを決定する際には、デバイスの言語設定が優先されます。</dd>
-            <dt>Cloud Playout</dt>
-              <dd>Cloud Playout は、<strong>複数音声トラック</strong>をサポートしていません。</dd>
-          </dl>
-        </section>
-      </article>
+<article class="bcls-article">
+  <h1>キャプションのスタイル設定</h1>
+  <summary>このトピックでは、キャプションのスタイルを設定する方法について学習します。</summary>
+  <section class="bcls-section">
+    <p>キャプションのデフォルトのルック＆フィールは変更される可能性があるため、キャプションのスタイルを変更することができます。 <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=122#contrast-minimum" title="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=122#contrast-minimum">WCAG アクセシビリティ ガイドラインを満たす適切な色のコントラスト</a> を維持するように注意し、スタイルを変更するときは最終視聴者を考慮してください。</p>
+    <p>キャプションのスタイルを設定するにはいくつかの方法があります:</p>
+    <ul>
+      <li><a href="#infile">WebVTT ファイルにスタイル オプションを追加する。</a></li>
+       
+      <li><a href="#studio">ビデオ プロパティ セクションにスタイル オプションを追加する。</a></li>
+        
+      <li><a href="#cssguide">CSS スタイルガイド</a></li>
+      <!-- <li><a href="#user">User styling options</a></li> -->
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">注: <code translate="no">!important</code> やその他の CSSトリックを使って、ユーザー設定（キャプション設定ダイアログで設定されたもの）を上書きしないでください。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: Safariはデバイスのネイティブ キャプションを使用し、デバイスの設定は vttスタイルよりも優先されます。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: 現在、インライン スタイルのみがサポートされています。スタイル ブロックはサポートされていません。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="infile">WebVTT ファイルへのスタイル オプションの追加</h2>
+    <p>スタイルオプションは WebVTTファイルに直接適用でき、テキストだけでなくキャプションの位置や向きも変更することができます。 以下はその例です:</p>
+    <ul>
+      <li>太文字のテキスト
+        <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;b&gt;Lorem ipsum&lt;/b&gt;</code></pre>
+      </li>
+      <li>斜体のテキスト
+        <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;i&gt;dolor sit amet&lt;/i&gt;</code></pre>
+      </li>
+      <li>下線付きのテキスト
+        <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;u&gt;consectetuer adipiscing&lt;/u&gt;</code></pre>
+      </li>
+    </ul>
+    <p>Brightcove プレーヤーはキャプションの位置を管理するため、スタイルを使用してキャプションの位置や向きを変更することはできません。インライン スタイルには、多くのスタイル オプションがありません。より多様なスタイル オプションを得るには、次のセクションで説明するように CSS ファイルを使用することができます。</p>
+    <p>インラインスタイルの詳細については、<a href="https://www.w3.org/TR/webvtt1/#styling">このリンク</a>を参照してください。</p>
+  </section>
+  
+  <section class="bcls-section">
+    <h2 id="studio">ビデオのプロパティ セクションにスタイルオプションを追加する</h2>
+    <p><a href="https://studio.support.brightcove.com/media/properties/editing-video-properties-using-media-module.html">ビデオ プロパティ</a> セクションで、独自の視聴セッションのキャプションの外観を調整できます。キャプションのスタイルを設定する手順は次のとおりです:</p>
+    <ol class="bcls-tasklist-restart">
+      <li><strong>Media</strong> モジュールを開きます。</li>
+      <li>編集するビデオのリンクをクリックして、ビデオのプロパティを開きます。</li>
+      <li>ページの上部でプレビュー プレーヤーを見つけてビデオを再生し、プレーヤーコントロール <img src="/assets/images/media/video-details/captions-option.webp" alt=""> をクリックします。
+      </li>
+      <li><strong>キャプション設定</strong> オプションを選択します。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/caption-settings.webp" /></figure>
+      </li>
+      <li><p>キャプション設定メニューをクリックすると、次のキャプション プロパティを設定できるオーバーレイが表示されます:</p>
+        <ul>
+          <li>Text</li>
+          <li>Font Size</li>
+          <li>Background</li>
+          <li>Text Edge Style</li>
+          <li>Window</li>
+          <li>Font family</li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/captions-menu.webp" /></figure>
+      </li>
+      <li><strong>リセット</strong> をクリックしてキャプションをデフォルトのスタイルに戻すか、<strong>完了</strong> をクリックして変更を保存します。</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--tip">注: このメニューで変更したキャプションは、ブラウザでの視聴にのみ影響し、動画と一緒に保存されません。 他の視聴者にはこれらの変更は表示されません。</aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="cssguide">CSS スタイルガイド</h2>
+    <p>次の表は、Brightcove プレーヤーでのキャプションのスタイル設定でサポートされている CSS プロパティとサポートされていない CSS プロパティを示しています。:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>CSS プロパティ</th>
+          <th>対応</th>
+          <th>非対応</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No"> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family </a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">background</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">opacity</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility">visibility</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration">text-decoration</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">text-shadow</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No">width</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">height</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">line-height</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">white-space</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">word-wrap</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">top</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">left</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">display</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">direction</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>キャプション ファイルのスタイル オプションの詳細については、<a href="https://www.w3.org/TR/webvtt1/">W3C WebVTT 仕様ドキュメント</a> または <a href="https://html5doctor.com/video-subtitling-and-webvtt/">デオ字幕と WebVTT</a> を参照してください。</p>
+  </section>
+  
+  <section class="bcls-section">
+    <h2 id="limitations">制限事項</h2>
+    <p>キャプションは、次のデバイス タイプとオペレーティング システムでサポートされています。</p>
+    <ul>
+      <li>iOS 10+</li>
+      <li>Android 7+</li>
+      <li>Internet Explorer 11+</li>
+      <li>デスクトップ上の最新の Edge、Chrome、Safari、Firefox ブラウザ</li>
+    </ul>
+  </section>
+</article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
