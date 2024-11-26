@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="ja"> 
     <head>
-        <title>Adding a Text Overlay to a Video</title>
+        <title>動画にテキスト オーバーレイを追加する</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to add a text overlay to a video.">
+        <meta name="description" content="このトピックでは、ビデオにテキスト オーバーレイを追加する方法について学びます。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3148,56 +3148,56 @@
       <br>
       
       
-<h1>Adding a Text Overlay to a Video</h1>
+<h1>動画にテキスト オーバーレイを追加する</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how to add a text overlay to a video.</summary>
+  <summary>このトピックでは、ビデオにテキスト オーバーレイを追加する方法について学びます。</summary>
   <section class="bcls-section">
-    <p>The Interactivity module provides the ability to add different types of interactive overlays to videos. Text and image overlays can be displayed on videos during video playback. For example, overlays can display additional text or a company logo on a video. Overlays can also be clickable and open additional web pages if needed.</p>
+    <p>Interactivity モジュールは、動画にさまざまなタイプのインタラクティブ オーバーレイを追加する機能を提供します。テキストや画像のオーバーレイは、ビデオ再生中にビデオ上に表示することができます。例えば、動画上にテキストや会社のロゴを追加表示することができます。オーバーレイはクリック可能で、必要に応じて追加のウェブページを開くこともできます。</p>
     <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1760629265739418327">&nbsp;</div>
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
   </section>
   <section class="bcls-section">
-    <h2 id="configure-player">Before you get started</h2>
-    <p>Before you can add interactivity to a player, you need an Interactivity-enabled Brightcove Player and you need to make sure an  Interactivity project has been created. For information on how to do this, see <a href="/interactivity/getting-started/getting-started-video-interactivity.html">Getting Started with Video Interactivity</a>.</p>
+    <h2 id="configure-player">はじめる前に</h2>
+    <p>プレーヤーにインタラクティブ機能を追加する前に、インタラクティブ機能が有効な Brightcove プレーヤーが必要であり、インタラクティブ プロジェクトが作成されていることを確認する必要があります。この方法については、 <a href="/interactivity/getting-started/getting-started-video-interactivity.html">動画インタラクティブ入門</a>を参照して下さい。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="text-overlay">Adding a text overlay</h2>
-    <p>Text overlays are used to display text on a video during playback. The overlay can also be clickable and open another browser page when clicked. In the following example, the text overlay will appear at the 75% point of the video and display until the end of the video. Clicking the overlay will open a link in a new browser tab and pause the video.</p>
+    <h2 id="text-overlay">テキストオーバーレイの追加</h2>
+    <p>テキスト オーバーレイは、再生中のビデオにテキストを表示するために使用します。オーバーレイはクリック可能で、クリックすると別のブラウザ ページが開きます。次の例では、テキスト オーバーレイは動画の 75% の時点で表示され、動画の最後まで表示されます。オーバーレイをクリックすると、新しいブラウザ タブでリンクが開き、動画が一時停止します。</p>
     <iframe src="https://players.brightcove.net/1752604059001/g0XymrEp4_default/index.html?videoId=1759734730922560517&interactivityProjectId=64078334d32eba001c207865" allowfullscreen="" allow="encrypted-media" width="960" height="540"></iframe>
     <br />
-    <p>Follow these steps to add a text overlay to a project:</p>
+    <p>以下の手順に従って、プロジェクトにテキスト オーバーレイを追加してください:</p>
     <ol class="bcls-tasklist">
-      <li>Login to Video Cloud Studio.</li>
-      <li>Open the <strong>Interactivity</strong> module.</li>
-      <li>Click <span class="button-blue">New project</span>.</li>
-      <li>Enter a <strong>Project Title</strong>.</li>
-      <li>Select a video to use.</li>
-      <li> Click <span class="button-blue">Create</span>.</li>
-      <li>Play the video to the point where the text should display.</li>
-      <li>In the bottom toolbar, click on the text overlay icon.
+      <li>Video Cloud Studio にログインします。</li>
+      <li><strong>Interactivity</strong> モジュールを開きます。</li>
+      <li><span class="button-blue">新規プロジェクト</span> をクリックします。</li>
+      <li><strong>プロジェクト タイトル</strong>を入力して下さい。</li>
+      <li>使用するビデオを選択します。</li>
+      <li><span class="button-blue">作成</span>をクリックします。</li>
+      <li>テキストを表示させたい時点までビデオを再生します。</li>
+      <li>下部のツールバーで、テキスト オーバーレイのアイコンをクリックします。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/text-overlay/add-text-overlay.png"> </figure>
       </li>
-      <li>Click on the <strong>Editor</strong> link in the menu.
+      <li>メニューの <strong>Editor</strong> リンクをクリックして下さい。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/text-overlay/overlay-editor.png"> </figure>
       </li>
-      <li>Enter text for the overlay and click <strong>SUBMIT</strong>.
+      <li>オーバーレイのテキストを入力し <strong>SUBMIT</strong> をクリックします。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/text-overlay/overlay-text.png"> </figure>
       </li>
-      <li>Click and drag the overlay to where you want it to appear on the video.
+      <li>オーバーレイをクリックし、ビデオの表示したい場所にドラッグします。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/text-overlay/position-overlay.png"> </figure>
-        <aside class="bcls-aside bcls-aside--information">Note: Make sure the overlay isn't placed at the bottom of the player where it may be covered up by the control bar.</aside>
+        <aside class="bcls-aside bcls-aside--information">注: オーバーレイがコントロールバーで隠れるようなプレーヤーの下部に配置されていないことに注意して下さい。</aside>
       </li>
-      <li>Click the <strong>Start Time</strong> menu.</li>
-      <li>Enter a <strong>Start time</strong> in seconds, as a percentage or in time format. This example sets the start time to the 75% point of the video. Click <span class="button-blue">SAVE</span>.
+      <li><strong>Start Time</strong> メニューをクリックします。</li>
+      <li><strong>Start Time</strong> (開始時間)を 秒単位、パーセンテージ、または時間形式で入力します。この例では、開始時間をビデオの75%ポイントに設定しています。 <span class="button-blue">SAVE</span> (保存)をクリックします。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/text-overlay/start-time.png"> </figure>
       </li>
-      <li>Click the clock icon to set the duration of the overlay. Click <span class="button-blue">SUBMIT</span>.</li>
-      <li>Click the <strong>Link</strong> menu.</li>
-      <li>Enter a <strong>URL</strong> to direct to when the overlay is clicked.</li>
-      <li>(Optional) Click the <strong>BEHAVIOR</strong> tab and have the video <strong>Pause on video click</strong>. Click <span class="button-blue">SAVE</span>.</li>
-      <li>Click <strong>Done</strong>.</li>
-      <li>Click <span class="button-blue">Embed</span>.</li>
-      <li>Click <strong>Preview</strong>, play the video and confirm that the overlay appears.</li>
+      <li>時計のアイコンをクリックして、オーバーレイの表示時間を設定し、<span class="button-blue">SUBMIT</span> (送信)をクリックします。</li>
+      <li><strong>Link</strong> (リンク)メニューをクリックします。</li>
+      <li>オーバーレイがクリックされた時に誘導する <strong>URL</strong> を入力します。</li>
+      <li>(オプション) <strong>BEHAVIOR</strong> (挙動) タブをクリックし、 <strong>ビデオクリック時に一時停止</strong>するようにします。<span class="button-blue">SAVE</span> (保存)をクリックします。</li>
+      <li><strong>Done</strong> (完了)をクリックします。</li>
+      <li><span class="button-blue">埋め込む</span>をクリックします。</li>
+      <li><strong>プレビュー</strong>をクリックして、ビデオを再生してオーバーレイが表示されることを確認します。</li>
     </ol>
   </section>
 </article>

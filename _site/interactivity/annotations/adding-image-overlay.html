@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Adding an Image Overlay to a Video</title>
+        <title>動画に画像オーバーレイを追加する</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to add an image overlay to a video.">
+        <meta name="description" content="このトピックでは、ビデオに画像のオーバーレイを追加する方法について学びます。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3148,67 +3148,67 @@
       <br>
       
       
-<h1>Adding an Image Overlay to a Video</h1>
+<h1>動画に画像オーバーレイを追加する</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how to add an image overlay to a video.</summary>
+  <summary>このトピックでは、ビデオに画像のオーバーレイを追加する方法について学びます。</summary>
   <section class="bcls-section">
-    <p>The Interactivity module provides the ability to add different types of interactive overlays to videos. Text and image overlays can be displayed on videos during video playback. For example, overlays can display additional text or a company logo on a video. Overlays can also be clickable and open additional web pages if needed.</p>
+    <p>Interactivity モジュールは、動画にさまざまなタイプのインタラクティブ オーバーレイを追加する機能を提供します。テキストや画像のオーバーレイは、ビデオ再生中にビデオ上に表示することができます。例えば、動画上にテキストや会社のロゴを追加表示することができます。オーバーレイはクリック可能で、必要に応じて追加のウェブページを開くこともできます。</p>
     <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1760629265739418327">&nbsp;</div>
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
   </section>
   <section class="bcls-section">
-    <h2 id="configure-player">Before you get started</h2>
+    <h2 id="configure-player">はじめる前に</h2>
   </section>
-  <p>Before you can add interactivity to a player, you need an Interactivity-enabled Brightcove Player and you need to make sure an  Interactivity project has been created. For information on how to do this, see <a href="/interactivity/getting-started/getting-started-video-interactivity.html">Getting Started with Video Interactivity</a>.</p>
+  <p>プレーヤーにインタラクティブ機能を追加する前に、インタラクティブ機能が有効な Brightcove プレーヤーが必要であり、インタラクティブ プロジェクトが作成されていることを確認する必要があります。この方法については <a href="/interactivity/getting-started/getting-started-video-interactivity.html">動画インタラクティブ入門</a>を参照して下さい。</p>
   <section class="bcls-section">
-    <h2 id="image-overlay">Adding an image overlay</h2>
-    <p>Image overlays are used to display an image on a video during playback. The overlay can also be clickable and open another browser page when clicked. In the following example, the image overlay (the Brightcove logo) will appear at the 75% point of the video and display until the end of the video. Clicking the overlay will open a link (www.brightcove.com) in a new browser tab and pause the video.</p>
+    <h2 id="image-overlay">画像オーバーレイの追加</h2>
+    <p>画像オーバーレイは、再生中のビデオに画像を表示するために使用します。オーバーレイはクリック可能で、クリックすると別のブラウザ ページが開きます。次の例では、画像オーバーレイ（Brightcoveのロゴ）は動画の 75% の時点に表示され、動画の最後まで表示されます。オーバーレイをクリックすると、新しいブラウザ タブでリンク（www.brightcove.com）が開き、動画が一時停止します。</p>
     <iframe src="https://players.brightcove.net/1752604059001/g0XymrEp4_default/index.html?videoId=4447058684001&interactivityProjectId=64078054fc95e9001abdcd8f" allowfullscreen="" allow="encrypted-media" width="960" height="540"></iframe>
     <br />
-    <p>Follow these steps to add an image overlay to a project:</p>
+    <p>以下の手順に従って、プロジェクトに画像オーバーレイを追加してください:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Login to Video Cloud Studio.</li>
-      <li>Open the <strong>Interactivity</strong> module.</li>
-      <li>Click <span class="button-blue">New project</span>.</li>
-      <li>Enter a <strong>Project Title</strong>.</li>
-      <li>Select a video to use.</li>
-      <li> Click <span class="button-blue">Create</span>.</li>
-      <li>Play the video to the point where the image should display.</li>
-      <li>In the bottom toolbar, click on the image overlay icon.
+      <li>Video Cloud Studioにログインします。</li>
+      <li><strong>Interactivity</strong> モジュールを開きます。</li>
+      <li><span class="button-blue">新規プロジェクト</span>をクリックします。</li>
+      <li><strong>プロジェクト タイトル</strong>を入力します。</li>
+      <li>使用するビデオを選択します。</li>
+      <li><span class="button-blue">作成</span>をクリックします。</li>
+      <li>画像が表示される時点までビデオを再生します。</li>
+      <li>下部のツールバーで、画像オーバーレイのアイコンをクリックします。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/image-overlay/add-image-overlay.png"> </figure>
       </li>
-      <li>Click <strong>Choose File</strong> and browse and select an image or click the <strong>URL</strong> tab and enter the URL to an image file.
-        <aside class="bcls-aside bcls-aside--information">Note: Brightcove recommends using <strong>https</strong> image URLs.</aside>
+      <li><strong>ファイルを選択</strong>をクリックし、画像を参照して選択するか、<strong>URL</strong> タブをクリックして画像ファイルのURLを入力します。
+        <aside class="bcls-aside bcls-aside--information">注: Brightcove では、<strong>https</strong> の画像 URL を使用することを推奨しています。</aside>
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/image-overlay/image-url.png"> </figure>
       </li>
-      <li>Click <strong>Show</strong>.</li>
-      <li>The image will display on the <strong>Preview</strong> tab. Click <strong>Submit</strong>.</li>
-      <li>Click and drag the overlay to where you want it to appear on the video.
+      <li><strong>Show</strong>(表示)をクリックします。</li>
+      <li>画像が <strong>Preview</strong> タブに表示されます。<strong>Submit</strong> (送信)をクリックします。</li>
+      <li>オーバーレイをクリックし、ビデオの表示させたい場所にドラッグします。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/image-overlay/position-image-overlay.png"> </figure>
-        <aside class="bcls-aside bcls-aside--information">Note: Make sure the overlay isn't placed at the bottom of the player where it may be covered up by the control bar.</aside>
+        <aside class="bcls-aside bcls-aside--information">注: オーバーレイがコントロールバーで隠れるようなプレーヤーの下部に配置されていないことに注意して下さい。</aside>
       </li>
-      <li>Click the <strong>Start Time</strong> menu.</li>
-      <li>Enter a <strong>Start time</strong> in seconds, as a percentage or in time format. This example sets the start time to the 75% point of the video. Click <span class="button-blue">SAVE</span>.
+      <li><strong>Start Time</strong> (開始時間)メニューをクリックします。</li>
+      <li><strong>Start time</strong> (開始時間)を 秒単位、パーセンテージ、または時間形式で入力します。この例では、開始時間をビデオの75%時点に設定しています。<span class="button-blue">SAVE</span> (保存)をクリックします。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/image-overlay/start-time.png"> </figure>
       </li>
-      <li>Click the clock icon to set the duration of the overlay. Click <strong>Submit</strong>.</li>
-      <li>Click the <strong>Link</strong> menu.</li>
-      <li>Enter a <strong>URL</strong> to direct to when the overlay is clicked.</li>
-      <li>(Optional) Click the <strong>BEHAVIOR</strong> tab and have the video <strong>Pause on video click</strong>. Click <span class="button-blue">SAVE</span>.</li>
-      <li>Click <strong>Done</strong>.</li>
-      <li>Click <span class="button-blue">Embed</span>.</li>
-      <li>Click <strong>Preview</strong>, play the video and confirm that the overlay appears.</li>
+      <li>時計のアイコンをクリックして、オーバーレイの表示時間を設定します。<strong>Submit</strong> (送信)をクリックします。</li>
+      <li><strong>Link</strong> (リンク)メニューをクリックします。</li>
+      <li>オーバーレイがクリックされた時に誘導する <strong>URL</strong> を入力します。</li>
+      <li>(オプション) <strong>BEHAVIOR</strong> (挙動)タブをクリックし、<strong>ビデオクリック時に一時停止</strong>するようにします。<span class="button-blue">SAVE</span> (保存)をクリックします。</li>
+      <li><strong>Done</strong> （完了)をクリックします。</li>
+      <li><span class="button-blue">埋め込む</span>をクリックします。</li>
+      <li><strong>Preview</strong> をクリックし、ビデオを再生してオーバーレイが表示されることを確認します。</li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="tips">Tips</h2>
-    <h3>File size</h3>
-    <p>Image annotations are loaded dynamically when the viewer reaches a certain point in the video. So it's a good idea (as with all images on the web) to ensure a good balance between high quality and low file size. A good rule of thumb for image annotations is to keep them <strong>below 200 KB</strong>. Like any web based technology, the more images you load up, the longer it will take to load the page.</p>
-    <h3>PNG or JPG?</h3>
-    <p>PNG is the most popular image type as they include a transparency layer that ensures the image seamlessly blends with the video. Brightcove recommends minimizing the size of PNG files with a service like <a href="https://tinypng.com/" rel="nofollow noopener noreferrer" target="_blank">TinyPNG</a>.&nbsp; </p>
-    <p>JPGs can also be used, they don't have a transparency layer, so take care when using them.</p>
-    <h3>Upload File or URL?</h3>
-    <p>Brightcove recommends following your normal workflow. If you usually upload images for your website or other content to a third-party system like Amazon S3 or WordPress, continue doing that. If you normally upload directly from your system, then simply use the <strong>Upload File</strong> option.</p>
+    <h2 id="tips">ヒント</h2>
+    <h3>ファイル サイズ</h3>
+    <p>画像注釈は、視聴者がビデオのあるポイントに到達したときに動的に読み込まれます。そのため、（ウェブ上のすべての画像と同様に）高画質と低ファイル サイズのバランスを確保するのは良い考えです。画像注釈の目安は、 <strong>200 KB 以下</strong>に抑えることです。他のwebベースの技術と同様に、画像を多く読み込めば読み込むほど、ページの読み込みに時間がかかります。</p>
+    <h3>PNG か JPG?</h3>
+    <p>PNG は、画像が動画にシームレスに溶け込む透明レイヤを含むため、最も一般的な画像タイプです。Brightcoveでは、<a href="https://tinypng.com/" rel="nofollow noopener noreferrer" target="_blank">TinyPNG</a>のようなサービスを使用して PNG ファイルのサイズを最小化することを推奨しています。&nbsp; </p>
+    <p>JPGも使えますが、透明レイヤーがないので、使うときは注意してください。</p>
+    <h3>ファイル または URL のアップロード?</h3>
+    <p> Brightcoveでは、通常のワークフローに従うことを推奨します。通常、Web サイトやその他のコンテンツの画像を Amazon S3 や WordPress などのサードパーティ システムにアップロードしている場合は、そのままアップロードして下さい。通常、システムから直接アップロードする場合は、単にファイルの <strong>アップロード ファイル</strong> オプションを使用します。</p>
   </section>
 </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
