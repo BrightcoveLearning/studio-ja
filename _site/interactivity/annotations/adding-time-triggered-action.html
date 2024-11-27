@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Adding a Time Triggered Action</title>
+        <title>時間トリガーアクションの追加</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to use a time triggered action to automatically pause a video or jump to a time without a viewer click.">
+        <meta name="description" content="このトピックでは、時間トリガーアクションを使用して、視聴者がクリックしなくても自動的に動画を一時停止したり、時間にジャンプしたりする方法について学びます。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3148,47 +3148,47 @@
       <br>
       
       
-<h1>Adding a Time Triggered Action</h1>
+<h1>タイム トリガー アクションの追加</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how to use a time triggered action to automatically pause a video or jump to a time without a viewer click.</summary>
+  <summary>このトピックでは、タイム トリガー アクションを使用して、視聴者がクリックしなくても自動的に動画を一時停止したり、時間にジャンプしたりする方法について学びます</summary>
   <section class="bcls-section">
-    <p>The time triggered action annotation will automatically perform an action when a viewer reaches a point in the video without the need for a click from the viewer.</p>
-    <p>Follow these steps to add a time triggered action to a project:</p>
+    <p>タイム トリガー アクション 注釈は、視聴者がビデオのあるポイントに到達すると、視聴者がクリックしなくても自動的にアクションを実行します。</p>
+    <p>以下の手順に従って、プロジェクトに時間トリガーアクションを追加してください:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Login to Video Cloud Studio.</li>
-      <li>Open the <strong>Interactivity</strong> module.</li>
-      <li> Click on a project <strong>Title</strong> to open it.</li>
-      <li>In the bottom toolbar, click on the time triggered action icon.
+      <li>Video Cloud Studio にログインします。</li>
+      <li><strong>Interactivity</strong> モジュールを開きます。</li>
+      <li>プロジェクトの <strong>タイトル</strong> をクリックして開きます。</li>
+      <li>下部のツールバーで、タイム トリガー アクションアイコンをクリックします。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/time-trigger/add-time-trigger.png"></figure>
       </li>
     </ol>
-    <p>The ON TIME EVENT dialog will open.</p>
+    <p>ON TIME EVENT ダイアログが開きます。</p>
     <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/time-trigger/on-time-event.png"> </figure>
     <figure class="bcls-figure"></figure>
-    <p>Add the event you would like to fire when the viewer reaches that point in the video. Some of the most common events are listed below.</p>
+    <p>視聴者がビデオのそのポイントに到達したときに発生させたいイベントを追加します。 最も一般的なイベントを以下に示します。</p>
     <div style="overflow-x: scroll;">
       <table class="bcls-table">
         <thead class="bcls-table__head">
           <tr>
-            <th width="323">I want to...</th>
-            <th width="392">Enter in JavaScript field</th>
+            <th width="323">させたいこと</th>
+            <th width="392">JavaScriptフィールドに入力</th>
           </tr>
         </thead>
         <tbody class="bcls-table__body">
           <tr>
-            <td>Pause the video</td>
+            <td>ビデオを一時停止させる</td>
             <td><code>player.pause()</code></td>
           </tr>
           <tr>
-            <td>Play the video</td>
+            <td>ビデオを再生させる</td>
             <td><code>player.play()</code></td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p>To jump to a specific time in the video, use the <strong>Jump to video time </strong> dropdown and select the chapter or annotation you'd like to jump to. You can also select <strong>Custom time</strong> and then enter the time to jump to.</p>
+    <p>ビデオの特定の時間にジャンプするには、<strong>Jump to video time </strong> ドロップダウンメニューから、ジャンプしたいチャプターまたは注釈を選択します。 また、<strong>Custom time</strong> を選択し、ジャンプ先の時間を入力することもできます。</p>
     <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/time-trigger/jump-time.png"> </figure>
-    <p>By design, the time triggered annotation does not perform its intended functionality while in edit mode. This is to avoid disrupting the editing flow. To test, click <span class="button-blue">Embed</span> and then click the <strong>Preview</strong> link to preview the annotation.</p>
+    <p>設計上、編集モードでは、タイム トリガー 注釈は機能しません。これは、編集作業を中断させないためです。 テストするには、<span class="button-blue">埋め込み</span> をクリックし、<strong>プレビュー</strong> リンクをクリックして注釈をプレビューします。</p>
   </section>
 </article>
 

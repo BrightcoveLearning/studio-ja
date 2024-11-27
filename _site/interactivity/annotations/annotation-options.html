@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="ja"> 
     <head>
-        <title>Annotation Options</title>
+        <title>注釈 オプション</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn about the options that are available when editing an annotation.">
+        <meta name="description" content="このトピックでは、注釈を編集するときに使用できるオプションについて学びます。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3148,54 +3148,54 @@
       <br>
       
       
-<h1>Annotation Options</h1>
+<h1>注釈 オプション</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn about the options that are available when editing an annotation.</summary>
+  <summary>このトピックでは、注釈を編集するときに使用できるオプションについて学びます。</summary>
   <section class="bcls-section">
-    <p>Annotations have a set of options that can be configured to customize the behavior and appearance of the annotation. Follow these steps to access the annotation settings:</p>
+    <p>注釈には、注釈の動作や外観をカスタマイズするために設定できるオプションがあります。 以下の手順に従って、注釈の設定にアクセスしてください:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Login to Video Cloud Studio.</li>
-      <li>Open the <strong>Interactivity</strong> module.</li>
-      <li> Click on a project <strong>Title</strong> to open it.</li>
-      <li>Hover over an annotation and click <strong>Edit</strong>.</li>
-      <li>Click <strong>More...</strong> to see all of the options.</li>
+      <li>Video Cloud Studio ログインします。</li>
+      <li><strong>Interactivity</strong> モジュールを開きます。</li>
+      <li>プロジェクトの <strong>タイトル</strong> クリックして開きます。</li>
+      <li>注釈にカーソルを合わせ、<strong>Edit</strong> をクリックします。</li>
+      <li><strong>More...</strong> をクリックすると、すべてのオプションが表示されます。</li>
     </ol>
     <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/options/options-menu.png"> </figure>
-    <h3 id="start-time">Start Time</h3>
-    <p>The Start Time controls when the annotation begins. You can set the start time ahead one second by clicking on the right arrow and back, by clicking on the left arrow.</p>
+    <h3 id="start-time">Start Time (開始時間)</h3>
+    <p>Start Time (開始時間)は、注釈の開始時間を制御します。 右矢印をクリックすると開始時間を1秒進め、左矢印をクリックすると戻すことができます。</p>
     <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/options/start-time-left-right.png"> </figure>
-    <p>Click <strong>Start Time</strong> to fine-tune it down to the thousands of a second or a specific percentage in the video. The <strong>Start Time</strong> field is flexible and accepts the following inputs:</p>
+    <p><strong>Start Time</strong> をクリックすると、数千秒単位またはビデオ内の特定のパーセンテージまで微調整できます。<strong>Start Time</strong> フィールドは柔軟性があり、以下の入力を受け付けます:</p>
     <ul>
-      <li>20 (20 seconds)</li>
-      <li>00:20.000 (20 seconds)</li>
-      <li>1:37 (1 minute and 37 seconds)</li>
-      <li>97 (1 minute and 37 seconds)</li>
-      <li>15% (15% of the way into the video.)</li>
-      <li>-15 (15 seconds before the end of the video)</li>
-      <li>-10% (10% before the end of the video) </li>
+      <li>20 (20 秒)</li>
+      <li>00:20.000 (20 秒)</li>
+      <li>1:37 (1 分 37 秒)</li>
+      <li>97 (1 分 37 秒)</li>
+      <li>15% (ビデオの 15%)</li>
+      <li>-15 (ビデオ終了 15 秒前)</li>
+      <li>-10% (ビデオ終了前の 10%) </li>
     </ul>
-    <aside class="bcls-aside bcls-aside--tip language-editable">Tip: % based and negative start times are particularly useful for <a href="/interactivity/templates/creating-and-managing-templates.html">templates</a>.</aside>
-    <h3 id="duration">Duration</h3>
-    <p>The duration of time that the annotation remains on screen. If <strong>Pause</strong> is set to <strong>Y</strong>, the duration of the annotation is the duration it is paused.</p>
-    <h3 id="link">Link</h3>
-    <p>The Link can be used to control what happens when a viewer clicks on the annotation. For more information on links, see <a href="/interactivity/annotations/configuring-annotation-links.html" data-is-internal-link="true">Configuring Annotation Links</a>.</p>
-    <h3 id="pause">Pause</h3>
-    <p>Set <strong>Pause</strong> to <strong>Y</strong> to pause the video when it reaches this annotation. &nbsp;Set <strong>Pause</strong> to <strong>N</strong> to not pause the video.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When you set <strong>Pause</strong> to <strong>Y,</strong> the duration of the annotation is the duration it is paused.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: When <strong>Pause</strong> is set to <strong>Y</strong>, ensure <strong>Gate</strong> is set to <strong>N</strong>.</aside>
-    <h3 id="gate">Gate</h3>
-    <p>A gate is a point in the video that a viewer can not pass unless they interact with that annotation. This is used most often to ensure that someone takes a quiz before continuing on in the video.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When <strong>Gate</strong> is set to <strong>Y</strong>, ensure <strong>Pause</strong> is set to <strong>N</strong>.</aside>
-    <h3 id="display-rule-available-to-enterprise-licenses">Display Rule</h3>
-    <p>Display Rules are used to display an annotation only under certain conditions (for example, only for new viewers). You set the JavaScript expression under which you'd like the annotation to display (for example, <code>viewer=='new'</code>). You can pass in these JavaScript expressions from an external system using the <a href="https://apis.support.brightcove.com/interactivity/index.html" rel="nofollow noopener noreferrer" target="_blank">Interactivity APIs</a> or set it when a viewer clicks on another annotation in the <strong>Link</strong> option (for example, <code>viewer="new"</code>). For more information on display rules, see <a href="/interactivity/annotations/using-dynamic-annotations.html">Using Dynamic Annotations</a>.</p>
-    <h3 id="add-class-available-to-enterprise-licenses">Add Class</h3>
-    <p>The <strong>Add Class</strong> option allows you to add a specific CSS class to the annotation. This is typically used to apply custom styles to specific annotations. Note that you will need to include this CSS class in a custom stylesheet in either the <a href="/interactivity/projects/configuring-project-settings.html#custom-css">project-level CSS</a> or the <a href="/interactivity/settings/configuring-settings.html#css">account-level CSS</a>.</p>
-    <h3 id="styles-">Styles</h3>
-    <p>The <strong>Styles</strong> setting can be used to change the background color and opacity. This will override any <a href="/interactivity/projects/configuring-project-settings.html#custom-css">project-level CSS</a> or <a href="/interactivity/settings/configuring-settings.html#css">account-level CSS</a>.</p>
-    <h3 id="themes">Theme</h3>
-    <p>The <strong>Theme</strong> setting provides a set of &quot;canned&quot; styles for the annotation. &nbsp;This is typically used to change the text color from white to black or vice versa. </p>
-    <h3 id="transitions">Transitions</h3>
-    <p>The <strong>Transitions</strong> setting controls how the annotation appears and disappears from the screen.</p>
+    <aside class="bcls-aside bcls-aside--tip language-editable">ヒント: % ベースと負の開始時間は、<a href="/interactivity/templates/creating-and-managing-templates.html">テンプレート</a>に便利です。</aside>
+    <h3 id="duration">Duration (長さ)</h3>
+    <p>注釈が画面に表示され続ける時間。<strong>Pause</strong> が <strong>Y</strong> に設定されている場合、注釈の持続時間は、それが一時停止されている持続時間となります。</p>
+    <h3 id="link">Link (リンク)</h3>
+    <p>Link (リンク) は、視聴者が注釈をクリックしたときの動作を制御するために使用できます。 リンクの詳細については、<a href="/interactivity/annotations/configuring-annotation-links.html" data-is-internal-link="true">注釈リンクの設定</a>を参照して下さい。</p>
+    <h3 id="pause">Pause (一時停止)</h3>
+    <p><strong>Pause</strong> (一時停止) を <strong>Y</strong> に設定すると、ビデオがこの注釈に到達したときに一時停止します。 ビデオを一時停止しない場合は、<strong>Pause</strong> を <strong>N</strong> に設定します。</p>
+    <aside class="bcls-aside bcls-aside--information">注: <strong>Pause</strong> を <strong>Y</strong> に設定すると、注釈の継続時間は一時停止されている期間となります。</aside>
+    <aside class="bcls-aside bcls-aside--information">注: <strong>Pause</strong> を <strong>Y</strong> に設定されている場合、<strong>Gate</strong> が <strong>N</strong> に設定されていることを確認して下さい。</aside>
+    <h3 id="gate">Gate (ゲート)</h3>
+    <p>Gate (ゲート) は、視聴者がその注釈と対話しない限り通過できないビデオ内のポイントです。 これは、ビデオで先に進む前に誰かがクイズに参加することを確認するために最も頻繁に使用されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注: <strong>Gate</strong> が <strong>Y</strong> に設定されている場合、<strong>Pause</strong> が <strong>N</strong> に設定されていることを確認して下さい。</aside>
+    <h3 id="display-rule-available-to-enterprise-licenses">Display Rule (表示ルール)</h3>
+    <p>Display Rules (表示ルール) は、特定の条件下でのみ注釈を表示するために使用されます（例えば、新規の視聴者のみに）。 注釈を表示させたい JavaScript 式を設定します <code>viewer=='new'</code>)。これらの JavaScript 式は、<a href="https://apis.support.brightcove.com/interactivity/index.html" rel="nofollow noopener noreferrer" target="_blank">Interactivity APIs</a> を使用して外部システムから渡すか、視聴者が <strong>Link</strong> オプションで別の注釈をクリックしたときに設定することができます (例 <code>viewer="new"</code>)。 Display Rule の詳細については、<a href="/interactivity/annotations/using-dynamic-annotations.html">ダイナミック 注釈の使用</a>を参照して下さい。</p>
+    <h3 id="add-class-available-to-enterprise-licenses">Add Class (クラスの追加)</h3>
+    <p><strong>Add Class (クラスの追加)</strong> オプションを使用すると、注釈に特定のCSSクラスを追加することができます。 これは通常、特定の注釈にカスタム スタイルを適用するために使用されます。 <a href="/interactivity/projects/configuring-project-settings.html#custom-css">プロジェクト レベルのCSS</a> か <a href="/interactivity/settings/configuring-settings.html#css">アカウント レベルのCSS</a> どちらかのカスタム スタイルシートに、このCSSクラスを含める必要があることに注意してください。</p>
+    <h3 id="styles-">Styles（スタイル）</h3>
+    <p><strong>Styles</strong> (スタイル)設定を使用して、背景色と不透明度を変更できます。 これは <a href="/interactivity/projects/configuring-project-settings.html#custom-css">プロジェクト レベルのCSS</a> や <a href="/interactivity/settings/configuring-settings.html#css">アカウント レベルのCSS</a>を上書きします。</p>
+    <h3 id="themes">Theme (テーマ)</h3>
+    <p><strong>Theme</strong> (テーマ) 設定は、注釈の「定型」スタイルのセットを提供します。 これは通常、テキストの色を白から黒に、またはその逆に変更するために使用されます。</p>
+    <h3 id="transitions">Transitions (トランジション)</h3>
+    <p><strong>Transitions</strong> (トランジション) 設定は、注釈がどのように表示され、画面から消えるかを制御します。</p>
   </section>
 </article>
 
