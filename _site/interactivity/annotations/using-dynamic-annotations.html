@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="ja"> 
     <head>
-        <title>Using Dynamic Annotations</title>
+        <title>動的注釈の使用</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to create variables and add a display rule to a video.">
+        <meta name="description" content="このトピックでは、変数を作成し、動画に表示ルールを追加する方法について学びます。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3148,89 +3148,85 @@
       <br>
       
       
-<h1>Using Dynamic Annotations</h1>
+<h1>動的注釈の使用</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how to create variables and add a display rule to a video.</summary>
+  <summary>このトピックでは、変数を作成し、動画に表示ルールを追加する方法について学びます。</summary>
   <section class="bcls-section">
-    <p>Through the use of variables and display rules it is possible to create interactive videos that modify the viewing
-      experience based on a viewer’s input.
-      Annotations are made dynamic through the use of JavaScript variables.
-      Variables have two primary functions:</p>
+    <p>変数と表示ルールの使用により、視聴者の入力に基づいて視聴体験を変更するインタラクティブなビデオを作成することができます。注釈は、JavaScript の変数を使用して動的に作成されます。変数には主に2つの機能があります:</p>
     <ol>
 
-      <li>To display dynamic content in a text commentary, for example, <code>Welcome Back, {{userName}}!</code></li>
+      <li>例えば、<code>Welcome Back, {{userName}}!</code> のように、テキストコメントで動的コンテンツを表示する場合。</li>
 
-      <li>To be used in display rules to control whether an annotation is displayed or not, for example, &quot;Display Rule: <code>allowed_to_see==true</code>&quot;</li>
+      <li>注釈を表示するかどうかを制御する表示ルールで使用します。例えば、 &quot;表示ルール: <code>allowed_to_see==true</code>&quot;</li>
     </ol>
-    <p>This topic will explain how to create and use variables for a dynamic, adaptive video
-      experience for viewers.</p>
+    <p>このトピックでは、視聴者にダイナミックでアダプティブなビデオ体験を提供するための変数の作成と使用方法について説明します。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="variable-types">Variable types</h2>
-    <p>There are different types of variables available when using Brightcove Interactivity.</p>
+    <h2 id="variable-types">変数の種類</h2>
+    <p>Brightcove Interactivity を使用する際に使用できる変数には、さまざまなタイプがあります。</p>
     <ul>
-      <li><strong>Standard variables</strong> - Variables explicitly set when an annotation is clicked, a quiz pass/fail or by time triggered actions (these variables are manually created)</li>
-      <li><strong>Quiz variables</strong> - Variables automatically created by quiz annotations</li>
+      <li><strong>標準変数</strong> - 注釈がクリックされた時、クイズの合否、または時間トリガーアクションによって明示的に設定される変数 (これらの変数は手動で作成されます)。</li>
+      <li><strong>クイズ変数</strong> - クイズの注釈によって自動的に作成される変数。</li>
       <!--<li><strong>Environment variables</strong> - Variables explicitly passed to the Embed API from an external system.</li>-->
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="standard-variables">Standard variables</h2>
-    <p>To define a standard variable on an annotation:</p>
+    <h2 id="standard-variables">標準変数</h2>
+    <p>注釈に標準変数を定義するには:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click on an annotation's Edit menu.</li>
-      <li>Click <strong>Link</strong> and then click the <strong>Advanced</strong> tab.
+      <li>注釈の Edit メニューをクリックします。</li>
+      <li><strong>Link</strong> (リンク)をクリックし、<strong>Advanced</strong> (詳細) タブをクリックします。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/dynamic-annotations/advanced-tab.png"> </figure>
       </li>
-      <li>In the <strong>JavaScript</strong> field, enter a new JavaScript variable name or variable assignment.</li>
-      <li>Click <span class="button-blue">SAVE</span>.</li>
+      <li><strong>JavaScript</strong> フィールドに、新しい JavaScript 変数名または変数割り当てを入力します。</li>
+      <li><span class="button-blue">SAVE</span> (保存)をクリックします。</li>
     </ol>
-    <p>When the annotation is clicked by a viewer, the variable assignment code will be executed. </p>
-    <h3>Variable name requirements</h3>
+    <p>視聴者によって注釈がクリックされると、変数代入コードが実行されます。</p>
+    <h3>変数名の要件</h3>
     <ul>
-      <li>Variable names must begin with a letter, underscore ( _ ), or $</li>
-      <li>Use = for assignments and double quotes for quoted strings</li>
-      <li> Commas are reserved for delimiting multiple variables</li>
-      <li>Multiple variables have to close with a semicolon</li>
+      <li>変数名は、文字、アンダースコア ( _ ) または $ で始まる必要があります。</li>
+      <li>代入には = を使用し、引用符で囲まれた文字列には二重引用符を使用します。</li>
+      <li>カンマは、複数の変数を区切るために予約されています。</li>
+      <li>複数の変数はセミコロンで閉じなければならない。</li>
     </ul>
-    <h3>Examples</h3>
+    <h3>例</h3>
     <div style="overflow-x: scroll;">
       <table class="bcls-table">
         <thead class="bcls-table__head">
           <tr>
-            <th width="449">Example</th>
-            <th width="328">Result</th>
+            <th width="449">例</th>
+            <th width="328">結果</th>
           </tr>
         </thead>
         <tbody class="bcls-table__body">
           <tr>
             <td><code>my_var=true</code></td>
-            <td>When clicked, <code>my_var</code> will be set to <code>TRUE</code></td>
+            <td>クリックすると、<code>my_var</code> が <code>TRUE</code> に設定されます。</td>
           </tr>
           <tr>
             <td><code>my_var=20</code></td>
-            <td>When clicked, <code>my_var</code> will be set to <code>20</code></td>
+            <td>クリックすると、<code>my_var</code> が <code>20</code> に設定されます。</td>
           </tr>
           <tr>
             <td><code>my_var=&quot;Hello World&quot;</code></td>
-            <td>When clicked, <code>my_var</code> will be set to <code>Hello World</code></td>
+            <td>クリックすると、<code>my_var</code> が <code>Hello World</code> に設定されます。</td>
           </tr>
           <tr>
             <td><code>my_var1=true, my_var2=false;</code></td>
-            <td>Multiple variable assignment</td>
+            <td>複数の変数の割り当て</td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
   <section class="bcls-section">
-    <h2 id="quiz-variables">Quiz variables</h2>
-    <p>Every question defined in a Quiz annotation will automatically create two variables:</p>
+    <h2 id="quiz-variables">クイズ変数</h2>
+    <p>クイズ 注釈で定義されたすべての問題は、自動的に2つの変数を作成します:</p>
     <ol>
-      <li>The value of the answer provided by the viewer.</li>
-      <li>Whether the answer provided by the viewer was correct.</li>
+      <li>視聴者が提供した回答の値。</li>
+      <li>視聴者が提供した答えが正しかったかどうか。</li>
     </ol>
-    <p>The automatically created variables are named <code>quiz_[annotation-id]_[question index]</code>, for example <code>quiz_123_1</code> would be the answer to the first question in the quiz with id 123. The variable defining if the correct answer was provided will be named <code>quiz_[annotation-id]_[question index]_correct</code>.</p>
+    <p>自動的に作成される変数の名前は <code>quiz_[annotation-id]_[question index]</code> です。例えば、<code>quiz_123_1</code> は、id 123 のクイズの最初の問題の答えになります。正解かどうかを定義する変数は、<code>quiz_[annotation-id]_[question index]_correct</code> という名前になります。</p>
     <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/dynamic-annotations/variables-list.png"> </figure>
   </section>
   <!--<section class="bcls-section">
@@ -3239,76 +3235,76 @@
     <pre>hapyak.viewer({<br>player: ytPlayer,<br>playerType: &quot;youtube&quot;,<br>css: &quot;http://modernizr.com/i/css/modernizr-2.1.1.css?v=1&quot;,<br>width: 640,<br>height: 360,<br>trackId: 640,<br>autoplay: true,<br>variables: {“my_name”:&quot;Kyle&quot;,&quot;my_company&quot;:&quot;Brightcove&quot;}<br>});</pre>
   </section>-->
   <section class="bcls-section">
-    <h2 id="displaying-variables">Displaying  variables</h2>
-    <p>Once variables have been defined they can be used to display dynamic content or to <a href="#overview">create rules</a> which can be used to show or hide  annotations. When a variable is selected from the <strong>Variables</strong> dropdown, an expression will be added to the text overlay that will resolve to the variable when<br>
-      viewed. The resolved variable will equal the answer that the viewer provided to the question.</p>
+    <h2 id="displaying-variables">変数の表示</h2>
+    <p>変数が定義されると、動的コンテンツを表示したり、注釈の表示/非表示に使用できる <a href="#overview">ルールを作成</a>するために使用できます。<strong>Variables</strong> (変数)ドロップダウンから変数を選択すると、表示時に変数を解決する式がテキスト オーバーレイに追加されます。<br>
+      解決された変数は、視聴者が質問に対して提供した回答と等しくなります。</p>
     <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/dynamic-annotations/selected-answer.png"></figure>
 
-    <p>Variables are identified in the text as anything occurring between &quot;{{&quot; and &quot;}}&quot;. If you are using quiz variables, the variable expression will be automatically added via the Variables dropdown. Otherwise, you will need to enter the variable name that was defined. For example, &quot;My name is: <code>{{my_name}}</code>&quot;</p>
+    <p>変数はテキスト中では &quot;{{&quot; と &quot;}}&quot; の間に出現するものとして識別されます。クイズ変数を使用している場合は、変数ドロップダウンから変数式が自動的に追加されます。そうでない場合、定義された変数名を入力する必要があります。例えば、 &quot;私の名前は: <code>{{my_name}}</code>&quot;</p>
 
-    <aside class="bcls-aside bcls-aside--information">Note: You do not need to remember the Quiz variable naming scheme. The Quiz variables are automatically available in the UI through the Variables drop down in the edit menu of a text overlay annotation.</aside>
+    <aside class="bcls-aside bcls-aside--information">注: クイズ変数の命名スキームを覚えておく必要はありません。クイズ変数は、テキスト オーバーレイ 注釈の編集メニューの変数ドロップダウンを通じて、UIで自動的に使用可能になります。</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="overview">Overview of display rules</h2>
-    <p>Display Rules are JavaScript expressions that test variables for the purpose of conditionally displaying annotations. If the expression evaluates to TRUE, the annotation will be rendered. If the expression evaluates to FALSE or NULL, the annotation will not be rendered. Display Rules can be added to any annotation type. Common use cases include:</p>
+    <h2 id="overview">表示ルールの概要</h2>
+    <p>表示ルールは、注釈を条件付きで表示するために変数をテストする JavaScript 式です。式が TRUE と評価された場合、注釈はレンダリングされます。式が FALSE または NULL と評価された場合、注釈は表示されません。表示ルールは、任意の注釈 タイプに追加できます。一般的な使用例を以下に示します:</p>
     <ul>
-      <li>Display an annotation when a viewer clicks on a different annotation</li>
-      <li>Display an annotation when the viewer gets a quiz question right or wrong</li>
-      <li>Display an annotation based on a parameter passed in from an external API </li>
+      <li>視聴者が別の注釈をクリックした時に、注釈を表示する。</li>
+      <li>視聴者がクイズの問題に正解または不正解の場合、注釈を表示する。</li>
+      <li>外部 API から渡されたパラメータに基づいて注釈を表示する。</li>
     </ul>
-    <p>Display rules require that you are comfortable working with HTML, JavaScript and CSS. Codeacademy offers free <a href="https://www.codecademy.com/en/tracks/web" rel="nofollow noopener noreferrer" target="_blank">HTML/CSS</a> and <a href="https://www.codecademy.com/en/tracks/javascript" rel="nofollow noopener noreferrer" target="_blank">JavaScript</a> courses that may be helpful to beginners.</p>
+    <p>表示ルールでは、HTML、JavaScript、CSSの操作に慣れている必要があります。 Codeacademyでは、初心者に役立つ <a href="https://www.codecademy.com/en/tracks/web" rel="nofollow noopener noreferrer" target="_blank">HTML/CSS</a> と <a href="https://www.codecademy.com/en/tracks/javascript" rel="nofollow noopener noreferrer" target="_blank">JavaScript</a> のコースを無料で提供しています。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="add-rule">Adding a display rule</h2>
-    <p>To add a display rule to an annotation, follow these steps.</p>
+    <h2 id="add-rule">表示ルールの追加</h2>
+    <p>注釈に表示ルールを追加するには、以下の手順に従います。</p>
     <ol class="bcls-tasklist-restart">
-      <li>Login to Video Cloud Studio.</li>
-      <li>Open the <strong>Interactivity</strong> module.</li>
-      <li> Click on a project <strong>Title</strong> to open it.</li>
-      <li>In the list of annotations, locate the annotation and click the edit icon (<img src="/assets/images/s-brightcove-interactivity-img/platform/custom-annotations/display-rules/icon-edit.png">).</li>
-      <li>In the <strong>Edit</strong> menu, click <strong>More...</strong></li>
-      <li>Click <strong>Display Rule</strong>.
+      <li>Video Cloud Studio にログインします。</li>
+      <li><strong>Interactivity</strong> モジュールを開きます。</li>
+      <li>プロジェクトの<strong>タイトル</strong>をクリックして開きます。</li>
+      <li>注釈のリストで注釈を探し、Edit アイコン (<img src="/assets/images/s-brightcove-interactivity-img/platform/custom-annotations/display-rules/icon-edit.png">) をクリックします。</li>
+      <li><strong>Edit</strong> メニューで、<strong>More...</strong>をクリックします。</li>
+      <li><strong>Display Rule</strong> (表示ルール)をクリックします。
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/dynamic-annotations/new-display-rule.png"> </figure>
-        <aside class="bcls-aside bcls-aside--information language-editable">Note: The <strong>Select Variable</strong> dropdown is only available if a quiz has been added to the project.</aside>
+        <aside class="bcls-aside bcls-aside--information language-editable">注: <strong>Select Variable</strong> (変数の選択) ドロップダウンは、プロジェクトにクイズが追加されている場合のみ使用できます。</aside>
       </li>
-      <li>Enter the display rule. The expression entered in this dialog will be evaluated prior to rendering the annotation.<br>
+      <li>表示ルールを入力します。このダイアログで入力された式は、注釈をレンダリングする前に評価されます。<br>
       </li>
-      <li>Click <span class="button-blue">SAVE</span>.</li>
-      <li>Click <strong>Done</strong>.</li>
+      <li><span class="button-blue">SAVE</span> (保存)をクリックします。</li>
+      <li><strong>Done</strong> (完了)をクリックします。</li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="syntax">Display rule syntax</h2>
-    <h3>Testing for a set variable</h3>
-    <p>Rule: <code>[variable name]</code> eg. <code>my_var</code></p>
-    <p>This is the same as writing <code>my_var=true</code>. This will be true if the resolved variable is defined and it’s value is not false.</p>
-    <h3>Testing equality</h3>
-    <p>Rule: <code>[variable name]==&quot;value&quot;</code> eg. <code>my_var==&quot;Kyle&quot;</code></p>
-    <p>This will be true only if the resolved variable is exactly equal to the string value between the single quotes.</p>
-    <h3>Testing for correct quiz answers</h3>
-    <p>Rule: <code>[quiz variable name]_correct</code> eg. <code>quiz_123_1_correct</code></p>
-    <p>This will be true only if the resolved variable is equal to the correct answer of the quiz question.</p>
-    <h3>Testing for incorrect quiz answers</h3>
-    <p>Rule: <code>[quiz variable name] &amp;&amp; ![quiz variable name]_correct</code> eg. <code>quiz_123_1 &amp;&amp;<br>
+    <h2 id="syntax">表示ルールの構文</h2>
+    <h3>設定された変数のテスト</h3>
+    <p>ルール: <code>[variable name]</code> 例: <code>my_var</code></p>
+    <p>これは <code>my_var=true</code> と書くのと同じです。これは、解決された変数が定義され、その値が偽でなければ真になります。</p>
+    <h3>等価性のテスト</h3>
+    <p>ルール: <code>[variable name]==&quot;value&quot;</code> 例: <code>my_var==&quot;Kyle&quot;</code></p>
+    <p>これは、解決された変数が一重引用符で囲まれた文字列値と正確に等しい場合にのみ真となります。</p>
+    <h3>クイズの正解に対するテスト</h3>
+    <p>ルール: <code>[quiz variable name]_correct</code> 例: <code>quiz_123_1_correct</code></p>
+    <p>これは回答された変数がクイズ問題の正解と等しい場合のみ真になります。</p>
+    <h3>クイズの不正解に対するテスト</h3>
+    <p>ルール: <code>[quiz variable name] &amp;&amp; ![quiz variable name]_correct</code> 例: <code>quiz_123_1 &amp;&amp;<br>
       !quiz_123_1_correct</code></p>
-    <p>This will be true only if the resolved variable is NOT equal to the correct answer of the quiz question.</p>
+    <p>これは、回答された変数がクイズ問題の正解と等しい場合にのみ真となります。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="example">Example</h2>
-    <p>Here's a basic example. Clicking on one annotation will make another appear.</p>
+    <h2 id="example">例</h2>
+    <p>基本的な例を見てみましょう。注釈をクリックすると、別の注釈が表示されます。</p>
     <iframe src="https://players.brightcove.net/1752604059001/g0XymrEp4_default/index.html?videoId=1739617402811689392&interactivityProjectId=64079144f079a10017a7470f" allowfullscreen="" allow="encrypted-media" width="960" height="540"></iframe>
-    <p>In this example, a triggered action is set at the beginning of the video to set a JavaScript variable <code>apple</code> to <code>true</code>.</p>
-    <p>The image and text annotations are configured with the same start and end times.</p>
-    <p>The apple and orange images are both image overlays. They both have display rules set so they only show if their respective JavaScript variable (<code>apple</code> or <code>orange</code>) is set to <code>true</code>. For example, here is the display rule for the orange.</p>
+    <p>この例では、動画の冒頭でトリガーアクションが設定され、JavaScriptの変数 <code>apple</code> が <code>true</code> に設定されます。</p>
+    <p>画像とテキストの注釈は、同じ開始時刻と終了時刻で設定されています。</p>
+    <p>リンゴとオレンジの画像はどちらも画像オーバーレイです。どちらも表示ルールが設定されているので、それぞれの JavaScript 変数 (<code>apple</code> または <code>orange</code>) が <code>true</code> に設定されている場合のみ表示されます。例えば、オレンジの表示ルールは以下の通りです。</p>
     <p>
       <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/dynamic-annotations/orange-display-rule.png"></figure>
     </p>
-    <p>This will cause the orange image overlay to only display when the variable <code>orange = true</code>.</p>
-    <p>The text overlay <strong>Click here to change the image to display an orange</strong> is configured with a display rule to display when <code>apple = true</code>. The <strong>Link</strong> setting is configured to switch the variables when clicked.</p>
+    <p>これにより、オレンジ色の画像オーバーレイは、変数 <code>orange = true</code> の時だけ表示されるようになります。</p>
+    <p>テキスト オーバーレイ <strong>Click here to change the image to display an orange</strong> は、<code>apple = true</code> の時に表示されるように表示ルールが設定されています。<strong>Link</strong> (リンク)の設定は、クリックすると変数が切り替わるように設定されています。</p>
     <p>
       <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/dynamic-annotations/orange-text.png"></figure>
     </p>
-    <p>So clicking the text will set <code>orange</code> to <code>true</code> which will make the alternate text overlay and orange image both appear.</p>
+    <p>したがって、テキストをクリックすると <code>orange</code> が <code>true</code> に設定され、代替テキスト オーバーレイとオレンジの画像の両方が表示されます。</p>
   </section>
 </article>
 
