@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="ja"> 
+    <head>
+        <title>統合: Marketo</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="このトピックでは、Audience Insights から取得したユーザーデータを Marketo アプリケーションに更新するための Marketo 統合について学びます。">
+        
+        <!-- Google Font -->
+        <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+        <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+        
+        <!-- FontAwesome JS-->
+        
+        <!-- <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>   -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
+
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+        <script translate="no">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XBJC11HF8Z');
+        </script>
+        <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
+        <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+
+    </head> 
+
+    <body class="docs-page">
+        <div id="consent_blackbar"></div>
+        <div id="teconsent"></div>
+        <script async="async"
+            src="https://url.us.m.mimecastprotect.com/s/5CgOCzpzDQU89lO9HgivF9GSgA?domain=consent.trustarc.com"></script>
+        
+
+<header class="header fixed-top">
+  <div class="branding docs-branding">
+    <div class="container-fluid position-relative py-2">
+      <div class="docs-logo-wrapper">
+        <button id="docs-sidebar-toggler" class="docs-sidebar-toggler"
+          type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="site-logo"><a class="navbar-brand"
+            href="https://support.brightcove.com/"
+            style="margin-left: 15px;">
+            <img class="logo-icon me-2"
+              src="/assets/s-site-assets-template-stylesheets/images/bc_logo_black_1@1x.png"
+              alt="logo" style="margin-bottom: 9px;">
+            <!-- <span class="logo-text">BRIGHTCOVE</span> -->
+          </a></div>
+      </div><!--//docs-logo-wrapper-->
+
+      <div class="docs-top-utilities d-flex justify-content-end
+        align-items-center">
+        
+        <!-- Search bar -->
+        <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
+
+<select id="site_select" class="form-select select-focus" style="width:
+          20%; margin-right: 10px;" translate="no">
+          <option value="">Other Brightcove Docs</option>
+          
+          
+          <option value="https://support.brightcove.com" translate="no">Documentation Home</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD --</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+          
+          
+          
+          <option value="https://mstudio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+          
+          
+          
+          <option value="https://player.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+          
+          
+          
+          <option value="https://apis.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+          
+          
+          
+          <option value="https://sdks.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+          
+          
+          
+          <option value="https://integrations.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+          
+          
+          
+          <option value="https://general.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO ESSENTIALS --</option>
+          
+          
+          
+          <option value="https://audience-insights.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+          
+          
+          
+          <option value="https://beacon-help.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+          
+          
+          
+          <option value="https://beacon.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+          
+          
+          
+          <option value="https://corptv.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+          
+          
+          
+          <option value="https://live.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+          
+          
+          
+          <option value="https://zencoder.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD ADD-ONS --</option>
+          
+          
+          
+          <option value="https://gallery.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com/social/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+          
+          
+          
+          <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+          
+          
+        </select>
+
+        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+          onchange="doGTranslate(this);" translate="no">
+          <!-- <option value="">Select Language</option> -->
+          <option value="en|en" translate="No">English</option>
+          <option value="en|zh-TW" translate="No">繁體中文</option>
+          <option value="en|fr" translate="No">Français</option>
+          <option value="en|de" translate="No">Deutsch</option>
+          <option value="en|ja" translate="No">日本語</option>
+          <option value="en|ko" translate="No">한국어</option>
+          <option value="en|es" translate="No">Español</option>
+        </select>
+
+        <script translate="no">
+          /* <![CDATA[ */
+          function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+          /* ]]> */
+        </script>
+      </div>
+    </div>
+  </div>
+</header><!--//header-->
+
+<div class="docs-wrapper">
+  <div id="docs-sidebar" class="docs-sidebar" style="padding-right: 15px;">
+    <div id="nav-search-box" class="top-search-box d-lg-none p-3"></div>
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em; display: inline-block; border-right: 1px solid #e5e5e6; padding-right: 1em;">
+          
+          <nav class="docs-nav sidenav" aria-label="Main">
+            <ul class="site-nav" style="list-style-type: none;">
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/">Home</a></li>
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/getting-started/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Getting Started</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/overview-audience-insights.html">Overview: Audience Insights</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/audience-insights-glossary.html">Audience Insights Glossary</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/general/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;General Information</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/automating-smarter-campaigns-with-user-s.html">Automating Smarter Campaigns with User Segments</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/audience-insights-data-security.html">Brightcove Audience Insights and Data Security</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/calculating-lifetime-value-in-a-svod-bus.html">Calculating Lifetime Value in a SVoD Business</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/content-as-context-for-better-segmentation.html">Content as Context for Better Segmentation</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/introducing-custom-insights.html">Custom Insights</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/enhance-hubspot-campaigns-with-the-wicke.html">Enhance HubSpot Campaigns with the Audience Insights Dashboard</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/looking-beyond-views-to-find-entertainme.html">Looking Beyond Views to Find Entertainment Value in OTT Content</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/measuring-content-momentum.html">Measuring Content Momentum</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/seeing-the-big-picture-of-your-ott-busin.html">Seeing the Big Picture of Your OTT Business</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/streamlining-workflow-with-automated-sub.html">Streamlining Workflow with Automated Subscriber Sync</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/understanding-content-through-the-lens-o.html">Understanding Content through the Lens of Your Customer Attention Index</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/guides/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Guides</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/guides/summary/customer-summary.html">Customer Summary</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/guides/customers/current-customers.html">Customers</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/guides/conversions/conversions.html">Conversions</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/guides/lost-customers/lost-customers.html">Lost Customers</a></li>
+              
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/guides/engagement/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Engagement</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/guides/engagement/engagement-overview.html">Engagement: Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/guides/engagement/engagement-usage-trends.html">Engagement: Usage Trends</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/guides/engagement/engagement-status-over-time.html">Engagement: Status Over Time</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/guides/engagement/engagement-sessions-over-time.html">Engagement: Sessions Over Time</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/guides/engagement/engagement-hours-viewed-by.html">Engagement: Hours Viewed By</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/guides/content/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Content</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/guides/content/content-overview.html">Content: Overview</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/guides/content/content-catalog-by.html">Content: Catalog and Explorer</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/guides/content/content-pupular-content-by.html">Content: Popular Content</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/guides/content/content-trial-drivers-library.html">Content: Trial Drivers and Library Breakdown</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/guides/distribution/distribution.html">Distribution</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/insights/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Insights</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/insights/linear-insights.html">Linear Insights</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/integrations/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Integrations</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/integration-summary.html">Integrations Summary</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/properties.html">Properties</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/integration_spotlight_braze.html">Braze</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/integration_eloqua.html">Eloqua</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/integration_spotlight_evergent.html">Evergent</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/integration_spotlight_hubspot.html">HubSpot</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/integration_marketo.html" aria-current="page">Marketo</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/integration_spotlight_vimeo.html">Vimeo</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/integration_spotlight_blueshift.html">Blueshift</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/integration-s3.html">Integration: S3</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integrations/test_integration.html">Test Integration</a></li>
+              
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/integrations/salesforce-sales-cloud/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Salesforce Sales Cloud</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/integrations/salesforce-sales-cloud/overview-sfsc-integration.html">Overview: Salesforce Sales Cloud Integration</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/integrations/salesforce-sales-cloud/salesforce-connected-app-setup.html">Salesforce Connected App Setup</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/integrations/salesforce-sales-cloud/salesforce-properties-setup.html">Salesforce Properties Setup</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/integrations/salesforce-sales-cloud/audience-insights-publish-integration-setup.html">Audience Insights Salesforce Integration Setup</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/use-cases/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Use Cases</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/use-cases/acquisition/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Acquisition</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/acquisition/how_to_find_more_happy_customers_with_fa.html">Find Customers with Facebook</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/acquisition/how_to_find_more_happy_customers_with_go.html">Find Customers with Google Ads</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/acquisition/how_to_find_more_happy_customers_with_tw.html">Find Customers with Twitter</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/acquisition/running_better_campaigns_using_initial_v.html">Running Better Campaigns</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/use-cases/retention/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Retention</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/retention/promoting_upgrades_to_annual_plans.html">Promoting Upgrades</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/retention/using_genre_to_match_viewers_with_content.html">Using Genre to Match Content</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/use-cases/win-back/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Win-back</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/win-back/exclusive_content_alerts.html">Exclusive Content Alerts</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/win-back/how_to_win_back_lost_subscribers.html">Win-back Lost Subscribers</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/win-back/new_app_or_device_based_on_their_primary.html">Primary Viewing Device</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/win-back/new_content_based_on_past_viewing.html">Content Based on Viewing</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/use-cases/win-back/price_change_awareness_offers.html">Price Change Awareness</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/support/"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Support</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/contact-sales.html">Contact Sales</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/known-issues-studio-brightcove-player-and-apis.html">Known Issues</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/reset-support-portal-password.html">Reset Your Support Portal Password</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+          </ul>
+          </nav>
+        </div>
+      </div>
+    </div><!--//docs-sidebar-->
+  </div>
+</div>
+
+<div style="margin-top: 20px;">
+  <div class="docs-content" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="docs-overview">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/integrations/">Integrations</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Integration: Marketo</li>
+            
+            
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="docs-content">
+  <div class="container">
+    <div class="docs-overview py-5">
+      
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
+      
+      
+      <h1>統合: Marketo</h1>
+      <article class="bcls-article">
+        <summary>このトピックでは、Audience Insights から取得したユーザーデータを Marketo アプリケーションに更新するための Marketo 統合について学びます。</summary>
+      
+        <section class="bcls-section">
+          <h2 id="Overview">概要</h2>
+          <p>Audience Insights は、サブスクリプションベースのアカウントおよびサブスクリプションを必要としないアカウント向けに、ユーザーレベルの日次データを生成します。</p>
+          <p>この統合を使用することで、これらのデータを Marketo アプリケーションに転送することができます。</p>
+          <p></p>
+          <aside class="bcls-aside bcls-aside--information language-editable">Publish 統合は、両方のシステムに存在するユーザーのみを更新できます。Marketo に新しい連絡先を作成することはできません。<br> ユーザーをメールアドレスまたはコンタクト ID で照合することができます。</aside>
+        </section>
+      
+        <section class="bcls-section">
+          <h2 id="Requirements">必要要件</h2>
+          <ul>
+            <li><a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/getting-started/campaign-migration-set-up.html#custumer-id-vs-viewer-token">Video Cloud アカウントで視聴者トラッキングが有効になっていること</a>。</li>
+            <li>Video Cloud で管理者権限を持つユーザーであること。</li>
+            <li>Marketo で管理者権限を持つユーザーであること。</li>
+          </ul>
+        </section>
+      
+        <section class="bcls-section">
+          <h2 id="create-a-marketo-web-service">Marketo Web サービスの作成</h2>
+          <p>API認証情報を取得し、このインスタンスと通信するには、Marketo の Webサービスが必要です。</p>
+          <ol class="bcls-tasklist">
+              <li>
+                  Marketo で <strong>管理メニュー</strong> に移動し、<strong>ユーザーとロール</strong> をクリックします。
+                  <p></p>
+                  <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/admin-users.webp" alt="admin-users">
+                  </figure>
+              </li>
+              <li>
+                  <strong>ロール</strong> タブを選択し、<strong>新しいロール</strong> をクリックします。<br> 以下の API 権限を割り当てます：
+                  <p></p>
+                  <ul>
+                      <li>読み取り専用アセット</li>
+                      <li>読み書き可能なカスタムオブジェクト</li>
+                      <li>読み書き可能なカスタムオブジェクトタイプ</li>
+                      <li>読み書き可能なリード</li>
+                  </ul>
+                  <p></p>
+                  <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/api-permissions.webp" alt="admin-users">
+                  </figure>
+              </li>
+              <li>
+                  <strong>ユーザー</strong> タブを選択し、<strong>新しいユーザーを招待</strong> をクリックします。<br> 必要な項目を入力し、<strong>次へ</strong> をクリックします。
+                  <p></p>
+                  <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/new-user.webp" alt="new-user">
+                  </figure>
+              </li>
+              <li>
+                  API のみのオプションを選択し、前の手順で作成したロールを選択して、<strong>次へ</strong> をクリックします。
+                  <p></p>
+                  <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/api-only.webp" alt="api-only">
+                  </figure>
+              </li>
+              <li>
+                  <strong>送信</strong> をクリックします。
+                  <p></p>
+                  <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/send.webp" alt="send">
+                  </figure>
+                  <aside class="bcls-aside bcls-aside--information language-editable">API のみのユーザーを作成しているため、実際にはメール招待は送信されません。</aside>
+              </li>
+              <li><strong>管理</strong> メニューに戻り、<strong>Launchpoint</strong> をクリックします。</li>
+              <p></p>
+              <figure class="bcls-figure">
+                  <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/launchpoint.webp" alt="launchpoint">
+              </figure>
+              <li>
+                  <strong>新規メニュー</strong> をクリックし、<strong>新しいサービス</strong> を選択します。<br> 必要な情報を入力し、サービスに <strong>カスタム</strong> を選択し、前の手順で作成した <strong>API のみのユーザー</strong> を選択します。<br> <strong>作成</strong> をクリックします。
+                  <p></p>
+                  <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/new-service.webp" alt="new-service">
+                  </figure>
+              </li>
+              <li>
+                  新しいサービスの <strong>詳細を表示</strong> をクリックし、<strong>クライアント ID とクライアントシークレット</strong> を確認します。
+                  <p></p>
+                  <aside class="bcls-aside bcls-aside--warning language-editable">これらの資格情報は、<strong>Marketo Publish 統合</strong> を追加する際に必要になるため、必ず保存してください。</aside>
+                  <p></p>
+                  <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/credentials.webp" alt="credentials">
+                  </figure>
+              </li>
+              <li>
+                  <strong>管理</strong> メニューに戻り、<strong>Web サービス</strong> をクリックします。
+                  <p></p>
+                  <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/web-services.webp" alt="web-services">
+                  </figure>
+              </li>
+              <li>
+                  <strong>REST API</strong> ボックス内の <strong>エンドポイント</strong> を確認します。
+                  <p></p>
+                  <aside class="bcls-aside bcls-aside--warning language-editable">エンドポイント URL と ID URL を必ず保存してください。これらの情報は、Marketo 公開統合を追加する際に必要になります。</aside>
+                  <p></p>
+                  <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/rest-api.webp" alt="rest-api">
+                  </figure>
+              </li>
+          </ol>
+        </section>
+<section class="bcls-section">
+    <h2 id="audience-insights-publish-integration-setup">Audience Insights Publish Integration Setup</h2>
+    <p>Once the web service has been created in the Marketo instance, a publish integration can be added to the Audience Insights system.</p>
+    <h3>Add Publish Integration</h3>
+    <ol class="bcls-tasklist-restart">
+        <li>Log in to <strong>Video Cloud Studio.</strong></li>
+        <p></p>
+        <li>Open the <strong>Integrations</strong> module.</li>
+        <p></p>
+        <li>
+        Click <strong>Customer Data Platforms</strong>
+        <p></p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/customer-data-platforms.webp" alt="customer-data-platforms">
+        </figure>
+        </li>
+        <p></p>
+        <li>Click <span class="button-blue">Add Integration</span></li>
+        <p></p>
+        <li>
+            Select <strong>Marketo</strong> from the Destination dropdown. <br> Fill out the Form and Click <span class="button-blue">Save</span>
+            <p></p>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/marketo-select.webp" alt="marketo-select">
+            </figure>
+            <aside class="bcls-aside bcls-aside--information language-editable">
+                <ul>
+                    <li>The Client ID, Client Secret, API Endpoint URL, and API Identity URL are obtained from Marketo when creating the Web Service.</li>
+                    <li>You can use the Customer ID or Email (for Audience Insights) or Customer ID for Videocloud as a Customer identifier.</li>
+                    <li>The Automated Export option controls how often there should be an automated publish to the Marketo integration.</li>
+                </ul>
+            </aside>
+            <aside class="bcls-aside bcls-aside--warning language-editable">It could take a few hours to complete the initial data synchronization. This timeframe will vary depending on when your Marketo instance was created.</aside>
+          </li>
+          <p></p>
+    </ol>
+</section>
+<section class="bcls-section">
+    <h2 id="viewing-custom-object-fields">Viewing lead custom object fields in Marketo</h2>
+    <p>This publish integration aims to create a custom object in Marketo named Brightcove that includes fields for the desired integration properties.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">To select these fields, navigate to the Integration Properties tab.</aside>
+    <p></p>
+    <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/properties.webp" alt="properties">
+    </figure>
+    <br>
+    <aside class="bcls-aside bcls-aside--information language-editable">The custom object fields are automatically created by the Marketo publish integration and do not need to be manually created in Marketo.<br><br> If a field is selected and later unselected (and moved to the Inactive column), the custom object field is not deleted from Marketo.</aside>
+    <br>
+    <h3>To view the selected fields, follow the next process:</h3>
+    <br>
+    <ol class="bcls-tasklist-restart">
+        <li>
+            From the <strong>Admin menu</strong> in Marketo, navigate to Database Management -> Marketo Custom Objects and Click on the <strong>Brightcove Integration</strong> custom object.
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/custom-object.webp" alt="custom-object">
+            </figure>
+        </li>
+        <br>
+        <li>
+            Click on the Fields tab to view all fields that have been defined for the Brightcove Integration custom object.
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/fields.webp" alt="fields">
+            </figure>
+            <br>
+            <aside class="bcls-aside bcls-aside--information language-editable">Be sure to select Brightcove integration in the Select Object box so that all fields will be displayed.</aside>
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/brightcove-fields.webp" alt="brightcove-fields">
+            </figure>
+        </li>
+    </ol>
+</section>
+<section class="bcls-section">
+    <h2 id="switching_account_types_in_audience_insights" >Switching account types in Audience Insights</h2>
+    <aside class="bcls-aside bcls-aside--warning language-editable">If you need to switch account types in Audience Insights, e.g., from SVOD to TVE, you should also delete any existing Marketo integrations and create a new one under the new account type.</aside>
+
+    <aside class="bcls-aside bcls-aside--information language-editable">The integration properties for Marketo are unique to an account type. Attempting to add all integration properties for both account types will result in validation errors from Marketo.</aside>
+    <p>In order to switch accounts and re-establish integrations successfully with the new account type, delete the existing integration by following the steps below:</p>
+    <h3 id="delete_publish_integration">Delete Publish Integration</h3>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+        <li>Log in to <strong>Video Cloud Studio</strong></li>
+        <li>Open the <strong>Integrations</strong> module</li>
+        <li>
+            Click <strong>Customer Data Platforms</strong>
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/customer-data-platforms.webp" alt="customer-data-platforms">
+            </figure>
+            <p></p>
+        </li>
+        <li>
+            On the row for the Marketo integration, Click <strong>Disconnect</strong> (the trash icon)
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/disconnect.webp" alt="fields">
+            </figure>
+            <p></p>
+        </li>
+        <li>
+            Type “DELETE” in the text box and Click <strong>Delete</strong>
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/marketo/delete.webp" alt="fields">
+            </figure>
+            <p></p>
+        </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Deleting a Marketo integration in Audience Insights will also delete all data associated with that integration in Marketo.</aside>
+</section>
+
+  </article>
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">Page Contents</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
+  
+<!-- </div> -->
+</div>
+</div>
+</div>
+<div class="page-content" style="background-color: rgb(1, 5, 14);">
+  <div class="container" style="width: 50%;">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove Support</h5>
+          <ul class="list-unstyled text-small" style="color: white ;">
+            <li><a class="a-text" href="https://status.brightcove.com">System Status</a></li>
+            <li><a class="a-text" href="https://supportportal.brightcove.com">Contact Support</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/search.html">Search all documentation</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Training</h5>
+          <ul class="list-unstyled text-small">
+            <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
+            <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot Community</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">Product release notes</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">Documentation updates</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© Brightcove Inc. All rights reserved.</p>
+      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">Privacy</a> 
+      <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a>
+
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
+        title="LinkedIn" target="_blank" class="gf-social-linkedin"
+        style="margin-right: 1rem;"><i data-feather="linkedin"
+          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a
+        href="https://twitter.com/brightcove" title="Twitter" target="_blank"
+        class="gf-social-twitter" style="margin-right: 1rem;"><i
+          data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a
+        href="https://www.facebook.com/Brightcove" title="Facebook"
+        target="_blank" class="gf-social-facebook"><i data-feather="facebook"
+          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+      </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+<script translate="no">
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documentation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder,
+    styling: {
+      components: {
+        
+        input: {
+          container: {
+          backgroundColor: 'white',
+          }
+        
+        }
+      }
+    },
+    maxSuggestions: 5, // Maximum number of suggestions to show
+      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+
+  
+
+
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+    window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+  </script>
+  
+  <!-- Javascript -->          
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+
+  <!-- Page Specific JS -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+
+  <!-- original footer components -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/selector.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+ </div>
+</div>
+  </body>
+</html> 
