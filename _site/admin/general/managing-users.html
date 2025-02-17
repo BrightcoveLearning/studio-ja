@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>Upload モジュールを使用したビデオのアップロード</title>
+        <title>ユーザー管理</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="このトピックでは、Video Cloud アカウントにビデオをアップロードするための Upload モジュールの概要を説明します。">
+        <meta name="description" content="このトピックでは、Studio にアクセスできるユーザーを管理する方法について説明します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -411,7 +411,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/media/manage/uploading-videos-using-upload-module.html" aria-current="page">Uploading Videos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/manage/uploading-videos-using-upload-module.html">Uploading Videos</a></li>
                   
                   
                   
@@ -3214,7 +3214,7 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/admin/general/managing-users.html">Managing Users</a></li>
+                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/general/managing-users.html" aria-current="page">Managing Users</a></li>
                   
                   
                   
@@ -3607,15 +3607,15 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/media/">Media</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/">Admin</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/media/manage/">Manage</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Uploading Videos Using the Upload Module</li>
+            <li class="breadcrumb-item active" aria-current="page">Managing Users</li>
             
             
           </ol>
@@ -3636,185 +3636,267 @@
       <br>
       
       
+
 <article class="bcls-article">
-    <h1>Upload モジュールを使用したビデオのアップロード</h1>
-    <summary>このトピックでは、Video Cloud アカウントにビデオをアップロードするための Upload モジュールの概要を説明します。</summary>
+    <h1>ユーザー管理</h1>
+    <summary>このトピックでは、Studio にアクセスできるユーザーを管理する方法について説明します。</summary>
     
     <section class="bcls-section">
-      <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6037253402001">&nbsp;</div>
-      <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-      <p>Upload モジュールは、動的なトランスコードプロセスを使用してビデオコンテンツを取得し、トランスコードします。ファイルを選択すると、Video Cloud はプルベースのプロセスを使用してストレージからコンテンツを取得し、Zencoder トランスコーディングサービスを利用してコンテンツをトランスコードします。</p>
-      <p>Uploadモジュールにアクセスするには、<strong>Upload</strong> モジュールを開きます。</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Uploadモジュール" src="/assets/images/s-media-img/manage/node14456-upload-module.png" /></figure>
-    </section>
+      
+      <div style="max-width: 950px;">
+        <style>
+        video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+          padding-top: 56.25%;
+        }
+        </style><video-js
+          data-account="20318290001"
+          data-player="default"
+          data-embed="default"
+          controls=""
+          data-video-id="1796595014041444036"
+          data-playlist-id=""
+          data-application-id=""
+          class="vjs-fluid"></video-js>
+      </div>
+      <script
+        src="https://players.brightcove.net/20318290001/default_default/index.min.js">
+      </script>
+          
+      <p>ユーザー管理ページでは、Studio を利用できるユーザーを管理します。このページにアクセスするには、管理者 (Administrator) 権限を持つユーザーである必要があります。</p>
+      <p>ユーザー管理ページにアクセスする手順：</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Studio にログインします。</li>
+        <li><strong>管理者 </strong> (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+          </svg>) モジュールを開きます。</li>
+        <li><strong>ユーザー管理</strong> をクリックします。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/admin-module-v2.png" style="width: 875px;" /></figure>
+      </ol>
     
-    <section class="bcls-section">
-      <h2 id="Supported_video_formats">対応するビデオフォーマット</h2>
-      <p>ビデオフォーマットやコーデック、Video Cloud がサポートするソースビデオフォーマットの詳細については、<a href="/general/references/supported-video-and-audio-formats-codecs-and-containers.html">対応するビデオコーデックとコンテナ</a> を参照してください。</p>
-    </section>
-    
-    <section class="bcls-section">
-      <h2 id="profile">トランスコードプロファイルの選択</h2>
-      <p>ビデオをアップロードする前に、トランスコードプロファイルを選択します。トランスコードプロファイルには、ビデオをトランスコードする際に使用される設定が含まれています。利用可能なトランスコードプロファイルのリストは、Video Cloud アカウントの設定によって異なります。以下のスクリーンショットでは、<strong translate="No">CONTEXT AWARE ENCODING</strong> および <strong translate="No">DYNAMIC DELIVERY</strong> の両プロファイルが利用可能です。</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="トランスコードプロファイルの選択" src="/assets/images/s-media-img/manage/node14456-select-profile.png" /></figure>
-      <aside class="bcls-aside bcls-aside--information">注: Dynamic Delivery の詳細については、<a href="/general/architecture/overview-dynamic-delivery.html">Dynamic Delivery の概要</a> を参照してください。</aside>
-      <aside class="bcls-aside bcls-aside--information">注: 高効率ビデオコーディング (HEVC) プロファイルも、有料アドオンとして利用可能です。HEVC の詳細については、<a href="https://apis.support.brightcove.com/ingest-profiles/guides/hevc-video.html">HEVC ビデオ</a> を参照してください。</aside>
-      <p>作成されるビデオレンディションは、選択したトランスコードプロファイルに基づいて決定されます。Brightcove が提供する標準のトランスコードプロファイルの詳細については、<a href="/admin/ingest-profiles/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Dynamic Delivery および Context Aware Encoding の標準トランスコードプロファイル</a> を参照してください。</p>
-      <p>ポスター画像およびサムネイル画像のサイズは、トランスコードプロファイルで指定されたサイズに基づいています。</p>
-      <aside class="bcls-aside bcls-aside--information">注: 追加のトランスコードプロファイルの作成や、アカウントのデフォルトプロファイル設定の詳細については、<a href="/admin/ingest-profiles/managing-ingest-profiles.html">トランスコードプロファイルの管理</a> を参照してください。</aside>
-    
-      <h3 id="mp4">MP4 レンディションは必要ですか？</h3>
-      <p>MP4 レンディションを作成するトランスコードプロファイルを選択する理由はいくつかあります。</p>
+      <p>ユーザー管理ページでは、以下の情報が表示されます：</p>
       <ul>
-        <li><strong>Social モジュールでの共有</strong> - Social モジュールを使用してソーシャルメディアに共有する場合、MP4 レンディションが必要です。また、Social モジュールを使用してビデオをダウンロードする際にも MP4 レンディションが必要です。</li>
-        <li><strong>ビデオのダウンロード</strong> - 視聴者が <a href="downloading-videos-video-cloud.html">ダウンロードリンク</a> を使用してビデオをダウンロードする場合や、<a href="https://gallery.support.brightcove.com/experiences/portal/videos/downloading-videos-portal-experience.html">Gallery ポータル</a> や <a href="https://gallery.support.brightcove.com/experiences/inpage/other/configuring-video-downloads-page-experience.html">In-Page Experience</a> からダウンロードする場合、MP4 レンディションを作成する必要があります。</li>
-        <li><strong>クローズドキャプション</strong> - (CEA 608) クローズドキャプションは、<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">MP4 レンディションにのみ追加可能</a> です。HLS/DASH レンディションにも<a href="/media/captions/adding-captions-videos-using-media-module.html">テキストトラック キャプション</a>を追加できますが、これは法的なアクセシビリティ基準を満たしません。
-          <aside class="bcls-aside bcls-aside--information">
-            注:
-            <ol>
-              <li>"法的なアクセシビリティ基準" は地域によって異なります。現在、EU で最も厳しい基準が適用されていますが、要件は変化する可能性があります。</li>
-              <li>ソースビデオに 608 キャプションが埋め込まれている場合、すべてのレンディション (HLS/DASH/MP4) にパススルーされます。Brightcove は MP4 レンディションにのみ 608 キャプションを追加できます。</li>
-            </ol>
-          </aside>
-        </li>
-        <li><strong>Cloud Playout モジュール</strong> - <a href="managing-content/cloud-playout-add-content.html">Cloud Playout チャンネル</a> に追加するには、MP4 レンディションが 1 つ以上必要です。</li>
-        <li><strong>レガシーデバイスへの配信</strong> - Android 4.x 以前の古いデバイスでは、プログレッシブダウンロードを利用するために MP4 レンディションが必要です。</li>
+        <li>姓、名</li>
+        <li>メールアドレス</li>
+        <li>ロール - 標準 (Standard)、管理者 (Administrator)、またはカスタムロール</li>
+        <li>モジュールアクセス - ユーザーがアクセスできるモジュールにはチェックマーク (<img alt="" src="/assets/images/s-admin-img/general/node14054-green-check-icon.png" />) が付きます。</li>
+        <li>最終ログイン - ユーザーが Video Cloud Studio に最後にログインした日付と時刻 (すべての Studio アカウントの最終ログイン情報が表示されます)。</li>
+        <li>設定 (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+          </svg>) - タブの表示・非表示をカスタマイズできます。また、三点メニューを使用してユーザーの編集や削除が可能です。</li>
       </ul>
-      <p>これらのユースケースが重要な場合、Brightcove は MP4 レンディションを作成するトランスコードプロファイルの選択を推奨します。</p>
+    
+      <aside class="bcls-aside bcls-aside--tip language-editable">注: <strong>検索タブ (Search tab)</strong> を使用して目的のユーザーを探すことができます。</aside>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/search-tab.png" style="width: 875px;"/></figure>
+      
+      <aside class="bcls-aside bcls-aside--information language-editable">注: UI に表示される情報は直接スプレッドシートにエクスポートできません。</aside>
+      <aside class="bcls-aside bcls-aside--information language-editable">注: 各ユーザーの最終ログイン情報は Brightcove に保存されません。</aside>
+    
+      <p>ユーザー管理ページでは、以下の操作が可能です：</p>
+      <ul>
+        <li><a href="#create">新しいユーザーの作成</a></li>
+        <li><a href="#edit">既存のユーザーの編集</a></li>
+        <li><a href="#delete">ユーザーの削除</a></li>
+        <li><a href="#primary">プライマリユーザーの変更</a></li>
+        <li><a href="#add">ロールの追加</a></li>
+        <li><a href="#assign">ロールの割り当て</a></li>
+        <li><a href="#legacy">旧ロールの置き換え</a></li>
+      </ul>
     </section>
     
     <section class="bcls-section">
-        <h2 id="captions">自動キャプションの生成</h2>
-        <p>アカウントが自動キャプション機能を有効にしており、Dynamic Delivery のトランスコードプロファイルを選択している場合、<strong>自動キャプション</strong> オプションが表示されます。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node14456-auto-captioning.png" /></figure>
-        <p>自動キャプションの詳細については、<a href="/media/captions/generating-captions-videos.html">ビデオの自動キャプション生成</a> を参照してください。</p>
-      </section>
-      
-      <section class="bcls-section">
-        <h2 id="watermark">フォレンジック ウォーターマークの追加</h2>
-        <p>アカウントがフォレンジック ウォーターマーク機能を有効にしており、Dynamic Delivery のトランスコードプロファイルを選択している場合、フォレンジック ウォーターマークを有効にするオプションが表示されます。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node14456-watermark.png" /></figure>
-        <p>フォレンジック ウォーターマークの詳細については、<a href="https://apis.support.brightcove.com/general/overview-forensic-watermarking.html">フォレンジック ウォーターマークの概要</a> を参照してください。</p>
-      </section>
-      
-      <section class="bcls-section">
-        <h2 id="sharing">共有オプション</h2>
-        <p>ビデオを<strong>非公開</strong> または <strong>共有</strong> としてアップロードするかを選択できます。これにより、コンテンツのアクセス管理がより柔軟になります。</p>
-        <p>ビデオをアップロードする際に、以下のオプションが表示されます。</p>
-        <ul>
-          <li><p><strong>非公開 </strong>: このビデオには自分だけがアクセスできます。同じアカウントの他のユーザーは閲覧や編集ができません。</p></li>
-          <li><p><strong>共有</strong>: 同じアカウント内のすべてのユーザーがこのビデオにアクセスできます。</p></li>
-        </ul>
-      
-        <p>アップロードが完了すると、ビデオは <strong>Media モジュール</strong> に保存されます。</p>
-        <ul>
-          <li><p>ビデオを非公開でアップロードした場合、<strong>マイビデオ</strong> に表示されます。</p></li>
-          <li><p>ビデオを共有でアップロードした場合、<strong>共有ビデオ</strong> に表示されます。</p></li>
-        </ul>
-        <aside class="bcls-aside bcls-aside--information">
-          <p>注:</p>
+      <h2 id="many">ユーザーの上限</h2>
+      <p>作成できるユーザーの数は、アカウントの種類によって異なります。追加のユーザーを作成する必要がある場合は、より多くのユーザーを作成できるプランにアップグレードすることができます。上限は、同時に存在するユーザーの総数にのみ適用されます。例えば、10 人のユーザーを作成し、そのうち 5 人を削除し、新たに 3 人のユーザーを追加した場合、合計 8 人のユーザーがいると見なされます。ユーザー管理ページでは、現在のユーザー数と追加可能なユーザー数を確認することができます。</p>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="purchase">追加ユーザーの購入</h2>
+      <p>追加のユーザーを作成する必要がある場合は、より多くのユーザーを作成できるプランにアップグレードできます。Pro および Enterprise レベルのアカウントの場合、追加ユーザーの購入については弊社営業までお問い合わせください。</p>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="create">新しいユーザーの作成</h2>
+      <p>新しいユーザーを作成するには、以下の手順に従ってください。</p>
+      <ol class="bcls-tasklist-restart">
+        <li><span class="button-blue">ユーザーを追加</span> をクリックします。</li>
+        <li><strong>名前 (First Name)</strong>、<strong>姓 (Last Name)</strong>、<strong>メールアドレス (Email)</strong> を入力します。</li>
+        <aside class="bcls-aside bcls-aside--information">注: 既存のユーザーのメールアドレスは変更することはできません。</aside>
+        <li><strong>ロール</strong> を割り当てます。
           <ul>
-            <li><p>非公開ビデオは、後から明示的に共有しない限り、他のユーザーがアクセスすることはできません。</p></li>
-            <li><p><strong>管理者</strong> は非公開ビデオおよび共有ビデオの権限を管理できます。</p></li>
-            <li><p>アップロード後に共有設定を変更したい場合は、<strong>Media モジュール</strong> の <strong>プライバシー</strong> セクションで設定を変更できます。</p></li>
-            <li><p>フォルダやプレイリストに追加できるのは <strong>共有ビデオ</strong> のみです。<strong>非公開ビデオ</strong> はフォルダやプレイリストに追加できません。</p></li>
+            <li><strong>管理者</strong> - <strong>管理</strong> メニューにアクセスでき、ユーザーアカウントの作成、トランスコードプロファイルの作成、カスタムフィールドの設定、メディア共有の設定が可能。</li>
+            <li><strong>標準</strong> - <strong>管理</strong> メニューにアクセスすることができません。</li>
+            <li><strong>カスタムロール</strong> - 指定したロールに応じて特定のモジュールにアクセス可能。</li>
           </ul>
-        </aside>
+        </li>
+        <aside class="bcls-aside bcls-aside--information">注: ユーザーには最大 8 つの異なるロールを追加することができます。</aside>
+        <li><span class="button-blue">保存</span> をクリックします。</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add user UI" src="/assets/images/s-admin-img/general/add-user.png" style="width: 875px;" /></figure>
+      </ol>
+      <p>作成されたユーザーには、アカウントに追加されたことを知らせるメールが送信されます。</p>
+    </section>
+    
+    <section class="bcls-section">
+        <h2 id="edit">既存ユーザーの編集</h2>
+        <p>既存のユーザーを編集するには、以下の手順に従ってください。</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>設定 タブ</strong> の下にあるユーザーの三点メニュー (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+            </svg>) をクリックし、<strong>編集</strong> を選択します。ユーザーの詳細情報が表示されます。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ユーザー編集画面" src="/assets/images/s-admin-img/general/edit-user.png" style="width: 875px;" /></figure>
+          <li>利用可能なロールの中から別の <strong>ロール</strong> を選択して変更できます。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ユーザーロール編集画面" src="/assets/images/s-admin-img/general/edit-user-modal.png" style="width: 875px;" /></figure>
+          <aside class="bcls-aside bcls-aside--information">注: ユーザーは、自身の <a href="managing-profile-information.html">プロフィール情報</a> を編集することで、名前を変更できます。</aside>
+          <li><span class="button-blue">保存</span> をクリックして変更を適用します。</li>
+        </ol>
       </section>
       
       <section class="bcls-section">
-        <h2 id="upload">ビデオのアップロード</h2>
-        <aside class="bcls-aside bcls-aside--information">注: ビデオをアップロードする前に、適切なトランスコードプロファイルが選択されていることを確認してください。</aside>
-        <p>ビデオは以下の方法でアップロードできます。</p>
+        <h2 id="delete">ユーザーの削除</h2>
+        <p>ユーザーを削除するには、以下の手順に従ってください。</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>設定タブ</strong> の下にあるユーザーの三点メニュー (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+            </svg>) をクリックし、<strong>削除</strong> を選択します。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ユーザー削除画面" src="/assets/images/s-admin-img/general/delete-user.png" style="width: 875px;" /></figure>
+          <li>削除を確認するには、<span class="button-red">削除</span> をクリックします。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ユーザー削除確認画面" src="/assets/images/s-admin-img/general/delete-user-modal.png" style="width: 875px;" /></figure>
+        </ol>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="primary">プライマリユーザーの変更</h2>
+        <p>各アカウントには、1 人のプライマリユーザーが設定されます。プライマリユーザーには常に <strong>管理者</strong> のロールが割り当てられ、Brightcove サポートによってのみ削除できます。</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="プライマリユーザー" src="/assets/images/s-admin-img/general/node14054-primary-user.png" /></figure>
+        <p>プライマリユーザーを変更するには、<strong>設定タブ</strong> の下にあるユーザーの三点メニュー (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+        </svg>) をクリックし、<strong>編集</strong> を選択します。</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="プライマリユーザー設定" src="/assets/images/s-admin-img/general/primary-user.png" style="width: 875px;" /></figure>
+        <p><strong>このユーザーをこのアカウントのプライマリ管理者にする</strong> をクリックします。プライマリユーザーの変更を確認するプロンプトが表示されます。</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="プライマリユーザー変更確認" src="/assets/images/s-admin-img/general/primary-user-prompt.png" style="width: 875px;" /></figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">プライマリユーザーに設定されたユーザーには、自動的に <strong>管理者</strong> のロールが割り当てられます。管理者ロールを持つユーザーは、アカウントのすべての機能にアクセスできます。例えば、新しいプライマリユーザーが <strong>標準</strong> のロールを持っていた場合、プライマリユーザーに指定された時点で <strong>管理者</strong> のロールが割り当てられます。</aside>
+      </section>
+      
+            
+      <section class="bcls-section">
+        <h2 id="add">新しいロールの追加</h2>
+        <p>新しいロールを追加するには、以下の手順に従ってください。</p>
+        <ol class="bcls-tasklist-restart">
+          <li>ナビゲーションバーの <strong>ロール</strong> タブを選択します。</li>
+          <li><span class="button-blue"> ロールの追加</span> をクリックします。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ロール追加画面" src="/assets/images/s-admin-img/general/add-role.png" style="width: 875px;" /></figure>
+          <li>以下のロール情報を入力します。
+            <ul>
+              <li><strong>ロール名</strong> - ユーザーの役割を適切に表す名前を設定します。</li>
+              <li><strong>管理者</strong> - このロールに管理者権限を付与するかどうかを選択します。</li>
+              <li><strong>モジュールのアクセス権</strong> - ロールにアクセスを許可するモジュールを選択します。</li>
+              <li><strong>非アクティブモジュールを非表示</strong> - 無効なモジュールを隠し、関連するモジュールのみ表示するには <strong>ON</strong> に設定します。</li>
+              <li><strong>動画機能</strong> - このロールに割り当てられたユーザーが持つビデオ関連の権限を定義します。利用可能なビデオ権限は以下のとおりです。
+              <ul>
+                <li><p><strong>動画のアクティブ化または非アクティブ化</strong>: ユーザーがアカウント内のビデオを有効または無効にできるようにします。</p></li>
+                <li><p><strong>動画の削除</strong>: アカウントからビデオを完全に削除する権限を付与します。</p></li>
+                <li><p><strong>動画エディター</strong>: Brightcove Studio 内のビデオ編集ツールへのアクセスを許可します。</p></li>
+                <li><p><strong>動画メタデータの編集</strong>: タイトル、説明、タグなどのメタデータを編集できるようにします。</p></li>
+                <li><p><strong>動画のアップロード</strong>: Brightcove プラットフォームへ新しいビデオをアップロードできるようにします。</p></li>
+                <li><p><strong>メールへの公開 </strong>: メールプラットフォーム経由でビデオを公開・共有することを許可します。</p></li>
+                <li><p><strong>Web への公開 </strong>: Web ページやその他のオンラインプラットフォームへビデオを公開する権限を付与します。</p></li>
+                <li><p><strong>ビデオの共有 </strong>: 他のユーザーやアカウントとビデオを共有できるようにします。</p></li>
+                <li><p><strong>すべてのビデオ (非公開および共有ビデオを含む) へのアクセス </strong>: この権限を持つユーザーは、アカウント内のすべてのビデオ (非公開および他のユーザーから共有されたビデオを含む) にアクセスできます。また、このロールが割り当てられたユーザーは <strong>メディアモジュール (Media Module)</strong> の <strong>すべてのビデオ (All Videos)</strong> タブにアクセスできるようになります。</p></li>
+                <li><p><strong>関連アカウントとの共有</strong>: プライマリアカウントに関連付けられた他の Brightcove アカウントとビデオを共有できるようにします。</p></li>
+              </ul>
+              </li>
+            </ul>
+          <aside class="bcls-aside bcls-aside--information">注: 最大 8 つの異なるロールを作成できます。</aside></li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ユーザーロール作成画面" src="/assets/images/s-admin-img/general/create-role.png" style="width: 875px;" /></figure>
+          <li><span class="button-blue">保存</span> をクリックします。</li>
+        </ol>
+      
+        <p>ロールタブには以下の情報が表示されます。</p>
         <ul>
-          <li><strong>ドラッグ＆ドロップ</strong> - ファイルをファイルシステムから Upload モジュールのページにドラッグ＆ドロップします。ページ全体がドロップゾーンとなり、ファイルをドロップするとアップロードが開始されます。
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ファイルのアップロード" src="/assets/images/s-media-img/manage/node14456-upload-file.png" /></figure>
-          </li>
-          <li><strong>ファイル選択ダイアログ</strong> - <span class="button-blue">ビデオを選択</span> をクリックし、ファイルを選択してアップロードします。</li>
-          <li>
-            <strong>リモート URL</strong> - <strong>URL を入力</strong> をクリックし、ソースファイルの場所を指定します。ソースファイルは公開された Amazon S3 ストレージに配置できます。完了後、<span class="button-blue">ビデオを処理</span> をクリックします。
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="リモートURLでのアップロード" src="/assets/images/s-media-img/manage/node14456-url-to-ingest.png" /></figure>
-          </li>
+          <li>ロール名</li>
+          <li>そのロールが割り当てられたユーザーの数</li>
+          <li>モジュールアクセス - そのロールがアクセス可能なモジュールにはチェックマーク (<img alt="" src="/assets/images/s-admin-img/general/node14054-green-check-icon.png" />) が表示されます。</li>
+          <li>設定 (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+              <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+            </svg>) - ここでは、表示するタブのカスタマイズが可能です。</li>
         </ul>
-        <aside class="bcls-aside bcls-aside--information">
-          <p>注:</p>
-          <ul>
-            <li>ファイルサイズの制限はありません。Brightcove は 100GB 以上のアップロードテストを実施していますが、ネットワーク接続の問題が発生した場合、アップロードは失敗します。帯域幅、サーバー設定、ネットワーク経路など、Video Cloud Studio では制御できない要因もあります。</li>
-            <li>大容量ファイルをアップロードする際は、<a href="/admin/general/managing-account-settings.html#upload">アップロードキュー設定</a> で <strong>1 ファイルずつアップロード</strong> を選択することを推奨します。</li>
-            <li>大容量ファイルのアップロード時に Studio のタイムアウトエラーが発生する場合は、S3 や他のリモートストレージにファイルをアップロードし、Studio の URL アップロードオプションを利用してください。</li>
-            <li>YouTube の URL は使用できません。YouTube はビデオファイルへの直接リンクを生成しないためです。</li>
-            <li>Google Drive からのアップロードについては、<a href="/media/manage/uploading-videos-remote-urls.html">リモート URL を使用したビデオのアップロード</a> を参照してください。</li>
-            <li>URL には<strong>スペースを含めないでください</strong>。パスやファイル名にスペースが含まれる場合は、アンダースコア (<code translate="no">_</code>) に置き換えてください。</li>
-            <li>ファイルの URL の末尾が <code translate="No">?dl=0</code> になっている場合、<code translate="No">?dl=1</code> に変更すると、ブラウザがリンクの内容を強制的にダウンロードするようになります。</li>
-            <li>ビデオファイル名 (拡張子を含む) は 120 文字 (全角 60 文字) を超えないようにしてください。超過すると、トランスコードは成功しても後で再トランスコードできなくなる可能性があります。</li>
-          </ul>
-        </aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/role-ui.png" style="width: 875px;"/></figure>
+        <aside class="bcls-aside bcls-aside--information"><strong>管理者</strong> および <strong>標準</strong> ユーザーロールはデフォルトロールであり、編集や削除はできません。</aside>
       </section>
       
       <section class="bcls-section">
-        <h2 id="adv_upload">追加アセットのアップロード</h2>
-        <p><a href="/admin/general/managing-account-settings.html#upload">追加アセットのアップロード</a> アカウント設定が有効になっている場合、ビデオプロパティパネルに <span class="button-blue">選択</span> ボタンが表示され、ポスターおよびサムネイル画像をビデオと一緒にアップロードできます。<span class="button-blue">選択</span> をクリックしてポスターとサムネイル画像を選択し、<strong>処理</strong> をクリックすると、トランスコードが開始されます。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ポスターおよびサムネイル画像の選択" src="/assets/images/s-media-img/manage/node14456-poster-thumbnail.png" /></figure>
-        <p>ポスター画像およびサムネイル画像のサイズは、トランスコードプロファイルで指定された寸法に基づいています。<strong>高度なアップロード</strong> のアカウント設定の設定方法については、<a href="/admin/general/managing-account-settings.html">アカウント設定の管理</a> を参照してください。</p>
+        <h2 id="assign">ロールの割り当て</h2>
+        <p>新しいロールをユーザーに割り当てるには、以下の手順に従ってください。</p>
+        <ol class="bcls-tasklist-restart">
+          <li>ロールを割り当てたいユーザーを 1 人以上選択します。</li>
+          <li><strong>ロールを割り当てる</strong> をクリックします。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ロール割り当て画面" src="/assets/images/s-admin-img/general/assign-role.png" style="width: 875px;" /></figure>
+          <li>選択したユーザーに適用する既存のロールを 1 つ以上選択します。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ロール選択画面" src="/assets/images/s-admin-img/general/choose-role.png" style="width: 875px;" /></figure>
+          <li><span class="button-blue">ロールを割り当てる</span> をクリックします。</li>
+        </ol>
       </section>
       
       <section class="bcls-section">
-        <h2 id="defaultprops">デフォルトのフォルダおよびタグの設定</h2>
-        <p>ビデオをアップロードする際、フォルダおよびタグを指定できます。フォルダのドロップダウンリストには、Media モジュールで作成されたすべてのフォルダが表示されます。<strong>+ フォルダを作成</strong> をクリックして新しいフォルダを作成し、ビデオを新しいフォルダに割り当てることができます。フォルダ作成時の制約は以下のとおりです。</p>
+        <h2 id="legacy">旧ロールの置き換え</h2>
+        <div style="max-width: 950px;">
+          <style>
+          video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+            padding-top: 56.25%;
+          }
+          </style><video-js
+            data-account="20318290001"
+            data-player="default"
+            data-embed="default"
+            controls=""
+            data-video-id="1796613350614773130"
+            data-playlist-id=""
+            data-application-id=""
+            class="vjs-fluid"></video-js>
+        </div>
+        <script
+          src="https://players.brightcove.net/20318290001/default_default/index.min.js">
+        </script>
+        <p>最新のアップデートにより、Brightcove はユーザーロールにより細かな権限設定を追加しました。移行されていないユーザーは <strong>(Legacy)</strong> ラベルが付けられ、新しい機能を利用できません。</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/legacy-role.png" /></figure>
+        <p>旧ロールを新しいロールに置き換えるには、以下の手順に従ってください。</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>設定タブ</strong> の下にあるユーザーの三点メニュー (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+            </svg>) をクリックし、<strong>編集</strong> を選択します。ユーザーの詳細情報が表示されます。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/edit-legacy-role.png" style="width: 875px;" /></figure>
+          <li>ドロップダウンリストから新しいロールを選択して、旧ロールを置き換えます。</li>
+          <li><span class="button-blue">編集</span> をクリックして変更を保存します。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/assign-new-role.png" style="width: 875px;" /></figure>
+        </ol>
+      
+        <h3>旧ロールの一括置き換え</h3>
+        <ol class="bcls-tasklist-restart">
+          <li>新しいロールを割り当てたい旧ロールユーザーを 1 人以上選択します。</li>
+          <li><strong>ロールを割り当てる</strong> をクリックします。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/assign-legacy-bulk.png" style="width: 875px;" /></figure>
+          <li>選択したユーザーに適用する既存のロールを 1 つ以上選択します。</li>
+          <li><strong>旧ロールを置き換える</strong> のチェックボックスをオンにします。</li>
+          <li><span class="button-blue">ロールを割り当てる</span> をクリックします。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/legacy-replace.png" style="width: 875px;" /></figure>
+        </ol>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="users">複数アカウントの管理</h2>
+        <p>追加アカウントを作成すると、新しい Video Cloud アカウントと同様に追加の 10 ユーザーが付与されると誤解されることがあります。しかし、追加の Video Cloud アカウントには追加のユーザー枠は含まれません。</p>
+        <p>例えば、最初のアカウントに 10 人のユーザーを追加し、その 10 人を別のアカウントにも追加した場合、合計ユーザー数は依然として 10 のままです。ライセンス契約では、各ユニークユーザー ID は複数のアカウントで使用できるものの、1 人のユーザーとしてカウントされます。</p>
+        <p>複数のアカウントを持っている場合、ユーザーは各アカウントに個別に追加する必要があります。例えば、アカウント A とアカウント B がある場合、ユーザーをアカウント A に追加しても、自動的にアカウント B にはアクセスできません。必要なアカウントごとにユーザーを追加する必要があります。</p>
+        <p>複数のアカウントの管理について詳しくは、<a href="/general/references/working-multiple-video-cloud-accounts.html">複数の Video Cloud アカウントの管理</a> を参照してください。</p>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="limit">制限事項</h2>
         <ul>
-          <li>フォルダ名は最大 100 文字まで。</li>
-          <li>フォルダ名はアカウント内で一意である必要があります。</li>
-          <li>使用禁止文字: <code>/</code>。</li>
+          <li>旧ロールを新しいロールに一括編集することはできません。一括編集を試みると、次のようなポップアップメッセージが表示されます。</li>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/bulk-edit-error.png" style="width: 875px;" /></figure>
+          <aside class="bcls-aside bcls-aside--information">注: この制限により、選択したユーザーとは異なるタイプのユーザーは編集不可となります。これは、2 人目のユーザーが選択されるまで適用されます。</aside>
         </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="フォルダ作成画面" src="/assets/images/s-media-img/manage/node14456-create-folder.png" /></figure>
-        <p>フォルダを選択すると、すべてのアップロードされたビデオがそのフォルダに追加されます。Media モジュールを使用してフォルダを作成し、ビデオをフォルダに割り当てる方法については、<a href="/media/organize/organizing-videos-using-folders.html">フォルダを使用したビデオの整理</a> を参照してください。</p>
-        <p>また、ビデオにタグを付与することもできます。カンマ区切りのリストとしてタグを入力してください。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="タグの追加" src="/assets/images/s-media-img/manage/node14456-add-tags.png" /></figure>
-        <p>フォルダを選択またはタグを追加した後、<span class="button-blue-text">すべてに適用</span> をクリックして変更を保存します。フォルダおよびタグは、アップロード中のビデオ、アップロードが完了しても Upload モジュール上に表示されているビデオ ( <span class="button-blue">閉じる</span> ボタンがクリックされていない場合) に適用されます。</p>
       </section>
       
-      <section class="bcls-section">
-        <h2 id="mobile">モバイルデバイスからのビデオアップロード</h2>
-        <p>Media モジュールは完全に HTML5 で作成されており、タブレットやモバイルデバイスでも利用できます。これにより、モバイルデバイスで撮影したビデオを Video Cloud アカウントに直接アップロードできます。モバイルデバイスからコンテンツをアップロードするには、Upload モジュールを開いてトランスコードプロファイルを選択します。<span class="button-blue">ビデオを選択</span> をクリックすると、デバイスの写真アプリが開きます。アップロードするビデオを選択し、「完了」をクリックすると、ビデオのアップロードが開始され、進行状況がデバイスに表示されます。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="モバイルデバイスでのアップロード" src="/assets/images/s-media-img/manage/node14456-iphone-upload.png" /></figure>
-      </section>
-      
-      <section class="bcls-section">
-        <h2 id="special_characters">特殊文字</h2>
-        <p>Video Cloud に URL を指定してビデオを取得する場合、認証情報を URL に含める場合は、一部の予約された特殊文字を <a href="https://en.wikipedia.org/wiki/Percent-escape">パーセント エンコーディング</a> する必要があります。</p>
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th>文字</th>
-              <th>パーセントエンコーディング</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr><td style="text-align:center;">?</td><td style="text-align:center;">%3F</td></tr>
-            <tr><td style="text-align:center;">/</td><td style="text-align:center;">%2F</td></tr>
-            <tr><td style="text-align:center;">&amp;</td><td style="text-align:center;">%26</td></tr>
-            <tr><td style="text-align:center;">=</td><td style="text-align:center;">%3D</td></tr>
-            <tr><td style="text-align:center;">スペース</td><td style="text-align:center;">%20</td></tr>
-          </tbody>
-        </table>
-        <p>例:</p>
-        <pre>
-      <code class="language-http" translate="No">
-        /* 未エンコード */
-        ftp://user@example.com:pass!word@example.com/path/to/input.mp3
-      
-        /* エンコード後 */
-        ftp://<span class="bcls-highlight">user%40example.com:pass%21word</span>@example.com/path/to/input.mp3
-      </code></pre>
-      </section>
-      
-      <section class="bcls-section">
-        <h2 id="errors">よくあるアップロードエラー</h2>
-        <p><strong>アップロード処理が停止したり、進行しない</strong></p>
-        <p>ブラウザのキャッシュをクリアし、ビデオを再アップロードしてください。キャッシュのクリアによって、アップロードの問題が解決することがあります。</p>
-        <p><strong>リクエスト時刻と現在の時刻の差が大きすぎる</strong></p>
-        <p>このエラーは、ビデオをアップロードしているデバイスのシステム時間が正しく設定されていない場合に発生します。特に、夏時間の変更後などに発生しやすい問題です。デバイスの時刻設定が正しいことを確認してください。</p>
-      </section>
       
 </article>
 
