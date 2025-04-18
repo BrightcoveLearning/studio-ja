@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、BrightcoveSocialを使用して動画のソーシャルエンゲージメントパフォーマンスを監視する方法を学習します。">
+  <meta name="description" content="このトピックでは、Brightcove Socialを使用して、動画のソーシャル エンゲージメントのパフォーマンスを監視する方法について学びます。">
   
-  <title>Social Engagement Analyticsの確認</title>
+  <title>ソーシャル エンゲージメント分析の確認</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -1186,57 +1186,58 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </details>
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
-<article class="bcls-article">
-  <h1>Social Engagement Analyticsの確認</h1>
-  <summary>このトピックでは、BrightcoveSocialを使用して動画のソーシャルエンゲージメントパフォーマンスを監視する方法を学習します。</summary>
-  <section class="bcls-section">
-    <p>Brightcove Social では、ソーシャルメディアアカウントに投稿された動画のパフォーマンスを監視するために使用できるレポートがいくつかあります。</p>
-    <ul>
-      <li><strong>ダッシュボード</strong> -ソーシャルメディアアカウントの動画パフォーマンスの概要を概説します。詳細については、「<a href="/social/reviewing-social-analytics.html">ソーシャルアナリティクスの確認」を参照してください</a>。</li>
-      <li><strong>ソーシャルビュー</strong> -ソーシャルメディアアカウントで共有された動画のソーシャルビューの概要を提供します。詳細については、<a href="/social/reviewing-social-views-analytics.html">ソーシャルビュー分析のレビューを参照してください</a>。</li>
-      <li><strong>ソーシャルエンゲージメント</strong> -ソーシャルメディアアカウントで共有された動画のソーシャルエンゲージメント（いいね、共有、リツイートなど）の概要を提供します。このトピックで説明しています。</li>
-    </ul>
-    <p>まず、<a href="reviewing-social-analytics.html#timespan"></a>レポートの期間を選択します。ソーシャルエンゲージメント分析レポートを表示するには、ページの上部にある [ <strong>ソーシャルエンゲージメント</strong> ] タブをクリックします。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report tabs" src="/assets/images/social/node16680-report-tabs.png" /></figure>
-    <p>ソーシャルエンゲージメント分析レポートは、次のセクションで構成されています。</p>
-    <ul>
-      <li><a href="#socialengagement">ソーシャルエンゲージメント</a></li>
-      <li><a href="#viewsbyvideo">動画によるソーシャルエンゲージメント</a></li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="socialviews">ソーシャル・エンゲージメント</h2>
-    <p>[ソーシャルエンゲージメント] グラフには、選択した期間にソーシャルメディアアカウントに投稿された動画のソーシャルエンゲージメントが表示されます。更新日は、Video Cloud がソーシャル分析データを保持している最新の日付です。通常、ソーシャルプラットフォームが API のビューとエンゲージメントデータを更新する前に、24 ～ 48 時間以上の遅延があります。グラフ内の線の上にマウスポインタを置くと、その日付のデータが表示されます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="social engagement graph" src="/assets/images/social/node16680-video-engagement-graph.png" /></figure>
-    <p>グラフの右側の凡例を使用して、表示する詳細レベルを選択できます。</p>
-    <ul>
-      <li><strong>Facebook</strong> -いいね、コメント、シェアの数を表示する</li>
-      <li><strong>ツイッター</strong> -リツイート数とお気に入り数を表示する</li>
-      <li><strong>YouTube</strong> -コメント、いいね、嫌い、シェアの数を表示する</li>
-    </ul>
-    <p>アナリティクスレポートに表示される YouTube ビューは、<a href="http://youtube.com/analytics"> YouTube</a>アナリティクスの概要レポートから収集されます。YouTube は、このデータがリアルタイムデータであることを保証するものではありません。そのため、このレポートに視聴回数やエンゲージメントが表示されるまでに数日遅れることがあります。データは YouTube アナリティクスに保存されると、ブライトコーブソーシャルアナリティクスの夜間のデータコレクターによって収集されます。</p>
-    <p>最新のリアルタイム視聴データが必要な場合は、最近公開された上位 25 本の動画について、過去 48 <a href="https://support.google.com/youtube/answer/6096647"></a>時間の視聴データを見積もったリアルタイムレポートを提供します。YouTube <a href="https://www.youtube.com/analytics?o=U#r=realtime">チャンネルのリアルタイムレポートはこちらからご覧いただけます</a>。Brightcove Social Analytics はこのリアルタイムデータを収集しません。これは、実際の動画ではなく、推定視聴回数を提供し、最近の動画にのみ適用されます。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="viewsbyvideo">動画によるソーシャルエンゲージメント</h2>
-    <p>[動画別ソーシャルビュー] セクションには、各動画の詳細なビューデータが表示されます。列セレクター（<img alt="column selector" src="/assets/images/social/node16680-column-selector.png" />）を使用して、表示する列を選択できます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select columns to display" src="/assets/images/social/node16680-select-columns.png" /></figure>
-    <p>各動画について以下が表示されます。</p>
-    <ul>
-      <li>動画の名前と再生時間</li>
-      <li>ビデオ ID</li>
-      <li>作成日</li>
-      <li>選択した列</li>
-    </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="video engagement" src="/assets/images/social/node16680-video-engagement-detail.png" /></figure>
-    <p>レポートの下部で、表示する行数の選択や他のページへの移動ができます。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="export">データのエクスポート</h2>
-    <p>レポートデータのダウンロードは、コンマ区切り形式とExcel形式で可能です。エクスポート機能は、データをから直接保存することに注意してください。<span translate="No"> Analytics API</span>電話。エクスポートされたデータはUIデータのようには操作されず、UIで表示されるフィールドのサブセットのみでなく、レポートの基礎となるデータすべてを含んでいます。すべてのデータをAPIの元のフォーマットで保持することで、UIで提供される方法以外でもデータを操作することができます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export data" src="/assets/images/social/node16680-export.png" /></figure>
-  </section>
-</article>
+ <article class="bcls-article">
+        <h1>ソーシャル エンゲージメント分析の確認</h1>
+        <summary>このトピックでは、Brightcove Socialを使用して、動画のソーシャル エンゲージメントのパフォーマンスを監視する方法について学びます。</summary>
+        <section class="bcls-section">
+          <p>Brightcove Social は、ソーシャル メディアアカウントに投稿された動画のパフォーマンスを監視するための複数のレポートを提供します。</p>
+          <ul>
+            <li><strong>ダッシュボード</strong> - ソーシャルメディア アカウント上の動画のパフォーマンスの概要で確認することができます。詳細は、<a href="/social/analytics/reviewing-social-analytics.html">ソーシャル分析の確認</a> をご覧ください。</li>
+            <li><strong>ソーシャルビュー</strong> - ソーシャルメディア アカウントで共有された動画の視聴状況を確認できます。詳細は、<a href="/social/analytics/reviewing-social-views-analytics.html">ソーシャルビュー分析の確認</a> をご覧ください。</li>
+            <li><strong>ソーシャル エンゲージメント</strong> - ソーシャルメディア アカウントで共有された動画のエンゲージメント（いいね、共有、リツイートなど）を確認することができます。本トピックで解説します。</li>
+          </ul>
+          <p>ソーシャル エンゲージメント分析にアクセスするには、Social モジュールを開き、左側のナビゲーションメニューで<strong>ソーシャル分析</strong>をクリックし、ページ上部の<strong>ソーシャル エンゲージメント</strong>タブをクリックしてください。</p>
+          <p>レポートの<span translate="No">タイムスパン</span>を<a href="reviewing-social-analytics.html#timespan">選択</a>してください。ソーシャル エンゲージメント分析レポートを表示するには、ページ上部の<strong>ソーシャル エンゲージメント</strong>タブをクリックしてください。</p>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="レポートタブ" src="/assets/images/s-social-img/analytics/node16680-report-tabs.png" /></figure>
+          <p>ソーシャル エンゲージメント分析レポートは、以下のセクションに分かれています。</p>
+          <ul>
+            <li><a href="#socialengagement">ソーシャル エンゲージメント</a></li>
+            <li><a href="#viewsbyvideo">動画別ソーシャル エンゲージメント</a></li>
+          </ul>
+        </section>
+        <section class="bcls-section">
+          <h2 id="socialviews">ソーシャル エンゲージメント</h2>
+          <p>ソーシャル エンゲージメント グラフは、選択した期間におけるソーシャルメディア アカウントに投稿された動画のエンゲージメントを表示します。更新日は、Video Cloud がソーシャル分析データを取得した最新の日付です。通常、ソーシャル プラットフォームが視聴数やエンゲージメント データをAPIに反映させるまで24〜48時間以上の遅延が発生します。グラフ上の線にカーソルを合わせると、その日付のデータが表示されます。</p>
+          <aside class="bcls-aside bcls-aside--information">注: Instagram の分析データはソーシャル分析には含まれていません。</aside>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ソーシャルエンゲージメントグラフ" src="/assets/images/s-social-img/analytics/node16680-video-engagement-graph.png" /></figure>
+          <p>グラフの右側にある凡例を使用して、表示する詳細レベルを選択することができます。</p>
+          <ul>
+            <li><strong>Facebook</strong> - いいね、コメント、シェアの数を表示</li>
+            <li><strong>YouTube</strong> - コメント、いいね、低評価、シェアの数を表示</li>
+          </ul>
+          <p>YouTubeの視聴数は、<a href="http://youtube.com/analytics">YouTube Analytics Overview</a> レポートから収集されています。YouTube はリアルタイムデータの保証をしていないため、数日間の遅れが生じる可能性があります。一度 YouTube Analytics にデータが反映されると、Brightcove ソーシャル分析の夜間データ収集プロセスによって取り込まれます。</p>
+          <p>より最新のリアルタイム視聴データが必要な場合、YouTube は<a href="https://support.google.com/youtube/answer/6096647">リアルタイムレポート</a>を提供しており、直近48時間の推定視聴データを確認することができます。リアルタイムレポートは<a href="https://www.youtube.com/analytics?o=U#r=realtime">こちら</a>から確認することができます。ただし、Brightcove ソーシャル分析ではリアルタイムデータを収集していません。</p>
+        </section>
+        <section class="bcls-section">
+          <h2 id="viewsbyvideo">動画ごとのソーシャル エンゲージメント</h2>
+          <p>「動画ごとのソーシャル エンゲージメント」セクションでは、各動画の詳細な視聴データを表示します。列選択ツール (<img alt="列選択" src="/assets/images/s-social-img/analytics/node16680-column-selector.png" />) を使用して表示する列を選択できます。</p>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="表示する列を選択" src="/assets/images/s-social-img/analytics/node16680-select-columns.png" /></figure>
+          <p>各動画について、以下の情報が表示されます。</p>
+          <ul>
+            <li>動画名と再生時間</li>
+            <li>動画ID</li>
+            <li>作成日</li>
+            <li>選択された列</li>
+          </ul>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="動画エンゲージメント" src="/assets/images/s-social-img/analytics/node16680-video-engagement-detail.png" /></figure>
+          <p>レポートの下部には、表示する行数を選択したり、別のページへ移動したりするためのコントロールが用意されています。</p>
+        </section>
+        <section class="bcls-section">
+          <h2 id="export">データのエクスポート</h2>
+          <p>レポートデータは、カンマ区切り（CSV）および Excel 形式でダウンロードすることができます。エクスポート機能は、<span translate="No">Analytics API</span> コールから直接データを保存することに注意してください。エクスポートされたデータは、UI データと同様に操作されず、現在のところ、UI で表示されるフィールドのサブセットだけでなく、レポートのすべての基礎データが含まれています。すべてのデータを API から元の形式で取得することで、UI で提供される以外の方法でデータを操作できます。</p>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="データのエクスポート" src="/assets/images/s-social-img/analytics/node16680-export.png" /></figure>
+        </section>
+      </article>
 
 <!-- complete bootstrap layout -->
     </div>
