@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、BrightcoveSocialを使用してYouTubeに配信されるビデオのプライバシーステータスを設定する方法について説明します。">
+  <meta name="description" content="このトピックでは、Brightcove Social を使用して YouTube に配信される動画のプライバシー ステータスを設定する方法について説明します。">
   
-  <title>動画のプライバシーステータスを設定する</title>
+  <title>動画のプライバシーステータスの設定</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -1187,61 +1187,61 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>動画のプライバシーステータスを設定する</h1>
-  <summary>このトピックでは、BrightcoveSocialを使用してYouTubeに配信されるビデオのプライバシーステータスを設定する方法について説明します。</summary>
-  <section class="bcls-section">
-    <p>YouTube の公開先を作成すると、設定できるデフォルトのプロパティの 1 つが YouTube のプライバシー設定です。デフォルトでは、[ <strong>パブリック</strong> ]、[ <strong>プライベート</strong> ]、[ <strong>非公開] の 3 つのオプションがあります</strong>。動画が YouTube に公開されると、すべての動画のプライバシー設定が選択した設定に設定されます。</p>
-    <p>動画ごとに YouTube のプライバシー設定を異なる場合があります。この場合、ビデオに関連付けられたカスタムフィールドを使用してプライバシー設定を制御し、各ビデオに異なるプライバシー設定を持たせることができます。動画を Brightcove Social を使用して YouTube に公開すると、プライバシー設定はカスタムフィールドの値で指定された値に設定されます。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="customfield">カスタムフィールドを作成する</h2>
-    <aside class="bcls-aside bcls-aside--information">注:カスタムフィールドは、プロフェッショナルアカウントとエンタープライズアカウントでのみ使用できます。</aside>
-    <p>最初に、お客様のアカウントにカスタムフィールドを追加します。タイプ <strong>List</strong> の <strong>yt_privacy_status</strong> を追加します。アカウントへのカスタム項目の追加については、「<a href="/admin/creating-custom-metadata-fields.html">カスタムメタデータフィールドの作成」を参照してください</a>。このカスタムフィールドの値を設定すると、YouTube動画のプライバシー設定を制御できます。</p>
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th scope="col"><strong>privacy_status</strong></th>
-          <th scope="col">YouTube 動画のプライバシー設定</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td>非公開です</td>
-          <td>非公開です</td>
-        </tr>
-        <tr>
-          <td>パブリック</td>
-          <td>パブリック</td>
-        </tr>
-        <tr>
-          <td>リストに記載されていません</td>
-          <td>リストに記載されていません</td>
-        </tr>
-        <tr>
-          <td>値がNULLまたは設定されていません</td>
-          <td>パブリック</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="BCL-aside">ヒント:カスタムフィールドに <strong>List</strong> タイプを使用すると、ドロップダウンリストを使用してステータスを選択できます。これにより、値を入力せずに済みます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node15611-custom-field.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="assign">カスタムフィールドに値を割り当てる</h2>
-    <p>カスタムフィールドを追加すると、Mediaモジュールを使用して値を設定できます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node15611-set-status.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="youtube">公開先の編集</h2>
-    <p>YouTube の公開先を編集し、[ <strong>プライバシー設定]</strong>のデフォルトを [Yt_Privacy_Status <strong>カスタムフィールドを使用] に設定します</strong>。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node15611-visibility-default.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="publish">ビデオを公開する</h2>
-    <p>動画が選択され、YouTube 配信先が選択されると、カスタムフィールドを使用して設定されたプライバシーステータスが設定されます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node15611-video-visibility.png" /></figure>
-  </section>
-</article>
+        <h1>動画のプライバシーステータスの設定</h1>
+        <summary>このトピックでは、Brightcove Social を使用して YouTube に配信される動画のプライバシー ステータスを設定する方法について説明します。</summary>
+        <section class="bcls-section">
+          <p>YouTube 配信先を作成する際に設定できるデフォルトのプロパティの1つが、YouTube のプライバシー設定です。デフォルトでは、<strong>公開</strong>、<strong>非公開</strong>、<strong>限定公開</strong> の3つのオプションがあります。動画が YouTube に公開されると、すべての動画に対して選択されたプライバシー設定が適用されます。</p>
+          <p>動画ごとに異なる YouTube のプライバシー設定を適用したい場合、動画に関連付けられたカスタムフィールドを使用することで、それぞれの動画に異なるプライバシー設定を適用することができます。Brightcove Social を使用して動画を YouTube に公開すると、プライバシー設定はカスタムフィールドの値によって決定されます。</p>
+        </section>
+        <section class="bcls-section">
+          <h2 id="customfield">カスタムフィールドの作成</h2>
+          <aside class="bcls-aside bcls-aside--information">注: カスタムフィールドは Professional および Enterprise アカウントのみで利用可能です。</aside>
+          <p>まず、アカウントにカスタムフィールド <strong>yt_privacy_status</strong>（タイプ: <strong>リスト</strong>）を追加します。カスタムフィールドの追加方法については、<a href="/admin/general/creating-custom-metadata-fields.html">カスタムメタデータフィールドの作成</a> を参照してください。このカスタムフィールドの値を設定することで、YouTube 動画のプライバシー設定を制御することができます。</p>
+          <table class="bcls-table">
+            <thead class="bcls-table__head">
+              <tr>
+                <th scope="col"><strong>yt_privacy_status</strong></th>
+                <th scope="col">YouTube 動画のプライバシー設定</th>
+              </tr>
+            </thead>
+            <tbody class="bcls-table__body">
+              <tr>
+                <td>private</td>
+                <td>非公開</td>
+              </tr>
+              <tr>
+                <td>public</td>
+                <td>公開</td>
+              </tr>
+              <tr>
+                <td>unlisted</td>
+                <td>限定公開</td>
+              </tr>
+              <tr>
+                <td>値が null または未設定</td>
+                <td>公開</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="BCL-aside">ヒント: カスタムフィールドのタイプを <strong>リスト</strong> にすることで、ユーザーはドロップダウンリストからステータスを選択できるため、値を手入力する必要がなくなります。</p>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node15611-custom-field.webp" /></figure>
+        </section>
+        <section class="bcls-section">
+          <h2 id="assign">カスタムフィールドに値を割り当てる</h2>
+          <p>カスタムフィールドを追加した後、Media モジュールを使用して値を設定することができます。</p>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node15611-set-status.png" /></figure>
+        </section>
+        <section class="bcls-section">
+          <h2 id="youtube">配信先の編集</h2>
+          <p>YouTube 配信先を編集し、<strong>プライバシー設定</strong> のデフォルト値を <strong>YT_Privacy_Status カスタムフィールドを使用</strong> に設定します。</p>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node15611-visibility-default.png" /></figure>
+        </section>
+        <section class="bcls-section">
+          <h2 id="publish">動画の公開</h2>
+          <p>動画を選択し、YouTube の配信先を選択すると、カスタムフィールドを使用して設定したプライバシーステータスが適用されます。</p>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node15611-video-visibility.png" /></figure>
+        </section>
+      </article>
 
 <!-- complete bootstrap layout -->
     </div>
