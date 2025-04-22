@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、プレーヤーの終了画面を構成する方法について説明します。">
+  <meta name="description" content="このトピックでは、playlist-endscreen プラグインを使用してプレーヤーにプレイリスト エンドスクリーンを追加する方法について学びます。">
   
-  <title>プレーヤーのエンドスクリーンの構成</title>
+  <title>playlist-endscreen プラグインを使用したプレイリスト エンドスクリーンの設定</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -60,7 +60,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       <li class="breadcrumb-item"><a href="/players/">Managing Players</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">プレーヤーのエンドスクリーンの構成</li>
+      <li class="breadcrumb-item active" aria-current="page">「playlist-endscreenプラグインを使用したプレイリストエンドスクリーンの構成」の</li>
     </ol>
   </nav>
 </header>
@@ -1187,46 +1187,53 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>プレーヤーのエンドスクリーンの構成</h1>
-  <summary>このトピックでは、プレーヤーの終了画面を構成する方法について説明します。</summary>
+  <h1>playlist-endscreen プラグインを使用したプレイリスト エンドスクリーンの設定</h1>
+  <summary>このトピックでは、playlist-endscreen プラグインを使用してプレーヤーにプレイリスト エンドスクリーンを追加する方法について学びます。</summary>
+
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4162679408001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>プレーヤーは、ビデオが終了したときに終了画面が表示されるように設定できます。終了画面は、再生アイコンと共有アイコンを表示するように構成することも、HTML を含めるようにカスタマイズすることもできます。カスタム終了画面を以下に示します。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node15267-sample-endscreen.png" /></figure>
-    <p>アイコンが表示され、視聴者は動画をリプレイしたり、人気のソーシャルメディアサイトに動画を共有することができます。</p>
-    <aside class="bcls-aside bcls-aside--information">注: プレーヤーのエンドスクリーンが構成されている場合、プレーヤーがネイティブフルスクリーンモードの場合、iOSデバイスには表示されません。</aside>
-    <p>プレーヤーの終了画面を構成するには、次の手順に従います。</p>
+    <p class="BCL-objective"><span translate="No">playlist-endscreen</span> プラグインを使用すると、プレーヤーの終了画面(エンドスクリーン)に動画のプレイリストを表示することができます。視聴者は、表示された動画のサムネイル画像をクリックすることで、別の動画を再生することができます。以下のプレーヤーでは、プレイリスト エンドスクリーンが設定されています。</p>
+
+    <p>
+      <iframe src="//players.brightcove.net/1752604059001/noMlYptKE_default/index.html?videoId=4817237857001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 640px; height: 360px;"></iframe>
+    </p>
+
+    <p>他の終了画面の設定オプションについては、<a href="configuring-player-endscreen.html">プレーヤー エンドスクリーンの設定</a>をご覧ください。</p>
+
+    <aside class="bcls-aside bcls-aside--information">補足: プログラムでプレイリスト エンドスクリーンを設定する方法については、<a href="https://player.support.brightcove.com/plugins/playlist-endscreen-plugin.html">開発者向けドキュメント</a>をご参照ください。</aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="configure">playlist-endscreen プラグインの設定</h2>
+    <p>Players モジュールを使用して playlist-endscreen プラグインを実装するには、以下の手順に従ってください：</p>
+
     <ol class="bcls-tasklist-restart">
-      <li>ナビゲーションヘッダーの [ <strong>Players</strong> ] をクリックして [Players] モジュールを開きます。</li>
-      <li>設定するプレーヤーのリンクをクリックします。</li>
-      <li>左側のナビゲーションメニューで [ 画面の終了] をクリックします。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="style menu" src="/assets/images/players/node15267-endscreen-options.png" /></figure>
-      </li>
-      <li>[ <strong>プレーヤーの終了画面</strong> ] オプションを選択します。次のオプションを使用できます。
+      <li><strong>Players</strong> モジュールを開き、対象のプレーヤーを探します。</li>
+      <li>プレーヤーのリンクをクリックしてプレーヤープロパティを開きます。</li>
+      <li>左側のナビゲーションから <strong>プラグイン</strong> をクリックします。</li>
+      <li><span class="button-blue">プラグインの追加<i class="button-icon" data-feather="chevron-down"></i></span> をクリックし、<strong>Brightcove プラグイン</strong> を選択します。</li>
+      <li><strong>Brightcove プラグイン</strong> で <strong translate="No">playlist-endscreen</strong> を選択します。</li>
+      <li><strong>オプション(JSON)</strong> には以下の内容を含めます：
         <ul>
-          <li>なし-終了画面は表示されません</li>
-          <li><a href="#social_sharing">ソーシャル</a> -ビデオが終了したときにソーシャル共有ダイアログを表示する</li>
-          <li><a href="#custom_endscreen">カスタム</a> -ビデオが終了すると、カスタム終了画面を表示します</li>
+          <li><strong>playlistId</strong> - エンドスクリーンに表示するプレイリストのID</li>
+          <li><strong>title</strong>（任意） - 動画リストの上に表示するタイトル</li>
         </ul>
       </li>
+      <blockquote>
+        <pre><code translate="No">{
+  "playlistId": "1234567001",
+  "title": "関連動画"
+}</code></pre>
+      </blockquote>
+      <figure class="bcls-figure">
+        <blockquote>
+          <p><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/playlist-endscreen-settings.png" /></p>
+        </blockquote>
+      </figure>
+      <li><span class="button-blue">保存</span> をクリックし、次に <strong>公開</strong> をクリックします。公開されたプレーヤーに反映されるまで最大5分ほどかかる場合があります。</li>
     </ol>
-    <aside class="bcls-aside bcls-aside--information">注:プレイヤーに加えた変更は、公開されているプレイヤーに表示されるまでに最大 5 分かかる場合があります。</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="social_sharing">ソーシャル終了画面</h2>
-    <p><strong>Social</strong>オプションを選択すると、ビデオが終了したときにソーシャル共有ダイアログが表示されます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node15267-social-sharing-endscreen.png" /></figure>
-    <p>ソーシャル共有の終了画面を使用するには、プレーヤーのソーシャル共有を有効にする必要があります。<strong>ソーシャル</strong> ] オプションを選択すると、ソーシャル共有が自動的に有効になります。表示されるソーシャル共有オプションは、ソーシャル設定の一部として構成された内容に基づいています。ソーシャル設定の詳細については、「Player <a href="/players/configuring-social-properties-player.html">&nbsp;のソーシャルプロパティの設定」を参照してください</a>。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="custom_endscreen">カスタム終了画面</h2>
-    <p>「<strong>カスタム</strong>」オプションを選択すると、カスタム HTML を使用して、再生アイコンと共有アイコンの上に追加のテキストまたは画像を表示できます。カスタム終了画面を構成するには、[ <strong>カスタム] を選択し、[カスタム</strong> HTML で貼り付け] を選択して、[ <strong>カスタム HTML]</strong>プロパティに表示します。</p>
-    <aside class="bcls-aside bcls-aside--information">注:ビデオは、カスタム HTML に <code translate="no">&lt;video&gt;</code> html 要素を追加することによって使用できます。</aside><aside class="bcls-aside bcls-aside--information">注:共有アイコンを終了画面に表示するには、共有を有効にする必要があります。</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node15267-custom-endscreen-html.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">注:「<strong>カスタム</strong>」オプションが選択され、HTML が指定されていない場合、ビデオの終了時に再生ボタンが表示されます。</aside>
   </section>
 </article>
+
 
 <!-- complete bootstrap layout -->
     </div>
@@ -1243,7 +1250,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  ページの最終更新日31 Jan 2022
+  ページの最終更新日26 Oct 2021
 </div>
 
 

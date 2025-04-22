@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、クラウドプレイアウトチャネルのVODコンテンツにミッドロール広告を追加する方法について説明します。">
+  <meta name="description" content="このトピックでは、Cloud Playout チャンネル内の VOD コンテンツにミッドロール広告を追加する方法について説明します。">
   
-  <title>チャンネルのにミッドロール広告を追加する</title>
+  <title>チャンネルへのミッドロール広告の追加</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -1186,103 +1186,89 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </details>
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
- <h1>チャンネルのにミッドロール広告を追加する</h1>
+<h1>チャンネルへのミッドロール広告の追加</h1>
 <article class="bcls-article">
-  <summary>このトピックでは、クラウドプレイアウトチャネルのVODコンテンツにミッドロール広告を追加する方法について説明します。</summary>
+  <summary>このトピックでは、Cloud Playout チャンネル内の VOD コンテンツにミッドロール広告を追加する方法について説明します。</summary>
+
   <section class="bcls-section">
     <h2 id="introduction">はじめに</h2>
-		<p>このトピックを読む前に、あなたは見るべきです<a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a>、SSAIのクラウドプレイアウトチャネルの有効化と、プレロールおよびポストロール広告挿入の設定について説明します。</p>
-		<p>以下に示すように、ミッドロール広告の動作は少し異なります。</p>
+    <p>このトピックを読む前に、Cloud Playout チャンネルを SSAI に対応させ、プリロールおよびポストロール広告の挿入を設定する方法を解説した <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/monetization/enabling-server-side-ads.html">Cloud Playout の収益化</a> をご確認ください。</p>
+    <p>以下のとおり、ミッドロール広告の動作は少し異なります。</p>
   </section>
-	<section class="bcls-section">
-		<h2 id="overview">概要</h2>
-		<p>ミッドロール広告の挿入は、StudioまたはCMSAPIのいずれかを介してビデオ用に作成されたキューポイントに依存します。Cloud Playoutは、チャンネル内の動画のキューポイントデータをインポートし、それらに基づいてミッドロール広告の挿入ポイントを設定します。キューポイントを追加する方法については、を参照してください。<a href="/media/working-cue-points-media-module.html">メディアモジュールでのキューポイントの操作</a> </p>
-	</section>
-	<section class="bcls-section">
-		<h2 id="Enabling_mid-roll_ad_cuepoints">ミッドロール広告キューポイントの有効化</h2>
-		<p>ミッドロール広告のキューポイントのインポートは、チャネルの作成時、またはチャネルの状態に関係なく、その後いつでも有効または無効にできます。</p>
-		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/cloud-playout/midroll-ads-enable-disable.png" alt="Enable Mid-Roll Ads">
-			<figcaption class="bcls-caption--image">ミッドロール広告を有効にする</figcaption>
-		</figure>
-	</section>
-	<section class="bcls-section">
-		<h2 id="How_mid-rolls_work_in_Cloud_Playout">クラウドプレイアウトでミッドロールがどのように機能するか</h2>
-		<ul>
-			<li>Cloud Playoutは、広告キューポイントに基づいて広告位置を設定するだけです（コードキューポイントは無視されます）。</li>
-			<li>プレロール広告とポストロール広告はCloudPlayoutで異なる方法で管理されるため、VideoCloudによって自動的に作成されたプレロール広告とポストロール広告のキューポイントは無視されます。を参照してください。<a href="/cloud-playout/enabling-server-side-ads.html#ads">サーバーサイド広告の有効化</a>。</li>
-			<li>ミッドロール広告のタイミングを決定するために、広告キューポイントのタイムスタンプのみが使用されます。キューポイントメタデータは無視されます。</li>
-			<li>
-				ミッドロールのデフォルトの期間は30秒です。これは、チャネル設定で変更できます。最小期間: 30秒;最大期間: 10分。
-				<p>ミッドロールスロットの期間は、チャネルの状態に関係なく、いつでも変更できます。</p>
-				<figure class="bcls-figure">
-					<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-cuepoints-running-state.png" alt="Edit Mid-Roll Slot Duration (RUNNING State)">
-					<figcaption class="bcls-caption--image">ミッドロールスロット期間の編集（実行状態）</figcaption>
-				</figure>
-				<aside class="bcls-aside bcls-aside--information">注意:
-					<ul>
-						<li>変更された期間は、現在再生中の広告スロットには適用されません。後続の広告スロット（同じ動画と後続の動画内）は、変更された広告スロットの期間を使用します。</li>
-						<li>Cloud Playout EPGは動的に生成され、可能な限り現実に近いものになります。ミッドロール期間を変更すると、EPGにしばらくの間不正確なスケジュールが表示される場合がありますが、短時間で自動的に修正されます。</li>
-						<li>Cloud Playoutが現在広告を再生しているとき（ミッドロールまたはポストロール）、およびユーザーが使用しようとした場合<strong>今すぐプレイ</strong>別のアセットにスキップするオプションを選択した場合でも、プログラムされた広告スロットの期間まで広告は再生され続けます。この間、ユーザーが今すぐ再生しようとした動画は、広告スロットの残りの期間、広告で上書きされます。を使用する前に、広告の完了を待つことをお勧めします<strong>今すぐプレイ</strong>スイッチ。</li>
-					</ul>
-					</aside>
-			</li>
-			<li>ミッドロール広告はVODコンテンツにのみ挿入でき、広告プレースホルダーには挿入できません。<a href="/cloud-playout/adding-bumpers-to-vod.html">バンパー</a>また<a href="/cloud-playout/enabling-server-side-ads.html">プレロール広告とポストロール広告</a>。</li>
-			<li>Cloud Playout UIおよびEPGのプログラムの開始時間と終了時間、およびアセットの期間は、ミッドロール広告コンテンツを反映します。</li>
-			<li>
-				ミッドロール広告のキューポイントデータのインポートは、チャネルの現在の状態に関係なく、いつでも有効または無効にできます。
-				<figure class="bcls-figure">
-					<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-cuepoints-running-state.png" alt="Enable/Disable Mid-Rolls while Running">
-					<figcaption class="bcls-caption--image">実行中のミッドロールの有効化/無効化</figcaption>
-				</figure>
-				<p><strong>備考</strong></p>
-				<ol>
-					<li>
-						チャンネルでミッドロールインポートオプションが無効になっていて、アセットAが現在再生中で、ミッドロールキューポイントがある場合、およびチャンネル設定でミッドロールインポートオプションがオンになっている場合-現在再生中のアセットの広告スロット現在の反復では尊重されません。ただし、後続のアセットのミッドロールはインポートされます。
-					</li>
-					<li>
-						チャンネルでミッドロールインポートオプションが有効になっていて、アセットAが現在再生中で、ミッドロールキューポイントがある場合、ミッドロールインポートオプションがオフになっていると、現在再生中のアセットの広告スロットが優先されますベストエフォートベースで。現在再生中のアセットの再生時間に非常に近い場所にある一部の広告スロットは、引き続き広告を再生する可能性があります。
-					</li>
-          <li>現在プレイ中のアセットへのキューポイントの追加/削除は、さまざまな要因に基づいて処理されます。現在のプレイ時間の位置、他のミッドロールキューポイントの存在などの要因は、CloudPlayoutが現在プレイしているアセットのキューポイントの動的な追加/削除を処理する方法に影響を与えます。</li>
-				</ol>
-			</li>
-		</ul>
-	</section>
-	<section class="bcls-section">
-		<h2 id="Identify assets with mid-rolls">ミッドロールで資産を特定する</h2>
-		<p>ミッドロールキューポイントのインポートが有効になっている場合、有効なミッドロールキューポイントを持つビデオには、プログラムのビデオタイトルの横に緑色の点線のアイコンが表示されます。</p>
-		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-assets-with-midroll.png" alt="Videos with Mid-Roll Cuepoints">
-			<figcaption class="bcls-caption--image">ミッドロールキューポイントのあるビデオ</figcaption>
-		</figure>
-		<p>チャネルが<strong>下書き</strong>状態では、緑色の点線のアイコンの上にマウスを置くと、ミッドロールの詳細が表示されます。</p>
-		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-draft-state.png" alt="Reveal Mid-Roll Details - DRAFT State">
-			<figcaption class="bcls-caption--image">ミッドロールの詳細を明らかにする-ドラフト状態</figcaption>
-		</figure>
-		<p>チャネルが<strong>ランニング</strong>状態では、緑色の点線のアイコンをクリックして、ミッドロールの詳細を表示できます。</p>
-		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-running-state.png" alt="Reveal Mid-Roll Details - RUNNING State">
-			<figcaption class="bcls-caption--image">ミッドロールの詳細を明らかにする-ドラフト状態</figcaption>
-		</figure>
-	</section>
-	<section class="bcls-section">
-    <h2 id="Related_topics">関連トピック</h2>
+
+  <section class="bcls-section">
+    <h2 id="overview">概要</h2>
+    <p>ミッドロール広告の挿入は、Studio または CMS API で動画に作成されたキューポイントに依存します。Cloud Playout はチャンネル内の動画のキューポイントデータをインポートし、それに基づいてミッドロール広告の挿入ポイントを設定します。キューポイントの追加方法については、<a href="https://studio.support.brightcove.com/media/general/working-cue-points-media-module.html">キューポイントの操作</a>をご参照ください。</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Enabling_mid-roll_ad_cuepoints">ミッドロール広告のキューポイント有効化</h2>
+    <p>ミッドロール広告のキューポイントのインポートは、チャンネル作成時またはチャンネルの状態に関係なくいつでも有効化・無効化できます：</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/new-channel-with-ssai.webp" alt="ミッドロール広告の有効化">
+      <figcaption class="bcls-caption--image">ミッドロール広告の有効化</figcaption>
+    </figure>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="How_mid-rolls_work_in_Cloud_Playout">Cloud Playout におけるミッドロールの動作</h2>
     <ul>
-      <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
-      <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
-      <li><a href="/cloud-playout/adding-bumpers-to-vod.html">クラウドプレイアウトへのバンパーの追加</a></li>
-      <li><a href="/cloud-playout/static-image-overlays.html">静止画像オーバーレイ</a></li>
-			<li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
-      <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
-      <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
-      <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
-      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">概要:EPG API</a></li>
-      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG API リファレンス</a></li>
-      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-channels.html">チャネル API リファレンス</a></li>
+      <li>Cloud Playout は広告用キューポイントのみに基づいて広告位置を設定します（コードタイプのキューポイントは無視されます）。</li>
+      <li>Video Cloud により自動生成されるプリロールおよびポストロール広告のキューポイントは無視されます。これらは Cloud Playout では別の方法で管理されます。詳細は <a href="https://beacon.support.brightcove.com/monetization/ssai/configuring-server-side-ad-settings.html">サーバーサイド広告設定の構成</a> を参照してください。</li>
+      <li>ミッドロール広告のタイミングは、キューポイントのタイムスタンプのみに基づいて決定されます。メタデータは使用されません。</li>
+      <li>
+        ミッドロールのデフォルトの長さは 30秒です。チャンネル設定で変更できます（最小30秒、最大10分）。
+        <p>チャンネルの状態に関係なく、ミッドロールスロットの長さはいつでも変更可能です：</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-cuepoints-running-state.webp" alt="ミッドロールのスロット長の編集（RUNNING状態）">
+          <figcaption class="bcls-caption--image">ミッドロールのスロット長の編集（RUNNING状態）</figcaption>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information">注意事項:
+          <ul>
+            <li>変更されたスロットの長さは現在再生中の広告スロットには適用されません。以降の広告スロットから反映されます。</li>
+            <li>Cloud Playout の EPG（電子番組表）はリアルタイムに近い形で動的に生成されるため、ミッドロールの長さを変更すると一時的に EPG の表示にズレが生じることがありますが、短時間で自動的に修正されます。</li>
+            <li>Cloud Playout で広告（ミッドロールまたはポストロール）が再生中に <strong>Play Now</strong> を使用して別のコンテンツへスキップしようとしても、広告スロットの再生が完了するまでスキップは実行されません。再生完了を待ってから <strong>Play Now</strong> を使用することを推奨します。</li>
+          </ul>
+        </aside>
+      </li>
+      <li>ミッドロール広告はVODコンテンツにのみ挿入可能です。<a href="https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/managing-content/adding-bumpers-to-vod.html">バンパー</a>や<a href="https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/monetization/enabling-server-side-ads.html#ads">プリロール/ポストロール広告</a>には挿入できません。</li>
+      <li>Cloud Playout UIおよびEPGにおいて、アセットの開始時間、終了時間、再生時間はミッドロール広告を含んだ時間が表示されます。</li>
+      <li>
+        ミッドロール広告のキューポイント インポートは、チャンネルの状態に関係なくいつでも有効／無効にできます。
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-cuepoints-running-state.webp" alt="実行中にミッドロールの有効化／無効化">
+          <figcaption class="bcls-caption--image">実行中にミッドロールの有効化／無効化</figcaption>
+        </figure>
+        <p><strong>補足事項</strong></p>
+        <ol>
+          <li>チャンネルでミッドロールインポートが無効になっていて、アセットAが再生中かつキューポイントを持っている場合、設定を有効にしても再生中のアセットには適用されません。ただし次のアセットからは有効になります。</li>
+          <li>ミッドロールインポートが有効で、アセットA が再生中に無効に変更した場合、再生中の広告スロットは可能な範囲で再生が続きます。一部のスロットは再生される可能性があります。</li>
+          <li>再生中のアセットに対してキューポイントを追加・削除した場合の動作は、現在の再生位置や他のキューポイントの有無など、複数の要因によって変わります。</li>
+        </ol>
+      </li>
     </ul>
   </section>
+
+  <section class="bcls-section">
+    <h2 id="Identify assets with mid-rolls">ミッドロール付きアセットの識別</h2>
+    <p>ミッドロール キューポイントのインポートが有効になっていると、該当する動画のタイトルの横に緑色の点線アイコンが表示されます：</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-assets-with-midroll.webp" alt="ミッドロールキューポイント付き動画">
+      <figcaption class="bcls-caption--image">ミッドロール キューポイント付き動画</figcaption>
+    </figure>
+    <p>チャンネルが <strong>DRAFT</strong> 状態にある場合、緑の点線アイコンにカーソルを合わせるとミッドロールの詳細が表示されます：</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-draft-state.webp" alt="ミッドロール詳細表示（DRAFT状態）">
+      <figcaption class="bcls-caption--image">ミッドロール詳細表示（DRAFT状態）</figcaption>
+    </figure>
+    <p>チャンネルが <strong>RUNNING</strong> 状態にある場合、緑の点線アイコンをクリックするとミッドロールの詳細が表示されます：</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-running-state.webp" alt="ミッドロール詳細表示（RUNNING状態）">
+      <figcaption class="bcls-caption--image">ミッドロール詳細表示（RUNNING状態）</figcaption>
+    </figure>
+  </section>
 </article>
+
 
 <!-- complete bootstrap layout -->
     </div>
