@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、メディアモジュールを使用してリモートアセットビデオを作成する方法について説明します。">
+  <meta name="description" content="このトピックでは、Media モジュールを使用してリモートアセット動画を作成する方法について説明します。">
   
-  <title>リモートアセットビデオの操作の</title>
+  <title>Media モジュールでのリモートアセット動画の操作</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -222,7 +222,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     
                     <li><a href="/general/supported-video-and-audio-formats-codecs-and-containers.html">サポートされているビデオおよびオーディオ形式</a></li>
                     
-                    <li><a href="/general/tls-media-player-and-api-urls.html">メディア、プレーヤー、および API の URL の TLS</a></li>
+                    <li><a href="/general/tls-media-player-and-api-urls.html">Media、プレーヤー、および API の URL の TLS</a></li>
                     
                     <li><a href="/general/video-cloud-architecture-overview.html">ビデオクラウドアーキテクチャの概要</a></li>
                     
@@ -261,7 +261,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     
                     <li><a href="/media/exporting-video-data.html">ビデオデータの書き出し</a></li>
                     
-                    <li><a href="/media/getting-started-media-module.html">メディアモジュールの使用開始</a></li>
+                    <li><a href="/media/getting-started-media-module.html">Mediaモジュールの使用開始</a></li>
                     
                     <li><a href="/media/how-search-videos-and-playlists-media-module.html">動画と再生リストを検索する方法</a></li>
                     
@@ -269,7 +269,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     
                     <li><a href="/media/introduction-playlists.html">プレイリストの概要</a></li>
                     
-                    <li><a href="/media/media-sharing-using-media-module.html">メディア共有</a></li>
+                    <li><a href="/media/media-sharing-using-media-module.html">Media共有</a></li>
                     
                     <li><a href="/media/organizing-videos-using-folders.html">フォルダを使用したビデオの整理</a></li>
                     
@@ -417,7 +417,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     
                     <li><a href="/social/getting-started-brightcove-social.html">ソーシャル入門</a></li>
                     
-                    <li><a href="/social/publishing-videos-social-media-platforms.html">ソーシャルメディアへのビデオの公開</a></li>
+                    <li><a href="/social/publishing-videos-social-media-platforms.html">ソーシャルMediaへのビデオの公開</a></li>
                     
                     <li><a href="/social/reviewing-social-analytics.html">ソーシャルアナリティクスの確認</a></li>
                     
@@ -1116,7 +1116,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     
                     <li><a href="/admin/managing-ingest-profiles.html">取り込みプロファイルの管理</a></li>
                     
-                    <li><a href="/admin/managing-media-sharing-settings.html">メディア共有設定の管理</a></li>
+                    <li><a href="/admin/managing-media-sharing-settings.html">Media共有設定の管理</a></li>
                     
                     <li><a href="/admin/managing-profile-information.html">プロファイル情報の管理</a></li>
                     
@@ -1187,63 +1187,70 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>リモートアセットビデオの操作の</h1>
-  <summary>このトピックでは、メディアモジュールを使用してリモートアセットビデオを作成する方法について説明します。</summary>
-  <section class="bcls-section">
-    <p>通常は、Uploadモジュールを使用して、動画をVideo Cloudにアップロードします。これらのファイルは、ブライトコーブによって管理されます。リモートアセットでは、ご自身のシステムまたはサードパーティのシステムで動画ファイルを維持管理し、動画ファイルのURLをVideo Cloudに提供します。</p>
-    <aside class="bcls-aside bcls-aside--information">注:リモートアセットビデオを作成する機能は、Video CloudEnterpriseパブリッシャーが利用できます。Video Cloud アカウントのアップグレードに興味がある場合は、Brightcove にお問い合わせください。</aside>
-    <p>リモートアセット動画は、Video Cloud CMS APIを使用して作成することもできます。詳細については、<a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-remote-assets.html">開発者向けドキュメントを参照してください</a>。を使用して作成されたリモートアセットビデオ<span translate="No">CMS API</span>その後、メディアモジュールを使用して管理できます。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="access">リモートアセットにアクセスする</h2>
-    <p>すべてのリモートアセットファイルは、認証やアクセス制御の必要がなく、パブリック URL で利用可能である必要があります。リモートアセットが CDN によってホストされている場合、リモートアセットの URL は、オリジンサーバー上の URL ではなく CDN 内のアセットの URL である必要があります。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="create">リモートアセットを作成するビデオ</h2>
-    <p>リモートアセットビデオを作成するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>メディアモジュールを開きます。</li>
-      <li>クリック<strong>リモートビデオを追加する</strong>サイドナビゲーションパネルで。[リモートビデオの追加]ダイアログが開きます。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node16244-add-remote-video.png" /></figure>
-      </li>
-      <li><strong>ビデオ名を入力します</strong>。ビデオ名は、Mediaモジュールとプレーヤーにも表示されます。</li>
-      <li>を選択<strong>ビデオタイプ</strong>、<strong>住む</strong>また<strong>オンデマンド</strong>。</li>
-      <li>にとって<strong>オンデマンド</strong>ビデオタイプ、入力<strong>間隔</strong> hh: mm: ss形式。</li>
-      <li>レンディションごとに、<strong>レンディションの URL </strong><strong>とフォーマットを入力します</strong>。[ <strong>レンディションを追加] をクリックします</strong>。<aside class="bcls-aside bcls-aside--information">注:プロトコル相対 URL がサポートされています。</aside>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node16244-remote-video-props.png" /></figure>
-      </li>
-      <li>[<strong>保存</strong>]をクリックして、リモートアセットを保存します。ページが更新されると、リモートアセットビデオがメディアモジュールに一覧表示されます。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node16244-media-module.png" /></figure>
-      </li>
-    </ol>
-    <p>リモートアセットビデオにはポスターやサムネイル画像はありませんが、画像をアップロードすることはできます。ポスターおよびサムネイル画像のアップロードについては、<a href="/media/uploading-poster-and-thumbnail-images.html">ポスターおよびサムネイル画像のアップロードを参照してください</a>。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">リモートアセットのビデオの編集</h2>
-    <p>リモートアセットビデオを編集するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>メディアモジュールを開きます。</li>
-      <li>リモートアセットのビデオタイトルをクリックして、ビデオのプロパティを開きます。</li>
-      <li>[ <strong>ビデオファイル-リモートアセット]</strong>セクションを探し、[ <strong>編集] をクリックします</strong>。</li>
-      <li>[ <strong>ソース]</strong>行をクリックして選択します。ソースURLをクリックすると、別のブラウザタブで開きます。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node16244-edit-remote-asset.png" /></figure>
-      </li>
-      <li>を更新します<strong>URL</strong>と<strong>間隔</strong>必要に応じて。[ <strong>保存</strong> ] をクリックして変更を保存します。</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="limitations">制約事項</h2>
-    <ul>
-      <li>画像キャプチャ機能を使用して、リモートアセットビデオのビデオ静止画とサムネイル画像を作成することはできませんが、リモートアセットビデオのビデオ静止画とサムネイル画像をアップロードすることはできます</li>
-      <li>で作成されたリモートアセットビデオ<strong>基本</strong>アカウントの作成後に編集することはできません</li>
-      <li>SSAIはリモートアセットではサポートされていません</li>
-      <li>DRM は、プレーヤーをカスタマイズして DRM ライセンスサーバーと通信できる場合にのみサポートされます。これは、プラグインを通じて Brightcove Player で可能です。他のプレイヤーについては、プレーヤーのドキュメントを参照する必要があります。</li>
-      <li>アナリティクス:ブライトコーブアナリティクスシステムは、動画の再生時間などのシステム生成動画メタデータに依存します。リモートアセットの分析データは、このメタデータを提供できない限り、リモートアセットの分析データのリッチは低くなります。</li>
-      <li>再生保証:Video Cloud に取り込まれたすべての動画は、ブライトコーブプレーヤーで再生できます。これは、ほぼすべてのリモートアセットに当てはまりますが、動画が再生されないエッジケースもあります。例えば、DASHとHLSには、まだサポートしていないいくつかの高度な機能があります。BrightCove 以外のプレーヤーの場合は、そのプレーヤーが動画形式を完全にサポートしていることを確認する必要があります。</li>
-      <li>コンピューターの時刻が実際の時刻よりも早く設定されている場合、視聴者はリモートアセットビデオを再生できない場合があります</li>
-      <li>ライブリモートアセットビデオにキューポイントを追加することはできません</li>
-    </ul>
-  </section>
+ <h1>Media モジュールでのリモートアセット動画の操作</h1>
+<summary>このトピックでは、Media モジュールを使用してリモートアセット動画を作成する方法について説明します。</summary>
+
+<section class="bcls-section">
+  <p>通常、動画は Upload モジュールを使用して Video Cloud にアップロードされ、そのファイルは Brightcove によって管理されます。リモートアセットでは、動画ファイルを自分自身またはサードパーティのシステムで管理し、Video Cloud に動画ファイルのURLを提供します。</p>
+  <p>リモートアセット動画は CMS API を使用して作成することもできます。詳細は<a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-remote-assets.html">開発者向けドキュメント</a>を参照してください。<span translate="No">CMS API</span> を使用して作成したリモートアセット動画は、Media モジュールを使って管理できます。</p>
+</section>
+
+<section class="bcls-section">
+  <h2 id="access">リモートアセットへのアクセス</h2>
+  <p>すべてのリモートアセット ファイルは、認証やアクセス制限なしでアクセス可能な公開 URL で利用可能である必要があります。リモートアセットが CDN でホストされている場合は、オリジンサーバーではなく、CDN 上のアセットの URL を使用してください。</p>
+</section>
+
+<section class="bcls-section">
+  <h2 id="create">リモートアセット動画の作成</h2>
+  <p>リモートアセット動画を作成するには、以下の手順に従ってください。</p>
+  <ol class="bcls-tasklist-restart">
+    <li><strong>Media</strong> モジュールを開きます。</li>
+    <li>サイドナビゲーションパネルで <strong>リモート動画の追加</strong> をクリックします。「リモート動画の追加」ダイアログが表示されます。
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node16244-add-remote-video.png" /></figure>
+    </li>
+    <li><strong>動画名</strong> を入力します。動画名は Media モジュールやプレーヤーで表示されます。</li>
+    <li><strong>動画タイプ</strong>として <strong>ライブ</strong> または <strong>オンデマンド</strong> を選択します。</li>
+    <aside class="bcls-aside bcls-aside--information"><strong>ライブ</strong> は HLS のみ、<strong>オンデマンド</strong>は HLS、MP4、DASH をサポートしている点にご注意ください。</aside>
+    <li><strong>オンデマンド</strong>動画タイプの場合は、<strong>再生時間</strong> を hh:mm:ss 形式で入力します。</li>
+    <li>各レンディションに対して、<strong>レンディションURL</strong> と <strong>フォーマット</strong> を入力します。<span class="button-blue">レンディションの追加</span> をクリックします。</li>
+    <aside class="bcls-aside bcls-aside--information">注: プロトコル相対 URL もサポートされています。</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node16244-remote-video-props.png" /></figure>
+    <li><span class="button-blue">保存</span> をクリックしてリモートアセットを保存します。ページを更新すると、Media モジュールにリモートアセット動画が表示されます。
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node16244-media-module.png" /></figure>
+    </li>
+  </ol>
+  <p>リモートアセット動画にはポスター画像やサムネイル画像がありませんが、画像をアップロードすることは可能です。ポスター画像とサムネイル画像のアップロード方法については、<a href="/media/properties/uploading-poster-and-thumbnail-images.html">ポスターおよびサムネイル画像のアップロード</a>を参照してください。</p>
+</section>
+
+<section class="bcls-section">
+  <h2 id="edit">リモートアセット動画の編集</h2>
+  <p>リモートアセット動画を編集するには、以下の手順に従ってください。</p>
+  <ol class="bcls-tasklist-restart">
+    <li><strong>Media</strong> モジュールを開きます。</li>
+    <li>リモートアセット動画のタイトルをクリックして、動画プロパティを開きます。</li>
+    <li><strong>ビデオファイル - リモートアセット</strong>セクションを見つけて、<span class="button-blue-text-bordered"> <i data-feather="edit-3"></i> 編集</span>をクリックします。</li>
+    <li><strong>ソース</strong> の行をクリックして選択します。ソースURLをクリックすると、別のブラウザタブで開かれます。
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node16244-edit-remote-asset.png" /></figure>
+    </li>
+    <li>必要に応じて <strong>URL</strong> と <strong>再生時間</strong> を更新します。<span class="button-blue">保存</span> をクリックして変更を保存します。</li>
+  </ol> 
+</section>
+
+<section class="bcls-section">
+  <h2 id="limitations">制限事項</h2>
+  <ul>
+    <li>リモートアセット動画に対しては、静止画やサムネイル画像をキャプチャする機能は使用できませんが、画像のアップロードは可能です。</li>
+    <li><strong>Basic</strong> アカウントで作成されたリモートアセット動画は、作成後に編集できません。</li>
+    <li>独自のライブストリーム プレイリスト（BYO）を使用しているリモートアセットは、Brightcove SSAI を使用することができません。</li>
+    <li>DRM は、プレーヤーが DRM ライセンスサーバーと通信できるようにカスタマイズされている場合にのみサポートされます。Brightcove Player ではプラグインを通じてこれが可能です。他のプレーヤーについては、各プレーヤーのドキュメントを参照してください。</li>
+    <li>アナリティク: Brightcove のアナリティクスシステムは、動画の再生時間などのシステム生成メタデータに依存しています。リモートアセットのアナリティクスデータは、このメタデータを提供しない限り限定的になります。</li>
+    <li>再生保証: Video Cloud に取り込まれたすべての動画は Brightcove Player で再生可能です。ほとんどのリモートアセットも再生可能ですが、DASH や HLSの一部高度な機能には対応していないため、再生できないケースもあります。非Brightcoveプレーヤーを使用する場合は、プレーヤーが動画形式に完全に対応していることを確認してください。</li>
+    <li>視聴者の PC の時刻が実際の時刻より進んでいる場合、リモートアセット動画を再生できない可能性があります。</li>
+    <li>ライブのリモートアセット動画にはキューポイントを追加することはできません。</li>
+    <li>既存の通常の VOD アセットをリモートアセットに変換することはできません。</li>
+  </ul>
+</section>
+
 </article>
 
 <!-- complete bootstrap layout -->

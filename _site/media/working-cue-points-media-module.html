@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、キューポイントと、メディアモジュールを使用してキューポイントを追加、編集、および削除する方法について学習します。">
+  <meta name="description" content="このトピックでは、キューポイントについて学び、Media モジュールを使用してそれらを追加・編集・削除する方法について紹介します。">
   
-  <title>メディアモジュールのでのキューポイントの操作</title>
+  <title>Media モジュールでのキューポイントの操作</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -1187,68 +1187,79 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>メディアモジュールのでのキューポイントの操作</h1>
-  <summary>このトピックでは、キューポイントと、メディアモジュールを使用してキューポイントを追加、編集、および削除する方法について学習します。</summary>
-  <section class="bcls-section">
-    <p>キューポイントは、動画内の特定時点を示すマーカーです。キューポイントを使用すると、ミッドロール広告（商用ブレイクなど、動画コンテンツの再生中に発生する広告）をトリガーしたり、長い形式の動画でチャプターやシーンを区切ったりすることができます。</p>
-    <p>キューポイントには 2 つのタイプがありますが、どちらも単にキューポイントオブジェクトの<strong> type</strong>プロパティに文字列値を指定します。適切な値は、キューポイント情報の処理中にカスタム JavaScript で使用される場合にのみ役立ちます。&nbsp;</p>
-    <ul>
-      <li><strong>Ad</strong> - <strong> AD</strong>の文字列値を<strong> type</strong>プロパティに割り当てます。</li>
-      <li><strong>Code</strong> - <strong> CODE </strong>の文字列値を型プロパティに割り当てます。</li>
-    </ul>
-    <p>Media モジュールまたはカタログ API を使用して、キューポイントをビデオに追加できます。Catalog API を使用したキューポイントの追加の詳細については、開発者向けドキュメント「<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">プログラムによるキューポイントの実装」を参照してください</a>。</p>
-    <aside class="bcls-aside bcls-aside--information">注:キューポイントは、ライブのリモートアセットビデオに追加できません。</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="add">キューポイントの追加</h2>
-    <p>ビデオにキューポイントを追加するには、Media モジュールを開き、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>ビデオタイトルのリンクをクリックして、ビデオのプロパティページを開きます。</li>
-      <li>プレビュープレーヤーを使用してビデオを再生します。キューポイントを追加するポイントでビデオを一時停止します。</li>
-      <li>[ <strong>キューポイントを追加] をクリックします</strong>。</li>
-      <li>必要に応じて、<strong>キューポイントのタイムコード (hh: mm: ss)</strong>の値を調整します。<strong>seconds</strong>フィールドは、小数点以下のミリ秒をサポートすることに注意してください。</li>
-      <li>[ キューポイントのタイプ] を選択し、適切なメタデータを追加します。
-        <ul>
-          <li><strong>広告</strong> -広告リクエストが行われます。広告キューポイントを使用する場合は、<a href="/players/configuring-player-advertising-using-players-module.html">プレーヤーを広告用に構成する必要があります</a>。</li>
-          <li><strong>コード</strong> -キューポイントはプログラムによって処理されます。詳細については、「<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">プログラムによるキューポイントの実装」</a>開発者ドキュメントを参照してください。</li>
-        </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15151-add-code-cue-point.png" /></figure>
-      </li>
-      <li>キューポイントの名前を入力します。<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">名前の値にはプログラムからアクセスすることができます</a>。</li>
-      <li><strong>メタデータ</strong> (コードキューポイントの場合) <strong>またはキー/値のペア</strong> (広告キューポイントの場合) を入力します。
-        <ul>
-          <li><strong>Metadata</strong> -キューポイントとともに格納されるオプションのメタデータ。<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">メタデータにはプログラムからアクセスすることができます</a>。コードキューポイントを使用してメタデータを渡す場合の一例は、ビデオの再生中にさまざまなアクション呼び出しを表示する場合です。<a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-cue-points-display-cta.html">ブライトコーブプレーヤーのサンプルをご覧ください。キューポイントは CTA</a>を例として表示します。</li>
-          <li><strong>キー/値のペア</strong> -広告リクエストに渡すことができるキー/値のペア。キーと値のペアは、2 つのリンクされたデータ項目のセットです。キーとは、あるデータ項目の一意の識別子であるキーと、識別されるデータまたはそのデータの場所へのポインタである値です。キーと値のペアは、よりターゲットを絞ったアドバタイズメントを提供するために使用できます。ここに入力されたものは、<code translate="No">{mediainfo.ad_keys}</code>マクロが挿入される広告タグにコピーされます。詳細については、「IMA3 <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">プラグインを使用した広告」を参照してください</a>。</li>
-        </ul>
-      </li>
-    </ol>
-    <p>キューポイントをビデオに追加した後、実行時に、キューポイントは HTML5 WebVTT キューエレメントに変換されます。この変換が行われると、キューポイントデータの一部（タイプやキューポイントタイムなど）がテキストトラックに変換されます。キューポイント時間の値は WebVTT <code translate="No">startTime</code><code translate="No">endTime</code>キューとプロパティにマッピングされます。見る<a href="https://dev.w3.org/html5/webvtt/#the-vttcue-interface">このドキュメント</a> VTTCueインターフェイスの詳細については。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">キューポイントの編集</h2>
-    <p>ビデオのキューポイントを編集するには、Media モジュールを開き、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>ビデオタイトルのリンクをクリックして、ビデオのプロパティページを開きます。</li>
-      <li>タイムラインで編集するキューポイントをクリックします。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15151-select-cue-point.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">注:編集モードになると、<strong>[前へ]</strong> ボタンと <strong>[次へ]</strong> ボタンを使用して、他のキューポイントに移動できます。</aside>
-      </li>
-      <li>キューポイントのプロパティを編集し、[<strong>保存</strong>]をクリックします。</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">注:同じタイムコードで複数のキューポイントを持つことはできません。</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">キューポイントの削除</h2>
-    <p>キューポイントを削除するには、Media モジュールを開き、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>ビデオタイトルのリンクをクリックして、ビデオのプロパティページを開きます。</li>
-      <li>タイムラインで削除するキューポイントをクリックします。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15151-select-cue-point.png" /></figure>
-      </li>
-      <li>削除アイコンをクリックします（<img alt="" src="/assets/images/media/node15151-delete-icon.png" />）キューポイントプロパティの横。</li>
-      <li>削除を確認します。</li>
-    </ol>
-  </section>
+<h1>Media モジュールでのキューポイントの操作</h1>
+<summary>このトピックでは、キューポイントについて学び、Media モジュールを使用してそれらを追加・編集・削除する方法について紹介します。</summary>
+
+<section class="bcls-section">
+  <p>キューポイントとは、動画の再生時間の特定のタイムポイントに設定されたマーカーです。キューポイントを使用することで、動画再生中（例えば CM のように）にミッドロール広告を挿入したり、長尺の動画をチャプターやシーンに分けたりすることが可能です。</p>
+  <p>キューポイントには2種類ありますが、どちらも単純にキューポイント オブジェクトの <strong>type</strong> プロパティに文字列値を設定するだけです。適切な値は、キューポイント情報を処理するカスタム JavaScript で使用される場合に有効です。</p>
+  <ul>
+    <li><strong>Ad</strong> - <strong>type</strong> プロパティに <strong>AD</strong> という文字列値を設定します。</li>
+    <li><strong>Code</strong> - <strong>type</strong> プロパティに <strong>CODE</strong> という文字列値を設定します。</li>
+  </ul>
+  <p>キューポイントは、Mediaモ ジュールまたは Catalog API を使用して動画に追加できます。Catalog API を使用してキューポイントを追加する方法については、開発者向けドキュメント <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">キューポイントのプログラムによる実装</a> を参照してください。</p>
+  <aside class="bcls-aside bcls-aside--information">注意:
+    <li>キューポイントはライブ リモートアセット動画には追加できません。</li>
+    <li>キューポイントは最低でも1秒以上間隔を空ける必要があります。</li>
+  </aside>
+</section>
+
+<section class="bcls-section">
+  <h2 id="add">キューポイントの追加</h2>
+  <p>動画にキューポイントを追加するには、以下の手順に従ってください：</p>
+  <ol class="bcls-tasklist-restart">
+    <li><strong>Media</strong> モジュールを開きます。</li>
+    <li>動画タイトルのリンクをクリックして、動画プロパティページを開きます。</li>
+    <li>プレビュー プレーヤーを使って動画を再生し、キューポイントを追加したい位置で一時停止します。</li>
+    <li><span class="button-blue-text-bordered">キューポイントの追加</span> をクリックします。</li>
+    <li>必要に応じて、キューポイントの <strong>タイムコード (hh:mm:ss)</strong> を調整します。<strong>秒</strong> のフィールドは小数点以下のミリ秒もサポートします。</li>
+    <li><strong>タイプ</strong> を選択し、適切なメタデータを入力します。
+      <ul>
+        <li><strong>Ad</strong> - 広告リクエストが行われます。広告キューポイントを使用する場合は、プレーヤーが<a href="/players/general/configuring-player-advertising-using-players-module.html">広告用に設定</a>されている必要があります。</li>
+        <li><strong>Code</strong> - キューポイントはプログラム的に処理されます。詳細は<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">キューポイントのプログラムによる実装</a>を参照してください。</li>
+      </ul>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/cue-points.webp" /></figure>
+    </li>
+    <li>キューポイントの <strong>名前</strong> を入力します。名前は<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">プログラム的に取得</a>できます。</li>
+    <li><strong>メタデータ</strong>（Codeキューポイント用）または <strong>キー／値ペア</strong>（Ad キューポイント用）を入力します。
+      <ul>
+        <li><strong>メタデータ</strong> - 任意のメタデータで、キューポイントと一緒に保存されます。たとえば、動画再生中に異なる CTA（行動喚起）を表示したい場合に有効です。例については、<a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-cue-points-display-cta.html">Brightcove Player サンプル: キューポイントで CTA を表示</a>を参照してください。</li>
+        <li><strong>キー／値ペア</strong> - 広告リクエストに渡すためのキーと値の組み合わせです。<code translate="No">{mediainfo.ad_keys}</code> マクロが使用されている広告タグに自動的に組み込まれます。詳しくは、<a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">IMA3 プラグインによる広告</a> をご参照ください。</li>
+      </ul>
+    </li>
+  </ol>
+  <p>キューポイントが動画に追加されると、再生時には HTML5 の WebVTT キュー要素に変換されます。この変換によって、キューポイントの種類や時間情報などがテキストトラックにマッピングされます。キューポイントの時間は WebVTT キューの <code translate="No">startTime</code> および <code translate="No">endTime</code> に対応付けられます。<a href="https://dev.w3.org/html5/webvtt/#the-vttcue-interface">VTTCue インターフェースの詳細はこちら</a>をご覧ください。</p>
+</section>
+
+<section class="bcls-section">
+  <h2 id="edit">キューポイントの編集</h2>
+  <p>動画内のキューポイントを編集するには、以下の手順に従ってください：</p>
+  <ol class="bcls-tasklist-restart">
+    <li><strong>Media</strong> モジュールを開きます。</li>
+    <li>動画タイトルリンクをクリックして、動画プロパティページを開きます。</li>
+    <li>編集したいキューポイントをタイムラインからクリックします。
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/general/node15151-select-cue-point.png" /></figure>
+      <aside class="bcls-aside bcls-aside--information">注：編集モード中は、<strong>前へ</strong> および <strong>次へ</strong> ボタンを使用して他のキューポイントに移動できます。</aside>
+    </li>
+    <li>キューポイントのプロパティを編集し、<span class="button-blue">保存</span> をクリックします。</li>
+  </ol>
+  <aside class="bcls-aside bcls-aside--information">注：同じタイムコードに複数のキューポイントを設定することはできません。</aside>
+</section>
+
+<section class="bcls-section">
+  <h2 id="delete">キューポイントの削除</h2>
+  <p>キューポイントを削除するには、以下の手順に従ってください：</p>
+  <ol class="bcls-tasklist-restart">
+    <li><strong>Media</strong> モジュールを開きます。</li>
+    <li>動画タイトルのリンクをクリックして、動画プロパティページを開きます。</li>
+    <li>削除したいキューポイントをタイムラインからクリックします。
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/general/node15151-select-cue-point.png" /></figure>
+    </li>
+    <li>キューポイント プロパティの横にある削除アイコン（<img alt="" src="/assets/images/s-media-img/general/node15151-delete-icon.png" />）をクリックします。</li>
+    <li>削除を確認します。</li>
+  </ol>
+</section>
+
 </article>
 
 <!-- complete bootstrap layout -->
