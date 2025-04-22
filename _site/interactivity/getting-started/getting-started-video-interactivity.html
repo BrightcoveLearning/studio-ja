@@ -3148,73 +3148,77 @@
       <br>
       
       
-<h1>ビデオ インタラクティビティの入門</h1>
-<article class="bcls-article">
-  <summary>このトピックでは、動画にインタラクティブ機能を追加する方法を学びます。</summary>
-  <section class="bcls-section">
-    <p>Brightcove プレーヤー用の Interactivity プラグインを使用すると、プレーヤーは Brightcove Interactivity が提供する機能を利用できます。インタラクティビティ プロジェクトに注釈が追加されると、対応する動画に自動的に表示されます。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="configure-player">始める前に</h2>
-    <p>ビデオ インタラクティブ機能を開始する前に、Interactivity プラグインで Brightcove プレーヤーを設定する必要があります。Interactivity プラグインを Brightcove プレーヤーに追加すると、動画再生中にプレーヤー内に注釈を表示できます。Interactivity プラグインは、他のプレーヤー プラグインと共存できます。Interactivity 対応 Brightcove プレーヤーの作成手順の詳細は、 <a href="/interactivity/getting-started/configuring-player-plugin.html">Interactivity プラグインで Brightcove プレーヤーを設定する</a>を参照して下さい。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="project-creation">インタラクティブ プロジェクトの作成</h2>
-    <p>プロジェクトを作成するには、以下の手順に従ってください。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Video Cloud Studio にログインします。</li>
-      <li><strong>インタラクティブ</strong> モジュールを開きます。</li>
-      <li><span class="button-blue">新規プロジェクト</span>をクリックします。</li>
-      <li><strong>プロジェクトのタイトル</strong>を入力して下さい。</li>
-      <li>プロジェクトで使用する動画を選択します。
-        <figure class="bcls-figure"> <img alt="" src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/create-new-project.png"> </figure>
-      </li>
-      <li><span class="button-blue">作成</span>をクリックします。プロジェクト一覧にプロジェクトが表示されます。</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="text-overlay">テキスト オーバーレイの追加</h2>
-    <p>このセクションでは、インタラクティブ機能が Brightcove プレーヤー内で表示できることを確認するために、テキスト オーバーレイを追加します。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>プロジェクトの<strong>タイトル</strong>をクリックして開きます。</li>
-      <li>下部のツールバーで、テキスト オーバーレイのアイコンをクリックします。
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/add-text-overlay.png"> </figure>
-      </li>
-      <li>メニューの <strong>Editor</strong> リンクをクリックしてください。
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/overlay-editor.png"> </figure>
-      </li>
-      <li>オーバーレイのサンプルテキストを入力し、<span class="button-blue">SUBMIT</span> をクリックします。
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/overlay-text.png"> </figure>
-      </li>
-      <li><strong>Done</strong> をクリックします。</li>
-    </ol>
-    <p>動画にテキストや画像のオーバーレイ注釈を追加する方法については、以下のいずれかを参照してください:</p>
-    <ul>
-      <li><a href="/interactivity/annotations/adding-text-overlay.html">動画にテキストオーバーレイを追加する</a></li>
-      <li><a href="/interactivity/annotations/adding-image-overlay.html">動画に画像オーバーレイを追加する</a></li>
-      <li><a href="/interactivity/annotations/adding-transparent-overlay.html">動画に透過オーバーレイを追加する</a></li>
-      <li><a href="/interactivity/annotations/adding-drawing.html">動画に描画を追加する</a></li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="preview-publish">動画のプレビューと埋め込みコードの生成</h2>
-    <p>プロジェクトに注釈が追加されたら、動画をプレビューして、インタラクティブ機能が期待どおりに動作していることを確認します。 <strong>Interactivity</strong> モジュールでプレビューして埋め込みコードを生成する場合、プロジェクトでは、 <a href="/interactivity/settings/configuring-settings.html#defaults">アカウントのデフォルト</a>として設定されている Interactivity 対応プレーヤが使用されます。</p>
-    <p>以下の手順に従って、プロジェクトの埋め込みコードをプレビューし、生成してください:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>プロジェクトのタイトルをクリックして開きます。</li>
-      <li><span class="button-blue">埋め込む</span>をクリックします。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/embed-dialog.png" /></figure>
-      </li>
-      <li><strong>プレーヤー</strong>を選択します。ドロップダウンリストには、<a href="/interactivity/getting-started/configuring-player-plugin.html">Interactivity プラグイン</a>がインストールされているすべてのプレーヤーが表示されます。</li>
-      <li>別のブラウザ タブでプロジェクトをプレビューするには、<strong>プレビュー</strong>をクリックします。</li>
-      <li>インタラクションが表示されることを確認します。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/video.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">注: デフォルトでは、テキスト オーバーレイは3秒間表示されるように設定されています。</aside>
-      </li>
-      <li>埋め込みコードをコピーして、あなたのウェブページに貼り付けてください。</li>
-    </ol>
-  </section>
-</article>
+      <h1>動画インタラクティブの始め方</h1>
+      <article class="bcls-article">
+        <summary>このトピックでは、動画にインタラクティブ性を追加する方法について学びます。</summary>
+        <section class="bcls-section">
+          <p>Brightcove Player 用のインタラクティブ プラグインを使用すると、Brightcove Interactivity の機能を活用することができます。インタラクティブ プロジェクトにアノテーション(注釈)を追加すると、それらは対応する動画上に自動的に表示されます。</p>
+        </section>
+        <section class="bcls-section">
+          <h2 id="configure-player">始める前に</h2>
+          <p>動画インタラクティブ機能を利用するには、Interactivity プラグインを設定した Brightcove Player が必要です。このプラグインを追加すると、動画再生中にアノテーションをプレーヤー内に表示できます。また、Interactivity プラグインは他のプレーヤー プラグインと共存可能です。Interactivity 対応の Brightcove Player を作成する手順については、<a href="/interactivity/getting-started/configuring-player-plugin.html">Brightcove PlayerにInteractivity プラグインを設定する</a>をご参照ください。
+            <aside class="bcls-aside bcls-aside--warning language-editable">注: Interactivity モジュール（旧 HapYakプラットフォームの機能）を使用して設定されたインタラクティブ機能は、In-Page Experience ではサポートされていません。ただし、Brightcove Studio 内で利用可能な<a href="https://gallery.support.brightcove.com/get-started/step-step-creating-and-publishing-page-experience.html#interactive">ネイティブインタラクティブ機能</a>（Interactivity モジュールに依存しない機能）はサポートされています。</aside>
+          </p>
+        </section>
+        <section class="bcls-section">
+          <h2 id="project-creation">インタラクティブ プロジェクトの作成</h2>
+          <p>以下の手順に従ってプロジェクトを作成してください。</p>
+          <ol class="bcls-tasklist-restart">
+            <li>Video Cloud Studio にログインします。</li>
+            <li><strong>Interactivity</strong> モジュールを開きます。</li>
+            <li><span class="button-blue">新規プロジェクト</span> をクリックします。</li>
+            <li><strong>プロジェクトのタイトル</strong> を入力します。</li>
+            <li>プロジェクトで使用する動画を選択します。
+              <figure class="bcls-figure"> <img alt="" src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/create-new-project.png"> </figure>
+            </li>
+            <li><span class="button-blue">作成</span>をクリックします。作成したプロジェクトはプロジェクト一覧に表示されます。</li>
+            <aside class="bcls-aside bcls-aside--information">注: 現在、Interactivity は音声のみの動画には対応していません。静止画を含む動画を作成し、それをインタラクティブ プロジェクトにインポートすることで対応可能です。</aside>
+          </ol>
+        </section>
+      
+        <section class="bcls-section">
+          <h2 id="text-overlay">テキスト オーバーレイの追加</h2>
+          <p>このセクションでは、Brightcove Player 内でインタラクティブ機能が正常に表示されることを確認するために、テキスト オーバーレイを追加します。</p>
+          <ol class="bcls-tasklist-restart">
+            <li>プロジェクトの <strong>タイトル</strong> をクリックして開きます。</li>
+            <li>下部ツールバーでテキスト オーバーレイ アイコンをクリックします。
+              <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/add-text-overlay.png"> </figure>
+            </li>
+            <li>メニューの <strong>Editor</strong> リンクをクリックします。
+              <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/overlay-editor.png"> </figure>
+            </li>
+            <li>オーバーレイ用のサンプルテキストを入力し、<span class="button-blue">SUBMIT</span> をクリックします。
+              <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/overlay-text.png"> </figure>
+            </li>
+            <li><strong>DONE</strong> をクリックします。</li>
+          </ol>
+          <p>動画にテキストや画像のオーバーレイ アノテーションを追加する方法については、以下のリンクを参照してください。</p>
+          <ul>
+            <li><a href="/interactivity/annotations/adding-text-overlay.html">動画にテキスト オーバーレイを追加する</a></li>
+            <li><a href="/interactivity/annotations/adding-image-overlay.html">動画に画像オーバーレイを追加する</a></li>
+            <li><a href="/interactivity/annotations/adding-transparent-overlay.html">動画に透過オーバーレイを追加する</a></li>
+            <li><a href="/interactivity/annotations/adding-drawing.html">動画に手書きアノテーションを追加する</a></li>
+          </ul>
+      </section>
+      <section class="bcls-section">
+          <h2 id="preview-publish">動画のプレビューと埋め込みコードの生成</h2>
+          <p>プロジェクトにアノテーションを追加した後、インタラクティブ機能が正常に動作するか確認するために動画をプレビューします。<strong>Interactivity</strong> モジュール内でプレビューと埋め込みコードを生成する際、プロジェクトは<a href="/interactivity/settings/configuring-settings.html#defaults">アカウントのデフォルト設定</a>で構成された Interactivity 対応のプレーヤーを使用します。</p>
+          <p>以下の手順でプロジェクトのプレビューと埋め込みコードの生成を行います。</p>
+          <ol class="bcls-tasklist-restart">
+            <li>プロジェクトのタイトルをクリックして開きます。</li>
+            <li><span class="button-blue">埋め込み</span>をクリックします。
+              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/embed-dialog.png" /></figure>
+            </li>
+            <li><strong>プレーヤー</strong>を選択します。ドロップダウンリストには、<a href="/interactivity/getting-started/configuring-player-plugin.html">Interactivity プラグイン</a> がインストールされているすべてのプレーヤーが表示されます。</li>
+            <li><strong>プレビュー</strong>をクリックすると、別のブラウザタブでプロジェクトをプレビューできます。</li>
+            <li>インタラクティブ要素が適切に表示されることを確認します。
+              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-brightcove-interactivity-img/getting-started/gs-interactivity/video.png" /></figure>
+              <aside class="bcls-aside bcls-aside--information">注: デフォルトでは、テキスト オーバーレイの表示時間は3秒に設定されています。</aside>
+            </li>
+            <li>埋め込みコードをコピーし、ウェブページに貼り付けてください。</li>
+          </ol>
+      </section>
+      </article> 
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
