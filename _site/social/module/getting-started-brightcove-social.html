@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、Brightcoveソーシャルの概要について説明します。Brightcove Socialを使用すると、Video Cloudアカウントのビデオを、YouTube、Facebook、Twitterなどの人気のソーシャルメディアプラットフォームに簡単に公開できます。">
+  <meta name="description" content="このトピックでは Brightcove Social の概要を紹介します。Brightcove Social を使うと、Video Cloud アカウント内の動画を YouTube、Facebook、X (旧Twitter)、LinkedIn などの人気ソーシャルメディア プラットフォームへ簡単に公開することができます。。">
   
-  <title>ブライトコーブ入門ソーシャルの</title>
+  <title>Brightcove Social 入門</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -60,7 +60,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         
       <li class="breadcrumb-item"><a href="/social/">Getting Started</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">ブライトコーブ入門ソーシャルの</li>
+      <li class="breadcrumb-item active" aria-current="page">Brightcove Social 入門</li>
     </ol>
   </nav>
 </header>
@@ -1187,45 +1187,85 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>ブライトコーブ入門ソーシャルの</h1>
-  <summary>このトピックでは、Brightcoveソーシャルの概要について説明します。Brightcove Socialを使用すると、Video Cloudアカウントのビデオを、YouTube、Facebook、Twitterなどの人気のソーシャルメディアプラットフォームに簡単に公開できます。</summary>
+    <h1>Brightcove Social 入門</h1>
+    <summary>このトピックでは Brightcove Social の概要を紹介します。Brightcove Social を使うと、Video Cloud アカウント内の動画を YouTube、Facebook、X (旧Twitter)、LinkedIn などの人気ソーシャルメディア プラットフォームへ簡単に公開することができます。</summary>
+    
+    <section class="bcls-section">
+    
+      <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5012341126001">&nbsp;</div>
+      <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+    
+      <p>Brightcove Social にアクセスするには、Video Cloud Studio にログインし、メインナビゲーションから <strong>Social</strong> モジュールを開きます。デフォルトで公開済みの動画一覧が表示されます。</p>
+    
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/module/node16342-social-module-vc.png" /></figure>
+    
+      <p>Brightcove Social を使うことで、次のことが可能になります：</p>
+      <ul>
+        <li><a href="#view">公開済み動画の閲覧</a></li>
+        <li><a href="#publish">動画をソーシャルメディアに公開</a></li>
+        <li><a href="#publish-live">ライブ動画をソーシャルメディアに公開</a></li>
+        <li><a href="#autosync">動画をソーシャルメディア アカウントと自動同期</a></li>
+        <li><a href="#create">ソーシャルメディアの公開先の作成</a></li>
+        <li><a href="#analytics">ソーシャル アナリティクスの確認</a></li>
+      </ul>
+    
+      <aside class="bcls-aside bcls-aside--information">
+        <p>注: Social モジュールの読み込みに問題がある場合、以下の Facebook ライブラリがネットワークによってブロックされていないかをご確認ください：<code translate="no">https://connect.facebook.net/en_US/sdk.js</code>。特に Firefox では、強化型トラッキング防止機能によって Facebook SDK がデフォルトでブロックされることがあります。これらの設定の調整方法については、<a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop">Firefox デスクトップ版の強化型トラッキング防止機能</a>をご参照ください。</p>
+      </aside>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="view">公開済み動画の閲覧</h2>
+      <p>公開済み動画を閲覧するには、左側のナビゲーションにある <strong>公開済み</strong> リンクをクリックします。各動画には、公開ステータス、動画情報、公開先のソーシャルプラットフォームへのリンクが表示されます。公開済み動画の確認についての詳細は、<a href="/social/general/viewing-videos-published-social-media.html">ソーシャルメディアに公開された動画の閲覧</a>をご覧ください。</p>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="view">動画のクリップ作成</h2>
+        <p>Social モジュールを使用すると、VOD動画のクリップを作成し、Media モジュールに保存した後、お好みのソーシャル配信先にその動画を公開することができます。</p>
+        <p>以下の手順で動画をクリップしてください：</p>
+        <ol class="bcls-tasklist-restart">
+          <li>Video Cloud Studio にログインします。</li>
+          <li><strong>Social</strong> モジュールを開きます。</li>
+          <li><strong>動画</strong> をクリックします。</li>
+          <li>クリップしたい動画をクリックします。</li>
+          <li>
+            <p>リストの上部にある <span class="button-blue-text-bordered">クリップ</span> をクリックします。</p>
+            <figure class="bcls-figure"><img src="/assets/images/s-social-img/module/select_clip_video.webp"></figure>
+          </li>
+          <li>
+            <p>新しいウィンドウが表示されるのを確認します。スライダーを使用して動画のクリップ範囲を指定します。</p>
+            <figure class="bcls-figure"><img src="/assets/images/s-social-img/module/edit_clip_video.webp"></figure>
+          </li>
+          <li><span class="button-blue">続行</span> をクリックします。</li>
+          <li>
+            <p>必要に応じて各フィールドを更新します。</p>
+            <figure class="bcls-figure"><img src="/assets/images/s-social-img/module/save_clip_video.webp"></figure>
+          </li>
+          <li>保存には以下の2つのオプションがあります：
+            <ul>
+              <p><li><span class="button-blue">保存</span>: 動画をMediaモジュールに保存します。</li></p>
+              <p><li><span class="button-blue">保存して公開...</span>：希望の公開先に動画を公開するオプションが表示されます。</li></p>
+            </ul>
+          </li>
+        </ol>
+      </section>
+      
+    
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5012341126001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>Brightcove Socialにアクセスするには、Video Cloud Studioにログインして、<strong>ソーシャル</strong>ナビゲーションヘッダー内。デフォルトでは、公開した動画のリストが表示されます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/node16342-social-module.png" /></figure>
-    <p>Brightcoveソーシャルを使用すると、次のことができます。</p>
-    <ul>
-      <li><a href="#view">公開した動画を見る</a></li>
-      <li><a href="#publish">ソーシャルメディアプラットフォームに動画を公開する</a></li>
-      <li><a href="#autosync">動画をソーシャルメディアアカウントに自動的に同期する</a></li>
-      <li><a href="#create">ソーシャルメディアの出版先を作成する</a></li>
-      <li><a href="#analytics">ソーシャルアナリティクスの確認</a></li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information">
-      <p>注: Socialモジュールが読み込まれない場合があります。ほとんどの場合、これはユーザーのネットワークがFacebookライブラリをブロックしていることが原因であると思われます。<code translate="no"> https://connect.facebook.net/en_US/sdk.js</code>。</p>
-      <p>これは、デフォルトでFacebook SDKをブロックする拡張追跡保護のため、Firefoxで特に一般的です。これらの設定を調整する方法の詳細と手順については、デスクトップ版 Firefox <a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop">のトラッキング防止機能の強化を参照してください</a>。</p>
-    </aside>
+    <h2 id="publish">動画をソーシャルメディア プラットフォームに公開する</h2>
+    <p>ソーシャルメディア プラットフォームに動画を公開するには、左ナビゲーションの <strong>動画</strong> アイコンをクリックします。ソーシャルメディア アカウントへのビデオの公開については、<a href="/social/publishing-videos-social-media-platforms.html">ソーシャルメディア プラットフォームへのビデオの公開</a>を参照してください。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="view">公開したビデオの表示</h2>
-    <p>公開した動画を表示するには、左側のナビゲーションの [ <strong>公開済み]</strong>リンクをクリックします。公開された各ビデオには、公開ステータス、動画情報、および動画が公開されているソーシャルプラットフォームへのリンクが表示されます。公開された動画の表示については、「<a href="/social/viewing-videos-published-social-media.html">ソーシャルメディアに公開されている動画を表示する」を参照してください</a>。</p>
+    <h2 id="autosync">動画をソーシャルメディア アカウントに自動的に同期させる</h2>
+    <p>自動同期機能を使用すると、動画に割り当てられたタグに基づいて、動画をソーシャルメディア配信先に自動的に公開することができます。自動同期を設定するには、左ナビゲーションで <strong>自動同期</strong> をクリックします。自動同期機能の設定については、<a href="/social/using-auto-sync-synchronize-videos-social-media-accounts.html">自動同期を使用してソーシャルメディア アカウントにビデオを同期する</a>を参照してください。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="publish">動画をソーシャルメディアプラットフォームに公開する</h2>
-    <p>ソーシャルメディアプラットフォームに動画を公開するには、左ナビゲーションの[<strong>動画</strong>]アイコンをクリックします。ソーシャルメディアアカウントへのビデオの公開については、「<a href="/social/publishing-videos-social-media-platforms.html">ソーシャルメディアプラットフォームへのビデオの公開」を参照してください</a>。</p>
+    <h2 id="create">ソーシャルメディア配信先を作成する</h2>
+    <p>配信先とは、動画の公開先となるソーシャルメディア アカウントです。配信先には、YouTube チャンネル、Facebook ページ、または X (旧Twitter)などのアカウントを使用することができます。公開先を作成するには、左ナビゲーションの <strong>配信先</strong> をクリックします。配信先の作成の詳細は、<a href="/social/creating-social-media-publishing-destinations.html">ソーシャルメディア配信先の作成</a>を参照してください。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="autosync">動画をソーシャルメディアアカウントに自動的に同期する</h2>
-    <p>自動同期機能を使用すると、動画に割り当てられたタグに基づいて、動画をソーシャルメディア宛先に自動的に公開できます。自動同期を設定するには、左ナビゲーションで[<strong>自動同期</strong>]をクリックします。自動同期機能の設定については、「<a href="/social/using-auto-sync-synchronize-videos-social-media-accounts.html">自動同期を使用してソーシャルメディアアカウントにビデオを同期する」を参照してください</a>。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="create">ソーシャルメディア公開先を作成する</h2>
-    <p>公開先とは、動画の公開先となるソーシャルメディアアカウントです。公開先には、YouTube チャンネル、Facebook ページ、または Twitter アカウントを使用できます。公開先を作成するには、左ナビゲーションの[<strong>公開先</strong>]をクリックします。発行先の作成の詳細は、「<a href="/social/creating-social-media-publishing-destinations.html">ソーシャルメディア発行先の作成」を参照してください</a>。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="analytics">ソーシャル解析を確認する</h2>
-    <p>Social Analytics は、ソーシャルメディアチャンネルで共有された動画のパフォーマンスに関するデータを提供します。ソーシャル解析を表示するには、左ナビゲーションで[<strong>ソーシャル解析</strong>]をクリックします。ソーシャル分析の詳細については、「<a href="/social/reviewing-social-analytics.html">ソーシャルアナリティクスの確認」を参照してください</a>。</p>
+    <h2 id="analytics">ソーシャル分析を確認する</h2>
+    <p>Social 分析は、ソーシャルメディア チャンネルで共有された動画のパフォーマンスに関するデータを提供します。ソーシャル分析を表示するには、左ナビゲーションで <strong>ソーシャル分析</strong> をクリックします。ソーシャル分析の詳細については、<a href="/social/reviewing-social-analytics.html">ソーシャル分析の確認</a>を参照してください。</p>
   </section>
 </article>
 

@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このトピックでは、Facebook InstantArticleページでBrightcoveプレーヤーを公開する方法を学習します。">
+  <meta name="description" content="このトピックでは、Facebook インスタント記事のページで Brightcove プレーヤーを公開する方法について学びます。">
   
-  <title>Facebook Instant ArticlesのでBrightcoveプレーヤーを公開する</title>
+  <title>Facebook インスタント記事で Brightcove プレーヤーを公開する</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -1187,42 +1187,51 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>Facebook Instant ArticlesのでBrightcoveプレーヤーを公開する</h1>
-  <summary>このトピックでは、Facebook InstantArticleページでBrightcoveプレーヤーを公開する方法を学習します。</summary>
-  <section class="bcls-section">
-    <p>Facebook Instant Articlesは、Facebookニュースフィードの記事を読むための高速でインタラクティブなエクスペリエンスです。インスタント記事は、コンテンツ管理システム (Instant Articles API を使用) から直接公開することも、RSS フィードを提供することもできます。インスタント記事は、標準のモバイルウェブ記事よりも10倍速く表示されます。フォローしている友人やページがニュースフィードにリンクを共有すると、Facebook はその URL に関連付けられたインスタント記事があるかどうかを確認します。もしそうなら、Facebookはそれをインスタント記事として表示します。そうでない場合は、ウェブブラウザで開きます。</p>
-    <p>インスタント記事に埋め込まれている Brightcove Player は、引き続き以下のサポートを受けます。</p>
-    <ul>
-      <li>プリロールとミッドロール広告</li>
-      <li>ビデオクラウド分析</li>
-      <li>サードパーティ製プラグイン</li>
-    </ul>
-    <p>Analytics は Video Cloud で収集されますが、<code translate="No">brightcove.com</code><code translate="No">facebook.com</code>アナリティクスに記録される表示ドメインはドメインではなくドメインになります。</p>
-    <p>インスタント記事を使用してさまざまな種類のコンテンツを共有できますが、このトピックでは、インスタント記事ページでの Brightcove プレーヤーの共有について説明します。インスタント記事の詳細については、<a href="https://developers.facebook.com/docs/instant-articles"> Facebook のドキュメントを参照してください</a>。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Generating_player_embed_code">プレーヤーの埋め込みコードを生成しています</h2>
-    <p>インスタント記事で使用するために、プレーヤーのプロパティを変更する必要はありません。インスタント記事のプレーヤー埋め込みコードを生成するには、次の手順に従います。</p>
+    <h1>Facebook インスタント記事で Brightcove プレーヤーを公開する</h1>
+    <summary>このトピックでは、Facebook インスタント記事のページで Brightcove プレーヤーを公開する方法について学びます。</summary>
+    <section class="bcls-section">
+      <p>Facebookインスタント記事は、Facebook のニュースフィード内で記事を高速かつインタラクティブに閲覧できる仕組みです。インスタント記事は、コンテンツ管理システムから直接（Instant Articles APIを使用）公開するか、RSSフィードを提供することで公開できます。インスタント記事は、通常のモバイルウェブ記事よりも最大10倍高速で表示されます。友達やフォローしているページがニュースフィードでリンクを共有すると、Facebook はその URL に対応するインスタント記事があるかを確認し、あればインスタント記事として表示し、なければ通常のウェブブラウザで開かれます。</p>
+      <p>インスタント記事に埋め込まれた Brightcove プレーヤーは、以下の機能を引き続きサポートします:</p>
+      <ul>
+        <li>プリロールおよびミッドロール広告</li>
+        <li>Brightcove のアナリティクス</li>
+        <li>サードパーティー製プラグイン</li>
+      </ul>
+      <p>なお、アナリティクスは　Brightcoveによって収集されますが、アナリティクスに記録される表示ドメインは<code translate="No">facebook.com</code> ではなく <code translate="No">brightcove.com</code> となります。</p>
+      <p>インスタント記事ではさまざまなタイプのコンテンツを共有できますが、このトピックでは、インスタント記事のページ内で Brightcove プレーヤーを共有する方法に焦点を当てています。インスタント記事の詳細については、<a href="https://developers.facebook.com/docs/instant-articles">Facebook の公式ドキュメント</a>をご覧ください。</p>
+    </section>
+    <section class="bcls-section">
+    <h2 id="Generating_player_embed_code">プレーヤー埋め込みコードの生成</h2>
+    <p>インスタント記事で使用するためにプレーヤーのプロパティを変更する必要はありません。以下の手順に従って、インスタント記事用のプレーヤー埋め込みコードを生成してください：</p>
     <ol class="bcls-tasklist-restart">
-      <li>Video Cloud Studio から標準の iframe 埋め込みコードを取得し、HTML5 <code translate="No">&lt;figure&gt;</code>要素内に配置します。
+      <li>Video Cloud Studio から通常の iframe 埋め込みコードを取得し、それを HTML5 の<code translate="No">&lt;figure&gt;</code>要素内に配置します。
         <pre>
-	&lt;形&gt;&lt;iframe src = "// players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001" allowfullscreen webkitallowfullscreen mozallowfullscreen width = "640" height = "360"&gt;&lt; / iframe&gt;&lt; /形&gt;
-	        </pre>
-        <aside class="bcls-aside bcls-aside--tip">ビデオ参照IDを使用する（つまり<code translate="No">videoId="ref:referenceId"</code>）iframeの埋め込みコードは、Facebook InstantArticlesに公開するときにサポートされます。</aside>
+  &lt;figure&gt;
+  &lt;iframe src="//players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001"
+   allowfullscreen webkitallowfullscreen mozallowfullscreen width="640" height="360"&gt;&lt;/iframe&gt;
+  &lt;/figure&gt;
+        </pre>
+        <aside class="bcls-aside bcls-aside--tip">Facebook インスタント記事に公開する際、iframe 埋め込みコードにビデオ参照ID（例:<code translate="No">videoId="ref:referenceId"</code>）を使用することもサポートされています。</aside>
       </li>
-      <li><code translate="No">op-interactive</code><code translate="No">figure</code>クラスをタグに追加します。
+      <li><code translate="No">figure</code> タグに <code translate="No">op-interactive</code> クラスを追加します。
         <pre>
-	&lt;形<strong>class = "op-interactive"</strong> &gt;&lt; iframe src = "// players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001" allowfullscreen webkitallowfullscreen mozallowfullscreen width = "640" height = "360"&gt;&lt; / iframe&gt;&lt; /形&gt;
-	        </pre>
+  &lt;figure <strong>class="op-interactive"</strong>&gt;
+  &lt;iframe src="//players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001"
+   allowfullscreen webkitallowfullscreen mozallowfullscreen width="640" height="360"&gt;&lt;/iframe&gt;
+  &lt;/figure&gt;
+        </pre>
       </li>
-      <li>iframe <code translate="No">width</code>におよびを付けます<code translate="No">height</code>。<code translate="No">width</code>およびは、<code translate="No">height</code>プレーヤーの絶対サイズではなくアスペクト比を設定します。完成したコードは次のようになります。
+      <li>iframeに<code translate="No">width</code> と <code translate="No">height</code> を指定します。<code translate="No">width</code> と <code translate="No">height</code> はプレーヤーの絶対サイズではなくアスペクト比を設定するためのものです。最終的なコードは以下のようになります：
         <pre>
-	&lt;図class = "op-interactive"&gt;&lt; iframe src = "//players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001" allowfullscreen webkitallowfullscreen mozallowfullscreen <strong> width = "16" height = "9"</strong> &gt;&lt; / iframe&gt;&lt; /形&gt;
-	        </pre>
+  &lt;figure class="op-interactive"&gt;
+  &lt;iframe src="//players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001"
+   allowfullscreen webkitallowfullscreen mozallowfullscreen <strong>width="16" height="9"</strong>&gt;&lt;/iframe&gt;
+  &lt;/figure&gt;
+        </pre>
       </li>
     </ol>
   </section>
-</article>
+  </article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
