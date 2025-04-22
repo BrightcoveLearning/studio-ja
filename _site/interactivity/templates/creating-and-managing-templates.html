@@ -3148,102 +3148,123 @@
       <br>
       
       
-<h1>テンプレートの作成と管理</h1>
-<article class="bcls-article">
-  <summary>このトピックでは、Brightcove Interactivity テンプレートを作成および管理する方法について学びます。</summary>
-  <section class="bcls-section">
-    <p>テンプレートは、複数のプロジェクトに適用できるアノテーションのグループです。 テンプレートを使用すると、ワンクリックで複数の動画に同じアノテーションをすばやく適用できます。</p>
-    <p>複数のテンプレートをプロジェクトに追加できます。 テンプレートが更新されると、そのテンプレートを使用しているすべてのプロジェクトが自動的に更新されます。 テンプレートは、多数の動画に追加する必要がある機能に便利です。 テンプレートの典型的な使用例としては、以下のようなものがあります:</p>
-    <ul>
-      <li>会社の全て動画に会社のロゴを追加する場合。</li>
-      <li>同じパターンを持つ一連の動画に「スキップ」ボタンを追加する場合。</li>
-      <li>同じようなテーマを持つ、すべての動画にコール・トゥ・アクションを追加する場合。</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="create">新しいテンプレートの作成</h2>
-    <p>新しいテンプレートを作成するには、以下の手順に従ってください。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Video Cloud Studio にログインします。</li>
-      <li><strong>Interactivity</strong> モジュールを開きます。</li>
-      <li>左のナビゲーションで、<strong>テンプレート</strong> &gt; <strong>すべてのテンプレート</strong> とクリックします。</li>
-      <li><span class="button-blue">新規テンプレート</span> をクリックします。</li>
-      <li><strong>テンプレートのタイトル</strong> を入力します。
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/create-templates/create-new-template.png"> </figure>
-      </li>
-      <li><span class="button-blue">作成</span> をクリックします。</li>
-    </ol>
-    <p>Brightcove Interactivity は、サンプル動画ソースを自動的に読み込みます。 この動画は、<span class="button-blue">動画の置換</span> をクリックし、新しい動画を選択することで変更する事ができます。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="settings">テンプレートの設定</h2>
-    <p>テンプレート設定では、使用するサンプル動画を変更したり、テンプレートのタイトルやタグを変更することができます。 以下の手順でテンプレート設定を行います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li><strong>Interactivity</strong> モジュールを開きます。</li>
-      <li>左のナビゲーションで、<strong>テンプレート</strong> &gt; <strong>すべてのテンプレート</strong> とクリックします。</li>
-      <li>テンプレートの <strong>タイトル</strong> をクリックするか、テンプレートに関連するアクションメニュー (...) をクリックし、<strong>閲覧する</strong> をクリックします。</li>
-      <li><span class="button-blue-text-bordered">設定</span> をクリックします。</li>
-      <li>必要に応じて設定を編集します。 完了したら <span class="button-blue">保存</span> をクリックします。</li>
-    </ol>
-      <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/create-templates/template-settings.png"> </figure>
-    <h4>動画の設定</h4>
-    <p><strong>動画 </strong>設定は、アノテーションの背後にある動画を制御します。 テンプレートにはデフォルトのビデオが用意されていますが、使用するビデオを変更することができます。 ビデオを変更するには、以下の手順に従ってください。</p>
-    <ol class="bcls-tasklist-restart">
-      <li><span class="button-blue-text-bordered"><i data-feather="edit-3"></i>動画の置換</span> をクリックします。</li>
-      <li>使用する新しいビデオを選択します。</li>
-      <li><span class="button-blue">置換</span> をクリックします。</li>
-    </ol>
-    <h4>テンプレート設定</h4>
-    <p><strong>タイトル</strong> - テンプレートのタイトル</p>
-    <p><strong>タグ</strong> - タグを使用すると、プロジェクトにテンプレートをすばやく適用できます。 たとえば、<code>company_logo</code> というタグをテンプレートに追加すると、<code>company_logo</code> というタグが付けられ、インタラクティブ機能対応プレーヤーを使用して公開された動画に、テンプレートのアノテーションが適用されます。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="apply">プロジェクトにテンプレートを適用する</h2>
-    <p>テンプレートをプロジェクトに適用するには、タグを使用するか、プロジェクトのプロパティの一部として1つまたは複数のテンプレートをプロジェクトに手動で割り当てます。 詳しくは、<a href="/interactivity/templates/applying-templates-projects.html">プロジェクトへのテンプレートの適用</a> を参照して下さい。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="replace">テンプレート動画の差し替え</h2>
-    <p>テンプレートにはデフォルトの動画が用意されていますが、使用する動画を変更することができます。 ビデオを変更するには、以下の手順に従ってください。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>左のナビゲーションで、<strong>テンプレート</strong> &gt; <strong>すべてのテンプレート</strong> とクリックします。</li>
-      <li>テンプレートの <strong>タイトル</strong> をクリックするか、テンプレートに関連するアクションメニュー (...) をクリックし、<strong>閲覧する</strong> をクリックします。</li>
-      <li><span class="button-blue-text-bordered"><i data-feather="edit-3"></i>動画の置換</span> をクリックします。</li>
-      <li>使用する新しいビデオを選択します。</li>
-      <li><span class="button-blue">置換</span> をクリックします。</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information language-editable">注: ソースビデオは、テンプレート設定の一部として変更することもできます。</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">テンプレートの編集</h2>
-    <p>テンプレートを編集するには、以下の手順に従ってください。</p>
-    <ol class="bcls-tasklist-restart">
-      <li><strong>Interactivity</strong> モジュールを開きます。</li>
-      <li>テンプレートのタイトルをクリックするか、テンプレートに関連するアクションメニュー (...) をクリックし、<strong>閲覧する</strong> をクリックします。</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="folder">テンプレートをフォルダに移動する</h2>
-    <p>フォルダを作成し、テンプレートを整理するために使用することができます。 テンプレートをフォルダに移動する前に <a href="/interactivity/general/working-with-folders.html">フォルダを作成</a> しておく必要があります。 以下の手順に従って、テンプレートをフォルダに移動してください。</p>
-    <ol class="bcls-tasklist-restart">
-      <li><strong>Interactivity</strong> モジュールを開きます。</li>
-      <li>テンプレートに関連付けられたアクションメニュー (...) をクリックし、<strong>フォルダへ移動</strong> をクリックします。</li>
-    </ol>
-    フォルダーの詳細については、<a href="/interactivity/general/working-with-folders.html">フォルダーを使った作業</a> 参照して下さい。</section>
-  <section class="bcls-section">
-    <h2 id="duplicate">テンプレートの複製</h2>
-    <p>テンプレートの複製は、既に作成されたテンプレートと類似した新しいテンプレートを作成する際の時間短縮に最適です。 必要に応じてアノテーションを調整するだけです。</p>
-    <p>テンプレートを複製するには、以下の手順に従ってください。</p>
-    <ol class="bcls-tasklist-restart">
-      <li><strong>Interactivity</strong> モジュールを開きます。</li>
-      <li>テンプレートに関連付けられているアクションメニュー (...) をクリックし、<strong>複製</strong> をクリックします。</li>
-      <li><span class="button-blue">複製</span> をクリックします。</li>
-    </ol>
-    <p>これにより、すべてのアノテーション、タグ、カスタム CSS を含む、"Copy of {template_name}" というタイトルのテンプレートの正確なクローンが作成されます。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">テンプレートの削除</h2>
-    <p>テンプレートを削除するには、プロジェクトリストでテンプレートを見つけ、テンプレートに関連するアクションメニュー (...) をクリックし、<strong>削除</strong> をクリックします。</p>
-  </section>
+      <h1>テンプレートの作成と管理</h1>
+      <article class="bcls-article">
+        <summary>このトピックでは、Brightcove Interactivity のテンプレートを作成および管理する方法について学びます。</summary>
+        <section class="bcls-section">
+          <p>テンプレートとは、複数のプロジェクトに適用できるアノテーション (注釈)のグループです。テンプレートを使用すると、複数の動画に対して同じアノテーションをワンクリックで適用することができます。</p>
+          <p>1つのプロジェクトに複数のテンプレートを追加することが可能です。テンプレートを更新すると、Brightcove Interactivity はそのテンプレートを使用しているすべてのプロジェクトを自動的に更新します。テンプレートは、多数の動画に共通の機能を追加する際に便利です。代表的なテンプレートの活用例は以下のとおりです。</p>
+          <ul>
+            <li>すべての企業動画にロゴを追加したい場合</li>
+            <li>同じパターンを持つ一連の動画に「スキップ」ボタンを追加したい場合</li>
+            <li>同じテーマの動画すべてにコール・トゥ・アクションを追加したい場合</li>
+          </ul>
+          <aside class="bcls-aside bcls-aside--information language-editable">
+            注: プロジェクトを編集する際には、そのプロジェクトに追加されたアノテーションのみ編集・削除することができます。<br>テンプレートが適用されている場合、<strong>そのテンプレートのアノテーションはプロジェクト側では編集できません。</strong><br>テンプレートのアノテーションを変更するには、テンプレート自体を編集する必要があります。
+          </aside>
+        </section>
+        <section class="bcls-section">
+          <h2 id="create">新しいテンプレートの作成</h2>
+          <p>以下の手順で新しいテンプレートを作成します。</p>
+          <ol class="bcls-tasklist-restart">
+            <li>Video Cloud Studio にログインします。</li>
+            <li><strong>Interactivity</strong> モジュールを開きます。</li>
+            <li>左側のナビゲーションメニューで <strong>テンプレート</strong> &gt; <strong>すべてのテンプレート</strong> をクリックします。</li>
+            <li><span class="button-blue">新規テンプレート</span> をクリックします。</li>
+            <li><strong>テンプレートのタイトル</strong>を入力します。
+              <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/create-templates/create-new-template.png"> </figure>
+            </li>
+            <li><span class="button-blue">作成</span>をクリックします。</li>
+          </ol>
+          <p>Brightcove Interactivity は自動的にサンプル動画をロードします。この動画を変更するには、<span class="button-blue">動画を置き換える</span> をクリックし、新しい動画を選択してください。</p>
+        </section>
+      
+
+        <section class="bcls-section">
+          <h2 id="settings">テンプレート設定</h2>
+          <p>テンプレート設定では、使用するサンプル動画の変更、テンプレートのタイトルやタグの編集が可能です。以下の手順に従ってテンプレート設定を構成してください。</p>
+          <ol class="bcls-tasklist-restart">
+            <li><strong>Interactivity</strong> モジュールを開きます。</li>
+            <li>左側のナビゲーションで <strong>テンプレート</strong> &gt; <strong>すべてのテンプレート</strong> をクリックします。</li>
+            <li>テンプレートの <strong>タイトル</strong> をクリックするか、該当するテンプレートのアクションメニュー（...）をクリックし、<strong>表示</strong> を選択します。</li>
+            <li><span class="button-blue-text-bordered">設定</span> をクリックします。</li>
+            <li>必要に応じて設定を編集し、完了したら <span class="button-blue">保存</span> をクリックします。</li>
+          </ol>
+          <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/create-templates/template-settings.png"> </figure>
+      
+          <h4>動画設定</h4>
+          <p><strong>動画</strong> 設定では、アノテーションの背後にある動画を管理することができます。テンプレートにはデフォルトの動画が設定されていますが、以下の手順で動画を変更することができます。</p>
+          <ol class="bcls-tasklist-restart">
+            <li><span class="button-blue-text-bordered"><i data-feather="edit-3"></i> 動画の置換</span> をクリックします。</li>
+            <li>使用する新しい動画を選択します。</li>
+            <li><span class="button-blue">置換</span> をクリックします。</li>
+          </ol>
+      
+          <h4>テンプレート設定</h4>
+          <p><strong>タイトル</strong> - テンプレートのタイトルを設定します。</p>
+          <p><strong>タグ</strong> - テンプレートを整理するために使用します。</p>
+          <p><strong>タグを利用してプロジェクトにテンプレートを適用</strong> - タグを追加することで、テンプレートをプロジェクトに迅速に適用できます。例えば、テンプレートに <code>company_logo</code> というタグを追加すると、同じタグが付与された動画が Interactivity 対応のプレーヤーで公開された際に、テンプレートのアノテーションが自動的に適用されます。</p>
+          <p><strong>すべてのプロジェクトに適用</strong> - アカウント内のすべてのプロジェクトにテンプレートを適用します（タグの有無に関係なく）。</p>
+          <aside class="bcls-aside bcls-aside--information language-editable">
+            注: <code>{"create":true}</code> プロパティを持つ Interactivity プラグインでタグ付きの動画が再生されると、自動的にプロジェクトが作成され、その際にテンプレートも自動的に適用されます。Interactivity 対応プレーヤーの作成方法については、<a href="https://studio.support.brightcove.com/interactivity/getting-started/configuring-player-plugin.html">Brightcove Player に Interactivity プラグインを設定する</a> を参照してください。
+          </aside>
+      </section>
+      
+      <section class="bcls-section">
+          <h2 id="apply">テンプレートをプロジェクトに適用する</h2>
+          <p>テンプレートは、タグを使用してプロジェクトに適用するか、プロジェクトのプロパティとして手動で1つ以上のテンプレートを割り当てることで適用できます。詳細については、<a href="/interactivity/templates/applying-templates-projects.html">プロジェクトへのテンプレート適用</a> をご覧ください。</p>
+      </section>
+      
+      <section class="bcls-section">
+          <h2 id="replace">テンプレートの動画を置き換える</h2>
+          <p>テンプレートにはデフォルトの動画が設定されていますが、以下の手順で変更することができます。</p>
+          <ol class="bcls-tasklist-restart">
+            <li>左側のナビゲーションで <strong>テンプレート</strong> &gt; <strong>すべてのテンプレート</strong> をクリックします。</li>
+            <li>テンプレートの <strong>タイトル</strong> をクリックするか、該当するテンプレートのアクションメニュー（...）をクリックし、<strong>表示</strong> を選択します。</li>
+            <li><span class="button-blue-text-bordered"><i data-feather="edit-3"></i> 動画の置換</span> をクリックします。</li>
+            <li>新しい動画を選択します。</li>
+            <li><span class="button-blue">置換</span> をクリックします。</li>
+          </ol>
+          <aside class="bcls-aside bcls-aside--information language-editable">注: テンプレート設定内でも動画のソースを変更することができます。</aside>
+      </section>
+      
+
+      <section class="bcls-section">
+        <h2 id="edit">テンプレートの編集</h2>
+        <p>以下の手順でテンプレートを編集します。</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>Interactivity</strong> モジュールを開きます。</li>
+          <li>テンプレートの <strong>タイトル</strong> をクリックするか、該当するテンプレートのアクションメニュー（...）をクリックし、<strong>表示</strong> を選択します。</li>
+        </ol>
+    </section>
+    
+    <section class="bcls-section">
+        <h2 id="folder">テンプレートをフォルダーに移動する</h2>
+        <p>フォルダーを作成してテンプレートを整理することができます。テンプレートをフォルダーに移動する前に、<a href="/interactivity/general/working-with-folders.html">フォルダーを作成</a> しておく必要があります。以下の手順でテンプレートをフォルダーに移動します。</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>Interactivity</strong> モジュールを開きます。</li>
+          <li>テンプレートのアクションメニュー（...）をクリックし、<strong>フォルダーに移動</strong> を選択します。</li>
+        </ol>
+        <p>フォルダーの詳細については、<a href="/interactivity/general/working-with-folders.html">フォルダーの管理</a> をご覧ください。</p>
+    </section>
+    
+    <section class="bcls-section">
+        <h2 id="duplicate">テンプレートの複製</h2>
+        <p>テンプレートを複製すると、類似した新しいテンプレートを作成する際に時間を節約できます。必要に応じてアノテーションを調整するだけで済みます。</p>
+        <p>以下の手順でテンプレートを複製します。</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>Interactivity</strong> モジュールを開きます。</li>
+          <li>テンプレートのアクションメニュー（...）をクリックし、<strong>複製</strong> を選択します。</li>
+          <li><span class="button-blue">複製</span> をクリックします。</li>
+        </ol>
+        <p>これにより、すべてのアノテーション、タグ、カスタムCSSを含むテンプレートの正確なコピーが作成され、タイトルは「{template_name} のコピー」となります。</p>
+    </section>
+    
+    <section class="bcls-section">
+        <h2 id="delete">テンプレートの削除</h2>
+        <p>テンプレートを削除するには、プロジェクトリストから該当するテンプレートを探し、アクションメニュー（...）をクリックして <strong>削除</strong> を選択します。</p>
+    </section>
+    
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
