@@ -3148,77 +3148,104 @@
       <br>
       
       
-<h1>プロジェクトへのテンプレートの適用</h1>
-<article class="bcls-article">
-  <summary>このトピックでは、プロジェクトにテンプレートを適用する方法について学びます。</summary>
-  <section class="bcls-section">
-    <p>テンプレートは、複数のプロジェクトに適用できるアノテーションのトラック（またはグループ）です。 テンプレートを使用すると、ワンクリックで複数の動画に同じアノテーションをすばやく適用できます。</p>
-    <p>複数のテンプレート トラックをプロジェクトに追加できます。 テンプレート トラックが更新されると、Brightcove Interactive は、そのテンプレートを使用しているすべてのプロジェクトを自動的に更新します。</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="tags">タグを使ったテンプレートの適用</h2>
-    <p>タグは、インタラクティブ機能対応プレーヤーを使用して公開される動画にアノテーションをすばやく追加する方法として、テンプレートに追加できます。 公開された動画に、テンプレートに割り当てられたタグと同じタグがある場合、テンプレートのアノテーションが適用されます。 これは、何十、何百もの動画に同じアノテーションを追加する迅速かつ簡単な方法です。</p>
-    <p>タグを使用して公開動画にテンプレートを適用するには、次の手順に従います。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Video Cloud Studio にログインします。</li>
-      <li><strong>Interactivity</strong> モジュールを開きます。</li>
-      <li>左のナビゲーションで、<strong>テンプレート</strong> &gt; <strong>すべてのテンプレート</strong> をクリックします。</li>
-      <li>テンプレートの <strong>タイトル</strong> をクリックするか、テンプレートに関連するアクションメニュー (...) をクリックし、<strong>閲覧する</strong>をクリックします。</li>
-      <li><span class="button-blue-text-bordered">設定</span> をクリックします。</li>
-      <li><strong>タグ</strong> フィールドを見つけてクリックします。</li>
-      <li>1つ以上の <strong>タグ</strong> を追加します。 各タグの入力後にエンターキーを押します。
-        <figure class="bcls-figure"><img src="/assets/images/s-brightcove-interactivity-img/templates/applying-templates/tags-added.png"></figure>
-      </li>
-      <li><span class="button-blue">保存</span> をクリックします。</li>
-    </ol>
-    <p><code>company_logo</code> というタグをテンプレートに追加することにより、<code>company_logo</code> というタグが付けられ、インタラクティブ機能対応プレーヤーを使用して公開される動画には、テンプレートのアノテーションが適用されます。 以下の手順に従って、サンプル Video Cloud 動画にタグ付けして公開します。</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Video Cloud Studio にログインします。</li>
-      <li><strong>Media</strong> モジュールを開きます。</li>
-      <li><strong>動画名</strong> をクリックすると、動画のプロパティページが開きます。</li>
-      <li>動画情報 パネルで <span class="button-blue-text-bordered"> <i data-feather="edit-3"></i>編集</span> をクリックします。</li>
-      <li>テンプレートのタグ付けに使用したものと同じタグを追加します。
-        <figure class="bcls-figure"><img src="/assets/images/s-brightcove-interactivity-img/templates/applying-templates/video-tagged.png"></figure>
-      </li>
-      <li><span class="button-blue">保存</span> をクリックします。</li>
-      <li>インタラクティブ機能対応プレーヤーを使用して動画を公開します。
-        <aside class="bcls-aside bcls-aside--information language-editable">注: インタラクティブ対応のプレーヤーにつては、<a href="/interactivity/getting-started/configuring-player-plugin.html">Interactivity プラグインを使用した Brightcove プレーヤーの設定</a> を参照して下さい。</aside>
-      </li>
-      <li>ビデオを再生し、アノテーションが表示されることを確認します。</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="manual">テンプレートを手動でプロジェクトに適用する</h2>
-    <p>また、1つまたは複数のテンプレートを手動でプロジェクトに適用することも可能です。 テンプレートを手動でプロジェクトに適用するには、以下の手順に従います:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Video Cloud Studio にログインします。</li>
-      <li><strong>Interactivity</strong> モジュールを開きます。</li>
-      <li>プロジェクトの <strong>タイトル</strong> をクリックするか、プロジェクトに関連するアクションメニュー (...) をクリックし、 <strong>閲覧する</strong> をクリックします。</li>
-      <li><span class="button-blue-text-bordered">設定</span> をクリックします。</li>
-      <li><span class="button-blue-text-bordered"><i data-feather="plus-square"></i>テンプレートの追加</span> をクリックします。</li>
-      <li>プロジェクトに適用するテンプレートを1つ以上選択します。
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/applying-templates/select-template.png"> </figure>
-      </li>
-      <li><span class="button-blue">適用</span> をクリックします。</li>
-      <li>選択したテンプレートがプロジェクト設定ダイアログに表示されることを確認します。
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/applying-templates/templates-added.png"> </figure>
-      </li>
-      <li><span class="button-blue">保存</span> をクリックします。</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remove">プロジェクトからテンプレートを削除する</h2>
-    <p>プロジェクトからテンプレートを削除するには、以下の手順に従ってください:</p>
-    <ol class="bcls-tasklist-restart">
-      <li><strong>Interactivity</strong> モジュールを開きます。</li>
-      <li>プロジェクトの <strong>タイトル</strong> をクリックするか、プロジェクトに関連するアクションメニュー (...) をクリックし、<strong>閲覧する</strong> をクリックします。</li>
-      <li><span class="button-blue-text-bordered">設定</span> をクリックします。</li>
-      <li>テンプレートにカーソルを合わせ、削除アイコンをクリックします。
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/applying-templates/remove-template.png"> </figure>
-      </li>
-      <li><span class="button-blue">保存</span> をクリックします。</li>
-    </ol>
-  </section>
+      <h1>プロジェクトへのテンプレートの適用</h1>
+      <article class="bcls-article">
+        <summary>このトピックでは、プロジェクトにテンプレートを適用する方法について学びます。</summary>
+        <section class="bcls-section">
+          <p>テンプレートとは、複数のプロジェクトに適用できるアノテーション(注釈)のトラック（またはグループ）です。テンプレートを使用すると、複数の動画に対して同じアノテーションをワンクリックで適用することができます。</p>
+          <p>プロジェクトには複数のテンプレートトラックを追加することができます。テンプレートトラックが更新されると、Brightcove Interactivity はそのテンプレートを使用しているすべてのプロジェクトを自動的に更新します。</p>
+        </section>
+      
+        <section class="bcls-section">
+          <h2 id="tags">タグを使用してテンプレートを適用する</h2>
+          <p>テンプレートにタグを追加すると、Interactivity 対応のプレーヤーを使用して公開された動画に素早くアノテーションを追加できます。公開された動画に、テンプレートに割り当てられたタグと同じタグが設定されている場合、そのテンプレートのアノテーションが自動的に適用されます。この方法を使えば、数十から数百の動画に簡単に同じアノテーションを追加することができます。</p>
+          <p>以下の手順で、タグを使用してテンプレートを公開済みの動画に適用します。</p>
+          <ol class="bcls-tasklist-restart">
+            <li>Video Cloud Studio にログインします。</li>
+            <li><strong>Interactivity</strong> モジュールを開きます。</li>
+            <li>左側のナビゲーションで <strong>テンプレート</strong> &gt; <strong>すべてのテンプレート</strong> をクリックします。</li>
+            <li>テンプレートの <strong>タイトル</strong> をクリックするか、該当するテンプレートのアクションメニュー（...）をクリックし、<strong>表示</strong> を選択します。</li>
+            <li><span class="button-blue-text-bordered">設定</span> をクリックします。</li>
+            <li><strong>タグを使用してプロジェクトにテンプレートを適用</strong> フィールドを見つけてクリックします。</li>
+            <li>1つまたは複数の <strong>タグ</strong> を追加し、各タグの入力後に Enter キーを押します。
+              <figure class="bcls-figure"><img src="/assets/images/s-brightcove-interactivity-img/templates/applying-templates/tags-added.png"></figure>
+            </li>
+            <li><span class="button-blue">保存</span> をクリックします。</li>
+          </ol>
+          <p>例えば、テンプレートにタグ <code>company_logo</code> を追加すると、同じタグ <code>company_logo</code> が付与された動画は、Interactivity 対応のプレーヤーで公開された際に自動的にテンプレートのアノテーションが適用されます。以下の手順で、サンプルの Video Cloud 動画にタグを付与して公開します。</p>
+      
+          <aside class="bcls-aside bcls-aside--information language-editable">
+            注: すでにプロジェクトに追加されている動画に対しては、Media モジュールを使用してテンプレート タグを追加しても、新しいプロジェクトを生成することはできません。
+          </aside>
+      
+          <ol class="bcls-tasklist-restart">
+            <li>Video Cloud Studio にログインします。</li>
+            <li><strong>Media</strong> モジュールを開きます。</li>
+            <li>対象の動画の <strong>名前</strong> をクリックし、動画のプロパティページを開きます。</li>
+            <li>動画情報パネルで <span class="button-blue-text-bordered"> <i data-feather="edit-3"></i> 編集</span> をクリックします。</li>
+            <li>テンプレートに設定したのと同じタグを追加します。
+              <figure class="bcls-figure"><img src="/assets/images/s-brightcove-interactivity-img/templates/applying-templates/video-tagged.png"></figure>
+            </li>
+            <li><span class="button-blue">保存</span> をクリックします。</li>
+            <li>Interactivity 対応のプレーヤーを使用して動画を公開します。
+              <aside class="bcls-aside bcls-aside--information language-editable">
+                注: 動画にタグを追加してプロジェクトを作成するには、Brightcove Player で Interactivity プラグインを有効にする必要があります。Interactivity 対応プレーヤーの作成方法については、<a href="/interactivity/getting-started/configuring-player-plugin.html">Brightcove Player に Interactivity プラグインを設定する</a> をご覧ください。
+              </aside>
+            </li>
+            <li>動画を再生し、アノテーションが適用されていることを確認します。</li>
+          </ol>
+        </section>
+        
+        <section class="bcls-section">
+          <h2 id="all-projects">すべてのプロジェクトにテンプレートを適用する</h2>
+          <p>タグの有無に関係なく、アカウント内のすべてのプロジェクトにテンプレートを適用します。</p>
+          <p>以下の手順で、アカウント内のすべてのプロジェクトにテンプレートを適用できます。</p>
+          <ol class="bcls-tasklist-restart">
+            <li>Video Cloud Studio にログインします。</li>
+            <li><strong>Interactivity</strong> モジュールを開きます。</li>
+            <li>左側のナビゲーションで <strong>テンプレート</strong> &gt; <strong>すべてのテンプレート</strong> をクリックします。</li>
+            <li>テンプレートの <strong>タイトル</strong> をクリックするか、該当するテンプレートのアクションメニュー（...）をクリックし、<strong>表示</strong> を選択します。</li>
+            <li><span class="button-blue-text-bordered">設定</span> をクリックします。</li>
+            <li><strong>すべてのプロジェクトに適用</strong> のスイッチを見つけます。</li>
+            <li><strong>すべてのプロジェクトに適用</strong> のスイッチをオンにします。</li>
+            <li><span class="button-blue">保存</span> をクリックします。</li>
+          </ol>
+      </section>
+      
+      <section class="bcls-section">
+          <h2 id="manual">テンプレートを手動でプロジェクトに適用する</h2>
+          <p>テンプレートは、プロジェクトに手動で適用することも可能です。手動でテンプレートを適用するには、以下の手順を実行してください。</p>
+          <ol class="bcls-tasklist-restart">
+            <li>Video Cloud Studio にログインします。</li>
+            <li><strong>Interactivity</strong> モジュールを開きます。</li>
+            <li>プロジェクトの <strong>タイトル</strong> をクリックするか、該当するプロジェクトのアクションメニュー（...）をクリックし、<strong>表示</strong> を選択します。</li>
+            <li><span class="button-blue-text-bordered">設定</span> をクリックします。</li>
+            <li><span class="button-blue-text-bordered"><i data-feather="plus-square"></i> テンプレートを追加</span> をクリックします。</li>
+            <li>プロジェクトに適用するテンプレートを1つ以上選択します。
+              <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/applying-templates/select-template.png"> </figure>
+            </li>
+            <li><span class="button-blue">適用</span> をクリックします。</li>
+            <li>選択したテンプレートがプロジェクト設定ダイアログに表示されていることを確認します。
+              <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/applying-templates/templates-added.png"> </figure>
+            </li>
+            <li><span class="button-blue">保存</span> をクリックします。</li>
+          </ol>
+      </section>
+      
+      <section class="bcls-section">
+          <h2 id="remove">プロジェクトからテンプレートを削除する</h2>
+          <p>プロジェクトからテンプレートを削除するには、以下の手順を実行してください。</p>
+          <ol class="bcls-tasklist-restart">
+            <li><strong>Interactivity</strong> モジュールを開きます。</li>
+            <li>プロジェクトの <strong>タイトル</strong> をクリックするか、該当するプロジェクトのアクションメニュー（...）をクリックし、<strong>表示</strong> を選択します。</li>
+            <li><span class="button-blue-text-bordered">設定</span> をクリックします。</li>
+            <li>削除したいテンプレートの上にカーソルを置き、削除アイコンをクリックします。
+              <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/applying-templates/remove-template.png"> </figure>
+            </li>
+            <li><span class="button-blue">保存</span> をクリックします。</li>
+          </ol>
+      </section>
+      
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
