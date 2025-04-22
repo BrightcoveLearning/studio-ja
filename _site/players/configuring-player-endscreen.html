@@ -1187,52 +1187,55 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <!-- open in new tab/window -->
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a> 
 <article class="bcls-article">
-  <h1>playlist-endscreen プラグインを使用したプレイリスト エンドスクリーンの設定</h1>
-  <summary>このトピックでは、playlist-endscreen プラグインを使用してプレーヤーにプレイリスト エンドスクリーンを追加する方法について学びます。</summary>
-
+  <h1>プレーヤー エンドスクリーンの設定</h1>
+  <summary>このトピックでは、プレーヤーのエンドスクリーンを設定する方法について説明します。</summary>
   <section class="bcls-section">
-    <p class="BCL-objective"><span translate="No">playlist-endscreen</span> プラグインを使用すると、プレーヤーの終了画面(エンドスクリーン)に動画のプレイリストを表示することができます。視聴者は、表示された動画のサムネイル画像をクリックすることで、別の動画を再生することができます。以下のプレーヤーでは、プレイリスト エンドスクリーンが設定されています。</p>
 
-    <p>
-      <iframe src="//players.brightcove.net/1752604059001/noMlYptKE_default/index.html?videoId=4817237857001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 640px; height: 360px;"></iframe>
-    </p>
-
-    <p>他の終了画面の設定オプションについては、<a href="configuring-player-endscreen.html">プレーヤー エンドスクリーンの設定</a>をご覧ください。</p>
-
-    <aside class="bcls-aside bcls-aside--information">補足: プログラムでプレイリスト エンドスクリーンを設定する方法については、<a href="https://player.support.brightcove.com/plugins/playlist-endscreen-plugin.html">開発者向けドキュメント</a>をご参照ください。</aside>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="configure">playlist-endscreen プラグインの設定</h2>
-    <p>Players モジュールを使用して playlist-endscreen プラグインを実装するには、以下の手順に従ってください：</p>
-
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4162679408001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+      
+    <p>プレーヤーは、動画の再生終了時にエンドスクリーンを表示するように設定できます。エンドスクリーンには、リプレイや共有アイコンを表示することができ、または HTML を使用してカスタマイズすることも可能です。以下はカスタム エンドスクリーンの例です。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node15267-sample-endscreen.png" /></figure>
+    <p>視聴者が動画をリプレイしたり、人気のソーシャルメディアサイトで共有できるようにアイコンが表示されます。</p>
+    <aside class="bcls-aside bcls-aside--information">補足: プレーヤーのエンドスクリーンを設定しても、iOSデバイスでプレーヤーがネイティブ全画面モードの場合は表示されません。</aside>
+    <p>プレーヤーのエンドスクリーンを設定するには、以下の手順を実行します。</p>
     <ol class="bcls-tasklist-restart">
-      <li><strong>Players</strong> モジュールを開き、対象のプレーヤーを探します。</li>
-      <li>プレーヤーのリンクをクリックしてプレーヤープロパティを開きます。</li>
-      <li>左側のナビゲーションから <strong>プラグイン</strong> をクリックします。</li>
-      <li><span class="button-blue">プラグインの追加<i class="button-icon" data-feather="chevron-down"></i></span> をクリックし、<strong>Brightcove プラグイン</strong> を選択します。</li>
-      <li><strong>Brightcove プラグイン</strong> で <strong translate="No">playlist-endscreen</strong> を選択します。</li>
-      <li><strong>オプション(JSON)</strong> には以下の内容を含めます：
+      <li><strong>Player</strong> モジュールを開きます。</li>
+      <li>設定したいプレーヤーのリンクをクリックします。</li>
+      <li>左側のナビゲーションメニューから <strong>終了画面</strong> をクリックします。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="style menu" src="/assets/images/s-players-img/appearance/node15267-endscreen-options-vc.png" /></figure>
+      </li>
+      <li><strong>プレーヤーエンドスクリーン</strong>オプションを選択します。次のオプションから選べます。
         <ul>
-          <li><strong>playlistId</strong> - エンドスクリーンに表示するプレイリストのID</li>
-          <li><strong>title</strong>（任意） - 動画リストの上に表示するタイトル</li>
+          <li>なし - エンドスクリーンは表示されません</li>
+          <li><a href="#social_sharing">ソーシャル</a> - 動画終了時にソーシャル共有ダイアログを表示</li>
+          <li><a href="#custom_endscreen">カスタム</a> - 動画終了時にカスタムエンドスクリーンを表示</li>
         </ul>
       </li>
-      <blockquote>
-        <pre><code translate="No">{
-  "playlistId": "1234567001",
-  "title": "関連動画"
-}</code></pre>
-      </blockquote>
-      <figure class="bcls-figure">
-        <blockquote>
-          <p><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/playlist-endscreen-settings.png" /></p>
-        </blockquote>
-      </figure>
-      <li><span class="button-blue">保存</span> をクリックし、次に <strong>公開</strong> をクリックします。公開されたプレーヤーに反映されるまで最大5分ほどかかる場合があります。</li>
     </ol>
+    <aside class="bcls-aside bcls-aside--information">補足: プレーヤーに加えた変更が公開済みのプレーヤーに反映されるまで、最大5分ほどかかる場合があります。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="social_sharing">ソーシャル エンドスクリーン</h2>
+    <p><strong>ソーシャル</strong>オプションを選択すると、動画終了時にソーシャル共有ダイアログが表示されます。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node15267-social-sharing-endscreen.png" /></figure>
+    <p>ソーシャル共有エンドスクリーンを使用するには、プレーヤーでソーシャル共有が有効になっている必要があります。<strong>ソーシャル</strong>オプションを選択すると、自動的にソーシャル共有が有効になります。表示されるソーシャル共有オプションは、ソーシャル設定で指定された内容に基づきます。ソーシャル設定の詳細については、<a href="/players/appearance/configuring-social-properties-player.html">プレーヤーのソーシャルプロパティの設定</a>をご覧ください。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="custom_endscreen">カスタムエンドスクリーン</h2>
+    <p><strong>カスタム</strong>オプションを選択すると、リプレイや共有アイコンの上に追加のテキストや画像を表示するためのカスタムHTMLを使用できます。カスタムエンドスクリーンを設定するには、<strong>カスタム</strong>を選択し、<strong>カスタムHTML</strong>プロパティに表示したいHTMLを貼り付けます。</p>
+    <aside class="bcls-aside bcls-aside--information">補足: <code>&lt;video&gt;</code> HTML要素をカスタムHTMLに追加することで、動画を表示することも可能です。</aside>
+    <aside class="bcls-aside bcls-aside--information">補足: 共有アイコンをエンドスクリーンに表示するには、共有を有効にしておく必要があります。</aside>
+    <p>以下のコードは、プレーヤーのエンドスクリーンに画像を表示する例です。</p>
+    <pre class="line-numbers"><code class="language-html" translate="No">&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;p&gt;This video sponsored by&lt;/p&gt;&lt;br/&gt;
+&lt;img src=&quot;http://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_Blue.svg&quot;/&gt;
+&lt;/div&gt;</code></pre>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node15267-custom-endscreen-html.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">補足: <strong>カスタム</strong>オプションを選択し、HTMLを指定しない場合は、動画終了時にリプレイボタンが表示されます。</aside>
   </section>
 </article>
+
 
 
 <!-- complete bootstrap layout -->
