@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>サポート</title>
+        <title>既知の問題：Studio、Brightcove プレーヤーおよび API</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Brightcove サポートから支援を受ける方法についてご案内します">
+        <meta name="description" content="このトピックでは、Studio、Brightcove Player、および API に関する既知の問題を一覧表示します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3057,7 +3057,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">ホーム</a></li>
             
             
-            <li class="breadcrumb-item active" aria-current="page">サポート</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/support/">サポート</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">既知の問題：Studio、Brightcove プレーヤーおよび API</li>
             
             
           </ol>
@@ -3070,220 +3074,618 @@
   <div class="container">
     <div class="docs-overview py-5">
       
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
       
-<style translate="no">
-  .card-wrapper {
-  justify-content: start;
-  min-width: 100%;
-  }
-
-  .bcls-card {
-    min-width: 100%;
-  }
-</style>
-<h1><i class="fa-solid fa-comment-medical"></i> サポート</h1>
+      
 <article class="bcls-article">
-  <summary>Brightcove サポートから支援を受ける方法についてご案内します</summary>
-  <h2 id="Topics_in_this_section">このセクションのトピック</h2>
-  
-
-      <div class="col-12 col-lg-4 py-3">
-        <div class="card shadow-sm" style="background: white" onclick="window.location.href = '/support/index.html'">
-          <div class="card-body">
-            <section class="flex-container">
-              <div>
-                <ul class="list-group list-group-flush">
-                  
-                  <li class="list-group-item"><a href="/support/contact-sales.html" style="text-decoration: none;">営業へのお問い合わせ</a></li>
-                  
-                  <li class="list-group-item"><a href="/support/viewing-brightcove-system-status-page.html" style="text-decoration: none;">Brightcove システム ステータス ページの確認</a></li>
-                  
-                  <li class="list-group-item"><a href="/support/known-issues-studio-brightcove-player-and-apis.html" style="text-decoration: none;">既知の問題</a></li>
-                  
-                  <li class="list-group-item"><a href="/support/opening-case-with-brightcove-support.html" style="text-decoration: none;">サポートケースの作成</a></li>
-                  
-                  <li class="list-group-item"><a href="/support/reset-support-portal-password.html" style="text-decoration: none;">サポートポータルのパスワードをリセットする</a></li>
-                  
-                </ul>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    
-  
-</article>
-
-<footer class="footer">
-    <div class="container text-center py-5">
-        <div>お探しの情報がありますか？<a class="theme-link" href="https://support.brightcove.com/search.html" target="_blank">検索ページ</a>をご覧ください。</div>
-    </div>
-</footer>
-</div>
-</div>
-</div>
-<div class="page-content" style="background-color: rgb(1, 5, 14);">
-  <div class="container" style="width: 50%;">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-6 col-md">
-          <h5 class="h5-text">Brightcove サポート</h5>
-          <ul class="list-unstyled text-small" style="color: white ;">
-            <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
-            <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/search.html">ドキュメントの検索</a></li>
+    <h1>既知の問題：Studio、Brightcove プレーヤーおよび API</h1>
+    <summary>このトピックでは、スタジオ、Brightcove Player、および API に関する既知の問題を一覧表示します。</summary>
+    <section class="bcls-section">
+      <p><strong>確認されている既知の問題は以下の通りです：</strong></p>
+      <ul>
+        <li><a href="#studio">Studio</a>
+          <ul>
+            <li><a href="#media">Media モジュール</a></li>
+            <li><a href="#players">PLayers モジュール</a></li>
+            <li><a href="#live">ライブ動画</a></li>
+            <li><a href="#analytics">Analytics モジュール</a></li>
+            <li><a href="#audience">Audience モジュール</a></li>
+            <li><a href="#social">Social モジュール</a></li>
+            <li><a href="#di">Upload モジュール / Dynamic Ingestion</a></li>
           </ul>
-        </div>
-      
-        <div class="col-6 col-md">
-          <h5 class="h5-text">トレーニング</h5>
-          <ul class="list-unstyled text-small">
-            <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
-            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
-          </ul>
-        </div>
-      
-        <div class="col-6 col-md">
-          <h5 class="h5-text">Brightcove</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
-            <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
-          </ul>
-        </div>
-      </div>
-    
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>© Brightcove Inc. All rights reserved.</p>
-      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
-      <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
-
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
-        title="LinkedIn" target="_blank" class="gf-social-linkedin"
-        style="margin-right: 1rem;"><i data-feather="linkedin"
-          style="color:#8E9093;height: 1.25rem;"></i></a></li>
-
-        <li class="ms-3"><a
-        href="https://twitter.com/brightcove" title="Twitter" target="_blank"
-        class="gf-social-twitter" style="margin-right: 1rem;"><i
-          data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
-
-        <li class="ms-3"><a
-        href="https://www.facebook.com/Brightcove" title="Facebook"
-        target="_blank" class="gf-social-facebook"><i data-feather="facebook"
-          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+        </li>
+        <li><a href="#player">Brightcove プレーヤー</a></li>
+        <li><a href="#player_plugins">Brightcove プレーヤー プラグイン</a></li>
+        <li><a href="#brightcoveLive">Brightcove Live</a></li>
+        <li><a href="#audience_insights">Brightcove Audience Insights</a></li>
       </ul>
-      </div>
-    </footer>
-  </div>
-</div>
+      <ul>
+      </ul>
+      <ul>
+        <li><a href="#analytics_api">Analytics API</a></li>
+        <li><a href="#cms">CMS API</a></li>
+        <li><a href="#diapi">Dynamic Ingest API</a></li>
+      </ul>
+    </section>
+    <section class="bcls-section">
+      <h2 id="studio">Studio</h2>
+      <dl>
+        <dt>Chrome の翻訳機能を使用すると、Studio の一部機能が動作しなくなる</dt>
+        <dd>Studio モジュールを Chrome の翻訳機能で翻訳すると、一部の機能が正常に動作しなくなります。</dd>
+      </dl>
+    </section>
+    <section class="bcls-section">
+      <h2 id="media">Media モジュール</h2>
+      <dl>
+        <dt>IE 11 による画像キャプチャ</dt>
+        <dd>動画のアスペクト比が 1:1 または 4:3 の場合、IE 11 では画像キャプチャが正常に機能しません。</dd>
+        <dt>ダブルバイト文字を含むソースファイル名</dt>
+        <dd>ダブルバイト文字を含むソースファイル名は、Media モジュールで再トランスコード後に文字化けする可能性があります。</dd>
+        <dt>メディア共有</dt>
+        <dd>
+          <p>大量の動画を共有する場合、Brightcove では一度に最大 2ページ分の動画を共有することを推奨しています。一度に大量の動画を共有すると、タイムアウトエラーが発生する可能性があります。</p>
+          <p>既に字幕が含まれている共有済み動画に新たに字幕を追加することはできません。</p>
+          <p>ライブ配信のクリッピングによって作成された動画はメディア共有できません。</p>
+        </dd>
+        <dt>スケジュールされた動画</dt>
+        <dd>Playback API およびカタログが動画を最大 10〜15分間キャッシュするため、数分以内（最大 20分）に公開予定の動画に対してプレーヤーがリクエストしても、キャッシュが更新されるまでは再生可能な動画を取得できない場合があります。</dd>
+      </dl>
+    </section>
+    <section class="bcls-section">
+      <h2 id="players">Players モジュール</h2>
+      <dl>
+        <dt>プリロード設定</dt>
+        <dd>Internet Explorer のバグにより、IE 使用時にプリロード設定が無視される場合があります。</dd>
+        <dt>Access Data Sources Across Domains 設定</dt>
+        <dd>この<a href="https://www.windows-security.org/0d1b99f52cba398c3ce4d1cdd80d7441/access-data-sources-across-domains">Internet Explorer のポリシー設定</a>がドメイン制限付き Brightcove プレーヤーで有効になっていると、Internet Explorer 11 でプレーヤーが読み込まれません。これは IE のバグと見られ、既知の回避策はありません。IE 11 でドメイン制限付きプレーヤーを利用する場合は、この設定を無効にしてください。</dd>
+      </dl>
+    </section>
+    <section class="bcls-section">
+      <h2 id="live">ライブ動画</h2>
+      <dl>
+        <dt>非アクティブ状態の定期イベントでも最後の 3セグメントが再生される</dt>
+        <dd>
+          SEP の定期イベントがページ上で公開されたままで、クライアント側が現在ストリーミングしていない場合、最後の 3セグメント（約18秒分）がキャッシュされて再生されることがあります。
+          <p style="font-weight: bold;">回避策</p>
+          <p>これを防ぐ一つの方法として、以下のようなコードを含むプラグインを追加し、<a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-live-custom-error-message.html">プレーヤーにライブ用カスタム エラーメッセージ</a>を実装することが挙げられます：</p>
+          <pre class="line-numbers"><code class="language-javascript" translate="No">// duration の変更を監視する
+  myPlayer.on("durationchange", ()=>{
+    // duration をローカル変数に保存
+    var duration = myPlayer.duration();
+  
+    // duration が有限ならVOD、無限ならLiveと判断
+    // VODであれば、定期配信が終了したと見なしてカスタム画像を表示する
+    var isLive = !Number.isFinite(myPlayer.duration());
+  
+    if (!isLive && duration !== 0) {
+      myPlayer.pause();
+      myModal.open();
+    }
+  });</code></pre>
+        </dd>
+        <dt>Brightcove プレーヤーが終了したライブイベントでも動画視聴回数をカウントする</dt>
+        <dd>Brightcove プレーヤーは、リモートアセットが読み込まれるたびに video_view をカウントします。これは、たとえ終了したライブイベントで、HLS プレイリストが空または取得不能であっても発生します。<strong>回避策：</strong>動画を無効化、スケジュール解除、または削除してください。</dd>
+      </dl>
+    </section>
 
 
-<script translate="no">
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documentation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder,
-    styling: {
-      components: {
-        
-        input: {
-          container: {
-          backgroundColor: 'white',
-          }
-        
-        }
+
+
+    <section class="bcls-section">
+        <h2 id="audience_insights">Audience Insights</h2>
+        <dl>
+          <dt>サーバーサイド広告挿入（SSAI） - プリロール広告</dt>
+          <dd>
+            <h3>問題</h3>
+      
+            <p>プリロール広告付きの動画の再生位置を冒頭に戻すと、<code translate="No">ads-ad-ended</code> および <code translate="No">ads-pod-ended</code> イベントが発生します。</p>
+      
+            <h3>回避策</h3>
+      
+            <p>以下のように記述することで、回避できる可能性があります。</p>
+      
+      <pre>
+      <code class="language-javascript" translate="No">player.currentTime(0.1)</code></pre>
+      
+            <p>次の記述の代わりに使用します。</p>
+      
+      <pre>
+      <code class="language-javascript" translate="No">player.currentTime(0)</code></pre>
+          </dd>
+        </dl>
+      </section>
+      <section class="bcls-section">&nbsp;</section>
+      <section class="bcls-section">
+        <h2 id="analytics">Analytics</h2>
+        <dl>
+          <dt><strong>合計帯域幅レポートは旧形式のインジェスト動画のみ利用可能</strong></dt>
+          <dd>合計帯域幅データフィールドは現在、Dynamic Delivery では利用できないため、カスタムレポートではこのオプションは使用できません。</dd>
+          <dt><strong>広告ブロッカーにより分析データが正確でない場合があります</strong></dt>
+          <dd>分析データ（UI および API 経由で取得）は、UBlockなどの広告ブロッカーがクライアント端末からの分析データ送信を妨げるため、不正確になる可能性があります。</dd>
+          <dt><strong>一部の動画でカスタムレポートに 0 bytes_delivered と表示される</strong></dt>
+          <dd>Dynamic Delivery のトランスコードプロファイルを使用してインジェストされた動画は、カスタムレポート上で bytes_delivered が 0 と表示されます。</dd>
+          <dt><strong>複数のフィルターを使用したカスタムレポート</strong></dt>
+          <dd>複数のフィルターを使用すると、AND 条件が適用されます。たとえば、<strong>動画タグ</strong> と <strong>プレーヤー</strong> の2つのフィルターを追加した場合、指定されたタグが付けられ、かつ指定されたプレーヤーで再生された動画のみが対象となります。</dd>
+          <dt><strong>動画タグによるフィルタリングを使用したカスタムレポート</strong></dt>
+          <dd>カスタムレポート作成時に、動画タグによるフィルタリング機能には制限があります。特定のタグが付与された動画が 2,000 件を超える場合、それ以降の動画は考慮されません。この場合は、タグを含んだフィルターなしのレポートを取得し、表計算ソフト等でローカルにフィルタリングすることを推奨します。</dd>
+          <dt><strong>パフォーマンスレポートに「Other/Third Party」と表示される</strong></dt>
+          <dd>Video Cloud ライブラリに存在しない動画（例：リモートアセット）が Video Cloud プレーヤーで再生されると、<strong>Other/Third Party</strong> として表示され、関連する動画ID は表示されません。</dd>
+          <dt>更新された動画名が分析に反映されない</dt>
+          <dd>Analytics が動画タイトルを認識するのは、プレーヤーが再生ビーコンと共に送信した時点です。そのため、動画タイトルを変更しても、再生が行われない限り Analytics には新しいタイトルが反映されません。特に 2013年3月以前のデータはこの問題が多く、動画タイトルが数字（例：1230123012）として表示されることがあります。これは旧システムで収集されたメタデータによるものです。</dd>
+          <dt>Analytics UI にて動画名とプレーヤー名が ??????? と表示される</dt>
+          <dd>2013年10月 のデータにおいて、動画名やプレーヤー名が ??????? と表示されることがあります。これはダブルバイト文字を含むメタデータを持つお客様に影響がありました。11月以降、Analytics システムにはメタデータ破損を防止するための追加処理が実装されています。</dd>
+          <dt>レポートのタイムゾーン</dt>
+          <dd>レポートで使用するタイムゾーンは、日別データの境界を決定するために使用されます。この設定を変更しても、過去のデータには適用されません。また、設定変更の反映には時間がかかる場合があり、その間は旧設定でデータが表示されることがあります。</dd>
+          <dt>エンゲージメント データは日単位で保存される</dt>
+          <dd>エンゲージメント データは UTC 時間に基づいて日単位で保存されるため、エンゲージメント レポートの「x%視聴ユーザー」表において、2日分のデータが含まれる場合があります。</dd>
+          <dt>Internet Explorer のサポート</dt>
+          <dd>Analytics モジュールは Internet Explorer 11 以降が必要です。</dd>
+          <dt>デバイスメーカーで「その他」の結果が多く表示される</dt>
+          <dd>一部のケースでは、デバイス メーカーにおいて「その他」の結果が多く表示されることがあります。これは、analytics データと共に送信された <code translate="No">user_agent</code> が Data Collector で認識されなかった場合に発生します。特に Instagram が生成するカスタム <code translate="No">user_agent</code> が原因であることが多いですが、他にも要因があります。</dd>
+          <dt>iframe タグ使用時、トラフィックレポートで「Direct」のみが表示される</dt>
+          <dd>トラフィックソースは HTTP リファラー ヘッダーから判断されます。iframe タグを使用すると、リファラーは "players.brightcove.net/..." となり、Analytics モジュールでは 'Direct' に分類されます。正確なトラフィックソースを取得するには、in-page video タグを使用してください。</dd>
+        </dl>
+      </section>
+
+
+      <section class="bcls-section">
+        <h2 id="audience">Audience</h2>
+        <dl>
+          <dt>視聴者アクティビティが「視聴率：0」「視聴時間：0」と表示される</dt>
+          <dd>動画が再生されていない、または動画が最初のビーコンを送信する前にインタラクション イベントがトリガーされる場合があります。この結果、インタラクティブな操作は記録されているが、動画の再生は記録されていない（視聴率0%、視聴時間0秒）というイベントが発生することがあります。</dd>
+          <dt>Internet Explorer のサポート</dt>
+          <dd>視聴者リードフォームを利用するには、Internet Explorer 11 以降が必要です。</dd>
+        </dl>
+      </section>
+      <section class="bcls-section">
+        <h2 id="social">Social</h2>
+        <dl>
+          <dt>Ghostery ブラウザ プラグインが Social モジュールの動作を妨げる可能性がある</dt>
+          <dd>
+            <p>Ghostery ブラウザ プラグインは、Social モジュールの正しい読み込みを妨げる可能性があります。</p>
+            <p><strong>回避策：</strong> Ghostery のホワイトリストに Studio を追加してください。</p>
+          </dd>
+        </dl>
+      </section>
+      <section class="bcls-section">
+        <h2 id="di">Upload モジュール / 動的インジェスト</h2>
+        <dl>
+          <dt>端末の時計が正しい時刻と一致していない場合、Upload モジュールによるアップロードは失敗する</dt>
+          <dd>アップロードは一定時間のみ有効です。端末の時刻が実際の時刻と 15分 以上ずれている場合、アップロード時にエラーが発生します。</dd>
+          <dt>Dynamic Ingestion による再トランスコードで動画の公開日が更新される</dt>
+          <dd>Dynamic Ingestion を使用して動画を再トランスコードすると、動画の公開日が現在の日付に更新されます。公開日順で並べ替えたスマートプレイリストを使用している場合、プレイリスト内の動画の順序に影響を与えます。</dd>
+          <dt>ファイル名</dt>
+          <dd>動画ファイル名（拡張子を含む）は、半角 120文字（全角 60文字）以内である必要があります。これを超えると動画のインジェスト自体は成功しますが、後から再トランスコードすることができなくなります。</dd>
+        </dl>
+      </section>
+
+
+      <section class="bcls-section">
+        <h2 id="player">Brightcove Player</h2>
+        <p><a href="https://player.support.brightcove.com/release-notes/brightcove-player-release-notes.html">Brightcove Player リリースノート</a>を確認し、既知の問題が最近のリリースで修正されたかどうかをご確認ください。</p>
+        <dl>
+          <dt>Facebook アプリの Web ビューアーでは DRM 保護された動画が再生できない</dt>
+          <dl>Facebook ユーザーが Brightcove プレーヤーを含むページへのリンクを投稿し、その動画が DRM で保護されている場合、Facebook アプリ内でリンクをクリックした他のユーザーは、DRM をサポートしない Facebook の Web ビューアーでページが開くため、動画は再生されません。</dl>
+          <dt>再生速度ボタンが Safari 15 に追加されました</dt>
+          <dd>Brightcove はユーザー設定を上書きしません。また Apple によると、<strong>このプロパティは iOS の HTML5 オーディオ/ビデオ要素には設定できません</strong>とのことです。</dd>
+          <dt>数字で始まる要素ID の使用は CSS および JavaScript (<code translate="No">document.querySelector</code>)で問題を引き起こす</dt>
+          <dd>ID で指定された CSS ルールや、<code translate="No">querySelector()</code> や <code translate="No">querySelectorAll()</code> を使用して要素を参照する JavaScript が、ID が数字で始まる要素に対して失敗します。<a href="https://mathiasbynens.be/notes/css-escapes">回避策</a>はありますが、最良の方法はこのような ID の使用を避けることです。</dd>
+          <dt>Windows 10 のタッチ対応 PC で全画面モード中にプレーヤーのコントロールバーが非表示にならない</dt>
+          <dd>既知の回避策はありません。</dd>
+          <dt><code translate="No">id</code> が <code translate="No">default</code> に設定された要素</dt>
+          <dd>ページ内に <code translate="No">id="default"</code> の要素があると、Brightcove プレーヤーが正常に動作しないことがあります。詳細は、<a href="https://2ality.com/2012/08/ids-are-global.html">DOM: element IDs are global variables</a> をご覧ください。この問題の一般的な症状は <code translate="No">MEDIA_ERR_UNKNOWN</code> エラーです。</dd>
+          <dt>Safari および/または iOS で広告がブロックされる</dt>
+          <dd>
+            Apple による Safari および iOS のクロス オリジンポリシーの変更により、広告が再生されない可能性があります。
+            <p><strong>回避策</strong></p>
+            <p>SSAI の場合、追加の CORS ヘッダーを追加することでこの問題を解決しています。クライアントサイド広告を使用している場合、この対応では不十分で、CORS ヘッダーはご自身のサーバーやホスティングサービスから送信する必要があります。追加したヘッダーは以下のとおりです：</p>
+            <pre><code translate="No">access-control-allow-headers: Server,Range,Content-Length,Content-Range
+      access-control-allow-headers: X-Requested-With,Origin,Range,Accept-Encoding,Referer
+      access-control-allow-methods: GET,HEAD,OPTIONS
+      access-control-allow-origin: *</code></pre>
+          </dd>
+          <dt>コンソール警告</dt>
+          <p>Brightcove プレーヤーは、ブラウザのコンソールに <strong>警告</strong> を表示することがあります。これらの警告はエラーメッセージではなく、再生には影響しません。以下は警告の一例です：</p>
+          <figure class="bcls-figure"><img class="bcls-image" alt="console warning" src="/assets/images/general/console-warning.png" /></figure>
+          <dt>ポスター画像またはサムネイル画像のない動画</dt>
+          <dd>サムネイルまたはポスター画像のない動画は、読み込み時にプレーヤーでエラーを引き起こす可能性があります。これはモバイル SDK プレーヤーでクラッシュを引き起こす場合があります。</dd>
+          <dt>Internet Explorer は再生が一時停止されるたびに再生速度を1.0にリセットします</dt>
+          <dd>この問題は Safari 14（Big Sur 版）では発生しません。</dd>
+          <dt>IE11 でオーディオのみのコンテンツ再生時に画像が表示されない</dt>
+          <dd>IE11 でオーディオのみのコンテンツを再生すると、黒い画面のみが表示され画像が表示されません。以下のコードで画像を保持できます：
+            <pre>
+      <code class="language-css" translate="No">.vjs-has-started .vjs-poster {
+      display: block;
+      }</code>
+      </pre>
+          </dd>
+          <dt>Safari での自動再生プレイリスト</dt>
+          <dd>Safari でプレイリストが表示され、プレーヤーの pre-load 設定が <code translate="no">none</code> の場合、次の動画の自動再生が失敗することがあります。</dd>
+          <dt>Apple ユーザーの設定が Brightcove プレーヤーによる字幕の自動表示を妨げる</dt>
+          <dd>iOS で字幕を自動表示するには、<strong>システム環境設定 > アクセシビリティ > 字幕 ></strong> に進み、<strong>クローズドキャプションと SDH を優先</strong>にチェックを入れてください。</dd>
+          <dt>コンテキストメニュー</dt>
+          <dd>動画の右端または下端近くを右クリックすると、プレーヤーのコンテキストメニューが画面外に表示されることがあります。</dd>
+          <dt>同じ player_id で異なるサイズの複数プレーヤーをページ上で使用</dt>
+          <dd>
+            <p>同じ ID のプレーヤーを複数設置し、それぞれ <code translate="No">&lt;video&gt;</code> タグ内で異なる <code translate="No">width</code> および <code translate="No">height</code> 属性を指定した場合、最後に定義されたプレーヤーの CSS が全プレーヤーに適用されます。</p>
+            <p><strong>回避策</strong></p>
+            <ul>
+              <li>異なる ID を使用したプレーヤーを使用して、それぞれに異なるサイズやスタイルを設定する</li>
+              <li>プレーヤーサイズを定義する CSS クラスを作成し、各 <code translate="No">video</code> タグに適用する</li>
+            </ul>
+          </dd>
+          <dt>FastClick.js によりイベント処理が正しく行われない</dt>
+          <dd>FastClick.js を使用すると、カスタム コントロールバーでイベント処理が正しく行われず、モバイル デバイスでの操作ができない場合があります。</dd>
+          <dt>Chrome および Firefox で動画が灰色っぽく表示される</dt>
+          <dd>
+            <p>Chrome や Firefox で Brightcove プレーヤーを使用すると、動画が灰色っぽく表示される場合があります。これはハードウェア アクセラレーションや NVIDIA のドライバー設定による可能性があります。</p>
+            <p><strong>回避策：</strong>NVIDIA コントロールパネルを開き、<strong>ビデオ</strong> > <strong>ビデオカラー設定の調整</strong> を選択します。<strong>色の調整方法</strong> では <strong>NVIDIA 設定を使用</strong> を選択し、<strong>詳細設定</strong> で <strong>ダイナミックレンジ</strong> を <strong>フル (0-255)</strong> に設定してください。<strong>ダイナミックコントラスト強調</strong> のチェックは外してください。この問題は<a href="https://productforums.google.com/forum/#!topic/chrome/wsDhGzP73bI;context-place=forum/chrome">Google Chrome ヘルプフォーラム</a>で報告されています。</p>
+          </dd>
+          <dt>エミュレータの使用</dt>
+          <dd>
+            <p>Chrome のデバイスモードや他のエミュレータで動画再生をテストする場合、実際のデバイスの動作を正確に再現できないことに注意してください。開発段階ではエミュレータでの初期テストは有効ですが、正確な動作確認には実機を使用するのがベストプラクティスです。</p>
+            <p>Chrome のデバイスモードで再生をテストすると、次のようなメッセージが表示される場合があります：「デバイス モードでの Chrome の使用は、あくまでビューポートとユーザーエージェント文字列をエミュレートするものであり、実際のデバイスのパフォーマンスを正確に反映するものではありません。」</p>
+          </dd>
+          <dt><code translate="No">data-setup</code> の使用</dt>
+          <dd>Brightcove プレーヤーでは<code translate="No">data-setup</code> の使用は推奨されません。API ドキュメントに <code translate="No">data-setup</code> が記載されていることがありますが、それは Video.js プレーヤーのソースコードから生成されたもので、純粋な Video.js では使用可能です。Brightcove Player は異なる構成方法を用いており、<code translate="No">data-setup</code> の使用は信頼できません。</dd>
+          <dt>プロトコル認識型ソース選択と DASH</dt>
+          <dd>プロトコル認識型のソース選択は、DASH コンテンツでは利用できません。これは HLS および MP4 コンテンツでのみ利用可能です。</dd>
+          <dt>Safari で iframe プレーヤー実装を使用するとコンソールエラーが発生</dt>
+          <dd>Safari で Brightcoveプレーヤーを iframe 実装で使用すると、以下のエラーがコンソールに表示されます：<strong>Blocked a frame with origin \"https://players.brightcove.net\" from accessing a frame with origin \"#DOMAIN NAME#\". Protocols, domains, and ports must match.</strong> このエラーは再生には影響しません。</dd>
+          <dt>Safari で字幕メニューに「Unknown」と表示される</dt>
+          <dd>これは Safari/Apple の制限によるものです。新しい Brightcove プレーヤーは Safari に内蔵された字幕機能を使用するため、このような動作となります。詳細は Apple の<a href="https://developer.apple.com/library/ios/qa/qa1801/_index.html">公式ドキュメント</a> をご確認ください。</dd>
+          <dt>非 Flash 環境での全画面表示</dt>
+          <dd>
+            <p>Flash が無効な環境や、プレーヤーで Flash ベースの HLS が無効な環境で、<code translate="No">video</code> タグに <code translate="No">style</code> 属性でサイズが明示されている場合、一部のブラウザでは全画面表示が正常に動作しないことがあります。</p>
+            <p>回避策：<code translate="No">style</code> 属性を <code translate="No">video</code> タグから削除し、代わりに以下のようにスタイルシートでサイズを指定してください：</p>
+            <pre>
+      <code class="language-css" translate="No">.video-js{
+      width:640px;
+      height:360px;
+      }</code>
+      </pre>
+          </dd>
+          <dt>ソーシャル共有</dt>
+          <dd>デスクトップ環境では、広告再生中にソーシャル共有ボタンは表示されません。</dd>
+          <dt>HTTPS</dt>
+          <dd>
+            <p>ほとんどのデスクトップブラウザでは、Brightcove プレーヤーが HTTPS サイト上で HLS を再生するには、マニフェストと動画セグメントの両方が HTTPS 接続で配信される必要があります。これは、最近のブラウザの仕様変更により、非 SSL コンテンツが厳しく制限されるようになったためです。Chrome、Firefox、Internet Explorer のデスクトップ版に影響があります。Safari や モバイル ブラウザ、MP4の再生には影響しません。</p>
+            <p>Brightcove が管理する Video Cloud のアセットについてはこの制限を解消する作業を進めています。独自の CDN とトランスコードを使用している場合は、マニフェストと動画の両方を HTTPS で配信するよう CDN を設定する必要があります。</p>
+          </dd>
+          <dt>全画面表示</dt>
+          <dd>
+            <p>新しいブラウザで fullscreen API がサポートされている場合、プレーヤーが全画面時に 100% 拡大されるよう CSS をページ内で指定する必要があります。そうしないと、プレーヤーは元のサイズのまま表示されます。詳細は、<a href="https://player.support.brightcove.com/styling/sizing-player.html#fullscreen">Fullscreen display</a> のトピックをご覧ください。</p>
+            <p>fullscreen API がサポートされていない IE10 以前では、新しいウィンドウが開くだけで、プレーヤーはウィンドウ全体に拡大されません。スクロール不可のため、プレーヤーが表示されないこともあります。</p>
+          </dd>
+          <dt>HapYak チャプター付き動画を1ページに複数公開</dt>
+          <dd>
+            <p>HapYak チャプター付き動画を1ページに複数公開すると、誤ったチャプターが表示されることがあります。</p>
+            <p><strong>回避策</strong></p>
+            <p><a href="https://github.com/brightcove/gallery-in-page-snippets/blob/master/snippets/hapyakFix.js">このスクリプト</a>をご利用ください。ただし、IE11/Win7 では Flash 再生では回避できないため、HTML5 フォールバックを実装してください。</p>
+          </dd>
+          <dt>エラー: <strong>d.off is not a function</strong></dt>
+          <dd>
+            <p>この既知のバグにより、MP4 や HLS など異なるフォーマットを切り替えるときにこのエラーが発生することがあります。このバグが修正されるまでは、問題のコードを再実行することで対処可能です。以下はアプリでの修正例です：</p>
+            <pre>
+      <code class="language-javascript" translate="No">try {
+      myPlayer.catalog.load(video);
+      } catch (e) {
+      myPlayer.catalog.load(video);
       }
-    },
-    maxSuggestions: 5, // Maximum number of suggestions to show
-      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
+      myPlayer.play();
+      </code>
+      </pre>
+          </dd>
+          <dt>HLS 動画の再生時間</dt>
+          <dd>コントロールバーに表示される動画の再生時間は、初期表示から変更されることがあります。すべての HLS セグメントが読み込まれると、正確な再生時間に更新されます。</dd>
+          <dt>RequireJS</dt>
+          <dd>RequireJS を使用する場合、プレーヤーを初期化する際に <code translate="No">bc()</code> メソッドを使用する必要があるかもしれません。使用の必要性はプレーヤーのアセットがどのように・いつ読み込まれるかによります。詳細は <a href="https://player.support.brightcove.com/coding-topics/requirejs-and-brightcove-player.html">RequireJS and Brightcove Player</a> をご覧ください。</dd>
+          <dt>referrer_url と description_url</dt>
+          <dd><code translate="No">referrer_url</code> の値は、iOS と Android デバイス間で異なる場合があります。そのため、<code translate="No">description_url</code> の使用を推奨します。こちらはすべてのプラットフォームおよびデバイスで一貫しています。</dd>
+          <dt>Safari での loop 属性</dt>
+          <dd><strong>loop</strong> 属性は Safari では正しく動作しません。<a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-creating-video-loop.html">Brightcove Player のループ作成サンプル</a>を参考にしてください。</dd>
+          <dt>Safari での字幕</dt>
+          <dd>Safari では字幕のスタイルにネイティブ機能を使用するため、Safari ブラウザ（iOS・macOS）の <strong>CC</strong> メニューには <strong>字幕設定</strong> オプションが表示されません。</dd>
+          <dt>HTML 要素 ID に global を使う</dt>
+          <dd>高度な埋め込み（in-page embed）プレーヤーのコードを <code translate="No">id=\"global\"</code> を持つ <code translate="No">&lt;div&gt;</code> タグ内にネストさせないでください。Brightcove プレーヤーに問題が発生します。</dd>
+          <dt>プレーヤーバージョン 5のアイコン問題</dt>
+          <dd>Brightcove Player バージョン 5 では、チャプターと字幕に同じアイコンが使用されます。バージョン 5 は保守モードのため、見た目に関するこの問題は解消されない可能性があります。</dd>
+        </dl>
+      </section>
 
+
+
+      <section class="bcls-section">
+        <h2 id="player_plugins">Brightcove プレーヤー プラグイン</h2>
+        <p>各プラグインの既知の問題については、該当するプラグインのドキュメントにリンクされています。バージョン 5 は保守モードのため、これは外見上の問題であり、修正されません。</p>
+        <ul>
+          <li><a href="https://player.support.brightcove.com/plugins/advertising-freewheel-plugin.html#Known_issues">FreeWheel プラグインによる広告</a></li>
+          <li><a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#issues">IMA3 プラグインによる広告</a></li>
+          <li><a href="https://player.support.brightcove.com/plugins/display-error-messages-plugin.html#Known_issues">エラーメッセージ表示プラグイン</a></li>
+          <li><a href="https://player.support.brightcove.com/plugins/quality-selection-plugin.html#Known_issues">画質選択プラグイン</a></li>
+        </ul>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="android">Android</h2>
+        <ul>
+          <li>Android 上の TalkBack のネイティブ ジェスチャーでは、Brightcove プレーヤーの再生コントロールや音量スライダーを調整できません。これはプラットフォームの制限によるもので、ユーザーは要素に直接操作する必要があります。Android では、2本指でダブルタップすると、タップ位置に応じて再生位置や音量を調整できます。</li>
+          <li>HLS 動画では、Android で進行バーが同期されない場合があります。これは HLS が Android でうまく動作しないためで、動画の総再生時間が誤って 0:01 と表示されることもあります。</li>
+          <li>すべての Android バージョンのスマートフォンおよびタブレットにおいて、<em>ネイティブ</em> ブラウザではアクセシビリティに関する複数の問題があります。TalkBack はプレーヤーのコントロールに対して音声や振動のフィードバックを提供しません（この問題は Android 上の Chrome には該当しません）。</li>
+          <li>デバイス上でエラーメッセージのタップイベントが親の video 要素まで伝播しないため、エラーメッセージが表示されても閉じることができません。</li>
+          <li>Android デバイスでキャプションや画質設定など、コントロールバー内のプレーヤーメニューを操作していると、メニュー項目を長押しした後、メニューが開いたままになることがあります。これは Chrome が <code translate="No">:hover</code> 疑似クラスを追加するためで、プレーヤー内の別の場所を再度長押しすると通常メニューは閉じます。</li>
+        </ul>
+        <p class="BCL-aside"><a href="https://sdks.support.brightcove.com/android/">Brightcove Player SDK for Android</a> を活用した Android アプリの作成方法を学べます。</p>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="ios">iOS</h2>
+        <ul>
+          <li>iOS 上の VoiceOver のネイティブジェスチャーでは、Brightcove プレーヤーの再生コントロールや音量スライダーを調整できません。これはプラットフォームの制限によるもので、ユーザーは要素に直接操作する必要があります。iOS では、ユーザーが再生バーや音量スライダーを選択するためにダブルタップし、その後ダブルタップ＆ホールドすることで時間や音量を調整できます。</li>
+          <li>iOS の Safari では事前読み込みが行われません。詳細は <a href="https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/AudioandVideoTagBasics/AudioandVideoTagBasics.html">Safari HTML5 オーディオおよびビデオガイド</a>をご参照ください。</li>
+          <li>iOS 上で別のアプリに切り替えた後、Brightcove プレーヤーで再生していた動画はエラーになります。Safari や Chrome で動画を再生中に他のアプリへ切り替え、1分 以上経過してから戻るとエラーが発生します。</li>
+        </ul>
+        <h3>iPhone</h3>
+        <ul>
+          <li>iPhone ではソーシャル共有機能は動作しません。iOS の仕様でフルスクリーンのネイティブモードに切り替わるため、動画の共有ができません。</li>
+          <li>iPhone では、エラーメッセージのタップイベントが video 要素に伝播せず、表示されたエラーメッセージを閉じることができません。</li>
+        </ul>
+        <p class="BCL-aside"><a href="https://sdks.support.brightcove.com/ios/">Brightcove Player SDK for iOS</a> を活用した iOS アプリの作成方法を学べます。</p>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="windows8">Windows 8</h2>
+        <ul>
+          <li>コンパニオン広告はサポートされていません。</li>
+          <li>Windows 8 タブレットでは、標準の HTML/MP4 再生においてシークが動作しません。HLS テクノロジーでは正しく動作します。</li>
+          <li>Windows 8 タブレットでは広告は動作しますが、コンパニオン広告を使うとブラウザがクラッシュします。</li>
+          <li>Windows 8 タブレットでは HLS、Flash、ライブ、および埋め込み形式はすべてサポートされています。</li>
+          <li>Windows 8 のスマートフォンでは MP4 は再生可能ですが、Flash や HLS はサポートされていません。</li>
+          <li>Windows 8 のスマートフォンでは、iframe またはインライン埋め込み形式に関係なく、一度再生を開始すると常にフルスクリーン再生になります。これにより、再生開始後にオーバーレイが表示されません。</li>
+          <li>字幕を有効にすることはできません。</li>
+        </ul>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="chrome">Chrome</h2>
+        <ul>
+          <li><strong>低ビットレートの音声レンディションに関する問題</strong>
+            <p>Chrome ブラウザの MSE 実装のバグにより以下が発生します：</p>
+            <p><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=534301">https://bugs.chromium.org/p/chromium/issues/detail?id=534301</a></p>
+            <p>BC プレーヤーのバージョン 5 以降で、レンディションの音声プロファイルが AAC-LC でない場合、<code translate="No">MEDIA_ERR_DECODE</code> エラーで再生が失敗します。</p>
+            <p>新規のコンテンツでこの問題を防ぐには：</p>
+            <ul>
+              <li>音声ビットレートを 48 kbps以上に設定する</li>
+              <li>トランスコードプロファイルに次の設定を追加：<code translate="No">\"max_aac_profile\": \"aac-lc\"</code></li>
+            </ul>
+            <p>既存コンテンツでは：</p>
+            <ul>
+              <li>上記に従って再トランスコードする</li>
+            </ul>
+          </li>
+          <li>HTML5 動画のリクエストが保留のままになり、動画が読み込まれないことがあります。詳細は Google の <a href="https://code.google.com/p/chromium/issues/detail?id=234779">ドキュメント</a> をご覧ください。</li>
+        </ul>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="firefox">Firefox</h2>
+        <ul>
+          <li>Android 版 Firefox ブラウザは正式にはサポートされていませんが、可能な範囲でバグ修正に対応します。</li>
+          <li>Firefox バージョン 42 では Brightcove プレーヤーで再生に問題があると報告されています。これは Firefox の <strong>ハードウェア アクセラレーションを使用</strong> 設定が原因と考えられ、このオプションを無効にすると解決します。</li>
+          <li>動画の最初のフレームに表示タイムスタンプ（PTS）が0より大きい場合、Brightcove プレーヤーが Firefox でタイムアウトする可能性があります。現時点での推奨解決策はコンテンツの再エンコードです（再トランスコードではなく、オリジナルマスターの再アップロードが必要）。</li>
+        </ul>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="internetexplorer">Internet Explorer</h2>
+        <ul>
+          <li>Media モジュールで「デフォルト」設定が選択された字幕は、IE11 では自動的に表示されません。</li>
+          <li>音声が 48 kHz以上の動画は、Windows 8 および 10 の Edge および IE11 で再生に失敗します。</li>
+          <li>IMA3 の Flash 広告はIEでより安定して動作します。</li>
+        </ul>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="safari">Safari</h2>
+        <ul>
+          <li>既知の問題はありません。</li>
+        </ul>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="ima3">IMA3</h2>
+        <ul>
+          <li>Google IMA3 のスキップ可能な広告を使用している場合、「広告をスキップ」ボタンにタブ インデックスがないため、キーボード操作でこのボタンにアクセスできません。キーボード操作に依存するユーザーは広告をスキップできません。</li>
+        </ul>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="brightcoveLive">Brightcove Live</h2>
+        <ul>
+          <li><code translate="No">h264_profile</code> が <code translate="No">baseline</code> に設定されている、またはジョブリクエストに <code translate="No">h264_profile</code> が含まれていない場合、Firefox v57 を使用する Windows 10 環境で問題が発生します。</li>
+          <li>ライブストリームが終了した際、プレーヤーが <code translate="No">PLAYER_ERR_TIMEOUT</code> エラーを表示することがあります。</li>
+        </ul>
+      </section>
+</article>
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
-
-
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-    window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-  </script>
-  
-  <!-- Javascript -->          
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-
-
-  <!-- Page Specific JS -->
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
-  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
-  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
-
-  <!-- original footer components -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
-  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
-  <script src="/assets/s-site-assets-scripts/selector.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/prism.js"></script>
-  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/site.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
-  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
-  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
-  
-  <script src="/assets/js/sites_nav.js"></script>
-  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
-  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
-  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
-  <script src="/assets/js/feedback.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
-  
-  <script translate="no">
-    feather.replace()
-  </script>
-  <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
-  <style translate="no">
-    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-      background-color: lightblue;
-    }
-    div.sj-tabs__tab {
-      margin-top: 3rem;
-      margin-left: .3rem;
-      border-top-left-radius: .4rem;
-      border-top-right-radius: .4rem;
-      background-color:#e8e8e8;
-    }
-
-    div.sj-tabs__tab.sj-tabs__tab--selected {
-      border-bottom-color: crimson;
-      background-color: #f8f8f8;
-    }
-
-    p.sj-results__result__description.css-p9jvyt {
-      font-size: 1rem;
-    }
-
-    .sj-result__text.css-31l7gp h3 {
-      color: navy;
-      font-size: 1.4rem;
-    }
-    </style>
- </div>
-</div>
-  </body>
-</html> 
+    <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">ページ コンテンツ</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    <!-- </div> -->
+    </div>
+    </div>
+    </div>
+    <div class="page-content" style="background-color: rgb(1, 5, 14);">
+      <div class="container" style="width: 50%;">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-6 col-md">
+              <h5 class="h5-text">Brightcove サポート</h5>
+              <ul class="list-unstyled text-small" style="color: white ;">
+                <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
+                <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/search.html">ドキュメントの検索</a></li>
+              </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+              <h5 class="h5-text">トレーニング</h5>
+              <ul class="list-unstyled text-small">
+                <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
+                <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
+              </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+              <h5 class="h5-text">Brightcove</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
+                <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>© Brightcove Inc. All rights reserved.</p>
+          <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
+          <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
+    
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
+            title="LinkedIn" target="_blank" class="gf-social-linkedin"
+            style="margin-right: 1rem;"><i data-feather="linkedin"
+              style="color:#8E9093;height: 1.25rem;"></i></a></li>
+    
+            <li class="ms-3"><a
+            href="https://twitter.com/brightcove" title="Twitter" target="_blank"
+            class="gf-social-twitter" style="margin-right: 1rem;"><i
+              data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+    
+            <li class="ms-3"><a
+            href="https://www.facebook.com/Brightcove" title="Facebook"
+            target="_blank" class="gf-social-facebook"><i data-feather="facebook"
+              style="color:#8E9093;height: 1.25rem;"></i></a></li>
+          </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+    
+    
+    <script translate="no">
+      var searchBox = sajari.init({
+        mode: "search-box",
+        project: "1588255093746585379", // Set this to your project.
+        collection: "brightcove-documentation", // Set this to your collection.
+        instantPipeline: "autocomplete", // Pipeline used as you type
+        inputPlaceholder: "Search", // Input element placeholder,
+        styling: {
+          components: {
+            
+            input: {
+              container: {
+              backgroundColor: 'white',
+              }
+            
+            }
+          }
+        },
+        maxSuggestions: 5, // Maximum number of suggestions to show
+          attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+      });
+    
+      
+    
+    
+        searchBox("sub", "pipeline.search-sent", function (_, query) {
+        window.location = "/search.html?q=" + encodeURIComponent(query.q);
+        });
+      
+      </script>
+      
+      <!-- Javascript -->          
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+      <!-- Page Specific JS -->
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+      <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+      <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+    
+      <!-- original footer components -->
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+      <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+      <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+      <script src="/assets/s-site-assets-scripts/selector.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/prism.js"></script>
+      <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/site.js"></script>
+      <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+      <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+      <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+      
+      <script src="/assets/js/sites_nav.js"></script>
+      <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+      <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+      <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+      <script src="/assets/js/feedback.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+      
+      <script translate="no">
+        feather.replace()
+      </script>
+      <!-- <script src="/assets/js/sajari-index.js"></script> -->
+      <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+      <style translate="no">
+        a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+          background-color: lightblue;
+        }
+        div.sj-tabs__tab {
+          margin-top: 3rem;
+          margin-left: .3rem;
+          border-top-left-radius: .4rem;
+          border-top-right-radius: .4rem;
+          background-color:#e8e8e8;
+        }
+    
+        div.sj-tabs__tab.sj-tabs__tab--selected {
+          border-bottom-color: crimson;
+          background-color: #f8f8f8;
+        }
+    
+        p.sj-results__result__description.css-p9jvyt {
+          font-size: 1rem;
+        }
+    
+        .sj-result__text.css-31l7gp h3 {
+          color: navy;
+          font-size: 1.4rem;
+        }
+        </style>
+     </div>
+    </div>
+      </body>
+    </html> 
+    
