@@ -1,0 +1,3327 @@
+<!DOCTYPE html>
+<html lang="ja"> 
+    <head>
+        <title>リモートアセット ビデオの操作</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="このトピックでは、Media モジュールを使用してリモートアセット ビデオを作成する方法について説明します。">
+        
+        <!-- Google Font -->
+        <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+        <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+        
+        <!-- FontAwesome JS-->
+        
+        <!-- <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>   -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
+
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+        <script translate="no">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XBJC11HF8Z');
+        </script>
+        <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
+        <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+
+    </head> 
+
+    <body class="docs-page">
+        <div id="consent_blackbar"></div>
+        <div id="teconsent"></div>
+        <script async="async"
+            src="https://url.us.m.mimecastprotect.com/s/5CgOCzpzDQU89lO9HgivF9GSgA?domain=consent.trustarc.com"></script>
+        
+
+<header class="header fixed-top">
+  <div class="branding docs-branding">
+    <div class="container-fluid position-relative py-2">
+      <div class="docs-logo-wrapper">
+        <button id="docs-sidebar-toggler" class="docs-sidebar-toggler"
+          type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="site-logo"><a class="navbar-brand"
+            href="https://support.brightcove.com/"
+            style="margin-left: 15px;">
+            <img class="logo-icon me-2"
+              src="/assets/s-site-assets-template-stylesheets/images/bc_logo_black_1@1x.png"
+              alt="logo" style="margin-bottom: 9px;">
+            <!-- <span class="logo-text">BRIGHTCOVE</span> -->
+          </a></div>
+      </div><!--//docs-logo-wrapper-->
+
+      <div class="docs-top-utilities d-flex justify-content-end
+        align-items-center">
+        
+        <!-- Search bar -->
+        <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
+
+        <select id="site_select" class="form-select select-focus" style="width:
+        20%; margin-right: 10px;" translate="no">
+        <option value="">その他のBrightcoveドキュメント</option>
+        
+        
+        <option value="https://support.brightcove.com" translate="no">ドキュメント ホーム</option>
+        
+        
+        
+        <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD --</option>
+        
+        
+        
+        <option value="https://studio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+        
+        
+        
+        <option value="https://mstudio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+        
+        
+        
+        <option value="https://player.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove プレーヤー開発</option>
+        
+        
+        
+        <option value="https://apis.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud プラットフォーム API</option>
+        
+        
+        
+        <option value="https://sdks.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud デバイス SDK</option>
+        
+        
+        
+        <option value="https://integrations.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;連携および CMS コネクタ</option>
+        
+        
+        
+        <option value="https://general.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud 一般情報</option>
+        
+        
+        
+        <option value="https://support.brightcove.com/" translate="no">-- VIDEO ESSENTIALS --</option>
+        
+        
+        
+        <option value="https://audience-insights.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+        
+        
+        
+        <option value="https://beacon-help.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+        
+        
+        
+        <option value="https://beacon.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+        
+        
+        
+        <option value="https://corptv.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+        
+        
+        
+        <option value="https://live.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+        
+        
+        
+        <option value="https://zencoder.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+        
+        
+        
+        <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD アドオン --</option>
+        
+        
+        
+        <option value="https://gallery.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+        
+        
+        
+        <option value="https://studio.support.brightcove.com/social/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+        
+        
+        
+        <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+        
+        
+        </select>
+        
+        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+        onchange="doGTranslate(this);" translate="no">
+        <!-- <option value="">言語を選択</option> -->
+        <option value="en|en" translate="No">English</option>
+        <option value="en|zh-TW" translate="No">繁體中文</option>
+        <option value="en|fr" translate="No">Français</option>
+        <option value="en|de" translate="No">Deutsch</option>
+        <option value="en|ja" translate="No">日本語</option>
+        <option value="en|ko" translate="No">한국어</option>
+        <option value="en|es" translate="No">Español</option>
+        </select>
+        
+        
+        <script translate="no">
+        /* <![CDATA[ */
+        function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+        /* ]]> */
+        </script>
+        </div>
+        </div>
+        </div>
+        </header><!--//header-->
+        
+        <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar" style="padding-right: 15px;">
+        <div id="nav-search-box" class="top-search-box d-lg-none p-3"></div>
+        <div class="row">
+        
+        <div id="side_nav" style="margin-left: 1em; display: inline-block; border-right: 1px solid #e5e5e6; padding-right: 1em;">
+        
+        <nav class="docs-nav sidenav" aria-label="Main">
+          <ul class="site-nav" style="list-style-type: none;">
+          
+          
+          
+          <li class="nav-item section-title"><a class="nav-link" href="/index.html">ホーム</a></li>
+          
+          
+          
+          
+            <li class="nav-item section-title"><a class="nav-link" href="/get-started/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;はじめに</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            <li class="nav-item"><a class="nav-link" href="/get-started/getting-started-video-cloud-studio.html" aria-current="page">Video Cloud Studio の導入</a></li>
+        
+            <li class="nav-item"><a class="nav-link" href="/get-started/getting-started-your-video-cloud-trial.html">Video Cloud トライアルのはじめ方</a></li>
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/get-started/basics/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;基本を学ぶ</a>
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/activating-and-deactivating-video.html">動画のアクティブ化と非アクティブ化</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/adding-user-video-cloud-account.html">Video Cloud アカウントへのユーザー追加</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/capturing-video-poster-thumbnail-images.html">動画のポスター画像とサムネイル画像の取得</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/creating-manual-playlist.html">マニュアル プレイリストの作成</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/creating-player.html">プレーヤーの作成</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/creating-playlist-player.html">プレイリスト プレーヤーの作成</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/creating-smart-playlist.html">スマートプレイリストの作成</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/determining-how-much-video-being-watched.html">動画の視聴割合を把握する</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/determining-which-videos-have-most-views.html">再生数が多い動画の確認</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/editing-basic-video-properties.html">基本的な動画プロパティの編集</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/editing-video-properties-multiple-videos.html">複数動画のプロパティを編集する</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/organizing-videos-using-folders.html">フォルダーで動画を整理する</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/publishing-playlist-web.html">プレイリストをWebに公開する</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/publishing-single-video-web.html">単一の動画をWebに公開する</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/styling-player.html">プレーヤーのスタイリング</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/uploading-video-poster-thumbnail-images.html">動画のポスター画像とサムネイル画像のアップロード</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/basics/uploading-videos.html">動画のアップロード</a></li>
+        
+              </ul>
+            </li>
+        
+            
+            
+            
+            
+                <li class="nav-item"><a class="nav-link" href="/get-started/navigating-brightcove-support-site.html">Brightcove サポートサイトのナビゲーション</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/quick-start-video-cloud.html">Video Cloud クイックスタート</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/step-step-video-cloud-studio-publishing-workflow.html">ステップバイステップ: Video Cloud Studio 公開ワークフロー</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/video-cloud-glossary.html">Video Cloud 用語集</a></li>
+        
+                <li class="nav-item"><a class="nav-link" href="/get-started/training/index.html">トレーニング</a></li>
+              </ul>
+            </li>
+        
+                <li class="nav-item section-title"><a class="nav-link" href="/media/index.html"><span class="theme-icon-holder me-2">
+                <i class="fa-solid fa-plus"></i></span>&nbsp;動画の管理</a>
+               <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+                <li class="nav-item subsection-title">
+                  <a class="nav-link" href="/media/module/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Media モジュールの使用</a>
+        
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  <li class="nav-item"><a class="nav-link" href="/media/module/getting-started-media-module.html">Media モジュールの導入</a></li>
+        
+                  <li class="nav-item"><a class="nav-link" href="/media/module/video-cloud-search.html">最新の Video Cloud 検索</a></li>
+                  </ul>
+              </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+        
+        <a class="nav-link" href="/media/manage/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;動画ファイルの管理</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item"><a class="nav-link" href="/media/manage/uploading-videos-using-upload-module.html">動画のアップロード</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/manage/replacing-video-source-file.html">動画ソースファイルの置換</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/manage/retranscoding-videos-using-media-module.html">動画の再トランスコード</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/manage/video-editor.html">Brightcove Video Editor</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/manage/downloading-videos-video-cloud.html">Video Cloud からの動画のダウンロード</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/manage/uploading-videos-remote-urls.html">リモートURLでの動画アップロード</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/manage/working-remote-asset-videos.html">リモートアセット動画の操作</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/manage/exporting-video-data.html">動画データのエクスポート</a></li>
+        
+        </ul>
+        </li>
+        
+        <li class="nav-item subsection-title">
+        
+        <a class="nav-link" href="/media/properties/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;動画プロパティ</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item"><a class="nav-link" href="/media/properties/editing-video-properties-using-media-module.html">Mediaモジュールによる動画プロパティの編集</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/properties/editing-video-properties-using-quick-edit.html">クイック編集によるプロパティ編集</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/properties/capturing-poster-and-thumbnail-images.html">ポスター・サムネイル画像のキャプチャ</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/properties/uploading-poster-and-thumbnail-images.html">ポスター・サムネイル画像のアップロード</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/media/properties/configuring-video-availability.html">動画の公開設定の構成</a></li>
+        
+        </ul>
+        </li>
+        
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/media/organize/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;動画の整理</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/organize/introduction-playlists.html">プレイリストの概要</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/organize/creating-and-managing-playlists.html">プレイリストの作成と管理</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/organize/organizing-videos-using-folders.html">フォルダを使った動画の整理</a></li>
+                
+                
+                
+              </ul>
+            </li>
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/media/captions/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;キャプションと音声ファイル</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/captions/overview-adding-captions-video.html">概要：動画へのキャプション追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/captions/adding-captions-videos-using-media-module.html">動画へのキャプション追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/captions/adding-transcripts-videos.html">動画へのトランスクリプト追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/captions/adding-audio-tracks-videos-using-media-module.html">動画への音声トラック追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/captions/adding-chapters-video.html">動画へのチャプター追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/captions/generating-captions-videos.html">動画のキャプション生成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/captions/styling-captions.html">キャプションのスタイリング</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/captions/using-the-caption-editor.html">キャプション エディターの使用</a></li>
+                
+                
+                
+              </ul>
+            </li>
+        
+            
+            
+            
+        <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/media/general/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;一般情報</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/general/increasing-quality-poster-and-thumbnail-images.html">ポスター画像とサムネイル画像の品質向上</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/general/media-sharing-using-media-module.html">メディア共有</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/general/setting-required-fields-videos.html">動画の必須項目の設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/general/working-cue-points-media-module.html">キューポイントの操作</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/media/general/working-multi-lingual-metadata.html">多言語メタデータの活用</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+          
+          
+          
+          <li class="nav-item section-title"><a class="nav-link" href="/players/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;プレーヤーの管理</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/players/module/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Players モジュールの使用</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/module/getting-started-players-module.html">Players モジュールの導入</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/general/step-step-using-players-module-create-and-publish-player.html">ステップ・バイ・ステップ：プレーヤーの作成と公開</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/players/properties/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;プレーヤーのプロパティ</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/properties/setting-player-properties.html">プレーヤーのプロパティ設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/properties/setting-player-information-properties.html">プレーヤー情報のプロパティ設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/properties/configuring-player-content-restrictions.html">プレーヤーのコンテンツ制限設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/properties/configuring-player-playback-properties.html">プレーヤーの再生プロパティ設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/properties/setting-player-update-mode-and-version.html">プレーヤーのアップデートモード設定</a></li>
+                
+                
+                
+              </ul>
+            </li>
+        
+            
+            
+            
+        
+           <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/players/appearance/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;外観とコントロール</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/appearance/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-playlist-endscreen-using-plugin.html">プレイリスト終了画面の設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-player-controls.html">プレーヤーコントロールの設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-player-endscreen.html">プレーヤー終了画面の設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-player-localization.html">プレーヤーのローカライズ設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/appearance/configuring-social-properties-player.html">ソーシャルプロパティの設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/appearance/styling-players.html">プレーヤーのスタイリング</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/players/general/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;一般情報</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/getting-started/configuring-player-plugin.html">インタラクティブ プラグインによるプレーヤー設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/general/configuring-adobe-analytics-event-tracking.html">Adobe Analytics イベントトラッキングの設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/general/configuring-google-analytics-event-tracking.html">Google Analytics イベントトラッキングの設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/general/configuring-player-advertising-using-players-module.html">プレーヤー広告の設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/general/configuring-player-plugins.html">プレーヤープラグインの設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/creating-campaign-enabled-player.html">Campaign対応プレーヤーの作成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/general/generating-player-embed-code.html">プレーヤーの埋め込みコード生成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/players/general/v5-players-support.html">Brightcove Player 5 のサポート</a></li>
+                
+                
+                
+              </ul>
+            </li>
+          
+            
+          </ul>
+          </li>
+          
+          
+          
+          <li class="nav-item section-title"><a class="nav-link" href="/publish/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;動画とプレーヤーの公開</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/publish/publishing/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;公開</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/publishing/adding-application-id-player-embed-code.html">埋め込みコードへのアプリケーションIDの追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/publishing/changing-video-player-without-changing-embed-code.html">埋め込みコードを変更せずにプレーヤー内の動画を変更する</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/publishing/choosing-favorite-player.html">お気に入りのプレーヤーの選択</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/publishing/choosing-correct-embed-code.html">正しい埋め込みコードの選択</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/publishing/publishing-video-email.html">動画をメールで公開する</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/publishing/publishing-videos-and-playlists-media-module.html">動画とプレイリストの公開</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/publishing/publishing-videos-page-experience.html">In-page(ページ内)エクスペリエンスへの動画公開</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/publish/third-party/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;サードパーティアプリへの公開</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/third-party/adding-brightcove-player-facebook-fan-page.html">Facebook ファンページへのプレーヤー追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/third-party/embedding-brightcove-player-google-sites-page.html">Google Sites ページへのプレーヤー埋め込み</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/third-party/publishing-brightcove-player-wordpress-page.html">WordPress ページへのプレーヤー公開</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/third-party/publishing-brightcove-players-facebook-instant-articles.html">Facebook インスタント記事でのプレーヤー公開</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/third-party/publishing-brightcove-players-joomla.html">Joomla でのプレーヤー公開</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/publish/general/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;一般情報</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/general/adding-3play-media-interactive-transcript-video.html">3Play Mediaのインタラクティブ トランスクリプトの追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/general/time-stamp.html">タイムスタンプ</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/general/driving-video-views-through-email.html">メールを活用した動画視聴の促進</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/general/dynamically-assigning-videos-player.html">プレーヤーへの動画の動的割り当て</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/general/step-step-using-players-module-create-and-publish-player.html">ステップ・バイ・ステップ：プレーヤーの作成と公開</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/general/creating-and-publishing-high-quality-screencasts.html">高品質なスクリーンキャストの作成と公開</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/general/using-multiple-players-one-page.html">1ページに複数のプレーヤーを配置する</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/publish/general/using-reference-ids.html">参照IDの使用</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+          
+          
+          
+          <li class="nav-item section-title"><a class="nav-link" href="/analytics/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;アナリティクスの確認</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/analytics/module/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Analytics モジュールの使用</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/module/getting-started-analytics-module.html">Analytics モジュールの導入</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/module/analytics-module-ui-glossary.html">Analytics モジュール UI 用語集</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/module/ad-insights.html">Brightcove Ad Insights </a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/module/ad-analytics.html">Brightcove 広告アナリティクス</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/module/qoe-analytics.html">Brightcove QoE アナリティクス</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/module/qoe-insights.html">Brightcove QoE Insights</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/module/qoe-known-issues.html">既知の問題: Brightcove QoE</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/module/how-search-videos-analytics-module.html">動画の検索方法</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/module/faq-analytics-module.html">よくある質問: Analyticsモジュール</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/module/insights-glossary.html">Insights 用語集</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/analytics/reports/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;アナリティクスレポート</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/reports/analytics-report-reference.html">アナリティクスレポートの参照</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/reports/creating-custom-analytics-reports.html">カスタム アナリティクスレポートの作成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/reports/engagement-report-reference.html">エンゲージメントレポートの参照</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/reports/overview-audience-insights-essentials.html">Audience Insights Essential</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/reports/publisher-insights.html">Publisher Insights</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/reports/marketing-comms-insights.html">Marketing Insights</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">スケジュールレポートの管理</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/reports/performance-report-reference.html">パフォーマンスレポートの参照</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/reports/segments-report.html">セグメント同期</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/reports/video-details-analytics.html">動画詳細のアナリティクス</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/analytics/engagement/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;エンゲージメント</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/engagement/engagement-overview.html">エンゲージメント：概要</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/engagement/engagement-usage-trends.html">エンゲージメント：利用傾向</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/engagement/engagement-status-over-time.html">エンゲージメント：時間経過によるステータス</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/engagement/engagement-sessions-over-time.html">エンゲージメント：セッションの経時変化</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/engagement/engagement-hours-viewed-by.html">エンゲージメント：視聴時間の内訳</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/analytics/content/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;コンテンツ</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/content/content-overview.html">コンテンツ：概要</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/content/content-catalog-by.html">コンテンツ：カタログとエクスプローラー</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/content/content-pupular-content-by.html">コンテンツ：人気コンテンツ</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/content/content-trial-drivers-library.html">コンテンツ：ライブラリの内訳と最初に視聴されたコンテンツ</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/analytics/general/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;一般情報</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/general/calculating-video-engagement-score.html">動画エンゲージメントスコアの計算方法</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/general/exporting-data-analytics-module.html">データのエクスポート</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/analytics/general/reviewing-player-event-data-google-analytics.html">Google Analytics でのプレーヤーイベントデータの確認</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item section-title"><a class="nav-link" href="/social/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;ソーシャル共有</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/social/module/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;はじめに</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/module/getting-started-brightcove-social.html">Brightcove Social のはじめ方</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/module/creating-social-media-publishing-destinations.html">公開先の作成</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/social/general/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;一般情報</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/adding-facebook-button-brightcove-player.html">プレーヤーに Facebook の「いいね！」ボタンを追加する</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/creating-video-clip-using-brightcove-social.html">動画クリップの作成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/enabling-longer-videos-youtube.html">YouTube で長尺動画を有効にする</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/publishing-videos-social-media-platforms.html">ソーシャルメディアへの動画公開</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/publishing-video-one-social-platform.html">1つのソーシャルメディアへの動画公開</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/publishing-live-event-facebook.html">Facebook でライブイベントを公開する</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/publishing-live-event-youtube.html">YouTube でライブイベントを公開する</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/setting-privacy-status-video.">動画のプライバシーステータス設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/module/sprinklr.html">Sprinklr 配信先の作成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/sharing-videos-twitter-player-cards.html">X（旧Twitter）プレーヤーカードでの動画共有</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/using-auto-sync-synchronize-videos-social-media-accounts.html">自動同期の使用</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/general/viewing-videos-published-social-media.html">公開済み動画の確認</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/social/analytics/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;アナリティクスの確認</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/analytics/reviewing-social-analytics.html">ソーシャルアナリティクスの確認</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/analytics/reviewing-social-engagement-analytics.html">ソーシャルエンゲージメント　アナリティクスの確認</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/social/analytics/reviewing-social-views-analytics.html">ソーシャル視聴アナリティクスの確認</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/social/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;開発者向け</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/social/getting-started/quick-start-social-api.html">クイックスタート：Social API</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/social/references/reference.html">Social API リファレンス</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/social/references/social-api-error-reference.html">Social API：エラーリファレンス</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item section-title"><a class="nav-link" href="/live/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;ライブ配信</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/live/get-started/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;はじめに</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/get-started/delivering-live-streams.html">ライブ配信の実施</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/get-started/live-module-guidelines-and-best-practices.html">Brightcove Live：ベストプラクティス</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/get-started/step-step-live-srt.html">ステップ・バイ・ステップ：SRTライブイベント</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/get-started/step-step-using-live-module-open-broadcaster-software-obs.html">ステップ・バイ・ステップ：OBS を使用した Liveモジュールの配信</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/get-started/step-step-using-live-module-telestream-wirecast.html">ステップ・バイ・ステップ：Wirecast を使用した Liveモジュールの配信</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/live/live-module/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Liveモジュールの使用</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/client-side-preroll-with-live-ssai.html">Live SSAI によるクライアントサイドのプレロール広告</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/creating-and-managing-live-events-using-live-module.html">ライブイベントの作成と管理</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/creating-video-clip-using-live-module.html">動画クリップの作成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/implementing-server-side-ads-live-module.html">サーバーサイド広告の実装</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/live-redundancy.html">ライブ配信の冗長化</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/multi-language-audio.html">多言語オーディオ</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/playback-restrictions-live-module.html">ライブイベントの再生制限</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/reviewing-live-analytics.html">ライブ アナリティクスの確認</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/scheduling-clips.html">クリップのスケジュール設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/scheduling-live-event.html">ライブイベントのスケジュール設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html">Facebook および YouTube へのストリーミング</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-module/zoom-live-integration.html">Brightcove Live - Zoom連携</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/live/live-2-0/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Live 2.0</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-2-0/migrating-2-0.html">Live 1.0 から Live 2.0へのクイックスタート</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-2-0/reviewing-live-analytics.html">Live 2.0 アナリティクスの確認</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/admin/creating-custom-live-2-0-ingest-profiles.html">カスタム Live 2.0 トランスコードプロファイルの作成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-2-0/live-video-glossary.html">ライブ動画用語集</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-2-0/managing-api-authentication-credentials.html">API認証情報の管理</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-2-0/redundancy.html">冗長チャンネル</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/live-2-0/fields-custom-live-ingest-profiles.html">カスタム Live トランスコードプロファイルの項目</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/live/general/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;一般情報</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/general/live-drm.html">ライブ DRM</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/general/live-video-glossary.html">ライブ動画用語集</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/general/reducing-latency-live-streams.html">ライブ配信の遅延削減</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/general/supported-encoders-live-events.html">ライブイベント対応エンコーダー</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/live/web-conferencing/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;ウェブ会議</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/web-conferencing/host-avaya-conference-brightcove-live.html">Avaya 会議の配信</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/web-conferencing/host-cisco-webex-conference-brightcove-live.html">Cisco Webex 会議の配信</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/web-conferencing/host-inxpo-live.html">INXPO イベントの配信</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/live/web-conferencing/host-zoom-conference-brightcove-live.html">Zoom 会議の配信</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item section-title"><a class="nav-link" href="/interactivity/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;インタラクティブ機能</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/interactivity/getting-started/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;はじめに</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/getting-started/getting-started-interactivity-module.html">Interactive モジュールのはじめ方</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/getting-started/configuring-player-plugin.html">プレーヤープラグインの設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/getting-started/interactive-video-types.html">インタラクティブ動画の種類</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/getting-started/getting-started-video-interactivity.html">動画インタラクションの導入</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/examples/index.html">インタラクティブ事例ギャラリー</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/getting-started/terminology.html">用語集</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/getting-started/interactivity-training-videos.html">インタラクティブ トレーニング動画</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/interactivity/annotations/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;アノテーション</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/adding-text-overlay.html">テキストオーバーレイの追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/adding-image-overlay.html">画像オーバーレイの追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/adding-transparent-overlay.html">透化オーバーレイの追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/adding-drawing.html">描画の追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/adding-chapters-video.html">動画へのチャプター追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/adding-quiz.html">クイズ アノテーションの追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/adding-time-triggered-action.html">時間トリガーアクションの追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/annotation-options.html">アノテーションのオプション</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/configuring-annotation-links.html">アノテーションリンクの設定</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/looping-back-in-video.html">動画内でのループバック</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/reviewing-annotations.html">アノテーションの確認</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/styling-annotations.html">アノテーションのスタイリング</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/annotations/using-dynamic-annotations.html">ダイナミック アノテーションの使用</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/interactivity/widgets/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;ウィジェット</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/widgets/adding-poll-video.html">動画への投票機能の追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/widgets/adding-sign-in-video.html">動画へのサインイン フォームの追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/widgets/adding-sentiment-video.html">動画へのユーザー感情フィードバックの追加</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/widgets/embedding-form-video.html">動画内フォームの埋め込み</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/widgets/using-custom-widget-library.html">カスタム ウィジェット ライブラリの使用</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/interactivity/projects/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;プロジェクト</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/projects/creating-and-managing-projects.html">プロジェクトの作成と管理</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/projects/branching-overview.html">分岐の概要</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/projects/configuring-project-settings.html">プロジェクト設定の構成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/projects/in-video-branching.html">動画内分岐</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/projects/generating-embed-code.html">埋め込みコードの生成</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/interactivity/templates/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;テンプレート</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/templates/creating-and-managing-templates.html">テンプレートの作成と管理</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/templates/applying-templates-projects.html">プロジェクトへのテンプレートの適用</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/interactivity/experiences/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;エクスペリエンス</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/experiences/experiences-overview.html">エクスペリエンスの概要</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/experiences/creating-and-managing-experiences.html">エクスペリエンスの作成と管理</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/experiences/creating-branching-experience.html">分岐エクスペリエンスの作成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/experiences/creating-slide-sync-experience.html">スライド同期エクスペリエンスの作成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/experiences/creating-chapters-menu-experience.html">ビデオ外チャプターメニューの作成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/experiences/creating-lesson-experience.html">レッスン エクスペリエンスの作成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/experiences/generating-embed-code.html">埋め込みコードの生成</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/interactivity/analytics/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;アナリティクス</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/analytics/interactivity-reports-reference.html">インタラクティブレポートのリファレンス</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/analytics/core-reports-reference.html">コアレポートのリファレンス</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/analytics/question-report-reference.html">質問レポートのリファレンス</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/analytics/gradebook-report-reference.html">成績レポートのリファレンス</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/analytics/interactive-video-tracking-events.html">インタラクティブ動画のトラッキング イベント</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/analytics/getting-up-to-the-minute-data.html">Brightcove Interactivity Heartbeat モジュールの更新</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/interactivity/general/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;一般情報</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/general/working-with-folders.html">フォルダの操作</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/general/understanding-scorm-integration.html">SCORM 連携の理解</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/general/migrating-from-hapyak.html">HapYak からの移行</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/interactivity/settings/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;設定</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/settings/configuring-settings.html">インタラクティブ設定の構成</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/interactivity/settings/using-style-editor.html">スタイル エディターの使用</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="https://apis.support.brightcove.com/interactivity/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;開発者向け</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/interactivity/addon-api/reference.html">Addon API</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/interactivity/annotation-api/reference.html">Annotations API</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/interactivity/embed-api/reference.html">Embed API</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/interactivity/extension-api/reference.html">Extension API</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/interactivity/accessing-reporting-endpoints.html">レポートエンドポイントへのアクセス</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+          
+          
+          
+        <li class="nav-item section-title"><a class="nav-link" href="/ai-features/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;AIによる最適化</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/ai-features/content-suite/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;コンテンツ スイート</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/ai-features/content-suite/content-multiplier.html">コンテンツ マルチプライヤー</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/ai-features/content-suite/metadata-enhancer.html">メタデータ オプティマイザー</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+          
+          
+          
+         <li class="nav-item section-title"><a class="nav-link" href="/channels/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;チャンネルの管理</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/channels/fast/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;スケジュールチャンネル</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/channels/fast/getting-started.html">スケジュールチャンネルのはじめ方</a></li>
+                
+                
+                
+                
+                
+                <li class="nav-item"><a class="nav-link" href="/channels/fast/scheduled-calendar.html">スケジュールチャンネルの管理</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/channels/cloud-playout/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Cloud Playout チャンネルの管理</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                
+        
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/channels/cloud-playout/getting-started/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;はじめに</a>
+                  
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/getting-started/cloud-playout-overview.html">概要：Cloud Playout</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/getting-started/cloud-playout-stream-vod.html">Cloud Playout チャンネルの作成</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </li>
+                
+                
+                
+        
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/channels/cloud-playout/general/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;一般情報</a>
+                  
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/general/configuring-s3-buckets.html">S3 バケットの設定</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/general/ingest-scte-35.html">SCTE-35 の取り込み</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/general/managing-slates.html">スレートの管理</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/general/searching-for-channels.html">チャンネルの検索</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/general/channel-live-redundancy.html">チャンネルでのライブ冗長性の使用</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </li>
+                
+                
+                
+        
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/channels/cloud-playout/managing-content/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;チャンネル コンテンツの管理</a>
+                  
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/managing-content/cloud-playout-add-content.html">チャンネル プログラムの管理</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/managing-content/managing-programs.html">プログラムの管理</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/managing-content/static-image-overlays.html">静止画像オーバーレイの追加</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/managing-content/dynamic-overlays.html">動的オーバーレイの追加</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/managing-content/import-captions.html">キャプションのインポート</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/managing-content/adding-bumpers-to-vod.html">Cloud Playout へのバンパー追加</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </li>
+                
+                
+                
+        
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/channels/cloud-playout/monetization/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;チャンネルの収益化</a>
+                  
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/monetization/enabling-server-side-ads.html">Cloud Playout の収益化</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/monetization/mid-roll-ad-insertion.html">チャンネルへのミッドロール広告の追加</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </li>
+                
+                
+                
+        
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/channels/cloud-playout/publishing/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;チャンネルの公開</a>
+                  
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/publishing/using-channel-actions.html">チャンネル アクションの使用</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/publishing/hard-start.html">チャンネルのハードスタート設定</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/publishing/generating-channel-embed-code.html">チャンネルの埋め込みコードの生成</a>
+                    </li>
+                    
+                    
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/channels/cloud-playout/publishing/viewing-channel-output-and-analytics.html">チャンネル出力とアナリティクスの確認</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </li>
+                
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+          
+          
+          
+          <li class="nav-item section-title"><a class="nav-link" href="/marketing-automation/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;マーケティング オートメーション  2.0</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/marketing-automation/getting-started/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;はじめに</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                <li class="nav-item"><a class="nav-link" href="/marketing-automation/getting-started/campaign-migration-set-up.html">Campaign 2.0 のセットアップと統合マニュアル</a></li>
+                
+              </ul>
+            </li>
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/marketing-automation/general/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;一般情報</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/marketing-automation/general/viewer-id/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;Viewer ID の収集</a>
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/viewer-id/viewer-id-tracking.html">Viewer ID トラッキングの設定</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/viewer-id/analytics-api-unique-users.html"><code>user</code> の活用</a>
+                    </li>
+                  </ul>
+                </li>
+        
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/marketing-automation/general/data-to-external-systems/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;外部システム</a>
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/data-to-external-systems/client-side/index.html">クライアントサイド連携</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/data-to-external-systems/server-side/index.html">サーバーサイド連携</a>
+                    </li>
+                  </ul>
+                </li>
+        
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/marketing-automation/general/lead-forms/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;リードフォーム</a>
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/lead-forms/adding-lead-form.html">リードフォームの追加</a>
+                    </li>
+                  </ul>
+                </li>
+        
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/marketing-automation/general/data-fields/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;データフィールド</a>
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/data-fields/client-data.html">クライアントサイドのデータプロパティ</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/data-fields/viewing-data-integration-properties.html">サーバーサイド：データ統合プロパティの表示</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/data-fields/contact-integration-properties.html">サーバーサイド：コンタクト オブジェクト統合プロパティ</a>
+                    </li>
+                  </ul>
+                </li>
+        
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/marketing-automation/general/troubleshooting/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;トラブルシューティング</a>
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/troubleshooting/client-side-ts.html">クライアントサイド：Marketo Munchkin および HubSpot のトラブルシューティング</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/troubleshooting/server-side-ts.html">サーバーサイドのトラブルシューティング</a>
+                    </li>
+                  </ul>
+                </li>
+        
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/marketing-automation/integrations/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;統合</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/marketing-automation/integrations/eloqua/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;Eloqua</a>
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/data-to-external-systems/server-side/overview-server-side.html">概要</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html">データ統合の確認</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html">コンタクトデータの統合</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/integrations/eloqua/configuring-viewer-id.html">Viewer ID トラッキングの設定</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/integrations/eloqua/customer-id.html">カスタマーIDの確認</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/interactivity/annotations/adding-lead-form.html#Adding_a_Lead_Form_Template">リードフォーム</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/marketing-automation/general/troubleshooting/server-side-ts.html">トラブルシューティング</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </li>
+                
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+          
+          
+          
+         <li class="nav-item section-title"><a class="nav-link" href="/campaign/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;マーケティング オートメーション 1.0</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/campaign/get-started/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;はじめに</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/get-started/getting-started-campaign-module.html">Campaign モジュールの導入</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/creating-campaign-enabled-player.html">Campaign 対応プレーヤーの作成</a></li>
+                
+              </ul>
+            </li>
+            
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/campaign/general/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;一般情報</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/campaign-faq.html">Campaign よくある質問</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/campaign-fields-and-data-definitions.html">Campaign フィールドとデータ定義</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/campaign-plugin-faq.html">Campaign プラグイン よくある質問</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/configuring-campaign-settings.html">Campaign 設定の構成</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/creating-campaign-enabled-player.html">Campaign 対応プレーヤーの作成</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/creating-campaign-lead-form.html">Campaign リードフォームの作成</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/how-campaign-module-identifies-viewers.html">Campaign による視聴者の識別方法</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/how-vbs-calculated.html">Video Benchmark Score の算出方法</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/publishing-video-email-using-campaign-module.html">メールへの動画の公開</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/using-custom-metrics-and-events.html">カスタム指標とイベントの使用</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/viewing-player-events-campaign-module.html">プレーヤーイベントの表示</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/viewing-video-activity.html">動画アクティビティの確認</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/viewing-viewer-profile-information.html">視聴者プロフィール情報の表示</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/campaign/general/working-utm-fields-campaign-module.html">Campaign モジュールでの UTM フィールドの活用</a></li>
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/campaign/integrations/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;統合</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item section-title">
+        <a class="nav-link" href="/campaign/integrations/eloqua/index.html"><span class="theme-icon-holder me-2">
+        <i class="fa-solid fa-minus"></i><span>&nbsp;Eloqua</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html">カスタムリードフォームの作成</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/eloqua/eloqua-integration-testing-guide.html">Eloqua 統合テストガイド</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html">ランディングページへの動画の埋め込み</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html">Oracle Eloqua との統合</a>
+        </li>
+        
+        </ul>
+        </li>
+        
+        <li class="nav-item section-title">
+        <a class="nav-link" href="/campaign/integrations/hubspot/index.html"><span class="theme-icon-holder me-2">
+        <i class="fa-solid fa-minus"></i><span>&nbsp;HubSpot</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html">カスタム リードフォームの作成</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html">HubSpot REST API 統合テストガイド</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">HubSpot との統合（クライアントサイド API）</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html">HubSpot との統合（REST API）</a>
+        </li>
+        
+        </ul>
+        </li>
+        
+        <li class="nav-item section-title">
+        <a class="nav-link" href="/campaign/integrations/marketo/index.html"><span class="theme-icon-holder me-2">
+        <i class="fa-solid fa-minus"></i><span>&nbsp;Marketo</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/marketo/creating-custom-lead-forms-marketo.html">カスタム リードフォームの作成</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html">Marketo との統合（Munchkin 使用）</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html">Marketo との統合（REST API）</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/marketo/marketo-rest-integration-testing-guide.html">Marketo REST 統合テストガイド</a>
+        </li>
+                    
+                    
+                  </ul>
+                </li>
+                
+                
+                
+        
+                <li class="nav-item section-title">
+                  
+                <a class="nav-link" href="/campaign/integrations/non-map/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;非MAP統合</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">カスタム統合の作成</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/non-map/integrating-campaign-single-sign.html">シングル サインオンとの統合</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/non-map/using-campaign-module-track-viewers.html">Campaign モジュールによる視聴者のトラッキング</a>
+        </li>
+        
+        </ul>
+        </li>
+        
+        <li class="nav-item section-title">
+        
+        <a class="nav-link" href="/campaign/integrations/salesforce/index.html"><span class="theme-icon-holder me-2">
+        <i class="fa-solid fa-minus"></i><span>&nbsp;Salesforce</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html">カスタムリードフォームの作成</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/salesforce/creating-salesforce-object-pardot.html">Pardot 用 Salesforce オブジェクトの作成</a>
+        </li>
+        
+        <li class="nav-item subsection-doc">
+        <a class="nav-link" href="/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html">Salesforce との統合</a>
+        </li>
+                    
+                    
+                  </ul>
+                </li>
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/campaign/admin/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Campaign の管理</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item"><a class="nav-link" href="/campaign/admin/exporting-campaign-data-campaign-module.html">Campaign からのデータエクスポート</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/campaign/admin/exporting-gallery-lead-data.html">Gallery リードデータのエクスポート</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/campaign/admin/managing-viewer-data.html">視聴者データの管理</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/campaign/admin/troubleshooting-campaign-issues.html">Campaign に関する問題のトラブルシューティング</a></li>
+        
+        </ul>
+        </li>
+        
+        <li class="nav-item subsection-title">
+        
+        <a class="nav-link" href="https://apis.support.brightcove.com/audience/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;開発者向け（Audience API）</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/audience/getting-started/index.html">はじめに</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/audience/references/index.html">リファレンス</a></li>
+        
+        </ul>
+        </li>
+            
+            
+          </ul>
+          </li>
+          
+          
+          
+         <li class="nav-item section-title"><a class="nav-link" href="/integrations/index.html"><span class="theme-icon-holder me-2">
+            <i class="fa-solid fa-plus"></i></span>&nbsp;統合</a>
+            <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+            
+            <li class="nav-item subsection-title">
+              
+              <a class="nav-link" href="/integrations/integrations-module/index.html">
+                <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;統合モジュール</a>
+              
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/integrations/integrations-module/getting-started/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;はじめに</a>
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/integrations/integrations-module/getting-started/getting-started-integrations-module.html">統合モジュールの概要</a>
+                    </li>
+                    
+                  </ul>
+                </li>
+                
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/integrations/integrations-module/watched-folders/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;監視フォルダ</a>
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/integrations/integrations-module/watched-folders/dropbox.html">Dropbox 上の自動取り込みフォルダの設定</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/integrations/integrations-module/watched-folders/google-drive.html">Google Drive 上の自動取り込みフォルダの設定</a>
+                    </li>
+                    
+                  </ul>
+                </li>
+                
+                <li class="nav-item section-title">
+                  
+                  <a class="nav-link" href="/integrations/integrations-module/customer-data-platforms/index.html"><span class="theme-icon-holder me-2">
+                    <i class="fa-solid fa-minus"></i><span>&nbsp;カスタム データプラットフォーム</a>
+                  
+                  <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/integrations/integrations-module/customer-data-platforms/data-integration/index.html">データ統合の表示</a>
+                    </li>
+                    
+                    <li class="nav-item subsection-doc">
+                      <a class="nav-link" href="/integrations/integrations-module/customer-data-platforms/contact-integration/index.html">コンタクトの統合</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </li>
+                
+                
+              </ul>
+            </li>
+            
+            
+            
+        
+            <li class="nav-item subsection-title">
+              
+          <a class="nav-link" href="/integrations/salesforce-sales-cloud/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Salesforce Sales Cloud</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item">
+        <a class="nav-link" href="/integrations/salesforce-sales-cloud/overview-sfsc-integration.html">概要：Salesforce Sales Cloud 統合</a>
+        </li>
+        
+        <li class="nav-item">
+        <a class="nav-link" href="/integrations/salesforce-sales-cloud/salesforce-connected-app-setup.html">Salesforce Connected App の設定</a>
+        </li>
+        
+        <li class="nav-item">
+        <a class="nav-link" href="/integrations/salesforce-sales-cloud/salesforce-properties-setup.html">Salesforce プロパティの設定</a>
+        </li>
+        
+        <li class="nav-item">
+        <a class="nav-link" href="/integrations/salesforce-sales-cloud/audience-insights-publish-integration-setup.html">Audience Insights Salesforce 統合設定</a></li>
+        
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+          
+          
+          
+          <li class="nav-item section-title"><a class="nav-link" href="/admin/index.html"><span class="theme-icon-holder me-2">
+        <i class="fa-solid fa-plus"></i></span>&nbsp;管理</a>
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item subsection-title">
+        <a class="nav-link" href="/admin/general/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;一般情報</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/authenticating-studio-users-using-single-sign.html">Studio ユーザーの SSO 認証</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/configuring-language-settings.html">言語設定の構成</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/configuring-server-side-ad-settings.html">サーバーサイド広告設定の構成</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/creating-custom-metadata-fields.html">カスタム メタデータフィールドの作成</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/managing-account-information.html">アカウント情報の管理</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/managing-account-settings.html">アカウント設定の管理</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/managing-api-authentication-credentials.html">API 認証情報の管理</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/managing-media-sharing-settings.html">メディア共有設定の管理</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/managing-live-settings.html">ライブ設定の管理</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/managing-playback-rights.html">再生権限の管理</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/managing-profile-information.html">プロフィール情報の管理</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/managing-users.html">ユーザーの管理</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/using-directed-migration-tool-migrate-brightcove-smart-players.html">Directed Migration ツールの使用</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/admin/general/viewing-billing-information.html">請求情報の確認</a></li>
+        
+        </ul>
+        </li>
+                
+            
+        
+            <li class="nav-item subsection-title">
+              
+             <a class="nav-link" href="/admin/ingest-profiles/index.html">
+              <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;トランスコードプロファイルの管理</a>
+        
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+              <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/creating-custom-live-ingest-profiles.html">カスタム ライブ トランスコードプロファイルの作成</a></li>
+        
+              <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/creating-ingest-profiles-context-aware-encoding.html">Context Aware Encoding 用のトランスコードプロファイルの作成</a></li>
+        
+              <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/creating-ingest-profiles-dynamic-delivery.html">Dynamic Delivery 用のトランスコードプロファイルの作成</a></li>
+        
+              <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/fields-custom-live-ingest-profiles.html">ライブ トランスコードプロファイルのフィールド</a></li>
+        
+              <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/ingest-profiles-best-practices.html">トランスコードプロファイルのベストプラクティス</a></li>
+        
+              <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/managing-ingest-profiles.html">トランスコードプロファイルの管理</a></li>
+        
+              <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準トランスコープロファイル（DD & CAE）</a></li>
+        
+              <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles/standard-live-ingest-profiles.html">標準ライブ トランスコードプロファイル</a></li>
+                
+                
+                
+              </ul>
+            </li>
+            
+            
+          </ul>
+          </li>
+          
+          
+          
+          <li class="nav-item section-title"><a class="nav-link" href="/general/index.html"><span class="theme-icon-holder me-2">
+        <i class="fa-solid fa-plus"></i></span>&nbsp;一般情報</a>
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item subsection-title">
+        <a class="nav-link" href="/general/content-protection/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;コンテンツ保護</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        <li class="nav-item"><a class="nav-link" href="/general/content-protection/drm-output-protection-settings.html">DRM 出力保護設定</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/content-protection/overview-digital-rights-management-drm-video-cloud.html">概要：デジタル著作権管理（DRM）</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/content-protection/protecting-videos-hls-encryption.html">HLS 暗号化による動画保護</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/content-protection/tls-media-player-and-api-urls.html">Media Player API URL の TLS 対応</a></li>
+        </ul>
+        </li>
+        
+        <li class="nav-item subsection-title">
+        <a class="nav-link" href="/general/references/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;リファレンス</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        <li class="nav-item"><a class="nav-link" href="/general/references/best-practices-video-creating-transcoding-and-uploading-workflow.html">ベストプラクティス：トランスコードとアップロード</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/china-delivery-overview.html">中国への配信の概要</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/fairplay-certificate.html">Fairplay 証明書の登録</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/creating-audio-only-renditions-low-bandwidth-delivery.html">音声のみのレンディションの作成</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/making-your-video-content-indexable.html">動画コンテンツのインデックス対応</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/optimal-video-dimensions.html">最適な動画サイズ</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/resetting-your-studio-password.html">Studio パスワードのリセット</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/studio-system-requirements.html">Studio のシステム要件</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/supported-video-and-audio-formats-codecs-and-containers.html">対応している動画・音声フォーマット</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/video-source-file-specifications-and-recommendations.html">動画ソースファイルの仕様と推奨事項</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/working-360deg-videos.html">360°動画の利用</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/working-audio-content.html">音声コンテンツの利用</a></li>
+        <li class="nav-item"><a class="nav-link" href="/general/references/working-multiple-video-cloud-accounts.html">複数アカウントの利用</a></li>
+        </ul>
+        </li>
+        
+            
+            
+            
+        
+        <li class="nav-item subsection-title">
+              
+        <a class="nav-link" href="/general/architecture/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;アーキテクチャ</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item"><a class="nav-link" href="/general/architecture/content-delivery-options.html">コンテンツ配信オプション</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/general/architecture/domains-and-ports-must-be-accessible-video-cloud.html">アクセス可能である必要があるドメインとポート</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/general/architecture/overview-context-aware-encoding.html">Context Aware エンコーディングの概要</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/general/architecture/overview-dynamic-delivery.html">Dynamic Delivery の概要</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/general/architecture/migration-dynamic-delivery.html">スタティック動画から Dynamic Delivery への移行</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/general/architecture/video-cloud-architecture-overview.html">Video Cloud のアーキテクチャ概要</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/general/architecture/video-cloud-studio-cookies.html">Video Cloud Studio におけるクッキー</a></li>
+        
+        </ul>
+        </li>
+        
+           <li class="nav-item subsection-title">
+              
+        <a class="nav-link" href="/general/advertising/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;広告</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item"><a class="nav-link" href="/general/advertising/bc-ad-monetization.html">Brightcove の広告収益化</a></li>
+        
+        </ul>
+        </li>
+        
+        <li class="nav-item subsection-title">
+        
+        <a class="nav-link" href="/general/community/index.html">
+        <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;コミュニティ</a>
+        
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item"><a class="nav-link" href="/general/community/bright-spot-redirect.html">Bright Spot：コミュニティアクセス</a></li>
+        
+        </ul>
+        </li>
+        </ul>
+        </li>
+        
+        <li class="nav-item section-title"><a class="nav-link" href="/release-notes/index.html"><span class="theme-icon-holder me-2">
+        <i class="fa-solid fa-plus"></i></span>&nbsp;リリースノート</a>
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item"><a class="nav-link" href="https://support.brightcove.com/product-updates.html#video_cloud">Video Cloud Studio リリースノート</a></li>
+        
+        </ul>
+        </li>
+        
+        <li class="nav-item section-title"><a class="nav-link" href="/support/index.html"><span class="theme-icon-holder me-2">
+        <i class="fa-solid fa-plus"></i></span>&nbsp;サポート</a>
+        <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+        
+        <li class="nav-item"><a class="nav-link" href="/support/contact-sales.html">営業へのお問い合わせ</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/support/viewing-brightcove-system-status-page.html">Brightcove システムステータスの確認</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/support/known-issues-studio-brightcove-player-and-apis.html">既知の問題</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/support/opening-case-with-brightcove-support.html">サポートケースの作成</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="/support/reset-support-portal-password.html">サポートポータルのパスワードをリセット</a></li>
+            
+            
+            
+          </ul>
+          </li>
+          
+          
+        </ul>
+        </nav>
+        </div>
+        </div>
+        </div><!--//docs-sidebar-->
+        </div>
+        </div>
+
+<div style="margin-top: 20px;">
+  <div class="docs-content" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="docs-overview">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/">ホーム</a></li>
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/media/">メディア</a></li>
+            
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/media/manage/">管理</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">リモートアセット ビデオの操作</li>
+            
+            
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="docs-content">
+  <div class="container">
+    <div class="docs-overview py-5">
+      
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
+      
+      
+      <article class="bcls-article">
+        <h1>リモートアセット ビデオの操作</h1>
+        <summary>このトピックでは、Media モジュールを使用してリモートアセット ビデオを作成する方法について説明します。</summary>
+        <section class="bcls-section">
+          <p>通常、ビデオは Upload モジュールを使用して Video Cloud にアップロードされます。これらのファイルは Brightcove によって管理されます。リモートアセットを使用する場合、ビデオファイルは自社または第三者のシステムで管理され、Video Cloud にそのビデオファイルの URL を提供します。</p>
+          <p>リモートアセット ビデオは CMS API を使用して作成することも可能です。詳細については、<a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-remote-assets.html">開発者向けドキュメント</a>を参照してください。CMS API を使用して作成されたリモートアセット ビデオは、Media モジュールを使用して管理できます。</p>
+        </section>
+        <section class="bcls-section">
+          <h2 id="access">リモートアセットへのアクセス</h2>
+          <p>すべてのリモートアセット ファイルは、認証やアクセス制御なしにアクセス可能な公開 URL である必要があります。リモートアセットが CDN でホストされている場合、リモートアセットの URL はオリジンサーバーではなく、CDN 上のアセットの URL である必要があります。</p>
+        </section>
+        <section class="bcls-section">
+          <h2 id="create">リモートアセットビデオの作成</h2>
+          <p>リモートアセット ビデオを作成するには、以下の手順に従います。</p>
+          <ol class="bcls-tasklist-restart">
+            <li><strong>Media</strong> モジュールを開きます。</li>
+            <li>サイドナビゲーションパネルで <strong>リモートビデオを追加</strong> をクリックします。[リモートビデオを追加]ダイアログが開きます。
+              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node16244-add-remote-video.png" /></figure>
+            </li>
+            <li><strong>ビデオ名</strong> を入力します。ビデオ名は Media モジュールおよびプレーヤーに表示されます。</li>
+            <li><strong>ビデオタイプ</strong> として <strong>ライブ</strong> または <strong>オンデマンド</strong> を選択します。</li>
+            <aside class="bcls-aside bcls-aside--information">注：<strong>ライブ</strong> は HLS のみをサポートし、<strong>オンデマンド</strong> は HLS、MP4、および DASH をサポートします。</aside>
+            <li><strong>オンデマンド</strong> ビデオタイプの場合、<strong>再生時間</strong> を hh:mm:ss 形式で入力します。</li>
+            <li>各レンディションについて、<strong>レンディション URL</strong> と <strong>形式</strong> を入力します。<span class="button-blue">レンディションを追加</span> をクリックします。
+              <aside class="bcls-aside bcls-aside--information">注：プロトコル相対URLがサポートされています。</aside>
+              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node16244-remote-video-props.png" /></figure>
+            </li>
+            <li><span class="button-blue">保存</span> をクリックしてリモートアセットを保存します。ページを更新すると、リモートアセットビデオが Media モジュールに表示されます。
+              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node16244-media-module.png" /></figure>
+            </li>
+          </ol>
+          <p>リモートアセット ビデオにはポスター画像やサムネイル画像がありませんが、画像のアップロードは可能です。ポスター画像やサムネイル画像のアップロードについては、<a href="/media/properties/uploading-poster-and-thumbnail-images.html">ポスターとサムネイル画像のアップロード</a>を参照してください。</p>
+        </section>
+        <section class="bcls-section">
+          <h2 id="edit">リモートアセット ビデオの編集</h2>
+          <p>リモートアセット ビデオを編集するには、以下の手順に従います。</p>
+          <ol class="bcls-tasklist-restart">
+            <li><strong>Media</strong> モジュールを開きます。</li>
+            <li>リモートアセット ビデオのタイトルをクリックして、動画プロパティを開きます。</li>
+            <li><strong>ビデオファイル - リモートアセット</strong> セクションを見つけて、<span class="button-blue-text-bordered"><i data-feather="edit-3"></i> 編集</span> をクリックします。</li>
+            <li><strong>ソース</strong> 行をクリックして選択します。ソース URL をクリックすると、別のブラウザタブで開きます。
+              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node16244-edit-remote-asset.png" /></figure>
+            </li>
+            <li>必要に応じて <strong>URL</strong> および <strong>再生時間</strong> を更新します。<span class="button-blue">保存</span> をクリックして変更を保存します。</li>
+          </ol>
+        </section>
+        <section class="bcls-section">
+          <h2 id="limitations">制限事項</h2>
+          <ul>
+            <li>リモートアセットビデオには、静止画やサムネイル画像をキャプチャする機能を使用できませんが、手動でアップロードすることは可能です。</li>
+            <li><strong>Basic</strong> アカウントで作成されたリモートアセット ビデオは、作成後に編集できません。</li>
+            <li>BYO ライブストリーム プレイリストを持つリモートアセットでは、Brightcove SSAI を使用できません。</li>
+            <li>DRM は、プレーヤーをカスタマイズして DRM ライセンスサーバーと通信させることができる場合にのみサポートされます。Brightcove プレーヤーではプラグインを使用することで対応可能です。他のプレーヤーでは、そのプレーヤーのドキュメントを参照してください。</li>
+            <li>アナリティクス：Brightcoveのアナリティクスは、ビデオの再生時間などのシステム生成のメタデータに依存します。リモートアセットの場合、このようなメタデータが提供されないと、アナリティクスのデータは限定されます。</li>
+            <li>再生保証：Video Cloud にインジェストされたすべてのビデオは Brightcove プレーヤーで再生可能です。これはほとんどのリモートアセットにも当てはまりますが、一部の例外として再生できないケースもあります。たとえば、DASH や HLS の高度な機能の一部には未対応のものがあります。Brightcove 以外のプレーヤーを使用する場合は、そのプレーヤーがビデオフォーマットを完全にサポートしているか確認してください。</li>
+            <li>視聴者のコンピュータの時計が実際の時刻よりも進んでいる場合、リモートアセット ビデオが再生できないことがあります。</li>
+            <li>ライブリモートアセット ビデオにはキューポイントを追加できません。</li>
+            <li>既存の通常の VOD アセットをリモートアセットに変換することはできません。</li>
+          </ul>
+        </section>
+      </article>
+
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+    <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">ページ コンテンツ</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    <!-- </div> -->
+    </div>
+    </div>
+    </div>
+    <div class="page-content" style="background-color: rgb(1, 5, 14);">
+      <div class="container" style="width: 50%;">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-6 col-md">
+              <h5 class="h5-text">Brightcove サポート</h5>
+              <ul class="list-unstyled text-small" style="color: white ;">
+                <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
+                <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/search.html">キュメントの検索</a></li>
+              </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+              <h5 class="h5-text">トレーニング</h5>
+              <ul class="list-unstyled text-small">
+                <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
+                <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
+              </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+              <h5 class="h5-text">Brightcove</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
+                <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>© Brightcove Inc. All rights reserved.</p>
+          <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
+          <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
+    
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
+            title="LinkedIn" target="_blank" class="gf-social-linkedin"
+            style="margin-right: 1rem;"><i data-feather="linkedin"
+              style="color:#8E9093;height: 1.25rem;"></i></a></li>
+    
+            <li class="ms-3"><a
+            href="https://twitter.com/brightcove" title="Twitter" target="_blank"
+            class="gf-social-twitter" style="margin-right: 1rem;"><i
+              data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+    
+            <li class="ms-3"><a
+            href="https://www.facebook.com/Brightcove" title="Facebook"
+            target="_blank" class="gf-social-facebook"><i data-feather="facebook"
+              style="color:#8E9093;height: 1.25rem;"></i></a></li>
+          </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+    
+    
+    <script translate="no">
+      var searchBox = sajari.init({
+        mode: "search-box",
+        project: "1588255093746585379", // Set this to your project.
+        collection: "brightcove-documentation", // Set this to your collection.
+        instantPipeline: "autocomplete", // Pipeline used as you type
+        inputPlaceholder: "Search", // Input element placeholder,
+        styling: {
+          components: {
+            
+            input: {
+              container: {
+              backgroundColor: 'white',
+              }
+            
+            }
+          }
+        },
+        maxSuggestions: 5, // Maximum number of suggestions to show
+          attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+      });
+    
+      
+    
+    
+        searchBox("sub", "pipeline.search-sent", function (_, query) {
+        window.location = "/search.html?q=" + encodeURIComponent(query.q);
+        });
+      
+      </script>
+      
+      <!-- Javascript -->          
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+      <!-- Page Specific JS -->
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+      <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+      <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+    
+      <!-- original footer components -->
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+      <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+      <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+      <script src="/assets/s-site-assets-scripts/selector.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/prism.js"></script>
+      <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/site.js"></script>
+      <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+      <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+      <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+      
+      <script src="/assets/js/sites_nav.js"></script>
+      <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+      <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+      <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+      <script src="/assets/js/feedback.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+      
+      <script translate="no">
+        feather.replace()
+      </script>
+      <!-- <script src="/assets/js/sajari-index.js"></script> -->
+      <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+      <style translate="no">
+        a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+          background-color: lightblue;
+        }
+        div.sj-tabs__tab {
+          margin-top: 3rem;
+          margin-left: .3rem;
+          border-top-left-radius: .4rem;
+          border-top-right-radius: .4rem;
+          background-color:#e8e8e8;
+        }
+    
+        div.sj-tabs__tab.sj-tabs__tab--selected {
+          border-bottom-color: crimson;
+          background-color: #f8f8f8;
+        }
+    
+        p.sj-results__result__description.css-p9jvyt {
+          font-size: 1rem;
+        }
+    
+        .sj-result__text.css-31l7gp h3 {
+          color: navy;
+          font-size: 1.4rem;
+        }
+        </style>
+     </div>
+    </div>
+      </body>
+    </html> 
+    
