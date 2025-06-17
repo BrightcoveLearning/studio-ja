@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>一般情報</title>
+        <title>Adobe Analytics イベント トラッキングの設定</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Player モジュールに関する一般情報です。">
+        <meta name="description" content="このトピックでは、Players モジュールで Adobe Analytics のイベント トラッキングを設定する方法について説明します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3061,7 +3061,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">一般情報</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/general/">一般情報</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Adobe Analytics イベント トラッキングの設定</li>
             
             
           </ol>
@@ -3074,219 +3078,381 @@
   <div class="container">
     <div class="docs-overview py-5">
       
-      
-<style>
-  a {
-    text-decoration: none;
-  }
-</style>
-<article class="bcls-article">
-    <h1><i class="fa-regular fa-play"></i> 一般情報</h1>
-    <summary>Player モジュールに関する一般情報です。</summary>
-    <div class="row">
-      <div class="col-12 col-lg-4 py-3">
-        <div class="card card-hover shadow-sm" onclick="location.href='/players/general/index.html';">
-          <div class="card-body">
-            <div class="card-text">
-              <ul class="list-group list-group-flush">
-                
-                <li class="list-group-item"><a href="/interactivity/getting-started/configuring-player-plugin.html">Interactivity プラグインでのプレーヤー設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/general/configuring-adobe-analytics-event-tracking.html">Adobe Analytics イベントトラッキングの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/general/configuring-google-analytics-event-tracking.html">Google Analytics イベントトラッキングの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/general/configuring-player-advertising-using-players-module.html">プレーヤー広告の設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/general/configuring-player-plugins.html">プレーヤープラグインの設定</a></li>
-                
-                <li class="list-group-item"><a href="/campaign/general/creating-campaign-enabled-player.html">Campaign 対応プレーヤーの作成</a></li>
-                
-                <li class="list-group-item"><a href="/players/general/generating-player-embed-code.html">プレーヤー埋め込みコードの生成</a></li>
-                
-                <li class="list-group-item"><a href="/players/general/v5-players-support.html">Brightcove Player 5のサポート</a></li>
-                
-              </ul>
-            </div>
-          </div>
-          <!--//card-body--> 
-        </div>
-        <!--//card--> 
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
       </div>
-    </div>
-  </article>
-  
+      <br>
+      
+      
+<article class="bcls-article">
+    <h1>Adobe Analytics イベント トラッキングの設定</h1>
+    <summary>このトピックでは、Players モジュールで Adobe Analytics のイベント トラッキングを設定する方法について説明します。</summary>
+    <section class="bcls-section">
+      <p>Players モジュールでは、Brightcove プレーヤーと Adobe Analytics を簡単に統合することができます。これにより、イベント トラッキングデータを Adobe Analytics アカウントに送信し、レポートに活用することが可能になります。</p>
+      <aside class="bcls-aside bcls-aside--information">注：各アナリティクス システムは、データの収集方法および指標の計算方法が異なります。Video Cloud のアナリティクス データは、Adobe Analytics に表示されるデータとは一致しない場合があります。</aside>
+      <aside class="bcls-aside bcls-aside--information">注：Adobe Analytics プラグインは、Brightcove Player SDK を使用している場合はサポートされません。</aside>
+      <p>統合を設定するには、以下の作業を行う必要があります：</p>
+      <ul>
+        <li><a href="#review_events">トラッキング可能なイベントの確認</a></li>
+        <li><a href="#add_events">Adobe Analytics でカスタム サクセス イベントを作成</a></li>
+        <li><a href="#review_parameters">取得可能なパラメーターの確認</a></li>
+        <li><a href="#add_parameters">Adobe Analytics でトラフィック変数を作成</a></li>
+        <li><a href="#enable">Players モジュールで統合を有効化</a></li>
+        <li><a href="#configure_page">データを収集するページを設定</a></li>
+      </ul>
+      <p>統合が設定されると、ビデオイベントのアナリティクス データのみが Adobe Analytics に送信される点にご注意ください。</p>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="review_events">トラッキング可能なイベントの確認</h2>
+      <p>トラッキングするすべての Brightcove イベントは、Adobe Analytics でカスタム サクセス イベントとして作成する必要があります。Adobe 側で生成されたイベント ID は、Players モジュール内で使用されます。これにより、Brightcove のイベントデータを Adobe のサクセスイベントとして渡すことができます。以下のイベント リストを確認し、トラッキングするイベントを決定してください。</p>
+      <ul>
+        <li><strong>Player Load（bcvideo_player_load）</strong> - プレーヤーが読み込まれ、再生の準備が整ったときに送信されます。</li>
+        <li><strong>Video Impression（bcvideo_video_impression）</strong> - ビデオがプレーヤーに読み込まれ、再生の準備が整ったときに送信されます。</li>
+        <li><strong>Video View（bcvideo_video_view）</strong> - ビデオが自動再生またはユーザー操作によって再生を開始したときに送信されます。</li>
+        <li><strong>Video Engagement（bcvideo_video_engagement）</strong> - ユーザーがビデオのタイムラインの一定範囲を視聴した際に送信されます。このイベントはビデオの視聴状況を追跡するハートビート的なものであり、ユーザーの操作やビデオの長さに応じて複数回送信される可能性があります。</li>
+        <li><strong>Play Request（bcvideo_play_request）</strong> - ユーザーが明示的に再生ボタンをクリックするか、プラットフォームが自動再生をトリガーした際に送信されます。</li>
+        <li><strong>Ad Start（bcvideo_ad_start）</strong> - 再生プラットフォームから広告エージェントに制御が渡されたときに送信されます。</li>
+        <li><strong>Ad End（bcvideo_ad_end）</strong> - 広告エージェントから再生プラットフォームに制御が戻ったときに送信されます。</li>
+        <li><strong>エラー（bcvideo_error）</strong> - 再生に支障をきたす致命的なエラーが発生した際に送信されます。</li>
+      </ul>
+      <aside class="bcls-aside bcls-aside--information">注：<code translate="no">bcvideo_video_complete</code> イベントは、Player 7 以降では削除されています。</aside>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="add_events">Adobe Analytics にカスタム サクセス イベントを追加</h2>
+      <p>トラッキングするイベントを決定したら、それらのイベントに対応するカスタム サクセス イベントを Adobe Analytics に作成する必要があります。以下の手順で作成してください。</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Adobe Analytics アカウントにログインします。</li>
+        <li>使用するレポートスイートを選択するか、新しいレポートスイートを作成します（<strong>管理 &gt; レポートスイート</strong>）。</li>
+        <li><strong>設定の編集 &gt; コンバージョン &gt; サクセス イベント</strong> をクリックします。
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-adobe-success-events.png" /></figure>
+        </li>
+        <li><strong>新規追加</strong> をクリックします。</li>
+        <li>以下のイベント情報を入力します：
+          <ul>
+            <li><strong>名前</strong> - <strong>bcvideo-</strong> で始まる前項の名前を <strong>必ず</strong> 使用してください</li>
+            <li><strong>タイプ</strong> - <strong>カウンター</strong> に設定します</li>
+            <li><strong>説明</strong> - 分かりやすい説明を入力します</li>
+          </ul>
+        </li>
+        <li>トラッキングしたい各イベントごとに新しいサクセス イベントを作成し、<strong>保存</strong> をクリックして登録します。</li>
+      </ol>
+      <p>以下の画像は、各 Brightcove イベントに対応して作成されたカスタム サクセス イベント（event7 ～ event15）を示しています。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-success-events-list.png" /></figure>
+    </section>
+
+
+    <section class="bcls-section">
+        <h2 id="review_parameters">取得可能なパラメータの確認</h2>
+        <p>パラメータは追加データを持ち、イベントとともに送信されます。記録されるすべての Brightcove パラメータは、Adobe Analytics でトラフィック変数として作成する必要があります。指定されたパラメータ名は Players モジュール内で使用されます。これにより、Brightcove のパラメータを Adobe のトラフィック変数に渡すことが可能になります。以下のパラメータ一覧を確認し、どのパラメータを取得したいか検討してください。</p>
+        <ul>
+          <li><strong>Account ID (bcvideo_account)</strong> - Brightcoveアカウント名。</li>
+          <li><strong>Player ID (bcvideo_player)</strong> - プレーヤーID。</li>
+          <li><strong>Player Name (bcvideo_player_name)</strong> - プレーヤー名</li>
+          <li><strong>Player Version (bcvideo_platform_version)</strong> - プレーヤーのバージョン番号。</li>
+          <li><strong>Session (bcvideo_session)</strong> - セッション識別子。</li>
+          <li><strong>Video ID (bcvideo_video)</strong> - 動画のビデオID。</li>
+          <li><strong>Video Name (bcvideo_video_name)</strong> - 動画名。</li>
+          <li><strong>Range (bcvideo_range)</strong> - 視聴された秒数の範囲（形式：StartSecond..EndSecond）。</li>
+          <li><strong>Video Seconds Viewed (bcvideo_video_seconds_viewed)</strong> - 視聴された秒数の合計。</li>
+          <li><strong>Video Duration (bcvideo_video_duration)</strong> - 動画の長さ（秒）。</li>
+          <li><strong>Video Percent Viewed (bcvideo_video_percent_viewed)</strong> - 視聴された動画の割合（%）。</li>
+          <li><strong>Error Code (bcvideo_error_code)</strong> - イベントに関連するプラットフォーム固有のエラーコード。</li>
+        </ul>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="add_parameters">Adobe Analytics でのトラフィック変数の作成</h2>
+        <p>どのパラメータをトラッキングするか決定したら、Adobe Analytics でトラフィック変数を作成する必要があります。以下の手順に従って作成してください。</p>
+        <ol class="bcls-tasklist-restart">
+          <li>Adobe Analytics アカウントにログインします。</li>
+          <li>使用するレポートスイートを選択、または新規作成します（<strong>管理 &gt; レポートスイート</strong>）。</li>
+          <li><strong>設定を編集 &gt; トラフィック &gt; トラフィック変数</strong>をクリックします。
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-adobe-traffic-variables.png" /></figure>
+          </li>
+          <li>パラメータ情報を入力します：
+            <ul>
+              <li><strong>Name</strong> - 前セクションに記載された <strong>bcvideo-</strong> の名前を <strong>必ず</strong> 使用してください。</li>
+              <li><strong>Description</strong> - わかりやすい説明を追加してください。</li>
+            </ul>
+          </li>
+          <li>トラッキングしたい各パラメータに対して新しいトラフィック変数を作成し、<strong>保存</strong> をクリックして保存します。</li>
+        </ol>
+        <p>下の画像は、各 Brightcove パラメータに対して作成されたトラフィック変数を示しています。</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-traffic-vars-list.png" /></figure>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="enable">統合の有効化</h2>
+        <p>Adobe Analytics アカウントにログインし、必要な情報を Players モジュールにコピーする必要があります。プレーヤーに対して Adobe Analytics のイベント トラッキングを設定するには、以下の手順に従ってください：</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>Players</strong> モジュールをクリックします。</li>
+          <li>設定したいプレーヤーのリンクをクリックします。</li>
+          <li>左側のナビゲーションメニューで<strong>サードパーティ分析 &gt; Adobe Analytics</strong> をクリックします。</li>
+          <li><strong>Adobe Analytics を有効化</strong>にチェックを入れます。</li>
+          <li>Adobeアカウント情報を入力します：
+            <ul>
+              <li><strong>Report Suite ID</strong></li>
+              <li><strong>Marketing Cloud Org ID</strong></li>
+              <li><strong>Tracking Server</strong></li>
+              <li><strong>CNAME Enabled</strong></li>
+              <li><strong>Visitor Namespace</strong></li>
+            </ul>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-adobe-account-info.png" /></figure>
+          </li>
+          <li>トラッキングしたい各イベントについて、Adobe Analytics で作成されたイベント ID を Brightcove の対応するイベント フィールドに入力します。この例では、<strong>bcvideo_player_load</strong> イベントが Adobe Analytics でカスタム成功イベントとして作成され、<strong>event7</strong> という ID が割り当てられました。
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-player-load-event.png" /></figure>
+            <p>この値を Players モジュール内の <strong>Player Load (bcvideo_player_load)</strong> イベントのフィールドに入力します。</p>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-player-load-event-value.png" /></figure>
+          </li>
+          <li>必要に応じて、Adobe Analytics のすべてのイベントID を Players モジュールに入力します。</li>
+          <li><span class="button-blue">保存</span> をクリックして、イベントのマッピングを保存します。</li>
+          <li>取得したい各パラメータについて、Adobe Analytics で設定したパラメータ番号を Brightcove の対応するパラメータフィールドに <strong>propX</strong >形式で入力します（<strong>X</strong> は Adobe Analytics の Property 番号に対応）。この例では、Brightcove のアカウントID を保持するために、Adobe Analytics で <strong>bcvideo-account</strong> トラフィック変数が作成され、Property #1 に割り当てられました。
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-param-account.png" /></figure>
+            <p>したがって、Players モジュールの該当パラメータには <strong>prop1</strong> を入力する必要があります。</p>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-param-account-value.png" /></figure>
+          </li>
+          <li>必要に応じて、すべてのパラメータ名を Adobe Analytics から Players モジュールに入力します。</li>
+          <li><span class="button-blue">保存</span> をクリックして、パラメータのマッピングを保存します。</li>
+        </ol>
+        <p><strong>プレーヤーに対する変更を必ず公開してください。</strong></p>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="ipx">Gallery In-Page エクスペリエンスでの統合利用</h2>
+        <p>プレーヤーを Gallery In-Page エクスペリエンスで使用する場合、一部の設定が必要です：</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>Gallery</strong> モジュールを開きます。</li>
+          <li>Adobe Analytics 統合が設定されたプレーヤーを使用してエクスペリエンスを編集します。</li>
+          <li>左ナビゲーションの <strong>設定 &gt; 詳細設定</strong> をクリックします。</li>
+          <li>JavaScript の <strong>コード</strong> セクションに以下を追加します：
+            <pre>
+      window.s_gi = window.top.s_gi</pre>
+          </li>
+          <li><span class="button-blue">保存</span> をクリックします。</li>
+        </ol>
+        <p>エクスペリエンスの再公開を忘れないようにしてください。</p>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="configure_page">データ収集のためのページ設定</h2>
+        <p>Adobe Analytics へデータを送信するには、レポートスイートにデータが送られ、レポートに表示される必要があります。データ収集のためのコードを含むページを実装するには、ホスティングサーバーにアクセスして Web サイトに新しいコンテンツをアップロードできる必要があります。また、既存サイトがあると実装が簡単です。</p>
+        <aside class="bcls-aside bcls-aside--information">注：プレーヤーを公開する際は、Videoタグ埋め込みコード（インページ）を使用してください。iframe 埋め込みコードは、プラグインが iframe 内で動作するため必要な JavaScript と連携できず、機能しません。</aside>
+        <p>以下は、Adobe Analytics の基本的な実装手順です。</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>AppMeasurement</strong> for JavaScriptと <strong>Visitor ID</strong> サービスをダウンロードします。Code Manager（<strong>Analytics &gt; 管理 &gt; コードマネージャー</strong>）でダウンロード可能です。ZIP ファイルには複数のファイルが含まれており、<code translate="No">AppMeasurement.js</code> と <code translate="No">VisitorAPI.js</code> が必要です。</li>
+          <li><code translate="No">AppMeasurement.js</code> と <code translate="No">VisitorAPI.js</code> をホストします。これらの JavaScript ファイルは、すべてのページからアクセス可能な Web サーバー上にホストする必要があります。各ページに追加する際にはそのパスが必要です。</li>
+          <li>Brightcove プレーヤーを含むすべてのサイトページに、以下のコードを <code translate="No">&lt;head&gt;</code> または <code translate="No">&lt;body&gt;</code> タグ内に追加して、<code translate="No">AppMeasurement.js</code> と <code translate="No">VisitorAPI.js</code> を参照します。<code translate="No">VisitorAPI.js</code> は <code translate="No">AppMeasurement.js</code> より前に読み込む必要があります。
+            <pre>
+      &lt;script language="JavaScript" type="text/javascript" src="https://Insert Domain and path to file here/VisitorAPI.js"&gt;&lt;/script&gt;
+      &lt;script language="JavaScript" type="text/javascript" src="https://Insert Domain and path to file here/AppMeasurement.js"&gt;&lt;/script&gt;</pre>
+          </li>
+        </ol>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="confirm">設定の確認</h2>
+        <p>Brightcove イベントデータが Adobe Analytics で取得されていることを確認するには、以下の手順に従ってください。</p>
+        <ol class="bcls-tasklist-restart">
+          <li>Adobe Analytics アカウントにログインします。</li>
+          <li><strong>レポート</strong> をクリックします。</li>
+          <li><strong>サイトメトリクス &gt; リアルタイム</strong>をクリックします。</li>
+          <li>正しいレポートスイートが選択されていることを確認します。
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-confirm-report-suite.png" /></figure>
+          </li>
+          <li><strong>構成</strong> をクリックします。</li>
+          <li><strong>レポート名</strong> を入力します。</li>
+          <li><strong>メトリクス</strong>、<strong>一次ディメンション</strong>、<strong>二次ディメンション</strong> として、Adobe Analyticsで <a href="#add_events">成功イベント</a> として設定した Brightcove イベントを選択します。イベントはリストに表示されるはずです。
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-report-select-event.png" /></figure>
+          </li>
+          <li>他のイベントも選択してディメンションを埋めてください。
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-report-defined.png" /></figure>
+          </li>
+          <li><strong>保存してレポート表示</strong> をクリックします。</li>
+          <li>レポートに期待されるデータが表示されることを確認します。
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18852-report.png" /></figure>
+          </li>
+        </ol>
+        <p>データが表示されない場合は、<code translate="No">AppMeasurement.js</code> および <code translate="No">VisitorAPI.js</code> の URL が有効であることを確認してください。ブラウザのコンソールで 404 エラーが出ていないかを確認してください。また、広告ブロッカーが Adobe Analytics へのデータ送信を妨げている可能性もあります。</p>
+      </section>
+</article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
-
-
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">ページ コンテンツ</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
+  
 <!-- </div> -->
 </div>
 </div>
 </div>
 <div class="page-content" style="background-color: rgb(1, 5, 14);">
-<div class="container" style="width: 50%;">
-  <footer class="py-5">
-    <div class="row">
-      <div class="col-6 col-md">
-        <h5 class="h5-text">Brightcove サポート</h5>
-        <ul class="list-unstyled text-small" style="color: white ;">
-          <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
-          <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
-          <li><a class="a-text" href="https://support.brightcove.com/search.html">キュメントの検索</a></li>
-        </ul>
+  <div class="container" style="width: 50%;">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove サポート</h5>
+          <ul class="list-unstyled text-small" style="color: white ;">
+            <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
+            <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/search.html">キュメントの検索</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">トレーニング</h5>
+          <ul class="list-unstyled text-small">
+            <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
+            <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
+          </ul>
+        </div>
       </div>
     
-      <div class="col-6 col-md">
-        <h5 class="h5-text">トレーニング</h5>
-        <ul class="list-unstyled text-small">
-          <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
-          <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
-        </ul>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© Brightcove Inc. All rights reserved.</p>
+      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
+      <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
+
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
+        title="LinkedIn" target="_blank" class="gf-social-linkedin"
+        style="margin-right: 1rem;"><i data-feather="linkedin"
+          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a
+        href="https://twitter.com/brightcove" title="Twitter" target="_blank"
+        class="gf-social-twitter" style="margin-right: 1rem;"><i
+          data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a
+        href="https://www.facebook.com/Brightcove" title="Facebook"
+        target="_blank" class="gf-social-facebook"><i data-feather="facebook"
+          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+      </ul>
       </div>
-    
-      <div class="col-6 col-md">
-        <h5 class="h5-text">Brightcove</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
-          <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
-          <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
-          <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-    <p>© Brightcove Inc. All rights reserved.</p>
-    <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
-    <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
-
-    <ul class="list-unstyled d-flex">
-      <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
-      title="LinkedIn" target="_blank" class="gf-social-linkedin"
-      style="margin-right: 1rem;"><i data-feather="linkedin"
-        style="color:#8E9093;height: 1.25rem;"></i></a></li>
-
-      <li class="ms-3"><a
-      href="https://twitter.com/brightcove" title="Twitter" target="_blank"
-      class="gf-social-twitter" style="margin-right: 1rem;"><i
-        data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
-
-      <li class="ms-3"><a
-      href="https://www.facebook.com/Brightcove" title="Facebook"
-      target="_blank" class="gf-social-facebook"><i data-feather="facebook"
-        style="color:#8E9093;height: 1.25rem;"></i></a></li>
-    </ul>
-    </div>
-  </footer>
-</div>
+    </footer>
+  </div>
 </div>
 
 
 <script translate="no">
-var searchBox = sajari.init({
-  mode: "search-box",
-  project: "1588255093746585379", // Set this to your project.
-  collection: "brightcove-documentation", // Set this to your collection.
-  instantPipeline: "autocomplete", // Pipeline used as you type
-  inputPlaceholder: "Search", // Input element placeholder,
-  styling: {
-    components: {
-      
-      input: {
-        container: {
-        backgroundColor: 'white',
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documentation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder,
+    styling: {
+      components: {
+        
+        input: {
+          container: {
+          backgroundColor: 'white',
+          }
+        
         }
-      
       }
-    }
-  },
-  maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-});
-
-
-
-
-  searchBox("sub", "pipeline.search-sent", function (_, query) {
-  window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    },
+    maxSuggestions: 5, // Maximum number of suggestions to show
+      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
   });
 
-</script>
-
-<!-- Javascript -->          
-<script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
-<script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+  
 
 
-<!-- Page Specific JS -->
-<script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
-<!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
-<script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
-<script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
-<script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+    window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+  </script>
+  
+  <!-- Javascript -->          
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 
-<!-- original footer components -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <!-- Page Specific JS -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
 
-<script src="/assets/s-site-assets-scripts/https-fix.js"></script>
-<script src="/assets/s-site-assets-scripts/setDate.js"></script>
-<script src="/assets/s-site-assets-scripts/selector.js"></script>
+  <!-- original footer components -->
 
-<script src="/assets/s-site-assets-scripts/prism.js"></script>
-<script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
-<script src="/assets/s-site-assets-scripts/site.js"></script>
-<script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
-<!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
-<script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/selector.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
 
-<script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
 
-<script src="/assets/js/sites_nav.js"></script>
-<script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
-<script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
-<script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
-<script src="/assets/js/feedback.js"></script>
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
 
-<script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
-
-<script translate="no">
-  feather.replace()
-</script>
-<!-- <script src="/assets/js/sajari-index.js"></script> -->
-<script src="/assets/s-site-assets-scripts/in-app.js"></script>
-<style translate="no">
-  a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-    background-color: lightblue;
-  }
-  div.sj-tabs__tab {
-    margin-top: 3rem;
-    margin-left: .3rem;
-    border-top-left-radius: .4rem;
-    border-top-right-radius: .4rem;
-    background-color:#e8e8e8;
-  }
-
-  div.sj-tabs__tab.sj-tabs__tab--selected {
-    border-bottom-color: crimson;
-    background-color: #f8f8f8;
-  }
-
-  p.sj-results__result__description.css-p9jvyt {
-    font-size: 1rem;
-  }
-
-  .sj-result__text.css-31l7gp h3 {
-    color: navy;
-    font-size: 1.4rem;
-  }
-  </style>
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+ </div>
 </div>
-</div>
-</body>
+  </body>
 </html> 
