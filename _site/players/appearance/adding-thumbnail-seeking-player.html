@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>外観とコントロール</title>
+        <title>Brightcove プレーヤーへのサムネイルシーク機能の追加</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="プレーヤーの外観とスタイリングを制御する方法について学びます。">
+        <meta name="description" content="このトピックでは、Brightcove プレーヤーにサムネイルシーク機能を追加する方法について説明します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3061,7 +3061,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">外観とコントロール</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/appearance/">外観</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Brightcove プレーヤーへのサムネイルシーク機能の追加</li>
             
             
           </ol>
@@ -3074,50 +3078,71 @@
   <div class="container">
     <div class="docs-overview py-5">
       
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
       
-<style>
-  a {
-    text-decoration: none;
-  }
-</style>
-<article class="bcls-article">
-    <h1><i class="fa-regular fa-play"></i> 外観とコントロール</h1>
-    <summary>プレーヤーの外観とスタイリングを制御する方法について学びます。</summary>
-    <div class="row">
-      <div class="col-12 col-lg-4 py-3">
-        <div class="card card-hover shadow-sm" onclick="location.href='/players/appearance/index.html';">
-          <div class="card-body">
-            <div class="card-text">
-              <ul class="list-group list-group-flush">
-                
-                <li class="list-group-item"><a href="/players/appearance/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-playlist-endscreen-using-plugin.html">プレイリストのエンドスクリーン設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-controls.html">プレーヤーコントロールの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-endscreen.html">プレーヤーのエンドスクリーン設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-localization.html">プレーヤーのローカライズ設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-social-properties-player.html">ソーシャルプロパティの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/styling-players.html">プレーヤーのスタイリング</a></li>
-                
-              </ul>
+      
+      <article class="bcls-article">
+        <h1>Brightcove プレーヤーへのサムネイルシーク機能の追加</h1>
+        <summary>このトピックでは、Brightcove プレーヤーにサムネイルシーク機能を追加する方法について説明します。</summary>
+        <section class="bcls-section">
+          
+          <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1689514929134937463">&nbsp;</div>
+          <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+          
+          <p>プレーヤーは、プログレスバー上にビデオのサムネイル画像を表示するように設定できます。サムネイル画像は、その時点のビデオのプレビューを表示し、視聴者がビデオをプレビューして特定の位置にジャンプできるようにします。以下のビデオを再生し、プログレスバーにカーソルを合わせると、サムネイルシーク機能を確認できます。</p>
+          <div style="position: relative; display: block; max-width: 640px;">
+            <div style="padding-top: 56.25%;">
+              <iframe src="https://players.brightcove.net/1752604059001/p6Cx8IOkV_default/index.html?videoId=5124705901001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
             </div>
           </div>
-          <!--//card-body--> 
-        </div>
-        <!--//card--> 
-      </div>
-    </div>
-  </article>
-  
+          <aside class="bcls-aside bcls-aside--information">注：この機能は、プレイリスト プレーヤーでは現在利用できません。</aside>
+          <aside class="bcls-aside bcls-aside--information">注：モバイル デバイスでのサムネイル表示はサポートされていません。</aside>
+          <aside class="bcls-aside bcls-aside--information">注：Brightcove Playback API（PAPI）のレスポンスをベースにカスタム実装を構築する場合、以下にご注意ください：
+            <ul>
+              <li>サーバーサイド広告挿入（SSAI）を使用している場合、サムネイルのマニフェストは PAPI レスポンスではなく VMAP 内にあります。</li>
+              <li>SSAI を使用していない場合、サムネイルのマニフェストは PAPI レスポンスに含まれます。</li>
+            </ul>
+          </aside>
+          <h3>サムネイル画像はいつ生成されますか？</h3>
+          <p>Brightcove はリクエスト時に画像を動的に生成します。Dynamic Delivery で取り込まれたすべてのビデオは、最初のリクエスト時に画像が生成されます。これにより、使用されていないビデオのために画像が生成されることを防ぎます。一度生成された画像は、他の画像と同様に、ローカルおよび CDN にキャッシュされ、繰り返し表示されます。</p>
+          <h3>どのくらいの頻度で画像が生成されますか？</h3>
+          <p>サムネイルリストは、プレーヤーの初期化時のピクセル幅に基づいてフィルター処理されます。このリストは、プレーヤーのスタイル設定、ウィンドウサイズ、プラットフォーム／デバイスなどにより大きく異なります。サムネイルプラグインは、ユーザーがプログレスバーにカーソルを合わせた際、およそ 30 ピクセルごとに新しいサムネイルを表示することを目指しています。たとえば、プレーヤーの幅が 1,500 ピクセルの場合、約 50 個のサムネイルが表示されるようリストがフィルターされます。WebVTT キューの残りの時間間隔は、コンテンツの再生時間に応じて調整されます。</p>
+        </section>
+        <section class="bcls-section">
+          <h2 id="Requirements">要件</h2>
+          <p>サムネイルシーク機能を使用するには、以下が必要です：</p>
+          <ul>
+            <li>Brightcove プレーヤー バージョン 6.41.0 以上</li>
+            <li>Dynamic Delivery のトランスコードプロファイルを使用して取り込まれたビデオ</li>
+            <li>サーバーサイド広告挿入（SSAI）を使用する場合、<strong>videojs-ssai</strong> プラグイン バージョン 1.10.0 以上</li>
+          </ul>
+        </section>
+        <section class="bcls-section">
+          <h2 id="Implementing_thumbnails_using_Studio">サムネイルシーク機能の設定</h2>
+          <p>デフォルトでは、新しく作成されたプレーヤーにはサムネイルシーク機能が有効になっています。特定のプレーヤーに対してサムネイルシークを設定するには、以下の手順に従ってください：</p>
+          <ol class="bcls-tasklist-restart">
+            <li><strong>Players</strong> モジュールを開きます。</li>
+            <li>設定したいプレーヤーのリンクをクリックします。</li>
+            <li>左側のナビゲーションメニューから <strong>コントロール</strong> をクリックします。</li>
+            <li><strong>サムネイルのシーク</strong> にチェックを入れます。
+              <figure class="bcls-figure">
+              <img class="bcls-image--no-border" alt="Brightcove Plugin" src="/assets/images/s-players-img/appearance/thumbnail-seeking.png" /> </figure></li>
+            <li><span class="button-gray-border">公開と埋め込み</span> をクリックし、<span class="button-blue">変更を公開</span> をクリックしてプレーヤーを公開します。変更が公開済みのプレーヤーに反映されるまで、最大で 5 分かかる場合があります。</li>
+          </ol>
+        </section>
+      </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">ページ コンテンツ</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
   
 <!-- </div> -->
 </div>
@@ -3288,3 +3313,4 @@
 </div>
   </body>
 </html> 
+

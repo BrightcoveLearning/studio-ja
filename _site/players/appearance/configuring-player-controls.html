@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>外観とコントロール</title>
+        <title>プレーヤーコントロールの設定</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="プレーヤーの外観とスタイリングを制御する方法について学びます。">
+        <meta name="description" content="このトピックでは、プレーヤーのコントロールを設定する方法について説明します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3061,7 +3061,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">外観とコントロール</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/appearance/">外観</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">プレーヤーコントロールの設定</li>
             
             
           </ol>
@@ -3074,217 +3078,352 @@
   <div class="container">
     <div class="docs-overview py-5">
       
-      
-<style>
-  a {
-    text-decoration: none;
-  }
-</style>
-<article class="bcls-article">
-    <h1><i class="fa-regular fa-play"></i> 外観とコントロール</h1>
-    <summary>プレーヤーの外観とスタイリングを制御する方法について学びます。</summary>
-    <div class="row">
-      <div class="col-12 col-lg-4 py-3">
-        <div class="card card-hover shadow-sm" onclick="location.href='/players/appearance/index.html';">
-          <div class="card-body">
-            <div class="card-text">
-              <ul class="list-group list-group-flush">
-                
-                <li class="list-group-item"><a href="/players/appearance/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-playlist-endscreen-using-plugin.html">プレイリストのエンドスクリーン設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-controls.html">プレーヤーコントロールの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-endscreen.html">プレーヤーのエンドスクリーン設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-localization.html">プレーヤーのローカライズ設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-social-properties-player.html">ソーシャルプロパティの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/styling-players.html">プレーヤーのスタイリング</a></li>
-                
-              </ul>
-            </div>
-          </div>
-          <!--//card-body--> 
-        </div>
-        <!--//card--> 
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
       </div>
-    </div>
-  </article>
-  
+      <br>
+      
+      
+<article class="bcls-article">
+    <h1>プレーヤーコントロールの設定</h1>
+    <summary>このトピックでは、プレーヤーのコントロールを設定する方法について説明します。</summary>
+    <section class="bcls-section">
+      <p>画質セレクター、再生速度、ピクチャ イン ピクチャ、全画面表示コントロール、縦型音量スライダーなど、さまざまなプレーヤーコントロールを設定できます。</p>
+      <figure class="bcls-figure">
+        <img class="bcls-image--no-border" alt="style menu" src="/assets/images/s-players-img/appearance/node18509-player-controls-example.png" />
+      </figure>
+      <p><strong>コントロール</strong> プロパティを設定するには、以下の手順に従ってください：</p>
+      <ol class="bcls-tasklist-restart">
+        <li><strong>Players</strong> モジュールを開きます。</li>
+        <li>設定したいプレーヤーのリンクをクリックします。</li>
+        <li>左側のナビゲーションメニューで <strong>コントロール</strong> をクリックします。</li>
+      </ol>
+    
+      <figure class="bcls-figure">
+        <img class="bcls-image--no-border" alt="style menu" src="/assets/images/s-players-img/appearance/node18509-player-controls-vc.webp" />
+      </figure>
+    
+      <p>以下のコントロールを設定できます：</p>
+      <ul>
+        <li><a href="#quality">品質セレクター</a></li>
+        <li><a href="#seek-forward-backward">早送り／巻き戻し</a></li>
+        <li><a href="#rates">再生速度</a></li>
+        <li><a href="#fullscreen">フルスクリーン</a></li>
+        <li><a href="#volume">縦向き音量ボタン</a></li>
+        <li><a href="#seeking">サムネイルのシーク</a></li>
+        <li><a href="#picture-in-picture">ピクチャ イン ピクチャ</a></li>
+        <li><a href="#skip">次のビデオへスキップ（プレイリスト）</a></li>
+      </ul>
+      <p>変更を加えた後は、プレーヤーを再公開して変更内容が反映されるようにしてください。</p>
+      <aside class="bcls-aside bcls-aside--information">注：プレーヤーに加えた変更は、公開済みプレーヤーに反映されるまで最大で 5 分かかる場合があります。</aside>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="quality">品質セレクター</h2>
+      <p><strong>品質セレクター</strong>を有効にすると、ビデオ再生中に異なるレンディションを手動で選択できるようになります。プレーヤーの右下に歯車アイコンが表示されます。</p>
+      <aside class="bcls-aside bcls-aside--information">注：品質セレクターを使用するには、Brightcove Player バージョン 5.17.0 以降が必要です。また、すべてのブラウザで動作するわけではありません。</aside>
+      <aside class="bcls-aside bcls-aside--information">注：Apple は、iOS またはデスクトップでの再生品質の制御を許可していません。これは、帯域幅、接続速度、画面サイズなどに基づいて自動的に画質を調整するアダプティブ ビットレート ストリーミングを使用しているためです。</aside>
+      <p>品質セレクターを有効にすると、<strong>品質セレクターラベル</strong> に次の2つのオプションが利用可能になります：</p>
+      <ul>
+        <li><strong>解像度を表示（例：720p）</strong> - レンディションが水平解像度で表示されます。
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node18509-resolution.png" />
+          </figure>
+          <p>このオプションを使用する場合、別のパラメーター（<code translate="No">resolutionLabelBitrates</code>）を Quality Selection プラグインに追加することで、ビットレートも表示できます。</p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node18509-resolution-bitrates.png" />
+          </figure>
+          <p>この設定は、Players モジュールの UI からではなく、プラグイン パラメーターを編集して行う必要があります。詳細は<a href="https://player.support.brightcove.com/plugins/quality-selection-plugin.html">Quality Selection プラグイン</a> ドキュメントをご参照ください。</p>
+        </li>
+        <li><strong>HD/SDを表示</strong> - プレーヤーは各レンディションのビットレート情報をもとに、SD か HD かを判断して表示します。
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node18509-hd-sd.png" />
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="bcls-section">
+        <h2 id="seek-forward-backward">早送り／巻き戻し</h2>
+        <p>コントロールバーに早送り（または巻き戻し）ボタンを追加します。このボタンを使用すると、指定した秒数（5秒、10秒、または30秒）だけビデオを早送り（または巻き戻し）することができます。
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-players-img/appearance/seek-forward.webp" alt="seek forward/backward">
+            <figcaption class="bcls-caption--image">早送り／巻き戻し</figcaption>
+          </figure>
+        </p>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="rates">再生速度</h2>
+        <p><strong>再生速度</strong> は、バージョン 7 以降のすべての新しいプレーヤーでデフォルトで有効になっています。この機能を使用すると、異なる再生速度を手動で選択できます。再生速度アイコンは、プレーヤーの右下に表示されます。</p>
+        <aside class="bcls-aside bcls-aside--information">注記：
+          <ul>
+            <li>再生速度セレクターを使用するには、Brightcove Player バージョン6.35.0以降が必要です。また、すべてのブラウザで動作するわけではありません。</li>
+            <li>再生速度コントロールを表示するには、プレーヤーの幅が少なくとも 424 ピクセル必要です。</li>
+            <li>Safari は 2 倍速を超える速度をサポートしていません。</li>
+          </ul>
+        </aside>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node18509-playback-rates.png" />
+        </figure>
+        <aside class="bcls-aside bcls-aside--information">再生速度機能はアクセシビリティの観点から有用です。たとえば、聴覚処理に課題のあるユーザーは、ビデオをデフォルトよりも遅く再生することで理解しやすくなり、視覚障がいのあるユーザーは、ビデオをより速い速度で聞くことを希望する場合があります。</aside>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="fullscreen">フルスクリーン</h2>
+        <p><strong>フルスクリーン</strong> を選択すると、全画面表示コントロールが有効になります。全画面表示コントロールを使用すると、プレーヤーを拡大して画面全体に表示できます。ビデオの再生が始まると、プレーヤーの右下に全画面アイコンが表示されます。</p>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="volume">縦向き音量ボタン</h2>
+        <p><strong>縦向き音量ボタン</strong>を選択すると、音量スライダーが縦方向に表示されます。</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node18509-vertical-volume.png" />
+        </figure>
+        <aside class="bcls-aside bcls-aside--information">この機能は Brightcove Player 6.32. 0以降でのみ使用可能です。</aside>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="seeking">サムネイルシーク</h2>
+        <p><strong>サムネイルシーク</strong>を選択すると、進行バー上にビデオのサムネイルが表示されます。</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node18509-thumbnail-seeking.png" />
+        </figure>
+        <aside class="bcls-aside bcls-aside--information">この機能は Brightcove Player 6.41.0 以降でのみ使用可能です。サムネイルシークの詳細については、<a href="adding-thumbnail-seeking-player.html">Brightcove Player にサムネイルシークを追加する</a>をご参照ください。</aside>
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="skip">次のビデオへスキップ（プレイリスト）</h2>
+        <p><strong>次のビデオへスキップ（プレイリスト）</strong>を選択すると、スキップコントロールが有効になります。スキップコントロールをクリックすると、プレイリスト内の次のビデオへ進むことができます。</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node18509-skip-control.png" />
+        </figure>
+      </section>
+
+
+      <section class="bcls-section">
+        <h2 id="picture-in-picture">ピクチャ イン ピクチャ</h2>
+        <p>HTML5 のピクチャ イン ピクチャ機能は次のように定義されています：<em>ウェブサイトが他のウィンドウの上に常に表示される浮動型のビデオウィンドウを作成できるようにすることで、ユーザーが他のコンテンツサイトやデバイス上のアプリケーションと操作しながらメディアを継続して視聴できるようにする</em>。</p>
+        <p>ピクチャ イン ピクチャの例は、以下の 2 つのスクリーンショットに示されています。最初のスクリーンショットは、ブラウザ上でビデオを表示しているプレーヤーを示しています。プレーヤーの右下にある赤い矢印で示されたピクチャ イン ピクチャ ボタンに注目してください。</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="p-in-p nirnak" src="/assets/images/s-players-img/appearance/node18509-normal.png" />
+        </figure>
+        <p>次のスクリーンショットは、ピクチャ イン ピクチャ ボタンをクリックした結果を示しています。プレーヤーはデフォルトで画面の右下付近（ブラウザではありません）に移動します。プレーヤーは、視聴者が希望する場所にドラッグして移動させることができます。</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node18509-p-in-p.png" />
+        </figure>
+        <p>この機能はデフォルトで有効になっています。すべてのブラウザがこのピクチャ イン ピクチャ機能に対応しているわけではありません。以下の表は、現在の対応状況を示しています。</p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>ブラウザ</th>
+              <th>対応状況</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Chrome</td>
+              <td>バージョン 78 以上で対応</td>
+            </tr>
+            <tr>
+              <td>Safari</td>
+              <td>バージョン 13.1 以上で対応</td>
+            </tr>
+            <tr>
+              <td>Firefox</td>
+              <td>バージョン 13.1 以上で対応</td>
+            </tr>
+            <tr>
+              <td>Edge</td>
+              <td>バージョン 78 以上で対応</td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="bcls-aside bcls-aside--information language-editable">ピクチャ イン ピクチャ機能は、Firefox では他のブラウザとは動作が異なる点にご注意ください。Firefox ではプレーヤーではなく、ブラウザ側で機能を有効にする必要があります。</aside>
+        <p>この機能は、<strong>Players</strong> モジュールの <strong>JSON エディター</strong> オプションを使用して Studio で無効にすることができます。そのためには、以下のように設定オプション<code translate="No">"picture_in_picture_control": false,</code>を追加します：</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/JSON_example.png" />
+        </figure>
+      </section>
+</article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
-<!-- </div> -->
-</div>
-</div>
-</div>
-<div class="page-content" style="background-color: rgb(1, 5, 14);">
-  <div class="container" style="width: 50%;">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-6 col-md">
-          <h5 class="h5-text">Brightcove サポート</h5>
-          <ul class="list-unstyled text-small" style="color: white ;">
-            <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
-            <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/search.html">キュメントの検索</a></li>
-          </ul>
-        </div>
+    <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">ページ コンテンツ</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
       
-        <div class="col-6 col-md">
-          <h5 class="h5-text">トレーニング</h5>
-          <ul class="list-unstyled text-small">
-            <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
-            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
-          </ul>
-        </div>
-      
-        <div class="col-6 col-md">
-          <h5 class="h5-text">Brightcove</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
-            <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
-          </ul>
-        </div>
-      </div>
+    <!-- </div> -->
+    </div>
+    </div>
+    </div>
+    <div class="page-content" style="background-color: rgb(1, 5, 14);">
+      <div class="container" style="width: 50%;">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-6 col-md">
+              <h5 class="h5-text">Brightcove サポート</h5>
+              <ul class="list-unstyled text-small" style="color: white ;">
+                <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
+                <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/search.html">キュメントの検索</a></li>
+              </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+              <h5 class="h5-text">トレーニング</h5>
+              <ul class="list-unstyled text-small">
+                <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
+                <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
+              </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+              <h5 class="h5-text">Brightcove</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
+                <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>© Brightcove Inc. All rights reserved.</p>
+          <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
+          <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
     
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>© Brightcove Inc. All rights reserved.</p>
-      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
-      <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
-
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
-        title="LinkedIn" target="_blank" class="gf-social-linkedin"
-        style="margin-right: 1rem;"><i data-feather="linkedin"
-          style="color:#8E9093;height: 1.25rem;"></i></a></li>
-
-        <li class="ms-3"><a
-        href="https://twitter.com/brightcove" title="Twitter" target="_blank"
-        class="gf-social-twitter" style="margin-right: 1rem;"><i
-          data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
-
-        <li class="ms-3"><a
-        href="https://www.facebook.com/Brightcove" title="Facebook"
-        target="_blank" class="gf-social-facebook"><i data-feather="facebook"
-          style="color:#8E9093;height: 1.25rem;"></i></a></li>
-      </ul>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
+            title="LinkedIn" target="_blank" class="gf-social-linkedin"
+            style="margin-right: 1rem;"><i data-feather="linkedin"
+              style="color:#8E9093;height: 1.25rem;"></i></a></li>
+    
+            <li class="ms-3"><a
+            href="https://twitter.com/brightcove" title="Twitter" target="_blank"
+            class="gf-social-twitter" style="margin-right: 1rem;"><i
+              data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+    
+            <li class="ms-3"><a
+            href="https://www.facebook.com/Brightcove" title="Facebook"
+            target="_blank" class="gf-social-facebook"><i data-feather="facebook"
+              style="color:#8E9093;height: 1.25rem;"></i></a></li>
+          </ul>
+          </div>
+        </footer>
       </div>
-    </footer>
-  </div>
-</div>
-
-
-<script translate="no">
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documentation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder,
-    styling: {
-      components: {
-        
-        input: {
-          container: {
-          backgroundColor: 'white',
+    </div>
+    
+    
+    <script translate="no">
+      var searchBox = sajari.init({
+        mode: "search-box",
+        project: "1588255093746585379", // Set this to your project.
+        collection: "brightcove-documentation", // Set this to your collection.
+        instantPipeline: "autocomplete", // Pipeline used as you type
+        inputPlaceholder: "Search", // Input element placeholder,
+        styling: {
+          components: {
+            
+            input: {
+              container: {
+              backgroundColor: 'white',
+              }
+            
+            }
           }
-        
+        },
+        maxSuggestions: 5, // Maximum number of suggestions to show
+          attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+      });
+    
+      
+    
+    
+        searchBox("sub", "pipeline.search-sent", function (_, query) {
+        window.location = "/search.html?q=" + encodeURIComponent(query.q);
+        });
+      
+      </script>
+      
+      <!-- Javascript -->          
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+      <!-- Page Specific JS -->
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+      <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+      <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+    
+      <!-- original footer components -->
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+      <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+      <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+      <script src="/assets/s-site-assets-scripts/selector.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/prism.js"></script>
+      <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/site.js"></script>
+      <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+      <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+      <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+      
+      <script src="/assets/js/sites_nav.js"></script>
+      <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+      <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+      <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+      <script src="/assets/js/feedback.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+      
+      <script translate="no">
+        feather.replace()
+      </script>
+      <!-- <script src="/assets/js/sajari-index.js"></script> -->
+      <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+      <style translate="no">
+        a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+          background-color: lightblue;
         }
-      }
-    },
-    maxSuggestions: 5, // Maximum number of suggestions to show
-      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-
-  
-
-
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-    window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-  </script>
-  
-  <!-- Javascript -->          
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-
-
-  <!-- Page Specific JS -->
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
-  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
-  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
-
-  <!-- original footer components -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
-  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
-  <script src="/assets/s-site-assets-scripts/selector.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/prism.js"></script>
-  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/site.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
-  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
-  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
-  
-  <script src="/assets/js/sites_nav.js"></script>
-  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
-  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
-  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
-  <script src="/assets/js/feedback.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
-  
-  <script translate="no">
-    feather.replace()
-  </script>
-  <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
-  <style translate="no">
-    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-      background-color: lightblue;
-    }
-    div.sj-tabs__tab {
-      margin-top: 3rem;
-      margin-left: .3rem;
-      border-top-left-radius: .4rem;
-      border-top-right-radius: .4rem;
-      background-color:#e8e8e8;
-    }
-
-    div.sj-tabs__tab.sj-tabs__tab--selected {
-      border-bottom-color: crimson;
-      background-color: #f8f8f8;
-    }
-
-    p.sj-results__result__description.css-p9jvyt {
-      font-size: 1rem;
-    }
-
-    .sj-result__text.css-31l7gp h3 {
-      color: navy;
-      font-size: 1.4rem;
-    }
-    </style>
- </div>
-</div>
-  </body>
-</html> 
+        div.sj-tabs__tab {
+          margin-top: 3rem;
+          margin-left: .3rem;
+          border-top-left-radius: .4rem;
+          border-top-right-radius: .4rem;
+          background-color:#e8e8e8;
+        }
+    
+        div.sj-tabs__tab.sj-tabs__tab--selected {
+          border-bottom-color: crimson;
+          background-color: #f8f8f8;
+        }
+    
+        p.sj-results__result__description.css-p9jvyt {
+          font-size: 1rem;
+        }
+    
+        .sj-result__text.css-31l7gp h3 {
+          color: navy;
+          font-size: 1.4rem;
+        }
+        </style>
+     </div>
+    </div>
+      </body>
+    </html> 
+    

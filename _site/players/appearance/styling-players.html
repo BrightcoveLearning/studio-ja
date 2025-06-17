@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>外観とコントロール</title>
+        <title>プレーヤーのスタイリング</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="プレーヤーの外観とスタイリングを制御する方法について学びます。">
+        <meta name="description" content="このトピックでは、Players モジュールを使用して設定可能なプレーヤーのスタイリング設定の概要を説明します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3061,7 +3061,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">外観とコントロール</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/appearance/">外観</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">プレーヤーのスタイリング</li>
             
             
           </ol>
@@ -3074,50 +3078,132 @@
   <div class="container">
     <div class="docs-overview py-5">
       
-      
-<style>
-  a {
-    text-decoration: none;
-  }
-</style>
-<article class="bcls-article">
-    <h1><i class="fa-regular fa-play"></i> 外観とコントロール</h1>
-    <summary>プレーヤーの外観とスタイリングを制御する方法について学びます。</summary>
-    <div class="row">
-      <div class="col-12 col-lg-4 py-3">
-        <div class="card card-hover shadow-sm" onclick="location.href='/players/appearance/index.html';">
-          <div class="card-body">
-            <div class="card-text">
-              <ul class="list-group list-group-flush">
-                
-                <li class="list-group-item"><a href="/players/appearance/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-playlist-endscreen-using-plugin.html">プレイリストのエンドスクリーン設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-controls.html">プレーヤーコントロールの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-endscreen.html">プレーヤーのエンドスクリーン設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-player-localization.html">プレーヤーのローカライズ設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/configuring-social-properties-player.html">ソーシャルプロパティの設定</a></li>
-                
-                <li class="list-group-item"><a href="/players/appearance/styling-players.html">プレーヤーのスタイリング</a></li>
-                
-              </ul>
-            </div>
-          </div>
-          <!--//card-body--> 
-        </div>
-        <!--//card--> 
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
       </div>
-    </div>
-  </article>
-  
+      <br>
+      
+      
+<article class="bcls-article">
+    <h1>プレーヤーのスタイリング</h1>
+    <summary>このトピックでは、Players モジュールを使用して設定可能なプレーヤーのスタイリング設定の概要を説明します。</summary>
+    <section class="bcls-section"> 
+      <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4805928382001">&nbsp;</div>
+      <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
+      
+      <p>基本的なプレーヤーのスタイリング オプションは、Players モジュールを使用して設定できます。Brightcove Player を完全にカスタマイズするには、Cascading Style Sheets（CSS）を使用する必要があります。CSS を使用したプレーヤーの外観カスタマイズについての詳細は、<a href="https://player.support.brightcove.com/getting-started/step-step-player-customization.html">ステップ バイ ステップ：プレーヤーカスタマイズ</a> の開発者向けドキュメントをご覧ください。</p>
+      <p>プレーヤーの <strong>スタイリング</strong> 設定を行うには、以下の手順に従ってください：</p>
+      <ol class="bcls-tasklist-restart">
+        <li><strong>Players</strong> モジュールを開きます。</li>
+        <li>設定したいプレーヤーのリンクをクリックします。</li>
+        <li>左側のナビゲーションメニューから <strong>スタイル設定</strong> をクリックします。</li>
+        <aside class="bcls-aside bcls-aside--information">注：スタイリング オプションをクリックすると、プレーヤースキンが更新され、「プレーヤーが変更されました」というメッセージが表示されます。これは新しいプレーヤーやスキン値が設定されていないプレーヤーに適用されます。</aside>
+      </ol>
+      
+      <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="style menu" src="/assets/images/s-players-img/appearance/node14051-player-styling-settings-vc.png" /></figure>
+      
+      <p>以下のスタイル設定が可能です：</p>
+      <ul>
+        <li><a href="#playlist_type">プレイリストの種類</a></li>
+        <li><a href="#title_desc">タイトルと説明</a></li>
+        <li><a href="#play_button_shape">再生ボタンの形状</a></li>
+        <li><a href="#play_button_pos">再生ボタンの位置</a></li>
+        <li><a href="#color_theme">カラーテーマ</a></li>
+        <li><a href="#logo_overlay">ロゴ オーバーレイ</a></li>
+      </ul>
+      <p>変更を加えた後は、変更内容が反映されるように<strong>プレーヤーを公開</strong>してください。</p>
+      <aside class="bcls-aside bcls-aside--information">注：プレーヤーに加えた変更が公開済みのプレーヤーに反映されるまで、最大 5 分かかることがあります。</aside>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="playlist_type">プレイリストの種類</h2>
+      <p><strong>プレイリストの種類</strong> 設定では、プレイリストの表示方法を制御します。このオプションは、<strong>プレーヤー情報</strong> プロパティで <strong>プレーヤーの種類</strong> が <strong>プレイリスト</strong> に設定されている場合にのみ表示されます。以下のオプションが利用可能です：</p>
+      <ul>
+        <li><strong>横型プレイリスト</strong> - プレーヤーに横型のプレイリストを表示します。</li>
+        <li><strong>縦型プレイリスト</strong> - プレーヤーに縦型のプレイリストを表示します。</li>
+        <li><strong>非表示プレイリスト</strong> - プレイリストを表示しません。</li>
+      </ul>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="title_desc">タイトルと説明</h2>
+      <p><strong>タイトルと説明を表示</strong> を選択すると、プレーヤー上に動画のタイトルと説明が表示されます。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="video title" src="/assets/images/s-players-img/appearance/node14051-player-title.png" /></figure>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="play_button_shape">再生ボタンの形状</h2>
+      <p><strong>再生ボタンの形状</strong> 設定では、再生ボタンの形状を制御します。以下の形状がサポートされています：</p>
+      <ul>
+        <li>円形</li>
+        <li>正方形</li>
+        <li>長方形</li>
+      </ul>
+    </section>
+    
+    <section class="bcls-section">
+      <h2 id="play_button_pos">再生ボタンの位置</h2>
+      <p><strong>再生ボタンの位置</strong> 設定では、プレーヤー内の再生ボタンの配置場所を制御します。以下の位置がサポートされています：</p>
+      <ul>
+        <li>中央</li>
+        <li>左上</li>
+        <li>右上</li>
+      </ul>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="color_theme">カラーテーマ</h2>
+        <p><strong>カラーテーマ</strong> の設定では、プレーヤー内の再生/一時停止ボタン、経過時間と音量、キャプション、全画面表示および共有アイコンなどに使用される色を制御します。</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node14051-player-controls.png" /></figure>
+        <p>以下のテーマカラーを設定できます：</p>
+        <ul>
+          <li><strong>メイン</strong> - 大きな再生ボタン、プログレスバー、音量レベルの色を制御します</li>
+          <li><strong>背景</strong> - プレーヤーコントロールの背景色を制御します</li>
+          <li><strong>アイコン</strong> - 再生ボタン内の矢印およびプレーヤーコントロールバー内のアイコンの色を制御します</li>
+        </ul>
+        <p>テーマカラーを変更するには：</p>
+        <ol class="bcls-tasklist-restart">
+          <li>変更したいテーマカラーをクリックしてカラーピッカーを開きます。</li>
+          <li>コントロールの右側にある色をクリックします。</li>
+          <li>正方形内をクリックして希望する色の色合いを選択します。色は、色相・彩度・明度（HSV）カラーモデルをテキスト入力で設定することも可能です。
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="icon color" src="/assets/images/s-players-img/appearance/node14051-choose-icon-color.png" /></figure>
+          </li>
+          <li>カラースクエアの下にあるスライダーを使用して、コントロールの不透明度を設定できます。</li>
+          <li>別のテーマカラーを変更するには、カラーピッカーの外をクリックします。</li>
+        </ol>
+        <strong>以前のプレーヤーのデフォルトテーマに戻す</strong> チェックボックスを選択すると、再生ボタンとプログレスバーの色がピンク系に設定されます。
+      </section>
+      
+      <section class="bcls-section">
+        <h2 id="logo_overlay">ロゴ オーバーレイ</h2>
+        <p>ロゴ オーバーレイは、プレーヤーの上に表示される画像です。以下にサンプルのロゴオーバーレイが表示されています。</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node14051-player-overlay-sample.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">注：Overlay プラグインは手動で設定することもでき、テキストや複数のオーバーレイを表示する機能も備えています。詳細は、<a href="/players/appearance/configuring-player-overlay-using-overlay-plugin.html">Overlay プラグインを使用したプレーヤーオーバーレイの設定</a> をご覧ください。</aside>
+        <p>ロゴ オーバーレイを追加するには：</p>
+        <ol class="bcls-tasklist-restart">
+          <li><strong>ロゴ オーバーレイ</strong> を <strong>オン</strong> に設定します。</li>
+          <li><span class="button-blue">参照</span> をクリックし、オーバーレイ画像を選択します（.png、.jpg、.gif 形式に対応）。</li>
+          <li>（任意）<strong>ロゴ URL</strong> を入力します。オーバーレイがクリックされると、この URL が新しいブラウザタブで開きます。</li>
+          <li>オーバーレイの <strong>ロゴ位置</strong> を選択します：
+            <ul>
+              <li>右下</li>
+              <li>左下</li>
+              <li>右上</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+</article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">ページ コンテンツ</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
   
 <!-- </div> -->
 </div>
