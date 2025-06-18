@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>公開</title>
+        <title>動画をメールに公開する</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="動画とプレーヤーを公開する方法について学びます。">
+        <meta name="description" content="このトピックでは、Media モジュールを使用して動画をメールに公開する方法の概要を説明します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3061,7 +3061,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">公開する</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/publish/publishing/">公開する</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">動画をメールに公開する</li>
             
             
           </ol>
@@ -3074,215 +3078,215 @@
   <div class="container">
     <div class="docs-overview py-5">
       
-      
-<style>
-  a {
-    text-decoration: none;
-  }
-</style>
-<article class="bcls-article">
-    <h1><i class="fa-regular fa-display-code"></i> 公開</h1>
-    <summary>動画とプレーヤーを公開する方法について学びます。</summary>
-    <div class="row">
-      <div class="col-12 col-lg-4 py-3">
-        <div class="card card-hover shadow-sm" onclick="location.href='/publish/publishing/index.html';">
-          <div class="card-body">
-            <div class="card-text">
-              <ul class="list-group list-group-flush">
-                
-                <li class="list-group-item"><a href="/publish/publishing/adding-application-id-player-embed-code.html">埋め込みコードにアプリケーションIDを追加</a></li>
-                
-                <li class="list-group-item"><a href="/publish/publishing/changing-video-player-without-changing-embed-code.html">埋め込みコードを変更せずにプレーヤー内の動画を変更</a></li>
-                
-                <li class="list-group-item"><a href="/publish/publishing/choosing-favorite-player.html">お気に入りのプレーヤーを選択</a></li>
-                
-                <li class="list-group-item"><a href="/publish/publishing/choosing-correct-embed-code.html">正しい埋め込みコードの選択</a></li>
-                
-                <li class="list-group-item"><a href="/publish/publishing/publishing-video-email.html">メールで動画を公開</a></li>
-                
-                <li class="list-group-item"><a href="/publish/publishing/publishing-videos-and-playlists-media-module.html">動画とプレイリストの公開</a></li>
-                
-                <li class="list-group-item"><a href="/publish/publishing/publishing-videos-page-experience.html">In-page (ページ内)エクスペリエンスへの動画公開</a></li>
-                
-              </ul>
-            </div>
-          </div>
-          <!--//card-body--> 
-        </div>
-        <!--//card--> 
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
       </div>
-    </div>
-  </article>
-  
+      <br>
+      
+      
+      <article class="bcls-article">
+        <h1>動画をメールに公開する</h1>
+        <summary>このトピックでは、Media モジュールを使用して動画をメールに公開する方法の概要を説明します。</summary>
+        <section class="bcls-section">
+          <p>ほとんどのプラットフォームでは、動画をメールに直接埋め込むことはできません。これは Brightcove の制限ではなく、ほぼすべての最新のメールシステムではセキュリティ上の理由から動画プレーヤーの埋め込みコードが削除されます。ただし、ティーザーテキストとポスター画像を含むメールを作成することで、コンテンツへの認知とトラフィックを促進することができます。Media モジュールを使用すると、メール用ランディングページに動画を公開できます。</p>
+          <aside class="bcls-aside bcls-aside--information">注：ポスター画像の表示をカスタマイズし、独自のランディングページを使用してメールで動画を配信する別の方法については、<a href="/publish/general/driving-video-views-through-email.html">メールを通じた動画視聴の促進</a>をご覧ください。</aside>
+        </section>
+        <section class="bcls-section">
+          <p>メール用ランディングページに動画を公開するには、以下の手順に従ってください：</p>
+          <ol class="bcls-tasklist-restart">
+            <li><strong>Media</strong> モジュールを開きます。</li>
+            <li>動画を選択します。</li>
+            <li><span class="button-blue">公開と埋め込み</span> &gt; Eメールランディングページ をクリックします。</li>
+            <li>ランディングページを選択します。ドロップダウンリストには、システム提供のスタイルなしのサンプルランディングページである <strong>シンプルなランディングページ</strong> が表示されます。また、Gallery モジュールで作成・公開されたランディングページのエクスペリエンスも表示されます。Gallery のランディングページを使用することで、見た目やスタイルをより柔軟に設定できます。リードフォームを使用して視聴者情報を収集することも可能です。Gallery ランディングページの作成方法については、<a href="https://gallery.support.brightcove.com/experiences/landing/creating-landing-page-experience.html">ランディングページ エクスペリエンスの作成</a>をご参照ください。
+              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="プレーヤーを選択" src="/assets/images/s-publish-img/publishing/node16779-publish-dialog.png" /></figure>
+              <aside class="bcls-aside bcls-aside--information">注：ポスター画像のサイズは 640 x 360 に調整されます。</aside>
+            </li>
+            <li><p><strong>動画を自動再生</strong> するかどうかを選択します。このオプションは <strong>シンプルなランディングページ</strong> を選択した場合のみ利用可能です。
+            <aside class="bcls-aside bcls-aside--information">自動再生を有効にするには、Players モジュール内で直接設定するか、Brightcove Player 7 の JSON 設定を使用する必要があります。</aside></p></li>
+            <li>動画プレーヤーを選択します。このオプションは <strong>シンプルなランディングページ</strong> を選択した場合のみ利用可能です。Gallery のランディングページでは、プレーヤーは<a href="https://gallery.support.brightcove.com/experiences/landing/creating-landing-page-experience.html">エクスペリエンスのプロパティ</a> の一部として割り当てられます。</li>
+            <li>（任意）<strong>ランディングページをプレビュー</strong> リンクをクリックしてページを確認します。</li>
+            <li>画像を選択してクリップボードにコピーし、メール本文に貼り付けます。</li>
+          </ol>
+          <p><strong>短縮リンクを生成</strong> をクリックすると、共有や配信に利用できる短縮リンクが生成されます。メールを受信したユーザーがポスター画像または短縮リンクをクリックすると、動画がブラウザのタブで開きます。</p>
+          <p>リードフォーム付きの Gallery ランディングページを使用した場合、収集されたリード情報は Campaign モジュールを使用してダウンロードできます。詳細は、<a href="https://gallery.support.brightcove.com/experiences/portal/other/exporting-gallery-lead-data.html">Gallery のリードデータのエクスポート</a>をご覧ください。</p>
+        </section>
+      </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
-<!-- </div> -->
-</div>
-</div>
-</div>
-<div class="page-content" style="background-color: rgb(1, 5, 14);">
-<div class="container" style="width: 50%;">
-  <footer class="py-5">
-    <div class="row">
-      <div class="col-6 col-md">
-        <h5 class="h5-text">Brightcove サポート</h5>
-        <ul class="list-unstyled text-small" style="color: white ;">
-          <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
-          <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
-          <li><a class="a-text" href="https://support.brightcove.com/search.html">キュメントの検索</a></li>
-        </ul>
-      </div>
-    
-      <div class="col-6 col-md">
-        <h5 class="h5-text">トレーニング</h5>
-        <ul class="list-unstyled text-small">
-          <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
-          <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
-        </ul>
-      </div>
-    
-      <div class="col-6 col-md">
-        <h5 class="h5-text">Brightcove</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
-          <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
-          <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
-          <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-    <p>© Brightcove Inc. All rights reserved.</p>
-    <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
-    <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
-
-    <ul class="list-unstyled d-flex">
-      <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
-      title="LinkedIn" target="_blank" class="gf-social-linkedin"
-      style="margin-right: 1rem;"><i data-feather="linkedin"
-        style="color:#8E9093;height: 1.25rem;"></i></a></li>
-
-      <li class="ms-3"><a
-      href="https://twitter.com/brightcove" title="Twitter" target="_blank"
-      class="gf-social-twitter" style="margin-right: 1rem;"><i
-        data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
-
-      <li class="ms-3"><a
-      href="https://www.facebook.com/Brightcove" title="Facebook"
-      target="_blank" class="gf-social-facebook"><i data-feather="facebook"
-        style="color:#8E9093;height: 1.25rem;"></i></a></li>
-    </ul>
-    </div>
-  </footer>
-</div>
-</div>
-
-
-<script translate="no">
-var searchBox = sajari.init({
-  mode: "search-box",
-  project: "1588255093746585379", // Set this to your project.
-  collection: "brightcove-documentation", // Set this to your collection.
-  instantPipeline: "autocomplete", // Pipeline used as you type
-  inputPlaceholder: "Search", // Input element placeholder,
-  styling: {
-    components: {
+    <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">ページ コンテンツ</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
       
-      input: {
-        container: {
-        backgroundColor: 'white',
+    <!-- </div> -->
+    </div>
+    </div>
+    </div>
+    <div class="page-content" style="background-color: rgb(1, 5, 14);">
+      <div class="container" style="width: 50%;">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-6 col-md">
+              <h5 class="h5-text">Brightcove サポート</h5>
+              <ul class="list-unstyled text-small" style="color: white ;">
+                <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
+                <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/search.html">キュメントの検索</a></li>
+              </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+              <h5 class="h5-text">トレーニング</h5>
+              <ul class="list-unstyled text-small">
+                <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
+                <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
+              </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+              <h5 class="h5-text">Brightcove</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
+                <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>© Brightcove Inc. All rights reserved.</p>
+          <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
+          <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
+    
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
+            title="LinkedIn" target="_blank" class="gf-social-linkedin"
+            style="margin-right: 1rem;"><i data-feather="linkedin"
+              style="color:#8E9093;height: 1.25rem;"></i></a></li>
+    
+            <li class="ms-3"><a
+            href="https://twitter.com/brightcove" title="Twitter" target="_blank"
+            class="gf-social-twitter" style="margin-right: 1rem;"><i
+              data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+    
+            <li class="ms-3"><a
+            href="https://www.facebook.com/Brightcove" title="Facebook"
+            target="_blank" class="gf-social-facebook"><i data-feather="facebook"
+              style="color:#8E9093;height: 1.25rem;"></i></a></li>
+          </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+    
+    
+    <script translate="no">
+      var searchBox = sajari.init({
+        mode: "search-box",
+        project: "1588255093746585379", // Set this to your project.
+        collection: "brightcove-documentation", // Set this to your collection.
+        instantPipeline: "autocomplete", // Pipeline used as you type
+        inputPlaceholder: "Search", // Input element placeholder,
+        styling: {
+          components: {
+            
+            input: {
+              container: {
+              backgroundColor: 'white',
+              }
+            
+            }
+          }
+        },
+        maxSuggestions: 5, // Maximum number of suggestions to show
+          attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+      });
+    
+      
+    
+    
+        searchBox("sub", "pipeline.search-sent", function (_, query) {
+        window.location = "/search.html?q=" + encodeURIComponent(query.q);
+        });
+      
+      </script>
+      
+      <!-- Javascript -->          
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+      <!-- Page Specific JS -->
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+      <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+      <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+    
+      <!-- original footer components -->
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+      <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+      <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+      <script src="/assets/s-site-assets-scripts/selector.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/prism.js"></script>
+      <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/site.js"></script>
+      <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+      <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+      <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+      
+      <script src="/assets/js/sites_nav.js"></script>
+      <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+      <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+      <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+      <script src="/assets/js/feedback.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+      
+      <script translate="no">
+        feather.replace()
+      </script>
+      <!-- <script src="/assets/js/sajari-index.js"></script> -->
+      <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+      <style translate="no">
+        a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+          background-color: lightblue;
         }
-      
-      }
-    }
-  },
-  maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-});
-
-
-
-
-  searchBox("sub", "pipeline.search-sent", function (_, query) {
-  window.location = "/search.html?q=" + encodeURIComponent(query.q);
-  });
-
-</script>
-
-<!-- Javascript -->          
-<script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
-<script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-
-
-<!-- Page Specific JS -->
-<script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
-<!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
-<script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
-<script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
-<script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
-
-<!-- original footer components -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-<script src="/assets/s-site-assets-scripts/https-fix.js"></script>
-<script src="/assets/s-site-assets-scripts/setDate.js"></script>
-<script src="/assets/s-site-assets-scripts/selector.js"></script>
-
-<script src="/assets/s-site-assets-scripts/prism.js"></script>
-<script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
-
-<script src="/assets/s-site-assets-scripts/site.js"></script>
-<script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
-<!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
-<script src="/assets/s-site-assets-scripts/tabs.js"></script>
-
-<script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
-
-<script src="/assets/js/sites_nav.js"></script>
-<script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
-<script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
-<script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
-<script src="/assets/js/feedback.js"></script>
-
-<script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
-
-<script translate="no">
-  feather.replace()
-</script>
-<!-- <script src="/assets/js/sajari-index.js"></script> -->
-<script src="/assets/s-site-assets-scripts/in-app.js"></script>
-<style translate="no">
-  a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-    background-color: lightblue;
-  }
-  div.sj-tabs__tab {
-    margin-top: 3rem;
-    margin-left: .3rem;
-    border-top-left-radius: .4rem;
-    border-top-right-radius: .4rem;
-    background-color:#e8e8e8;
-  }
-
-  div.sj-tabs__tab.sj-tabs__tab--selected {
-    border-bottom-color: crimson;
-    background-color: #f8f8f8;
-  }
-
-  p.sj-results__result__description.css-p9jvyt {
-    font-size: 1rem;
-  }
-
-  .sj-result__text.css-31l7gp h3 {
-    color: navy;
-    font-size: 1.4rem;
-  }
-  </style>
-</div>
-</div>
-</body>
-</html> 
+        div.sj-tabs__tab {
+          margin-top: 3rem;
+          margin-left: .3rem;
+          border-top-left-radius: .4rem;
+          border-top-right-radius: .4rem;
+          background-color:#e8e8e8;
+        }
+    
+        div.sj-tabs__tab.sj-tabs__tab--selected {
+          border-bottom-color: crimson;
+          background-color: #f8f8f8;
+        }
+    
+        p.sj-results__result__description.css-p9jvyt {
+          font-size: 1rem;
+        }
+    
+        .sj-result__text.css-31l7gp h3 {
+          color: navy;
+          font-size: 1.4rem;
+        }
+        </style>
+     </div>
+    </div>
+      </body>
+    </html> 
