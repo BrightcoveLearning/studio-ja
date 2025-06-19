@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>このトピックでは、Google Sitesページに Brightcoveプレーヤーを埋め込む方法について説明します。</title>
+        <title>Facebook インスタント記事での Brightcove プレーヤーの公開</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="このトピックでは、Google Sitesページに Brightcoveプレーヤーを埋め込む方法について説明します。">
+        <meta name="description" content="このトピックでは、Facebook インスタント記事ページで Brightcove プレーヤーを公開する方法について学びます。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3065,7 +3065,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Google Sites ページに Brightcoveプレーヤーを埋め込む</li>
+            <li class="breadcrumb-item active" aria-current="page">Facebook インスタント記事での Brightcove プレーヤーの公開</li>
             
             
           </ol>
@@ -3087,30 +3087,51 @@
       
       
       <article class="bcls-article">
-        <h1>Google Sites ページに Brightcoveプレーヤーを埋め込む</h1>
-        <summary>このトピックでは、Google Sitesページに Brightcoveプレーヤーを埋め込む方法について説明します。</summary>
+        <h1>Facebook インスタント記事での Brightcove プレーヤーの公開</h1>
+        <summary>このトピックでは、Facebook インスタント記事ページで Brightcove プレーヤーを公開する方法について学びます。</summary>
         <section class="bcls-section">
-          <p>Google Sites は Google が提供するウェブページ作成ツールです。Brightcoveプレーヤーは、Google Sitesページに簡単に埋め込むことができます。</p>
-          <p>Google Sitesページに Brightcoveプレーヤーを埋め込むには、次の手順を行います：</p>
+          <p>Facebook インスタント記事は、Facebook ニュースフィードで記事を高速かつインタラクティブに読むための体験を提供します。インスタント記事は、コンテンツ管理システムから直接（Instant Article API を使用）または RSS フィードを提供することで公開できます。インスタント記事は、通常のモバイルウェブ記事と比べて最大 10 倍の速度で表示されます。友達やフォローしているページがニュースフィードでリンクを共有すると、Facebook はその URL に関連付けられたインスタント記事があるかを確認し、あればインスタント記事として表示し、なければウェブブラウザで開きます。</p>
+          <p>インスタント記事に埋め込まれた Brightcove プレーヤーでは、以下の機能が引き続きサポートされます：</p>
+          <ul>
+            <li>プリロールおよびミッドロール広告</li>
+            <li>Brightcove のアナリティクス</li>
+            <li>サードパーティ製プラグイン</li>
+          </ul>
+          <p>なお、アナリティクスは Brightcove によって収集されますが、アナリティクスに記録される表示ドメインは <code translate="No">facebook.com</code> ではなく、<code translate="No">brightcove.com</code> ドメインとなります。</p>
+          <p>インスタント記事ではさまざまな種類のコンテンツを共有できますが、このトピックではインスタント記事ページで Brightcove プレーヤーを共有する方法に焦点を当てています。インスタント記事に関する詳細な情報については、<a href="https://developers.facebook.com/docs/instant-articles">Facebook のドキュメント</a> をご覧ください。</p>
+        </section>
+        <section class="bcls-section">
+          <h2 id="Generating_player_embed_code">プレーヤーの埋め込みコードの生成</h2>
+          <p>インスタント記事で使用するためにプレーヤーのプロパティを変更する必要はありません。以下の手順に従って、インスタント記事用のプレーヤー埋め込みコードを生成します：</p>
           <ol class="bcls-tasklist-restart">
-            <li>Brightcoveプレーヤーを追加したい Google Sitesページを開きます。</li>
-            <li><strong>ページを編集</strong> ボタンをクリックします。</li>
-            <li>ページ上部にツールバーが表示されるので、<strong>&lt;HTML&gt;</strong> ボタンをクリックします。
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/third-party/node14399-toolbar.png" /></figure>
+            <li>Video Cloud Studio から標準の iframe 埋め込みコードを取得し、HTML5 の<code translate="No">&lt;figure&gt;</code> 要素内に配置します。
+              <pre>
+          &lt;figure&gt;
+          &lt;iframe src="//players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001"
+           allowfullscreen webkitallowfullscreen mozallowfullscreen width="640" height="360"&gt;&lt;/iframe&gt;
+          &lt;/figure&gt;
+                  </pre>
+              <aside class="bcls-aside bcls-aside--tip">iframe埋め込みコードで動画参照ID（例：<code translate="No">videoId="ref:referenceId"</code>）を使用することは、Facebook インスタント記事での公開時にもサポートされています。</aside>
             </li>
-            <li>iframe プレーヤー公開コードを貼り付け、<strong>更新</strong>をクリックします。
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/third-party/node14399-pub-code.png" /></figure>
+            <li><code translate="No">figure</code> タグに <code translate="No">op-interactive</code> クラスを追加します。
+              <pre>
+          &lt;figure <strong>class="op-interactive"</strong>&gt;
+          &lt;iframe src="//players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001"
+           allowfullscreen webkitallowfullscreen mozallowfullscreen width="640" height="360"&gt;&lt;/iframe&gt;
+          &lt;/figure&gt;
+                  </pre>
             </li>
-            <li>ページが更新され、iframe用の Googleガジェットが表示されます。
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/third-party/node14399-iframe-gadget.png" /></figure>
-            </li>
-            <li><strong>保存</strong> をクリックして変更を保存します。動画がページ内に表示されます。
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/third-party/node14399-final.png" /></figure>
+            <li>iframe に <code translate="No">width</code> および <code translate="No">height</code> を指定します。<code translate="No">width</code> および <code translate="No">height</code> は、プレーヤーの絶対サイズではなくアスペクト比を指定するためのものです。最終的なコードは以下のようになります：
+              <pre>
+          &lt;figure class="op-interactive"&gt;
+          &lt;iframe src="//players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001"
+           allowfullscreen webkitallowfullscreen mozallowfullscreen <strong>width="16" height="9"</strong>&gt;&lt;/iframe&gt;
+          &lt;/figure&gt;
+                  </pre>
             </li>
           </ol>
         </section>
       </article>
-      
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
