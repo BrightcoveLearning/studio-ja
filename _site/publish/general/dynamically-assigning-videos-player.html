@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>タイムスタンプ</title>
+        <title>プレーヤーに動画を動的に割り当てる</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="タイムスタンプは、ユーザーが特定の時間オフセットから動画の視聴を開始できる機能です。例えば、ニュース番組のような動画を共有する際に、視聴者に特定のセグメントだけを見てもらいたい場合に非常に便利な機能です。">
+        <meta name="description" content="このトピックでは、動画をプレーヤーに動的に割り当てるさまざまな方法について説明します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3065,7 +3065,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">タイムスタンプ</li>
+            <li class="breadcrumb-item active" aria-current="page">プレーヤーに動画を動的に割り当てる</li>
             
             
           </ol>
@@ -3087,52 +3087,81 @@
       
       
 <article class="bcls-article">
-    <h1>タイムスタンプ</h1>
-    <summary>タイムスタンプは、ユーザーが特定の時間オフセットから動画の視聴を開始できる機能です。例えば、ニュース番組のような動画を共有する際に、視聴者に特定のセグメントだけを見てもらいたい場合に非常に便利な機能です。</summary>
+    <h1>プレーヤーに動画を動的に割り当てる</h1>
+    <summary>このトピックでは、動画をプレーヤーに動的に割り当てるさまざまな方法について説明します。</summary>
     <section class="bcls-section">
-      <h2 id="Overview">概要</h2>
-      <p>タイムスタンプは、標準（iframe）および高度（Videoタグ）プレーヤーの両方の実装で使用することができます。標準実装では、<code translate="No">t</code> クエリパラメータを使用します：</p>
-      <pre class="line-numbers">
-  <code class="language-html" translate="No">&lt;iframe src="https://players.brightcove.net/1507807800001/
-      SJgrJZnuAz_default/index.html?videoId=5637008067001&amp;<span class="bcls-highlight">t=70s</span>"
-    allowfullscreen
-    webkitallowfullscreen
-    mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
-      <p>Videoタグの実装では、<code translate="No">data-start-time</code> 属性を使用します：</p>
-      <pre class="line-numbers">
-  <code class="language-html" translate="No">&lt;video-js data-video-id="5637008067001"
-    data-account="1507807800001"
-    data-player="SJgrJZnuAz"
-    data-embed="default"
-    data-application-id
-    class="video-js"
-    controls
-    <span class="bcls-highlight">data-start-time="70"</span>&gt;&lt;/video-js&gt;
-  &lt;script src="https://players.brightcove.net/1507807800001/SJgrJZnuAz_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
+      <p>プレーヤーに関連付けられた動画を変更する必要がある場合があります。たとえば、視聴者が視聴したい動画を選択できるようにする場合や、視聴者がどのサイトのセクションから来たかに基づいてプレーヤーに表示する動画を切り替える場合です。</p>
+      <p>異なる動画をプレーヤーで表示する必要がある場合は、1つのプレーヤーを使用して、そのプレーヤーに関連付ける動画を動的に変更する方法が推奨されます。</p>
+      <p>このトピックでは、以下の手法を紹介します：</p>
+      <ul>
+        <li><a href="#videourlparam">URL パラメーターで動画ID を渡す</a></li>
+        <li><a href="#refurlparam">URL パラメーターで参照ID を渡す</a></li>
+        <li><a href="#pubvideo">埋め込みコードを修正して動画ID を指定する</a></li>
+        <li><a href="#pubref">埋め込みコードを修正して参照ID を指定する</a></li>
+      </ul>
+      <aside class="bcls-aside bcls-aside--information">注：プレーヤーに静的に関連付けられている動画を変更することも可能ですが、これは推奨されません。この方法を使用すると、動的に追加される動画が表示される前に、静的に設定された動画のポスター画像が一瞬表示される可能性があります。そのため、動画を動的に切り替えるシナリオでは、最初に動画が関連付けられていないプレーヤーを作成することが推奨されます。</aside>
+      <p>コンテンツは <a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-dynamically-change-source-videos.html">Catalog API</a> を使用してプレーヤーに動的に割り当てることも可能です。詳細およびサンプルコードについては、開発者向けドキュメントをご参照ください。</p>
     </section>
-  
- <section class="bcls-section">
-    <h2 id="Time_formats">時間形式</h2>
-    <p>開始時間を指定する際に使用できる時間形式は2種類あります:</p>
-    <ul>
-      <li>シンプルな秒単位の時間: 上記の例で使用されている形式で、動画の <span translate="No">70</span> 秒後（動画内では <span translate="No">1:10</span> に相当）から再生開始します。<strong>分:秒（min:seconds）</strong> の形式は使用できません。</li>
-      <li><strong>hms</strong> 形式: 時間、分、秒を指定する形式です。例えば、動画を <span translate="No">1</span> 時間 <span translate="No">1</span> 分 <span translate="No">1</span> 秒後から再生する場合は、<strong translate="No">1h1m1s</strong> という表記を使用します。</li>
-    </ul>
-</section>
-
-<section class="bcls-section">
-    <h2 id="Social_media_use">ソーシャルメディアでの利用</h2>
-    <p>残念ながら、ほとんどのソーシャルサービスでは、上記のようなディープリンク（特定の時間からの再生）をサポートしていません。代わりに、ソーシャルメディア側のネイティブ プレーヤーが使用され、ディープリンクは無効となります。2024年7月現在、主要なソーシャルネットワークの中で Brightcove プレーヤーの埋め込み（iframeを使用）によるディープリンクをサポートしているのは、X (旧Twitter)のみです。</p>
-    <p>X (旧Twitter)でのディープリンクの詳細については、<a href="https://player.support.brightcove.com/plugins/social-sharing-plugin.html">ソーシャルメディアプ ラグイン</a>のドキュメントを参照してください。</p>
-</section>
-
-<section class="bcls-section">
-    <h2 id="Known_issues">既知の問題</h2>
-    <ul>
-      <li><code translate="No">data-start-time</code> 属性は、プレーヤーのバージョン <span translate="No">v6.19.0以上</span> でのみ動作します。</li>
-      <li>現在のところ、バージョンが <strong>7.6</strong> 以下で <strong>6.19.0</strong> 以上の場合、<code translate="No">t</code> パラメータはサポートされません。</li>
-    </ul>
-</section>
+    <section class="bcls-section">
+      <h2 id="videourlparam">URL パラメーターで動画ID を渡す</h2>
+      <p>次の形式で動画ID を URL パラメーターとして渡すことで、プレーヤーの動画ソースを変更することができます：<code translate="No">?videoId=YOUR_VIDEO_ID</code></p>
+      <pre class="line-numbers">
+    <code class="language-html" translate="No">http://players.brightcove.net/20318290001/f1d70e07-8480-4bbd-b4ef-747e9333a034_default/index.html<strong>?videoId=4292158104001</strong></code></pre>
+    </section>
+    <section class="bcls-section">
+      <h2 id="refurlparam">URL パラメーターで参照ID を渡す</h2>
+      <p>次の形式で参照ID を URL パラメーターとして渡すことで、プレーヤーの動画ソースを変更することができます：<code translate="No">?videoId=ref:YOUR_VIDEO_REF_ID</code></p>
+      <pre class="line-numbers">
+    <code class="language-html" translate="No">http://players.brightcove.net/20318290001/f1d70e07-8480-4bbd-b4ef-747e9333a034_default/index.html<strong>?videoId=ref:1234</strong></code></pre>
+    </section>
+    <section class="bcls-section">
+      <h2 id="pubvideo">埋め込みコードを修正して動画ID を指定する</h2>
+      <p>Video Cloud の動画を、動画ID を使って直接プレーヤーの埋め込みコードに割り当てることができます。</p>
+      <div class="BCL-subsection">
+        <h3>Videoタグ埋め込みコード</h3>
+        <p><code translate="No">&lt;video&gt;</code> タグに <code translate="No">data-video-id="YOUR_VIDEO_ID"</code> 属性を追加します：</p>
+        <pre class="line-numbers">
+    <code class="language-html" translate="No">&lt;video-js   data-account="57838016001"
+      data-player="6e44f16e-31e9-48b2-83b9-6edd71217540"
+      data-embed="default"
+      <strong>data-video-id="68143720001"</strong>
+      class="video-js"
+      controls&gt;&lt;/video-js&gt;
+    &lt;script src="https://players.brightcove.net/57838016001/6e44f16e-31e9-48b2-83b9-6edd71217540_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
+        <aside class="bcls-aside bcls-aside--information">注意：プレーヤーのJavaScriptが実行されると、起動時に data-video-id 属性からVideo IDを読み込みます。JavaScriptの setAttribute() メソッドなどで値を変更しても、動画はロードされません。JavaScriptを使用して動画を変更する方法の例については、<a href="https://player.support.brightcove.com/references/player-catalog.html">Player Catalog</a> の開発者向けドキュメントを参照してください。</aside>
+      </div>
+      <div class="BCL-subsection">
+        <h3>iframe 埋め込みコード</h3>
+        <p>iframe の <code translate="No">src</code> 属性のURL末尾に <code translate="No">?videoId=YOUR_VIDEO_ID</code> を追加します：</p>
+        <pre class="line-numbers">
+    <code class="language-html" translate="No">&lt;iframe src='//players.brightcove.net/57838016001/6e44f16e-31e9-48b2-83b9-6edd71217540_default/index.html<strong>?videoId=68143720001</strong>'
+     allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+      </div>
+    </section>
+    <section class="bcls-section">
+        <h2 id="pubref">埋め込みコードを修正して参照ID を指定する</h2>
+        <p>Video Cloud の動画を、参照ID を使用してプレーヤーの埋め込みコードに直接割り当てることができます。</p>
+        <aside class="bcls-aside bcls-aside--information">注意：特殊文字を含む参照ID を使用する場合は、公開コード内でその特殊文字をエスケープする必要があります。そうしないと問題が発生する可能性があります。</aside>
+        <div class="BCL-subsection">
+          <h3>Videoタグ埋め込みコード</h3>
+          <p><code translate="No">&lt;video&gt;</code> タグに <code translate="No">data-video-id="ref:YOUR_VIDEO_REF_ID"</code> 属性を追加します：</p>
+          <pre class="line-numbers">
+      <code class="language-html" translate="No">&lt;video-js data-account="57838016001"
+        data-player="6e44f16e-31e9-48b2-83b9-6edd71217540"
+        data-embed="default"
+        <strong>data-video-id="ref:68143720001"</strong>
+        class="video-js"
+        controls&gt;&lt;/video-js&gt;
+      &lt;script src="https://players.brightcove.net/57838016001/6e44f16e-31e9-48b2-83b9-6edd71217540_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+        <div class="BCL-subsection">
+          <h3>iframe 埋め込みコード</h3>
+          <p>iframe の <code translate="No">src</code> 属性の URL 末尾に <code translate="No">?videoId=ref:YOUR_VIDEO_REF_ID</code> を追加します：</p>
+          <pre class="line-numbers">
+      <code class="language-html" translate="No">&lt;iframe src='//players.brightcove.net/57838016001/6e44f16e-31e9-48b2-83b9-6edd71217540_default/index.html<strong>?videoId=ref:68143720001</strong>'
+       allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+        </div>
+      </section>
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->

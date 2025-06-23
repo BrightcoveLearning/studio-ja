@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>タイムスタンプ</title>
+        <title>メールを活用した動画視聴の促進</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="タイムスタンプは、ユーザーが特定の時間オフセットから動画の視聴を開始できる機能です。例えば、ニュース番組のような動画を共有する際に、視聴者に特定のセグメントだけを見てもらいたい場合に非常に便利な機能です。">
+        <meta name="description" content="このトピックでは、メールを活用して動画の視聴数を向上させる方法について説明します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3065,7 +3065,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">タイムスタンプ</li>
+            <li class="breadcrumb-item active" aria-current="page">メールを活用した動画視聴の促進</li>
             
             
           </ol>
@@ -3087,52 +3087,93 @@
       
       
 <article class="bcls-article">
-    <h1>タイムスタンプ</h1>
-    <summary>タイムスタンプは、ユーザーが特定の時間オフセットから動画の視聴を開始できる機能です。例えば、ニュース番組のような動画を共有する際に、視聴者に特定のセグメントだけを見てもらいたい場合に非常に便利な機能です。</summary>
+    <h1>メールを活用した動画視聴の促進</h1>
+    <summary>このトピックでは、メールを活用して動画の視聴数を向上させる方法について説明します。</summary>
     <section class="bcls-section">
-      <h2 id="Overview">概要</h2>
-      <p>タイムスタンプは、標準（iframe）および高度（Videoタグ）プレーヤーの両方の実装で使用することができます。標準実装では、<code translate="No">t</code> クエリパラメータを使用します：</p>
-      <pre class="line-numbers">
-  <code class="language-html" translate="No">&lt;iframe src="https://players.brightcove.net/1507807800001/
-      SJgrJZnuAz_default/index.html?videoId=5637008067001&amp;<span class="bcls-highlight">t=70s</span>"
-    allowfullscreen
-    webkitallowfullscreen
-    mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
-      <p>Videoタグの実装では、<code translate="No">data-start-time</code> 属性を使用します：</p>
-      <pre class="line-numbers">
-  <code class="language-html" translate="No">&lt;video-js data-video-id="5637008067001"
-    data-account="1507807800001"
-    data-player="SJgrJZnuAz"
-    data-embed="default"
-    data-application-id
-    class="video-js"
-    controls
-    <span class="bcls-highlight">data-start-time="70"</span>&gt;&lt;/video-js&gt;
-  &lt;script src="https://players.brightcove.net/1507807800001/SJgrJZnuAz_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
+    
+      <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4032048320001">&nbsp;</div>
+      <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+    
+      <p>「動画をメールに埋め込むにはどうすればよいか？」という質問をよく受けます。ほとんどのプラットフォームでは、メール内に動画を直接埋め込むことはできません。これは Brightcove の制限ではなく、セキュリティ上の理由から、ほとんどの最新のメールシステムが動画プレーヤーの埋め込みコードを削除してしまうためです。しかし、いくつかの工夫により、コンテンツの認知度とアクセスを高めることが可能です。具体的には、ティーザーテキストとサムネイル画像を含むメールを作成します。サムネイル画像は動画プレーヤーのように見えるようにデザインされ、クリック可能なリンクとして動画のランディングページにリダイレクトされます。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/general/node15097-sample-email.png" /></figure>
+      <p>このソリューションを完了するには、以下の手順を実施します：</p>
+      <ol>
+        <li><a href="#createplayer">Brightcove プレーヤーを作成</a></li>
+        <li><a href="#landingpage">動画ランディングページを作成</a></li>
+        <li><a href="#screenshot">プレーヤーのスクリーンショットを取得</a></li>
+        <li><a href="#email">メールメッセージを作成</a></li>
+      </ol>
     </section>
-  
- <section class="bcls-section">
-    <h2 id="Time_formats">時間形式</h2>
-    <p>開始時間を指定する際に使用できる時間形式は2種類あります:</p>
-    <ul>
-      <li>シンプルな秒単位の時間: 上記の例で使用されている形式で、動画の <span translate="No">70</span> 秒後（動画内では <span translate="No">1:10</span> に相当）から再生開始します。<strong>分:秒（min:seconds）</strong> の形式は使用できません。</li>
-      <li><strong>hms</strong> 形式: 時間、分、秒を指定する形式です。例えば、動画を <span translate="No">1</span> 時間 <span translate="No">1</span> 分 <span translate="No">1</span> 秒後から再生する場合は、<strong translate="No">1h1m1s</strong> という表記を使用します。</li>
-    </ul>
-</section>
+    <section class="bcls-section">
+      <h2 class="BCL_conceptTitle" id="createplayer">Brightcove プレーヤーの作成</h2>
+      <p>まず、動画ランディングページ用に専用の Brightcove プレーヤーを作成します。専用のプレーヤーを用意することで、動画分析の追跡がしやすくなります。また、プレーヤーの自動再生を設定しておくことで、メールからランディングページへ遷移した際に動画が自動的に再生されるようにできます。</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Video Cloud Studio にログインします。</li>
+        <li><strong>Players</strong> モジュールを開きます。</li>
+        <li><span class="button-blue"><i class="button-icon" data-feather="plus"></i>プレーヤーの追加</span> をクリックします。</li>
+        <li>プレーヤーに名前を付けて、<span class="button-blue">保存</span> をクリックします。</li>
+        <li>プレーヤーのリンクをクリックして、プレーヤーのプロパティを開きます。</li>
+        <li>左側のナビゲーションで <strong>再生</strong> をクリックします。</li>
+        <li><strong>プレーヤー読み込み時に動画を自動再生</strong> の設定を <strong>自動再生</strong>（または任意の自動再生オプション）にします。</li>
+        <li>プレーヤーを <strong>公開</strong> します。</li>
+        <li><strong>iframe</strong> の埋め込みコードを選択してコピーします。</li>
+      </ol>
+    </section>
 
-<section class="bcls-section">
-    <h2 id="Social_media_use">ソーシャルメディアでの利用</h2>
-    <p>残念ながら、ほとんどのソーシャルサービスでは、上記のようなディープリンク（特定の時間からの再生）をサポートしていません。代わりに、ソーシャルメディア側のネイティブ プレーヤーが使用され、ディープリンクは無効となります。2024年7月現在、主要なソーシャルネットワークの中で Brightcove プレーヤーの埋め込み（iframeを使用）によるディープリンクをサポートしているのは、X (旧Twitter)のみです。</p>
-    <p>X (旧Twitter)でのディープリンクの詳細については、<a href="https://player.support.brightcove.com/plugins/social-sharing-plugin.html">ソーシャルメディアプ ラグイン</a>のドキュメントを参照してください。</p>
-</section>
-
-<section class="bcls-section">
-    <h2 id="Known_issues">既知の問題</h2>
-    <ul>
-      <li><code translate="No">data-start-time</code> 属性は、プレーヤーのバージョン <span translate="No">v6.19.0以上</span> でのみ動作します。</li>
-      <li>現在のところ、バージョンが <strong>7.6</strong> 以下で <strong>6.19.0</strong> 以上の場合、<code translate="No">t</code> パラメータはサポートされません。</li>
-    </ul>
-</section>
+    <section class="bcls-section">
+        <h2 class="BCL_conceptTitle" id="landingpage">動画ランディングページの作成</h2>
+        <p>動画ランディングページは、メールメッセージからユーザーがリダイレクトされる先のページです。まずは、iframe のプレーヤー埋め込みコードを追加します。表示する動画ID は URL パラメータとして渡されます。これにより、ランディングページで異なる動画を表示することが可能になります。以下に手順の概要を示します。</p>
+        <ol class="bcls-tasklist-restart">
+          <li>新しい HTML ページを作成し、動画ランディングページとして使用します。</li>
+          <li>iframe埋め込みプレーヤー公開コードを貼り付けます。</li>
+          <li>動画ID の URL パラメータを読み込む JavaScript コードを追加します。以下はサンプルコードです。
+            <pre>
+      &lt;html&gt;
+      &lt;head&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;iframe src='//players.brightcove.net/1752604059001/d05e49ae-23d2-48fb-97d5-f01484d3f559_default/index.html'
+       allowfullscreen webkitallowfullscreen mozallowfullscreen width="640" height="360"&gt;&lt;/iframe&gt;
+      
+      &lt;script type="text/javascript"&gt;
+          var queryString = window.location.href.substring( window.location.href.indexOf('?') + 9 );
+          var iframeTag = document.getElementsByTagName("iframe")[0];
+          var  newVideo = "?videoId=" + queryString;
+          iframeTag.src += newVideo;
+      &lt;/script&gt;
+      
+      &lt;/body&gt;
+      &lt;/html&gt;</pre>
+          </li>
+          <li>ランディングページを保存して公開します。ページのURLをメモしておきます。</li>
+        </ol>
+      </section>
+      <section class="bcls-section">
+        <h2 class="BCL_conceptTitle" id="screenshot">プレーヤーのスクリーンショットを取得</h2>
+        <p>ランディングページ上で動画を再生中のプレーヤーのスクリーンショットを取得します。この画像は、メール本文内でクリック可能なリンクとして使用されます。スクリーンショットの取得方法はいくつかあります：</p>
+        <ul>
+          <li>Mac - Apple が <a href="https://support.apple.com/en-us/HT201361">Mac でスクリーンショットを撮る方法</a>を公開しています。また、<a href="https://www.techsmith.com/snagit.html">Snagit</a>、<a href="https://www.globaldelight.com/voila/">Voila</a> などのサードパーティ製品もあります。</li>
+          <li>Windows - Windows には<a href="https://windows.microsoft.com/en-us/windows7/products/features/snipping-tool">スニッピングツール</a> があり、スクリーンショットの取得が可能です。また、<a href="https://www.techsmith.com/snagit.html">Snagit</a>、<a href="https://lightscreen.com.ar">Lightscreen</a> などのサードパーティ製品も利用できます。</li>
+        </ul>
+      </section>
+      <section class="bcls-section">
+        <h2 class="BCL_conceptTitle" id="email">メールメッセージの作成</h2>
+        <p>最後に、新しいメール メッセージを作成します。プレーヤー画像をメール本文に追加し、それを動画ランディングページへ遷移するクリック可能なリンクとして設定します。メールクライアントごとに操作方法は異なりますが、以下は Gmail での手順です。</p>
+        <ol class="bcls-tasklist-restart">
+          <li>Gmail を開きます。</li>
+          <li><strong>作成</strong> をクリックします。</li>
+          <li>メールの下部にある <strong>写真を挿入</strong> アイコンをクリックします。</li>
+          <li>作成したプレーヤー画像を選択して挿入します。画像はメールに埋め込まれます。</li>
+          <li>画像全体を選択して、メール下部の <strong>リンクを挿入</strong> アイコンをクリックします。</li>
+          <li>画像リンクを編集するために、<strong>変更</strong> リンクをクリックします。<br />
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/general/node15097-image-url.png" /></figure>
+          </li>
+          <li>動画ランディングページのURLを入力し、<strong>OK</strong> をクリックします。<br />
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/general/node15097-url.png" /></figure>
+          </li>
+          <li>メールを送信します。</li>
+        </ol>
+      </section>
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
@@ -3311,3 +3352,4 @@
 </div>
   </body>
 </html> 
+

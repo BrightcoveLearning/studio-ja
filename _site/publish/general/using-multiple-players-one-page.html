@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ja"> 
+<html lang="en"> 
     <head>
-        <title>タイムスタンプ</title>
+        <title>1ページに複数のプレーヤーを使用する</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="タイムスタンプは、ユーザーが特定の時間オフセットから動画の視聴を開始できる機能です。例えば、ニュース番組のような動画を共有する際に、視聴者に特定のセグメントだけを見てもらいたい場合に非常に便利な機能です。">
+        <meta name="description" content="このトピックでは、1つの HTML ページに複数の Brightcove プレーヤーを使用する方法について説明します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3065,7 +3065,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">タイムスタンプ</li>
+            <li class="breadcrumb-item active" aria-current="page">1ページに複数のプレーヤーを使用する</li>
             
             
           </ol>
@@ -3086,55 +3086,57 @@
       <br>
       
       
-<article class="bcls-article">
-    <h1>タイムスタンプ</h1>
-    <summary>タイムスタンプは、ユーザーが特定の時間オフセットから動画の視聴を開始できる機能です。例えば、ニュース番組のような動画を共有する際に、視聴者に特定のセグメントだけを見てもらいたい場合に非常に便利な機能です。</summary>
-    <section class="bcls-section">
-      <h2 id="Overview">概要</h2>
-      <p>タイムスタンプは、標準（iframe）および高度（Videoタグ）プレーヤーの両方の実装で使用することができます。標準実装では、<code translate="No">t</code> クエリパラメータを使用します：</p>
-      <pre class="line-numbers">
-  <code class="language-html" translate="No">&lt;iframe src="https://players.brightcove.net/1507807800001/
-      SJgrJZnuAz_default/index.html?videoId=5637008067001&amp;<span class="bcls-highlight">t=70s</span>"
-    allowfullscreen
-    webkitallowfullscreen
-    mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
-      <p>Videoタグの実装では、<code translate="No">data-start-time</code> 属性を使用します：</p>
-      <pre class="line-numbers">
-  <code class="language-html" translate="No">&lt;video-js data-video-id="5637008067001"
-    data-account="1507807800001"
-    data-player="SJgrJZnuAz"
-    data-embed="default"
-    data-application-id
-    class="video-js"
-    controls
-    <span class="bcls-highlight">data-start-time="70"</span>&gt;&lt;/video-js&gt;
-  &lt;script src="https://players.brightcove.net/1507807800001/SJgrJZnuAz_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
-    </section>
-  
- <section class="bcls-section">
-    <h2 id="Time_formats">時間形式</h2>
-    <p>開始時間を指定する際に使用できる時間形式は2種類あります:</p>
-    <ul>
-      <li>シンプルな秒単位の時間: 上記の例で使用されている形式で、動画の <span translate="No">70</span> 秒後（動画内では <span translate="No">1:10</span> に相当）から再生開始します。<strong>分:秒（min:seconds）</strong> の形式は使用できません。</li>
-      <li><strong>hms</strong> 形式: 時間、分、秒を指定する形式です。例えば、動画を <span translate="No">1</span> 時間 <span translate="No">1</span> 分 <span translate="No">1</span> 秒後から再生する場合は、<strong translate="No">1h1m1s</strong> という表記を使用します。</li>
-    </ul>
-</section>
-
-<section class="bcls-section">
-    <h2 id="Social_media_use">ソーシャルメディアでの利用</h2>
-    <p>残念ながら、ほとんどのソーシャルサービスでは、上記のようなディープリンク（特定の時間からの再生）をサポートしていません。代わりに、ソーシャルメディア側のネイティブ プレーヤーが使用され、ディープリンクは無効となります。2024年7月現在、主要なソーシャルネットワークの中で Brightcove プレーヤーの埋め込み（iframeを使用）によるディープリンクをサポートしているのは、X (旧Twitter)のみです。</p>
-    <p>X (旧Twitter)でのディープリンクの詳細については、<a href="https://player.support.brightcove.com/plugins/social-sharing-plugin.html">ソーシャルメディアプ ラグイン</a>のドキュメントを参照してください。</p>
-</section>
-
-<section class="bcls-section">
-    <h2 id="Known_issues">既知の問題</h2>
-    <ul>
-      <li><code translate="No">data-start-time</code> 属性は、プレーヤーのバージョン <span translate="No">v6.19.0以上</span> でのみ動作します。</li>
-      <li>現在のところ、バージョンが <strong>7.6</strong> 以下で <strong>6.19.0</strong> 以上の場合、<code translate="No">t</code> パラメータはサポートされません。</li>
-    </ul>
-</section>
-</article>
-
+      <article class="bcls-article">
+        <h1>1ページに複数のプレーヤーを使用する</h1>
+        <summary>このトピックでは、1つの HTML ページに複数の Brightcove プレーヤーを使用する方法について説明します。</summary>
+        <section class="bcls-section">
+            <h2 id="multipleplayers">複数のプレーヤー</h2>
+            <p>同じページに複数のプレーヤーを使用する場合、特別な設定は必要ありません。たとえば、以下のように複数のプレーヤーを同じページに配置しても問題ありません。</p>
+            <pre class="line-numbers">
+    <code class="language-html" translate="No">&lt;video-js data-video-id="4093372393001"
+      data-account="1507807800001"
+      data-player="7mmfg7NnNy"
+      data-embed="default"
+      data-application-id
+      class="video-js"
+      controls&gt;&lt;/video-js&gt;
+    &lt;script src="https://players.brightcove.net/1507807800001/7mmfg7NnNy_default/index.min.js"&gt;&lt;/script&gt;
+    
+    &lt;video-js data-video-id="5076962725001"
+      data-account="1507807800001"
+      data-player="P0hzAkylr"
+      data-embed="default"
+      data-application-id
+      class="video-js"
+      controls&gt;&lt;/video-js&gt;
+    &lt;script src="https://players.brightcove.net/1507807800001/P0hzAkylr_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
+            <p>&nbsp;</p>
+            <aside class="bcls-aside bcls-aside--information">注意：Brightcove Player のお客様は、<code translate="No">data-video-id</code> 属性を使用してプレーヤーに動画を割り当てることはありません。<strong>Players</strong> モジュール内または curl を使用して動画を割り当てます。</aside>
+            <aside class="bcls-aside bcls-aside--tip">同じページで複数のプレーヤーを使用する場合は、<strong>標準（iframe）</strong> コードを使用することも可能です。</aside>
+        </section>
+        <section class="bcls-section">
+            <h2 id="Special_considerations">特別な考慮事項</h2>
+            <p>同じ HTML ページに複数のプレーヤーを配置する際は、以下の点に注意してください：</p>
+            <ul>
+                <li>同じプレーヤーの複数インスタンスを同じページで使用する場合、1つの <strong>index.min.js</strong> ファイルを共有できます。可能であれば、1つの <strong>index.min.js</strong> ファイルを使用することを強く推奨します。これによりページの読み込み時間を大幅に短縮できます。</li>
+                <li><code translate="No">preload</code> が <code translate="No">auto</code> に設定されている複数のプレーヤーを 1 ページに配置すると、帯域幅の消費が非常に大きくなる可能性があります。一般的には推奨されません。</li>
+                <li>異なるアカウントからのプレーヤーで、両方とも <code translate="No">default</code> というプレーヤーID を使用している場合、それらを同じページに配置することはできません。（補足：Videoタグ プレーヤーコードでは、<code translate="No">data-player</code> 属性でプレーヤーID を指定します。）回避策としては、一方の default プレーヤーを複製し、固有の識別子を持たせることです。</li>
+                <li>IE11 を使用していて、同じプレーヤーの複数インスタンスをページに配置する場合は、それぞれのプレーヤーに一意の <code translate="No">id</code> 属性を指定するか、<code translate="No">id</code> 属性を使用しないようにしてください。</li>
+                <li>異なるバージョンの Videoタグ プレーヤーを混在させることはサポートされていません。類似のバージョンでは動作する可能性もありますが、問題が発生しやすくなります。異なるバージョンのプレーヤーを混在させる必要がある場合は、iframeを使用してください。同じバージョンのプレーヤーであれば問題ありません。</li>
+                <li>Videoタグ プレーヤーを混在させる場合、global bc はページ内の最後のプレーヤーを参照します。</li>
+                <li>RequireJS のような AMD モジュールローダーと複数の Videoタグ プレーヤーを同時に使用する際に、既知の問題があります。現時点ではこの問題に対する回避策はありません。</li>
+                <li>高度な埋め込みコードを使用して複数の 360 度動画を1ページに配置する場合、インタラクティブ機能が有効なのは最初の動画のみです。回避策としては、基本（iframe）埋め込みコードを使用することで、複数の 360 度動画にインタラクティブ機能を持たせることが可能です。</li>
+                <li>360 度動画のプレーヤーと通常の動画のプレーヤーを混在させることはサポートされていません。</li>
+                <li>複数のプレーヤーが同じ <code translate="No">id</code> を持ち、それぞれの <code translate="No">&lt;video&gt;</code> タグ内で <code translate="No">width</code> および <code translate="No">height</code> 属性を使用して異なるサイズを指定している場合、最後のプレーヤーの CSS がすべてのプレーヤーに適用されます。
+                    <p><strong>回避策</strong></p>
+                    <ul>
+                        <li>異なるサイズやスタイルにしたい場合は、異なるプレーヤーID を持つプレーヤーを使用してください。</li>
+                        <li>CSS でサイズを指定したクラスを作成し、それぞれのプレーヤーの video タグにそのクラスを追加してください。</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
@@ -3311,3 +3313,4 @@
 </div>
   </body>
 </html> 
+
