@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>Brightcove 広告分析</title>
+        <title>Analytics モジュールで動画を検索する方法</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="このトピックでは、Brightcoveのサーバーサイド広告 (SSAI) に関連する分析メトリクスについて説明します。">
+        <meta name="description" content="このトピックでは、Analytics モジュールで提供されているクイック検索機能を使用して特定の動画を検索する方法を学びます。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -45,6 +45,10 @@
     </head> 
 
     <body class="docs-page">
+        <div id="consent_blackbar"></div>
+        <div id="teconsent"></div>
+        <script async="async"
+            src="https://url.us.m.mimecastprotect.com/s/5CgOCzpzDQU89lO9HgivF9GSgA?domain=consent.trustarc.com"></script>
         
 
 <header class="header fixed-top">
@@ -3061,7 +3065,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Brightcove 広告分析</li>
+            <li class="breadcrumb-item active" aria-current="page">Analytics モジュールで動画を検索する方法</li>
             
             
           </ol>
@@ -3082,226 +3086,193 @@
       <br>
       
       
-<h1>Brightcove 広告分析</h1>
 <article class="bcls-article">
-  <summary>このトピックでは、Brightcoveのサーバーサイド広告 (SSAI) に関連する分析メトリクスについて説明します。</summary>
-
-  <section class="bcls-section"> 
-    <h2 id="Introduction">はじめに</h2>
-    <p>Brightcove 広告分析は、Brightcove の顧客に透明性が高く、意味のある包括的な広告指標セットを提供する無料の製品です。これらの指標は次のことに焦点を当てています:</p>
-    <ul>
-      <li> <strong>トラブルシューティング:</strong> どのような広告構成とパートナーがより効率的に広告を配信しているか? ワークフローのどこで収益が失われているか?など</li>
-      <li> <strong>レポート/インパクト:</strong> 広告のインプレッション、広告掲載率、視聴者によるインプレッションの消費方法をトラッキングします。広告ブロッカーとファイアウォールは広告運用にどのような影響を与えるか?など</li>
-    </ul>
-
-    <h3 id="Availability">アベイラビリティ</h3>
-    <p>広告分析は、SSAI を使用して VOD を収益化している Brightcove の顧客に無料で利用できます。これらは次のプラットフォームで見つけることができます:</p>
-    <ul>
-      <li>Video Cloud Studio</li>
-      <li>Beacon Studio</li>
-    </ul>
-
-    <p>広告指標は、SSAI を使用して収益化するビデオ オン デマンド (VOD) コンテンツに利用できます。</p>
-    
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Navigation">ナビゲーション</h2>
-    <ol class="bcls-tasklist">
-      <li>Video Cloud Studio を開きます。</li>
-      <li>プライマリ ナビゲーションで <strong>分析</strong>をクリックします。</li>
-      <li>パネル ナビゲーションで <strong>広告分析</strong>をクリックします。</li>
-    </ol>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Ad analytics" src="/assets/images/s-analytics-img/module/ad-analytics/ad-analytics.webp" />
-      <figcaption class="bcls-caption--image">Ad analytics</figcaption> 
-    </figure>
-  </section>
-
-  <!-- <section class="bcls-section">
-    <h2 id="VOD_Ad_Performance">VOD Ad Performance</h2>
-    <p>VOD Ad Performance metrics help users get information about the performance of their VOD ads.</p>
-    <h3>Charts</h3>
-    <p>The following charts trend over time, at a daily or hourly interval (depending on time range). Only one graph will display at a time, with totals for each metric displayed at top.</p> -->
-    <!-- <h3>Ad Slots</h3>
-    <h3>Ads Inserted</h3>
-    <h3>Ad Impressions</h3>
-    <h3>Impression Rate</h3>
-    <h3>Performance by dimension</h3> -->
-    <!-- <h3>Funnel by Ad Completion</h3>
-    <p>This chart illustrates the drop-off of viewing from initial impressions to ad completion. The funnel presentation will show the following step functions:</p>
-    <ul>
-      <li>Impressions</li>
-      <li>1st ad quartile</li>
-      <li>Ad midpoint</li>
-      <li>3rd ad quartile</li>
-      <li>Ad completion</li>
-    </ul> -->
-    <!-- <h3>Account Applicability</h3> -->
-
-  <!-- </section> -->
-
-  <section class="bcls-section">
-    <h2 id="SSAI_Performance">SSAI パフォーマンス</h2>
-    <p>SSAI パフォーマンス指標は、成功とエラーの両方の広告リクエストの概要を提供します。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="SSAI Performance" src="/assets/images/s-analytics-img/module/ad-analytics/ssai-performance.webp" />
-      <figcaption class="bcls-caption--image">SSAI Performance</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>SSAI パフォーマンス メトリックは、次のメトリックを収集、集計、およびフィルター処理します:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-   </ul>
-    
-    <h3>メトリック</h3>
-    <p>SSAI パフォーマンス メトリックは、次のメトリックを収集してレポートします:</p>
-    <ul>
-      <li><strong>SSAI リクエスト コード:</strong> 広告サーバーへの各リクエストからのすべての応答コード (成功コードとエラーコードを含む)。 広告サーバーへの各リクエストからのすべての応答コード (成功コードとエラー コードを含む)。</li>
-      <li><strong>広告プロバイダー別の広告リクエスト エラー:</strong> 広告プロバイダーごとに並べ替えられたリクエスト エラーのリスト。</li>
-      <li><strong>広告構成別の広告リクエスト エラー:</strong> 広告構成ごとに並べ替えられたリクエスト エラーの一覧。</li>
-      <li><strong>広告プロバイダー別のトラッカー エラー:</strong> 広告プロバイダーごとに分類されたトラッカー エラーの一覧。</li>
-      <li><strong>広告構成別トラッカー エラー:</strong> 広告構成ごとに分類されたトラッカー エラーの一覧。</li>
-      <!-- <li><strong>Ads request call count:</strong> Number of Ad request HTTP calls.</li>
-      <li><strong>Ads tracking call count:</strong>  Number of Ad Tracking HTTP calls.</li>
-      <li><strong>Ad error call counts:</strong> Number of HTTP.</li>
-      <li><strong>Ad error code:</strong> HTTP Error Response code.</li> -->
-    </ul>
-    
-    <!-- <h3>Granularity</h3>
-    <p>Here is the granularity for SSAI performances metrics: </p>
-    <ul>
-      <li><strong>Time aggregation:</strong> Hour, day, month.</li>
-      <li><strong>Ads:</strong> 1K, 1M. </li>
-    </ul> -->
-  </section>
-  
-  <section class="bcls-section">
-    <h2 id="SSAI_Errors">SSAI エラー</h2>
-    <p>SSAI エラー メトリックは、ユーザーがサーバーサイド広告 (SSAI) エラー情報をトラッキングするのに役立ちます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/ad-analytics/SSAI-errors.webp" />
-      <figcaption class="bcls-caption--image">SSAI Errors</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>SSAI エラー メトリックは、次のメトリックを収集、集計、およびフィルター処理します:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-      <li><strong>広告プロバイダー:</strong> 広告サーバーのドメイン。</li>
-      <li><strong>広告構成:</strong> SSAI <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">広告構成</a>識別子。</li>
-       <li><strong>SSAI エラー:</strong> SSAI エラー トラッカー。</li>
-      <li><strong>広告リクエスト エラー:</strong> リクエスト エラー トラッカー。</li>
-      <li><strong>広告トラッカーのインプレッション エラー:</strong> インプレッション エラー トラッカー。</li>
-    </ul>
-    <h3>メトリックス</h3>
-    <p>SSAI エラー メトリックは、次のメトリックを収集してレポートします:</p>
-    <ul>
-      <li><strong>SSAI エラー:</strong> サーバーサイドの広告挿入エラー。</li>
-    </ul>
-
-    <h3>データ表示</h3>
-    <ul>
-      <li><strong>リクエスト コード:</strong> 広告プロバイダーから返されたエラー コード。</li>
-      <li><strong>リクエスト数:</strong> エラー コードに関連付けられたリクエストの数。</li>
-    </ul>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Ad_Provider_Performance">広告プロバイダーのパフォーマンス</h2>
-    <p>広告プロバイダーのパフォーマンス指標には、各広告プロバイダーに関連する成功した広告リクエストの数とエラーの数が表示されます。これにより、各プロバイダーの広告エラーの割合をすぐに確認できます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/ad-analytics/ad-provider-performance.webp" />
-      <figcaption class="bcls-caption--image">Ad Provider Performance</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>広告プロバイダーのパフォーマンスは、次の指標を収集、集計、およびフィルタリングします:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-      <li><strong>広告構成:</strong> SSAI <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">広告構成</a>識別子。</li>
-      <li><strong>呼び出し:</strong> Brightcove SSAI から広告サーバーへの呼び出しの数。</li>
-      <li><strong>インプレッション トラッカー:</strong> インプレッション トラッカー</li>
-      <li><strong>広告リクエスト:</strong> 広告リクエスト トラッカー。</li>
-      
-    </ul>
-
-    <h3>データ表示</h3>
-    <ul>
-      <li><strong>広告プロバイダー:</strong> 広告プロバイダー。</li>
-      <li><strong>合計呼び出し数:</strong> 広告リクエストの合計呼び出し数。</li>
-      <li><strong>エラー:</strong> 広告プロバイダーに関連する広告リクエスト エラーの数。</li>
-      <li><strong>成功:</strong> 広告プロバイダーへの広告リクエストの呼び出しが成功した回数。</li>
-      <li><strong>合計エラーの割合:</strong> エラーの総数/広告リクエストの総数の比率</li>
-    </ul>
-   
-   
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Ad_Config_Performance">広告構成のパフォーマンス</h2>
-    <p>広告構成のパフォーマンス指標には、成功した広告リクエストの数と、各広告構成に関連付けられたエラーの数が表示されます。これにより、各構成の広告エラーの割合をすぐに確認できます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/ad-analytics/ad-config-performance.webp" />
-      <figcaption class="bcls-caption--image">Ad Config Performance</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>広告構成のパフォーマンス指標は、次の指標に基づいて収集、集計、フィルタリングできる必要があります:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-      <li><strong>広告プロバイダー:</strong>  広告サーバーのドメイン。</li>
-      <li><strong>呼び出し:</strong> 呼び出しの数。</li>
-      <li><strong>インプレッション トラッカー:</strong> インプレッション トラッカー。</li>
-      <li><strong>広告リクエスト:</strong> 広告リクエスト トラッカー。</li>
-    </ul>
-
-    <h3>データ表示</h3>
-    <ul>
-      <li><strong>広告構成:</strong> 使用されている広告構成のリスト。</li>
-      <li><strong>合計呼び出し数:</strong> 広告リクエスト呼び出しの合計数。</li>
-      <li><strong>エラー:</strong> 広告構成に関連する広告リクエスト エラーの数。</li>
-      <li><strong>成功:</strong> 広告構成に関連付けられた成功した広告リクエスト呼び出しの数。</li>
-      <li><strong>合計エラーの割合:</strong> エラーの合計数/広告リクエストの合計数の比率。</li>
-    </ul>
-
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Glossary_of_terms">用語集</h2>
-    <p>広告分析指標の用語集は次のとおりです:</p>
-    <h3>データの可用性</h3>
-    <p>これらのメトリックスのデータの可用性は次のとおりです:</p>
-    <ul>
-      <li>データは 3 年間保存され、利用可能です。</li>
-      <!-- <li>The data is available via queryable APIs in CSV or JSON format.</li> -->
-      <li>データは、エクスポート時にフィルターと集計に基づいて UI から CSV 形式でエクスポートできます。</li>
-    </ul>
-    <h3>応答時間</h3>
-    <p>すべてのデータは 2 時間新しいものである必要があります。</p>
-    <h3>メトリックス</h3>
-    <p>広告分析では、次の指標を収集してレポートできる必要があります:
-    </p>
-    <ul>
-      <li><strong>スケジュールされた広告:</strong> すべてのブレイク期間にわたってスケジュールされた広告の合計数。</li>
-      <li><strong>挿入された広告:</strong>  VOD またはライブ ストリームにステッチされたクリエイティブの数。</li>
-      <li><strong>広告のインプレッション数:</strong> 再生されたクリエイティブの数。</li>
-      <li><strong>広告の完了:</strong> 完了するまでに視聴されたクリエイティブの数。</li>
-      <li><strong>広告インプレッション率:</strong> 広告インプレッション数/スケジュールされた広告。</li>
-      <li><strong>最後の広告表示:</strong>  最新の広告インプレッションの時間。</li>
-    </ul>
-    <h3>ディメンション</h3>
-    <p>広告分析は、次の指標を収集、集計、フィルタリングします:</p>
-    <ul>
-      <li><strong>アカウント:</strong> すべてのディメンションの合計を示すアカウントレベルの指標。</li>
-      <li><strong>ビデオ:</strong> 動画IDによる集計。</li>
-      <li><strong>広告構成:</strong> SSAIの<a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">広告設定</a>識別子。</li>
-      <li><strong>広告プロバイダー:</strong> 広告サーバーのドメイン。</li>
-    </ul>
-    <h3>時間範囲</h3>
-    <p><strong>日付</strong> をクリックしてドロップダウンメニューを展開します。レポートデータの対象期間を選択してください。</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="Time range" src="/assets/images/s-analytics-img/module/qoe/time-period.webp" />
-      <figcaption class="bcls-caption--image">期間範囲</figcaption> 
-    </figure>
+    <h1>Analytics モジュールで動画を検索する方法</h1>
+    <summary>このトピックでは、Analytics モジュールで提供されているクイック検索機能を使用して特定の動画を検索する方法を学びます。</summary>
+    <section class="bcls-section">
+      <h2 id="find">クイック検索の使用</h2>
+      <p>Analytics モジュールのクイック検索機能を使用すると、特定の動画を検索できます。検索条件を入力すると、クイック検索は動画の名前、短い説明、長い説明、タグ、動画 ID、およびカスタム テキストフィールド内の内容を検索します。検索結果の一覧は検索フィールドの下に表示されます。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="quick find" src="/assets/images/s-analytics-img/module/node13712-basic-search.png" /></figure>
+      <aside class="bcls-aside bcls-aside--information">注：<strong>削除済み</strong> の動画は検索機能では検索できませんが、分析データは保持されています。パフォーマンスレポートを展開またはナビゲートしてブラウザの検索機能を使用するか、レポートをダウンロードして表計算ソフトで検索することで見つけることができます。</aside>
+      <p>一致するリンクをクリックすると、「コンテキスト内」のレポートが開きます。たとえば、アカウントのエンゲージメントを確認している状態でクイック検索を使用して特定の動画を見つけた場合、その動画のリンクをクリックするとエンゲージメント レポートが開きます。パフォーマンス レポートを見ている場合は、検索してリンクをクリックするとパフォーマンス レポートが開きます。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="basic">基本検索</h2>
+      <p>検索値に修飾子を付けずに入力すると、以下のフィールドに対してテキスト検索が実行されます：</p>
+      <ul>
+        <li>名前</li>
+        <li>短い説明</li>
+        <li>長い説明</li>
+        <li>タグ</li>
+        <li>動画 ID</li>
+        <li>参照 ID</li>
+        <li>すべてのカスタムフィールド</li>
+      </ul>
+      <p>複数の単語を一致させたい場合は、検索語句を引用符（"）で囲んでください。</p>
     </section>
 
+  <section class="bcls-section">
+    <h2 id="adv">詳細検索</h2>
+    <p>Analytics モジュールでは、<a href="#fields">特定のフィールドの検索</a>、<a href="#dates">日付に基づく検索</a>、および<a href="#terms">特定の語句の含める／除外する検索</a>も可能です。</p>
+    <div id="fields" class="BCL-subsection">
+      <h3>特定フィールドの検索</h3>
+      <p>指定した値で特定のフィールドを検索するには、以下の構文を使用します：</p>
+      <ul>
+        <li><code translate="No">field:検索したい値</code></li>
+      </ul>
+      <p>以下のフィールドがサポートされています：</p>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+          <tr>
+            <th width="128">フィールド</th>
+            <th width="582">サポートされている値</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+          <tr>
+            <td><code translate="No">name</code></td>
+            <td>文字列または引用付き文字列</td>
+          </tr>
+          <tr>
+            <td><code translate="No">text</code></td>
+            <td>文字列または引用付き文字列（<code translate="No">name</code>、<code translate="No">short description</code>、<code translate="No">long description</code> の値を対象）</td>
+          </tr>
+          <tr>
+            <td><code translate="No">tags</code></td>
+            <td>文字列または引用付き文字列</td>
+          </tr>
+          <tr>
+            <td><code translate="No">reference_id</code></td>
+            <td>文字列または引用付き文字列</td>
+          </tr>
+          <tr>
+            <td><code translate="No">state</code></td>
+            <td><code translate="No">ACTIVE</code>、<code translate="No">INACTIVE</code>、<code translate="No">DELETED</code>、<code translate="No">PENDING</code></td>
+          </tr>
+          <tr>
+            <td><code translate="No">updated_at</code></td>
+            <td>日付形式については<a href="#dates">特定の日付の検索</a>を参照</td>
+          </tr>
+          <tr>
+            <td><code translate="No">created_at</code></td>
+            <td>日付形式については<a href="#dates">特定の日付の検索</a>を参照</td>
+          </tr>
+          <tr>
+            <td><code translate="No">published_at</code></td>
+            <td>日付形式については<a href="#dates">特定の日付の検索</a>を参照</td>
+          </tr>
+          <tr>
+            <td><code translate="No">complete</code></td>
+            <td><code translate="No">true</code> または <code translate="No">false</code></td>
+          </tr>
+        </tbody>
+      </table>
 
-  
+      <p>完全一致または複数語の一致で検索したい場合は、検索語を引用符（ダブル クオーテーション）で囲んでください：</p>
+      <ul>
+        <li><code translate="No">"live"</code></li>
+        <li><code translate="No">"live streaming"</code></li>
+      </ul>
+      <p>これは、特定のフィールドに対して検索する場合にも有効です：</p>
+      <ul>
+        <li><code translate="No">name:"live"</code></li>
+        <li><code translate="No">name:"live streaming"</code></li>
+      </ul>
+    </div>
+    <div id="dates" class="BCL-subsection">
+        <h3>特定の日付での検索</h3>
+        <p>日付に依存する検索フィールドでは、日付範囲の値を指定できます。日付の指定には複数の形式がサポートされています：</p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th width="240">形式</th>
+              <th width="341">意味</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>2013-08-01</td>
+              <td>yyyy-mm-dd 形式の日付</td>
+            </tr>
+            <tr>
+              <td>2013-08-01T00:00:00Z</td>
+              <td>UTC 形式の日時</td>
+            </tr>
+            <tr>
+              <td>-1d</td>
+              <td>現在時刻から1日前（<a href="#relativeDates">相対日付</a>を参照）</td>
+            </tr>
+            <tr>
+              <td>+1d</td>
+              <td>現在時刻から1日後（<a href="#relativeDates">相対日付</a>を参照）</td>
+            </tr>
+          </tbody>
+        </table>
+      &nbsp;
+      <h4 id="relativeDates">相対日付</h4>
+      <p>相対日付の指定には、「+」または「-」の方向記号に続けて数値、その後に期間（もしくはその略語）を指定します。使用可能な期間の単位は、分（m）、時間（h）、日（d）です。</p>
+      <p>例：</p>
+      <ul>
+        <li><code translate="No">-1day</code></li>
+        <li><code translate="No">-2days</code></li>
+        <li><code translate="No">+4hours</code></li>
+        <li><code translate="No">-60minutes</code></li>
+        <li><code translate="No">-1d</code></li>
+        <li><code translate="No">-2d</code></li>
+        <li><code translate="No">+4h</code></li>
+        <li><code translate="No">-60m</code></li>
+      </ul>
+      <h4>日付範囲</h4>
+      <p>検索対象のフィールドが日付である場合、検索範囲として日付の範囲を指定できます：</p>
+      <ul>
+        <li><code translate="No">updated_at:2013-08-01T00:00:00Z..2013-10-08T00:00:00Z</code></li>
+      </ul>
+      <p>これは、2013年8月1日から2013年10月8日までの間に <code translate="No">updated_at</code> 値があるすべての動画を検索します。</p>
+      <h4>範囲の一部省略</h4>
+      <p>指定された時点まで、あるいは指定された時点以降のすべての日付と一致させたい場合は、範囲の一方を省略することができます。例：過去2日間に更新されたすべての動画を検索：</p>
+      <ul>
+        <li><code translate="No">q=updated_at:-2days..</code></li>
+      </ul>
+      <p>2013年8月11日以前に更新されたすべての動画を検索：</p>
+      <ul>
+        <li><code translate="No">q=updated_at:..2013-08-11T00:00:00Z</code></li>
+      </ul>
+      <p>&nbsp;</p>
+      </div>
+      <div id="terms" class="BCL-subsection">
+        <h3>特定の用語を含める・除外する</h3>
+        <p>検索結果に必ず含めたい用語（<strong>含める必要がある</strong>）や、含めたくない用語（<strong>除外すべき</strong>）を指定することができます。これは、用語の直前に <code translate="No">+</code> または <code translate="No">-</code> を付けて制御します：</p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th width="140">例</th>
+              <th width="728">意味</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td><code translate="No">+animals</code></td>
+              <td>動画の <code translate="No">name</code>、<code translate="No">short description</code>、または <code translate="No">long description</code> に 'animals' を<strong>必ず</strong>含める必要があります</td>
+            </tr>
+            <tr>
+              <td><code translate="No">-animals</code></td>
+              <td>動画の <code translate="No">name</code>、<code translate="No">short description</code>、または <code translate="No">long description</code> に 'animals' を<strong>含めてはいけません</strong></td>
+            </tr>
+            <tr>
+              <td><code translate="No">+name:animals</code></td>
+              <td>動画の名前に 'animals' を<strong>必ず</strong>含める必要があります</td>
+            </tr>
+            <tr>
+              <td><code translate="No">-name:animals</code></td>
+              <td>動画の名前に 'animals' を<strong>含めてはいけません</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+      </div>
+  </section>
+</article>
 
-</article> 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
@@ -3478,4 +3449,3 @@
 </div>
   </body>
 </html> 
-

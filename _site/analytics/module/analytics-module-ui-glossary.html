@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>Brightcove 広告分析</title>
+        <title>Analytics モジュール UI 用語集</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="このトピックでは、Brightcoveのサーバーサイド広告 (SSAI) に関連する分析メトリクスについて説明します。">
+        <meta name="description" content="このトピックでは、AnalyticsモジュールのUIで使用される用語を一覧表示します。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -45,6 +45,10 @@
     </head> 
 
     <body class="docs-page">
+        <div id="consent_blackbar"></div>
+        <div id="teconsent"></div>
+        <script async="async"
+            src="https://url.us.m.mimecastprotect.com/s/5CgOCzpzDQU89lO9HgivF9GSgA?domain=consent.trustarc.com"></script>
         
 
 <header class="header fixed-top">
@@ -3061,7 +3065,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Brightcove 広告分析</li>
+            <li class="breadcrumb-item active" aria-current="page">Analytics モジュール UI 用語集</li>
             
             
           </ol>
@@ -3082,400 +3086,559 @@
       <br>
       
       
-<h1>Brightcove 広告分析</h1>
 <article class="bcls-article">
-  <summary>このトピックでは、Brightcoveのサーバーサイド広告 (SSAI) に関連する分析メトリクスについて説明します。</summary>
+  <h1>Analytics モジュール UI 用語集</h1>
+  <summary>このトピックでは、Analytics モジュールの UI で使用される用語を一覧表示します。</summary>
+<p>
+<style type="text/css">dt {font-weight: bold;}
+dd { padding-bottom: 10px; }
+</style>
+</p>
 
-  <section class="bcls-section"> 
-    <h2 id="Introduction">はじめに</h2>
-    <p>Brightcove 広告分析は、Brightcove の顧客に透明性が高く、意味のある包括的な広告指標セットを提供する無料の製品です。これらの指標は次のことに焦点を当てています:</p>
-    <ul>
-      <li> <strong>トラブルシューティング:</strong> どのような広告構成とパートナーがより効率的に広告を配信しているか? ワークフローのどこで収益が失われているか?など</li>
-      <li> <strong>レポート/インパクト:</strong> 広告のインプレッション、広告掲載率、視聴者によるインプレッションの消費方法をトラッキングします。広告ブロッカーとファイアウォールは広告運用にどのような影響を与えるか?など</li>
-    </ul>
+<p>| <a href="#A">-A-</a> | <a href="#B">-B-</a> | <a href="#C">-C-</a> | <a href="#D">-D-</a> | <a href="#E">-E-</a> | <a href="#F">-F-</a> | <a href="#G">-G-</a> | <a href="#H">-H-</a> | <a href="#I">-I-</a> | <a href="#J">-J-</a> | <a href="#K">-K-</a> | <a href="#L">-L-</a> | <a href="#M">-M-</a> | <a href="#N">-N-</a> | <a href="#O">-O-</a> | <a href="#P">-P-</a> | <a href="#Q">-Q-</a> | <a href="#R">-R-</a> | <a href="#S">-S-</a> | <a href="#T">-T-</a> | <a href="#U">-U-</a> | <a href="#V">-V-</a> | <a href="#W">-W-</a> | <a href="#X">-X-</a> | <a href="#Y">-Y-</a> | <a href="#Z">-Z-</a> |</p>
 
-    <h3 id="Availability">アベイラビリティ</h3>
-    <p>広告分析は、SSAI を使用して VOD を収益化している Brightcove の顧客に無料で利用できます。これらは次のプラットフォームで見つけることができます:</p>
-    <ul>
-      <li>Video Cloud Studio</li>
-      <li>Beacon Studio</li>
-    </ul>
+<aside class="bcls-aside bcls-aside--information">補足：<span translate="No">Analytics API</span> によって返されるデータ項目や、分析データをエクスポートする際のデータ項目一覧については、<a href="https://apis.support.brightcove.com/analytics/general/analytics-api-glossary.html">Analytics API 用語集</a>をご覧ください。</aside>
+<aside class="bcls-aside bcls-aside--information">補足：Insights に関する用語の一覧については、<a href="https://studio.support.brightcove.com/analytics/module/insights-glossary.html">Insights 用語集</a>をご覧ください。</aside>
 
-    <p>広告指標は、SSAI を使用して収益化するビデオ オン デマンド (VOD) コンテンツに利用できます。</p>
+<section class="bcls-section">
+    <h2 id="A">A</h2>
     
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Navigation">ナビゲーション</h2>
-    <ol class="bcls-tasklist">
-      <li>Video Cloud Studio を開きます。</li>
-      <li>プライマリ ナビゲーションで <strong>分析</strong>をクリックします。</li>
-      <li>パネル ナビゲーションで <strong>広告分析</strong>をクリックします。</li>
-    </ol>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Ad analytics" src="/assets/images/s-analytics-img/module/ad-analytics/ad-analytics.webp" />
-      <figcaption class="bcls-caption--image">Ad analytics</figcaption> 
-    </figure>
-  </section>
-
-  <!-- <section class="bcls-section">
-    <h2 id="VOD_Ad_Performance">VOD Ad Performance</h2>
-    <p>VOD Ad Performance metrics help users get information about the performance of their VOD ads.</p>
-    <h3>Charts</h3>
-    <p>The following charts trend over time, at a daily or hourly interval (depending on time range). Only one graph will display at a time, with totals for each metric displayed at top.</p> -->
-    <!-- <h3>Ad Slots</h3>
-    <h3>Ads Inserted</h3>
-    <h3>Ad Impressions</h3>
-    <h3>Impression Rate</h3>
-    <h3>Performance by dimension</h3> -->
-    <!-- <h3>Funnel by Ad Completion</h3>
-    <p>This chart illustrates the drop-off of viewing from initial impressions to ad completion. The funnel presentation will show the following step functions:</p>
-    <ul>
-      <li>Impressions</li>
-      <li>1st ad quartile</li>
-      <li>Ad midpoint</li>
-      <li>3rd ad quartile</li>
-      <li>Ad completion</li>
-    </ul> -->
-    <!-- <h3>Account Applicability</h3> -->
-
-  <!-- </section> -->
-
-  <section class="bcls-section">
-    <h2 id="SSAI_Performance">SSAI パフォーマンス</h2>
-    <p>SSAI パフォーマンス指標は、成功とエラーの両方の広告リクエストの概要を提供します。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="SSAI Performance" src="/assets/images/s-analytics-img/module/ad-analytics/ssai-performance.webp" />
-      <figcaption class="bcls-caption--image">SSAI Performance</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>SSAI パフォーマンス メトリックは、次のメトリックを収集、集計、およびフィルター処理します:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-   </ul>
-    
-    <h3>メトリック</h3>
-    <p>SSAI パフォーマンス メトリックは、次のメトリックを収集してレポートします:</p>
-    <ul>
-      <li><strong>SSAI リクエスト コード:</strong> 広告サーバーへの各リクエストからのすべての応答コード (成功コードとエラーコードを含む)。 広告サーバーへの各リクエストからのすべての応答コード (成功コードとエラー コードを含む)。</li>
-      <li><strong>広告プロバイダー別の広告リクエスト エラー:</strong> 広告プロバイダーごとに並べ替えられたリクエスト エラーのリスト。</li>
-      <li><strong>広告構成別の広告リクエスト エラー:</strong> 広告構成ごとに並べ替えられたリクエスト エラーの一覧。</li>
-      <li><strong>広告プロバイダー別のトラッカー エラー:</strong> 広告プロバイダーごとに分類されたトラッカー エラーの一覧。</li>
-      <li><strong>広告構成別トラッカー エラー:</strong> 広告構成ごとに分類されたトラッカー エラーの一覧。</li>
-      <!-- <li><strong>Ads request call count:</strong> Number of Ad request HTTP calls.</li>
-      <li><strong>Ads tracking call count:</strong>  Number of Ad Tracking HTTP calls.</li>
-      <li><strong>Ad error call counts:</strong> Number of HTTP.</li>
-      <li><strong>Ad error code:</strong> HTTP Error Response code.</li> -->
-    </ul>
-    
-    <!-- <h3>Granularity</h3>
-    <p>Here is the granularity for SSAI performances metrics: </p>
-    <ul>
-      <li><strong>Time aggregation:</strong> Hour, day, month.</li>
-      <li><strong>Ads:</strong> 1K, 1M. </li>
-    </ul> -->
-  </section>
-  
-  <section class="bcls-section">
-    <h2 id="SSAI_Errors">SSAI エラー</h2>
-    <p>SSAI エラー メトリックは、ユーザーがサーバーサイド広告 (SSAI) エラー情報をトラッキングするのに役立ちます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/ad-analytics/SSAI-errors.webp" />
-      <figcaption class="bcls-caption--image">SSAI Errors</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>SSAI エラー メトリックは、次のメトリックを収集、集計、およびフィルター処理します:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-      <li><strong>広告プロバイダー:</strong> 広告サーバーのドメイン。</li>
-      <li><strong>広告構成:</strong> SSAI <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">広告構成</a>識別子。</li>
-       <li><strong>SSAI エラー:</strong> SSAI エラー トラッカー。</li>
-      <li><strong>広告リクエスト エラー:</strong> リクエスト エラー トラッカー。</li>
-      <li><strong>広告トラッカーのインプレッション エラー:</strong> インプレッション エラー トラッカー。</li>
-    </ul>
-    <h3>メトリックス</h3>
-    <p>SSAI エラー メトリックは、次のメトリックを収集してレポートします:</p>
-    <ul>
-      <li><strong>SSAI エラー:</strong> サーバーサイドの広告挿入エラー。</li>
-    </ul>
-
-    <h3>データ表示</h3>
-    <ul>
-      <li><strong>リクエスト コード:</strong> 広告プロバイダーから返されたエラー コード。</li>
-      <li><strong>リクエスト数:</strong> エラー コードに関連付けられたリクエストの数。</li>
-    </ul>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Ad_Provider_Performance">広告プロバイダーのパフォーマンス</h2>
-    <p>広告プロバイダーのパフォーマンス指標には、各広告プロバイダーに関連する成功した広告リクエストの数とエラーの数が表示されます。これにより、各プロバイダーの広告エラーの割合をすぐに確認できます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/ad-analytics/ad-provider-performance.webp" />
-      <figcaption class="bcls-caption--image">Ad Provider Performance</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>広告プロバイダーのパフォーマンスは、次の指標を収集、集計、およびフィルタリングします:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-      <li><strong>広告構成:</strong> SSAI <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">広告構成</a>識別子。</li>
-      <li><strong>呼び出し:</strong> Brightcove SSAI から広告サーバーへの呼び出しの数。</li>
-      <li><strong>インプレッション トラッカー:</strong> インプレッション トラッカー</li>
-      <li><strong>広告リクエスト:</strong> 広告リクエスト トラッカー。</li>
-      
-    </ul>
-
-    <h3>データ表示</h3>
-    <ul>
-      <li><strong>広告プロバイダー:</strong> 広告プロバイダー。</li>
-      <li><strong>合計呼び出し数:</strong> 広告リクエストの合計呼び出し数。</li>
-      <li><strong>エラー:</strong> 広告プロバイダーに関連する広告リクエスト エラーの数。</li>
-      <li><strong>成功:</strong> 広告プロバイダーへの広告リクエストの呼び出しが成功した回数。</li>
-      <li><strong>合計エラーの割合:</strong> エラーの総数/広告リクエストの総数の比率</li>
-    </ul>
-   
-   
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Ad_Config_Performance">広告構成のパフォーマンス</h2>
-    <p>広告構成のパフォーマンス指標には、成功した広告リクエストの数と、各広告構成に関連付けられたエラーの数が表示されます。これにより、各構成の広告エラーの割合をすぐに確認できます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/ad-analytics/ad-config-performance.webp" />
-      <figcaption class="bcls-caption--image">Ad Config Performance</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>広告構成のパフォーマンス指標は、次の指標に基づいて収集、集計、フィルタリングできる必要があります:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-      <li><strong>広告プロバイダー:</strong>  広告サーバーのドメイン。</li>
-      <li><strong>呼び出し:</strong> 呼び出しの数。</li>
-      <li><strong>インプレッション トラッカー:</strong> インプレッション トラッカー。</li>
-      <li><strong>広告リクエスト:</strong> 広告リクエスト トラッカー。</li>
-    </ul>
-
-    <h3>データ表示</h3>
-    <ul>
-      <li><strong>広告構成:</strong> 使用されている広告構成のリスト。</li>
-      <li><strong>合計呼び出し数:</strong> 広告リクエスト呼び出しの合計数。</li>
-      <li><strong>エラー:</strong> 広告構成に関連する広告リクエスト エラーの数。</li>
-      <li><strong>成功:</strong> 広告構成に関連付けられた成功した広告リクエスト呼び出しの数。</li>
-      <li><strong>合計エラーの割合:</strong> エラーの合計数/広告リクエストの合計数の比率。</li>
-    </ul>
-
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Glossary_of_terms">用語集</h2>
-    <p>広告分析指標の用語集は次のとおりです:</p>
-    <h3>データの可用性</h3>
-    <p>これらのメトリックスのデータの可用性は次のとおりです:</p>
-    <ul>
-      <li>データは 3 年間保存され、利用可能です。</li>
-      <!-- <li>The data is available via queryable APIs in CSV or JSON format.</li> -->
-      <li>データは、エクスポート時にフィルターと集計に基づいて UI から CSV 形式でエクスポートできます。</li>
-    </ul>
-    <h3>応答時間</h3>
-    <p>すべてのデータは 2 時間新しいものである必要があります。</p>
-    <h3>メトリックス</h3>
-    <p>広告分析では、次の指標を収集してレポートできる必要があります:
-    </p>
-    <ul>
-      <li><strong>スケジュールされた広告:</strong> すべてのブレイク期間にわたってスケジュールされた広告の合計数。</li>
-      <li><strong>挿入された広告:</strong>  VOD またはライブ ストリームにステッチされたクリエイティブの数。</li>
-      <li><strong>広告のインプレッション数:</strong> 再生されたクリエイティブの数。</li>
-      <li><strong>広告の完了:</strong> 完了するまでに視聴されたクリエイティブの数。</li>
-      <li><strong>広告インプレッション率:</strong> 広告インプレッション数/スケジュールされた広告。</li>
-      <li><strong>最後の広告表示:</strong>  最新の広告インプレッションの時間。</li>
-    </ul>
-    <h3>ディメンション</h3>
-    <p>広告分析は、次の指標を収集、集計、フィルタリングします:</p>
-    <ul>
-      <li><strong>アカウント:</strong> すべてのディメンションの合計を示すアカウントレベルの指標。</li>
-      <li><strong>ビデオ:</strong> 動画IDによる集計。</li>
-      <li><strong>広告構成:</strong> SSAIの<a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">広告設定</a>識別子。</li>
-      <li><strong>広告プロバイダー:</strong> 広告サーバーのドメイン。</li>
-    </ul>
-    <h3>時間範囲</h3>
-    <p><strong>日付</strong> をクリックしてドロップダウンメニューを展開します。レポートデータの対象期間を選択してください。</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="Time range" src="/assets/images/s-analytics-img/module/qoe/time-period.webp" />
-      <figcaption class="bcls-caption--image">期間範囲</figcaption> 
-    </figure>
+    <dl>
+        <dt id="active_media">Active Media (アクティブ メディア)</dt>
+        <dd>アカウント内のアクティブな動画の数です。このデータはリアルタイムではないことに注意してください。ビデオライブラリから 1 日に 1 回同期されます。また、「リアルタイム」分析データ (3 日未満) を見ている場合、このデータは正確ではない場合があります。</dd>
+        <dt id="api">Analytics API</dt>
+        <dd>REST ベースのアプリケーションプログラミングインターフェイスで、開発者は Video Cloud 動画の分析指標を JSON 形式で直接取得できます。 <span translate="No">Analytics API</span>は、Video Cloud StudioのAnalytics UI用のデータを提供します。</dd>
+    </dl>
     </section>
 
+    <section class="bcls-section">
+        <h2 id="B">B</h2>
+        
+        <dl>
+            <dt id="totalbandwidth">Total Bandwidth (合計帯域幅)</dt>
+            <dd>ビデオ、画像、プレーヤーを配信するために使用される合計帯域幅。帯域幅データの一部は、CDN などの外部ソースから取得されるため、遅延することに注意してください。通常、情報は48時間以内に完了しますが、場合によっては 1 日が 5 日にもなることもあります。</dd>
+            <dt id="browser_type">Browser Type (ブラウザーのタイプ)</dt>
+            <dd>ブラウザータイプ。一般的な値は次のとおりです。
+            <ul>
+                <li>Chrome</li>
+                <li>Safari</li>
+                <li>Firefox</li>
+                <li>IE</li>
+            </ul>
+            </dd>
+            <dt id="bytes_delivered">Bytes Delivered (配信されたバイト数)</dt>
+            <dd>ビデオ/オーディオデータ（再生されたかどうかに関係なくバッファリングされたデータを含む）、ポスターとサムネイル画像、およびビデオプレーヤーに関連付けられたデータを含む、視聴者に配信されたバイト単位の総数。</dd>
+        </dl>
+        </section>
 
+        <section class="bcls-section">
+            <h2 id="C">C</h2>
+            
+            <dl>
+                <dt id="city">City (市)</dt>
+                <dd>動画が視聴された都市</dd>
+                <dt id="country">Country (国)</dt>
+                <dd>動画が視聴された国の英語の省略名。<a href="http://en.wikipedia.org/wiki/ISO_3166">ISO 3166</a> 標準に準拠しています。</dd>
+                <dt id="csv">CSV</dt>
+                <dd>コンマ区切りの値。分析データはこの形式でエクスポートできます。</dd>
+            </dl>
+            </section>
+
+            <section class="bcls-section">
+                <h2 id="D">D</h2>
+                
+                <dl>
+                    <dt id="daily-unique-users">Daily Unique Users (日次ユニークユーザー)</dt>
+                    <dd>特定の1日における動画のユニーク視聴者の推定数です。このデータは、調整済みデータ（3日後）および、アカウントレベルでのみ利用できます。詳細については、<a href="https://apis.support.brightcove.com/analytics/general/analytics-api-unique-users.html"> Analytics API：ユニークユーザー</a>を参照してください。</dd>
+                    <dt id="day">Day (日)</dt>
+                    <dd>動画が視聴された日付</dd>
+                    <dt id="device">Device (デバイス)</dt>
+                    <dd>動画の視聴に使用した<a href="#device_type">デバイスタイプ</a>と<a href="#device_os">デバイスオペレーティングシステム</a>の組み合わせ</dd>
+                    <dt id="device_os">Device Operating Syste (デバイス オペレーティング システム)</dt>
+                    <dd>動画の視聴に使用したデバイスオペレーティングシステム。指定可能な値は次のとおりです。
+                    <ul>
+                        <li>Android</li>
+                        <li>Bada</li>
+                        <li>iOS</li>
+                        <li>Linux</li>
+                        <li>OS X</li>
+                        <li>RIM（ブラックベリー）</li>
+                        <li>Symbian</li>
+                        <li>Web OS</li>
+                        <li>Windows</li>
+                        <li>その他 - 上記のいずれにも該当しないユーザーエージェント用</li>
+                    </ul>
+                    </dd>
+                    <dt id="device_manufacterer">Device Manufacterer (デバイス メーカー)</dt>
+                    <dd>デバイスのメーカー。いくつかの典型的な値は次のとおりです。
+                    <ul>
+                        <li>レノボ</li>
+                        <li>apple</li>
+                        <li>ソニー</li>
+                        <li>microsoft</li>
+                    </ul>
+                    </dd>
+                    <dt id="device_type">Device Type (デバイス タイプ)</dt>
+                    <dd>動画の視聴に使用したデバイスタイプ。指定可能な値は次のとおりです。
+                    <ul>
+                        <li>デスクトップ ｰ デスクトップPCとノートPCが含まれます</li>
+                        <li>タブレット ｰ iPad、Androidタブレットなどが含まれます</li>
+                        <li>モバイル ｰ 携帯電話</li>
+                        <li>コネクティッドTV/ゲーム機/コンパニオンデバイス ｰ スマートテレビ、セットトップボックス、ゲーム機が含まれます</li>
+                        <li>その他 - 上記のいずれにも該当しないユーザーエージェントの場合</li>
+                    </ul>
+                    </dd>
+                    <dd>&nbsp;</dd>
+                    <dt id="dimension">Dimension (ディメンション)</dt>
+                    <dd>ディメンションは、ユーザーがレポートおよびフィルター処理できる分析データ カテゴリーです。現在利用できるディメンションは次のとおりです。
+                    <ul>
+                        <li><a href="#player">プレーヤー</a></li>
+                        <li><a href="#video">動画</a></li>
+                        <li><a href="#country">国</a></li>
+                        <li><a href="#day">日</a></li>
+                        <li><a href="#display_domain">ドメイン名</a></li>
+                        <li><a href="#device">デバイス</a></li>
+                        <li><a href="#device_type">デバイスタイプ</a></li>
+                        <li><a href="#device_os">デバイスOS</a></li>
+                        <li><a href="#traffic_sources">トラフィックソース</a></li>
+                    </ul>
+                    </dd>
+                    <dd>&nbsp;</dd>
+                    <dt id="display_domain">Display Domain (ドメイン名)</dt>
+                    <dd>クライアントから報告された参照ドメイン（ブラウザまたはその他）</dd>
+                    <dt id="display_url">Display URL (表示 URL)</dt>
+                    <dd>動画の視聴時に視聴者が使用したURL</dd>
+                </dl>
+                </section>
+
+                <section class="bcls-section">
+                    <h2 id="E">E</h2>
+                    
+                    <dl>
+                        <dt id="engagement_score">Engagement Score (エンゲージメント スコア)</dt>
+                        <dd>動画視聴 1 件当たりの平均視聴率（全視聴割合の合計を動画視聴回数で割って計算します）。計算方法の詳細については、<a href="/analytics/calculating-video-engagement-score.html">「動画エンゲージメントスコアの計算」</a>を参照してください。</dd>
+                    </dl>
+                    </section>
+
+<section class="bcls-section">
+<h2 id="F">F</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="G">G</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="H">H</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="I">I</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="J">J</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="K">K</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="L">L</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="M">M</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="N">N</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="O">O</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="P">P</h2>
+
+<dl>
+    <dt id="play_rate">Play Rate (再生率)</dt>
+	<dd>再生率は、ビデオが再生された回数（video_view）を再生の機会の数（video_impression）で割ったものです。</dd>
+    <dt id="play_request">Play Request (再生リクエスト)</dt>
+    <dd>再生を手動（視聴者によるクリック）または自動再生機能によってリクエストする動作を示します。プレーヤー V7 では、1つのメディア ストリームにつきセッションごとに1回のみ <code translate="No">play_request</code> が送信されます。プレーヤー 6 以前では、再生の一時停止後の再開やリプレイ時に、1つのストリームに対して複数回 <code translate="No">play_request</code> を受信する可能性があります。</dd>
+	<dt id="player">Player (プレーヤー)</dt>
+	<dd>Video Cloud プレーヤー ID</dd>
+	<dt id="player_load">Player Load (プレーヤーのロード)</dt>
+	<dd>プレーヤーをロードした回数</dd>
+	<dt id="player_name">Player Name (プレーヤー名)</dt>
+	<dd>Video Cloud プレーヤーの名前</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="Q">Q</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+    <h2 id="R">R</h2>
+    
+    <dl>
+        <dt id="region">Region (地域)</dt>
+        <dd>動画が視聴された都道府県名。<a href="http://en.wikipedia.org/wiki/ISO_3166">ISO 3166</a> 規格に準拠しています。</dd>
+    </dl>
+    </section>
+
+<section class="bcls-section">
+<h2 id="S">S</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="T">T</h2>
+<dl>
+    <dt id="traffic_sources">Traffic Sources (トラフィックソース)</dt>
+	<dd>視聴者がプレーヤーページに到達するまでの経路を示す情報。可能な値は次のとおりです。
+	<ul>
+		<li>紹介 - ユーザーが動画まで辿ったリンク</li>
+		<li>直接-ユーザーがリンクを直接入力したか、ブックマークを使用したか、メールからのリンクを使用した</li>
+		<li>オーガニック検索 － ユーザーは検索を行って結果をクリックし、動画にアクセスした</li>
+		<li>有料検索 － ユーザーは検索を行って有料結果をクリックし、動画にアクセスした</li>
+		<li>安全な検索 － ユーザーは Google アカウントにログインして検索を行い、結果をクリックした（有料またはオーガニック。この場合、検索情報は含まれない）</li>
+	</ul>
+  </dd>
+</dl>
+<dl>
+    <dt id="traffic_sources">Today's Views (本日の再生回数)</dt>
+    <dd>これは当日中に記録された動画の総再生回数を示します。ページを読み込んだ時点での最新時刻まで、00:00からの再生回数を表示します。この値はアカウントのタイムゾーンに基づいて毎日リセットされます。ユニーク視聴者数が「IPアドレス＋ユーザーエージェント文字列」の組み合わせを 1 ユーザーとしてカウントするのに対し、本日の再生回数は <code translate="No">video_view</code> イベントが発生した回数のみをカウントします。
+    <p></p><p>例：同じユーザーが同じ動画を 3 つの異なるデバイスで、異なる時間帯にそれぞれ1回ずつ視聴した場合、ユニーク視聴者数は+1とカウントされますが、本日の再生回数は+3とカウントされます。</p>
+    </dd>
+  </dl>
+  <dl>
+    <dt id="time_in_action">time_in_action (活動時間)</dt>
+    <dd>レポートが生成されると、一連の値が表示されます。この場合、<strong>time_in_action</strong> は秒単位の時間を指します。</dd>
+  </dl>
+
+</section>
+
+<section class="bcls-section">
+    <h2 id="U">U</h2>
+    
+    <dl>
+        <dt id="unique-users">Unique Users (ユニークユーザー)</dt>
+        <dd><a href="#daily-unique-users">日次ユニークユーザー</a> を参照</dd>
+    </dl>
+    </section>
+
+<section class="bcls-section">
+<h2 id="V">V</h2>
+
+<dl>
+    <dt id="video">Video (動画)</dt>
+	<dd>動画の Video Cloud ID</dd>
+	<dt id="videobandwidth">Video Bandwidth (動画帯域幅)</dt>
+	<dd>ビデオのみの配信に使用された総帯域幅。</dd>
+	<dt id="video_duration">Video Duration (動画時間)</dt>
+	<dd>動画の長さ（秒）</dd>
+	<dt id="video_engagement">Video Engagement (動画エンゲージメント)</dt>
+	<dd>動画視聴1件当たりの平均視聴割合（全視聴割合の合計を動画視聴で割って計算します）計算方法の詳細については、<a href="/analytics/calculating-video-engagement-score.html">「動画エンゲージメントスコアの計算」</a>を参照してください。</dd>
+	<dt id="video_name">Video Name (動画タイトル)</dt>
+	<dd>ファイルの名前</dd>
+	<dt id="video_view">Video Views (動画視聴回数)</dt>
+	<dd>動画の再生が始まった回数。ストリームの開始時に記録されます（巻き戻しまたはリプレイを含みません）。動画視聴回数は、個々の視聴者の測定値ではありません。</dd>
+	<dt id="video_view">Viewed Minutes (視聴時間)</dt>
+	<dd>動画が視聴された合計時間（分）</dd>
+    
+    <p>ビデオが視聴された合計分数です。<strong>一時停止中の時間は含まれません。</strong></p>
+    <aside class="bcls-aside bcls-aside--information"><strong>注:</strong> <code>video_seconds_viewed</code> は再生位置に基づいており、再生速度の変更は反映されません。</aside>
   
+  </dd>
+  <dt id="video_engagement_1">Views at 1% (1%時点の視聴回数)</dt>
+  <dd>動画の1%ポイントで記録された視聴回数</dd>
+  <dt id="video_engagement_25">Views at 25% (25%時点の視聴回数)</dt>
+  <dd>動画の 25% ポイントで記録された再生数です。</dd>
+  <dt id="video_engagement_50">Views at 50% (50%時点の視聴回数)</dt>
+  <dd>動画の 50% ポイントで記録された再生数。</dd>
+  <dt id="video_engagement_75">Views at 75% (75%時点の視聴回数)</dt>
+  <dd>動画の 75% ポイントで記録された再生数です。</dd>
+  <dt id="video_engagement_100">Views at 100% (100%時点の視聴回数)</dt>
+  <dd>動画の 100% ポイントで記録された再生数。</dd>
+  <dt id="video_impression">Video Impression (動画インプレッション)</dt>
+  <dd>プレーヤーに動画が読み込まれインタラクションの準備ができた回数</dd>
+</dl>
+</section>
 
-</article> 
+<section class="bcls-section">
+<h2 id="W">W</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="X">X</h2>
+
+<dl>
+	<dt id="xlsx">XLSX</dt>
+	<dd>Microsoft Excelファイル。分析データはこの形式でエクスポートできます。</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="Y">Y</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+
+<section class="bcls-section">
+<h2 id="Z">Z</h2>
+
+<dl>
+  <dt id="">&nbsp;</dt>
+  <dd>&nbsp;</dd>
+</dl>
+</section>
+    </article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
-  <nav class="right-side-nav" id="right_side_nav">
-    <h6 class="toc">ページ コンテンツ</h6>
-    <ul id="in_page_nav" class="list-none"></ul>
-  </nav>
-  
-<!-- </div> -->
-</div>
-</div>
-</div>
-<div class="page-content" style="background-color: rgb(1, 5, 14);">
-  <div class="container" style="width: 50%;">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-6 col-md">
-          <h5 class="h5-text">Brightcove サポート</h5>
-          <ul class="list-unstyled text-small" style="color: white ;">
-            <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
-            <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/search.html">キュメントの検索</a></li>
-          </ul>
-        </div>
+    <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">ページ コンテンツ</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
       
-        <div class="col-6 col-md">
-          <h5 class="h5-text">トレーニング</h5>
-          <ul class="list-unstyled text-small">
-            <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
-            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
-          </ul>
-        </div>
-      
-        <div class="col-6 col-md">
-          <h5 class="h5-text">Brightcove</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
-            <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
-            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
-          </ul>
-        </div>
-      </div>
+    <!-- </div> -->
+    </div>
+    </div>
+    </div>
+    <div class="page-content" style="background-color: rgb(1, 5, 14);">
+      <div class="container" style="width: 50%;">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-6 col-md">
+              <h5 class="h5-text">Brightcove サポート</h5>
+              <ul class="list-unstyled text-small" style="color: white ;">
+                <li><a class="a-text" href="https://status.brightcove.com">システム ステータス</a></li>
+                <li><a class="a-text" href="https://supportportal.brightcove.com">サポートへのお問い合わせ</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/search.html">キュメントの検索</a></li>
+              </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+              <h5 class="h5-text">トレーニング</h5>
+              <ul class="list-unstyled text-small">
+                <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
+                <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove アカデミー</a></li>
+              </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+              <h5 class="h5-text">Brightcove</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
+                <li><a class="a-text" href="https://community.brightcove.com/">Bright Spot コミュニティ</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">製品リリースノート</a></li>
+                <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">ドキュメント更新情報</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>© Brightcove Inc. All rights reserved.</p>
+          <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
+          <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
     
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>© Brightcove Inc. All rights reserved.</p>
-      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">プライバシーポリシー</a> 
-      <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a>
-
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
-        title="LinkedIn" target="_blank" class="gf-social-linkedin"
-        style="margin-right: 1rem;"><i data-feather="linkedin"
-          style="color:#8E9093;height: 1.25rem;"></i></a></li>
-
-        <li class="ms-3"><a
-        href="https://twitter.com/brightcove" title="Twitter" target="_blank"
-        class="gf-social-twitter" style="margin-right: 1rem;"><i
-          data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
-
-        <li class="ms-3"><a
-        href="https://www.facebook.com/Brightcove" title="Facebook"
-        target="_blank" class="gf-social-facebook"><i data-feather="facebook"
-          style="color:#8E9093;height: 1.25rem;"></i></a></li>
-      </ul>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
+            title="LinkedIn" target="_blank" class="gf-social-linkedin"
+            style="margin-right: 1rem;"><i data-feather="linkedin"
+              style="color:#8E9093;height: 1.25rem;"></i></a></li>
+    
+            <li class="ms-3"><a
+            href="https://twitter.com/brightcove" title="Twitter" target="_blank"
+            class="gf-social-twitter" style="margin-right: 1rem;"><i
+              data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+    
+            <li class="ms-3"><a
+            href="https://www.facebook.com/Brightcove" title="Facebook"
+            target="_blank" class="gf-social-facebook"><i data-feather="facebook"
+              style="color:#8E9093;height: 1.25rem;"></i></a></li>
+          </ul>
+          </div>
+        </footer>
       </div>
-    </footer>
-  </div>
-</div>
-
-
-<script translate="no">
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documentation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder,
-    styling: {
-      components: {
-        
-        input: {
-          container: {
-          backgroundColor: 'white',
+    </div>
+    
+    
+    <script translate="no">
+      var searchBox = sajari.init({
+        mode: "search-box",
+        project: "1588255093746585379", // Set this to your project.
+        collection: "brightcove-documentation", // Set this to your collection.
+        instantPipeline: "autocomplete", // Pipeline used as you type
+        inputPlaceholder: "Search", // Input element placeholder,
+        styling: {
+          components: {
+            
+            input: {
+              container: {
+              backgroundColor: 'white',
+              }
+            
+            }
           }
-        
+        },
+        maxSuggestions: 5, // Maximum number of suggestions to show
+          attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+      });
+    
+      
+    
+    
+        searchBox("sub", "pipeline.search-sent", function (_, query) {
+        window.location = "/search.html?q=" + encodeURIComponent(query.q);
+        });
+      
+      </script>
+      
+      <!-- Javascript -->          
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+      <!-- Page Specific JS -->
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+      <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+      <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+      <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+    
+      <!-- original footer components -->
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+      <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+      <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+      <script src="/assets/s-site-assets-scripts/selector.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/prism.js"></script>
+      <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/site.js"></script>
+      <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+      <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+      <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+      
+      <script src="/assets/js/sites_nav.js"></script>
+      <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+      <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+      <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+      <script src="/assets/js/feedback.js"></script>
+      
+      <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+      
+      <script translate="no">
+        feather.replace()
+      </script>
+      <!-- <script src="/assets/js/sajari-index.js"></script> -->
+      <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+      <style translate="no">
+        a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+          background-color: lightblue;
         }
-      }
-    },
-    maxSuggestions: 5, // Maximum number of suggestions to show
-      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-
-  
-
-
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-    window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-  </script>
-  
-  <!-- Javascript -->          
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-
-
-  <!-- Page Specific JS -->
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
-  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
-  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
-  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
-
-  <!-- original footer components -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
-  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
-  <script src="/assets/s-site-assets-scripts/selector.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/prism.js"></script>
-  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/site.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
-  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
-  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
-  
-  <script src="/assets/js/sites_nav.js"></script>
-  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
-  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
-  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
-  <script src="/assets/js/feedback.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
-  
-  <script translate="no">
-    feather.replace()
-  </script>
-  <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
-  <style translate="no">
-    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-      background-color: lightblue;
-    }
-    div.sj-tabs__tab {
-      margin-top: 3rem;
-      margin-left: .3rem;
-      border-top-left-radius: .4rem;
-      border-top-right-radius: .4rem;
-      background-color:#e8e8e8;
-    }
-
-    div.sj-tabs__tab.sj-tabs__tab--selected {
-      border-bottom-color: crimson;
-      background-color: #f8f8f8;
-    }
-
-    p.sj-results__result__description.css-p9jvyt {
-      font-size: 1rem;
-    }
-
-    .sj-result__text.css-31l7gp h3 {
-      color: navy;
-      font-size: 1.4rem;
-    }
-    </style>
- </div>
-</div>
-  </body>
-</html> 
-
+        div.sj-tabs__tab {
+          margin-top: 3rem;
+          margin-left: .3rem;
+          border-top-left-radius: .4rem;
+          border-top-right-radius: .4rem;
+          background-color:#e8e8e8;
+        }
+    
+        div.sj-tabs__tab.sj-tabs__tab--selected {
+          border-bottom-color: crimson;
+          background-color: #f8f8f8;
+        }
+    
+        p.sj-results__result__description.css-p9jvyt {
+          font-size: 1rem;
+        }
+    
+        .sj-result__text.css-31l7gp h3 {
+          color: navy;
+          font-size: 1.4rem;
+        }
+        </style>
+     </div>
+    </div>
+      </body>
+    </html> 
+    

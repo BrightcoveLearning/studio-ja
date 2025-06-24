@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"> 
     <head>
-        <title>Brightcove 広告分析</title>
+        <title>FAQ: Analytics モジュール</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="このトピックでは、Brightcoveのサーバーサイド広告 (SSAI) に関連する分析メトリクスについて説明します。">
+        <meta name="description" content="この FAQ では、Analytics モジュールに関するよくある質問にお答えします。Analytics モジュールの詳細については、Analytics モジュールの使い方をご覧ください。">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -45,6 +45,10 @@
     </head> 
 
     <body class="docs-page">
+        <div id="consent_blackbar"></div>
+        <div id="teconsent"></div>
+        <script async="async"
+            src="https://url.us.m.mimecastprotect.com/s/5CgOCzpzDQU89lO9HgivF9GSgA?domain=consent.trustarc.com"></script>
         
 
 <header class="header fixed-top">
@@ -3061,7 +3065,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Brightcove 広告分析</li>
+            <li class="breadcrumb-item active" aria-current="page">FAQ: Analytics モジュール</li>
             
             
           </ol>
@@ -3082,226 +3086,118 @@
       <br>
       
       
-<h1>Brightcove 広告分析</h1>
+<style>
+  section>h5 {
+    font-size: 2rem;
+  }
+</style>
+
 <article class="bcls-article">
-  <summary>このトピックでは、Brightcoveのサーバーサイド広告 (SSAI) に関連する分析メトリクスについて説明します。</summary>
-
-  <section class="bcls-section"> 
-    <h2 id="Introduction">はじめに</h2>
-    <p>Brightcove 広告分析は、Brightcove の顧客に透明性が高く、意味のある包括的な広告指標セットを提供する無料の製品です。これらの指標は次のことに焦点を当てています:</p>
-    <ul>
-      <li> <strong>トラブルシューティング:</strong> どのような広告構成とパートナーがより効率的に広告を配信しているか? ワークフローのどこで収益が失われているか?など</li>
-      <li> <strong>レポート/インパクト:</strong> 広告のインプレッション、広告掲載率、視聴者によるインプレッションの消費方法をトラッキングします。広告ブロッカーとファイアウォールは広告運用にどのような影響を与えるか?など</li>
-    </ul>
-
-    <h3 id="Availability">アベイラビリティ</h3>
-    <p>広告分析は、SSAI を使用して VOD を収益化している Brightcove の顧客に無料で利用できます。これらは次のプラットフォームで見つけることができます:</p>
-    <ul>
-      <li>Video Cloud Studio</li>
-      <li>Beacon Studio</li>
-    </ul>
-
-    <p>広告指標は、SSAI を使用して収益化するビデオ オン デマンド (VOD) コンテンツに利用できます。</p>
-    
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Navigation">ナビゲーション</h2>
-    <ol class="bcls-tasklist">
-      <li>Video Cloud Studio を開きます。</li>
-      <li>プライマリ ナビゲーションで <strong>分析</strong>をクリックします。</li>
-      <li>パネル ナビゲーションで <strong>広告分析</strong>をクリックします。</li>
-    </ol>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Ad analytics" src="/assets/images/s-analytics-img/module/ad-analytics/ad-analytics.webp" />
-      <figcaption class="bcls-caption--image">Ad analytics</figcaption> 
-    </figure>
-  </section>
-
-  <!-- <section class="bcls-section">
-    <h2 id="VOD_Ad_Performance">VOD Ad Performance</h2>
-    <p>VOD Ad Performance metrics help users get information about the performance of their VOD ads.</p>
-    <h3>Charts</h3>
-    <p>The following charts trend over time, at a daily or hourly interval (depending on time range). Only one graph will display at a time, with totals for each metric displayed at top.</p> -->
-    <!-- <h3>Ad Slots</h3>
-    <h3>Ads Inserted</h3>
-    <h3>Ad Impressions</h3>
-    <h3>Impression Rate</h3>
-    <h3>Performance by dimension</h3> -->
-    <!-- <h3>Funnel by Ad Completion</h3>
-    <p>This chart illustrates the drop-off of viewing from initial impressions to ad completion. The funnel presentation will show the following step functions:</p>
-    <ul>
-      <li>Impressions</li>
-      <li>1st ad quartile</li>
-      <li>Ad midpoint</li>
-      <li>3rd ad quartile</li>
-      <li>Ad completion</li>
-    </ul> -->
-    <!-- <h3>Account Applicability</h3> -->
-
-  <!-- </section> -->
-
-  <section class="bcls-section">
-    <h2 id="SSAI_Performance">SSAI パフォーマンス</h2>
-    <p>SSAI パフォーマンス指標は、成功とエラーの両方の広告リクエストの概要を提供します。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="SSAI Performance" src="/assets/images/s-analytics-img/module/ad-analytics/ssai-performance.webp" />
-      <figcaption class="bcls-caption--image">SSAI Performance</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>SSAI パフォーマンス メトリックは、次のメトリックを収集、集計、およびフィルター処理します:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-   </ul>
-    
-    <h3>メトリック</h3>
-    <p>SSAI パフォーマンス メトリックは、次のメトリックを収集してレポートします:</p>
-    <ul>
-      <li><strong>SSAI リクエスト コード:</strong> 広告サーバーへの各リクエストからのすべての応答コード (成功コードとエラーコードを含む)。 広告サーバーへの各リクエストからのすべての応答コード (成功コードとエラー コードを含む)。</li>
-      <li><strong>広告プロバイダー別の広告リクエスト エラー:</strong> 広告プロバイダーごとに並べ替えられたリクエスト エラーのリスト。</li>
-      <li><strong>広告構成別の広告リクエスト エラー:</strong> 広告構成ごとに並べ替えられたリクエスト エラーの一覧。</li>
-      <li><strong>広告プロバイダー別のトラッカー エラー:</strong> 広告プロバイダーごとに分類されたトラッカー エラーの一覧。</li>
-      <li><strong>広告構成別トラッカー エラー:</strong> 広告構成ごとに分類されたトラッカー エラーの一覧。</li>
-      <!-- <li><strong>Ads request call count:</strong> Number of Ad request HTTP calls.</li>
-      <li><strong>Ads tracking call count:</strong>  Number of Ad Tracking HTTP calls.</li>
-      <li><strong>Ad error call counts:</strong> Number of HTTP.</li>
-      <li><strong>Ad error code:</strong> HTTP Error Response code.</li> -->
-    </ul>
-    
-    <!-- <h3>Granularity</h3>
-    <p>Here is the granularity for SSAI performances metrics: </p>
-    <ul>
-      <li><strong>Time aggregation:</strong> Hour, day, month.</li>
-      <li><strong>Ads:</strong> 1K, 1M. </li>
-    </ul> -->
-  </section>
-  
-  <section class="bcls-section">
-    <h2 id="SSAI_Errors">SSAI エラー</h2>
-    <p>SSAI エラー メトリックは、ユーザーがサーバーサイド広告 (SSAI) エラー情報をトラッキングするのに役立ちます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/ad-analytics/SSAI-errors.webp" />
-      <figcaption class="bcls-caption--image">SSAI Errors</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>SSAI エラー メトリックは、次のメトリックを収集、集計、およびフィルター処理します:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-      <li><strong>広告プロバイダー:</strong> 広告サーバーのドメイン。</li>
-      <li><strong>広告構成:</strong> SSAI <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">広告構成</a>識別子。</li>
-       <li><strong>SSAI エラー:</strong> SSAI エラー トラッカー。</li>
-      <li><strong>広告リクエスト エラー:</strong> リクエスト エラー トラッカー。</li>
-      <li><strong>広告トラッカーのインプレッション エラー:</strong> インプレッション エラー トラッカー。</li>
-    </ul>
-    <h3>メトリックス</h3>
-    <p>SSAI エラー メトリックは、次のメトリックを収集してレポートします:</p>
-    <ul>
-      <li><strong>SSAI エラー:</strong> サーバーサイドの広告挿入エラー。</li>
-    </ul>
-
-    <h3>データ表示</h3>
-    <ul>
-      <li><strong>リクエスト コード:</strong> 広告プロバイダーから返されたエラー コード。</li>
-      <li><strong>リクエスト数:</strong> エラー コードに関連付けられたリクエストの数。</li>
-    </ul>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Ad_Provider_Performance">広告プロバイダーのパフォーマンス</h2>
-    <p>広告プロバイダーのパフォーマンス指標には、各広告プロバイダーに関連する成功した広告リクエストの数とエラーの数が表示されます。これにより、各プロバイダーの広告エラーの割合をすぐに確認できます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/ad-analytics/ad-provider-performance.webp" />
-      <figcaption class="bcls-caption--image">Ad Provider Performance</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>広告プロバイダーのパフォーマンスは、次の指標を収集、集計、およびフィルタリングします:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-      <li><strong>広告構成:</strong> SSAI <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">広告構成</a>識別子。</li>
-      <li><strong>呼び出し:</strong> Brightcove SSAI から広告サーバーへの呼び出しの数。</li>
-      <li><strong>インプレッション トラッカー:</strong> インプレッション トラッカー</li>
-      <li><strong>広告リクエスト:</strong> 広告リクエスト トラッカー。</li>
-      
-    </ul>
-
-    <h3>データ表示</h3>
-    <ul>
-      <li><strong>広告プロバイダー:</strong> 広告プロバイダー。</li>
-      <li><strong>合計呼び出し数:</strong> 広告リクエストの合計呼び出し数。</li>
-      <li><strong>エラー:</strong> 広告プロバイダーに関連する広告リクエスト エラーの数。</li>
-      <li><strong>成功:</strong> 広告プロバイダーへの広告リクエストの呼び出しが成功した回数。</li>
-      <li><strong>合計エラーの割合:</strong> エラーの総数/広告リクエストの総数の比率</li>
-    </ul>
-   
-   
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Ad_Config_Performance">広告構成のパフォーマンス</h2>
-    <p>広告構成のパフォーマンス指標には、成功した広告リクエストの数と、各広告構成に関連付けられたエラーの数が表示されます。これにより、各構成の広告エラーの割合をすぐに確認できます。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/ad-analytics/ad-config-performance.webp" />
-      <figcaption class="bcls-caption--image">Ad Config Performance</figcaption> 
-    </figure>
-    <h3>ディメンション</h3>
-    <p>広告構成のパフォーマンス指標は、次の指標に基づいて収集、集計、フィルタリングできる必要があります:</p>
-    <ul>
-      <li><strong>時間範囲:</strong> データをフィルタリングする時間範囲。</li>
-      <li><strong>広告プロバイダー:</strong>  広告サーバーのドメイン。</li>
-      <li><strong>呼び出し:</strong> 呼び出しの数。</li>
-      <li><strong>インプレッション トラッカー:</strong> インプレッション トラッカー。</li>
-      <li><strong>広告リクエスト:</strong> 広告リクエスト トラッカー。</li>
-    </ul>
-
-    <h3>データ表示</h3>
-    <ul>
-      <li><strong>広告構成:</strong> 使用されている広告構成のリスト。</li>
-      <li><strong>合計呼び出し数:</strong> 広告リクエスト呼び出しの合計数。</li>
-      <li><strong>エラー:</strong> 広告構成に関連する広告リクエスト エラーの数。</li>
-      <li><strong>成功:</strong> 広告構成に関連付けられた成功した広告リクエスト呼び出しの数。</li>
-      <li><strong>合計エラーの割合:</strong> エラーの合計数/広告リクエストの合計数の比率。</li>
-    </ul>
-
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Glossary_of_terms">用語集</h2>
-    <p>広告分析指標の用語集は次のとおりです:</p>
-    <h3>データの可用性</h3>
-    <p>これらのメトリックスのデータの可用性は次のとおりです:</p>
-    <ul>
-      <li>データは 3 年間保存され、利用可能です。</li>
-      <!-- <li>The data is available via queryable APIs in CSV or JSON format.</li> -->
-      <li>データは、エクスポート時にフィルターと集計に基づいて UI から CSV 形式でエクスポートできます。</li>
-    </ul>
-    <h3>応答時間</h3>
-    <p>すべてのデータは 2 時間新しいものである必要があります。</p>
-    <h3>メトリックス</h3>
-    <p>広告分析では、次の指標を収集してレポートできる必要があります:
-    </p>
-    <ul>
-      <li><strong>スケジュールされた広告:</strong> すべてのブレイク期間にわたってスケジュールされた広告の合計数。</li>
-      <li><strong>挿入された広告:</strong>  VOD またはライブ ストリームにステッチされたクリエイティブの数。</li>
-      <li><strong>広告のインプレッション数:</strong> 再生されたクリエイティブの数。</li>
-      <li><strong>広告の完了:</strong> 完了するまでに視聴されたクリエイティブの数。</li>
-      <li><strong>広告インプレッション率:</strong> 広告インプレッション数/スケジュールされた広告。</li>
-      <li><strong>最後の広告表示:</strong>  最新の広告インプレッションの時間。</li>
-    </ul>
-    <h3>ディメンション</h3>
-    <p>広告分析は、次の指標を収集、集計、フィルタリングします:</p>
-    <ul>
-      <li><strong>アカウント:</strong> すべてのディメンションの合計を示すアカウントレベルの指標。</li>
-      <li><strong>ビデオ:</strong> 動画IDによる集計。</li>
-      <li><strong>広告構成:</strong> SSAIの<a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">広告設定</a>識別子。</li>
-      <li><strong>広告プロバイダー:</strong> 広告サーバーのドメイン。</li>
-    </ul>
-    <h3>時間範囲</h3>
-    <p><strong>日付</strong> をクリックしてドロップダウンメニューを展開します。レポートデータの対象期間を選択してください。</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="Time range" src="/assets/images/s-analytics-img/module/qoe/time-period.webp" />
-      <figcaption class="bcls-caption--image">期間範囲</figcaption> 
-    </figure>
+    <h1>FAQ: Analytics モジュール</h1>
+    <summary>この FAQ では、Analytics モジュールに関するよくある質問にお答えします。Analytics モジュールの詳細については、<a href="/analytics/module/getting-started-analytics-module.html">Analytics モジュールの使い方</a>をご覧ください。</summary>
+    <section class="bcls-section">
+      <h2 id="general">全般</h2>
+      <h5 id="1">1. Analytics モジュールとは何ですか？</h5>
+      <p>Analytics モジュールは、動画およびプレーヤーに関するほぼリアルタイムの分析情報を表示できるユーザーインターフェースです。Analytics プラットフォームは最新のビッグデータ技術を活用して大規模なスケールに対応するよう設計されており、高速かつほぼリアルタイムで分析データにアクセス可能です。また、Video Cloud Studio に含まれるレポートに加えて、開発者が独自の分析ソリューションやレポートを作成できる強力なオープン API も備えています。</p>
+      <h5 id="2">2. Analytics モジュールからレポートデータをエクスポートできますか？</h5>
+      <p>はい。Analytics レポートには、レポートデータを .csv および .xlsx ファイルとしてダウンロードできるリンクがあります。</p>
+      <h5 id="3">3. Analytics モジュールのデータはどのくらいの頻度で更新されますか？</h5>
+      <p>通常、ほぼリアルタイムのデータには約 3〜4 時間の遅延があります。ただし、これは現在データ収集システムが処理しているデータ量によって変動する場合があります。</p>
+      <p>Analytics システムは複数のソースからデータを収集しており、ほぼリアルタイムのデータはこれまでに収集された情報に基づく推定値です。レポートごとに数値が異なる場合があるため、正確な数値というよりも傾向として見ることを推奨します。</p>
+      <h5 id="4">4. Analytics モジュールで提供される標準レポートをカスタマイズできますか？</h5>
+      <p>パフォーマンスおよびエンゲージメントレポートに表示されるデータはカスタマイズできません。ただし、Analytics モジュールでは表示するデータを選択できるカスタムレポートの作成が可能です。また、分析データにプログラム的にアクセスするための <span translate="No">Analytics API</span> も提供されています。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="available_data">利用可能なデータ</h2>
+      <h5 id="5">5. 社内の動画IDをレポートや API に含める方法はありますか？</h5>
+      <p>動画プロパティとして利用可能な参照 ID フィールドを使用して、社内IDを Video Cloud 上の動画と関連付けることができます。この参照 ID フィールドはカスタムレポート作成時に表示可能です。カスタムレポートについての詳細は、<a href="/analytics/reports/creating-custom-analytics-reports.html">Analytics モジュールでのカスタム分析レポートの作成</a>をご覧ください。</p>
+      <h5 id="6">6. 特定の動画の視聴維持率や離脱率をレポートできますか？</h5>
+      <p>この情報はエンゲージメント レポートで確認できます。エンゲージメント レポートを選択し、ディメンションとして「動画」を選ぶと、アカウント全体の視聴維持率を示すグラフが表示されます。特定の動画を選択すると、その動画の視聴維持率の推移が表示されます。</p>
+      <h5 id="7">7. URL単位でのパフォーマンス比較は可能ですか？例えば、同じ動画が Page A と Page B でホストされている場合に比較できますか？</h5>
+      <p>はい。パフォーマンスレポートでは、表示ドメイン別に動画分析を見ることができます。</p>
+      <h5 id="8">8. アカウントのユニーク視聴者数を表示するレポートはありますか？</h5>
+      <p>ユニーク視聴者数は、パフォーマンスレポートで確認できます。</p>
+      <h5 id="9">9. 削除された動画の分析データは含まれますか？</h5>
+      <p>Analytics レポートには、アカウントから削除された動画の分析データも含まれます。ただし、削除済み動画を Analytics モジュール内で検索してレポートを確認することはできません。削除された動画のレポートを取得するには、該当動画の動画ID を把握しておく必要があり、そのIDを使用して <a href="https://apis.support.brightcove.com/analytics/">Analytics API</a> からレポートを生成します。なお、レポートデータをエクスポートした場合、削除された動画の一部メタデータが欠けていることがあります。</p>
+      <h5 id="10">10. 分析データの最も古い取得可能日はいつですか？</h5>
+      <p>分析データの取得可能な最も古い日付は、2010年12月28日です。ただし、すべてのデータ項目がこの日付から収集されているわけではないため、表示可能な最も古い日付は、確認するデータの種類によって異なります。動画再生回数については、2010年12月28日から取得可能です。カレンダー コントロールを使用して日付を遡る場合は2013年1月までですが、それ以前の日付も手動入力で指定できます。</p>
+      <h5 id="11">11. ライブイベント配信のプレーヤーも分析の対象になりますか？</h5>
+      <p>Analytics では、パフォーマンス レポートの一部として視聴された分数をトラッキングします。ライブ再生の秒数は、カスタムレポート作成時や請求モジュールで表示できます。ただし、ライブイベントの帯域幅は表示されません。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="filtering_data">データのフィルタリング</h2>
+      <h5 id="12">12. IPアドレスの範囲を分析対象から除外することは可能ですか？</h5>
+      <p>現在のところ、IPアドレス範囲を除外する機能は提供されていません。</p>
+      <h5 id="13">13. 従業員による視聴を分析から除外できますか？</h5>
+      <p>これを簡単に行う方法はありません。また、トラフィックの多い動画の場合、従業員の視聴はごく一部に過ぎないため、分析への影響はごくわずかです。ただし、トラフィックが少なく除外が重要と考える場合は、実運用用のプレーヤーを複製し、従業員には複製版で視聴・テストを行わせるのが最も簡単な方法です。そのうえで、Analytics モジュールのカスタム レポート機能や Analytics API を使い、本番プレーヤーのデータのみを対象とするレポートを作成することが可能です。</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="search">検索</h2>
+      <h5 id="14">14. Analytics モジュールで特定の動画情報を検索するには？</h5>
+      <p>検索機能を使用して特定の動画を検索できます。動画名、短い説明、長い説明、タグ、動画ID、参照ID、およびカスタムテキストフィールドが検索対象になります。検索結果をクリックすると、その動画のパフォーマンスまたはエンゲージメント情報が表示されます。カスタム レポートを作成して、特定の動画ID の分析データを表示することもできます。</p>
+      <h5 id="15">15. Analytics モジュールで参照ID を使って動画を検索できますか？</h5>
+      <p>はい。検索機能を使用して、参照ID フィールドを基に動画を検索できます。動画名、短い説明、長い説明、タグ、動画ID、およびカスタムテキストフィールドも検索対象になります。</p>
     </section>
 
 
-  
+    <section class="bcls-section">
+      <h2 id="understanding_data">データの理解</h2>
+      <h5 id="16">16. 動画の前にプレロール広告が表示され、視聴者が数秒間広告を視聴して離脱した場合、メインコンテンツを視聴していないと動画再生としてカウントされますか？</h5>
+      <p>いいえ。動画再生としてカウントされるのは、メイン コンテンツが再生された後です。</p>
+      <h5 id="17">17. 動画がループ再生されている場合、1回の再生としてカウントされますか？それとも再生のたびに複数回カウントされますか？</h5>
+      <p>動画再生数は、1つの視聴セッションにつき1回のみカウントされます。ただし、エンゲージメントレポートの <strong>x%時点の視聴数</strong> と、パフォーマンスレポートの <strong>動画再生数</strong> は同じではありません。動画再生数は最初に動画が再生された時点でカウントされ、1% 時点の視聴数は最初の1%が視聴された際に記録されます。動画が自動リプレイ設定されている場合など、1% が複数回視聴された場合はカウントが増加しますが、動画再生数は最初の再生時のみカウントされ、再生ページを再読み込みしたり、別の動画を視聴した場合を除き、リプレイではカウントされません。</p>
+      <h5 id="18">18. なぜ一部のエンゲージメントスコアが 100 を超えるほど高いのですか？</h5>
+      <p>エンゲージメントスコアが 100 を超えることもあります。スクラブや再視聴は新たな <code>video_view</code> イベントを発生させませんが、<code>video_engagement</code> は追跡されます。以下のような事例で、エンゲージメントが大きく変化する可能性があります：</p>
+      <ol>
+        <li>まだ再生されていない。エンゲージメントスコア：0。</li>
+        <li>視聴者がページを読み込み、動画を最後まで視聴。スコア：100（100％ 再生／1再生）。</li>
+        <li>同じ視聴者が巻き戻して再び最後まで視聴（ブラウザは再読み込みされていない）。スコア：200（200％ 再生／1再生）。</li>
+        <li>別の視聴者がページを読み込み、最後まで視聴。スコア：150（300％ 再生／2再生）。</li>
+      </ol>
+      <p>エンゲージメントスコアの算出方法については、トレーニング動画 <a href="/analytics/general/calculating-video-engagement-score.html">動画エンゲージメントの計算</a> をご覧ください。</p>
+      <h5 id="19">19. なぜ 25% 時点の視聴数が 1% 時点の視聴数より多いのですか？</h5>
+      <p>この 2 つの数値に差が出る理由はいくつかあります：</p>
+      <ul>
+        <li>1% 時点と x% 時点の視聴数は異なる指標です。1% 時点の視聴数は各視聴セッションごとにユニークであり、巻き戻しやリプレイは含まれません。視聴者が動画を巻き戻したり再生し直した場合、%時点のカウントは増えますが、動画再生数には反映されません。</li>
+        <li>%時点の視聴数およびエンゲージメントカーブは UTC 時間で日次単位で保存されているため、UTC とレポートのタイムゾーンが重なると、特定の日付に 2日分のデータが含まれる場合があります。</li>
+      </ul>
+      <h5 id="20">20. なぜ同じ日の動画再生数が時間と共に変わることがあるのですか？</h5>
+      <p>Analytics システムは、毎時収集された暫定的な指標を提供し、日次レベルで報告される実データと自動的に照合します。この処理は通常 3〜5 日以内に行われます。毎時データは照合されませんが、パブリッシャーが毎時データを重視するため、32 日間は暫定データが利用可能です。照合の詳細は以下の通りです：</p>
+      <ul>
+        <li>プレーヤーがデータを Data Collection API に送信</li>
+        <li>Data Collection API はリアルタイム データベースへの書き込みを試みつつ、イベントをログに保存</li>
+        <li>CDN やその他のソースからの追加データを収集し、分析データを更新（これが照合作業）</li>
+        <li>毎晩、バッチ処理でログイベントから履歴データを構築</li>
+        <li>履歴データは履歴データベースにロードされ、API 呼び出し時に <code>reconciled</code> パラメータを使って照合済みのみ、または両方のデータを選択可能。詳しくは<a href="https://apis.support.brightcove.com/analytics/getting-started/overview-analytics-api-v1.html">Analytics API 概要</a>をご覧ください。</li>
+        <li>すべての履歴データは照合済みですが、32日以内のリアルタイムデータは照合済みでない場合があります。取得対象期間が 32日以上前であれば、照合済みデータのみを使用してください。</li>
+      </ul>
+      <h5 id="21">21. 一部の指標が null または空になるのはなぜですか？</h5>
+      <p>リクエストした期間に該当の指標が存在しない場合、この現象が起こります。一部の指標は 2〜3日の遅延があるため、直近 30日間（今日を含む）でリクエストした場合、まだ集計されていない日が含まれる可能性があります。この問題を避けるには、遅延期間を除いた範囲でデータをリクエストしてください。</p>
+      <p>また、時間の経過とともに新しい指標やディメンションの組み合わせが追加されています。たとえば、複数年にわたるレポートでは、追跡が開始される前の期間に該当する指標が空または部分的である可能性があります。有効な日付とディメンションの組み合わせについては、<a href="https://apis.support.brightcove.com/analytics/getting-started/overview-analytics-api-v1.html">Analytics API 概要</a>をご覧ください。</p>
+      <h5 id="22">22. なぜ 2013 年の配信先ドメインデータが他のパフォーマンスデータと一致しないのですか？</h5>
+      <p>配信先ドメイン機能は 2014年 1月 まで有効化されていませんでした。2013年3月〜2014年1月 のデータは一部のみ補完されており、この期間のデータは一部のみ利用可能です。2014年1月 以降のデータは完全です。</p>
+      <h5 id="23">23. なぜエンゲージメント値が小数で表示されることがあるのですか？</h5>
+      <p>エンゲージメントは正規化された値であるため、小数点以下で表示されることがあります。これは「video_percent_viewed * (video_engagement_25 / video_engagement_sum)」の比率で計算されており、リクエストした期間によっては割り切れず、小数になる場合があります。</p>
+      <h5 id="24">24. なぜ一部のレポートには動画ID だけが表示される、または動画が全く表示されないのですか？</h5>
+      <p>該当期間中に再生がなかった動画については、レポートには詳細情報が表示されません（例：動画ID のみ）。データ（画像など）自体が取得されていない場合、その動画はレポートに表示されません。</p>
+      <h5 id="25">25. 同一期間で、Analytics モジュールと <span translate="No">Analytics API</span> のデータは一致しますか？</h5>
+      <p>はい。ただし、比較対象のデータが比較的新しい場合や、Studio と API で取得したタイミングが異なる場合は差異が生じることがあります：</p>
+      <ol>
+        <li>データが 3日未満の場合：この期間のデータは暫定値であり、変更される可能性があります。</li>
+        <li>32日未満のデータと 32日を超えたデータを比較した場合：32日を過ぎるとデータは履歴用ストレージに移行され、一部の詳細データ（特にエンゲージメントデータ）が削除されます。これにより、エンゲージメントスコアなどの計算結果が若干変化することがあります。</li>
+      </ol>
+      <h5 id="26">26. なぜ Analytics モジュールでの動画再生数が、Campaign モジュールでの再生数より多いのですか？</h5>
+      <p>Analytics モジュールと Campaign モジュールは別システムであり、それぞれ異なる用途に基づいてデータを収集しているため、再生イベントの数が一致しないことがあります。</p>
+      <p>Campaign のリードフォームは <code>video_view</code> イベントが発生しないと表示されません。このイベントはユーザーが「再生」ボタンを手動でクリックした際に発生するため、実際に動画が再生されていないように見えても、Analytics モジュールには <code>video_view</code> が記録される場合があります。</p>
+      <p>Analytics モジュールでの再生数が Campaign モジュールより多い場合、リードフォームは表示されたがユーザーが入力せず再生が継続されなかった可能性があります。</p>
+      <h5 id="27">27. 変速再生を使用した場合、<code>video_seconds_viewed</code> はどのように収集・計算されますか？</h5>
+      <p><code>video_seconds_viewed</code> は再生位置に基づいており、変速再生は反映されません。例えば、動画を倍速で 30秒間再生した場合、<code>video_seconds_viewed</code> は 30 として記録されます。</p>
+      <h5 id="28">28. なぜ Analytics トラフィックレポートで iframe タグのトラフィックが「Direct」として報告されるのですか？</h5>
+      <p>トラフィックソースは HTTP リファラーヘッダーに基づいて判断されます。iframe タグを使用した場合、HTTP リファラーは "players.brightcove.net/..." となり、Analytics モジュールでは「Direct（直接）」として分類されます。</p>
+      <p>正確なトラフィックソースを取得するには、Videoタグをご使用ください。</p>
+    </section>
+</article>
 
-</article> 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
@@ -3478,4 +3374,3 @@
 </div>
   </body>
 </html> 
-
